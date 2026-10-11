@@ -145,7 +145,11 @@ class NonfiniteWorldGuard:
         )
 
     def check(self, state, terminated: wp.array) -> None:
-        """Flag non-finite worlds of ``state``; terminate them and zero their warm start (graph-capturable)."""
+        """Flag non-finite worlds of ``state``; terminate them and zero their warm start (graph-capturable).
+
+        Both guard launches run on the device that holds the guard buffers (the environment's device), not on
+        Warp's current default device, which is ``cuda:0`` whenever a GPU is visible.
+        """
         wp.launch(
             flag_nonfinite_worlds,
             dim=self.world_count,
@@ -161,8 +165,11 @@ class NonfiniteWorldGuard:
                 self.warmstart_dim,
             ],
             outputs=[self.flag, terminated, self.total],
+            device=self.flag.device,
         )
 
     def zero_scores(self, score: wp.array) -> None:
         """Zero the objective score of the worlds flagged by the last :meth:`check`."""
-        wp.launch(zero_flagged_scores, dim=self.world_count, inputs=[self.flag], outputs=[score])
+        wp.launch(
+            zero_flagged_scores, dim=self.world_count, inputs=[self.flag], outputs=[score], device=self.flag.device
+        )
