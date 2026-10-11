@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import os
 import time
+from dataclasses import replace
 from pathlib import Path
 
 import hydra
@@ -46,6 +47,9 @@ def main(cfg: DictConfig) -> None:
     embodiment = instantiate_typed(cfg.embodiment, Embodiment)
     collision = instantiate_typed(cfg.collision, CollisionPolicy)
     training = instantiate_typed(cfg.training, TrainingConfig)
+    if training.nonfinite_guard:
+        # Training-only: reset worlds whose simulator state turns non-finite (no-op while all state is finite).
+        env_config = replace(env_config, nonfinite_guard=True)
     output_dir = Path(HydraConfig.get().runtime.output_dir) if cfg.output_dir is None else resolve_path(cfg.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 

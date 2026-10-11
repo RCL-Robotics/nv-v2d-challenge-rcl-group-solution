@@ -209,8 +209,13 @@ class TrainingConfig:
     network: NetworkConfig = field(default_factory=NetworkConfig)
     ppo: PPOConfig = field(default_factory=PPOConfig)
     coordinate: CoordinateConfig | None = None
+    # Reset worlds whose simulator state turns non-finite and keep non-finite rows out of the rollout batch and
+    # the observation normalizer (runtime/nonfinite.py, rollout.py). A pure no-op while every value is finite.
+    nonfinite_guard: bool = True
 
     def __post_init__(self) -> None:
+        if not isinstance(self.nonfinite_guard, bool):
+            raise TypeError(f"nonfinite_guard must be a bool, got {self.nonfinite_guard!r}")
         if self.world_count <= 0:
             raise ValueError(f"world_count must be positive, got {self.world_count}")
         if self.rollout_steps <= 0:

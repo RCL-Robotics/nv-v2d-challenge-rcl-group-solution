@@ -146,6 +146,17 @@ class TeeLogger:
             logger.close()
 
 
+# Non-finite guard keys (TrainingConfig.nonfinite_guard). They are logged only when nonzero, and are not added to
+# metric_definitions, so the records and W&B config of a run without non-finite values match the stock runner.
+#   per_iteration: world-steps of this iteration whose state, observation, or reward was non-finite (each one was
+#                  reset, given zero advantage, and kept out of the observation normalizer);
+#   total:         the same count accumulated since this process started;
+#   termination:   fraction of completed episodes that the environment guard terminated.
+NONFINITE_ITERATION_KEY = "guard/nonfinite_world_steps_per_iteration"
+NONFINITE_TOTAL_KEY = "guard/nonfinite_world_steps_total"
+NONFINITE_TERMINATION_KEY = "termination/nonfinite_fraction_per_completed_episode"
+
+
 def metric_definitions(env: JAXVectorEnv) -> dict[str, str]:
     """Return the exact aggregation semantics stored with each W&B run."""
     definitions = {
@@ -282,11 +293,21 @@ def metrics_to_host(
             output["reward/dense_mean_per_env_step"] = (
                 output["reward/total_mean_per_env_step"] - termination_contribution
             )
+    nonfinite_world_count = (
+        0.0 if rollout.nonfinite_world_count is None else float(np.asarray(rollout.nonfinite_world_count))
+    )
+    nonfinite_terminated_count = (
+        0.0 if rollout.nonfinite_terminated_count is None else float(np.asarray(rollout.nonfinite_terminated_count))
+    )
+    if nonfinite_world_count > 0.0:
+        output[NONFINITE_ITERATION_KEY] = nonfinite_world_count
+    if nonfinite_terminated_count > 0.0:
+        output[NONFINITE_TERMINATION_KEY] = nonfinite_terminated_count / max(episode_count, 1.0)
     cause_counts = None if rollout.termination_cause_count is None else np.asarray(rollout.termination_cause_count)
     if cause_counts is not None:
         for name, count in zip(termination_cause_names, cause_counts, strict=True):
             output[f"termination/{name}_fraction_per_completed_episode"] = float(count) / max(episode_count, 1.0)
-        classified_count = reference_end_count + float(cause_counts.sum())
+        classified_count = reference_end_count + float(cause_counts.sum()) + nonfinite_terminated_count
         if not np.isclose(classified_count, episode_count):
             raise ValueError(
                 f"exclusive outcome counts sum to {classified_count}; expected completed episode count {episode_count}"
@@ -405,6 +426,8 @@ def run_training(
     checkpoint_dir = None if checkpoint_dir is None else Path(checkpoint_dir)
     if progress is not None:
         progress.start(environment_steps)
+    nonfinite_total = None  # device-side cumulative guard count; read only on logged iterations
+    nonfinite_reported = 0
 
     for iteration in range(start_iteration, config.max_iterations):
         stage = None
@@ -425,6 +448,9 @@ def run_training(
         else:
             learner, metrics = train_iteration_coordinated(env, learner, config, layout)
         environment_steps += sample_count
+        if metrics.rollout.nonfinite_world_count is not None:
+            count = metrics.rollout.nonfinite_world_count
+            nonfinite_total = count if nonfinite_total is None else nonfinite_total + count
         if progress is not None:
             progress.update(environment_steps)
         if logger is not None and ((iteration + 1) % log_interval == 0 or iteration + 1 == config.max_iterations):
@@ -446,6 +472,17 @@ def run_training(
                 record.update(coordinated_metrics_to_host(metrics.optimization, layout.agent_names))
             if rsi_metrics:
                 record.update({key: float(value) for key, value in rsi_metrics.items()})
+            if nonfinite_total is not None:
+                total = int(np.asarray(nonfinite_total))
+                if total > 0:
+                    record[NONFINITE_TOTAL_KEY] = float(total)
+                if total > nonfinite_reported:
+                    print(
+                        f"[nonfinite-guard] iteration {iteration + 1}: {total - nonfinite_reported} non-finite "
+                        f"world-steps reset since the last report ({total} total)",
+                        flush=True,
+                    )
+                    nonfinite_reported = total
             logger.log(record, step=environment_steps)
 
         if checkpoint_dir is not None and (

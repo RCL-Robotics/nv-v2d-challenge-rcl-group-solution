@@ -34,6 +34,7 @@ from flash_chord.runtime.joint_drive import (
     JointPositionIntegralConfig,
     ScaledJointTargetDrive,
 )
+from flash_chord.runtime.nonfinite import NonfiniteWorldGuard
 from flash_chord.runtime.object_control import VOCParams, apply_object_control
 from flash_chord.runtime.sim import SimConfig, build_force_contacts, build_solver
 from flash_chord.scene.builder import Scene
@@ -50,6 +51,9 @@ class BaseEnvConfig:
     voc_scale: float = 1.0
     arm_position_integral: JointPositionIntegralConfig = field(default_factory=JointPositionIntegralConfig)
     enforce_joint_velocity_limits: bool = False
+    # Terminate (and so auto-reset) worlds whose simulator state turns non-finite; see runtime/nonfinite.py.
+    # Off by default (stock behavior); the training entry point enables it from TrainingConfig.nonfinite_guard.
+    nonfinite_guard: bool = False
 
 
 @wp.kernel
@@ -237,6 +241,11 @@ class BaseEnv:
 
         self.terminated = self.termination.terminated
         self.truncated = self.termination.truncated
+        self.nonfinite_guard = None
+        self.nonfinite = None
+        if self.config.nonfinite_guard:
+            self.nonfinite_guard = NonfiniteWorldGuard.build(self.model, self.solver, self.world_count, self.device)
+            self.nonfinite = self.nonfinite_guard.flag
         self.action_input = wp.zeros(
             self.world_count * self.action.action_dim,
             dtype=wp.float32,
@@ -321,8 +330,13 @@ class BaseEnv:
         if self.contact is not None:
             self.contact.update(self.model, self.state_0, self.contacts)
         self.termination.evaluate(self.state_0.body_q, self.timestep)
+        if self.nonfinite_guard is not None:
+            # Terminate worlds with non-finite state before the objective, lifecycle, RSI, and auto-reset see them.
+            self.nonfinite_guard.check(self.state_0, self.terminated)
         if self.objective is not None:
             self.objective.evaluate(self.state_0, self.timestep, self.terminated)
+            if self.nonfinite_guard is not None:
+                self.nonfinite_guard.zero_scores(self.objective.score)
         self._advance_lifecycle()
 
     def _advance_lifecycle(self) -> None:
