@@ -1,6 +1,10 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
-"""The C1/C2/C3 experiment yamls differ from stock g1_recon_body_ppo only where the contract says (spec 7.1)."""
+"""The C1/C2/C3 experiment yamls differ from stock g1_recon_body_ppo only where the contract says (spec 7.1).
+
+C3-wide (g1_recon_body_coord_rsi_wide) is C3 with a wider coordinated actor; it differs from C3 only in
+the actor widths it names below and in its logging names.
+"""
 
 from __future__ import annotations
 
@@ -35,10 +39,38 @@ EXPECTED_COORDINATE = {
 NAMES = ("logging.experiment", "logging.run_name", "training.experiment_name", "training.run_name")
 RSI_PREFIXES = ("reset.", "env.reset.", "curriculum.", "training.curriculum.")
 COORDINATE_PREFIXES = ("training.coordinate.",)
+C3 = "g1_recon_body_coord_rsi"
+WIDE = "g1_recon_body_coord_rsi_wide"
 ARMS = {
     "g1_recon_body_rsi": (RSI_PREFIXES, True, False),
     "g1_recon_body_coord": (COORDINATE_PREFIXES, False, True),
     "g1_recon_body_coord_rsi": (RSI_PREFIXES + COORDINATE_PREFIXES, True, True),
+    WIDE: (RSI_PREFIXES + COORDINATE_PREFIXES, True, True),
+}
+# C3-wide: a Coordinates_hand-size coordinated actor (export budget [640, 576, 768, 384]).
+WIDE_EXPORT_ACTOR_HIDDEN_DIMS = [1024, 1024, 768, 384]
+EXPECTED_WIDE_COORDINATE = {
+    **EXPECTED_COORDINATE,
+    "encoder_dim": 128,
+    "partner_dim": 64,
+    "message_dim": 64,
+    "trunk_dims": [256, 128],
+    "export_actor_hidden_dims": WIDE_EXPORT_ACTOR_HIDDEN_DIMS,
+}
+EXPECTED_COORDINATE_BY_ARM = {
+    "g1_recon_body_coord": EXPECTED_COORDINATE,
+    "g1_recon_body_coord_rsi": EXPECTED_COORDINATE,
+    WIDE: EXPECTED_WIDE_COORDINATE,
+}
+# Every flattened key in which C3-wide may differ from C3, with its (C3, C3-wide) values.
+WIDE_VS_C3 = {
+    "training.coordinate.encoder_dim": (96, 128),
+    "training.coordinate.trunk_dims": ([80, 40], [256, 128]),
+    "training.coordinate.export_actor_hidden_dims": ([1024, 512, 256, 128], WIDE_EXPORT_ACTOR_HIDDEN_DIMS),
+    "logging.experiment": ("g1_sonic_recon_body_coord_rsi", "g1_sonic_recon_body_coord_rsi_wide"),
+    "logging.run_name": ("g1_recon_body_coord_rsi", "g1_recon_body_coord_rsi_wide"),
+    "training.experiment_name": ("g1_sonic_recon_body_coord_rsi", "g1_sonic_recon_body_coord_rsi_wide"),
+    "training.run_name": ("g1_recon_body_coord_rsi", "g1_recon_body_coord_rsi_wide"),
 }
 
 
@@ -96,7 +128,7 @@ def test_experiment_differs_from_stock_only_where_allowed(experiment):
     else:
         assert arm["reset"] == stock["reset"] and arm["curriculum"] == stock["curriculum"]
     if coordinate:
-        assert arm["training"]["coordinate"] == EXPECTED_COORDINATE
+        assert arm["training"]["coordinate"] == EXPECTED_COORDINATE_BY_ARM[experiment]
     else:
         assert "coordinate" not in arm["training"]
     # Budget and recipe (D3 F0, D4 stock reward) stay stock.
@@ -118,6 +150,56 @@ def test_c3_is_the_union_of_c1_and_c2():
         assert flat3.get(key) == flat2.get(key), key
 
 
+def test_c3_wide_differs_from_c3_only_in_actor_widths_and_names():
+    """Structural diff of the composed configs: any added, removed or changed key outside WIDE_VS_C3 fails."""
+    _needs_rsi(WIDE)
+    c3, wide = _compose(C3), _compose(WIDE)
+    changed = _diff(c3, wide)
+    assert changed == set(WIDE_VS_C3), (
+        f"unexpected: {sorted(changed - set(WIDE_VS_C3))}, missing: {sorted(set(WIDE_VS_C3) - changed)}"
+    )
+    flat3, flat_wide = _flatten(c3), _flatten(wide)
+    assert flat3.keys() == flat_wide.keys()
+    for key, (c3_value, wide_value) in WIDE_VS_C3.items():
+        assert (flat3[key], flat_wide[key]) == (c3_value, wide_value), key
+    # The parts the capacity change must not touch, spelled out.
+    for section in ("reset", "curriculum", "env", "scene", "task", "action", "objective"):
+        assert wide[section] == c3[section], section
+    assert wide["training"]["network"] == c3["training"]["network"]
+    assert wide["training"]["ppo"] == c3["training"]["ppo"]
+    assert wide["training"]["coordinate"]["partner_dim"] == c3["training"]["coordinate"]["partner_dim"] == 64
+    assert wide["training"]["coordinate"]["message_dim"] == c3["training"]["coordinate"]["message_dim"] == 64
+
+
+def test_c3_wide_coordinate_config_fits_the_export_budget():
+    """The wide actor passes CoordinateConfig's budget check and embeds into [1024, 1024, 768, 384]."""
+    _needs_rsi(WIDE)
+    from flash_chord.training.ppo.config import CoordinateConfig, TrainingConfig, coordinate_export_budget
+
+    composed = compose_config("train", [f"experiment={WIDE}", "task.parquet=/tmp/reference.parquet"])
+    coordinate = instantiate_typed(composed.training, TrainingConfig).coordinate
+    assert isinstance(coordinate, CoordinateConfig)  # __post_init__ ran the export budget check
+    assert coordinate.export_actor_hidden_dims == (1024, 1024, 768, 384)
+    assert list(coordinate.export_actor_hidden_dims) == WIDE_EXPORT_ACTOR_HIDDEN_DIMS
+    assert (coordinate.encoder_dim, coordinate.partner_dim, coordinate.message_dim) == (128, 64, 64)
+    assert coordinate.trunk_dims == (256, 128) and coordinate.mirror_body_message
+    budget = coordinate_export_budget(
+        coordinate.encoder_dim,
+        coordinate.partner_dim,
+        coordinate.message_dim,
+        coordinate.trunk_dims,
+        coordinate.mirror_body_message,
+    )
+    assert budget == (640, 576, 768, 384)
+    assert all(need <= have for need, have in zip(budget, coordinate.export_actor_hidden_dims, strict=True))
+    # The exporter's own budget check agrees.
+    export = pytest.importorskip("flash_chord.training.ppo.coordinate.export")
+    assert export.embedding_plan(coordinate, coordinate.export_actor_hidden_dims).used_units == budget
+    # The same actor widths with C3's stock-shaped export would not fit (why the export widens).
+    with pytest.raises(ValueError, match="export_actor_hidden_dims"):
+        CoordinateConfig(encoder_dim=128, trunk_dims=(256, 128), export_actor_hidden_dims=(1024, 512, 256, 128))
+
+
 def test_yaml_coordinate_block_lists_every_coordinate_config_field():
     config = pytest.importorskip("flash_chord.training.ppo.config")
     if not hasattr(config, "CoordinateConfig"):
@@ -129,7 +211,7 @@ def test_yaml_coordinate_block_lists_every_coordinate_config_field():
         assert (tuple(value) if isinstance(value, list) else value) == default, name
 
 
-@pytest.mark.parametrize("experiment", ["g1_recon_body_coord", "g1_recon_body_coord_rsi", "g1_recon_body_rsi"])
+@pytest.mark.parametrize("experiment", ["g1_recon_body_coord", "g1_recon_body_coord_rsi", "g1_recon_body_rsi", WIDE])
 def test_training_config_instantiates(experiment):
     """The DEV runtime instantiates the arm's training config (needs A's TrainingConfig.coordinate)."""
     _needs_rsi(experiment)
@@ -141,12 +223,15 @@ def test_training_config_instantiates(experiment):
     training = instantiate_typed(composed.training, TrainingConfig)
     if ARMS[experiment][2]:
         assert type(training.coordinate).__name__ == "CoordinateConfig"
-        assert training.coordinate.trunk_dims == (80, 40)
+        if experiment == WIDE:
+            assert training.coordinate.trunk_dims == (256, 128)
+        else:
+            assert training.coordinate.trunk_dims == (80, 40)
     else:
         assert training.coordinate is None
 
 
-@pytest.mark.parametrize("experiment", ["g1_recon_body_rsi", "g1_recon_body_coord_rsi"])
+@pytest.mark.parametrize("experiment", ["g1_recon_body_rsi", "g1_recon_body_coord_rsi", WIDE])
 def test_rsi_reset_config_instantiates(experiment):
     """The arm's reset subtree instantiates owner B's RSI config (skipped until B lands)."""
     _needs_rsi(experiment)
