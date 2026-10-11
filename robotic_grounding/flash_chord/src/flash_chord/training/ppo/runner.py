@@ -18,7 +18,12 @@ import numpy as np
 
 from flash_chord.lifecycle.curriculum import CurriculumStage
 from flash_chord.objectives.config import OBJECTIVE_TERM_NAMES
-from flash_chord.training.checkpoint import load_checkpoint, read_checkpoint_metadata, save_checkpoint
+from flash_chord.training.checkpoint import (
+    load_checkpoint,
+    read_checkpoint_metadata,
+    require_finite_resume_state,
+    save_checkpoint,
+)
 from flash_chord.training.checkpoint_metadata import validate_resume_reference_config
 from flash_chord.training.environment import JAXVectorEnv
 from flash_chord.training.ppo.config import TrainingConfig
@@ -414,10 +419,15 @@ def run_training(
                 f"saved={resume_metadata.get(COORDINATE_LAYOUT_METADATA_KEY)!r}, current={layout_sha256!r}"
             )
         learner, resume_metadata = load_checkpoint(config.checkpoint, learner)
+        rsi_path = None
         if rsi is not None:
             rsi_path = rsi_state_path(config.checkpoint)
             if not rsi_path.is_file():
                 raise FileNotFoundError(f"RSI resume requires the sidecar state {rsi_path}")
+        if config.nonfinite_guard:
+            # The guard stops new poisoning but cannot heal state saved by an already-poisoned run.
+            require_finite_resume_state(config.checkpoint, learner, rsi_path)
+        if rsi is not None:
             rsi.load_state(rsi_path)
         learner = learner.replace(observation=jnp.array(env.reset(), copy=True))
     start_iteration = int(np.asarray(learner.iteration))

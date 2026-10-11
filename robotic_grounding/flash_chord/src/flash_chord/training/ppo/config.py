@@ -209,8 +209,13 @@ class TrainingConfig:
     network: NetworkConfig = field(default_factory=NetworkConfig)
     ppo: PPOConfig = field(default_factory=PPOConfig)
     coordinate: CoordinateConfig | None = None
-    # Reset worlds whose simulator state turns non-finite and keep non-finite rows out of the rollout batch and
-    # the observation normalizer (runtime/nonfinite.py, rollout.py). A pure no-op while every value is finite.
+    # Non-finite guard (on by default; see training/README.md). Resets worlds whose simulator state turns
+    # non-finite, keeps non-finite rows out of the rollout batch and the observation normalizer
+    # (runtime/nonfinite.py, rollout.py), and refuses to resume from a checkpoint or RSI sidecar holding NaN/Inf
+    # (checkpoint.require_finite_resume_state). A no-op while every value is finite. The key is a dataclass
+    # default, not a YAML key, so disable it with the append override `+training.nonfinite_guard=false`
+    # (`training.nonfinite_guard=false` fails: "Key 'nonfinite_guard' is not in struct"). The W&B run config
+    # (asdict of this class) gains a `nonfinite_guard` entry (true unless disabled); E2 export drops the key.
     nonfinite_guard: bool = True
 
     def __post_init__(self) -> None:

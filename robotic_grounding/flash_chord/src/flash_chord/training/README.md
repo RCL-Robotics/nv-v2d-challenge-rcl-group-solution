@@ -27,6 +27,32 @@ files are evaluation artifacts and are not resumable training state.
 All new checkpoints contain the complete saved configuration and explicit runtime input descriptions. Missing or
 incompatible descriptions are rejected, and older configuration layouts are not migrated.
 
+## Non-finite guard (PPO)
+
+One simulated world whose physics solve returns NaN used to poison a whole PPO run: stock FlashCHORD has no finite
+check, so the NaN observation entered the running observation normalizer for good and every later update was
+skipped, while MuJoCo-Warp's NaN warm start kept that world NaN after every reset. `TrainingConfig.nonfinite_guard`
+(default **on** for training; evaluation and export keep stock behavior) handles this:
+
+| Stage | What happens to a bad world-step |
+| --- | --- |
+| Environment (`runtime/nonfinite.py`, inside the captured step graph) | A world with any non-finite `joint_q`/`joint_qd`/`body_q`/`body_qd` or solver warm-start entry is flagged, terminated (so the normal auto-reset restores it), and gets a zeroed warm start and objective score. |
+| Rollout (`ppo/rollout.py`, one fused `guard_step` executable per step) | Flagged steps and steps with a non-finite observation or reward get done = 1 and reward = their own value (zero TD error); non-finite observation rows are zeroed; diagnostics rows are zeroed. |
+| Normalizer (`ppo/normalization.py`) | The stock update is used unchanged when every row is valid and finite; otherwise only valid, finite rows enter it. |
+| Resume (`checkpoint.require_finite_resume_state`) | Resuming from a checkpoint whose parameters, optimizer state, normalizer or cached observation (or RSI sidecar) hold NaN/Inf raises `NonfiniteCheckpointError`. The guard cannot heal state saved by an already-poisoned run. |
+
+- **Cost and identity:** with all values finite, every guard step is a selection that returns the stock values, so
+  rollouts, normalizer, updates and checkpoints are bit-identical to running without the guard (CPU tests), and
+  the fused rollout step costs about nothing. GPU training itself is not run-to-run reproducible.
+- **Logging:** `guard/nonfinite_world_steps_{per_iteration,total}` and
+  `termination/nonfinite_fraction_per_completed_episode` appear only once an event happened, together with a
+  `[nonfinite-guard]` console line. The W&B run config gains a `nonfinite_guard` entry.
+- **Disable:** `+training.nonfinite_guard=false` (append override: the key is a dataclass default, not a YAML key,
+  so `training.nonfinite_guard=false` fails with "Key 'nonfinite_guard' is not in struct"). This also writes the key
+  into the checkpoint's resolved config; E2 export removes it.
+- **Not covered:** finite but huge values (e.g. 1e18) are not flagged; a world whose observation or reward is
+  non-finite but whose simulator state is finite is cleaned in the batch but not reset.
+
 Run the focused tests with:
 
 ```bash

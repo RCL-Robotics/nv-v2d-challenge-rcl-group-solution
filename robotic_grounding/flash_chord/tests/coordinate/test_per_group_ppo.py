@@ -761,7 +761,10 @@ class _FakeRSI:
         return {"rsi/top_mean": 1.0 - 0.25 * iteration, "rsi/decisions": float(iteration)}
 
     def save_state(self, path):
-        Path(path).write_bytes(b"rsi")
+        from safetensors.numpy import save_file
+
+        # A real (finite) sidecar: a guarded resume reads it for its finite check before load_state.
+        save_file({"bins.top": np.zeros(2)}, str(path))
         self.calls.append(("save", Path(path).name))
 
     def load_state(self, path):

@@ -70,33 +70,77 @@ def test_guard_is_a_noop_when_every_world_is_finite():
         np.testing.assert_array_equal(getattr(state, name).numpy().reshape(original.shape), original)
 
 
+STATE_FIELDS = ("joint_q", "joint_qd", "body_q", "body_qd")
+
+
+def _nonfinite_count(arrays, warmstart):
+    return sum(int(np.count_nonzero(~np.isfinite(array))) for array in (*arrays, warmstart))
+
+
+@pytest.mark.parametrize("value", [np.nan, np.inf, -np.inf], ids=["nan", "+inf", "-inf"])
 @pytest.mark.parametrize(
     ("field", "index"),
-    [("joint_q", 1 * Q + 3), ("joint_qd", 1 * DOF), ("body_q", (1 * BODIES + 1, 5)), ("body_qd", (1 * BODIES, 2)),
-     ("warmstart", (1, NV - 1))],
+    [("joint_q", 1 * Q + 3), ("joint_qd", 1 * DOF), ("body_q", (1 * BODIES, 1)), ("body_q", (1 * BODIES + 1, 5)),
+     ("body_qd", (1 * BODIES, 2)), ("body_qd", (1 * BODIES + 1, 4)), ("warmstart", (1, NV - 1))],
+    ids=["joint_q", "joint_qd", "body_q_position", "body_q_rotation", "body_qd_linear", "body_qd_angular",
+         "warmstart"],
 )
-def test_guard_terminates_one_nonfinite_world_and_zeroes_its_warm_start(field, index):
+def test_guard_flags_each_nonfinite_source_alone(field, index, value):
+    """One non-finite entry in exactly one source flags its world; every other input is finite.
+
+    Each source is the only non-finite value in the case, so deleting any single check from the kernel fails
+    its case (the combined failed-solve case is tested separately below).
+    """
     wp = pytest.importorskip("warp")
     wp.init()
     rng = np.random.default_rng(1)
     arrays = list(_state(wp, rng))
     warmstart = rng.standard_normal((WORLDS, NV)).astype(np.float32)
-    names = ("joint_q", "joint_qd", "body_q", "body_qd")
     if field == "warmstart":
-        warmstart[index] = np.inf
+        warmstart[index] = value
     else:
-        arrays[names.index(field)][index] = np.nan
-    warmstart[1, 0] = np.nan  # a failed solve also leaves NaN in the warm start of its world
+        arrays[STATE_FIELDS.index(field)][index] = value
+    assert _nonfinite_count(arrays, warmstart) == 1
+    original_arrays = tuple(array.copy() for array in arrays)
+    original_warmstart = warmstart.copy()
     terminated = np.asarray([0, 0, 1, 0], np.int32)
-    score = np.asarray([0.5, np.nan, 0.25, 0.75], np.float32)
-    guard, terminated_out, warmstart_out, score_out, _ = _run(wp, tuple(arrays), terminated, warmstart, score)
+    score = np.asarray([0.5, 0.9, 0.25, 0.75], np.float32)  # finite: world 1's score is zeroed by its flag alone
+    guard, terminated_out, warmstart_out, score_out, state = _run(wp, tuple(arrays), terminated, warmstart, score)
 
     assert guard.flag.numpy().tolist() == [0, 1, 0, 0]
     assert int(guard.total.numpy()[0]) == 1
     assert terminated_out.tolist() == [0, 1, 1, 0]
     np.testing.assert_array_equal(warmstart_out[1], np.zeros(NV, np.float32))
-    np.testing.assert_array_equal(np.delete(warmstart_out, 1, axis=0), np.delete(warmstart, 1, axis=0))
+    np.testing.assert_array_equal(np.delete(warmstart_out, 1, axis=0), np.delete(original_warmstart, 1, axis=0))
     np.testing.assert_array_equal(score_out, np.asarray([0.5, 0.0, 0.25, 0.75], np.float32))
+    # The guard never writes simulator state; the existing auto-reset restores the terminated world.
+    for name, original in zip(STATE_FIELDS, original_arrays, strict=True):
+        np.testing.assert_array_equal(getattr(state, name).numpy().reshape(original.shape), original)
+
+
+def test_guard_combined_failed_solve_and_second_world():
+    """A failed solve (NaN state and NaN warm start in world 1) plus an infinite body velocity in world 3."""
+    wp = pytest.importorskip("warp")
+    wp.init()
+    rng = np.random.default_rng(3)
+    joint_q, joint_qd, body_q, body_qd = _state(wp, rng)
+    warmstart = rng.standard_normal((WORLDS, NV)).astype(np.float32)
+    joint_qd[1 * DOF + 2] = np.nan
+    body_q[1 * BODIES, 0] = np.nan
+    warmstart[1, 0] = np.nan  # a failed solve also leaves NaN in the warm start of its world
+    body_qd[3 * BODIES + 1, 4] = np.inf
+    original_warmstart = warmstart.copy()
+    terminated = np.asarray([0, 0, 1, 0], np.int32)
+    score = np.asarray([0.5, np.nan, 0.25, np.inf], np.float32)
+    guard, terminated_out, warmstart_out, score_out, _ = _run(
+        wp, (joint_q, joint_qd, body_q, body_qd), terminated, warmstart, score)
+
+    assert guard.flag.numpy().tolist() == [0, 1, 0, 1]
+    assert int(guard.total.numpy()[0]) == 2
+    assert terminated_out.tolist() == [0, 1, 1, 1]
+    np.testing.assert_array_equal(warmstart_out[[1, 3]], np.zeros((2, NV), np.float32))
+    np.testing.assert_array_equal(warmstart_out[[0, 2]], original_warmstart[[0, 2]])
+    np.testing.assert_array_equal(score_out, np.asarray([0.5, 0.0, 0.25, 0.0], np.float32))
 
 
 def test_guard_build_validates_layout_and_tolerates_missing_warm_start():

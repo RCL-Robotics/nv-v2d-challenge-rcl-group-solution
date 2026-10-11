@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import json
 from dataclasses import replace
+from pathlib import Path
 
 import numpy as np
 import pytest
@@ -478,3 +479,292 @@ def test_runner_classifies_guard_terminations(tmp_path):
     assert record["guard/nonfinite_world_steps_per_iteration"] == 1.0
     assert "termination/nonfinite_fraction_per_completed_episode" not in logger.records[0][1]
     assert all(np.isfinite(value) for value in record.values())
+
+
+# ------------------------------------------------------------------------------- fused per-step guard
+
+
+def _assert_bitwise(name, left, right):
+    left, right = np.asarray(left), np.asarray(right)
+    assert left.dtype == right.dtype and left.shape == right.shape, name
+    assert left.tobytes() == right.tobytes(), name
+
+
+def _unfused_guard_262035e(jax, jnp, observation, reward, flag, terminated, value, bootstrapped, done,
+                           episode_return, completed, terms, tracking):
+    """The per-step guard ops exactly as committed in 262035e (one jitted mask, then ~12 eager dispatches)."""
+
+    @jax.jit
+    def nonfinite_rows(next_observation, step_reward, step_flag):
+        observation_finite = jnp.all(jnp.isfinite(next_observation), axis=-1)
+        bad = jnp.logical_not(observation_finite) | jnp.logical_not(jnp.isfinite(step_reward))
+        if step_flag is not None:
+            bad = bad | (step_flag != 0)
+        sanitized = jnp.where(observation_finite[:, None], next_observation, jnp.zeros_like(next_observation))
+        return bad, sanitized
+
+    def rows_or_zero(bad, values):
+        return jnp.where(bad.reshape(bad.shape + (1,) * (values.ndim - 1)), jnp.zeros_like(values), values)
+
+    flag = None if flag is None else jnp.array(flag, copy=True)
+    bad, sanitized = nonfinite_rows(jnp.array(observation, copy=True), jnp.array(reward, copy=True), flag)
+    out = {"observation": sanitized, "valid": jnp.logical_not(bad), "nonfinite_count": bad.sum()}
+    if flag is not None:
+        out["nonfinite_terminated_count"] = jnp.logical_and(terminated != 0, flag != 0).sum()
+    if bootstrapped.ndim == 2:
+        out["reward"] = jnp.where(bad[:, None], value, bootstrapped)
+    else:
+        out["reward"] = jnp.where(bad, value, bootstrapped)
+    out["done"] = jnp.where(bad, jnp.ones_like(done), done)
+    out["raw_reward_mean"] = rows_or_zero(bad, reward).mean()
+    finite_return = jnp.where(jnp.isfinite(episode_return), episode_return, 0.0)
+    out["episode_return_sum"] = jnp.where(completed, finite_return, 0.0).sum()
+    out["objective_terms"] = rows_or_zero(bad, jnp.array(terms, copy=True))
+    out["tracking_errors"] = rows_or_zero(bad, jnp.array(tracking, copy=True))
+    remaining = terminated.astype(bool)
+    if flag is not None:
+        remaining = jnp.logical_and(remaining, flag == 0)
+    out["terminated_unflagged"] = remaining
+    return out
+
+
+@pytest.mark.parametrize("columns", [0, 3], ids=["stock", "coordinated"])
+@pytest.mark.parametrize("case", ["finite", "events", "events_without_flag"])
+def test_fused_guard_step_is_bitwise_equal_to_unfused_262035e_ops(columns, case):
+    """The one-executable guard (rollout.guard_step) returns exactly the bits of the committed eager ops."""
+    jax, jnp = _dependencies()
+    from flash_chord.training.ppo.rollout import guard_step
+
+    worlds, dim = 4096, 486
+    rng = np.random.default_rng(7 + columns)
+    observation = (rng.standard_normal((worlds, dim)) * 3.0).astype(np.float32)
+    reward = rng.standard_normal(worlds).astype(np.float32)
+    terminated = (rng.uniform(size=worlds) < 0.02).astype(np.int32)
+    truncated = (rng.uniform(size=worlds) < 0.02).astype(np.int32)
+    flag = np.zeros(worlds, np.int32)
+    value = rng.standard_normal((worlds, columns) if columns else worlds).astype(np.float32)
+    episode_return = np.where(terminated | truncated, rng.standard_normal(worlds) * 50.0, 0.0).astype(np.float32)
+    completed = jnp.asarray((terminated | truncated) > 0)
+    terms = rng.standard_normal((worlds, 12)).astype(np.float32)
+    tracking = np.abs(rng.standard_normal((worlds, 6))).astype(np.float32)
+    if case != "finite":
+        observation[5, 3] = np.nan
+        observation[9, :] = np.inf
+        observation[4000, 485] = -np.inf
+        reward[17] = np.nan
+        reward[18] = -np.inf
+        flag[[30, 31, 4095]] = 1
+        terminated[[31, 4095]] = 1
+        episode_return[[40, 41]] = [np.nan, np.inf]
+        terms[5, 2] = np.nan
+        tracking[9, 0] = np.inf
+    flag_input = None if case == "events_without_flag" else jnp.asarray(flag)
+    observation, reward, value = jnp.asarray(observation), jnp.asarray(reward), jnp.asarray(value)
+    terminated, truncated = jnp.asarray(terminated), jnp.asarray(truncated)
+    episode_return, terms, tracking = jnp.asarray(episode_return), jnp.asarray(terms), jnp.asarray(tracking)
+    # Stock arithmetic, unchanged by the guard and computed outside it.
+    done = jnp.maximum(terminated, truncated).astype(jnp.float32)
+    reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
+    if columns:
+        bootstrapped = reward[:, None] + 0.99 * value * reference_end.astype(jnp.float32)[:, None]
+    else:
+        bootstrapped = reward + 0.99 * value * reference_end.astype(jnp.float32)
+
+    expected = _unfused_guard_262035e(jax, jnp, observation, reward, flag_input, terminated, value, bootstrapped,
+                                      done, episode_return, completed, terms, tracking)
+    fused = guard_step(jnp.array(observation, copy=True), reward, flag_input, terminated, value, bootstrapped, done,
+                       episode_return, terms, tracking)
+    actual = {
+        "observation": fused.observation,
+        "valid": fused.valid,
+        "nonfinite_count": fused.nonfinite_count,
+        "reward": fused.reward,
+        "done": fused.done,
+        "raw_reward_mean": fused.raw_reward.mean(),
+        "episode_return_sum": jnp.where(completed, fused.episode_return, 0.0).sum(),
+        "objective_terms": fused.objective_terms,
+        "tracking_errors": fused.tracking_errors,
+        "terminated_unflagged": fused.terminated_unflagged,
+    }
+    if flag_input is not None:
+        actual["nonfinite_terminated_count"] = fused.nonfinite_terminated_count
+    else:
+        assert fused.nonfinite_terminated_count is None
+    assert sorted(actual) == sorted(expected)
+    for name in expected:
+        _assert_bitwise(name, actual[name], expected[name])
+    bad_rows = {"finite": 0, "events": 8, "events_without_flag": 5}[case]
+    assert int(fused.nonfinite_count) == bad_rows
+    if case == "finite":
+        # All finite: every selection is the identity (the stock values, bit for bit).
+        _assert_bitwise("observation", fused.observation, observation)
+        _assert_bitwise("reward", fused.reward, bootstrapped)
+        _assert_bitwise("done", fused.done, done)
+        _assert_bitwise("raw_reward_mean", fused.raw_reward.mean(), reward.mean())
+    for leaf in jax.tree.leaves(fused):
+        assert np.isfinite(np.asarray(leaf)).all()
+
+
+def test_rollout_calls_the_fused_guard_once_per_step():
+    """Every guarded step goes through the single guard_step executable (plus the normalizer guard)."""
+    jax, jnp = _dependencies()
+    from flash_chord.training.ppo import rollout
+
+    config, state, normalization = _stock_setup(jax, jnp)
+    calls = []
+    original = rollout.guard_step
+
+    def counting(*args):
+        calls.append(len(args))
+        return original(*args)
+
+    rollout.guard_step = counting
+    try:
+        env = _GuardEnv(jnp, event_step=2, event_world=1, mode="flagged")
+        rollout.collect_rollout(env, state, normalization, env.reset(), jax.random.PRNGKey(11), config)
+    finally:
+        rollout.guard_step = original
+    assert len(calls) == config.rollout_steps
+
+
+# ------------------------------------------------------------------------------------ resume finite check
+
+
+def _leaf_paths(jax, learner):
+    return [(jax.tree_util.keystr(path), leaf) for path, leaf in jax.tree_util.tree_flatten_with_path(learner)[0]]
+
+
+def _poison_checkpoint(source, target, leaf_index, value=np.nan):
+    """Copy a checkpoint with one entry of one saved leaf replaced (format, manifest and metadata unchanged)."""
+    from safetensors.numpy import save_file
+
+    tensors, metadata = _checkpoint_tensors(source)
+    key = f"state.{leaf_index:04d}"
+    array = tensors[key].copy()
+    array.reshape(-1)[-1] = value
+    tensors[key] = array
+    target.parent.mkdir(parents=True, exist_ok=True)
+    save_file(tensors, str(target), metadata=metadata)
+
+
+def test_nonfinite_leaves_reports_only_nonfinite_floating_leaves():
+    jax, jnp = _dependencies()
+    from flash_chord.training.checkpoint import nonfinite_leaves
+
+    tree = {
+        "finite": jnp.ones((3,)),
+        "ints": jnp.arange(4),
+        "key": jax.random.key(0),
+        "raw_key": jax.random.PRNGKey(0),
+        "nested": {"bad": jnp.asarray([1.0, np.nan, np.inf, -np.inf]), "half": jnp.asarray([np.inf], jnp.bfloat16)},
+        "host": np.asarray([[0.0, np.nan]], np.float64),
+    }
+    assert sorted(nonfinite_leaves(tree)) == [("['host']", 1, 2), ("['nested']['bad']", 3, 4),
+                                              ("['nested']['half']", 1, 1)]
+    assert nonfinite_leaves({"finite": jnp.ones((3,)), "ints": jnp.arange(4)}) == []
+
+
+@pytest.mark.parametrize("leaf", ["params", "opt_state", "normalization", "observation"])
+def test_guarded_resume_refuses_a_checkpoint_with_nonfinite_values(tmp_path, leaf):
+    """Actor/critic parameters, optimizer moments, normalizer and cached observation are each checked."""
+    jax, jnp = _dependencies()
+    from flash_chord.training.checkpoint import NonfiniteCheckpointError
+    from flash_chord.training.ppo.runner import run_training
+
+    config, _, _ = _stock_setup(jax, jnp, rollout_steps=4, max_iterations=2)
+    learner = run_training(_GuardEnv(jnp), config, checkpoint_dir=tmp_path / "run", checkpoint_metadata=_metadata())
+    prefix = {"params": ".train_state.params", "opt_state": ".train_state.opt_state",
+              "normalization": ".normalization.variance", "observation": ".observation"}[leaf]
+    paths = _leaf_paths(jax, learner)
+    index = next(i for i, (path, value) in enumerate(paths)
+                 if path.startswith(prefix) and jnp.issubdtype(value.dtype, jnp.floating))
+    healthy = tmp_path / "run" / "model_2.safetensors"
+    poisoned = tmp_path / "poisoned" / "model_2.safetensors"
+    _poison_checkpoint(healthy, poisoned, index, np.inf if leaf == "observation" else np.nan)
+
+    resume = replace(config, max_iterations=3, resume=True, checkpoint=str(poisoned))
+    with pytest.raises(NonfiniteCheckpointError) as error:
+        run_training(_GuardEnv(jnp), resume, checkpoint_dir=tmp_path / "poisoned", checkpoint_metadata=_metadata())
+    message = str(error.value)
+    assert f"refusing to resume from {poisoned}: 1 saved tensor(s)" in message
+    assert f"model_2.safetensors{paths[index][0]}: 1/{np.asarray(paths[index][1]).size} non-finite" in message
+    assert "+training.nonfinite_guard=false" in message
+    assert not (tmp_path / "poisoned" / "model_3.safetensors").exists()
+
+    # The same resume from the finite checkpoint works, and the documented override restores stock behavior.
+    resumed = run_training(_GuardEnv(jnp), replace(resume, checkpoint=str(healthy)), checkpoint_metadata=_metadata())
+    assert int(resumed.iteration) == 3
+    if leaf in ("normalization", "observation"):
+        unguarded = run_training(_GuardEnv(jnp), replace(resume, nonfinite_guard=False),
+                                 checkpoint_metadata=_metadata())
+        assert int(unguarded.iteration) == 3
+
+
+def test_guarded_resume_refuses_a_checkpoint_poisoned_by_a_stock_run(tmp_path):
+    """The ep07 failure: an unguarded run poisons its normalizer; a guarded retry must not resume from it."""
+    jax, jnp = _dependencies()
+    from flash_chord.training.checkpoint import NonfiniteCheckpointError
+    from flash_chord.training.ppo.runner import run_training
+
+    config, _, _ = _stock_setup(jax, jnp, rollout_steps=4, nonfinite_guard=False, max_iterations=3)
+    env = _GuardEnv(jnp, event_step=6, event_world=2, mode="raw", publish_flag=False)  # iteration 2, step 2
+    run_training(env, config, checkpoint_dir=tmp_path, checkpoint_metadata=_metadata())
+
+    def retry(iteration):
+        return replace(config, nonfinite_guard=True, max_iterations=4, resume=True,
+                       checkpoint=str(tmp_path / f"model_{iteration}.safetensors"))
+
+    # model_1 predates the event and resumes; model_2 and model_3 were saved after it.
+    assert int(run_training(_GuardEnv(jnp), retry(1), checkpoint_metadata=_metadata()).iteration) == 4
+    for iteration in (2, 3):
+        with pytest.raises(NonfiniteCheckpointError, match=r"model_\d\.safetensors\.normalization\.mean: \d/5"):
+            run_training(_GuardEnv(jnp), retry(iteration), checkpoint_metadata=_metadata())
+
+
+class _SidecarRSI:
+    """RSI hooks that write a real sidecar (bins, keyframe bank, pending counts) and record loads."""
+
+    def __init__(self):
+        self.loaded = []
+
+    def host_update(self, iteration):
+        return {}
+
+    def save_state(self, path):
+        from safetensors.numpy import save_file
+
+        save_file({"bins.top": np.linspace(0.0, 1.0, 4), "bank.q": np.zeros((2, 3), np.float32),
+                   "pending.n_iter": np.zeros(4, np.int32)}, str(path))
+
+    def load_state(self, path):
+        self.loaded.append(Path(path).name)
+
+
+def test_guarded_resume_refuses_a_nonfinite_rsi_sidecar(tmp_path):
+    jax, jnp = _dependencies()
+    from safetensors.numpy import load_file, save_file
+
+    from flash_chord.training.checkpoint import NonfiniteCheckpointError
+    from flash_chord.training.ppo.runner import run_training
+
+    config, _, _ = _stock_setup(jax, jnp, rollout_steps=4, max_iterations=2)
+    env = _GuardEnv(jnp)
+    env.rsi = _SidecarRSI()
+    run_training(env, config, checkpoint_dir=tmp_path, checkpoint_metadata=_metadata())
+    resume = replace(config, max_iterations=3, resume=True, checkpoint=str(tmp_path / "model_2.safetensors"))
+
+    resumed_env = _GuardEnv(jnp)
+    resumed_env.rsi = _SidecarRSI()
+    run_training(resumed_env, resume, checkpoint_metadata=_metadata())
+    assert resumed_env.rsi.loaded == ["rsi_2.safetensors"]
+
+    sidecar = tmp_path / "rsi_2.safetensors"
+    tensors = load_file(str(sidecar))
+    tensors["bank.q"] = tensors["bank.q"].copy()
+    tensors["bank.q"][1, 2] = np.inf
+    save_file(tensors, str(sidecar))
+    refused_env = _GuardEnv(jnp)
+    refused_env.rsi = _SidecarRSI()
+    with pytest.raises(NonfiniteCheckpointError, match=r"rsi_2\.safetensors\['bank\.q'\]: 1/6 non-finite"):
+        run_training(refused_env, resume, checkpoint_metadata=_metadata())
+    assert refused_env.rsi.loaded == []  # refused before the sidecar was loaded

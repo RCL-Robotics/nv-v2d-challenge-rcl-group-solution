@@ -10,6 +10,11 @@ reward_normalization: false
 device: cuda:0
 resume: false
 checkpoint: null
+# nonfinite_guard is a TrainingConfig default (true) and deliberately not a key here. It resets worlds whose
+# physics turns NaN/Inf, keeps them out of the PPO batch and the observation normalizer, and refuses to resume
+# from a checkpoint or RSI sidecar holding NaN/Inf. Disable it with the append override
+# `+training.nonfinite_guard=false` (plain `training.nonfinite_guard=false` fails: the key is not in this struct).
+# See src/flash_chord/training/README.md.
 wandb_entity: ${logging.entity}
 wandb_project: ${logging.project}
 experiment_name: ${logging.experiment}

@@ -4,6 +4,8 @@
 
 from __future__ import annotations
 
+from typing import NamedTuple
+
 import flax
 import jax
 import jax.numpy as jnp
@@ -40,24 +42,93 @@ class RolloutMetrics:
     nonfinite_terminated_count: jax.Array | None = None
 
 
-@jax.jit
-def _nonfinite_rows(next_observation: jax.Array, reward: jax.Array, flag: jax.Array | None):
-    """Per-world non-finite mask and the observation with non-finite rows zeroed.
+class GuardedStep(NamedTuple):
+    """Outputs of :func:`guard_step` for one environment step (``None`` where the matching input is ``None``)."""
 
-    A row is bad when its next observation or reward is non-finite or the environment's guard flagged it.
-    ``jnp.where`` returns the untouched values for good rows, so all-finite steps are unchanged bit for bit.
+    observation: jax.Array  # next observation with non-finite rows zeroed
+    valid: jax.Array  # rows that may enter the observation normalizer (not bad)
+    reward: jax.Array  # PPO reward after the stock bootstrap; bad rows replaced by their own value
+    done: jax.Array  # bad rows end the episode
+    raw_reward: jax.Array  # environment reward with bad rows zeroed (its mean is the logged step reward)
+    episode_return: jax.Array | None  # completed-episode returns with non-finite entries zeroed
+    objective_terms: jax.Array | None  # diagnostic rows of bad worlds zeroed
+    tracking_errors: jax.Array | None  # diagnostic rows of bad worlds zeroed
+    terminated_unflagged: jax.Array  # terminations left for the tracking-cause classes (guard ones excluded)
+    nonfinite_count: jax.Array  # bad world-steps
+    nonfinite_terminated_count: jax.Array | None  # environment-flagged terminations (None without a flag)
+
+
+@jax.jit
+def guard_step(
+    next_observation: jax.Array,
+    reward: jax.Array,
+    flag: jax.Array | None,
+    terminated: jax.Array,
+    value: jax.Array,
+    bootstrapped_reward: jax.Array,
+    done: jax.Array,
+    episode_return: jax.Array | None,
+    objective_terms: jax.Array | None,
+    tracking_errors: jax.Array | None,
+) -> GuardedStep:
+    """Every per-step selection of the non-finite guard (``TrainingConfig.nonfinite_guard``) in one executable.
+
+    A world-step is bad when its next observation or environment ``reward`` is non-finite or the environment's
+    guard ``flag`` is set. A bad step bootstraps from its own value (zero TD error) and ends the episode; its
+    observation row is zeroed and kept out of the normalizer; its diagnostics are zeroed.
+
+    Only elementwise selections and integer counts run here. The stock reward arithmetic (which yields
+    ``bootstrapped_reward``), every floating-point reduction and the normalizer update stay separate
+    executables, exactly as without the guard, so an all-finite step is bit-identical to the unguarded rollout
+    and every output is bit-identical to the unfused guard of 262035e (which issued ~12 eager dispatches per
+    step and cost 3-7% throughput). Every output is a fresh buffer, so zero-copy Warp views may be passed in.
     """
     observation_finite = jnp.all(jnp.isfinite(next_observation), axis=-1)
     bad = jnp.logical_not(observation_finite) | jnp.logical_not(jnp.isfinite(reward))
+    terminated_unflagged = terminated.astype(bool)
+    nonfinite_terminated_count = None
     if flag is not None:
         bad = bad | (flag != 0)
-    sanitized = jnp.where(observation_finite[:, None], next_observation, jnp.zeros_like(next_observation))
-    return bad, sanitized
+        nonfinite_terminated_count = jnp.logical_and(terminated != 0, flag != 0).sum()
+        terminated_unflagged = jnp.logical_and(terminated_unflagged, flag == 0)
+
+    def rows(values: jax.Array) -> jax.Array:
+        return bad.reshape(bad.shape + (1,) * (values.ndim - 1))
+
+    def zero_rows(values: jax.Array | None) -> jax.Array | None:
+        return None if values is None else jnp.where(rows(values), jnp.zeros_like(values), values)
+
+    return GuardedStep(
+        observation=jnp.where(observation_finite[:, None], next_observation, jnp.zeros_like(next_observation)),
+        valid=jnp.logical_not(bad),
+        reward=jnp.where(rows(bootstrapped_reward), value, bootstrapped_reward),
+        done=jnp.where(bad, jnp.ones_like(done), done),
+        raw_reward=zero_rows(reward),
+        episode_return=(
+            None if episode_return is None else jnp.where(jnp.isfinite(episode_return), episode_return, 0.0)
+        ),
+        objective_terms=zero_rows(objective_terms),
+        tracking_errors=zero_rows(tracking_errors),
+        terminated_unflagged=terminated_unflagged,
+        nonfinite_count=bad.sum(),
+        nonfinite_terminated_count=nonfinite_terminated_count,
+    )
 
 
-def _rows_or_zero(bad: jax.Array, values: jax.Array) -> jax.Array:
-    """Zero the diagnostic rows of bad worlds (identity for good rows)."""
-    return jnp.where(bad.reshape(bad.shape + (1,) * (values.ndim - 1)), jnp.zeros_like(values), values)
+def _guard_transition(transition, next_observation, terminated, value, bootstrapped_reward, done) -> GuardedStep:
+    """:func:`guard_step` on one :class:`VectorStep` (its zero-copy views are read before the next step)."""
+    return guard_step(
+        next_observation,
+        transition.reward,
+        transition.nonfinite,
+        terminated,
+        value,
+        bootstrapped_reward,
+        done,
+        transition.episode_return,
+        transition.objective_terms,
+        transition.tracking_errors,
+    )
 
 
 @jax.jit
@@ -118,19 +189,17 @@ def collect_rollout(
         reward = jnp.array(transition.reward, copy=True)
         terminated = jnp.array(transition.terminated, copy=True)
         truncated = jnp.array(transition.truncated, copy=True)
-        if guard:
-            flag = None if transition.nonfinite is None else jnp.array(transition.nonfinite, copy=True)
-            bad, next_observation = _nonfinite_rows(next_observation, reward, flag)
-            nonfinite_world_counts.append(bad.sum())
-            if flag is not None:
-                nonfinite_terminated_counts.append(jnp.logical_and(terminated != 0, flag != 0).sum())
         done = jnp.maximum(terminated, truncated).astype(jnp.float32)
         reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
         reward = reward + config.ppo.discount * value * reference_end.astype(jnp.float32)
+        guarded = None
         if guard:
             # A bad world-step bootstraps from its own value (zero TD error, zero advantage) and ends the episode.
-            reward = jnp.where(bad, value, reward)
-            done = jnp.where(bad, jnp.ones_like(done), done)
+            guarded = _guard_transition(transition, next_observation, terminated, value, reward, done)
+            next_observation, reward, done = guarded.observation, guarded.reward, guarded.done
+            nonfinite_world_counts.append(guarded.nonfinite_count)
+            if guarded.nonfinite_terminated_count is not None:
+                nonfinite_terminated_counts.append(guarded.nonfinite_terminated_count)
 
         observations.append(policy_observation)
         actions.append(action)
@@ -141,26 +210,23 @@ def collect_rollout(
         action_means.append(action_mean)
         action_stds.append(action_std)
         if guard:
-            raw_rewards.append(_rows_or_zero(bad, transition.reward).mean())
+            raw_rewards.append(guarded.raw_reward.mean())
         else:
             raw_rewards.append(transition.reward.mean())
         reference_end_counts.append(reference_end.sum())
         completed = transition.episode_length > 0
-        episode_return = transition.episode_return
-        if guard:
-            episode_return = jnp.where(jnp.isfinite(episode_return), episode_return, 0.0)
+        episode_return = guarded.episode_return if guard else transition.episode_return
         episode_returns.append(jnp.where(completed, episode_return, 0.0).sum())
         episode_lengths.append(jnp.where(completed, transition.episode_length, 0).sum())
         episode_reference_progress.append(jnp.where(completed, transition.episode_reference_progress, 0.0).sum())
         episode_counts.append(completed.sum())
         if transition.objective_terms is not None:
-            terms = jnp.array(transition.objective_terms, copy=True)
-            objective_terms.append(_rows_or_zero(bad, terms) if guard else terms)
+            objective_terms.append(
+                guarded.objective_terms if guard else jnp.array(transition.objective_terms, copy=True)
+            )
         if transition.termination_causes is not None:
-            remaining = terminated.astype(bool)
-            if guard and flag is not None:
-                # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
-                remaining = jnp.logical_and(remaining, flag == 0)
+            # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
+            remaining = guarded.terminated_unflagged if guard else terminated.astype(bool)
             exclusive_causes = []
             for cause in jnp.moveaxis(jnp.array(transition.termination_causes, copy=True), -1, 0):
                 selected = jnp.logical_and(remaining, cause.astype(bool))
@@ -168,15 +234,14 @@ def collect_rollout(
                 remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
             termination_causes.append(jnp.stack(exclusive_causes, axis=-1))
         if transition.tracking_errors is not None:
-            errors = jnp.array(transition.tracking_errors, copy=True)
-            tracking_errors.append(_rows_or_zero(bad, errors) if guard else errors)
+            tracking_errors.append(
+                guarded.tracking_errors if guard else jnp.array(transition.tracking_errors, copy=True)
+            )
 
         if config.observation_normalization:
             if guard:
                 candidate = update_normalization(normalization, next_observation)
-                normalization = guard_normalization_update(
-                    normalization, candidate, next_observation, jnp.logical_not(bad)
-                )
+                normalization = guard_normalization_update(normalization, candidate, next_observation, guarded.valid)
             else:
                 normalization = update_normalization(normalization, next_observation)
         observation = next_observation
@@ -285,19 +350,17 @@ def collect_rollout_coordinated(
         reward = jnp.array(transition.reward, copy=True)
         terminated = jnp.array(transition.terminated, copy=True)
         truncated = jnp.array(transition.truncated, copy=True)
-        if guard:
-            flag = None if transition.nonfinite is None else jnp.array(transition.nonfinite, copy=True)
-            bad, next_observation = _nonfinite_rows(next_observation, reward, flag)
-            nonfinite_world_counts.append(bad.sum())
-            if flag is not None:
-                nonfinite_terminated_counts.append(jnp.logical_and(terminated != 0, flag != 0).sum())
         done = jnp.maximum(terminated, truncated).astype(jnp.float32)
         reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
         column_reward = reward[:, None] + config.ppo.discount * value * reference_end.astype(jnp.float32)[:, None]
+        guarded = None
         if guard:
             # A bad world-step bootstraps from its own value (zero TD error, zero advantage) and ends the episode.
-            column_reward = jnp.where(bad[:, None], value, column_reward)
-            done = jnp.where(bad, jnp.ones_like(done), done)
+            guarded = _guard_transition(transition, next_observation, terminated, value, column_reward, done)
+            next_observation, column_reward, done = guarded.observation, guarded.reward, guarded.done
+            nonfinite_world_counts.append(guarded.nonfinite_count)
+            if guarded.nonfinite_terminated_count is not None:
+                nonfinite_terminated_counts.append(guarded.nonfinite_terminated_count)
 
         observations.append(policy_observation)
         actions.append(action)
@@ -308,26 +371,23 @@ def collect_rollout_coordinated(
         action_means.append(action_mean)
         action_stds.append(action_std)
         if guard:
-            raw_rewards.append(_rows_or_zero(bad, transition.reward).mean())
+            raw_rewards.append(guarded.raw_reward.mean())
         else:
             raw_rewards.append(transition.reward.mean())
         reference_end_counts.append(reference_end.sum())
         completed = transition.episode_length > 0
-        episode_return = transition.episode_return
-        if guard:
-            episode_return = jnp.where(jnp.isfinite(episode_return), episode_return, 0.0)
+        episode_return = guarded.episode_return if guard else transition.episode_return
         episode_returns.append(jnp.where(completed, episode_return, 0.0).sum())
         episode_lengths.append(jnp.where(completed, transition.episode_length, 0).sum())
         episode_reference_progress.append(jnp.where(completed, transition.episode_reference_progress, 0.0).sum())
         episode_counts.append(completed.sum())
         if transition.objective_terms is not None:
-            terms = jnp.array(transition.objective_terms, copy=True)
-            objective_terms.append(_rows_or_zero(bad, terms) if guard else terms)
+            objective_terms.append(
+                guarded.objective_terms if guard else jnp.array(transition.objective_terms, copy=True)
+            )
         if transition.termination_causes is not None:
-            remaining = terminated.astype(bool)
-            if guard and flag is not None:
-                # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
-                remaining = jnp.logical_and(remaining, flag == 0)
+            # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
+            remaining = guarded.terminated_unflagged if guard else terminated.astype(bool)
             exclusive_causes = []
             for cause in jnp.moveaxis(jnp.array(transition.termination_causes, copy=True), -1, 0):
                 selected = jnp.logical_and(remaining, cause.astype(bool))
@@ -335,15 +395,14 @@ def collect_rollout_coordinated(
                 remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
             termination_causes.append(jnp.stack(exclusive_causes, axis=-1))
         if transition.tracking_errors is not None:
-            errors = jnp.array(transition.tracking_errors, copy=True)
-            tracking_errors.append(_rows_or_zero(bad, errors) if guard else errors)
+            tracking_errors.append(
+                guarded.tracking_errors if guard else jnp.array(transition.tracking_errors, copy=True)
+            )
 
         if config.observation_normalization:
             if guard:
                 candidate = update_normalization(normalization, next_observation)
-                normalization = guard_normalization_update(
-                    normalization, candidate, next_observation, jnp.logical_not(bad)
-                )
+                normalization = guard_normalization_update(normalization, candidate, next_observation, guarded.valid)
             else:
                 normalization = update_normalization(normalization, next_observation)
         observation = next_observation

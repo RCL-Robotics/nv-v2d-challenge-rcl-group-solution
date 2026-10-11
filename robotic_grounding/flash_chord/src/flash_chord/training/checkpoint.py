@@ -132,3 +132,55 @@ def load_checkpoint_for_inference(path: str | Path, template):
     of worlds while all policy, optimizer, normalization, RNG, and scalar leaves remain strict.
     """
     return _restore_checkpoint(path, template, template_leaf_paths=frozenset({".observation"}))
+
+
+class NonfiniteCheckpointError(ValueError):
+    """Saved training state holds NaN/Inf values: the run that wrote it was already poisoned."""
+
+
+def nonfinite_leaves(tree) -> list[tuple[str, int, int]]:
+    """``(path, non-finite count, size)`` of every floating-point leaf of ``tree`` that holds a NaN or infinity."""
+    found = []
+    for path, leaf in jax.tree_util.tree_flatten_with_path(tree)[0]:
+        dtype = getattr(leaf, "dtype", None)
+        if dtype is None or not jax.numpy.issubdtype(dtype, jax.numpy.inexact):
+            continue
+        value = np.asarray(leaf)
+        count = int(value.size - np.count_nonzero(np.isfinite(value)))
+        if count:
+            found.append((jax.tree_util.keystr(path), count, int(value.size)))
+    return found
+
+
+def require_finite_resume_state(checkpoint: str | Path, learner, rsi_sidecar: str | Path | None = None) -> None:
+    """Refuse to resume from learner state, or an RSI sidecar, that holds non-finite values.
+
+    ``learner`` is the state restored from ``checkpoint`` before the resumed run replaces its cached observation.
+    Every floating-point leaf is checked: actor and critic parameters, optimizer moments, the observation
+    normalizer and the cached observation; with ``rsi_sidecar``, also every floating-point tensor of the RSI bins
+    and keyframe bank. Stock FlashCHORD has no finite check, so one non-finite world poisons the normalizer for
+    good and every later checkpoint of that run; the non-finite guard stops new poisoning but cannot heal it.
+    """
+    name = Path(checkpoint).name
+    problems = [(f"{name}{path}", count, size) for path, count, size in nonfinite_leaves(learner)]
+    if rsi_sidecar is not None:
+        from safetensors.numpy import load_file  # noqa: PLC0415 - read only when RSI is resumed
+
+        sidecar_name = Path(rsi_sidecar).name
+        problems += [
+            (f"{sidecar_name}{path}", count, size)
+            for path, count, size in nonfinite_leaves(load_file(str(rsi_sidecar)))
+        ]
+    if not problems:
+        return
+    shown = 12
+    listed = "\n".join(f"  {where}: {count}/{size} non-finite" for where, count, size in problems[:shown])
+    if len(problems) > shown:
+        listed += f"\n  ... and {len(problems) - shown} more"
+    raise NonfiniteCheckpointError(
+        f"refusing to resume from {checkpoint}: {len(problems)} saved tensor(s) hold NaN/Inf values, so the run "
+        f"that wrote it was already poisoned and resuming would keep training on that state:\n{listed}\n"
+        "Resume from an earlier checkpoint whose tensors are all finite (move the poisoned model_*/rsi_* files "
+        "aside first: auto-resume picks the newest), or pass +training.nonfinite_guard=false to resume anyway "
+        "with stock behavior."
+    )
