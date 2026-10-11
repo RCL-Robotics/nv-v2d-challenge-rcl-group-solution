@@ -191,6 +191,8 @@ class Evaluation:
                 matches = sorted(self.arm_dir.glob(f"ep{episode:02d}_*"))
                 matches = [m for m in matches if m.is_dir() and "_seed" not in m.name]
                 directory = matches[0] if len(matches) == 1 else directory
+            if not directory.is_dir() and (self.arm_dir / f"ep{episode:02d}").is_dir():
+                directory = self.arm_dir / f"ep{episode:02d}"  # scripts/track2_queue.sh layout
             checkpoint = directory / f"model_{iteration}.safetensors"
             row["source_checkpoint"] = str(checkpoint)
             if not checkpoint.is_file():
