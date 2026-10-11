@@ -92,6 +92,100 @@ class PPOConfig:
             raise ValueError(f"log_ratio_clip must be finite and positive or None, got {self.log_ratio_clip}")
 
 
+COORDINATE_AGENTS = ("left", "right", "body")
+COORDINATE_HAND_WORLD_TERMS = ("reflect", "drop")
+
+
+def coordinate_export_budget(
+    encoder_dim: int,
+    partner_dim: int,
+    message_dim: int,
+    trunk_dims: tuple[int, ...],
+    mirror_body_message: bool,
+) -> tuple[int, int, int, int]:
+    """Hidden units the E2 export needs in each of the four stock actor layers (three agents)."""
+    partner_blocks = 4 if mirror_body_message else 3
+    return (
+        3 * encoder_dim + partner_blocks * partner_dim,
+        3 * (encoder_dim + message_dim),
+        3 * trunk_dims[0],
+        3 * trunk_dims[1],
+    )
+
+
+@dataclass(frozen=True)
+class CoordinateConfig:
+    """W0-P coordinated actor and per-agent PPO settings (three agents: left hand, right hand, body).
+
+    ``None`` in ``TrainingConfig.coordinate`` selects the stock learner. The coordinated critic uses
+    ``network.critic_hidden_dims``; the coordinated actor uses the widths below and ignores
+    ``network.actor_hidden_dims``.
+    """
+
+    agents: tuple[str, ...] = COORDINATE_AGENTS
+    encoder_dim: int = 96
+    partner_dim: int = 64
+    message_dim: int = 64
+    trunk_dims: tuple[int, ...] = (80, 40)
+    partner_message: bool = True
+    mirror_body_message: bool = True
+    hand_world_terms: str = "reflect"
+    ratio_mode: str = "per_agent"
+    value_mode: str = "per_agent"
+    export_actor_hidden_dims: tuple[int, ...] = (1024, 512, 256, 128)
+
+    def __post_init__(self) -> None:
+        for name in ("agents", "trunk_dims", "export_actor_hidden_dims"):
+            value = getattr(self, name)
+            if isinstance(value, str) or not hasattr(value, "__iter__"):
+                raise TypeError(f"coordinate.{name} must be a sequence, got {value!r}")
+            object.__setattr__(self, name, tuple(value))
+        if self.agents != COORDINATE_AGENTS:
+            raise ValueError(f"coordinate.agents must be exactly {COORDINATE_AGENTS}, got {self.agents}")
+        for name in ("encoder_dim", "partner_dim", "message_dim"):
+            value = getattr(self, name)
+            if isinstance(value, bool) or not isinstance(value, int) or value <= 0:
+                raise ValueError(f"coordinate.{name} must be a positive integer, got {value!r}")
+        if len(self.trunk_dims) != 2 or any(
+            isinstance(width, bool) or not isinstance(width, int) or width <= 0 for width in self.trunk_dims
+        ):
+            raise ValueError(f"coordinate.trunk_dims must be two positive integers, got {self.trunk_dims}")
+        for name in ("partner_message", "mirror_body_message"):
+            if not isinstance(getattr(self, name), bool):
+                raise TypeError(f"coordinate.{name} must be a bool, got {getattr(self, name)!r}")
+        if self.hand_world_terms not in COORDINATE_HAND_WORLD_TERMS:
+            raise ValueError(
+                f"coordinate.hand_world_terms must be one of {COORDINATE_HAND_WORLD_TERMS}, "
+                f"got {self.hand_world_terms!r}"
+            )
+        if self.ratio_mode != "per_agent":
+            raise ValueError(f"coordinate.ratio_mode supports only 'per_agent' (W0-P), got {self.ratio_mode!r}")
+        if self.value_mode != "per_agent":
+            raise ValueError(f"coordinate.value_mode supports only 'per_agent' (W0-P), got {self.value_mode!r}")
+        if len(self.export_actor_hidden_dims) != 4 or any(
+            isinstance(width, bool) or not isinstance(width, int) or width <= 0
+            for width in self.export_actor_hidden_dims
+        ):
+            raise ValueError(
+                "coordinate.export_actor_hidden_dims must be four positive integers (the stock actor depth), "
+                f"got {self.export_actor_hidden_dims}"
+            )
+        required = coordinate_export_budget(
+            self.encoder_dim,
+            self.partner_dim,
+            self.message_dim,
+            self.trunk_dims,
+            self.mirror_body_message,
+        )
+        for layer, (needed, available) in enumerate(zip(required, self.export_actor_hidden_dims, strict=True)):
+            if needed > available:
+                raise ValueError(
+                    f"coordinated actor needs {needed} units in stock actor layer {layer}, but "
+                    f"export_actor_hidden_dims[{layer}] is {available}; widths {required} must fit "
+                    f"{self.export_actor_hidden_dims}"
+                )
+
+
 @dataclass(frozen=True)
 class TrainingConfig:
     """Runner, normalization, checkpoint, and logging settings."""
@@ -114,6 +208,7 @@ class TrainingConfig:
     curriculum: FixedCurriculum | None = field(default_factory=reference_curriculum)
     network: NetworkConfig = field(default_factory=NetworkConfig)
     ppo: PPOConfig = field(default_factory=PPOConfig)
+    coordinate: CoordinateConfig | None = None
 
     def __post_init__(self) -> None:
         if self.world_count <= 0:
@@ -135,3 +230,7 @@ class TrainingConfig:
             )
         if self.resume and self.checkpoint is None:
             raise ValueError("resume requires a checkpoint path")
+        if self.coordinate is not None and not isinstance(self.coordinate, CoordinateConfig):
+            raise TypeError(
+                f"coordinate must be a CoordinateConfig or None, got {type(self.coordinate).__name__}"
+            )

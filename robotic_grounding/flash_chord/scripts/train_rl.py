@@ -26,7 +26,13 @@ from flash_chord.training.checkpoint_metadata import (
 )
 from flash_chord.training.environment import WarpRLEnv
 from flash_chord.training.ppo.config import TrainingConfig
-from flash_chord.training.ppo.runner import WandbLogger, metric_definitions, run_training
+from flash_chord.training.ppo.runner import (
+    JsonlLogger,
+    TeeLogger,
+    WandbLogger,
+    metric_definitions,
+    run_training,
+)
 from flash_chord.training.progress import ConsoleTrainingProgress
 
 os.environ["TZ"] = "PST8PDT,M3.2.0,M11.1.0"
@@ -87,6 +93,12 @@ def main(cfg: DictConfig) -> None:
                 mode=cfg.logging.mode,
                 dir=str(output_dir),
             )
+        # Optional local metric copy (``+logging.local_jsonl=true`` -> <output_dir>/metrics.jsonl, or a path).
+        local_jsonl = cfg.logging.get("local_jsonl", False)
+        if local_jsonl:
+            jsonl_path = output_dir / "metrics.jsonl" if local_jsonl is True else resolve_path(str(local_jsonl))
+            jsonl_logger = JsonlLogger(jsonl_path)
+            logger = jsonl_logger if logger is None else TeeLogger(logger, jsonl_logger)
         learner = run_training(
             jax_env,
             training,

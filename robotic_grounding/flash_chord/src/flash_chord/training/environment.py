@@ -11,6 +11,7 @@ import jax
 import jax.numpy as jnp
 
 from flash_chord.lifecycle.curriculum import CurriculumStage
+from flash_chord.lifecycle.rsi import RSIHooks
 from flash_chord.lifecycle.termination import PackedTerminationDiagnostics, TerminationDiagnostics
 from flash_chord.objectives.composition import CurriculumObjective, ObjectiveDiagnostics
 from flash_chord.runtime.jax import from_jax, to_jax
@@ -71,6 +72,9 @@ class WarpRLEnv:
         self.frame_dt = float(getattr(env, "frame_dt", 1.0))
         self.reset_to_first_frame_probability = getattr(env, "reset_to_first_frame_probability", None)
         self.immediate_first_frame_probability = getattr(env, "immediate_first_frame_probability", None)
+        # RSI reset hooks used by the training loop (host update, sidecar save/load); None for stock resets.
+        reset_policy = getattr(env, "reset_policy", None)
+        self.rsi = reset_policy if isinstance(reset_policy, RSIHooks) else None
         objective = getattr(env, "objective", None)
         if isinstance(objective, ObjectiveDiagnostics):
             self.objective_term_names = objective.term_names

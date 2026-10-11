@@ -152,3 +152,136 @@ def collect_rollout(
         tracking_error_mean=jnp.stack(tracking_errors).mean(axis=(0, 1)) if tracking_errors else None,
     )
     return batch, observation, normalization, key, metrics
+
+
+@jax.jit
+def sample_action_coordinated(state, observation: jax.Array, key: jax.Array, group_matrix: jax.Array):
+    """Sample one action batch with per-group log-probabilities and K-column values."""
+    from flash_chord.training.ppo.coordinate.per_group import per_group_log_prob
+
+    policy, value = state.apply_fn(state.params, observation)
+    action = policy.sample(seed=key)
+    action_mean = policy.mean()
+    action_std = policy.stddev()
+    log_probability = per_group_log_prob(action, action_mean, action_std, group_matrix)
+    return action, log_probability, value, action_mean, action_std
+
+
+def collect_rollout_coordinated(
+    env: JAXVectorEnv,
+    state,
+    normalization: NormalizationState,
+    observation: jax.Array,
+    key: jax.Array,
+    config: TrainingConfig,
+    group_matrix: jax.Array,
+):
+    """:func:`collect_rollout` with per-group log-probabilities and K value columns.
+
+    The shared scalar reward is duplicated per value column and each column receives its own
+    reference-end bootstrap ``gamma * V_k`` (stock rollout.py semantics applied per column).
+    Returns ``(CoordinatedRolloutBatch, observation, normalization, key, RolloutMetrics)``.
+    """
+    from flash_chord.training.ppo.coordinate.per_group import CoordinatedRolloutBatch
+
+    observations = []
+    actions = []
+    log_probabilities = []
+    values = []
+    rewards = []
+    dones = []
+    action_means = []
+    action_stds = []
+    raw_rewards = []
+    reference_end_counts = []
+    episode_returns = []
+    episode_lengths = []
+    episode_reference_progress = []
+    episode_counts = []
+    objective_terms = []
+    termination_causes = []
+    tracking_errors = []
+
+    for _ in range(config.rollout_steps):
+        raw_observation = jnp.array(observation, copy=True)
+        policy_observation = raw_observation
+        if config.observation_normalization:
+            policy_observation = normalize_observation(
+                normalization,
+                raw_observation,
+                config.observation_normalization_epsilon,
+            )
+        key, action_key = jax.random.split(key)
+        action, log_probability, value, action_mean, action_std = sample_action_coordinated(
+            state,
+            policy_observation,
+            action_key,
+            group_matrix,
+        )
+        transition = env.step(action)
+        next_observation = jnp.array(transition.observation, copy=True)
+        reward = jnp.array(transition.reward, copy=True)
+        terminated = jnp.array(transition.terminated, copy=True)
+        truncated = jnp.array(transition.truncated, copy=True)
+        done = jnp.maximum(terminated, truncated).astype(jnp.float32)
+        reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
+        column_reward = reward[:, None] + config.ppo.discount * value * reference_end.astype(jnp.float32)[:, None]
+
+        observations.append(policy_observation)
+        actions.append(action)
+        log_probabilities.append(log_probability)
+        values.append(value)
+        rewards.append(column_reward)
+        dones.append(done)
+        action_means.append(action_mean)
+        action_stds.append(action_std)
+        raw_rewards.append(transition.reward.mean())
+        reference_end_counts.append(reference_end.sum())
+        completed = transition.episode_length > 0
+        episode_returns.append(jnp.where(completed, transition.episode_return, 0.0).sum())
+        episode_lengths.append(jnp.where(completed, transition.episode_length, 0).sum())
+        episode_reference_progress.append(jnp.where(completed, transition.episode_reference_progress, 0.0).sum())
+        episode_counts.append(completed.sum())
+        if transition.objective_terms is not None:
+            objective_terms.append(jnp.array(transition.objective_terms, copy=True))
+        if transition.termination_causes is not None:
+            remaining = terminated.astype(bool)
+            exclusive_causes = []
+            for cause in jnp.moveaxis(jnp.array(transition.termination_causes, copy=True), -1, 0):
+                selected = jnp.logical_and(remaining, cause.astype(bool))
+                exclusive_causes.append(selected)
+                remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
+            termination_causes.append(jnp.stack(exclusive_causes, axis=-1))
+        if transition.tracking_errors is not None:
+            tracking_errors.append(jnp.array(transition.tracking_errors, copy=True))
+
+        if config.observation_normalization:
+            normalization = update_normalization(normalization, next_observation)
+        observation = next_observation
+
+    batch = CoordinatedRolloutBatch(
+        observation=jnp.stack(observations),
+        action=jnp.stack(actions),
+        log_probability=jnp.stack(log_probabilities),
+        value=jnp.stack(values),
+        reward=jnp.stack(rewards),
+        done=jnp.stack(dones),
+        action_mean=jnp.stack(action_means),
+        action_std=jnp.stack(action_stds),
+    )
+    stacked_action_means = jnp.stack(action_means)
+    stacked_action_stds = jnp.stack(action_stds)
+    metrics = RolloutMetrics(
+        mean_step_reward=jnp.stack(raw_rewards).mean(),
+        reference_end_count=jnp.stack(reference_end_counts).sum(),
+        episode_return_sum=jnp.stack(episode_returns).sum(),
+        episode_length_sum=jnp.stack(episode_lengths).sum(),
+        episode_reference_progress_sum=jnp.stack(episode_reference_progress).sum(),
+        episode_count=jnp.stack(episode_counts).sum(),
+        action_mean_abs_mean=jnp.abs(stacked_action_means).mean(),
+        action_std_mean=stacked_action_stds.mean(),
+        objective_term_mean=jnp.stack(objective_terms).mean(axis=(0, 1)) if objective_terms else None,
+        termination_cause_count=(jnp.stack(termination_causes).sum(axis=(0, 1)) if termination_causes else None),
+        tracking_error_mean=jnp.stack(tracking_errors).mean(axis=(0, 1)) if tracking_errors else None,
+    )
+    return batch, observation, normalization, key, metrics

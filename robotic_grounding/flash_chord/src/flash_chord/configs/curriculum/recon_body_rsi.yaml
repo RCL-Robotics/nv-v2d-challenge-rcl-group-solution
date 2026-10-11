@@ -1,0 +1,24 @@
+_target_: flash_chord.configuration.make_fixed_curriculum
+
+# RSI v3 (fixed) owns the VOC help per start bin and per lane (reset/recon_body_rsi.yaml), so the curriculum is a
+# single stage. voc_scale 0.0 only feeds the curriculum/voc_scale log key and the explicit-reset path; the RSI
+# reset ignores the global scale. The objective weights are those of recon_body_ppo.yaml. No reset-probability
+# overrides: the RSI reset does not implement them. 20,000 is the terminal sentinel for the experiment budget.
+thresholds: [20000]
+
+stages:
+  - _target_: flash_chord.configuration.make_curriculum_stage
+    voc_scale: 0.0
+    objective_weights:
+      termination: -300.0
+      action_rate_l2: -0.0001
+      action_l2: -0.000001
+      soft_joint_limit: -0.001
+      pelvis_position: 1.0
+      pelvis_orientation: 1.0
+      body_joint_position: 5.0
+      object_position: 1.0
+      progress: 1.0
+      palm_position: 1.0
+      palm_orientation: 1.0
+      force_closure: 5.0

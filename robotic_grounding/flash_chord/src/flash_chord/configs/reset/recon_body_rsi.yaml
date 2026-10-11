@@ -1,0 +1,47 @@
+# RSI v3 (fixed) ReconBody reset: Coordinates_hand adaptive start bins with per-bin VOC help, failure-weighted
+# start sampling, a keyframe bank of reached simulator states (kf_to_end) and a fixed frame-0 anchor share.
+# The stock fields keep exactly the values of reset/recon_body.yaml; RSI owns the start distribution, so the
+# stock frame window and first-frame probabilities stay neutral. Help is per lane (applied_voc_scale) and the
+# curriculum's global voc_scale is ignored.
+_target_: flash_chord.lifecycle.rsi_reset.RSIReconBodyResetConfig
+reset_freeze_steps: 50
+voc_decay_steps: 10
+reset_voc_scale: 1.0
+shoulder_spread: 0.2
+start_frame: 0
+end_frame: -1
+always_reset_to_first_frame: false
+reset_to_first_frame_probability: 0.0
+immediate_first_frame_probability: 0.0
+seed: 42
+# Start bins and help (CH curriculum.py RSI_DEFAULTS; D5: 25-step bins, zero_below 6.25e-4 of top0,
+# deadline 11k + 1k ramp so every bin is at zero by iteration 12k)
+bin_frames: 25
+uniform_mix: 0.3
+credit_gamma: 0.75
+fail_alpha: 0.02
+success_up: 0.8
+success_down: 0.4
+step: 0.9
+band: 2.0
+min_count: 64
+min_gap: 40
+wait_iterations: 100
+top0: 1.0
+zero_below: 0.000625
+deadline: 11000
+zero_ramp: 1000
+min_horizon: 10
+frame0_share: 0.25
+start_update: 0
+# Keyframe bank (CH keyframes.py; only kf_to_end is supported)
+keyframes: true
+kf_to_end: true
+kf_capacity: 256
+kf_prob: 0.002
+kf_min_fill: 32
+kf_min_task: 0.6
+kf_min_stepped: 15
+kf_step_score_min: 0.3
+# Task score s_t = exp(-task_pos_scale * object position error) * exp(-object orientation error)
+task_pos_scale: 10.0
