@@ -1,0 +1,25 @@
+_target_: flash_chord.configuration.make_fixed_curriculum
+
+# curriculum/recon_body_rsi.yaml plus the Coordinates_hand object task weight (objective/recon_body_objtask.yaml).
+# Identical otherwise: one stage, voc_scale 0.0 (RSI v3 owns the help), the twelve recon_body_ppo.yaml weights, and
+# the 20,000 terminal sentinel (stage_index clamps to the last stage, so longer budgets keep this stage).
+# object_task 5.0 matches body_joint_position and force_closure, the largest positive stock weights.
+thresholds: [20000]
+
+stages:
+  - _target_: flash_chord.configuration.make_curriculum_stage
+    voc_scale: 0.0
+    objective_weights:
+      termination: -300.0
+      action_rate_l2: -0.0001
+      action_l2: -0.000001
+      soft_joint_limit: -0.001
+      pelvis_position: 1.0
+      pelvis_orientation: 1.0
+      body_joint_position: 5.0
+      object_position: 1.0
+      progress: 1.0
+      palm_position: 1.0
+      palm_orientation: 1.0
+      force_closure: 5.0
+      object_task: 5.0

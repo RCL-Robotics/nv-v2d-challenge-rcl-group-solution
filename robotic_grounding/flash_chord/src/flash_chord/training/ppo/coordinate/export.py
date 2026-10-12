@@ -117,6 +117,9 @@ STOCK_PPO_KEYS = (
     "normalize_advantage_per_mini_batch",
     "log_ratio_clip",
 )
+#: Dev-only ``ReconBodyObjectiveConfig`` fields and curriculum term names (objectives/recon_body.py object_task).
+DEV_OBJECTIVE_KEYS = ("object_task_weight", "object_task_position_beta", "object_task_rotation_beta")
+DEV_OBJECTIVE_TERMS = ("object_task",)
 CONFIG_METADATA_KEY = "resolved_config_json"
 POLICY_SCHEMA_METADATA_KEY = "policy_schema_json"
 LAYOUT_METADATA_KEY = "coordinate_layout_sha256"
@@ -433,6 +436,32 @@ def _stock_reset(reset: Mapping[str, Any], where: str) -> dict[str, Any]:
     return output
 
 
+def _strip_dev_objective_terms(config: dict, removed: list[str]) -> None:
+    """Drop the dev-only ReconBody ``object_task`` term: its objective fields and its curriculum weights.
+
+    The stock ``ReconBodyObjectiveConfig`` rejects unknown fields and the stock objective rejects unknown
+    curriculum weight names; the term only shapes training reward, so the exported actor is unaffected.
+    """
+    objectives = (("objective", config.get("objective")), ("env.objective", config["env"].get("objective")))
+    for prefix, objective in objectives:
+        if isinstance(objective, dict):
+            for key in DEV_OBJECTIVE_KEYS:
+                if key in objective:
+                    del objective[key]
+                    removed.append(f"{prefix}.{key}")
+    training_curriculum = config["training"].get("curriculum")
+    for prefix, curriculum in (("curriculum", config.get("curriculum")), ("training.curriculum", training_curriculum)):
+        stages = curriculum.get("stages") if isinstance(curriculum, dict) else None
+        for index, stage in enumerate(stages if isinstance(stages, list) else ()):
+            weights = stage.get("objective_weights") if isinstance(stage, dict) else None
+            if not isinstance(weights, dict):
+                continue
+            for name in DEV_OBJECTIVE_TERMS:
+                if name in weights:
+                    del weights[name]
+                    removed.append(f"{prefix}.stages.{index}.objective_weights.{name}")
+
+
 def stock_config_with_notes(saved_config: Mapping[str, Any]) -> tuple[dict[str, Any], dict[str, Any]]:
     """``stock_config`` plus a record of every key it removed or replaced."""
     config = copy.deepcopy(dict(saved_config))
@@ -467,6 +496,7 @@ def stock_config_with_notes(saved_config: Mapping[str, Any]) -> tuple[dict[str, 
     if isinstance(config.get("reset"), dict):
         config["reset"] = _stock_reset(config["reset"], "reset")
         replaced.append("reset")
+    _strip_dev_objective_terms(config, removed)
     notes = {
         "removed_keys": removed,
         "replaced_subtrees": replaced,

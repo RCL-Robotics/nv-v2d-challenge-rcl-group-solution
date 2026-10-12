@@ -1,0 +1,20 @@
+# ReconBody objective plus the Coordinates_hand object task term (objectives/recon_body.py, term `object_task`).
+#
+# Coordinates_hand (dexmachina/envs/rewards.py compute_task_reward, multiply_task_rew=True), per control step:
+#   object_task = exp(-object_task_position_beta * |p - p_ref|) * exp(-object_task_rotation_beta * angle(q, q_ref))
+# on the object root body, |.| in metres (Euclidean norm, not squared), angle = 2 asin(|vec(q conj(q_ref))|) in
+# radians; CH's third factor exp(-beta_arti * (arti - arti_ref)^2 / 2) is exactly 1 for the rigid Track 2 objects.
+# The term is weighted like every other term: score += frame_dt * weight * object_task.
+#
+# A non-zero object_task_weight creates the term (a 13th objective term and reward_components/object_task_* log
+# key); 0, the dataclass default and what objective/recon_body.yaml implies, is the unchanged stock objective. The
+# curriculum stage weight is what training applies (set every iteration), so every curriculum stage must carry
+# `object_task` too (curriculum/recon_body_rsi_objtask.yaml); a missing or extra key fails at the first iteration.
+# Betas are CH's get_reward_cfg() values (20 per metre, 5 per radian).
+defaults:
+  - recon_body
+  - _self_
+
+object_task_weight: 5.0
+object_task_position_beta: 20.0
+object_task_rotation_beta: 5.0
