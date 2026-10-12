@@ -5,8 +5,11 @@
 # Coordinates_hand's RSI v3 TIMERS CONVERTED BY SAMPLES, a 45k-iteration cap and Coordinates_hand's early stop.
 # Nothing else differs (tests/coordinate/test_experiment_configs.py fails on any other difference).
 #
-# Sample conversion. One Coordinates_hand (CH) update = 12000 envs x 32 steps = 384,000 samples; one FlashCHORD PPO
-# iteration = 4096 worlds x 24 steps = 98,304 samples; factor 384,000 / 98,304 = 3.90625 iterations per CH update.
+# Sample conversion. One Coordinates_hand (CH) update is taken as 12000 envs x 32 steps = 384,000 samples: that is
+# CH's A1 / W0-P recipe (dexmachina/ablation/config.py:89-97: num_envs 12000, effective horizon_length 32). It is an
+# ASSUMPTION for CH's RSI runs - their launch flags are not on disk (plans/voc_decay_comparison.md, "inferred: A1
+# recipe"); had they used e.g. 4096 envs the factor would be ~1.33 and these timers ~2.9x too slow. One FlashCHORD
+# PPO iteration = 4096 worlds x 24 steps = 98,304 samples; factor 384,000 / 98,304 = 3.90625 iterations per update.
 # Timers in CH updates (CH curriculum.py RSI_DEFAULTS; CH's fixed runs' flags are not on disk) -> our iterations:
 #   reset.wait_iterations   CH 100   -> 391     (390.6)
 #   reset.min_gap           CH 40    -> 156     (156.25)
@@ -14,7 +17,10 @@
 #   reset.zero_ramp         CH 1000  -> 3906    (3,906.25)   every bin at zero help by iteration 39,062
 #   training.early_stop_help_zero_tail  CH 1500 (rl_games "zero gains for 1500 epochs") -> 5860 (5,859.4, rounded up)
 #   training.max_iterations 20000 -> 45000: the deadline forces zero help by 39,062, so every run stops early by
-#     39,062 + 5,860 = 44,922; episodes that earn zero help through success stop sooner.
+#     39,062 + 5,860 = 44,922; episodes that earn zero help through success stop sooner (earliest 17,171 = 391 +
+#     70 x 156 + 5,860). Round-1 sidecars suggest most episodes will run to the deadline-forced stop (~44.9k).
+# Checkpoint choice differs from CH: CH's primary evaluation uses its native best-training-reward checkpoint
+# (dexmachina/rl/eval_rl_games.py:373-378); r2 pre-registers the FINAL checkpoint named by final.json.
 # Round 1 (C3/C3-wide) used deadline 11000 + ramp 1000 and min_gap 40, wait 100 counted in iterations, i.e. CH's
 # timers in update units but ~3.9x fewer samples per unit. Round-1 evidence (plans/voc_decay_comparison.md;
 # tmp_analysis/rsi_selfzero.py): in 11 of 30 episodes help reached zero only because the deadline forced it -

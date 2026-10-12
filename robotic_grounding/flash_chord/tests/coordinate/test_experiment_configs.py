@@ -91,7 +91,8 @@ R2_VS_WIDE = {
     "training.experiment_name": ("g1_sonic_recon_body_coord_rsi_wide", "g1_sonic_recon_body_coord_rsi_r2"),
     "training.run_name": ("g1_recon_body_coord_rsi_wide", "g1_recon_body_coord_rsi_r2"),
 }
-# Coordinates_hand update = 12000 envs x 32 steps; ours = 4096 worlds x 24 steps.
+# Coordinates_hand update = 12000 envs x 32 steps (ASSUMED: CH's A1 / W0-P recipe, dexmachina/ablation/config.py:89-97;
+# the RSI runs' own flags are not on disk); ours = 4096 worlds x 24 steps.
 CH_SAMPLES_PER_UPDATE = 12000 * 32
 CH_TIMERS = {"wait_iterations": 100, "min_gap": 40, "deadline": 9000, "zero_ramp": 1000}
 CH_ZERO_GAIN_TAIL = 1500
