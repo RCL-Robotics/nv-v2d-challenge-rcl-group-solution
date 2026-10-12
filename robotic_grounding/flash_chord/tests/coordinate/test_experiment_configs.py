@@ -6,7 +6,8 @@ C3-wide (g1_recon_body_coord_rsi_wide) is C3 with a wider coordinated actor; it 
 the actor widths it names below and in its logging names.
 
 C3r2 (g1_recon_body_coord_rsi_r2) is C3-wide with Coordinates_hand's RSI timers converted by samples, a 45k
-iteration cap, the CH early stop and its logging names; nothing else.
+iteration cap, the CH early stop, the CH object task reward term (weight 5.0 in the objective and in the curriculum
+stage, CH's trained betas 10/1) and its logging names; nothing else.
 """
 
 from __future__ import annotations
@@ -82,10 +83,29 @@ WIDE_VS_C3 = {
 
 # C3r2 vs C3-wide: every flattened key that may differ, with its (C3-wide, C3r2) values. KeyError = absent.
 _R2_TIMERS = {"wait_iterations": (100, 391), "min_gap": (40, 156), "deadline": (11000, 35156), "zero_ramp": (1000, 3906)}
+# CH object task term (objectives/recon_body.py): weight 5.0 from the paired group files objective/recon_body_objtask +
+# curriculum/recon_body_rsi_objtask; betas as CH trained them (dexmachina/envs/constructors.py:111-115 overwrite
+# get_reward_cfg()'s 20/5 with --task_rew_betas, default and launcher value 10 1 5), set in the r2 yaml.
+R2_OBJECT_TASK_WEIGHT = 5.0
+R2_OBJECT_TASK_OBJECTIVE = {
+    "object_task_weight": R2_OBJECT_TASK_WEIGHT,
+    "object_task_position_beta": 10.0,
+    "object_task_rotation_beta": 1.0,
+}
+R2_OBJECT_TASK_STAGE_KEY = "stages.0.objective_weights.object_task"
+R2_OBJECT_TASK_KEYS = {
+    **{
+        f"{root}.{name}": value
+        for root in ("objective", "env.objective")
+        for name, value in R2_OBJECT_TASK_OBJECTIVE.items()
+    },
+    **{f"{root}.{R2_OBJECT_TASK_STAGE_KEY}": R2_OBJECT_TASK_WEIGHT for root in ("curriculum", "training.curriculum")},
+}
 R2_VS_WIDE = {
     **{f"{section}.{name}": values for section in ("reset", "env.reset") for name, values in _R2_TIMERS.items()},
     "training.max_iterations": (20000, 45000),
     "training.early_stop_help_zero_tail": (KeyError, 5860),
+    **{key: (KeyError, value) for key, value in R2_OBJECT_TASK_KEYS.items()},
     "logging.experiment": ("g1_sonic_recon_body_coord_rsi_wide", "g1_sonic_recon_body_coord_rsi_r2"),
     "logging.run_name": ("g1_recon_body_coord_rsi_wide", "g1_recon_body_coord_rsi_r2"),
     "training.experiment_name": ("g1_sonic_recon_body_coord_rsi_wide", "g1_sonic_recon_body_coord_rsi_r2"),
@@ -103,6 +123,7 @@ def _compose(experiment: str) -> dict:
 
 
 def _flatten(value, prefix: str = "") -> dict[str, object]:
+    """Leaf paths; lists of mappings (curriculum stages) are indexed, other lists are leaves."""
     if isinstance(value, dict):
         if not value:
             return {prefix.rstrip("."): {}}
@@ -110,7 +131,22 @@ def _flatten(value, prefix: str = "") -> dict[str, object]:
         for key, item in value.items():
             flat.update(_flatten(item, f"{prefix}{key}."))
         return flat
+    if isinstance(value, list) and any(isinstance(item, dict) for item in value):
+        flat = {}
+        for index, item in enumerate(value):
+            flat.update(_flatten(item, f"{prefix}{index}."))
+        return flat
     return {prefix.rstrip("."): value}
+
+
+def _without_object_task(config: dict) -> dict:
+    """``config`` (objective or curriculum subtree) without the object task term's keys."""
+    config = json.loads(json.dumps(config))
+    for name in R2_OBJECT_TASK_OBJECTIVE:
+        config.pop(name, None)
+    for stage in config.get("stages", ()):
+        stage["objective_weights"].pop("object_task", None)
+    return config
 
 
 def _diff(left: dict, right: dict) -> set[str]:
@@ -271,7 +307,7 @@ def test_rsi_reset_config_instantiates(experiment):
 # ------------------------------------------------------------------------------------------- C3r2 (round 2)
 
 
-def test_c3r2_differs_from_c3_wide_only_in_rsi_timers_budget_early_stop_and_names():
+def test_c3r2_differs_from_c3_wide_only_in_rsi_timers_budget_early_stop_object_task_and_names():
     """Structural diff of the composed configs: any added, removed or changed key outside R2_VS_WIDE fails."""
     if not RSI_FILES_PRESENT:
         pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
@@ -281,18 +317,30 @@ def test_c3r2_differs_from_c3_wide_only_in_rsi_timers_budget_early_stop_and_name
         f"unexpected: {sorted(changed - set(R2_VS_WIDE))}, missing: {sorted(set(R2_VS_WIDE) - changed)}"
     )
     flat_wide, flat_r2 = _flatten(wide), _flatten(r2)
-    assert flat_r2.keys() - flat_wide.keys() == {"training.early_stop_help_zero_tail"}
+    # Added keys: the early stop and the 8 object task keys (6 objective fields, 2 curriculum stage weights).
+    assert len(R2_OBJECT_TASK_KEYS) == 8
+    assert flat_r2.keys() - flat_wide.keys() == {"training.early_stop_help_zero_tail", *R2_OBJECT_TASK_KEYS}
     assert flat_wide.keys() <= flat_r2.keys()
     for key, (wide_value, r2_value) in R2_VS_WIDE.items():
         assert (flat_wide.get(key, KeyError), flat_r2[key]) == (wide_value, r2_value), key
-    # Untouched, spelled out: the curriculum (one stage, voc 0, its 20000 sentinel), actor/critic/PPO, env, scene.
-    for section in ("curriculum", "env.voc", "scene", "task", "action", "objective", "observation", "termination"):
+    # Untouched, spelled out: actor/critic/PPO, env, scene; the curriculum (one stage, voc 0, its 20000 sentinel)
+    # and the objective differ only by the object task keys.
+    for section in ("env.voc", "scene", "task", "action", "observation", "termination"):
         left, right = wide, r2
         for part in section.split("."):
             left, right = left[part], right[part]
         assert left == right, section
-    for part in ("network", "ppo", "coordinate", "curriculum", "rollout_steps", "save_interval"):
+    for part in ("network", "ppo", "coordinate", "rollout_steps", "save_interval"):
         assert wide["training"][part] == r2["training"][part], part
+    for left, right, name in (
+        (wide["objective"], r2["objective"], "objective"),
+        (wide["env"]["objective"], r2["env"]["objective"], "env.objective"),
+        (wide["curriculum"], r2["curriculum"], "curriculum"),
+        (wide["training"]["curriculum"], r2["training"]["curriculum"], "training.curriculum"),
+    ):
+        assert "object_task_weight" not in json.dumps(left) and '"object_task"' not in json.dumps(left), name
+        assert _without_object_task(right) == left, name
+    assert r2["env"]["objective"] == r2["objective"] and r2["training"]["curriculum"] == r2["curriculum"]
     assert r2["curriculum"]["thresholds"] == [20000] and len(r2["curriculum"]["stages"]) == 1
     timers = set(_R2_TIMERS)
     assert {k: v for k, v in r2["reset"].items() if k not in timers} == {
@@ -351,8 +399,33 @@ def test_other_arms_keep_the_early_stop_off():
         assert "early_stop_help_zero_tail" not in _compose(experiment)["training"], experiment
 
 
-def test_c3r2_export_drops_the_early_stop_key():
-    """E2 export keeps only stock TrainingConfig keys, so the evaluator never sees early_stop_help_zero_tail."""
+def test_c3r2_object_task_term_has_weight_5_in_both_places_and_ch_trained_betas():
+    """The term exists (objective weight), training applies the same weight (curriculum stage), betas 10/1."""
+    if not RSI_FILES_PRESENT:
+        pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
+    from flash_chord.envs.rl import RLEnvConfig
+    from flash_chord.objectives.recon_body import RECON_BODY_OBJECTIVE_TERM_NAMES
+    from flash_chord.training.ppo.config import TrainingConfig
+
+    composed = compose_config("train", [f"experiment={R2}", "task.parquet=/tmp/reference.parquet"])
+    resolved = resolved_dict(composed)
+    for root in (resolved["objective"], resolved["env"]["objective"]):
+        assert {name: root[name] for name in R2_OBJECT_TASK_OBJECTIVE} == R2_OBJECT_TASK_OBJECTIVE
+    for curriculum in (resolved["curriculum"], resolved["training"]["curriculum"]):
+        assert [stage["objective_weights"]["object_task"] for stage in curriculum["stages"]] == [R2_OBJECT_TASK_WEIGHT]
+    objective = instantiate_typed(composed.env, RLEnvConfig).objective
+    assert objective.object_task_enabled and objective.object_task_weight == R2_OBJECT_TASK_WEIGHT
+    assert (objective.object_task_position_beta, objective.object_task_rotation_beta) == (10.0, 1.0)
+    assert objective.term_names == (*RECON_BODY_OBJECTIVE_TERM_NAMES, "object_task")
+    training = instantiate_typed(composed.training, TrainingConfig)
+    for stage in training.curriculum.stages:
+        weights = stage.weights_for(objective.term_names)  # the exact-name check set_curriculum runs
+        assert weights[-1] == objective.term_weights[-1] == R2_OBJECT_TASK_WEIGHT
+        assert tuple(weights[:-1]) == tuple(objective.term_weights[:-1])
+
+
+def test_c3r2_export_drops_the_early_stop_and_object_task_keys():
+    """E2 export keeps only stock config keys: the evaluator never sees early_stop_help_zero_tail or object_task."""
     if not RSI_FILES_PRESENT:
         pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
     export = pytest.importorskip("flash_chord.training.ppo.coordinate.export")
@@ -361,3 +434,10 @@ def test_c3r2_export_drops_the_early_stop_key():
     assert stock["training"]["max_iterations"] == 45000
     assert stock["env"]["reset"]["_target_"] != RSI_RESET_TARGET
     assert "training.early_stop_help_zero_tail" in json.dumps(notes)
+    assert sorted(key for key in notes["removed_keys"] if "object_task" in key) == sorted(R2_OBJECT_TASK_KEYS)
+    assert "object_task" not in json.dumps(stock)
+    # The exported objective and curriculum are C3-wide's exported ones.
+    wide_stock, _ = export.stock_config_with_notes(_compose(WIDE))
+    assert stock["objective"] == wide_stock["objective"] and stock["env"]["objective"] == wide_stock["env"]["objective"]
+    assert stock["curriculum"] == wide_stock["curriculum"]
+    assert stock["training"]["curriculum"] == wide_stock["training"]["curriculum"]

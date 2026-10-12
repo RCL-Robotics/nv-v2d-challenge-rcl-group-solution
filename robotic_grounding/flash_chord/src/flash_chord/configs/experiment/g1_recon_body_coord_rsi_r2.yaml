@@ -2,8 +2,26 @@
 
 # Arm C3-wide round 2 (C3r2): exactly arm C3-wide (experiment/g1_recon_body_coord_rsi_wide.yaml: W0-P coordinated
 # learner with the Coordinates_hand-size actor + RSI v3 (fixed) reset/curriculum, FlashCHORD VOC) with
-# Coordinates_hand's RSI v3 TIMERS CONVERTED BY SAMPLES, a 45k-iteration cap and Coordinates_hand's early stop.
-# Nothing else differs (tests/coordinate/test_experiment_configs.py fails on any other difference).
+# Coordinates_hand's RSI v3 TIMERS CONVERTED BY SAMPLES, a 45k-iteration cap, Coordinates_hand's early stop and
+# Coordinates_hand's OBJECT TASK REWARD (below). Nothing else differs (tests/coordinate/test_experiment_configs.py
+# fails on any other difference).
+#
+# Object task reward (added on top of the twelve stock ReconBody terms; objectives/recon_body.py term `object_task`):
+#   object_task = exp(-object_task_position_beta * |p - p_ref|) * exp(-object_task_rotation_beta * angle(q, q_ref))
+# on the object root body against the same per-world targets as object_position, |.| in metres (not squared),
+# angle = 2 asin(|vec(q conj(q_ref))|) in radians; score += frame_dt * 5.0 * object_task (CH dexmachina/envs/rewards.py
+# compute_task_reward, multiply_task_rew; its articulation factor is exactly 1 for the rigid Track 2 objects).
+#   Weight 5.0 lives in TWO places, both set by the paired group files below: objective/recon_body_objtask.yaml
+#     (object_task_weight != 0 creates the term) and curriculum/recon_body_rsi_objtask.yaml (the stage weight training
+#     applies every iteration). Only one of them set fails at the first iteration.
+#   Betas 10 per metre / 1 per radian: what CH actually trained with. CH's get_reward_cfg() says 20/5, but
+#     dexmachina/envs/constructors.py:111-115 always overwrites them from --task_rew_betas (default [10, 1, 5],
+#     constructors.py:379), and CH's launchers pass `--task_rew_betas 10 1 5` (dexmachina/ablation/config.py:111).
+#     They are set explicitly in `objective:` below (over the group file's 20/5), so the checkpoint config records them.
+#     At 10/1 the term is 0.74 at 3 cm and 0.61 at 0.5 rad. frame_dt 0.02: up to +0.10 per step on top of the stock
+#     positive maximum of 0.32; the termination penalty (-300 x 0.02) is unchanged.
+#   E2 export strips the three object_task_* objective fields and the curriculum weight (the official runtime would
+#     reject them); the exported actor and its stock config are unaffected.
 #
 # Sample conversion. One Coordinates_hand (CH) update is taken as 12000 envs x 32 steps = 384,000 samples: that is
 # CH's A1 / W0-P recipe (dexmachina/ablation/config.py:89-97: num_envs 12000, effective horizon_length 32). It is an
@@ -28,9 +46,10 @@
 # episodes: they never learned to hold the object. Matching CH per sample gives every bin ~3.9x the samples per
 # success decision and the same total sample budget CH had to earn zero help.
 # Everything else in reset/recon_body_rsi.yaml is unchanged (bin_frames 25, band 2, step 0.9, thresholds .8/.4,
-# min_count 64, zero_below 6.25e-4, keyframes, frame0_share 0.25, kf_*). curriculum/recon_body_rsi.yaml is reused
-# as is: it is one stage (voc 0; RSI owns help) and stage_index clamps to the last stage, so its 20000 threshold
-# sentinel selects the same stage at every iteration up to 45000 (identical semantics; no new curriculum file).
+# min_count 64, zero_below 6.25e-4, keyframes, frame0_share 0.25, kf_*). The curriculum is
+# curriculum/recon_body_rsi_objtask.yaml = curriculum/recon_body_rsi.yaml (C3-wide's) plus `object_task: 5.0` and
+# nothing else: one stage (voc 0; RSI owns help), and stage_index clamps to the last stage, so its 20000 threshold
+# sentinel selects the same stage at every iteration up to 45000 (identical semantics).
 
 defaults:
   - override /sim: recon_body
@@ -38,10 +57,16 @@ defaults:
   - override /embodiment: g1_dex3
   - override /action: sonic_joint_residual
   - override /observation: recon_body
-  - override /objective: recon_body
+  - override /objective: recon_body_objtask         # C3-wide: recon_body. + object_task (weight 5.0)
   - override /termination: recon_body
   - override /reset: recon_body_rsi
-  - override /curriculum: recon_body_rsi
+  - override /curriculum: recon_body_rsi_objtask    # C3-wide: recon_body_rsi. + object_task: 5.0 in its one stage
+
+# CH object task betas as CH trained (header): 10 per metre, 1 per radian. The weight (5.0) comes from the paired
+# group files above; objective/recon_body_objtask.yaml's 20/5 are CH's get_reward_cfg() values, not what CH ran.
+objective:
+  object_task_position_beta: 10.0
+  object_task_rotation_beta: 1.0
 
 # CH RSI v3 timers converted by samples (header). The other reset fields come from reset/recon_body_rsi.yaml.
 reset:
