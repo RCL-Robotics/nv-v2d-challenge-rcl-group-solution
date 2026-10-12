@@ -4,11 +4,16 @@
 
 C3-wide (g1_recon_body_coord_rsi_wide) is C3 with a wider coordinated actor; it differs from C3 only in
 the actor widths it names below and in its logging names.
+
+C3r2 (g1_recon_body_coord_rsi_r2) is C3-wide with Coordinates_hand's RSI timers converted by samples, a 45k
+iteration cap, the CH early stop and its logging names; nothing else.
 """
 
 from __future__ import annotations
 
 import dataclasses
+import json
+import math
 from pathlib import Path
 
 import pytest
@@ -41,6 +46,7 @@ RSI_PREFIXES = ("reset.", "env.reset.", "curriculum.", "training.curriculum.")
 COORDINATE_PREFIXES = ("training.coordinate.",)
 C3 = "g1_recon_body_coord_rsi"
 WIDE = "g1_recon_body_coord_rsi_wide"
+R2 = "g1_recon_body_coord_rsi_r2"
 ARMS = {
     "g1_recon_body_rsi": (RSI_PREFIXES, True, False),
     "g1_recon_body_coord": (COORDINATE_PREFIXES, False, True),
@@ -72,6 +78,23 @@ WIDE_VS_C3 = {
     "training.experiment_name": ("g1_sonic_recon_body_coord_rsi", "g1_sonic_recon_body_coord_rsi_wide"),
     "training.run_name": ("g1_recon_body_coord_rsi", "g1_recon_body_coord_rsi_wide"),
 }
+
+
+# C3r2 vs C3-wide: every flattened key that may differ, with its (C3-wide, C3r2) values. KeyError = absent.
+_R2_TIMERS = {"wait_iterations": (100, 391), "min_gap": (40, 156), "deadline": (11000, 35156), "zero_ramp": (1000, 3906)}
+R2_VS_WIDE = {
+    **{f"{section}.{name}": values for section in ("reset", "env.reset") for name, values in _R2_TIMERS.items()},
+    "training.max_iterations": (20000, 45000),
+    "training.early_stop_help_zero_tail": (KeyError, 5860),
+    "logging.experiment": ("g1_sonic_recon_body_coord_rsi_wide", "g1_sonic_recon_body_coord_rsi_r2"),
+    "logging.run_name": ("g1_recon_body_coord_rsi_wide", "g1_recon_body_coord_rsi_r2"),
+    "training.experiment_name": ("g1_sonic_recon_body_coord_rsi_wide", "g1_sonic_recon_body_coord_rsi_r2"),
+    "training.run_name": ("g1_recon_body_coord_rsi_wide", "g1_recon_body_coord_rsi_r2"),
+}
+# Coordinates_hand update = 12000 envs x 32 steps; ours = 4096 worlds x 24 steps.
+CH_SAMPLES_PER_UPDATE = 12000 * 32
+CH_TIMERS = {"wait_iterations": 100, "min_gap": 40, "deadline": 9000, "zero_ramp": 1000}
+CH_ZERO_GAIN_TAIL = 1500
 
 
 def _compose(experiment: str) -> dict:
@@ -242,3 +265,98 @@ def test_rsi_reset_config_instantiates(experiment):
     composed = compose_config("train", [f"experiment={experiment}", "task.parquet=/tmp/reference.parquet"])
     reset = instantiate_typed(composed.env.reset, RSIReconBodyResetConfig)
     assert reset.frame0_share == 0.25 and reset.bin_frames == 25 and reset.deadline == 11000
+
+
+# ------------------------------------------------------------------------------------------- C3r2 (round 2)
+
+
+def test_c3r2_differs_from_c3_wide_only_in_rsi_timers_budget_early_stop_and_names():
+    """Structural diff of the composed configs: any added, removed or changed key outside R2_VS_WIDE fails."""
+    if not RSI_FILES_PRESENT:
+        pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
+    wide, r2 = _compose(WIDE), _compose(R2)
+    changed = _diff(wide, r2)
+    assert changed == set(R2_VS_WIDE), (
+        f"unexpected: {sorted(changed - set(R2_VS_WIDE))}, missing: {sorted(set(R2_VS_WIDE) - changed)}"
+    )
+    flat_wide, flat_r2 = _flatten(wide), _flatten(r2)
+    assert flat_r2.keys() - flat_wide.keys() == {"training.early_stop_help_zero_tail"}
+    assert flat_wide.keys() <= flat_r2.keys()
+    for key, (wide_value, r2_value) in R2_VS_WIDE.items():
+        assert (flat_wide.get(key, KeyError), flat_r2[key]) == (wide_value, r2_value), key
+    # Untouched, spelled out: the curriculum (one stage, voc 0, its 20000 sentinel), actor/critic/PPO, env, scene.
+    for section in ("curriculum", "env.voc", "scene", "task", "action", "objective", "observation", "termination"):
+        left, right = wide, r2
+        for part in section.split("."):
+            left, right = left[part], right[part]
+        assert left == right, section
+    for part in ("network", "ppo", "coordinate", "curriculum", "rollout_steps", "save_interval"):
+        assert wide["training"][part] == r2["training"][part], part
+    assert r2["curriculum"]["thresholds"] == [20000] and len(r2["curriculum"]["stages"]) == 1
+    timers = set(_R2_TIMERS)
+    assert {k: v for k, v in r2["reset"].items() if k not in timers} == {
+        k: v for k, v in wide["reset"].items() if k not in timers}
+    assert r2["env"]["reset"] == r2["reset"]
+
+
+def test_c3r2_timers_are_coordinates_hand_timers_converted_by_samples():
+    if not RSI_FILES_PRESENT:
+        pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
+    r2 = _compose(R2)
+    ours = r2["scene"]["world_count"] * r2["training"]["rollout_steps"]
+    assert ours == 98304
+    factor = CH_SAMPLES_PER_UPDATE / ours
+    assert factor == 3.90625
+    for name, ch_value in CH_TIMERS.items():
+        assert r2["reset"][name] == round(ch_value * factor), name
+    assert r2["training"]["early_stop_help_zero_tail"] == math.ceil(CH_ZERO_GAIN_TAIL * factor) == 5860
+    # The deadline forces zero help by deadline + zero_ramp, so the early stop always fires before the cap.
+    zero_by = r2["reset"]["deadline"] + r2["reset"]["zero_ramp"]
+    assert zero_by + r2["training"]["early_stop_help_zero_tail"] == 44922 <= r2["training"]["max_iterations"] == 45000
+
+
+def test_c3r2_instantiates_with_the_converted_timers_and_one_curriculum_stage():
+    if not RSI_FILES_PRESENT:
+        pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
+    from flash_chord.lifecycle.rsi.bins import RSIBinParams, RSIBins
+    from flash_chord.training.ppo.config import TrainingConfig
+
+    composed = compose_config("train", [f"experiment={R2}", "task.parquet=/tmp/reference.parquet"])
+    training = instantiate_typed(composed.training, TrainingConfig)
+    assert (training.max_iterations, training.early_stop_help_zero_tail) == (45000, 5860)
+    assert training.coordinate.trunk_dims == (256, 128) and training.nonfinite_guard
+    # One stage at every iteration up to the cap: the 20000 threshold is a clamped sentinel.
+    assert {training.curriculum.stage_index(i) for i in (0, 19999, 20000, 39062, 44999)} == {0}
+    assert training.curriculum.stages[0].voc_scale == 0.0
+    try:
+        from flash_chord.lifecycle.rsi_reset import RSIReconBodyResetConfig
+    except ImportError:
+        pytest.skip("RSIReconBodyResetConfig is not importable")
+    reset = instantiate_typed(composed.env.reset, RSIReconBodyResetConfig)
+    assert (reset.wait_iterations, reset.min_gap, reset.deadline, reset.zero_ramp) == (391, 156, 35156, 3906)
+    assert (reset.bin_frames, reset.frame0_share, reset.step, reset.band, reset.min_count) == (25, 0.25, 0.9, 2.0, 64)
+    bins = RSIBins(500, RSIBinParams.from_object(reset))
+    assert bins.floor(35156) == pytest.approx(6.25e-4) and bins.floor(39062) == 0.0 and bins.floor(39061) > 0.0
+
+
+def test_other_arms_keep_the_early_stop_off():
+    from flash_chord.training.ppo.config import TrainingConfig
+
+    for experiment in sorted(ARMS):
+        _needs_rsi(experiment)
+        composed = compose_config("train", [f"experiment={experiment}", "task.parquet=/tmp/reference.parquet"])
+        training = instantiate_typed(composed.training, TrainingConfig)
+        assert training.early_stop_help_zero_tail == 0 and training.max_iterations == 20000, experiment
+        assert "early_stop_help_zero_tail" not in _compose(experiment)["training"], experiment
+
+
+def test_c3r2_export_drops_the_early_stop_key():
+    """E2 export keeps only stock TrainingConfig keys, so the evaluator never sees early_stop_help_zero_tail."""
+    if not RSI_FILES_PRESENT:
+        pytest.skip("reset/curriculum recon_body_rsi.yaml are not present")
+    export = pytest.importorskip("flash_chord.training.ppo.coordinate.export")
+    stock, notes = export.stock_config_with_notes(_compose(R2))
+    assert "early_stop_help_zero_tail" not in stock["training"] and "coordinate" not in stock["training"]
+    assert stock["training"]["max_iterations"] == 45000
+    assert stock["env"]["reset"]["_target_"] != RSI_RESET_TARGET
+    assert "training.early_stop_help_zero_tail" in json.dumps(notes)

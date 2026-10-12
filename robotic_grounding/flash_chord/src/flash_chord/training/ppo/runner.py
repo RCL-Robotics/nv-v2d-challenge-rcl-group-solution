@@ -5,7 +5,9 @@
 
 from __future__ import annotations
 
+import datetime
 import json
+import os
 import re
 import time
 from dataclasses import asdict, replace
@@ -160,6 +162,26 @@ class TeeLogger:
 NONFINITE_ITERATION_KEY = "guard/nonfinite_world_steps_per_iteration"
 NONFINITE_TOTAL_KEY = "guard/nonfinite_world_steps_total"
 NONFINITE_TERMINATION_KEY = "termination/nonfinite_fraction_per_completed_episode"
+
+# Early stop on zero help (TrainingConfig.early_stop_help_zero_tail > 0, RSI reset only). Logged only when the option
+# is on, so other runs keep the stock records:
+#   help_zero_iterations: completed iterations since every RSI start bin reached help 0 without a break (0 before);
+#   stopped:              1.0 on the record of the iteration after which training stopped early.
+EARLY_STOP_ZERO_KEY = "early_stop/help_zero_iterations"
+EARLY_STOP_STOPPED_KEY = "early_stop/stopped"
+# <output_dir>/final.json: written once a run ends normally (early stop or max_iterations) after its final
+# checkpoint; downstream tools (queue v2, eval) read the final iteration from it. A resumed run that will train
+# further renames an existing one to final.prev.json first.
+FINAL_MARKER = "final.json"
+FINAL_MARKER_PREVIOUS = "final.prev.json"
+FINAL_REASON_EARLY_STOP = "help_zero_tail"
+FINAL_REASON_MAX_ITERATIONS = "max_iterations"
+
+
+def _write_json_atomic(path: Path, data: Mapping[str, object]) -> None:
+    temporary = path.with_name(f".{path.name}.tmp")
+    temporary.write_text(json.dumps(dict(data), indent=2, sort_keys=True) + "\n")
+    os.replace(temporary, path)
 
 
 def metric_definitions(env: JAXVectorEnv) -> dict[str, str]:
@@ -389,6 +411,11 @@ def run_training(
     ``policy_schema_json`` checkpoint metadata unless ``coordinate_layout`` is given. An environment with
     an ``rsi`` attribute (RSI reset hooks) gets one host update per iteration and a sidecar state file
     next to every checkpoint.
+
+    With ``config.early_stop_help_zero_tail = T > 0`` (RSI only) the loop ends after the first iteration ``N`` at
+    which every start bin has had help 0 for ``N - help_zero_since >= T`` iterations; ``model_N``/``rsi_N`` are
+    saved and ``N`` is returned in ``learner.iteration``. Whenever the run ends normally (that early stop, or
+    ``max_iterations``) and ``checkpoint_dir`` is set, ``<checkpoint_dir>/final.json`` names the final checkpoint.
     """
     if log_interval <= 0:
         raise ValueError(f"log_interval must be positive, got {log_interval}")
@@ -399,6 +426,14 @@ def run_training(
     if rsi is not None and hasattr(rsi, "stats_interval"):
         # Refresh the RSI bank statistics on exactly the iterations whose metrics are logged.
         rsi.stats_interval = int(log_interval)
+    early_stop_tail = int(config.early_stop_help_zero_tail)
+    help_zero_since = getattr(rsi, "help_zero_since", None) if rsi is not None else None
+    if early_stop_tail > 0 and not callable(help_zero_since):
+        raise ValueError(
+            "training.early_stop_help_zero_tail > 0 needs the RSI reset (an environment whose RSI hooks provide "
+            "help_zero_since()); set it to 0 for other resets"
+        )
+    wall_start = time.time()
     layout = None
     layout_sha256 = None
     if config.coordinate is None:
@@ -438,6 +473,16 @@ def run_training(
         progress.start(environment_steps)
     nonfinite_total = None  # device-side cumulative guard count; read only on logged iterations
     nonfinite_reported = 0
+    if checkpoint_dir is not None and start_iteration < config.max_iterations:
+        stale = checkpoint_dir / FINAL_MARKER
+        if stale.is_file():  # an earlier end of this run (e.g. a smaller max_iterations); training goes on
+            os.replace(stale, checkpoint_dir / FINAL_MARKER_PREVIOUS)
+            print(f"[final] training continues from iteration {start_iteration}: moved the earlier {FINAL_MARKER} "
+                  f"to {FINAL_MARKER_PREVIOUS}", flush=True)
+    final_iteration = None
+    final_reason = None
+    zero_since = None
+    zero_iterations = 0
 
     for iteration in range(start_iteration, config.max_iterations):
         stage = None
@@ -463,7 +508,15 @@ def run_training(
             nonfinite_total = count if nonfinite_total is None else nonfinite_total + count
         if progress is not None:
             progress.update(environment_steps)
-        if logger is not None and ((iteration + 1) % log_interval == 0 or iteration + 1 == config.max_iterations):
+        stop_now = False
+        if early_stop_tail > 0:
+            # host_update(iteration) above already applied this iteration's bin decisions.
+            zero_since = help_zero_since()
+            zero_iterations = 0 if zero_since is None else iteration + 1 - int(zero_since)
+            stop_now = zero_since is not None and zero_iterations >= early_stop_tail
+        if logger is not None and (
+            (iteration + 1) % log_interval == 0 or iteration + 1 == config.max_iterations or stop_now
+        ):
             jax.block_until_ready(metrics.optimization.policy_loss)
             record = metrics_to_host(
                 metrics,
@@ -493,10 +546,14 @@ def run_training(
                         flush=True,
                     )
                     nonfinite_reported = total
+            if early_stop_tail > 0:
+                record[EARLY_STOP_ZERO_KEY] = float(zero_iterations)
+                if stop_now:
+                    record[EARLY_STOP_STOPPED_KEY] = 1.0
             logger.log(record, step=environment_steps)
 
         if checkpoint_dir is not None and (
-            (iteration + 1) % config.save_interval == 0 or iteration + 1 == config.max_iterations
+            (iteration + 1) % config.save_interval == 0 or iteration + 1 == config.max_iterations or stop_now
         ):
             metadata = dict(checkpoint_metadata or {})
             metadata["iteration"] = iteration + 1
@@ -527,7 +584,40 @@ def run_training(
                     iteration=iteration + 1,
                     metadata=artifact_metadata,
                 )
+        if stop_now:
+            final_iteration, final_reason = iteration + 1, FINAL_REASON_EARLY_STOP
+            print(
+                f"[early-stop] iteration {iteration + 1}: every RSI start bin has had zero help for {zero_iterations} "
+                f"iterations (since iteration {zero_since}; tail {early_stop_tail}); stopping before max_iterations "
+                f"{config.max_iterations} with checkpoint model_{iteration + 1}",
+                flush=True,
+            )
+            break
+    else:
+        if start_iteration < config.max_iterations:
+            final_iteration, final_reason = config.max_iterations, FINAL_REASON_MAX_ITERATIONS
+            if callable(help_zero_since):
+                zero_since = help_zero_since()
 
+    if checkpoint_dir is not None and final_iteration is not None:
+        _write_json_atomic(
+            checkpoint_dir / FINAL_MARKER,
+            {
+                "iteration": final_iteration,
+                "reason": final_reason,
+                "checkpoint": f"model_{final_iteration}.safetensors",
+                "rsi_state": None if rsi is None else rsi_state_path(f"model_{final_iteration}.safetensors").name,
+                "help_zero_since": None if zero_since is None else int(zero_since),
+                "help_zero_iterations": None if zero_since is None else final_iteration - int(zero_since),
+                "early_stop_help_zero_tail": early_stop_tail,
+                "max_iterations": config.max_iterations,
+                "environment_steps": environment_steps,
+                "start_iteration": start_iteration,
+                "resumed_from": str(config.checkpoint) if config.resume else None,
+                "wall_seconds": round(time.time() - wall_start, 1),
+                "finished_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+            },
+        )
     if logger is not None:
         logger.close()
     return learner

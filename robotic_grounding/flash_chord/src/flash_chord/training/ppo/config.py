@@ -217,10 +217,19 @@ class TrainingConfig:
     # (`training.nonfinite_guard=false` fails: "Key 'nonfinite_guard' is not in struct"). The W&B run config
     # (asdict of this class) gains a `nonfinite_guard` entry (true unless disabled); E2 export drops the key.
     nonfinite_guard: bool = True
+    # Coordinates_hand early stop (rl_games a2c_common.py "curriculum zero gains for 1500 epochs"): with a value
+    # T > 0 and the RSI reset, training stops after the first iteration at which every RSI start bin has had help
+    # top == 0 continuously for at least T iterations. The runner then saves model_<N>/rsi_<N> and writes
+    # <output_dir>/final.json (also written at max_iterations, reason "max_iterations"). 0 (the default) turns it
+    # off, so every config without the key trains exactly max_iterations as before. See training/README.md.
+    early_stop_help_zero_tail: int = 0
 
     def __post_init__(self) -> None:
         if not isinstance(self.nonfinite_guard, bool):
             raise TypeError(f"nonfinite_guard must be a bool, got {self.nonfinite_guard!r}")
+        tail = self.early_stop_help_zero_tail
+        if isinstance(tail, bool) or not isinstance(tail, int) or tail < 0:
+            raise ValueError(f"early_stop_help_zero_tail must be a non-negative integer, got {tail!r}")
         if self.world_count <= 0:
             raise ValueError(f"world_count must be positive, got {self.world_count}")
         if self.rollout_steps <= 0:

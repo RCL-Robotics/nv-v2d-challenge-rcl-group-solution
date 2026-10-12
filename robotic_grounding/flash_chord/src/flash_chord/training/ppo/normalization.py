@@ -7,6 +7,7 @@ from __future__ import annotations
 import flax
 import jax
 import jax.numpy as jnp
+import numpy as np
 
 
 @flax.struct.dataclass
@@ -16,6 +17,10 @@ class NormalizationState:
     mean: jax.Array
     variance: jax.Array
     count: jax.Array
+
+
+#: Largest sample count the int32 ``count`` holds. The count saturates here instead of wrapping around.
+COUNT_MAX = int(np.iinfo(np.int32).max)
 
 
 def create_normalization_state(observation_dim: int) -> NormalizationState:
@@ -29,11 +34,30 @@ def create_normalization_state(observation_dim: int) -> NormalizationState:
     )
 
 
+def saturating_count(count: jax.Array, batch_count) -> jax.Array:
+    """``count + batch_count`` in int32, clamped at :data:`COUNT_MAX` instead of wrapping around.
+
+    The stock sum wraps: at 4096 worlds x 24 steps = 98,304 samples per PPO iteration the count passes 2**31 - 1
+    during iteration 21,846, turns negative, and the merge rate ``batch / count`` turns negative too, which corrupts
+    the running moments. Below the limit this returns exactly ``count + batch_count``, so every result is
+    bit-identical to the stock update; the dtype stays int32, so existing checkpoints load unchanged.
+
+    Once saturated, the merge rate is fixed at ``batch / COUNT_MAX`` (2**-19 for 4096 rows). The update then still
+    merges two populations with weights ``1 - r`` and ``r``: ``mean' = (1 - r) mean + r batch_mean`` and
+    ``var' = (1 - r) var + r batch_var + r (1 - r) delta**2`` (the stock formula, rearranged), so the moments stay a
+    valid convex mixture with non-negative variance. The saturated count just stops shrinking the per-sample
+    weight: the statistics become a slow exponential moving average over about COUNT_MAX samples (about 21.8k PPO
+    iterations at 98,304 samples each) instead of an exact all-time average.
+    """
+    headroom = COUNT_MAX - count  # count is never negative, so this cannot overflow
+    return jnp.where(batch_count > headroom, jnp.asarray(COUNT_MAX, dtype=count.dtype), count + batch_count)
+
+
 @jax.jit
 def update_normalization(state: NormalizationState, observation: jax.Array) -> NormalizationState:
     """Merge one observation batch into the running population moments."""
     batch_count = observation.shape[0]
-    count = state.count + batch_count
+    count = saturating_count(state.count, batch_count)
     rate = jnp.asarray(batch_count, dtype=observation.dtype) / count.astype(observation.dtype)
     batch_mean = observation.mean(axis=0)
     batch_variance = observation.var(axis=0)
@@ -62,7 +86,7 @@ def _masked_update(state: NormalizationState, observation: jax.Array, rows: jax.
     dtype = observation.dtype
     selected = rows[:, None]
     batch_count = jnp.sum(rows.astype(jnp.int32))
-    count = state.count + batch_count
+    count = saturating_count(state.count, batch_count)
     rate = batch_count.astype(dtype) / jnp.maximum(count, 1).astype(dtype)
     divisor = jnp.maximum(batch_count, 1).astype(dtype)
     batch_mean = jnp.sum(jnp.where(selected, observation, 0.0), axis=0) / divisor

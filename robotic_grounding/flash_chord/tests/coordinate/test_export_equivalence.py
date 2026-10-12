@@ -608,7 +608,8 @@ def test_stock_field_tables_match_runtime_dataclasses():
     from flash_chord.training.ppo.config import NetworkConfig, PPOConfig, TrainingConfig
 
     # Dev-only training keys; E2 export prunes them (every key outside STOCK_TRAINING_KEYS is removed).
-    training_fields = {f.name for f in dataclasses.fields(TrainingConfig)} - {"coordinate", "nonfinite_guard"}
+    training_fields = {f.name for f in dataclasses.fields(TrainingConfig)} - {
+        "coordinate", "nonfinite_guard", "early_stop_help_zero_tail"}
     assert set(e2.STOCK_TRAINING_KEYS) - {"_target_"} == training_fields
     assert set(e2.STOCK_NETWORK_KEYS) - {"_target_"} == {f.name for f in dataclasses.fields(NetworkConfig)}
     assert set(e2.STOCK_PPO_KEYS) - {"_target_"} == {f.name for f in dataclasses.fields(PPOConfig)}

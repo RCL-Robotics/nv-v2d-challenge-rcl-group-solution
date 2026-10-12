@@ -209,6 +209,22 @@ class RSIBins:
             "forced_bins": forced,
         }
 
+    def zero_since(self) -> int | None:
+        """Iteration ``t`` of the ``decide(t)`` call since which every bin's top has been 0 without a break, or None.
+
+        Recomputed from ``top`` and ``last_move`` (both in the sidecar), so it survives a resume without new state.
+        Exact because a bin's top changes only through a recorded move: it reaches 0 through a success step below
+        ``zero_below`` or a forced step to a zero floor (both set ``last_move``), and it leaves 0 only through an
+        up-move (which sets ``last_move`` too, and leaves the top > 0). So while ``top[b] == 0``, ``last_move[b]`` is
+        the iteration bin ``b`` last became 0, and the all-zero streak began at ``max(last_move)``: the last bin to
+        reach 0 was > 0 before that decision. ``top0 > 0`` means no bin starts at 0. Coordinates_hand's
+        ``num_epoch_since_zero`` (curriculum.py:544-546) instead counts every all-zero update and never resets; the
+        two agree after the deadline ramp, where up-moves are impossible (the floor is 0).
+        """
+        if not bool((self.top == 0).all()):
+            return None
+        return int(self.last_move.max())
+
     def help_progress(self) -> float:
         """Share of help left on the log scale its steps move along: 1 at the start, 0 with every bin at zero."""
         p = self.params

@@ -53,6 +53,38 @@ skipped, while MuJoCo-Warp's NaN warm start kept that world NaN after every rese
 - **Not covered:** finite but huge values (e.g. 1e18) are not flagged; a world whose observation or reward is
   non-finite but whose simulator state is finite is cleaned in the batch but not reset.
 
+## Early stop on zero help, and `final.json`
+
+`TrainingConfig.early_stop_help_zero_tail` (default **0 = off**) ports Coordinates_hand's stop rule ("curriculum
+zero gains for 1500 epochs", rl_games `a2c_common.py`). With a value `T > 0` and the RSI reset, training stops
+after the first iteration `N` at which every RSI start bin has had help top 0 **continuously** for `N - S >= T`
+iterations, where `S` is the iteration whose bin decision left every bin at 0 (`RSIReconBodyReset.help_zero_since`).
+CH counts every all-zero update without resetting the count; the two rules agree once the RSI deadline ramp has
+ended, because up-moves are impossible with a zero floor. Other resets raise an error when `T > 0`.
+
+- **At the stop:** `model_N.safetensors` and `rsi_N.safetensors` are saved (even off the save interval), the
+  record of iteration `N` is logged with `early_stop/stopped = 1`, a `[early-stop]` console line is printed and
+  the process exits normally (exit 0). With the option on, every logged record also has
+  `early_stop/help_zero_iterations` (`N - S`, 0 while any bin has help).
+- **Resume:** `S` is not stored separately. It is recomputed from the RSI sidecar's `bins.top` and
+  `bins.last_move`: while every top is 0, each bin's `last_move` is the iteration it last reached 0 (a bin leaves 0
+  only through an up-move, which also sets `last_move`), so `S = max(last_move)` (`RSIBins.zero_since`). A
+  resumed run therefore stops at the same iteration as an uninterrupted one, and old sidecars work unchanged.
+- **`<output_dir>/final.json`** is written (atomically) whenever a run ends normally, after its final
+  checkpoint: `iteration`, `reason` (`help_zero_tail` or `max_iterations`), `checkpoint`, `rsi_state`,
+  `help_zero_since`, `help_zero_iterations`, `early_stop_help_zero_tail`, `max_iterations`, `environment_steps`,
+  `start_iteration`, `resumed_from`, `wall_seconds` (this process only) and `finished_at`. Queue v2 and the
+  round-2 evaluation read the final iteration from it. A resumed run that will train further first renames an
+  existing `final.json` to `final.prev.json`.
+
+## Observation-normalizer count
+
+The normalizer's `count` is int32. At 4096 worlds x 24 steps it grows by 98,304 per iteration and would wrap
+around during iteration 21,846, turning the merge rate negative. It now saturates at 2**31 - 1
+(`normalization.saturating_count`): bit-identical below that, same dtype (old checkpoints load), and beyond it the
+update keeps merging each batch with the fixed weight `batch / (2**31 - 1)` (a valid weighted merge of the two
+populations, see the docstring), so the statistics keep tracking slowly instead of being corrupted.
+
 Run the focused tests with:
 
 ```bash

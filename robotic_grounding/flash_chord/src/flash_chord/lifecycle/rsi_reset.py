@@ -607,6 +607,12 @@ class RSIReconBodyReset:
                 metrics[f"rsi/bin/kf_eligible_{b:02d}"] = float(self._cached_eligible[b])
         return metrics
 
+    def help_zero_since(self) -> int | None:
+        """Completed-iteration count ``t`` whose ``host_update(t)`` left every start bin at help 0, with no bin above
+        0 since; None while any bin still has help. Iterations ``t + 1, t + 2, ...`` (1-based) trained without help.
+        Recomputed from the bins (``RSIBins.zero_since``), so a resume from the sidecar restores it exactly."""
+        return self.bins.zero_since()
+
     # ------------------------------------------------------------------ save / resume
     def _sidecar_metadata(self, iteration: int) -> dict[str, str]:
         return {
