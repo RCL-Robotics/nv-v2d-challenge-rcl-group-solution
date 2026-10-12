@@ -10,9 +10,13 @@
 Steps:
 
 1. **Select** ``<arm-dir>/ep{NN}_{object}/model_{iteration}.safetensors`` per episode (the
-   pre-registered last checkpoint).
+   pre-registered last checkpoint). With ``--checkpoint-from-final``, each episode's FINAL checkpoint instead:
+   the one its ``final.json`` names (written by the training runner at early stop or max_iterations, so the
+   iteration differs per episode), else ``model_{iteration}``.
 2. **Export** every non-B0 arm with ``python -m flash_chord.training.ppo.coordinate.export`` (DEV
    code, CPU, stock-runtime check) into ``<arm-dir>/export/ep{NN}/``; the report JSON is kept.
+   ``--export-tolerance`` sets the exporter's equivalence tolerance (default: the exporter's 1e-5; long runs
+   need 1e-4, see scripts/track2_pre_export.sh). An existing ok export of the same source is reused.
 3. **Evaluate** with the kit's ``examples/run_policy_evaluation.py`` and the kit's
    ``flash_chord/scripts/evaluate_policy.py`` against the STOCK runtime (``PYTHONPATH=$STOCK/src``,
    never the DEV tree), one episode per invocation, episodes spread over ``--gpus``.
@@ -51,6 +55,7 @@ DEFAULT_STOCK = ME / "code/video_to_data_8c778f9/robotic_grounding/flash_chord"
 DEFAULT_KIT = ME / "v2d_submission_kit_src/v2d_submission_kit"
 DEFAULT_DATASET = ME / "data/video_to_data_challenge"
 DEFAULT_PACK_PYTHON = ME / "conda_envs/v2dkit/bin/python"
+FINAL_MARKER = "final.json"  # training/ppo/runner.py: the run's final checkpoint (early stop or max_iterations)
 METRIC_KEYS = ("add_auc", "chord_sr", "maniptrans_sr", "mppe_cm", "object_position_error_m", "object_orientation_error_deg")
 
 
@@ -80,6 +85,23 @@ def parse_int_list(text: str) -> list[int]:
         elif part:
             values.append(int(part))
     return values
+
+
+def read_final_marker(directory: Path) -> dict | None:
+    """``<run dir>/final.json`` as (iteration, checkpoint file name, reason), validated; None if absent."""
+    path = directory / FINAL_MARKER
+    if not path.is_file():
+        return None
+    data = json.loads(path.read_text())
+    iteration, checkpoint = data.get("iteration"), data.get("checkpoint")
+    if (
+        isinstance(iteration, bool)
+        or not isinstance(iteration, int)
+        or iteration <= 0
+        or checkpoint != f"model_{iteration}.safetensors"
+    ):
+        raise ValueError(f"{path}: expected iteration > 0 and checkpoint model_<iteration>.safetensors, got {data}")
+    return {"iteration": iteration, "checkpoint": checkpoint, "reason": str(data.get("reason"))}
 
 
 def stock_environment(stock: Path, gpu: str | None = None) -> dict[str, str]:
@@ -194,12 +216,31 @@ class Evaluation:
             if not directory.is_dir() and (self.arm_dir / f"ep{episode:02d}").is_dir():
                 directory = self.arm_dir / f"ep{episode:02d}"  # scripts/track2_queue.sh layout
             checkpoint = directory / f"model_{iteration}.safetensors"
+            row["iteration"], row["selected_by"] = iteration, f"--iteration {iteration}"
+            if self.args.checkpoint_from_final:
+                try:
+                    final = read_final_marker(directory)
+                except (OSError, ValueError) as error:
+                    final, row["status"] = None, "bad_final_json"
+                    log(f"ep{episode:02d}: unusable {FINAL_MARKER}: {error}")
+                if final is not None:
+                    checkpoint = directory / final["checkpoint"]
+                    row["iteration"], row["final_reason"] = final["iteration"], final["reason"]
+                    row["selected_by"] = f"{FINAL_MARKER} ({final['reason']})"
+                elif row["status"] != "bad_final_json":
+                    row["selected_by"] = f"no {FINAL_MARKER}: --iteration {iteration}"
             row["source_checkpoint"] = str(checkpoint)
-            if not checkpoint.is_file():
+            if row["status"] == "selected" and not checkpoint.is_file():
                 row["status"] = "missing_checkpoint"
             self.rows[episode] = row
-        missing = [e for e, r in self.rows.items() if r["status"] == "missing_checkpoint"]
-        log(f"selected {len(self.rows) - len(missing)}/{len(self.rows)} model_{iteration} checkpoints; missing {missing}")
+        missing = [e for e, r in self.rows.items() if r["status"] != "selected"]
+        if self.args.checkpoint_from_final:
+            from_final = sum(r["selected_by"].startswith(FINAL_MARKER) for r in self.rows.values())
+            iterations = {e: r["iteration"] for e, r in self.rows.items() if r["status"] == "selected"}
+            log(f"selected {len(self.rows) - len(missing)}/{len(self.rows)} final checkpoints ({from_final} from "
+                f"{FINAL_MARKER}, the rest model_{iteration}); iterations {iterations}; missing or unusable {missing}")
+        else:
+            log(f"selected {len(self.rows) - len(missing)}/{len(self.rows)} model_{iteration} checkpoints; missing {missing}")
 
     # ------------------------------------------------------------------ 2. export
     def _export_one(self, episode: int) -> None:
@@ -226,6 +267,8 @@ class Evaluation:
             "--input", str(source), "--output", str(destination),
             "--stock-runtime", str(self.stock), "--report", str(report_path),
         ]  # fmt: skip
+        if self.args.export_tolerance is not None:
+            command += ["--tolerance", repr(self.args.export_tolerance)]
         with (directory / "export.log").open("w") as stream:
             completed = subprocess.run(command, cwd=self.code, env=environment, stdout=stream, stderr=subprocess.STDOUT)
         if completed.returncode != 0 or not destination.is_file():
@@ -274,7 +317,9 @@ class Evaluation:
     def _evaluate_one(self, episode: int, gpu: str) -> None:
         row = self.rows[episode]
         checkpoint = Path(row["evaluated_checkpoint"])
-        shard = self.results / "shards" / f"episode_{episode:06d}.json"
+        # Outside the results dir: the kit packer reads every results/**/episode_*.json, and a shard (checkpoint map
+        # only) sorting after the real report would replace it, so its cross-check would compare nothing.
+        shard = self.results.parent / f"{self.results.name}_shards" / f"episode_{episode:06d}.json"
         shard.parent.mkdir(parents=True, exist_ok=True)
         shard.write_text(json.dumps({str(episode): str(checkpoint)}))
         command = [
@@ -401,7 +446,8 @@ class Evaluation:
             row["reference_success_rate"] = (data.get("reference_tracking") or {}).get("success_rate")
             row["checkpoint_sha256"] = data.get("checkpoint_sha256")
         columns = [
-            "episode", "object", "status", "add_auc", "chord_sr", "maniptrans_sr", "mppe_cm",
+            "episode", "object", "status", "iteration", "selected_by", "add_auc", "chord_sr", "maniptrans_sr",
+            "mppe_cm",
             "object_position_error_m", "object_orientation_error_deg", "reference_success_rate",
             "export_max_abs_diff", "export_max_rel_diff", "export_stock_verified", "export_source_kind",
             "source_checkpoint", "evaluated_checkpoint", "checkpoint_sha256", "sequence",
@@ -420,7 +466,9 @@ class Evaluation:
 
         means = {key: mean(key) for key in ("add_auc", "chord_sr", "maniptrans_sr", "mppe_cm")}
         lines = [
-            f"# {self.args.arm}: Track 2 evaluation (model_{self.args.iteration})",
+            f"# {self.args.arm}: Track 2 evaluation ("
+            + (f"final checkpoints: {FINAL_MARKER}, else model_{self.args.iteration}"
+               if self.args.checkpoint_from_final else f"model_{self.args.iteration}") + ")",
             "",
             f"- generated {now()}; arm dir `{self.arm_dir}`",
             f"- evaluator `{provenance['eval_script']}` (sha256 `{provenance['eval_script_sha256'][:16]}...`), "
@@ -431,8 +479,8 @@ class Evaluation:
             f"- packer: {packing.get('csv') or packing.get('reason') or 'failed, see ' + str(packing.get('log'))}"
             + (f"; local scores {packing['local_scores']}" if packing.get("local_scores") else ""),
             "",
-            "| ep | object | status | AUC | CHORD SR | MP-SR | MPPE cm | export max rel diff | stock verified |",
-            "|---:|---|---|---:|---:|---:|---:|---:|---|",
+            "| ep | object | iteration | status | AUC | CHORD SR | MP-SR | MPPE cm | export max rel diff | stock verified |",
+            "|---:|---|---:|---|---:|---:|---:|---:|---:|---|",
         ]
 
         def fmt(value, spec=".4f"):
@@ -440,7 +488,8 @@ class Evaluation:
 
         for row in self.rows.values():
             lines.append(
-                f"| {row['episode']} | {row['object']} | {row['status']} | {fmt(row.get('add_auc'))} | "
+                f"| {row['episode']} | {row['object']} | {row.get('iteration', '')} | {row['status']} | "
+                f"{fmt(row.get('add_auc'))} | "
                 f"{fmt(row.get('chord_sr'), '.3f')} | {fmt(row.get('maniptrans_sr'), '.3f')} | "
                 f"{fmt(row.get('mppe_cm'), '.2f')} | {fmt(row.get('export_max_rel_diff'), '.1e')} | "
                 f"{'' if row.get('export_stock_verified') is None else row['export_stock_verified']} |"
@@ -468,6 +517,11 @@ def main(argv=None) -> int:
     parser.add_argument("--arm-dir", required=True, type=Path, help="launcher output dir with ep{NN}_{object}/ runs")
     parser.add_argument("--arm", required=True, help="arm name; 'B0' disables export by default")
     parser.add_argument("--iteration", type=int, default=20000, help="checkpoint to evaluate (pre-registered last)")
+    parser.add_argument(
+        "--checkpoint-from-final", action="store_true",
+        help=f"per episode, evaluate the checkpoint its {FINAL_MARKER} names (early stop or max_iterations); "
+             "episodes without one fall back to model_<--iteration>",
+    )  # fmt: skip
     parser.add_argument("--episodes", default="all")
     parser.add_argument("--kit-root", type=Path, default=DEFAULT_KIT, help="an extracted submission kit")
     parser.add_argument("--kit-zip", type=Path, help="extract this kit zip into --kit-dir and use it")
@@ -487,6 +541,7 @@ def main(argv=None) -> int:
     parser.add_argument("--results", type=Path, help="results dir (default: <arm-dir>/results)")
     parser.add_argument("--export", default="auto", choices=("auto", "yes", "no"))
     parser.add_argument("--export-jobs", type=int, default=4)
+    parser.add_argument("--export-tolerance", type=float, help="exporter equivalence tolerance (default: its 1e-5)")
     parser.add_argument("--force-export", action="store_true")
     parser.add_argument("--force-eval", action="store_true")
     parser.add_argument("--skip-pack", action="store_true")
