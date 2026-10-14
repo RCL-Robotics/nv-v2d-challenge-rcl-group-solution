@@ -256,6 +256,7 @@ def advance_rsi_reset(
     terminated: wp.array(dtype=wp.int32),
     truncated: wp.array(dtype=wp.int32),
     freeze_steps: int,
+    clock_start: int,
     offset_decay_steps: int,
     voc_decay_steps: int,
     reset_voc_scale: float,
@@ -268,7 +269,11 @@ def advance_rsi_reset(
     timestep: wp.array(dtype=wp.int32),
     episode_step: wp.array(dtype=wp.int32),
 ) -> None:
-    """Stock ``advance_recon_body_reset`` (reset.py:736-779) with the lane's help in place of the global scale."""
+    """Stock ``advance_recon_body_reset`` (reset.py:736-779) with the lane's help in place of the global scale.
+
+    The reference clock runs once ``age > clock_start``; the stock release is ``clock_start == freeze_steps``, and a
+    smaller value (``freeze_steps - run_in_steps``) starts the clock inside the hold.
+    """
     world = wp.tid()
     if terminated[world] != 0 or truncated[world] != 0:
         return
@@ -294,7 +299,7 @@ def advance_rsi_reset(
         progress = float(age - decay_start) / float(voc_decay_steps)
         applied_voc_scale[world] = reset_voc_scale + progress * (target - reset_voc_scale)
 
-    if age > freeze_steps:
+    if age > clock_start:
         timestep[world] += 1
 
 

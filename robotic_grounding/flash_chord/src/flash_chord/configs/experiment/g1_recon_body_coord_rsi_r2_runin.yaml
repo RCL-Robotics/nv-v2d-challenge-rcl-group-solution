@@ -1,0 +1,140 @@
+# @package _global_
+
+# Arm C3r2-runin: exactly arm C3r2 (experiment/g1_recon_body_coord_rsi_r2.yaml; RSI v3 reset, W0-P coordinated
+# actor, object task reward) with a rolling start for mid-clip reference starts. Differences:
+#   reset.run_in_steps: 0 -> 20: the reference clock runs for the last 20 of the 50 hold steps (VOC hold, its decay
+#     over the last 10 steps and the 50-step termination grace unchanged), so robot and object already move with
+#     the reference when the hold ends instead of starting from rest into a moving reference;
+#   reset.min_horizon: 10 -> 30: the 20 frames the clock now advances inside the hold, so every start still has at
+#     least 10 frames after the hold ends (no episode reaches the clip end inside the hold);
+#   logging names.
+# Frame-0 and keyframe starts are immediate (no hold) and unchanged. Nothing else differs
+# (tests/run_in/test_rsi_run_in.py fails on any other difference).
+
+defaults:
+  - override /sim: recon_body
+  - override /collision: physical
+  - override /embodiment: g1_dex3
+  - override /action: sonic_joint_residual
+  - override /observation: recon_body
+  - override /objective: recon_body_objtask         # C3-wide: recon_body. + object_task (weight 5.0)
+  - override /termination: recon_body
+  - override /reset: recon_body_rsi
+  - override /curriculum: recon_body_rsi_objtask    # C3-wide: recon_body_rsi. + object_task: 5.0 in its one stage
+
+# CH object task betas as CH trained (header): 10 per metre, 1 per radian. The weight (5.0) comes from the paired
+# group files above; objective/recon_body_objtask.yaml's 20/5 are CH's get_reward_cfg() values, not what CH ran.
+objective:
+  object_task_position_beta: 10.0
+  object_task_rotation_beta: 1.0
+
+# CH RSI v3 timers converted by samples (header). The other reset fields come from reset/recon_body_rsi.yaml.
+reset:
+  wait_iterations: 391
+  min_gap: 156
+  deadline: 35156
+  zero_ramp: 3906
+  # Rolling start (header): C3r2 has run_in_steps 0 and min_horizon 10.
+  run_in_steps: 20
+  min_horizon: 30
+
+task:
+  motion_speed: 1.0
+  source_frame_playback: true
+  motion_start_frame: 0
+  motion_end_frame: -1
+
+scene:
+  world_count: 4096
+  contact_friction: 1.0
+  object_free_joint_damping: 0.01
+
+action:
+  input_mode: raw
+  normalized_mapping: linear
+
+env:
+  voc:
+    _target_: flash_chord.runtime.object_control.VOCParams
+    k_lin: 50.0
+    d_lin: 10.0
+    k_ang: 10.0
+    d_ang: 0.1
+    max_force: 60.0
+    max_torque: 60.0
+    gravity: 9.81
+    mass_normalized_gains: false
+  contact:
+    _target_: flash_chord.runtime.contact.ContactTrackerConfig
+    sides: [left, right]
+  capture_terminal_state: false
+  enforce_joint_velocity_limits: true
+  critic_context:
+    _target_: flash_chord.envs.rl.CriticContextConfig
+    reference_phase: false
+    object_body_velocity: false
+
+# Match G1SonicRslRlPpoCfg, then retain both deployment-exact and uniform
+# recovery starts through the terminal checkpoint.
+training:
+  rollout_steps: 24
+  max_iterations: 45000
+  # CH early stop: after 5860 iterations (= 1500 CH updates) with every RSI start bin at zero help (final.json).
+  early_stop_help_zero_tail: 5860
+  save_interval: 500
+  observation_normalization: true
+  observation_normalization_epsilon: 0.01
+  reward_normalization: false
+  resume: false
+  checkpoint: null
+  network:
+    actor_hidden_dims: [1024, 512, 256, 128]
+    critic_hidden_dims: [1024, 512, 256, 128]
+    activation: elu
+    initial_noise_std: 0.5
+    noise_std_type: scalar
+    actor_output_gain: 0.0
+  ppo:
+    value_loss_coefficient: 1.0
+    use_clipped_value_loss: true
+    clip_parameter: 0.2
+    entropy_coefficient: 0.0005
+    learning_epochs: 5
+    mini_batches: 4
+    learning_rate: 0.0005
+    schedule: adaptive
+    minimum_learning_rate: 0.00001
+    maximum_learning_rate: 0.01
+    adaptive_schedule_factor: 1.5
+    discount: 0.99
+    gae_lambda: 0.95
+    desired_kl: 0.02
+    max_grad_norm: 0.1
+    normalize_advantage_per_mini_batch: false
+    log_ratio_clip: null
+
+  # W0-P coordinated learner (docs/coord_impl_spec.md section 3.1). Every
+  # CoordinateConfig field is explicit. The coordinated actor ignores
+  # network.actor_hidden_dims; the K-column central critic uses
+  # network.critic_hidden_dims. Export (E2) embeds the actor into the plain
+  # [1024, 1024, 768, 384] MLP named by export_actor_hidden_dims (uses
+  # [640, 576, 768, 384] of it). Only encoder_dim, trunk_dims and
+  # export_actor_hidden_dims differ from C3.
+  coordinate:
+    _target_: flash_chord.training.ppo.config.CoordinateConfig
+    agents: [left, right, body]
+    encoder_dim: 128
+    partner_dim: 64
+    message_dim: 64
+    trunk_dims: [256, 128]
+    partner_message: true
+    mirror_body_message: true
+    hand_world_terms: reflect
+    ratio_mode: per_agent
+    value_mode: per_agent
+    export_actor_hidden_dims: [1024, 1024, 768, 384]
+
+logging:
+  experiment: g1_sonic_recon_body_coord_rsi_r2_runin
+  run_name: g1_recon_body_coord_rsi_r2_runin
+  log_interval: 10
