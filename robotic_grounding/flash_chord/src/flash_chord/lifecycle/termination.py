@@ -488,7 +488,12 @@ RECON_BODY_TERMINATION_ERROR_NAMES = (
 
 @dataclass(frozen=True)
 class ReconBodyTerminationConfig:
-    """BodyRecon failure thresholds and reset-freeze masking."""
+    """BodyRecon failure thresholds and reset-freeze masking.
+
+    ``violation_patience`` (dev, training only): palm and object failures terminate only once their limits are
+    exceeded on more than this many consecutive control steps; 0 keeps the stock immediate termination. Pelvis
+    failures always terminate at once. Evaluation disables every threshold, so it never sees the patience.
+    """
 
     pelvis_position_threshold: float = 0.70
     pelvis_orientation_threshold: float = 1.50
@@ -499,8 +504,11 @@ class ReconBodyTerminationConfig:
     reset_freeze_steps: int = 50
     truncate_at_reference_end: bool = True
     sides: tuple[str, ...] = ("left", "right")
+    violation_patience: int = 0
 
     def __post_init__(self) -> None:
+        if self.violation_patience < 0:
+            raise ValueError("ReconBody termination violation patience must be non-negative")
         thresholds = (
             self.pelvis_position_threshold,
             self.pelvis_orientation_threshold,
@@ -669,6 +677,36 @@ def evaluate_recon_body_termination(
     packed_diagnostics[base + 8] = max_object_orientation_error
 
 
+@wp.kernel
+def apply_recon_body_violation_patience(
+    violation_patience: int,
+    pelvis_done: wp.array(dtype=wp.int32),
+    palm_done: wp.array(dtype=wp.int32),
+    object_done: wp.array(dtype=wp.int32),
+    violation_count: wp.array(dtype=wp.int32),
+    terminated: wp.array(dtype=wp.int32),
+    packed_diagnostics: wp.array(dtype=wp.float32),
+) -> None:
+    """Hold palm and object failures until they last more than ``violation_patience`` consecutive steps.
+
+    Runs right after ``evaluate_recon_body_termination``. A step without a palm or object failure resets the
+    count; the reset-freeze mask clears both failures, so every episode starts from zero. Pelvis failures keep
+    terminating at once, and a held step reports no palm or object cause.
+    """
+    world = wp.tid()
+    count = int(0)  # noqa: UP018 - Warp requires explicitly typed mutable locals.
+    if palm_done[world] != 0 or object_done[world] != 0:
+        count = violation_count[world] + 1
+    violation_count[world] = count
+    if count > 0 and count <= violation_patience:
+        palm_done[world] = 0
+        object_done[world] = 0
+        terminated[world] = pelvis_done[world]
+        base = world * 9
+        packed_diagnostics[base + 1] = 0.0
+        packed_diagnostics[base + 2] = 0.0
+
+
 @dataclass
 class ReconBodyTermination:
     """Fused BodyRecon failure evaluation with reset-age masking."""
@@ -696,6 +734,7 @@ class ReconBodyTermination:
     object_position_error: wp.array
     object_orientation_error: wp.array
     packed_diagnostics: wp.array
+    violation_count: wp.array
 
     @classmethod
     def build(
@@ -756,6 +795,7 @@ class ReconBodyTermination:
             object_position_error=f32(),
             object_orientation_error=f32(),
             packed_diagnostics=wp.zeros(scene.world_count * 9, dtype=wp.float32, device=device),
+            violation_count=i32(),
         )
 
     @property
@@ -831,3 +871,16 @@ class ReconBodyTermination:
                 self.packed_diagnostics,
             ],
         )
+        if self.config.violation_patience > 0:
+            wp.launch(
+                apply_recon_body_violation_patience,
+                dim=self.world_count,
+                inputs=[int(self.config.violation_patience), self.pelvis_done],
+                outputs=[
+                    self.palm_done,
+                    self.object_done,
+                    self.violation_count,
+                    self.terminated,
+                    self.packed_diagnostics,
+                ],
+            )
