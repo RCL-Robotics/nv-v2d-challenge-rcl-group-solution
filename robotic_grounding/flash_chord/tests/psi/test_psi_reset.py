@@ -75,14 +75,17 @@ def test_config_rejects_invalid_values():
 
 
 # ====================================================================== CPU kernel tests
-def _cpu_setup(**overrides):
+def _cpu_setup(anchor_all: bool = True, **overrides):
     import warp as wp
 
     from flash_chord.lifecycle.psi_reset import PSIReconBodyResetConfig
 
-    settings = dict(psi_horizon=40, psi_stride=10, psi_settle_steps=10, psi_score_decay=0.0, frame0_share=1.0)
+    settings = dict(psi_horizon=40, psi_stride=10, psi_settle_steps=10, psi_score_decay=0.0)
     settings.update(overrides)
     policy = PSIReconBodyResetConfig(**settings).build(W, NUM_FRAMES, device="cpu")
+    if anchor_all:
+        # Every start at frame 0 (the config only accepts shares below 1; the kernel reads the device value).
+        policy.frame0_share.assign(np.asarray([1.0], dtype=np.float32))
     reference = np.random.default_rng(0).uniform(0.1, 0.9, size=(NUM_FRAMES, 10)).astype(np.float32)
     offset = wp.zeros(W * Q, dtype=wp.float32, device="cpu")
     policy.bind_arrays(
@@ -139,7 +142,7 @@ def _state_at(step):
 def test_sample_with_an_empty_buffer_starts_from_the_reference_without_help():
     import warp as wp
 
-    policy, env, state, _ = _cpu_setup(frame0_share=0.0)
+    policy, env, state, _ = _cpu_setup(anchor_all=False, frame0_share=0.0)
     policy.sample(_all(), wp.zeros(1, dtype=wp.float32, device="cpu"))
     frames = policy.reset_frame.numpy()
     assert ((frames >= 0) & (frames <= policy.max_start_frame)).all()
@@ -233,9 +236,10 @@ def test_scores_decay_each_iteration():
 def test_a_drawn_simulation_slot_is_restored_with_the_world_offset_and_starts_immediately():
     import warp as wp
 
-    policy, env, state, offsets = _cpu_setup(frame0_share=0.0)
+    policy, env, state, offsets = _cpu_setup()
     _run_episode(policy, env, state, TERM, last_step=55)
     policy.host_update(0)
+    policy.frame0_share.assign(np.asarray([0.0], dtype=np.float32))
     # Put every start on frame 10 and make slot 0 overwhelmingly likely.
     policy.score[10] = [1.0e6, 0.0]
     policy.upload_buffer()
