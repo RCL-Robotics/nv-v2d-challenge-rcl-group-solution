@@ -151,9 +151,8 @@ def test_sample_with_an_empty_buffer_starts_from_the_reference_without_help():
     voc = policy.applied_voc_scale.numpy()
     np.testing.assert_allclose(voc[frames > 0], policy.config.reset_voc_scale)  # freeze-time hold, released to 0
     np.testing.assert_allclose(voc[frames == 0], 0.0)
-    after = policy.capture_after.numpy()
-    np.testing.assert_array_equal(after[frames > 0], policy.config.reset_freeze_steps + 10)
-    np.testing.assert_array_equal(after[frames == 0], 10)
+    # every start waits for the termination grace (reset_freeze_steps) to end before its first snapshot
+    np.testing.assert_array_equal(policy.capture_after.numpy(), policy.config.reset_freeze_steps + 10)
 
 
 def _run_episode(policy, env, state, term_step, last_step):
@@ -178,17 +177,20 @@ def _run_episode(policy, env, state, term_step, last_step):
     return states
 
 
-TERM = [25, 35, 0, 0, 45, 0, 0, 0]  # horizon 40: lane 1 keeps (10, 0.625); lane 4 (10, 0.875) and (20, 0.625)
+# Snapshots start at step 60 (grace 50 + settle 10), every 10 steps; horizon 40.
+# Lane 1 keeps (60, 0.625); lane 4 (60, 0.875) and (70, 0.625); lanes never ending keep (60, 1.0) at step 100.
+TERM = [75, 85, 0, 0, 95, 0, 0, 0]
+LAST = 105
 
 
 def _expected_queue():
-    # time order of acceptance: lane 1 at step 35, lane 4 at 45, lanes 2, 3, 5, 6, 7 at 50 (window of 40 survived)
-    return [(1, 10, 0.625), (4, 10, 0.875), (4, 20, 0.625)] + [(w, 10, 1.0) for w in (2, 3, 5, 6, 7)]
+    # time order of acceptance: lane 1 at step 85, lane 4 at 95, lanes 2, 3, 5, 6, 7 at 100 (window of 40 survived)
+    return [(1, 60, 0.625), (4, 60, 0.875), (4, 70, 0.625)] + [(w, 60, 1.0) for w in (2, 3, 5, 6, 7)]
 
 
 def test_snapshots_score_the_survived_share_of_the_window_and_queue_those_above_half():
     policy, env, state, offsets = _cpu_setup()
-    states = _run_episode(policy, env, state, TERM, last_step=55)
+    states = _run_episode(policy, env, state, TERM, last_step=LAST)
     expected = _expected_queue()
     count = int(policy.cand_count.numpy()[0])
     assert count == len(expected)
@@ -210,62 +212,80 @@ def test_snapshots_score_the_survived_share_of_the_window_and_queue_those_above_
     assert int(policy.step_stats.numpy()[4]) == 0
 
 
-def test_host_update_replaces_the_lowest_slot_and_samples_frames_by_inverse_score():
-    policy, env, state, _ = _cpu_setup()
-    _run_episode(policy, env, state, TERM, last_step=55)
+def test_host_update_keeps_the_best_slots_of_each_frame_and_samples_frames_by_inverse_score():
+    policy, env, state, offsets = _cpu_setup()
+    states = _run_episode(policy, env, state, TERM, last_step=LAST)
     metrics = policy.host_update(0)
-    assert metrics["psi/inserted"] == 8.0
+    # frame 60 queued 0.625, 0.875 and five 1.0: only its best two (both 1.0) are inserted; frame 70 its one 0.625
+    assert metrics["psi/inserted"] == 3.0
     assert int(policy.cand_count.numpy()[0]) == 0
-    np.testing.assert_allclose(policy.score[10], [1.0, 1.0])
-    np.testing.assert_allclose(policy.score[20], [0.625, 0.0])
+    np.testing.assert_allclose(policy.score[60], [1.0, 1.0])
+    np.testing.assert_allclose(policy.score[70], [0.625, 0.0])
+    stored = policy.psi_q_host.reshape(NUM_FRAMES, 2, Q)[60]
+    full_window = []
+    for w in (2, 3, 5, 6, 7):
+        row = states[60][0][w].copy()
+        row[ROOT_Q : ROOT_Q + 3] -= offsets[w]
+        full_window.append(row)
+    for slot in range(2):  # both slots hold states of lanes that survived the whole window
+        assert any(np.allclose(stored[slot], row, atol=1e-4) for row in full_window)
     filled = policy.score[: policy.num_cdf_frames].sum(axis=1)
     weights = 1.0 / (1.0 + filled)
     np.testing.assert_allclose(policy.frame_cdf.numpy(), np.cumsum(weights / weights.sum()), rtol=0, atol=1e-6)
-    np.testing.assert_allclose(policy.slot_score.numpy().reshape(NUM_FRAMES, 2)[10], [1.0, 1.0])
+    np.testing.assert_allclose(policy.slot_score.numpy().reshape(NUM_FRAMES, 2)[60], [1.0, 1.0])
+
+
+def test_top_per_group_keeps_the_last_k_of_every_run():
+    from flash_chord.lifecycle.psi_reset import _top_per_group
+
+    groups = np.array([3, 3, 3, 5, 7, 7])
+    np.testing.assert_array_equal(_top_per_group(groups, 2), [1, 2, 3, 4, 5])
+    np.testing.assert_array_equal(_top_per_group(groups, 1), [2, 3, 5])
+    assert _top_per_group(np.zeros(0, dtype=np.int32), 2).shape == (0,)
 
 
 def test_scores_decay_each_iteration():
     policy, env, state, _ = _cpu_setup(psi_score_decay=0.5)
-    _run_episode(policy, env, state, TERM, last_step=55)
+    _run_episode(policy, env, state, TERM, last_step=LAST)
     policy.host_update(0)
-    np.testing.assert_allclose(policy.score[10], [0.5, 0.5])
+    np.testing.assert_allclose(policy.score[60], [0.5, 0.5])
     policy.host_update(1)
-    np.testing.assert_allclose(policy.score[10], [0.25, 0.25])
+    np.testing.assert_allclose(policy.score[60], [0.25, 0.25])
 
 
 def test_a_drawn_simulation_slot_is_restored_with_the_world_offset_and_starts_immediately():
     import warp as wp
 
     policy, env, state, offsets = _cpu_setup()
-    _run_episode(policy, env, state, TERM, last_step=55)
+    _run_episode(policy, env, state, TERM, last_step=LAST)
     policy.host_update(0)
     policy.frame0_share.assign(np.asarray([0.0], dtype=np.float32))
-    # Put every start on frame 10 and make slot 0 overwhelmingly likely.
-    policy.score[10] = [1.0e6, 0.0]
+    # Put every start on frame 60 and make slot 0 overwhelmingly likely.
+    policy.score[60] = [1.0e6, 0.0]
     policy.upload_buffer()
     cdf = np.zeros(policy.num_cdf_frames, dtype=np.float32)
-    cdf[10:] = 1.0
+    cdf[60:] = 1.0
     policy.frame_cdf.assign(cdf)
     policy.sample(_all(), wp.zeros(1, dtype=wp.float32, device="cpu"))
-    np.testing.assert_array_equal(policy.reset_frame.numpy(), 10)
+    np.testing.assert_array_equal(policy.reset_frame.numpy(), 60)
     np.testing.assert_array_equal(policy.start_slot.numpy(), 0)
     np.testing.assert_array_equal(policy.steps_since_reset.numpy(), policy.config.reset_freeze_steps + 1)
     np.testing.assert_allclose(policy.applied_voc_scale.numpy(), 0.0)
     np.testing.assert_allclose(policy.reference_joint_q_offset.numpy(), 0.0)
     policy.restore(state, _all())
-    stored = policy.psi_q_host.reshape(NUM_FRAMES, 2, Q)[10, 0]
+    stored = policy.psi_q_host.reshape(NUM_FRAMES, 2, Q)[60, 0]
     restored = state.joint_q.numpy().reshape(W, Q)
     for w in range(W):
         row = stored.copy()
         row[ROOT_Q : ROOT_Q + 3] += offsets[w]
         np.testing.assert_allclose(restored[w], row, atol=1e-4)
-    stored_qd = policy.psi_qd_host.reshape(NUM_FRAMES, 2, D)[10, 0]
+    stored_qd = policy.psi_qd_host.reshape(NUM_FRAMES, 2, D)[60, 0]
     np.testing.assert_allclose(state.joint_qd.numpy().reshape(W, D), np.broadcast_to(stored_qd, (W, D)), atol=1e-5)
 
 
 def test_save_and_load_round_trip(tmp_path):
     policy, env, state, _ = _cpu_setup()
-    _run_episode(policy, env, state, TERM, last_step=55)
+    _run_episode(policy, env, state, TERM, last_step=LAST)
     policy.host_update(0)
     path = tmp_path / "rsi_500.safetensors"
     policy.save_state(path)
@@ -275,4 +295,4 @@ def test_save_and_load_round_trip(tmp_path):
     np.testing.assert_allclose(other.psi_q_host, policy.psi_q_host)
     np.testing.assert_allclose(other.psi_qd_host, policy.psi_qd_host)
     np.testing.assert_allclose(other.frame_cdf.numpy(), policy.frame_cdf.numpy())
-    assert other.inserted_total == policy.inserted_total == 8
+    assert other.inserted_total == policy.inserted_total == 3

@@ -19,8 +19,11 @@ and the buffer update after resets; config ``omomo_train.yaml``):
   step ``j`` and frame ``f`` scores ``survived / horizon`` with ``horizon = min(psi_horizon, last frame - f)`` and
   ``survived`` the steps the world lasted after ``j`` (InterMimic's ``(end - j) / (end_max - j)`` over its 300-frame
   rollout window, taken here over a sliding window because FlashCHORD episodes run to the clip end). Snapshots above
-  ``psi_threshold`` replace the lowest-scoring simulation slot of their frame; all simulation scores decay by
-  ``psi_score_decay`` per iteration (InterMimic: ``1e-5`` per reset batch).
+  ``psi_threshold`` replace the lowest-scoring simulation slot of their frame, the best ``psi_slots`` of each frame
+  per iteration in ascending score order (InterMimic inserts the best of each frame per reset batch); all simulation
+  scores decay by ``psi_score_decay`` per iteration (InterMimic: ``1e-5`` per reset batch). Snapshots start only
+  ``psi_settle_steps`` after the ReconBody termination grace of ``reset_freeze_steps`` steps, which masks palm and
+  object failure at the start of every episode.
 * No VOC help: lanes never get help (InterMimic has no assist); the reference starts after frame 0 keep the stock
   reset's freeze-time hold, which releases to zero.
 
@@ -79,7 +82,7 @@ class PSIReconBodyResetConfig(RSIReconBodyResetConfig):
     psi_slots: int = 2  # InterMimic physicalBufferSize 3 = reference + 2 simulation slots
     psi_horizon: int = 300  # InterMimic rolloutLength (frames)
     psi_stride: int = 10  # snapshot every N control steps (InterMimic scores every frame of the window)
-    psi_settle_steps: int = 10  # first snapshot N steps after the world settles (InterMimic: start + 10)
+    psi_settle_steps: int = 10  # first snapshot N steps after the termination grace ends (InterMimic: start + 10)
     psi_threshold: float = 0.5  # InterMimic: insert when the survival fraction is > 0.5
     psi_score_decay: float = 2.4e-4  # per iteration; InterMimic 1e-5 per reset batch x 24 steps
     psi_max_candidates: int = 16384  # accepted snapshots queued per iteration (overflow is counted and dropped)
@@ -210,11 +213,12 @@ def sample_psi_reset(
     if immediate != 0:
         steps_since_reset[world] = freeze_steps + 1
         applied_voc_scale[world] = 0.0
-        capture_after[world] = settle_steps
     else:
         steps_since_reset[world] = 0
         applied_voc_scale[world] = reset_voc_scale
-        capture_after[world] = freeze_steps + settle_steps
+    # The ReconBody termination ignores palm and object failure while episode_step <= freeze_steps for EVERY start
+    # (termination.py freeze_masked), so a snapshot taken earlier would score survived steps it got for free.
+    capture_after[world] = freeze_steps + settle_steps
     clean[world] = immediate
     active[world] = 1
     snap_count[world] = 0
@@ -356,6 +360,18 @@ def clear_psi_lanes(
     snap_count[world] = 0
     for r in range(ring):
         ring_step[world * ring + r] = _EMPTY
+
+
+# ====================================================================== host helpers
+def _top_per_group(sorted_groups: np.ndarray, k: int) -> np.ndarray:
+    """Positions of the last ``k`` entries of every run of equal values in ``sorted_groups`` (already sorted)."""
+    if sorted_groups.shape[0] == 0:
+        return np.zeros(0, dtype=np.int64)
+    ends = np.flatnonzero(np.r_[sorted_groups[1:] != sorted_groups[:-1], True])
+    starts = np.r_[0, ends[:-1] + 1]
+    position = np.arange(sorted_groups.shape[0])
+    group_end = np.repeat(ends, ends - starts + 1)
+    return np.flatnonzero(group_end - position < k)
 
 
 # ====================================================================== reset policy
@@ -594,11 +610,16 @@ class PSIReconBodyReset(RSIReconBodyReset):
         inserted = 0
         if n > 0:
             qn, dn = self.q_per_world, self.dof_per_world
-            frames = self.cand_frame.numpy()[:n]
-            scores = self.cand_score.numpy()[:n]
-            q = self.cand_q.numpy()[: n * qn].reshape(n, qn)
-            qd = self.cand_qd.numpy()[: n * dn].reshape(n, dn)
-            inserted = self._insert(frames, scores, q, qd)
+            frames = self.cand_frame[:n].numpy()
+            scores = self.cand_score[:n].numpy()
+            # InterMimic inserts the best candidate of each frame per reset batch. The queue order follows the device
+            # atomics, so keep the best psi_slots candidates of each frame and insert them in ascending score order:
+            # deterministic, and a late low score never evicts a better state queued in the same iteration.
+            order = np.lexsort((scores, frames))
+            keep = order[_top_per_group(frames[order], self.num_slots)]
+            q = self.cand_q[: n * qn].numpy().reshape(n, qn)[keep]
+            qd = self.cand_qd[: n * dn].numpy().reshape(n, dn)[keep]
+            inserted = self._insert(frames[keep], scores[keep], q, qd)
         self.cand_count.zero_()
         self.score *= 1.0 - float(config.psi_score_decay)
         self.upload_buffer()
