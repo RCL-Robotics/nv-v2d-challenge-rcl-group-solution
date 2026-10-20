@@ -1,0 +1,4 @@
+# robotic_grounding/.gitignore ignores every `env/` directory; this one holds the environment scripts.
+!env/
+# local settings
+config.env
