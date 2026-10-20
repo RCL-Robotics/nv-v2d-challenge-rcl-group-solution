@@ -10,6 +10,10 @@ help ``U[top/band, top]`` of its start bin for the whole episode (scalar on the 
 
 Frame-0 and keyframe starts are immediate (no freeze, no shoulder spread, no finger offsets); mid-clip reference
 starts keep the stock 50-step freeze with ``reset_voc_scale`` decaying to the lane's help over the last 10 steps.
+
+Dev ``help_mode="success"`` (help force fix): the bin tops follow each bin's EMA pass-through pass rate instead of
+the iteration count (``bins.RSIBins`` docstring), and a lane's help is its band factor times the top at its current
+frame (``kernels.update_frame_help``), so help stays where the clip is hard instead of following the start bin.
 """
 
 from __future__ import annotations
@@ -78,6 +82,21 @@ class RSIReconBodyResetConfig(ReconBodyResetConfig):
     # reset_freeze_steps hold (VOC hold and termination grace unchanged), so robot and object already move with the
     # reference when the hold ends; 0 is the stock release (clock frozen for the whole hold).
     run_in_steps: int = 0
+    # Dev help force fix (lifecycle/rsi/bins.py docstring): "success" drives each bin's help top by its EMA
+    # pass-through pass rate (monotone ratchet, final cutoff) and applies it at the lane's current frame;
+    # "deadline" is the CH schedule (start-bin windows, deadline floor, start-bin help for the whole episode).
+    help_mode: str = "deadline"
+    help_ema_tau: float = 200.0
+    help_min_samples: float = 256.0
+    help_wilson_z: float = 1.645
+    help_lookahead_bins: int = 3
+    help_lookahead_decay: float = 0.8
+    help_success_lo: float = 0.6
+    help_success_hi: float = 0.97
+    help_update_interval: int = 100
+    help_final_iteration: int = 0
+    help_final_fraction: float = 0.85
+    help_final_ramp_fraction: float = 0.05
 
     def __post_init__(self) -> None:
         super().__post_init__()
@@ -180,6 +199,12 @@ class RSIReconBodyReset:
         self.pend_qd = wp.zeros(0, dtype=wp.float32, device=dev)
         self.force_bin = wp.full(world, -1, dtype=wp.int32, device=dev)
         self.force_slot = wp.zeros(world, dtype=wp.int32, device=dev)
+        # Success-mode help: band factor and pass-through bookkeeping per lane, pass/fail counts per bin
+        self.frame_help = int(config.help_mode == "success")
+        self.help_factor = wp.ones(world, dtype=wp.float32, device=dev)
+        self.visit_bin = wp.zeros(world, dtype=wp.int32, device=dev)
+        self.pass_iter = wp.zeros(bins, dtype=wp.int32, device=dev)
+        self.pass_fail_iter = wp.zeros(bins, dtype=wp.int32, device=dev)
 
         self.bank = KeyframeBank(bins, config.kf_capacity, device=dev)
 
@@ -348,6 +373,8 @@ class RSIReconBodyReset:
                 self.bank.write_count,
                 self.force_bin,
                 self.force_slot,
+                self.frame_help,
+                config.bin_frames,
             ],
             outputs=[
                 self.reset_count,
@@ -369,6 +396,8 @@ class RSIReconBodyReset:
                 self.served,
                 self.start_stats,
                 self.bank.drop_total,
+                self.help_factor,
+                self.visit_bin,
             ],
             device=self.device,
         )
@@ -411,6 +440,23 @@ class RSIReconBodyReset:
         del curriculum_voc_scale
         self._require_bound()
         config = self.config
+        if self.frame_help:
+            wp.launch(
+                kernels.update_frame_help,
+                dim=self.world_count,
+                inputs=[
+                    terminated,
+                    truncated,
+                    self.active,
+                    timestep,
+                    self.help_factor,
+                    self.top,
+                    config.bin_frames,
+                    self.num_bins,
+                ],
+                outputs=[self.help],
+                device=self.device,
+            )
         wp.launch(
             kernels.advance_rsi_reset,
             dim=self.world_count,
@@ -518,6 +564,9 @@ class RSIReconBodyReset:
                 self.bank.write_count,
                 self.bank.commit_total,
                 self.bank.drop_total,
+                self.visit_bin,
+                self.pass_iter,
+                self.pass_fail_iter,
             ],
             device=self.device,
         )
@@ -567,9 +616,13 @@ class RSIReconBodyReset:
         requested = self.requested.numpy().astype(np.int64)
         served = self.served.numpy().astype(np.int64)
         starts = self.start_stats.numpy().astype(np.int64)
-        for array in (self.n_iter, self.f_iter, self.requested, self.served, self.start_stats):
+        passes = self.pass_iter.numpy().astype(np.int64)
+        pass_fails = self.pass_fail_iter.numpy().astype(np.int64)
+        for array in (self.n_iter, self.f_iter, self.requested, self.served, self.start_stats, self.pass_iter,
+                      self.pass_fail_iter):
             array.zero_()
         self.bins.observe(n, f)
+        self.bins.observe_pass(passes, pass_fails)
         decision = self.bins.decide(iteration)
         self.upload_bins()
         self._last_iteration = iteration
@@ -611,11 +664,27 @@ class RSIReconBodyReset:
             "rsi/frame0_start_frac": float(starts[kernels.START_FRAME0]) / total_starts,
             "rsi/keyframe_start_frac": float(starts[kernels.START_KEYFRAME]) / total_starts,
         }
+        if bins.success_mode:
+            rate = bins.pass_rate()
+            bound = bins.pass_lower_bound()
+            metrics.update(
+                {
+                    "rsi/pass_rate_mean": float(rate.mean()),
+                    "rsi/pass_rate_min": float(rate.min()),
+                    "rsi/pass_lb_min": float(bound.min()),
+                    "rsi/worst_pass_bin": float(int(rate.argmin())),
+                    "rsi/pass_samples_min": float(bins.pass_samples().min()),
+                    "rsi/pass_through_iter": float(passes.sum() + pass_fails.sum()),
+                }
+            )
         if detailed:
             for b in range(self.num_bins):
                 metrics[f"rsi/bin/top_{b:02d}"] = float(bins.top[b])
                 metrics[f"rsi/bin/fail_{b:02d}"] = float(bins.rate[b])
                 metrics[f"rsi/bin/kf_eligible_{b:02d}"] = float(self._cached_eligible[b])
+                if bins.success_mode:
+                    metrics[f"rsi/bin/pass_{b:02d}"] = float(rate[b])
+                    metrics[f"rsi/bin/pass_lb_{b:02d}"] = float(bound[b])
         return metrics
 
     def help_zero_since(self) -> int | None:
@@ -650,6 +719,8 @@ class RSIReconBodyReset:
         tensors.update({f"bank.{key}": np.ascontiguousarray(value) for key, value in self.bank.state_dict().items()})
         tensors["pending.n_iter"] = self.n_iter.numpy()
         tensors["pending.f_iter"] = self.f_iter.numpy()
+        tensors["pending.pass_iter"] = self.pass_iter.numpy()
+        tensors["pending.pass_fail_iter"] = self.pass_fail_iter.numpy()
         path.parent.mkdir(parents=True, exist_ok=True)
         temporary = path.with_name(f".{path.name}.tmp")
         save_file(tensors, str(temporary), metadata=self._sidecar_metadata(iteration))
@@ -679,6 +750,14 @@ class RSIReconBodyReset:
             if value is None or value.shape != (self.num_bins,):
                 raise ValueError(f"RSI sidecar {path} lacks {name} with shape ({self.num_bins},)")
             array.assign(value.astype(np.int32))
+        for name, array in (("pending.pass_iter", self.pass_iter), ("pending.pass_fail_iter", self.pass_fail_iter)):
+            value = tensors.get(name)  # absent in sidecars written before the success mode
+            if value is None:
+                array.zero_()
+            elif value.shape != (self.num_bins,):
+                raise ValueError(f"RSI sidecar {path} has {name} with shape {value.shape}; expected ({self.num_bins},)")
+            else:
+                array.assign(value.astype(np.int32))
         for array in (self.requested, self.served, self.start_stats):
             array.zero_()
         self._last_iteration = int(metadata["iteration"]) - 1
