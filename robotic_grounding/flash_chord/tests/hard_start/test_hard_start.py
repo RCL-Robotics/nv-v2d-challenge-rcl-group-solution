@@ -130,6 +130,18 @@ def test_hard_bins_and_the_bins_before_them_get_the_hard_share_with_a_uniform_fl
     assert hard_share > 0.5
 
 
+def test_a_bin_without_enough_samples_takes_the_mean_hazard_of_the_others():
+    bins = _hazard_bins(start_lookahead_bins=1)
+    hazard = np.linspace(0.1, 0.9, bins.num_bins)
+    _feed(bins, hazard)
+    bins.pass_ema[5] = bins.fail_ema[5] = 0.0  # never counted (e.g. its episodes end inside the hold)
+    d = bins.start_difficulty()
+    known = np.ones(bins.num_bins, dtype=bool)
+    known[5] = False
+    assert d[5] == pytest.approx(d[known].mean())
+    np.testing.assert_allclose(d[known], np.round(200 * hazard[known]) / 200, atol=1e-9)
+
+
 def test_uncapped_softmax_matches_the_formula():
     bins = _hazard_bins(start_cap=1.0)
     rng = np.random.default_rng(3)
@@ -207,23 +219,25 @@ def _bound_policy(world_count: int, **overrides):
 @pytest.mark.parametrize("pass_after_grace", [False, True])
 def test_no_outcome_is_counted_while_the_terminations_are_masked(pass_after_grace):
     # live lanes: episode_step already counts this transition (termination saw step - 1); done lanes were not advanced
-    policy, env, state = _bound_policy(5, pass_after_grace=pass_after_grace)
-    policy.active.assign(np.asarray([1, 1, 1, 1, 1], dtype=np.int32))
-    policy.visit_bin.assign(np.asarray([2, 2, 2, 2, 2], dtype=np.int32))
-    env.timestep.assign(np.asarray([3 * 25, 3 * 25, 3 * 25, 3 * 25, 2 * 25 + 5], dtype=np.int32))
-    env.episode_step.assign(np.asarray([51, 52, 50, 51, 30], dtype=np.int32))
-    env.terminated.assign(np.asarray([0, 0, 1, 1, 1], dtype=np.int32))
+    policy, env, state = _bound_policy(6, pass_after_grace=pass_after_grace)
+    policy.active.assign(np.asarray([1, 1, 1, 1, 1, 1], dtype=np.int32))
+    policy.clean.assign(np.asarray([0, 0, 0, 0, 0, 1], dtype=np.int32))  # world 5: a frame-0 / keyframe start
+    policy.visit_bin.assign(np.asarray([2, 2, 2, 2, 2, 2], dtype=np.int32))
+    env.timestep.assign(np.asarray([3 * 25, 3 * 25, 3 * 25, 3 * 25, 2 * 25 + 5, 3 * 25], dtype=np.int32))
+    env.episode_step.assign(np.asarray([51, 52, 50, 51, 30, 31], dtype=np.int32))
+    env.terminated.assign(np.asarray([0, 0, 1, 1, 1, 0], dtype=np.int32))
     policy.on_transition(state)
     passes, fails = policy.pass_iter.numpy(), policy.pass_fail_iter.numpy()
-    # world 0: live, checked step 50 (masked); world 1: live, checked 51; world 2: done, checked 50 (masked);
-    # world 3: done, checked 51; world 4: done inside the hold without crossing a bin
+    # held reference starts: world 0 live, checked step 50 (in the hold); world 1 live, checked 51; world 2 done,
+    # checked 50 (in the hold); world 3 done, checked 51; world 4 done inside the hold without crossing a bin.
+    # world 5: an immediate start (no hold), live at checked step 30.
     if pass_after_grace:
-        assert passes[2] == 2  # worlds 1 and 3 crossed bin 2 with live terminations
-        assert fails[3] == 1 and fails[2] == 0  # only world 3 failed with live terminations
+        assert passes[2] == 3  # worlds 1 and 3 after the hold, world 5 (no hold)
+        assert fails[3] == 1 and fails[2] == 0  # only world 3 failed after its hold
     else:
-        assert passes[2] == 4  # every crossing counts
+        assert passes[2] == 5  # every crossing counts
         assert fails[3] == 2 and fails[2] == 1  # worlds 2 and 3 failed in bin 3, world 4 in bin 2
-    np.testing.assert_array_equal(policy.visit_bin.numpy(), [3, 3, 3, 3, 2])  # the lane's bin is always followed
+    np.testing.assert_array_equal(policy.visit_bin.numpy(), [3, 3, 3, 3, 2, 3])  # the lane's bin is always followed
 
 
 def test_the_rolling_start_shift_moves_reference_starts_back_and_keeps_their_bin():

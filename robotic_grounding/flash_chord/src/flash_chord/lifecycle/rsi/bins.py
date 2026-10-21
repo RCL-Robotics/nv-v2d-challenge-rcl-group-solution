@@ -27,8 +27,9 @@ start-bin success windows) with a success-driven, monotone one:
 
 Dev ``start_mode="hazard"`` (hard-start sampling) replaces the CH start-bin weights (backward-credited failure EMA of
 "start in bin b, fail before the clip end", which saturates at 1 for every bin before a failure point and so degrades
-to uniform) with the pass-through hazard ``F / (P + F)`` of each bin (the success-mode EMAs above; 0 for a bin below
-``help_min_samples``), averaged over it and the next ``start_lookahead_bins`` - 1 bins with weights
+to uniform) with the pass-through hazard ``F / (P + F)`` of each bin (the success-mode EMAs above; a bin below
+``help_min_samples`` takes the mean of the others), averaged over it and the next ``start_lookahead_bins`` - 1 bins
+with weights
 ``start_lookahead_decay ** i`` (starts land in front of a failure point), turned into ``softmax(difficulty /
 start_temperature)``, mixed with ``uniform_mix`` uniform, and capped at ``start_cap`` per bin (the excess goes to the
 other bins in proportion). ``start_mode="credit"`` keeps the CH weights. In both modes the result is the distribution of
@@ -318,11 +319,14 @@ class RSIBins:
         return np.where(progress >= 1.0, 0.0, target)
 
     def start_difficulty(self) -> np.ndarray:
-        """Hazard mode: pass-through hazard per bin (0 below ``help_min_samples``), lookahead-averaged."""
+        """Hazard mode: pass-through hazard per bin, lookahead-averaged. A bin below ``help_min_samples`` takes the
+        mean hazard of the bins above it (0 while none is): neutral, so a bin whose episodes end before they are
+        counted is neither preferred nor starved of starts."""
         p = self.params
         total = self.pass_ema + self.fail_ema
         hazard = np.divide(self.fail_ema, total, out=np.zeros(self.num_bins, dtype=np.float64), where=total > 0)
-        hazard = np.where(self.pass_samples() >= max(p.help_min_samples, 1e-9), hazard, 0.0)
+        known = self.pass_samples() >= max(p.help_min_samples, 1e-9)
+        hazard = np.where(known, hazard, float(hazard[known].mean()) if known.any() else 0.0)
         out = np.zeros(self.num_bins, dtype=np.float64)
         for b in range(self.num_bins):
             weights = p.start_lookahead_decay ** np.arange(min(p.start_lookahead_bins, self.num_bins - b))

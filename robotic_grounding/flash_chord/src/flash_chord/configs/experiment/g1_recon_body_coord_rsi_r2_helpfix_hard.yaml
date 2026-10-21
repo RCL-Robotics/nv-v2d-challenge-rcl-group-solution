@@ -6,8 +6,8 @@
 #     the other 90 %), 80 % by softmax(difficulty / 0.1) (start_mode credit -> hazard), each bin capped at 15 % of all
 #     resets (start_cap 1/6 of the non-anchor starts); difficulty = pass-through hazard F / (P + F) of the bin averaged
 #     over it and the next 2 bins with weights 0.7^i (the same EMAs that drive the help).
-#   reset.pass_after_grace true: no pass-through outcome (pass or fail) is counted while the palm/object terminations
-#     are masked (episode step <= 50), for the help ratchet as for the sampling. start_frame_shift stays 0 (no rolling start: the
+#   reset.pass_after_grace true: a held reference start counts no pass-through outcome (pass or fail) while the
+#     palm/object terminations are masked (episode step <= 50), for the help ratchet as for the sampling; start_frame_shift stays 0 (no rolling start: the
 #     clock is frozen during the hold).
 #   logging names.
 

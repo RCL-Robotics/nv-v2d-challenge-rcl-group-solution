@@ -454,10 +454,11 @@ def rsi_transition(
     Pass-through outcome (success-mode help; BeyondMimic attribution): a scored lane counts a pass in every bin it
     leaves, and on its last step a fail in the bin where it terminated or a pass in the bin where it was truncated
     (clip end). Bins are the start bins of ``rsi_bin_of``; frames past the last start bin belong to it.
-    With ``pass_grace > 0`` (dev) no outcome is counted on a transition whose termination check saw an episode step
-    <= ``pass_grace`` (the reset hold, in which the palm and object terminations are masked): a bin the clock crosses
-    there could not have failed, and counting only its fails (pelvis) would make it look impossible. The lane's bin
-    is still followed; it contributes from its first transition with live terminations.
+    With ``pass_grace > 0`` (dev) a reference start (``clean == 0``: held, object on full VOC, palm/object
+    terminations masked) counts no outcome on a transition whose termination check saw an episode step <=
+    ``pass_grace``: a bin the clock crosses in the hold (the rolling start runs it) could not have failed there.
+    Its bin is still followed, and it counts from its first transition after the hold. Frame-0 and keyframe starts
+    (``clean == 1``) have no hold and count from their first step.
     """
     world = wp.tid()
     is_terminated = terminated[world] != 0
@@ -470,7 +471,8 @@ def rsi_transition(
         checked_step = int(episode_step[world])
         if not done:
             checked_step = checked_step - 1
-        credited = pass_grace <= 0 or checked_step > pass_grace
+        # Only a held reference start (clean == 0) is in a hold: frame-0 and keyframe starts act from their first step.
+        credited = pass_grace <= 0 or clean[world] != 0 or checked_step > pass_grace
         current = rsi_bin_of(timestep[world], bin_frames, num_bins)
         visited = int(visit_bin[world])  # Warp requires explicitly typed mutable locals.
         if current > visited:

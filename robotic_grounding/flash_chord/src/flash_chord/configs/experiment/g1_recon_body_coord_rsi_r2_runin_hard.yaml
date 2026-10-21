@@ -10,8 +10,8 @@
 #     points, so they gave a near-uniform start distribution.
 #   reset.start_frame_shift 20 (= run_in_steps): a reference start begins 20 frames before the sampled frame, so the
 #     rolling clock reaches the sampled frame as the 50-step hold ends and the palm/object terminations count.
-#   reset.pass_after_grace true: no pass-through outcome (pass or fail) is counted while those terminations are masked
-#     (episode step <= 50), so the bins crossed during the hold are not judged on outcomes they could not have had.
+#   reset.pass_after_grace true: a held reference start counts no pass-through outcome (pass or fail) while those
+#     terminations are masked (episode step <= 50); frame-0 and keyframe starts have no hold and count from step 1.
 #   training.max_iterations: 45000 -> 90000 and training.early_stop_help_zero_tail: 5860 -> 0; logging names.
 # Help is unchanged (CH deadline schedule).
 
