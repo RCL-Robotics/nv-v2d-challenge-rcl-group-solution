@@ -90,7 +90,8 @@ def test_export_replaces_the_rsi_reset_with_the_stock_fields():
                       ("g1_recon_body_coord_rsi_r2_helpfix", "g1_recon_body_coord_rsi_r2_helpfix_hard")):
         stock, _ = export.stock_config_with_notes(_compose(arm))
         base_stock, _ = export.stock_config_with_notes(_compose(base))
-        assert not any(key.startswith("start_") or key == "pass_after_grace" for key in stock["env"]["reset"])
+        dev_fields = set(START) - {"frame0_share", "uniform_mix"}  # the stock reset has its own start_frame
+        assert not dev_fields & set(stock["env"]["reset"])
         assert stock["env"]["reset"] == base_stock["env"]["reset"]
 
 
