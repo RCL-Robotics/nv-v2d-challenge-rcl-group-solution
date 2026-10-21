@@ -24,7 +24,15 @@ start-bin success windows) with a success-driven, monotone one:
 * a final cutoff (``help_final_iteration > 0``): from ``help_final_fraction - help_final_ramp_fraction`` of it the
   tops are capped by a log-linear ceiling from ``top0`` to ``zero_below``, and zero from ``help_final_fraction``, so
   the policy trains its last iterations without help, as the evaluator runs it.
-The start distribution (``rate``, ``start_probs``) is unchanged in both modes.
+
+Dev ``start_mode="hazard"`` (hard-start sampling) replaces the CH start-bin weights (backward-credited failure EMA of
+"start in bin b, fail before the clip end", which saturates at 1 for every bin before a failure point and so degrades
+to uniform) with the pass-through hazard ``F / (P + F)`` of each bin (the success-mode EMAs above; 0 for a bin below
+``help_min_samples``), averaged over it and the next ``start_lookahead_bins`` - 1 bins with weights
+``start_lookahead_decay ** i`` (starts land in front of a failure point), turned into ``softmax(difficulty /
+start_temperature)``, mixed with ``uniform_mix`` uniform, and capped at ``start_cap`` per bin (the excess goes to the
+other bins in proportion). ``start_mode="credit"`` keeps the CH weights. In both modes the result is the distribution of
+the non-anchor starts (``frame0_share`` of the resets start at frame 0 before it).
 """
 
 from __future__ import annotations
@@ -37,6 +45,7 @@ import numpy as np
 
 COUNT_KEYS = ("down", "up", "forced", "decisions")
 HELP_MODES = ("deadline", "success")
+START_MODES = ("credit", "hazard")
 
 
 @dataclass(frozen=True)
@@ -73,12 +82,19 @@ class RSIBinParams:
     help_final_iteration: int = 0
     help_final_fraction: float = 0.85
     help_final_ramp_fraction: float = 0.05
+    # Dev hard-start sampling (module docstring); "credit" keeps the CH start weights unchanged.
+    start_mode: str = "credit"
+    start_temperature: float = 0.1
+    start_lookahead_bins: int = 3
+    start_lookahead_decay: float = 0.7
+    start_cap: float = 1.0
 
     def __post_init__(self) -> None:
         # Same conditions as CH _rsi_init (curriculum.py:378-385); the ones that need the clip length are in RSIBins.
         ints = ("bin_frames", "min_count", "min_gap", "wait_iterations", "deadline", "zero_ramp", "min_horizon",
-                "start_update", "help_lookahead_bins", "help_update_interval", "help_final_iteration")
-        strings = ("help_mode",)
+                "start_update", "help_lookahead_bins", "help_update_interval", "help_final_iteration",
+                "start_lookahead_bins")
+        strings = ("help_mode", "start_mode")
         for name in ints:
             value = getattr(self, name)
             if isinstance(value, bool) or int(value) != value:
@@ -105,6 +121,15 @@ class RSIBinParams:
             and 0.0 <= self.help_final_ramp_fraction < self.help_final_fraction
         ):
             raise ValueError(f"invalid RSI success-driven help configuration: {self}")
+        if self.start_mode not in START_MODES:
+            raise ValueError(f"RSI start_mode must be one of {START_MODES}, got {self.start_mode!r}")
+        if not (
+            self.start_temperature > 0.0
+            and self.start_lookahead_bins >= 1
+            and 0.0 <= self.start_lookahead_decay <= 1.0
+            and 0.0 < self.start_cap <= 1.0
+        ):
+            raise ValueError(f"invalid RSI hard-start sampling configuration: {self}")
         if self.bin_frames <= 0:
             raise ValueError("RSI bin_frames must be positive (legacy fixed-count bins are not supported)")
         if not (
@@ -130,6 +155,24 @@ class RSIBinParams:
     def from_object(cls, source: Any) -> RSIBinParams:
         """Pick the host fields off any object carrying them (e.g. the reset config)."""
         return cls(**{field.name: getattr(source, field.name) for field in fields(cls)})
+
+
+def _cap(probs: np.ndarray, cap: float) -> np.ndarray:
+    """Clip each entry at ``cap`` and hand the excess to the uncapped entries in proportion (sum stays 1); a cap below
+    ``1 / len`` cannot hold and is raised to it."""
+    probs = np.asarray(probs, dtype=np.float64).copy()
+    cap = max(float(cap), 1.0 / probs.size)
+    for _ in range(probs.size):
+        over = probs > cap + 1e-15
+        if not over.any():
+            break
+        excess = float((probs[over] - cap).sum())
+        probs[over] = cap
+        free = probs < cap - 1e-15
+        if not free.any():
+            break
+        probs[free] += excess * probs[free] / probs[free].sum()
+    return probs / probs.sum()
 
 
 def bin_geometry(num_frames: int, bin_frames: int, min_horizon: int) -> tuple[np.ndarray, np.ndarray, int]:
@@ -274,9 +317,27 @@ class RSIBins:
         target = p.top0 * (p.zero_below / p.top0) ** progress
         return np.where(progress >= 1.0, 0.0, target)
 
-    def start_probs(self) -> np.ndarray:
-        """Bin start probabilities: uniform mix plus backward-credited failure rates (CH _rsi_start_probs)."""
+    def start_difficulty(self) -> np.ndarray:
+        """Hazard mode: pass-through hazard per bin (0 below ``help_min_samples``), lookahead-averaged."""
         p = self.params
+        total = self.pass_ema + self.fail_ema
+        hazard = np.divide(self.fail_ema, total, out=np.zeros(self.num_bins, dtype=np.float64), where=total > 0)
+        hazard = np.where(self.pass_samples() >= max(p.help_min_samples, 1e-9), hazard, 0.0)
+        out = np.zeros(self.num_bins, dtype=np.float64)
+        for b in range(self.num_bins):
+            weights = p.start_lookahead_decay ** np.arange(min(p.start_lookahead_bins, self.num_bins - b))
+            out[b] = float((weights * hazard[b : b + weights.size]).sum() / weights.sum())
+        return out
+
+    def start_probs(self) -> np.ndarray:
+        """Bin start probabilities: uniform mix plus backward-credited failure rates (CH _rsi_start_probs), or in the
+        hazard mode uniform mix plus ``softmax(difficulty / start_temperature)``, capped per bin."""
+        p = self.params
+        if p.start_mode == "hazard":
+            difficulty = self.start_difficulty()
+            z = np.exp((difficulty - difficulty.max()) / p.start_temperature)
+            probs = p.uniform_mix / self.num_bins + (1.0 - p.uniform_mix) * z / z.sum()
+            return _cap(probs, p.start_cap)
         credit = np.zeros(self.num_bins, dtype=np.float64)
         acc = 0.0
         for b in range(self.num_bins - 1, -1, -1):

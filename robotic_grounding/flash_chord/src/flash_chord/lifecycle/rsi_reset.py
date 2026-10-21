@@ -97,9 +97,30 @@ class RSIReconBodyResetConfig(ReconBodyResetConfig):
     help_final_iteration: int = 0
     help_final_fraction: float = 0.85
     help_final_ramp_fraction: float = 0.05
+    # Dev hard-start sampling (lifecycle/rsi/bins.py docstring): "hazard" weights the non-anchor starts by the
+    # pass-through hazard (softmax at start_temperature, start_lookahead_* window, start_cap per bin); "credit" is CH.
+    start_mode: str = "credit"
+    start_temperature: float = 0.1
+    start_lookahead_bins: int = 3
+    start_lookahead_decay: float = 0.7
+    start_cap: float = 1.0
+    # Dev: reference starts begin start_frame_shift frames before the sampled frame (the rolling start's run_in_steps
+    # makes the clock reach it as the hold ends); pass_after_grace counts no pass-through pass while the palm and
+    # object terminations are masked (episode step <= reset_freeze_steps).
+    start_frame_shift: int = 0
+    pass_after_grace: bool = False
 
     def __post_init__(self) -> None:
         super().__post_init__()
+        if isinstance(self.start_frame_shift, bool) or int(self.start_frame_shift) != self.start_frame_shift:
+            raise TypeError(f"RSI start_frame_shift must be an integer, got {self.start_frame_shift!r}")
+        if not 0 <= self.start_frame_shift <= self.reset_freeze_steps:
+            raise ValueError(
+                f"RSI start_frame_shift must be in [0, reset_freeze_steps={self.reset_freeze_steps}], "
+                f"got {self.start_frame_shift}"
+            )
+        if not isinstance(self.pass_after_grace, bool):
+            raise TypeError(f"RSI pass_after_grace must be a bool, got {self.pass_after_grace!r}")
         if isinstance(self.run_in_steps, bool) or int(self.run_in_steps) != self.run_in_steps:
             raise TypeError(f"RSI run_in_steps must be an integer, got {self.run_in_steps!r}")
         if not 0 <= self.run_in_steps <= self.reset_freeze_steps:
@@ -375,6 +396,7 @@ class RSIReconBodyReset:
                 self.force_slot,
                 self.frame_help,
                 config.bin_frames,
+                int(config.start_frame_shift),
             ],
             outputs=[
                 self.reset_count,
@@ -540,6 +562,7 @@ class RSIReconBodyReset:
                 self.num_bins,
                 self.bank.capacity,
                 config.seed,
+                int(config.reset_freeze_steps) if config.pass_after_grace else 0,
             ],
             outputs=[
                 self.active,
@@ -664,7 +687,14 @@ class RSIReconBodyReset:
             "rsi/frame0_start_frac": float(starts[kernels.START_FRAME0]) / total_starts,
             "rsi/keyframe_start_frac": float(starts[kernels.START_KEYFRAME]) / total_starts,
         }
-        if bins.success_mode:
+        start = bins.start_probs()
+        metrics["rsi/start_entropy"] = float(-(start * np.log(np.maximum(start, 1e-12))).sum() / math.log(self.num_bins))
+        metrics["rsi/start_top_prob"] = float(start.max())
+        metrics["rsi/start_top_bin"] = float(int(start.argmax()))
+        if detailed:
+            for b in range(self.num_bins):
+                metrics[f"rsi/bin/start_{b:02d}"] = float(start[b])
+        if bins.success_mode or bins.params.start_mode == "hazard":
             rate = bins.pass_rate()
             bound = bins.pass_lower_bound()
             metrics.update(
@@ -682,7 +712,7 @@ class RSIReconBodyReset:
                 metrics[f"rsi/bin/top_{b:02d}"] = float(bins.top[b])
                 metrics[f"rsi/bin/fail_{b:02d}"] = float(bins.rate[b])
                 metrics[f"rsi/bin/kf_eligible_{b:02d}"] = float(self._cached_eligible[b])
-                if bins.success_mode:
+                if bins.success_mode or bins.params.start_mode == "hazard":
                     metrics[f"rsi/bin/pass_{b:02d}"] = float(rate[b])
                     metrics[f"rsi/bin/pass_lb_{b:02d}"] = float(bound[b])
         return metrics
