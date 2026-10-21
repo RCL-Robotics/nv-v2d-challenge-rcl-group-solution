@@ -74,9 +74,19 @@ class RSIReconBodyResetConfig(ReconBodyResetConfig):
     kf_min_stepped: int = 15
     kf_step_score_min: float = 0.3
     task_pos_scale: float = 10.0
+    # Dev rolling start: mid-clip reference starts run the reference clock for the last run_in_steps of the
+    # reset_freeze_steps hold (VOC hold and termination grace unchanged), so robot and object already move with the
+    # reference when the hold ends; 0 is the stock release (clock frozen for the whole hold).
+    run_in_steps: int = 0
 
     def __post_init__(self) -> None:
         super().__post_init__()
+        if isinstance(self.run_in_steps, bool) or int(self.run_in_steps) != self.run_in_steps:
+            raise TypeError(f"RSI run_in_steps must be an integer, got {self.run_in_steps!r}")
+        if not 0 <= self.run_in_steps <= self.reset_freeze_steps:
+            raise ValueError(
+                f"RSI run_in_steps must be in [0, reset_freeze_steps={self.reset_freeze_steps}], got {self.run_in_steps}"
+            )
         if self.start_frame != 0 or self.end_frame != -1:
             raise ValueError("RSI reset owns the start distribution: start_frame must be 0 and end_frame -1")
         if self.always_reset_to_first_frame:
@@ -408,6 +418,7 @@ class RSIReconBodyReset:
                 terminated,
                 truncated,
                 config.reset_freeze_steps,
+                config.reset_freeze_steps - config.run_in_steps,
                 config.reset_freeze_steps - config.voc_decay_steps,
                 config.voc_decay_steps,
                 config.reset_voc_scale,

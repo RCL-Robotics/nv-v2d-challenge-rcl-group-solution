@@ -1,0 +1,29 @@
+# PSI ReconBody reset (InterMimic physical state initialization, lifecycle/psi_reset.py) in place of RSI v3.
+# Start frame: frame 0 with probability frame0_share (InterMimic hybridInitProb 0.1), otherwise a frame drawn with
+# probability 1 / (1 + sum of its simulation-slot scores); start state: the reference (weight 1) or a stored simulation
+# state (weight = its score). Snapshots every psi_stride steps score survived / min(psi_horizon, frames left) and replace
+# the lowest slot of their frame above psi_threshold. No VOC help: lanes get help 0; reference starts after frame 0 keep
+# the stock 50-step freeze with the VOC hold released to 0 over its last 10 steps.
+# The stock fields keep exactly the values of reset/recon_body.yaml (as in recon_body_rsi.yaml).
+_target_: flash_chord.lifecycle.psi_reset.PSIReconBodyResetConfig
+reset_freeze_steps: 50
+voc_decay_steps: 10
+reset_voc_scale: 1.0
+shoulder_spread: 0.2
+start_frame: 0
+end_frame: -1
+always_reset_to_first_frame: false
+reset_to_first_frame_probability: 0.0
+immediate_first_frame_probability: 0.0
+seed: 42
+min_horizon: 10
+frame0_share: 0.1
+keyframes: false
+# PSI buffer (InterMimic omomo_train.yaml: physicalBufferSize 3, rolloutLength 300, hybridInitProb 0.1)
+psi_slots: 2
+psi_horizon: 300
+psi_stride: 10
+psi_settle_steps: 10
+psi_threshold: 0.5
+psi_score_decay: 0.00024
+psi_max_candidates: 16384

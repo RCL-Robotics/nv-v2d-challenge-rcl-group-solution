@@ -1,0 +1,118 @@
+# @package _global_
+
+# Arm C3r2-PSI: exactly arm C3r2 (experiment/g1_recon_body_coord_rsi_r2.yaml) with the RSI v3 reset replaced by
+# InterMimic's physical state initialization (reset/recon_body_psi.yaml, lifecycle/psi_reset.py). Differences:
+#   /reset: recon_body_rsi -> recon_body_psi (start frames and states from the PSI buffer, no VOC help; the RSI timer
+#     overrides of C3r2 are dropped because the PSI reset has no bins);
+#   training.early_stop_help_zero_tail: 5860 -> 0 (the help-zero early stop needs RSI help; PSI has none);
+#   logging names.
+# Nothing else differs (tests/psi/test_psi_reset.py fails on any other difference): the W0-P coordinated actor, PPO,
+# objective with the object task term, curriculum (one stage, global VOC 0), env, scene and the 45k iteration cap.
+
+defaults:
+  - override /sim: recon_body
+  - override /collision: physical
+  - override /embodiment: g1_dex3
+  - override /action: sonic_joint_residual
+  - override /observation: recon_body
+  - override /objective: recon_body_objtask         # as C3r2
+  - override /termination: recon_body
+  - override /reset: recon_body_psi                  # C3r2: recon_body_rsi
+  - override /curriculum: recon_body_rsi_objtask    # as C3r2
+
+# CH object task betas as CH trained (as C3r2).
+objective:
+  object_task_position_beta: 10.0
+  object_task_rotation_beta: 1.0
+
+task:
+  motion_speed: 1.0
+  source_frame_playback: true
+  motion_start_frame: 0
+  motion_end_frame: -1
+
+scene:
+  world_count: 4096
+  contact_friction: 1.0
+  object_free_joint_damping: 0.01
+
+action:
+  input_mode: raw
+  normalized_mapping: linear
+
+env:
+  voc:
+    _target_: flash_chord.runtime.object_control.VOCParams
+    k_lin: 50.0
+    d_lin: 10.0
+    k_ang: 10.0
+    d_ang: 0.1
+    max_force: 60.0
+    max_torque: 60.0
+    gravity: 9.81
+    mass_normalized_gains: false
+  contact:
+    _target_: flash_chord.runtime.contact.ContactTrackerConfig
+    sides: [left, right]
+  capture_terminal_state: false
+  enforce_joint_velocity_limits: true
+  critic_context:
+    _target_: flash_chord.envs.rl.CriticContextConfig
+    reference_phase: false
+    object_body_velocity: false
+
+training:
+  rollout_steps: 24
+  max_iterations: 45000
+  # The C3r2 help-zero early stop needs RSI help; PSI has no help schedule.
+  early_stop_help_zero_tail: 0
+  save_interval: 500
+  observation_normalization: true
+  observation_normalization_epsilon: 0.01
+  reward_normalization: false
+  resume: false
+  checkpoint: null
+  network:
+    actor_hidden_dims: [1024, 512, 256, 128]
+    critic_hidden_dims: [1024, 512, 256, 128]
+    activation: elu
+    initial_noise_std: 0.5
+    noise_std_type: scalar
+    actor_output_gain: 0.0
+  ppo:
+    value_loss_coefficient: 1.0
+    use_clipped_value_loss: true
+    clip_parameter: 0.2
+    entropy_coefficient: 0.0005
+    learning_epochs: 5
+    mini_batches: 4
+    learning_rate: 0.0005
+    schedule: adaptive
+    minimum_learning_rate: 0.00001
+    maximum_learning_rate: 0.01
+    adaptive_schedule_factor: 1.5
+    discount: 0.99
+    gae_lambda: 0.95
+    desired_kl: 0.02
+    max_grad_norm: 0.1
+    normalize_advantage_per_mini_batch: false
+    log_ratio_clip: null
+
+  coordinate:
+    _target_: flash_chord.training.ppo.config.CoordinateConfig
+    agents: [left, right, body]
+    encoder_dim: 128
+    partner_dim: 64
+    message_dim: 64
+    trunk_dims: [256, 128]
+    partner_message: true
+    mirror_body_message: true
+    hand_world_terms: reflect
+    ratio_mode: per_agent
+    value_mode: per_agent
+    export_actor_hidden_dims: [1024, 1024, 768, 384]
+
+logging:
+  experiment: g1_sonic_recon_body_coord_psi_r2
+  run_name: g1_recon_body_coord_psi_r2
+  log_interval: 10

@@ -1,0 +1,15 @@
+# ReconBody termination (termination/recon_body.yaml) plus a violation patience (dev, training only): palm and object
+# failures terminate only once their limits are exceeded on more than violation_patience consecutive control steps
+# (5 steps = 0.1 s at 50 Hz); pelvis failures still terminate at once. E2 export strips violation_patience, and the
+# evaluator disables every threshold, so the exported policy and its scoring are unaffected.
+_target_: flash_chord.lifecycle.termination.ReconBodyTerminationConfig
+pelvis_position_threshold: 0.70
+pelvis_orientation_threshold: 1.50
+palm_position_threshold: 0.15
+palm_orientation_threshold: 1.50
+object_position_threshold: 0.10
+object_orientation_threshold: 1.50
+reset_freeze_steps: 50
+truncate_at_reference_end: true
+sides: [left, right]
+violation_patience: 5
