@@ -17,6 +17,18 @@ from flash_chord.objectives.composition import CurriculumObjective, ObjectiveDia
 from flash_chord.runtime.jax import from_jax, to_jax
 
 
+@jax.jit
+def _stack_last(arrays: tuple[jax.Array, ...]) -> jax.Array:
+    """``jnp.stack(arrays, axis=-1)`` as one executable (a fresh buffer; zero-copy views may be passed in)."""
+    return jnp.stack(arrays, axis=-1)
+
+
+@jax.jit
+def _row_maxima_stacked(arrays: tuple[jax.Array, ...]) -> jax.Array:
+    """Per-array maximum over the last axis, stacked on a new last axis, as one executable."""
+    return jnp.stack([array.max(axis=-1) for array in arrays], axis=-1)
+
+
 @flax.struct.dataclass
 class VectorStep:
     """One vectorized environment transition and completed-episode metrics."""
@@ -208,17 +220,22 @@ class WarpRLEnv:
         )
 
     def transition_diagnostics(self) -> tuple[jax.Array | None, jax.Array | None]:
-        """Reduce optional termination diagnostics on demand before the next environment step."""
+        """Reduce optional termination diagnostics on demand before the next environment step.
+
+        One executable each for the cause stack and the per-world error maxima (a stack and a max are exact, so the
+        results equal the former per-array eager ops); both outputs are fresh buffers.
+        """
         termination_causes = None
         if self._termination_cause_arrays:
-            termination_causes = jnp.stack([to_jax(array) for array in self._termination_cause_arrays], axis=-1)
+            termination_causes = _stack_last(tuple(to_jax(array) for array in self._termination_cause_arrays))
         tracking_errors = None
         if self._tracking_error_arrays:
-            per_world_maxima = [
-                to_jax(array, (self.world_count, array.size // self.world_count)).max(axis=-1)
-                for array in self._tracking_error_arrays
-            ]
-            tracking_errors = jnp.stack(per_world_maxima, axis=-1)
+            tracking_errors = _row_maxima_stacked(
+                tuple(
+                    to_jax(array, (self.world_count, array.size // self.world_count))
+                    for array in self._tracking_error_arrays
+                )
+            )
         return termination_causes, tracking_errors
 
     def transition_logging_inputs(self) -> tuple[jax.Array, jax.Array]:
