@@ -205,7 +205,7 @@ def _bound_policy(world_count: int, **overrides):
 
 
 @pytest.mark.parametrize("pass_after_grace", [False, True])
-def test_no_pass_is_counted_while_the_terminations_are_masked(pass_after_grace):
+def test_no_outcome_is_counted_while_the_terminations_are_masked(pass_after_grace):
     # live lanes: episode_step already counts this transition (termination saw step - 1); done lanes were not advanced
     policy, env, state = _bound_policy(5, pass_after_grace=pass_after_grace)
     policy.active.assign(np.asarray([1, 1, 1, 1, 1], dtype=np.int32))
@@ -219,9 +219,10 @@ def test_no_pass_is_counted_while_the_terminations_are_masked(pass_after_grace):
     # world 3: done, checked 51; world 4: done inside the hold without crossing a bin
     if pass_after_grace:
         assert passes[2] == 2  # worlds 1 and 3 crossed bin 2 with live terminations
+        assert fails[3] == 1 and fails[2] == 0  # only world 3 failed with live terminations
     else:
         assert passes[2] == 4  # every crossing counts
-    assert fails[3] == 2 and fails[2] == 1  # worlds 2 and 3 failed in bin 3, world 4 in bin 2: fails always count
+        assert fails[3] == 2 and fails[2] == 1  # worlds 2 and 3 failed in bin 3, world 4 in bin 2
     np.testing.assert_array_equal(policy.visit_bin.numpy(), [3, 3, 3, 3, 2])  # the lane's bin is always followed
 
 

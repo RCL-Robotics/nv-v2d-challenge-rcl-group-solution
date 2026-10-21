@@ -105,7 +105,7 @@ class RSIReconBodyResetConfig(ReconBodyResetConfig):
     start_lookahead_decay: float = 0.7
     start_cap: float = 1.0
     # Dev: reference starts begin start_frame_shift frames before the sampled frame (the rolling start's run_in_steps
-    # makes the clock reach it as the hold ends); pass_after_grace counts no pass-through pass while the palm and
+    # makes the clock reach it as the hold ends); pass_after_grace counts no pass-through outcome while the palm and
     # object terminations are masked (episode step <= reset_freeze_steps).
     start_frame_shift: int = 0
     pass_after_grace: bool = False
