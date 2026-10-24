@@ -42,6 +42,10 @@ _RECON_BODY_OBJECTIVE_TERM_COUNT = wp.constant(12)
 #: ``object_task_weight`` is non-zero; otherwise the objective is exactly the stock one (same terms, kernels, logs).
 RECON_BODY_OBJECT_TASK_TERM_NAME = "object_task"
 _RECON_BODY_OBJECT_TASK_TERM_STRIDE = wp.constant(13)
+#: Optional post-release no-drop penalty term (dev-only, needs ``object_task``). It is appended after ``object_task``
+#: only when ``no_drop_weight`` is non-zero.
+RECON_BODY_OBJECT_NO_DROP_TERM_NAME = "object_no_drop"
+_RECON_BODY_OBJECT_NO_DROP_TERM_INDEX = wp.constant(13)
 
 
 @dataclass(frozen=True)
@@ -79,6 +83,18 @@ class ReconBodyObjectiveConfig:
     object_task_weight: float = 0.0
     object_task_position_beta: float = 20.0
     object_task_rotation_beta: float = 5.0
+    # Dev-only post-release options (both need object_task; both off by default = the object_task objective above,
+    # same kernels and bits). "Released" frames are the frames after the FINAL release: every frame after the last
+    # frame in which any hand's reference contact label is on (none if the last frame has a label or no frame has
+    # one). Mid-clip frames with both labels off and the frames before the first contact are not released.
+    # position_only: on released frames object_task drops its rotation factor: exp(-position_beta * |p - p_ref|).
+    object_task_position_only_after_release: bool = False
+    # no_drop: a term `object_no_drop` = max(0, (z_ref - no_drop_margin_m) - z) [m] of the object root body on
+    # released frames (0 elsewhere), added after object_task when no_drop_weight != 0. It is weighted like every
+    # term (score += frame_dt * weight * term, the curriculum stage weight is what training applies), so the
+    # weight must be <= 0 (a penalty).
+    no_drop_weight: float = 0.0
+    no_drop_margin_m: float = 0.05
 
     def __post_init__(self) -> None:
         values = self.weights + (
@@ -116,6 +132,16 @@ class ReconBodyObjectiveConfig:
             raise ValueError("ReconBody object task parameters must be finite")
         if self.object_task_position_beta < 0.0 or self.object_task_rotation_beta < 0.0:
             raise ValueError("ReconBody object task betas must be non-negative")
+        if not isinstance(self.object_task_position_only_after_release, bool):
+            raise ValueError("ReconBody object task position_only_after_release must be a bool")
+        if not (math.isfinite(self.no_drop_weight) and math.isfinite(self.no_drop_margin_m)):
+            raise ValueError("ReconBody object no-drop parameters must be finite")
+        if self.no_drop_weight > 0.0:
+            raise ValueError("ReconBody object no-drop weight must be <= 0 (it weights a non-negative drop depth)")
+        if self.no_drop_margin_m < 0.0:
+            raise ValueError("ReconBody object no-drop margin must be non-negative")
+        if self.object_task_release_enabled and not self.object_task_enabled:
+            raise ValueError("ReconBody object task release options (position-only, no-drop) need object_task")
         object.__setattr__(self, "sides", tuple(self.sides))
 
     @property
@@ -124,17 +150,33 @@ class ReconBodyObjectiveConfig:
         return self.object_task_weight != 0.0
 
     @property
+    def object_no_drop_enabled(self) -> bool:
+        """Whether the dev-only ``object_no_drop`` term exists (non-zero weight)."""
+        return self.no_drop_weight != 0.0
+
+    @property
+    def object_task_release_enabled(self) -> bool:
+        """Whether any post-release option is on; when false the object_task path is exactly the original one."""
+        return self.object_task_position_only_after_release or self.object_no_drop_enabled
+
+    @property
     def term_names(self) -> tuple[str, ...]:
-        """Stock term names, plus ``object_task`` last when it is enabled."""
+        """Stock term names, plus ``object_task`` (then ``object_no_drop``) last when enabled."""
         if self.object_task_enabled:
-            return RECON_BODY_OBJECTIVE_TERM_NAMES + (RECON_BODY_OBJECT_TASK_TERM_NAME,)
+            names = RECON_BODY_OBJECTIVE_TERM_NAMES + (RECON_BODY_OBJECT_TASK_TERM_NAME,)
+            if self.object_no_drop_enabled:
+                names += (RECON_BODY_OBJECT_NO_DROP_TERM_NAME,)
+            return names
         return RECON_BODY_OBJECTIVE_TERM_NAMES
 
     @property
     def term_weights(self) -> tuple[float, ...]:
         """Initial weights in :attr:`term_names` order."""
         if self.object_task_enabled:
-            return self.weights + (self.object_task_weight,)
+            weights = self.weights + (self.object_task_weight,)
+            if self.object_no_drop_enabled:
+                weights += (self.no_drop_weight,)
+            return weights
         return self.weights
 
     @property
@@ -390,6 +432,79 @@ def add_recon_body_object_task(
     score[world] = score[world] + frame_dt * weights[_RECON_BODY_OBJECTIVE_TERM_COUNT] * task
 
 
+def final_release_mask(labels: np.ndarray) -> np.ndarray:
+    """``(T,)`` float32: 1 on every frame after the last frame in which any hand's contact label is on (> 0.5).
+
+    ``labels`` is the objective's ``(T, hands)`` contact-label array. Frames before the first contact and mid-clip
+    frames with every label off are not released; a clip whose last frame has a label, or with no label at all, has
+    no released frame.
+    """
+    labels = np.asarray(labels)
+    if labels.ndim != 2:
+        raise ValueError(f"contact labels must have shape (frames, hands), got {labels.shape}")
+    mask = np.zeros(labels.shape[0], dtype=np.float32)
+    active = np.flatnonzero((labels > 0.5).any(axis=1))
+    if active.size:
+        mask[int(active[-1]) + 1 :] = 1.0
+    return mask
+
+
+@wp.kernel
+def add_recon_body_object_task_after_release(
+    body_q: wp.array(dtype=wp.transform),
+    stock_terms: wp.array(dtype=wp.float32),
+    timestep: wp.array(dtype=wp.int32),
+    released: wp.array(dtype=wp.float32),
+    num_frames: int,
+    object_body_id: int,
+    object_target_pos_w: wp.array(dtype=wp.vec3),
+    object_target_quat_w: wp.array(dtype=wp.quat),
+    bodies_per_world: int,
+    position_beta: float,
+    rotation_beta: float,
+    position_only_after_release: int,
+    no_drop: int,
+    no_drop_margin: float,
+    term_count: int,
+    weights: wp.array(dtype=wp.float32),
+    frame_dt: float,
+    terms: wp.array(dtype=wp.float32),
+    score: wp.array(dtype=wp.float32),
+) -> None:
+    """``add_recon_body_object_task`` plus the post-release options (only launched when one of them is on).
+
+    On a frame that is not released, ``object_task`` and its score increment are the same expressions as in
+    ``add_recon_body_object_task``, and ``object_no_drop`` is 0. On a released frame (``released[frame] > 0.5``,
+    frame = the clamped timestep as in force closure), ``position_only_after_release`` sets the rotation factor to 1,
+    and ``no_drop`` writes ``max(0, (z_ref - margin) - z)`` of the object root body (world z up) as term 13.
+    """
+    world = wp.tid()
+    frame = wp.clamp(timestep[world], 0, num_frames - 1)
+    is_released = released[frame] > 0.5
+    stock_base = world * _RECON_BODY_OBJECTIVE_TERM_COUNT
+    term_base = world * term_count
+    for term in range(_RECON_BODY_OBJECTIVE_TERM_COUNT):
+        terms[term_base + term] = stock_terms[stock_base + term]
+
+    object_xf = body_q[world * bodies_per_world + object_body_id]
+    object_position = wp.transform_get_translation(object_xf)
+    target_position = object_target_pos_w[world]
+    position_distance = wp.length(object_position - target_position)
+    rotation_distance = object_task_rotation_distance(wp.transform_get_rotation(object_xf), object_target_quat_w[world])
+    task = wp.exp(-position_beta * position_distance) * wp.exp(-rotation_beta * rotation_distance)
+    if position_only_after_release != 0 and is_released:
+        task = wp.exp(-position_beta * position_distance)
+    terms[term_base + _RECON_BODY_OBJECTIVE_TERM_COUNT] = task
+    total = score[world] + frame_dt * weights[_RECON_BODY_OBJECTIVE_TERM_COUNT] * task
+    if no_drop != 0:
+        drop = float(0.0)  # noqa: UP018 - Warp requires explicitly typed mutable locals.
+        if is_released:
+            drop = wp.max(target_position[2] - no_drop_margin - object_position[2], 0.0)
+        terms[term_base + _RECON_BODY_OBJECT_NO_DROP_TERM_INDEX] = drop
+        total = total + frame_dt * weights[_RECON_BODY_OBJECT_NO_DROP_TERM_INDEX] * drop
+    score[world] = total
+
+
 @dataclass
 class ReconBodyObjective:
     """Device BodyRecon objective with named diagnostics and mutable curriculum weights."""
@@ -429,6 +544,8 @@ class ReconBodyObjective:
     score: wp.array
     # Stock-layout term scratch, only when ``object_task`` is enabled (``terms`` then has 13 columns).
     stock_terms: wp.array | None = None
+    # Per-frame final-release mask (float32, 1 = released), only when a post-release option is on.
+    release_mask: wp.array | None = None
 
     @classmethod
     def build(
@@ -547,6 +664,11 @@ class ReconBodyObjective:
                 if config.object_task_enabled
                 else None
             ),
+            release_mask=(
+                wp.array(final_release_mask(labels), dtype=wp.float32, device=device)
+                if config.object_task_release_enabled
+                else None
+            ),
         )
 
     @property
@@ -646,7 +768,7 @@ class ReconBodyObjective:
             ],
             outputs=[self.terms if self.stock_terms is None else self.stock_terms, self.score],
         )
-        if self.stock_terms is not None:
+        if self.stock_terms is not None and not self.config.object_task_release_enabled:
             wp.launch(
                 add_recon_body_object_task,
                 dim=self.world_count,
@@ -659,6 +781,33 @@ class ReconBodyObjective:
                     self.bodies_per_world,
                     self.config.object_task_position_beta,
                     self.config.object_task_rotation_beta,
+                    self.weights,
+                    self.frame_dt,
+                ],
+                outputs=[self.terms, self.score],
+            )
+        elif self.stock_terms is not None:
+            if self.release_mask is None or self.release_mask.shape != (self.num_frames,):
+                raise ValueError("ReconBody object task release options need a (num_frames,) release mask")
+            wp.launch(
+                add_recon_body_object_task_after_release,
+                dim=self.world_count,
+                inputs=[
+                    state.body_q,
+                    self.stock_terms,
+                    timestep,
+                    self.release_mask,
+                    self.num_frames,
+                    self.object_body_id,
+                    self.command.body_target_pos_w,
+                    self.command.body_target_quat_w,
+                    self.bodies_per_world,
+                    self.config.object_task_position_beta,
+                    self.config.object_task_rotation_beta,
+                    int(self.config.object_task_position_only_after_release),
+                    int(self.config.object_no_drop_enabled),
+                    self.config.no_drop_margin_m,
+                    len(self.term_names),
                     self.weights,
                     self.frame_dt,
                 ],

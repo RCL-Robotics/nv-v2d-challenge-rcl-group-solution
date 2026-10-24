@@ -117,9 +117,17 @@ STOCK_PPO_KEYS = (
     "normalize_advantage_per_mini_batch",
     "log_ratio_clip",
 )
-#: Dev-only ``ReconBodyObjectiveConfig`` fields and curriculum term names (objectives/recon_body.py object_task).
-DEV_OBJECTIVE_KEYS = ("object_task_weight", "object_task_position_beta", "object_task_rotation_beta")
-DEV_OBJECTIVE_TERMS = ("object_task",)
+#: Dev-only ``ReconBodyObjectiveConfig`` fields and curriculum term names (objectives/recon_body.py object_task and
+#: its post-release options: position-only object_task and the object_no_drop term).
+DEV_OBJECTIVE_KEYS = (
+    "object_task_weight",
+    "object_task_position_beta",
+    "object_task_rotation_beta",
+    "object_task_position_only_after_release",
+    "no_drop_weight",
+    "no_drop_margin_m",
+)
+DEV_OBJECTIVE_TERMS = ("object_task", "object_no_drop")
 #: Dev-only ``ReconBodyTerminationConfig`` fields (training only; evaluation disables every threshold anyway).
 DEV_TERMINATION_KEYS = ("violation_patience",)
 CONFIG_METADATA_KEY = "resolved_config_json"
@@ -439,7 +447,7 @@ def _stock_reset(reset: Mapping[str, Any], where: str) -> dict[str, Any]:
 
 
 def _strip_dev_objective_terms(config: dict, removed: list[str]) -> None:
-    """Drop the dev-only ReconBody ``object_task`` term: its objective fields and its curriculum weights.
+    """Drop the dev-only ReconBody ``object_task`` / ``object_no_drop`` terms: objective fields and curriculum weights.
 
     The stock ``ReconBodyObjectiveConfig`` rejects unknown fields and the stock objective rejects unknown
     curriculum weight names; the term only shapes training reward, so the exported actor is unaffected.
