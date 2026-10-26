@@ -115,6 +115,138 @@ def guard_step(
     )
 
 
+class TransitionCopy(NamedTuple):
+    """Outputs of :func:`copy_transition`: fresh copies of one step's zero-copy views and its exact episode flags."""
+
+    observation: jax.Array
+    reward: jax.Array
+    terminated: jax.Array
+    truncated: jax.Array
+    done: jax.Array  # float32 max(terminated, truncated)
+    reference_end: jax.Array  # bool: truncated and not terminated
+
+
+@jax.jit
+def copy_transition(observation, reward, terminated, truncated) -> TransitionCopy:
+    """The per-step copies and episode flags of the rollout in one executable instead of ~10 eager dispatches.
+
+    Only copies, an integer max, an exact integer-to-float cast and boolean logic run here, so every output is
+    bit-identical to the eager sequence it replaces. Every output is a fresh buffer (``jnp.array(..., copy=True)``
+    is a copy, never a forwarded input), so the zero-copy Warp views may be passed in and reused by the next step.
+    """
+    terminated = jnp.array(terminated, copy=True)
+    truncated = jnp.array(truncated, copy=True)
+    return TransitionCopy(
+        observation=jnp.array(observation, copy=True),
+        reward=jnp.array(reward, copy=True),
+        terminated=terminated,
+        truncated=truncated,
+        done=jnp.maximum(terminated, truncated).astype(jnp.float32),
+        reference_end=jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool))),
+    )
+
+
+class StepMetrics(NamedTuple):
+    """Outputs of :func:`step_metrics`: one step's logged aggregates (``None`` where the input is ``None``)."""
+
+    raw_reward_mean: jax.Array
+    reference_end_count: jax.Array
+    episode_return_sum: jax.Array
+    episode_length_sum: jax.Array
+    episode_reference_progress_sum: jax.Array
+    episode_count: jax.Array
+    objective_terms: jax.Array | None  # fresh copy
+    termination_causes: jax.Array | None  # exclusive causes (first matching cause wins), bool [worlds, causes]
+    tracking_errors: jax.Array | None  # fresh copy
+
+
+@jax.jit
+def step_metrics(
+    raw_reward: jax.Array,
+    reference_end: jax.Array,
+    episode_return: jax.Array,
+    episode_length: jax.Array,
+    episode_reference_progress: jax.Array,
+    objective_terms: jax.Array | None,
+    termination_causes: jax.Array | None,
+    terminated_remaining: jax.Array,
+    tracking_errors: jax.Array | None,
+) -> StepMetrics:
+    """The rollout's per-step metric reductions and copies in one executable instead of ~20 eager dispatches.
+
+    These values feed only the logged :class:`RolloutMetrics`, never the PPO batch. The boolean and integer
+    results are exact; the float sums and the mean are the same reductions as the eager code (their last bit may
+    differ if XLA fuses them differently). ``termination_causes`` are made exclusive in cause order, starting from
+    the ``terminated_remaining`` worlds (cast to bool here), as in the eager loop.
+    """
+    completed = episode_length > 0
+    exclusive = None
+    if termination_causes is not None:
+        remaining = terminated_remaining.astype(bool)
+        selected_causes = []
+        for cause in jnp.moveaxis(termination_causes, -1, 0):
+            selected = jnp.logical_and(remaining, cause.astype(bool))
+            selected_causes.append(selected)
+            remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
+        exclusive = jnp.stack(selected_causes, axis=-1)
+    return StepMetrics(
+        raw_reward_mean=raw_reward.mean(),
+        reference_end_count=reference_end.sum(),
+        episode_return_sum=jnp.where(completed, episode_return, 0.0).sum(),
+        episode_length_sum=jnp.where(completed, episode_length, 0).sum(),
+        episode_reference_progress_sum=jnp.where(completed, episode_reference_progress, 0.0).sum(),
+        episode_count=completed.sum(),
+        objective_terms=None if objective_terms is None else jnp.array(objective_terms, copy=True),
+        termination_causes=exclusive,
+        tracking_errors=None if tracking_errors is None else jnp.array(tracking_errors, copy=True),
+    )
+
+
+def _append_step_metrics(
+    transition,
+    guarded: GuardedStep | None,
+    copied: TransitionCopy,
+    guard: bool,
+    raw_rewards: list,
+    reference_end_counts: list,
+    episode_returns: list,
+    episode_lengths: list,
+    episode_reference_progress: list,
+    episode_counts: list,
+    objective_terms: list,
+    termination_causes: list,
+    tracking_errors: list,
+) -> None:
+    """Append one step's logged aggregates through :func:`step_metrics` (same inputs as the former eager code).
+
+    Guard terminations form their own outcome class (``RolloutMetrics.nonfinite_terminated_count``), so with the
+    guard the exclusive causes start from ``guarded.terminated_unflagged``.
+    """
+    metrics = step_metrics(
+        guarded.raw_reward if guard else transition.reward,
+        copied.reference_end,
+        guarded.episode_return if guard else transition.episode_return,
+        transition.episode_length,
+        transition.episode_reference_progress,
+        None if transition.objective_terms is None else (guarded.objective_terms if guard else transition.objective_terms),
+        transition.termination_causes,
+        guarded.terminated_unflagged if guard else copied.terminated,
+        None if transition.tracking_errors is None else (guarded.tracking_errors if guard else transition.tracking_errors),
+    )
+    raw_rewards.append(metrics.raw_reward_mean)
+    reference_end_counts.append(metrics.reference_end_count)
+    episode_returns.append(metrics.episode_return_sum)
+    episode_lengths.append(metrics.episode_length_sum)
+    episode_reference_progress.append(metrics.episode_reference_progress_sum)
+    episode_counts.append(metrics.episode_count)
+    if metrics.objective_terms is not None:
+        objective_terms.append(metrics.objective_terms)
+    if metrics.termination_causes is not None:
+        termination_causes.append(metrics.termination_causes)
+    if metrics.tracking_errors is not None:
+        tracking_errors.append(metrics.tracking_errors)
+
+
 def _guard_transition(transition, next_observation, terminated, value, bootstrapped_reward, done) -> GuardedStep:
     """:func:`guard_step` on one :class:`VectorStep` (its zero-copy views are read before the next step)."""
     return guard_step(
@@ -170,14 +302,16 @@ def collect_rollout(
     nonfinite_terminated_counts = []
 
     for _ in range(config.rollout_steps):
-        raw_observation = jnp.array(observation, copy=True)
-        policy_observation = raw_observation
+        # ``observation`` is a fresh JAX array (the learner's copy or the previous step's copy); only the stored raw
+        # observation of an unnormalized policy needs its own buffer.
         if config.observation_normalization:
             policy_observation = normalize_observation(
                 normalization,
-                raw_observation,
+                observation,
                 config.observation_normalization_epsilon,
             )
+        else:
+            policy_observation = jnp.array(observation, copy=True)
         key, action_key = jax.random.split(key)
         action, log_probability, value, action_mean, action_std = sample_action(
             state,
@@ -185,12 +319,9 @@ def collect_rollout(
             action_key,
         )
         transition = env.step(action)
-        next_observation = jnp.array(transition.observation, copy=True)
-        reward = jnp.array(transition.reward, copy=True)
-        terminated = jnp.array(transition.terminated, copy=True)
-        truncated = jnp.array(transition.truncated, copy=True)
-        done = jnp.maximum(terminated, truncated).astype(jnp.float32)
-        reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
+        copied = copy_transition(transition.observation, transition.reward, transition.terminated, transition.truncated)
+        next_observation, reward, terminated, done = copied.observation, copied.reward, copied.terminated, copied.done
+        reference_end = copied.reference_end
         reward = reward + config.ppo.discount * value * reference_end.astype(jnp.float32)
         guarded = None
         if guard:
@@ -209,34 +340,11 @@ def collect_rollout(
         dones.append(done)
         action_means.append(action_mean)
         action_stds.append(action_std)
-        if guard:
-            raw_rewards.append(guarded.raw_reward.mean())
-        else:
-            raw_rewards.append(transition.reward.mean())
-        reference_end_counts.append(reference_end.sum())
-        completed = transition.episode_length > 0
-        episode_return = guarded.episode_return if guard else transition.episode_return
-        episode_returns.append(jnp.where(completed, episode_return, 0.0).sum())
-        episode_lengths.append(jnp.where(completed, transition.episode_length, 0).sum())
-        episode_reference_progress.append(jnp.where(completed, transition.episode_reference_progress, 0.0).sum())
-        episode_counts.append(completed.sum())
-        if transition.objective_terms is not None:
-            objective_terms.append(
-                guarded.objective_terms if guard else jnp.array(transition.objective_terms, copy=True)
-            )
-        if transition.termination_causes is not None:
-            # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
-            remaining = guarded.terminated_unflagged if guard else terminated.astype(bool)
-            exclusive_causes = []
-            for cause in jnp.moveaxis(jnp.array(transition.termination_causes, copy=True), -1, 0):
-                selected = jnp.logical_and(remaining, cause.astype(bool))
-                exclusive_causes.append(selected)
-                remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
-            termination_causes.append(jnp.stack(exclusive_causes, axis=-1))
-        if transition.tracking_errors is not None:
-            tracking_errors.append(
-                guarded.tracking_errors if guard else jnp.array(transition.tracking_errors, copy=True)
-            )
+        _append_step_metrics(
+            transition, guarded, copied, guard,
+            raw_rewards, reference_end_counts, episode_returns, episode_lengths, episode_reference_progress,
+            episode_counts, objective_terms, termination_causes, tracking_errors,
+        )
 
         if config.observation_normalization:
             if guard:
@@ -330,14 +438,16 @@ def collect_rollout_coordinated(
     nonfinite_terminated_counts = []
 
     for _ in range(config.rollout_steps):
-        raw_observation = jnp.array(observation, copy=True)
-        policy_observation = raw_observation
+        # ``observation`` is a fresh JAX array (the learner's copy or the previous step's copy); only the stored raw
+        # observation of an unnormalized policy needs its own buffer.
         if config.observation_normalization:
             policy_observation = normalize_observation(
                 normalization,
-                raw_observation,
+                observation,
                 config.observation_normalization_epsilon,
             )
+        else:
+            policy_observation = jnp.array(observation, copy=True)
         key, action_key = jax.random.split(key)
         action, log_probability, value, action_mean, action_std = sample_action_coordinated(
             state,
@@ -346,12 +456,9 @@ def collect_rollout_coordinated(
             group_matrix,
         )
         transition = env.step(action)
-        next_observation = jnp.array(transition.observation, copy=True)
-        reward = jnp.array(transition.reward, copy=True)
-        terminated = jnp.array(transition.terminated, copy=True)
-        truncated = jnp.array(transition.truncated, copy=True)
-        done = jnp.maximum(terminated, truncated).astype(jnp.float32)
-        reference_end = jnp.logical_and(truncated.astype(bool), jnp.logical_not(terminated.astype(bool)))
+        copied = copy_transition(transition.observation, transition.reward, transition.terminated, transition.truncated)
+        next_observation, reward, terminated, done = copied.observation, copied.reward, copied.terminated, copied.done
+        reference_end = copied.reference_end
         column_reward = reward[:, None] + config.ppo.discount * value * reference_end.astype(jnp.float32)[:, None]
         guarded = None
         if guard:
@@ -370,34 +477,11 @@ def collect_rollout_coordinated(
         dones.append(done)
         action_means.append(action_mean)
         action_stds.append(action_std)
-        if guard:
-            raw_rewards.append(guarded.raw_reward.mean())
-        else:
-            raw_rewards.append(transition.reward.mean())
-        reference_end_counts.append(reference_end.sum())
-        completed = transition.episode_length > 0
-        episode_return = guarded.episode_return if guard else transition.episode_return
-        episode_returns.append(jnp.where(completed, episode_return, 0.0).sum())
-        episode_lengths.append(jnp.where(completed, transition.episode_length, 0).sum())
-        episode_reference_progress.append(jnp.where(completed, transition.episode_reference_progress, 0.0).sum())
-        episode_counts.append(completed.sum())
-        if transition.objective_terms is not None:
-            objective_terms.append(
-                guarded.objective_terms if guard else jnp.array(transition.objective_terms, copy=True)
-            )
-        if transition.termination_causes is not None:
-            # Guard terminations form their own outcome class (RolloutMetrics.nonfinite_terminated_count).
-            remaining = guarded.terminated_unflagged if guard else terminated.astype(bool)
-            exclusive_causes = []
-            for cause in jnp.moveaxis(jnp.array(transition.termination_causes, copy=True), -1, 0):
-                selected = jnp.logical_and(remaining, cause.astype(bool))
-                exclusive_causes.append(selected)
-                remaining = jnp.logical_and(remaining, jnp.logical_not(selected))
-            termination_causes.append(jnp.stack(exclusive_causes, axis=-1))
-        if transition.tracking_errors is not None:
-            tracking_errors.append(
-                guarded.tracking_errors if guard else jnp.array(transition.tracking_errors, copy=True)
-            )
+        _append_step_metrics(
+            transition, guarded, copied, guard,
+            raw_rewards, reference_end_counts, episode_returns, episode_lengths, episode_reference_progress,
+            episode_counts, objective_terms, termination_causes, tracking_errors,
+        )
 
         if config.observation_normalization:
             if guard:
