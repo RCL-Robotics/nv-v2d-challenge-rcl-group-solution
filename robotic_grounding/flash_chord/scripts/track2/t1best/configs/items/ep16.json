@@ -1,0 +1,74 @@
+{
+ "item": "ep16",
+ "role": "set",
+ "in_set": true,
+ "episode": 16,
+ "object": "spray_bottle",
+ "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+ "scene_support": true,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "source": "5x Oct-21 (c3r2_periodic, arm C3r2_wide)",
+ "pinned": {
+  "iteration": 24000,
+  "run": "C3r2_wide/ep16",
+  "model": "model_24000.safetensors",
+  "model_sha256": "9a71b011037add1c8761eb17cb38b459018c7959f3c63c3ce430ebe45aad97a1",
+  "model_size": 24993040,
+  "rsi": "rsi_24000.safetensors",
+  "rsi_sha256": "38f1a3aaca9bb20428a4c62ed931d4f3ec0bb8e058ff10b4346316a34dc06232",
+  "rsi_size": 2473316,
+  "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep16/model_24000.safetensors",
+  "sha256": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+  "size": 46052552,
+  "max_rel_diff": null,
+  "exported_by": "61fa5d31ff80",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2",
+  "scene_support": true,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 5,
+  "prior_mean_auc": 0.9877096436,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.9895898847,
+   "auc_sd": 0.002650535591,
+   "auc_min": 0.9837526205,
+   "auc_max": 0.9931865828,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 0.5087487786
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_wide/ep16",
+   "start": "scratch",
+   "end": "final.json model_24272 (help_zero_tail)",
+   "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet'",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_wide/ep16",
+    "training.max_iterations=45000",
+    "logging.mode=<WANDB_MODE>",
+    "[logging.entity=<WANDB_ENTITY>]",
+    "[logging.project=<WANDB_PROJECT>]",
+    "logging.experiment=C3r2_wide",
+    "logging.run_name=ep16_spray_bottle",
+    "logging.upload_checkpoints=false"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  }
+ ]
+}

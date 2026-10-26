@@ -1,0 +1,50 @@
+{
+ "about": "Fork arms of the Tier-1 fix (T1fix) experiments, as Hydra overrides appended to the forked item's own overrides (fork_train.py --arm). {name} fields are filled with --param name=value. A fork keeps the item's experiment, task, scene.support and reset.seed, and by default also the task-specific overrides of the stage that trained the pinned checkpoint (configs/items/<item>.json fork.inherit); an arm override replaces an inherited one with the same key. Every fork resumes from model_<N> plus rsi_<N> with training.early_stop_help_zero_tail=0 and training.max_iterations=<N + plus>.",
+ "arms": {
+  "C": {
+   "overrides": [],
+   "note": "Plain continuation (the control of every T1fix stage). Used for ep14 stage 1 (44922 -> 75000) and ep29 (24091 -> 39091, pinned 30000)."
+  },
+  "B": {
+   "overrides": ["objective.object_task_rotation_beta={beta}"],
+   "params": {"beta": "rotation weight of object_task, exp(-beta * angle); the default is 1.0"},
+   "note": "Rotation-weighted object reward. Pinned items: ep10 beta 4.5, ep19 3.0, ep14 2.6, ep01 3.0, ep28 4.5. ep29 with beta 2.3 was not pinned (its plain control C was)."
+  },
+  "T": {
+   "overrides": ["termination.object_orientation_threshold=0.65"],
+   "note": "Tighter object-orientation termination. Tried on ep21 from C3r2_runin/ep21 model_47000 (stage 1); not pinned."
+  },
+  "TB": {
+   "overrides": ["termination.object_orientation_threshold=0.65", "objective.object_task_rotation_beta=2.5"],
+   "note": "T plus rotation weight 2.5. Tried on ep21 (stage 1, about +0.02 AUC); not pinned."
+  },
+  "OP": {
+   "overrides": ["termination.object_orientation_threshold=3.2", "termination.object_position_threshold=0.20"],
+   "reset_seed": 42,
+   "note": "ep28 wave 1 from ep28-B model_58000 to 68000: relaxed orientation, tighter position termination. Verdict FAIL (no MP-SR)."
+  },
+  "OP2": {
+   "overrides": ["termination.object_orientation_threshold=3.2", "termination.object_position_threshold=0.20"],
+   "reset_seed": 43,
+   "note": "OP with reset.seed 43."
+  },
+  "W2P": {
+   "overrides": ["termination.object_orientation_threshold=3.2", "termination.object_position_threshold=0.20",
+                 "+objective.object_task_position_only_after_release=true"],
+   "requires": "7fbc2273a92b (merged on this branch)",
+   "note": "ep28 wave 2: position-only object reward after the final release."
+  },
+  "W2PD": {
+   "overrides": ["termination.object_orientation_threshold=3.2", "termination.object_position_threshold=0.20",
+                 "+objective.object_task_position_only_after_release=true", "+objective.no_drop_weight=-50.0",
+                 "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"],
+   "requires": "7fbc2273a92b (merged on this branch)",
+   "note": "W2P plus the no-drop term after the final release. ep28 model_66000 (from ep28-B model_58000) is the set's episode 28."
+  },
+  "G": {
+   "overrides": ["termination.object_orientation_threshold=3.2", "termination.palm_position_threshold=0.25",
+                 "termination.palm_orientation_threshold=3.2"],
+   "note": "Bat (ep04) wave 1, relaxed object and palm terminations. Built but never launched."
+  }
+ }
+}
