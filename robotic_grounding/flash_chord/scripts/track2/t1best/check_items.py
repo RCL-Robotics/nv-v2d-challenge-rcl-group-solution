@@ -10,6 +10,11 @@
                                                  <dir>/<run>/hydra/.hydra/config.yaml (the transferred run records,
                                                  normally <T1_RUNS>)
   python check_items.py --forks                  also compose a plain fork (arm C) of every item
+  python check_items.py --payload [--hash]       check that the copied payload holds every file a fork or a trial
+                                                 reads where the configs say: the pinned pair at
+                                                 <T1_RUNS>/<pinned.run>/, the export at <T1_EXPORTS>/<export.file>
+                                                 and the fork-origin pair of each T1fix stage (sizes; --hash:
+                                                 sha256 of the pinned files and exports)
 A key that only this tree composes (a new option with its default, from a merged commit) is listed, not failed. A
 value that differs from the saved config fails, except the keys a fork or a new run changes by design (paths,
 logging, training length and resume).
@@ -150,12 +155,51 @@ def compose_all(items: dict, code: Path, records: Path | None, forks: bool) -> l
     return bad
 
 
+def payload(items: dict, site, full_hash: bool) -> list[str]:
+    bad = []
+    n = 0
+
+    def need(path: Path, size, sha, what: str, note=None) -> None:
+        nonlocal n
+        n += 1
+        if not path.is_file():
+            if note:
+                print(f"note {what}: {path} is not in the payload ({note})")
+            else:
+                bad.append(f"{what}: missing {path}")
+        elif size is not None and path.stat().st_size != int(size):
+            bad.append(f"{what}: size {path.stat().st_size} != {size}: {path}")
+        elif full_hash and sha and C.sha256(path) != sha:
+            bad.append(f"{what}: sha256 differs from the pin: {path}")
+
+    for it, c in items.items():
+        p, e = c["pinned"], c["export"]
+        run = site.runs / p["run"]
+        need(run / p["model"], p.get("model_size"), p["model_sha256"], f"{it} pinned model")
+        need(run / p["rsi"], p.get("rsi_size"), p["rsi_sha256"], f"{it} pinned rsi", p.get("rsi_note"))
+        need(site.exports / e["file"], e.get("size"), e["sha256"], f"{it} export")
+        last = c["stages"][-1]
+        fork = bool(last.get("fork_pair"))  # T1fix stages start from a transferred fork pair (group E_fork_origins)
+        what = f"{it} fork origin" if fork else f"{it} resume point"
+        note = None if fork else "the original run's own resume point, not transferred; forks start from the pinned pair"
+        for o in last["overrides"]:
+            if o.startswith("training.checkpoint=<RUNS>/"):
+                model = Path(C.resolve(o.split("=", 1)[1].strip("'\""), site))
+                need(model, None, None, what, note)
+                need(model.with_name(model.name.replace("model_", "rsi_", 1)), None, None, f"{what} rsi", note)
+    print(f"payload: {n} files under T1_RUNS={site.runs} and T1_EXPORTS={site.exports} "
+          f"({'size and sha256' if full_hash else 'presence and size'}), {len(bad)} problem(s)")
+    return bad
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     C.add_site_arg(p)
     p.add_argument("--compose", action="store_true")
     p.add_argument("--forks", action="store_true")
     p.add_argument("--records", type=Path, help="root with <run>/hydra/.hydra/config.yaml (e.g. T1_RUNS)")
+    p.add_argument("--payload", action="store_true", help="check the copied payload at the site's T1_RUNS/T1_EXPORTS")
+    p.add_argument("--hash", action="store_true", help="with --payload: also compare sha256 with the pins")
     a = p.parse_args()
     site = C.load_site(a.site)
     items = C.load_items()
@@ -163,6 +207,8 @@ def main() -> int:
     print(f"schema: {len(items)} item configs, {len(bad)} problem(s)")
     if a.compose or a.forks:
         bad += compose_all(items, site.code, a.records, a.forks)
+    if a.payload:
+        bad += payload(items, site, a.hash)
     for b in bad:
         print("FAIL", b)
     print("ALL OK" if not bad else f"{len(bad)} FAILED")

@@ -6,13 +6,16 @@
 #   3. ../repro/tests/check_hygiene.sh on every file of this folder (no machine paths, credentials, LFS, binaries)
 #   4. with --compose: Hydra composition of every pinned stage and of a plain fork with this tree's configs
 #      (needs the flashchord python: --python); with --records DIR also against the runs' saved Hydra configs
-# usage: tests/run_checks.sh [--python PY] [--compose] [--records DIR]
+#   5. with --payload: check_items.py --payload, i.e. the pinned pairs, exports and fork origins are in the copied
+#      payload at the site's T1_RUNS / T1_EXPORTS (environment, or --site FILE)
+# usage: tests/run_checks.sh [--python PY] [--compose] [--records DIR] [--payload] [--site FILE]
 #   HYGIENE_EXTRA_PATTERNS: further forbidden strings for check_hygiene.sh, given at check time.
 set -u
 HERE=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd); T1=$(cd "$HERE/.." && pwd)
-PY=$(command -v python3 || command -v python); COMPOSE=0; RECORDS=""
+PY=$(command -v python3 || command -v python); COMPOSE=0; RECORDS=""; PAYLOAD=0; SITE=""
 while [ $# -gt 0 ]; do case "$1" in
   --python) PY=$2; shift 2;; --compose) COMPOSE=1; shift;; --records) RECORDS=$2; shift 2;;
+  --payload) PAYLOAD=1; shift;; --site) SITE=$2; shift 2;;
   *) echo "unknown argument $1" >&2; exit 2;; esac; done
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 fail=0; check(){ local name=$1; shift; echo "--- $name"; if "$@"; then echo "PASS $name"; else echo "FAIL $name"; fail=1; fi; }
@@ -31,6 +34,9 @@ check "configs" "$PY" -B "$T1/check_items.py"
 check "hygiene" hygiene
 if [ $COMPOSE = 1 ]; then
   check "compose" "$PY" -B "$T1/check_items.py" --compose --forks ${RECORDS:+--records "$RECORDS"}
+fi
+if [ $PAYLOAD = 1 ]; then
+  check "payload" "$PY" -B "$T1/check_items.py" --payload ${SITE:+--site "$SITE"}
 fi
 echo; [ $fail = 0 ] && echo "ALL CHECKS PASSED" || echo "SOME CHECKS FAILED"
 exit $fail

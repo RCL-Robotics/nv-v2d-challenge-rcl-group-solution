@@ -142,12 +142,27 @@ Optional groups:
 `X_teammate_ok` is not staged. It holds the ep04 RSI sidecar, which lives only in the teammate's run folder. It is
 needed only to resume or fork ep04, and copying it needs his OK.
 
+Copy with `copy_example.sh` after adapting it. It runs `rsync -aL`, because `payload/` holds symlinks. Choose the
+groups with `COPY_GROUPS`, not `GROUPS`, which bash reserves:
+
+```bash
+COPY_GROUPS="A_pinned B_exports C_run_records E_fork_origins F_hull_caches G_motion_data G_challenge_data G_kit R_records S_server_scripts" \
+    DEST=user@newhost:/data/t1best/payload bash copy_example.sh
+```
+
+Every pinned pair sits in its real run folder, `runs/<pinned.run>/` of `configs/items/<item>.json`, next to its run
+records. The original machine's `T1fix/watch*` folders are symlinks to those runs and are not in the payload.
+
 After copying, check the payload:
 
 ```bash
-python verify_transfer.py --manifest <payload>/MANIFEST.tsv --root <payload>             # sha256 of every file
+python verify_transfer.py --manifest <payload>/MANIFEST.tsv --root <payload>             # sha256, default groups
 python verify_transfer.py --manifest <payload>/MANIFEST.tsv --root <payload> --quick     # sizes only
+python verify_transfer.py --manifest <payload>/MANIFEST.tsv --root <payload> --groups D_metrics   # an optional group
 ```
+
+Without `--groups` it checks the default groups. `--groups all` also checks `D_metrics`, `H_stock_runtime_optional`
+and the unstaged `X_teammate_ok` row.
 
 ### Absolute task paths stored in the checkpoints
 
@@ -172,10 +187,13 @@ cp site.env.example site.env    # set T1_WORK, T1_RUNS, T1_EXPORTS, V2D_MOTION, 
 set -a; source site.env; set +a # or pass --site site.env to every tool
 ```
 
+`site.env` holds machine paths and is ignored by Git (`.gitignore` in this folder).
+
 **Machine-specific options:**
 - `GPUS` / `EXCLUDE_GPUS`. The original machine never used GPU 4.
-- `REFUSE_MPS=1` skips GPUs that run an MPS server.
-- `EVAL_CPUS` pins evaluations to CPU lists per GPU group (NUMA).
+- `REFUSE_MPS=1` skips GPUs that run an MPS server. Set it if training runs under MPS: an evaluation past its
+  timeout is stopped as a process group, and a signal to one MPS client can take down every job of that GPU.
+- `EVAL_CPUS` pins evaluations to CPU lists per GPU group (NUMA). Quote the value, since it contains `;`.
 - `EVAL_LOCKDIRS` holds other drivers' lane locks, to share GPUs fairly.
 
 Run every tool with the flashchord python.
@@ -184,8 +202,13 @@ Then run the CPU checks: syntax, configs, hygiene, and the Hydra composition of 
 `--records`, the composition is also compared with the saved configs:
 
 ```bash
-bash tests/run_checks.sh --python "$FC_PYTHON" --compose --records "$T1_RUNS"
+bash tests/run_checks.sh --python "$FC_PYTHON" --compose --records "$T1_RUNS" --payload
 ```
+
+`--payload` checks that every file a fork or a trial reads is where the configs say: each pinned pair at
+`<T1_RUNS>/<pinned.run>/`, each export at `<T1_EXPORTS>/<item>/`, and the fork-origin pair of each T1fix stage.
+`python check_items.py --payload --hash` also compares their sha256 with the pins. ep04's RSI sidecar is reported as
+a note, not a failure (see `X_teammate_ok`).
 
 ## 5. Fork training (T1fix-style continuation)
 
