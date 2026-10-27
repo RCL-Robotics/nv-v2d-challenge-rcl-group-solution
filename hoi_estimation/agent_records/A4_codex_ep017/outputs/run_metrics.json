@@ -1,0 +1,8 @@
+{
+  "frames": 440,
+  "seconds": 133.57900953292847,
+  "mean_baseline_iou": 0.8096122982956114,
+  "mean_fitted_iou": 0.8714916376525133,
+  "mean_rotation_change_deg": 40.76105911743534,
+  "max_camera_distance_change_m": 8.881784197001252e-16
+}

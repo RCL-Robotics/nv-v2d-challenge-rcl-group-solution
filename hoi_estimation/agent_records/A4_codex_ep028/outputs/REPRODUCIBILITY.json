@@ -1,0 +1,16 @@
+{
+  "bitwise_identical_pose_arrays": true,
+  "max_absolute_difference": 0.0,
+  "shape": [
+    988,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "exact_unchanged_frames": 101,
+  "files": {
+    "solve.py": "1ab9c2ef9eefa9313411f3285fe3b7134bc11e19ab9d29b3a8522adfc3543245",
+    "object_poses_world.npz": "7bd252ca262dec7753292e96274731489faf9d5964eb4b14220e192d75e4f264",
+    "repro_check.npz": "7bd252ca262dec7753292e96274731489faf9d5964eb4b14220e192d75e4f264"
+  }
+}

@@ -1,0 +1,5 @@
+WARNING: failed to clean up stale arg0 temp dirs: Directory not empty (os error 39)
+Reading additional input from stdin...
+2026-10-19T10:20:34.796215Z ERROR codex_core::util: OutputTextDelta without active item
+2026-10-19T10:21:10.581521Z ERROR codex_core::util: OutputTextDelta without active item
+2026-10-19T10:21:25.508641Z ERROR codex_core::util: OutputTextDelta without active item

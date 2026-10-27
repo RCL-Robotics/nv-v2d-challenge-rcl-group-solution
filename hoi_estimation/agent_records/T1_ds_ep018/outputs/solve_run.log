@@ -1,0 +1,11 @@
+[1/6] Decoding low-resolution video and masks
+[2/6] Scoring baseline and pooling static-phase evidence
+  static 0: frames 0-219, top=[164, 181, 183, 175, 182, 162, 121, 161, 123, 179, 184, 120, 167, 185, 122, 105, 178, 177, 180, 176], pooled IoU=0.9850, NCC=0.5135, delta=[-0.1054, 1.1073, 1.4292, -0.0015, 0.0164, 0.0515]
+  static 1: frames 504-641, top=[632, 631, 530, 630, 633, 537, 547, 552, 548, 629, 634, 520, 510, 549, 551, 517, 516, 504, 514, 513], pooled IoU=0.9855, NCC=0.5585, delta=[-1.7413, 0.9449, 0.083, 0.0065, 0.016, 0.048]
+  static 2: frames 738-857, top=[741, 756, 757, 761, 759, 753, 742, 760, 754, 755, 747, 743, 744, 746, 745, 752, 750, 751, 749, 748], pooled IoU=0.9864, NCC=0.5021, delta=[-1.2248, 0.8926, 1.0739, -0.0009, 0.0151, 0.0209]
+[3/6] Refining manipulation poses every 4 frames
+[4/6] Temporally smoothing and anchoring corrections
+[5/6] Validating baseline versus result
+VALIDATION_JSON {"final_static": {"baseline_iou": 0.9276899322833032, "baseline_ncc": 0.4090345042682199, "n_heldout": 20, "result_iou": 0.9854736122535035, "result_ncc": 0.4250107797739758}, "manipulation_1": {"baseline_iou": 0.8497833225543634, "baseline_ncc": 0.419374543611143, "n_heldout": 47, "result_iou": 0.8760639337346486, "result_ncc": 0.4371532546471004}, "manipulation_2": {"baseline_iou": 0.9131627799960349, "baseline_ncc": 0.3767729710633715, "n_heldout": 16, "result_iou": 0.9473875962129166, "result_ncc": 0.4187700921439732}, "middle_static": {"baseline_iou": 0.935509940278181, "baseline_ncc": 0.4283235383789008, "n_heldout": 23, "result_iou": 0.9826284399972434, "result_ncc": 0.4785597052475444}, "pre_static": {"baseline_iou": 0.950452542929197, "baseline_ncc": 0.36511225126876584, "n_heldout": 37, "result_iou": 0.9764075307395093, "result_ncc": 0.40806821520464437}}
+[6/6] Writing trajectory
+WROTE /work/outputs/object_poses_world.npz shape=(858, 4, 4) elapsed_seconds=347.9

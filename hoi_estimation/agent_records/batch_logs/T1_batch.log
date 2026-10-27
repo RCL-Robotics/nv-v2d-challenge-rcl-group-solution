@@ -1,0 +1,106 @@
+17:41:15 start 003 pipeline=/mnt/nas/Group/hanzhou/v2d/experiments/M1_prompt_v2/out/episode_000003
+17:41:15 start 028 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000028
+17:41:15 start 013 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000013
+18:52:21 end 003 wall_s: 4262 outputs=object_poses_world.npz __pycache__ REPORT.md solve.py TOOLS.md validation.json 
+18:52:21 start 019 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000019
+19:01:50 end 028 wall_s: 4831 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+19:01:50 start 025 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d_failed/episode_000025_out
+19:11:20 end 013 wall_s: 5401 outputs=object_poses_world.npz __pycache__ solve.log solve.py 
+Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=9>
+Traceback (most recent call last):
+  File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+20:22:23 end 019 wall_s: 5400 outputs=
+20:27:14 end 025 wall_s: 5121 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+ File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+20:22:52 start 007 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000007
+20:27:42 start 008 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000008
+20:32:33 end 005 wall_s: 1786 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+20:33:03 start 009 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000009
+20:53:38 end 009 wall_s: 1231 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+20:53:57 start 010 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000010
+21:12:45 end 008 wall_s: 2701 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+21:12:49 start 011 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000011
+21:13:21 end 004 wall_s: 5306 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+21:13:39 start 012 pipeline=/mnt/nas/Group/hanzhou/v2d/experiments/M1_prompt_v2/out/episode_000012
+21:14:07 end 010 wall_s: 1207 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+21:14:29 start 015 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000015
+21:28:08 end 006 wall_s: 4589 outputs=evaluate.py object_poses_world.npz REPORT.md solve.py TOOLS.md validation.json 
+21:28:20 start 016 pipeline=/mnt/nas/Group/hanzhou/v2d/experiments/M1_prompt_v2/out/episode_000016
+21:31:22 end 007 wall_s: 4108 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+21:31:41 start 017 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000017
+21:40:16 end 015 wall_s: 1545 outputs=object_poses_world.npz __pycache__ REPORT.md solve.py TOOLS.md 
+21:40:33 start 018 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000018
+21:58:43 end 016 wall_s: 1821 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+21:58:55 start 020 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000020
+22:04:41 end 017 wall_s: 1978 outputs=object_poses_world.npz __pycache__ REPORT.md solve.py TOOLS.md validation.json 
+22:04:45 start 021 pipeline=/mnt/nas/Group/hanzhou/v2d/experiments/M1_prompt_v2/out/episode_000021
+22:21:07 end 020 wall_s: 1330 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+22:21:07 start 022 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000022
+22:26:05 end 012 wall_s: 4344 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+22:26:28 start 023 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000023
+22:31:55 end 021 wall_s: 1628 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+22:32:19 start 024 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000024
+22:42:52 end 011 wall_s: 5401 outputs=object_poses_world.npz solve.py 
+22:43:14 start 026 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000026
+22:47:02 end 018 wall_s: 3987 outputs=object_poses_world.npz REPORT.md solve.py solve_run.log TOOLS.md 
+22:47:05 start 027 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000027
+22:57:46 end 022 wall_s: 2196 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+22:57:56 start 029 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000029
+Unhandled exception in client_connected_cb
+transport: <_SelectorSocketTransport closed fd=8>
+Traceback (most recent call last):
+  File "/home/hanzhou/Projects/v2d/agent/allowlist_proxy.py", line 63, in handle
+    await w.drain()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 386, in drain
+    await self._protocol._drain_helper()
+  File "/home/hanzhou/miniconda3/lib/python3.14/asyncio/streams.py", line 166, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
+23:21:37 end 027 wall_s: 2070 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+23:23:39 end 024 wall_s: 3078 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+23:26:41 end 026 wall_s: 2605 outputs=object_poses_world.npz __pycache__ REPORT.md solve.py TOOLS.md 
+23:28:58 end 023 wall_s: 3748 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+23:32:49 end 029 wall_s: 2091 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 

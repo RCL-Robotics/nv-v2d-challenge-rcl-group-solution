@@ -1,0 +1,17 @@
+{
+ "static-1": {
+  "silhouette_size_cm": -14.609669991793517,
+  "floor_contact_cm": -5.999999999999978,
+  "floor_min_height_at_0_cm": -3.2021250389421496
+ },
+ "moving": {
+  "silhouette_size_cm": -17.089039994584667,
+  "hand_contact_cm": -4.999999999999977,
+  "hand_dist_at_0_cm": 1.8951356570806044
+ },
+ "static-2": {
+  "silhouette_size_cm": -25.132315570373365,
+  "floor_contact_cm": -13.499999999999984,
+  "floor_min_height_at_0_cm": -6.490093028254829
+ }
+}

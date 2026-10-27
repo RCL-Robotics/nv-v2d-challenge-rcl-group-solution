@@ -1,0 +1,12 @@
+{
+  "array_exact_reproduction": true,
+  "npz_file_exact_reproduction": true,
+  "sha256": "831d53abf0983ac61951e866fe812901492bacd731104cbafd1029fc4fad661b",
+  "shape": [
+    715,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "second_run_seconds": 152.412419565022
+}

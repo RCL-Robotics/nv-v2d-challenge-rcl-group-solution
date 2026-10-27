@@ -1,0 +1,19 @@
+{
+  "shape": [
+    859,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "finite": true,
+  "inputs_unchanged": true,
+  "changed_frames": 267,
+  "unchanged_frames": 592,
+  "max_camera_distance_change_m": 1.3322676295501878e-15,
+  "max_edited_rotation_orthogonality_error": 4.551914400963142e-15,
+  "output_sha256": "98820a3cc3195748dd56fdec6a1653643fad07468456c481b6ca97369f1dbd0b",
+  "solver_sha256": "5236dbcd7c1dc3a0031140e472b0de0e0f9da01c5f7ae37cae5bee55d8eebdaa",
+  "repeat_bitwise_equal": true,
+  "repeat_max_abs_difference": 0.0,
+  "repeat_sha256": "98820a3cc3195748dd56fdec6a1653643fad07468456c481b6ca97369f1dbd0b"
+}

@@ -1,0 +1,14 @@
+static runs: [(0, 166), (198, 260), (597, 793)] 
+anchor groups: [(0, 260), (261, 596), (597, 793)]
+it    0 data  119.495 smooth  457.211 anchor   0.041 floor   0.000  (80s)
+it   50 data   72.596 smooth    2.346 anchor   0.011 floor   0.000  (96s)
+it  100 data   68.544 smooth    2.951 anchor   0.765 floor 442.353  (112s)
+it  150 data   63.820 smooth    2.546 anchor   3.017 floor  19.526  (130s)
+it  200 data   63.038 smooth    1.582 anchor   4.044 floor  16.478  (153s)
+it  250 data   62.848 smooth    1.440 anchor   2.649 floor  15.409  (172s)
+it  299 data   62.698 smooth    1.332 anchor   3.081 floor  14.535  (192s)
+group 0-260: residual depth scale 1.00002
+group 261-596: residual depth scale 1.00109
+group 597-793: residual depth scale 1.00002
+done in 192s -> /work/outputs/object_poses_world.npz; peak GPU mem 3.08 GiB
+wall 195s

@@ -1,0 +1,40 @@
+{
+  "frames": 886,
+  "shape": [
+    886,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "all_finite": true,
+  "bitwise_repeat_equal": true,
+  "corrected_frames": 739,
+  "exact_baseline_frames": 147,
+  "baseline_fallback_exact": true,
+  "empty_mask_baseline_exact": true,
+  "camera_distance_max_change_m": 1.3322676295501878e-15,
+  "max_orthogonality_error": 2.2012149416550386e-06,
+  "min_rotation_det": 0.9999983281377921,
+  "max_rotation_det": 1.0000007149073216,
+  "mean_render_cost_baseline_all": 21.01390340669667,
+  "mean_render_cost_final_all": 10.99253204123192,
+  "mean_render_cost_baseline_accepted": 13.19002984047333,
+  "mean_render_cost_final_accepted": 1.175232777142121,
+  "median_render_cost_baseline_accepted": 10.491691679098418,
+  "median_render_cost_final_accepted": 1.0299601286600581,
+  "median_visible_iou_baseline_accepted": 0.2481586402266289,
+  "median_visible_iou_final_accepted": 0.61300754581387,
+  "rotation_change_deg_percentiles_accepted": [
+    1.2262149509694267,
+    74.2158379630531,
+    174.35943084587376,
+    179.99325882996595
+  ],
+  "translation_change_m_percentiles_accepted": [
+    0.0006803296630011052,
+    0.038553933703178854,
+    0.09399400785302313,
+    0.20773097021201126
+  ],
+  "output_sha256": "df64be2c0fbfedc05e61240dcf29c7136b662e9e7f2053b82a324d681363adfc"
+}

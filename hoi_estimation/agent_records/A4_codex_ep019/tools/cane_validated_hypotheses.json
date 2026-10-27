@@ -1,0 +1,11 @@
+{
+  "description": "Locally generated full-textured render-validated hypotheses including deterministic temporal image-fitting proposals. Source: solve.py. No annotations, ground truth, downloaded assets, or external data.",
+  "cache_sha256": "b3cc8c8d02c7e89c613c3ed4f7115c07e3e197d19151c048ba6cb9826ff6cb27",
+  "inputs": {
+    "reconstruction.npz": "d2099c9dcff2c950a77f9300f6a8e840aa217df0bb4b5d84d101121d7ad45c42",
+    "camera.json": "95129b23f87263e1f180994c820c7057f78679101e6c5429ff1f6eba49021a0c",
+    "masks.h5": "40f0bce593b3f3f80710f93ca9373d5ceea7a907177d99672462b938886f41bf",
+    "video.mp4": "0910300cfc6027204306cf9b54548e53bee607136d8d415552d431355edc270d",
+    "object_mesh.glb": "33a74ed590f246417efd58260ec1083966195c669a4ee02a9eb6b8a5b9c3e737"
+  }
+}

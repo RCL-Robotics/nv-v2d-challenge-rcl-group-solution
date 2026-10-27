@@ -1,0 +1,144 @@
+loaded crops 859 seconds 8.89
+candidates 0 / 859 seconds 1.0
+candidates 40 / 859 seconds 9.6
+candidates 80 / 859 seconds 18.3
+candidates 120 / 859 seconds 27.0
+candidates 160 / 859 seconds 35.7
+candidates 200 / 859 seconds 44.3
+candidates 240 / 859 seconds 52.9
+candidates 280 / 859 seconds 61.6
+candidates 320 / 859 seconds 70.4
+candidates 360 / 859 seconds 79.1
+candidates 400 / 859 seconds 87.9
+candidates 440 / 859 seconds 96.6
+candidates 480 / 859 seconds 105.3
+candidates 520 / 859 seconds 114.0
+candidates 560 / 859 seconds 122.7
+candidates 600 / 859 seconds 131.3
+candidates 640 / 859 seconds 139.9
+candidates 680 / 859 seconds 148.4
+candidates 720 / 859 seconds 157.1
+candidates 760 / 859 seconds 165.8
+candidates 800 / 859 seconds 174.5
+candidates 840 / 859 seconds 183.3
+base search seconds 186.56047463417053
+axial search frames 145
+axial search seconds 23.22824764251709
+{
+  "frames": 859,
+  "changed_frames": 267,
+  "unchanged_frames": 592,
+  "changed_intervals_inclusive": [
+    [
+      186,
+      225
+    ],
+    [
+      236,
+      246
+    ],
+    [
+      248,
+      252
+    ],
+    [
+      272,
+      273
+    ],
+    [
+      275,
+      275
+    ],
+    [
+      280,
+      287
+    ],
+    [
+      289,
+      297
+    ],
+    [
+      303,
+      309
+    ],
+    [
+      312,
+      320
+    ],
+    [
+      400,
+      410
+    ],
+    [
+      412,
+      412
+    ],
+    [
+      466,
+      466
+    ],
+    [
+      469,
+      472
+    ],
+    [
+      474,
+      474
+    ],
+    [
+      543,
+      561
+    ],
+    [
+      594,
+      618
+    ],
+    [
+      648,
+      722
+    ],
+    [
+      730,
+      753
+    ],
+    [
+      797,
+      810
+    ]
+  ],
+  "silhouette_iou_all_before": 0.7521493756521289,
+  "silhouette_iou_all_after": 0.8373022603697217,
+  "silhouette_iou_changed_before": 0.6357787432295553,
+  "silhouette_iou_changed_after": 0.9097350277704246,
+  "visible_blue_iou_before": 0.33547237369402166,
+  "visible_blue_iou_after": 0.5335450441254159,
+  "rotation_change_degrees_percentiles": [
+    1.678088528358496,
+    18.80329614173546,
+    32.77560673786937,
+    81.33889984911924,
+    172.1442775324161,
+    179.71060057557267
+  ],
+  "pixel_shift_percentiles": [
+    0.375,
+    3.7616939659446156,
+    5.253347147295712,
+    7.464760964022894,
+    11.639103740604472,
+    17.103659147971815
+  ],
+  "translation_change_m_percentiles": [
+    0.0014184372929192791,
+    0.012752704457932041,
+    0.017785708796866473,
+    0.02581778605833064,
+    0.04336876341560996,
+    0.061089809199671816
+  ],
+  "max_camera_distance_change_m": 1.3322676295501878e-15,
+  "max_rotation_orthogonality_error": 5.361561475014653e-06,
+  "run_seconds": 221.0056777469581,
+  "ground_truth_used": false
+}
+Saved /work/outputs/object_poses_world.npz

@@ -1,0 +1,8 @@
+01:10:17 start 003 pipeline=/mnt/nas/Group/hanzhou/v2d/experiments/M1_prompt_v2/out/episode_000003
+01:10:37 start 010 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000010
+01:10:57 start 011 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000011
+02:00:28 end 011 wall_s: 2967 outputs=object_poses_world.npz REPORT.md solve_log.txt solve.py TOOLS.md 
+02:00:49 start 024 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000024
+02:09:29 end 003 wall_s: 3549 outputs=object_poses_world.npz REPORT.md solve_log.txt solve.py TOOLS.md 
+02:10:11 end 010 wall_s: 3570 outputs=hoi_common.py object_poses_world.npz REPORT.md solve_log.txt solve.py TOOLS.md validate.py validation_table.md 
+02:40:32 end 024 wall_s: 2380 outputs=object_poses_world.npz REPORT.md solve_diagnostics.npz solve_log.txt solve.py TOOLS.md validate.py validation_perframe.npz validation_table.md 

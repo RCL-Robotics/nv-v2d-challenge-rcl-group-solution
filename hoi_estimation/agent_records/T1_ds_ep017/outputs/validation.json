@@ -1,0 +1,121 @@
+{
+  "static_pose_fit": {
+    "twist_deg": 174.72135930514494,
+    "camera_translation_correction_m": [
+      -0.017009169781303336,
+      -0.003219451520014642,
+      -0.0002961882956643413
+    ],
+    "sample_mask_iou_before": 0.7385682118082917,
+    "sample_mask_iou_after": 0.9450735158855755,
+    "optimizer_success": true
+  },
+  "trajectory": {
+    "occlusion_mask_run": [
+      200,
+      246
+    ],
+    "hand_translation_gap": [
+      193,
+      256
+    ]
+  },
+  "phase_validation": [
+    {
+      "phase": "initial_rest",
+      "frames": [
+        0,
+        112
+      ],
+      "n_scored": 113,
+      "mask_iou_baseline": 0.8190494305965417,
+      "mask_iou_result": 0.9454556155697442,
+      "photo_ncc_baseline": 0.21319480313338932,
+      "photo_ncc_result": 0.622817336168776
+    },
+    {
+      "phase": "pick_transition",
+      "frames": [
+        113,
+        116
+      ],
+      "n_scored": 4,
+      "mask_iou_baseline": 0.8169790174815609,
+      "mask_iou_result": 0.8309050912318106,
+      "photo_ncc_baseline": 0.2714780718457421,
+      "photo_ncc_result": 0.4969817614694599
+    },
+    {
+      "phase": "carry_visible",
+      "frames": [
+        117,
+        189
+      ],
+      "n_scored": 73,
+      "mask_iou_baseline": 0.7162746360797898,
+      "mask_iou_result": 0.7221837410899271,
+      "photo_ncc_baseline": 0.2748765939844633,
+      "photo_ncc_result": 0.28819356237546556
+    },
+    {
+      "phase": "carry_occluded",
+      "frames": [
+        190,
+        254
+      ],
+      "n_scored": 16,
+      "mask_iou_baseline": 0.29510131622639046,
+      "mask_iou_result": 0.31616893388981926,
+      "photo_ncc_baseline": 0.038156200751533045,
+      "photo_ncc_result": 0.18229232967501882
+    },
+    {
+      "phase": "place_approach",
+      "frames": [
+        255,
+        339
+      ],
+      "n_scored": 85,
+      "mask_iou_baseline": 0.7265906802299021,
+      "mask_iou_result": 0.7271649560332282,
+      "photo_ncc_baseline": 0.3584349365389661,
+      "photo_ncc_result": 0.3639879141389745
+    },
+    {
+      "phase": "table_rest",
+      "frames": [
+        340,
+        439
+      ],
+      "n_scored": 100,
+      "mask_iou_baseline": 0.836740878084198,
+      "mask_iou_result": 0.8368263600884519,
+      "photo_ncc_baseline": 0.47658806007942217,
+      "photo_ncc_result": 0.49079397513451944
+    },
+    {
+      "phase": "all_frames",
+      "frames": [
+        0,
+        439
+      ],
+      "n_scored": 391,
+      "mask_iou_baseline": 0.7628247233983219,
+      "mask_iou_result": 0.8016109417846028,
+      "photo_ncc_baseline": 0.31779752571115155,
+      "photo_ncc_result": 0.45168505447884255
+    }
+  ],
+  "temporal_baseline": {
+    "rotation_accel_p90_rad_frame2": 0.5939196981317864,
+    "translation_accel_p90_m_frame2": 0.09328369169229517,
+    "max_step_rotation_deg": 61.48106195554715,
+    "max_step_translation_m": 0.16349374296728494
+  },
+  "temporal_result": {
+    "rotation_accel_p90_rad_frame2": 0.10157494330194834,
+    "translation_accel_p90_m_frame2": 0.012108943038437526,
+    "max_step_rotation_deg": 19.42369069753811,
+    "max_step_translation_m": 0.043399153515963275
+  }
+}

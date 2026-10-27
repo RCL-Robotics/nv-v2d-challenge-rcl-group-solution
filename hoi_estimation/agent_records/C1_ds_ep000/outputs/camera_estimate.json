@@ -1,0 +1,54 @@
+{
+  "K": [
+    [
+      819.9987182617188,
+      0.0,
+      758.0999755859375
+    ],
+    [
+      0.0,
+      819.9987182617188,
+      560.5000610351562
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_world_cam": [
+    [
+      0.9992098310536693,
+      -0.0051028667435672305,
+      0.039416675109597975,
+      0.03892642847269065
+    ],
+    [
+      0.0033784161880157535,
+      0.9990393091777499,
+      0.04369261976244162,
+      -0.023887467236247576
+    ],
+    [
+      -0.03960176548790165,
+      -0.04352492927785347,
+      0.9982671389470854,
+      0.03857575484148066
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "width": 1536,
+  "height": 1152,
+  "convention": "OpenCV camera x-right, y-down, z-forward; world y-down",
+  "camera_change_from_baseline": {
+    "rotation_deg": 0.5262140783997293,
+    "center_cm": 3.3050839583233094
+  },
+  "object_depth_scale": 0.989584445339598,
+  "notes": "K unchanged. Rotation constrained jointly by visible frame-0 human dense correspondences and the released floor normal; height by resting object contact after a global object depth-scale calibration."
+}

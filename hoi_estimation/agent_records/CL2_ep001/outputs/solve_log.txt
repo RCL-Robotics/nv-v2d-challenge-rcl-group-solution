@@ -1,0 +1,42 @@
+09:52:27 loading video / masks
+09:52:40 floor contact level h0 -0.0 cm; baseline lowest point median -5.2 cm
+09:52:42 static phases: [0,124] and [657,746]; carried: [125,656]
+09:52:46   static [0,124] free-depth scale 0.904
+09:52:49   static [657,746] free-depth scale 0.902
+09:52:49 global silhouette scale (mask-size bias) 0.903
+09:52:49   static [0,124] floor term: off
+09:52:52   static [0,124] hyp rz0: U 0.507 iou 0.691 dR_base 17.8
+09:52:56   static [0,124] hyp rz-30: U 0.486 iou 0.690 dR_base 12.8
+09:53:00   static [0,124] hyp rz30: U 0.538 iou 0.675 dR_base 29.8
+09:53:04   static [0,124] hyp rz90: U 0.702 iou 0.582 dR_base 95.9
+09:53:08   static [0,124] hyp rz180: U 0.705 iou 0.587 dR_base 149.6
+09:53:10   static [0,124] hyp rz270: U 0.671 iou 0.641 dR_base 87.9
+09:53:12   static [0,124] hyp fx: U 0.696 iou 0.550 dR_base 176.0
+09:53:13   static [0,124] hyp fy: U 0.732 iou 0.506 dR_base 175.8
+09:53:13   -> static [0,124] chose rz-30 U 0.486 (baseline per-frame U 0.805)
+09:53:13   static [657,746] floor term: off
+09:53:14   static [657,746] hyp rz0: U 0.453 iou 0.700 dR_base 8.8
+09:53:15   static [657,746] hyp rz-30: U 0.453 iou 0.699 dR_base 9.1
+09:53:17   static [657,746] hyp rz30: U 0.459 iou 0.692 dR_base 8.3
+09:53:18   static [657,746] hyp rz90: U 0.968 iou 0.350 dR_base 105.9
+09:53:19   static [657,746] hyp rz180: U 1.330 iou 0.190 dR_base 174.0
+09:53:20   static [657,746] hyp rz270: U 0.605 iou 0.614 dR_base 76.7
+09:53:21   static [657,746] hyp fx: U 0.731 iou 0.559 dR_base 173.2
+09:53:22   static [657,746] hyp fy: U 0.672 iou 0.518 dR_base 163.8
+09:53:22   -> static [657,746] chose rz0 U 0.453 (baseline per-frame U 0.696)
+09:53:47   hypotheses 140/532
+09:54:17   hypotheses 280/532
+09:54:41   hypotheses 420/532
+09:55:00   hypotheses 532/532
+09:55:00 viterbi choices {'b0': 259, 'b90': 27, 'b180': 4, 'b270': 14, 'f0': 187, 'f90': 18, 'f180': 21, 'f270': 2}
+09:55:04   it 0 scale 0.9033 img 189.798 acc_r 80.1977 vel_r 38.8554 acc_p 0.947228
+09:55:11   it 25 scale 0.9033 img 191.513 acc_r 7.8892 vel_r 14.2664 acc_p 0.029362
+09:55:19   it 50 scale 0.9033 img 189.387 acc_r 2.3814 vel_r 8.9448 acc_p 0.008619
+09:55:24   it 75 scale 0.9033 img 188.637 acc_r 1.2287 vel_r 6.7506 acc_p 0.006444
+09:55:30   it 100 scale 0.9033 img 188.403 acc_r 0.8056 vel_r 5.6262 acc_p 0.006045
+09:55:36   it 125 scale 0.9033 img 188.201 acc_r 0.5993 vel_r 4.9607 acc_p 0.005806
+09:55:43   it 149 scale 0.9033 img 188.605 acc_r 0.4888 vel_r 4.5381 acc_p 0.005657
+09:55:43 depth re-anchor static_start: factor 1.0000
+09:55:43 depth re-anchor carried: factor 1.0029
+09:55:43 depth re-anchor static_end: factor 1.0000
+09:55:43 done in 196.0s -> /work/outputs/object_poses_world.npz

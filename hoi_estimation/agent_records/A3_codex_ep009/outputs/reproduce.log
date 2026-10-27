@@ -1,0 +1,72 @@
+Rendered 870 baseline silhouettes in 0.42 seconds.
+{
+  "frames": 870,
+  "dtype": "float64",
+  "translation_changed_frames": 246,
+  "rotation_changed_frames": [
+    265,
+    266,
+    383
+  ],
+  "rotation_evidence": [
+    {
+      "first_frame": 383,
+      "last_frame": 383,
+      "surrounding_max_degrees": 3.5026267700189457,
+      "original_deviation_degrees": [
+        27.49115044963952
+      ]
+    },
+    {
+      "first_frame": 265,
+      "last_frame": 266,
+      "surrounding_max_degrees": 6.225985234122044,
+      "original_deviation_degrees": [
+        25.125118427218485,
+        25.125118427218485
+      ]
+    }
+  ],
+  "frames_copied_exactly": 622,
+  "camera_centre_distance_max_error_m": 3.8767655752280916e-11,
+  "translation_correction_m": {
+    "mean": 0.01181479683405999,
+    "median": 0.011889358211388971,
+    "min": 0.004426049417845777,
+    "max": 0.018938542275930604
+  },
+  "pixel_correction": {
+    "mean": 3.335589929507561,
+    "median": 3.1927791688633036,
+    "min": 1.686001186239203,
+    "max": 5.000000000000001
+  },
+  "accepted_contour_distance_before_px": {
+    "mean": 2.8577685559668193,
+    "median": 2.657431960105896,
+    "min": 1.5193729400634766,
+    "max": 7.127023696899414
+  },
+  "accepted_contour_distance_after_px": {
+    "mean": 1.9354677510455371,
+    "median": 1.9010591506958008,
+    "min": 0.8760250806808472,
+    "max": 5.801863670349121
+  },
+  "accepted_iou_before": {
+    "mean": 0.8344562515781683,
+    "median": 0.8361567037859918,
+    "min": 0.5131578947368421,
+    "max": 0.9444655762647395
+  },
+  "accepted_iou_after": {
+    "mean": 0.8821329174057848,
+    "median": 0.8753185255357505,
+    "min": 0.6573268921095008,
+    "max": 0.9663177925784967
+  },
+  "render_seconds": 0.5095589120173827,
+  "elapsed_seconds": 12.463107461924665,
+  "uses_network": false,
+  "uses_models_or_weights": false
+}
