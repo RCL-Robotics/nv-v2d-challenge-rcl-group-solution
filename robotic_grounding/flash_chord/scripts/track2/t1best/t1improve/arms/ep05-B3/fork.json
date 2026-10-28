@@ -1,0 +1,59 @@
+{
+ "arm": "ep05-B3",
+ "episode": 5,
+ "item": "ep05",
+ "tree": "b39b69b",
+ "code": "/root/autodl-tmp/haoran.zhang/code/nv-v2d_runin/robotic_grounding/flash_chord",
+ "src": "C3r2_runin/ep05",
+ "source_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05",
+ "fork": 42500,
+ "max_iterations": 62500,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "scene_support": false,
+ "reset_seed": 42,
+ "inherited_overrides": [],
+ "added_overrides": [
+  "objective.object_task_rotation_beta=3.1"
+ ],
+ "overrides": [
+  "objective.object_task_rotation_beta=3.1"
+ ],
+ "fork_pair": {
+  "model": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05/model_42500.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/fork/model_42500.safetensors",
+   "sha256": "37371dfcb760cbb15db5c2cc9ca6a566c05cee6d2f3874c08653a4f852ab6704",
+   "size": 24993160,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "rsi": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05/rsi_42500.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/fork/rsi_42500.safetensors",
+   "sha256": "a2f6a2bb9f55ba7a3e1c16bfdbc87e2fdb0c9a63d7b7901eae12b0a4cba7a60e",
+   "size": 4556228,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "source_config": {
+  "hydra/.hydra/config.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05/hydra/.hydra/config.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/source/hydra/.hydra/config.yaml",
+   "sha256": "14af26a77d78db5eec9fc5dd0ee3db52aa7c47ef6df9f44b967d0fa5c4491954",
+   "size": 8142,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "hydra/.hydra/overrides.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05/hydra/.hydra/overrides.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/source/hydra/.hydra/overrides.yaml",
+   "sha256": "92b1b6ed03a1d22d32e6ecd09df6289a3a886399fe413d1b6663ffa8f7c58ee0",
+   "size": 437,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "hull_cache": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/fc_cache",
+ "hull_object_key": "c0749211ce6d40ec",
+ "hull_files": 29,
+ "hull_before": "tree (nv-v2d_runin: 52 hulls vs stock 53)",
+ "prepared_at": "2026-10-27 17:52:55",
+ "launched": true
+}

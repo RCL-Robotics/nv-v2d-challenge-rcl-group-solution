@@ -1,0 +1,59 @@
+{
+ "arm": "ep15-B2",
+ "episode": 15,
+ "item": "ep15",
+ "tree": "61fa5d3",
+ "code": "/root/autodl-tmp/haoran.zhang/code/fc_r2",
+ "src": "C3r2_wide/ep15",
+ "source_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep15",
+ "fork": 20974,
+ "max_iterations": 46000,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "scene_support": false,
+ "reset_seed": 42,
+ "inherited_overrides": [],
+ "added_overrides": [
+  "objective.object_task_rotation_beta=2.0"
+ ],
+ "overrides": [
+  "objective.object_task_rotation_beta=2.0"
+ ],
+ "fork_pair": {
+  "model": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep15/model_20974.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/fork/model_20974.safetensors",
+   "sha256": "16e14bcd737120d0dccb7acc5f5454daf90fd63024eef91264655d98d59f8af7",
+   "size": 24993048,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "rsi": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep15/rsi_20974.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/fork/rsi_20974.safetensors",
+   "sha256": "8bffcbd190bad0299b787b8b50afe857eb0f6006725f66d67285fb1ace567987",
+   "size": 3388308,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "source_config": {
+  "wandb/run-20261012_024833-xg9j2z2a/files/config.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep15/wandb/run-20261012_024833-xg9j2z2a/files/config.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/source/wandb/run-20261012_024833-xg9j2z2a/files/config.yaml",
+   "sha256": "c86c7f58724bc9de5ed8518e45f1927d7bc3f3ee7fe88274cce0413681c317ba",
+   "size": 31551,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "wandb/run-20261012_024833-xg9j2z2a/files/wandb-metadata.json": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep15/wandb/run-20261012_024833-xg9j2z2a/files/wandb-metadata.json",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/source/wandb/run-20261012_024833-xg9j2z2a/files/wandb-metadata.json",
+   "sha256": "e7256600d0aec23a888e8384e096af51b2cadd5787773643ce297dcb5877691c",
+   "size": 3419,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "hull_cache": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/fc_cache",
+ "hull_object_key": "dd4639fc0cde3051",
+ "hull_files": 29,
+ "hull_before": "tree (fc_r2: 50 hulls vs stock 49)",
+ "prepared_at": "2026-10-27 17:52:55",
+ "launched": true
+}

@@ -1,0 +1,13 @@
+- experiment=g1_recon_body_coord_rsi_r2
+- task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet'
+- scene.support=false
+- reset.seed=43
+- output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BTs2/runs/ep10
+- logging.mode=disabled
+- +logging.local_jsonl=true
+- training.early_stop_help_zero_tail=0
+- training.max_iterations=60000
+- training.resume=true
+- training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BTs2/fork/model_36432.safetensors
+- objective.object_task_rotation_beta=4.5
+- termination.object_orientation_threshold=0.6
