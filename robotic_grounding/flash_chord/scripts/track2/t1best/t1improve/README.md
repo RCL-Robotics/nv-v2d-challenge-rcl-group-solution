@@ -1,5 +1,9 @@
 # Track 2 Tier 1: T1improve wave (2026-10-27/28): arms, confirmation and the updated best set
 
+> **Update 2026-10-31.** After these records, `TOPUP_AMEND1` (post-hoc, at the user's request) changed episode 28 to
+> ep28-W3H @ 83000: set `all7`, submittable trial 05 (AUC 0.93097, SP 1, MP 1, MPPE 0.930 cm). The submission record is
+> `../t1ready_20261031/`. The text below describes the set before that amendment (ep28 = W2PD 66000, trial 03).
+
 This folder records how six items of the Tier-1 best set (`../best_set/`, `../configs/items/`) were replaced by
 checkpoints of the T1improve training wave, and how the submittable file was chosen. It adds files only. The
 best-set configs, item files and tools in the parent folder are unchanged; they still describe the 2026-10-26 set.

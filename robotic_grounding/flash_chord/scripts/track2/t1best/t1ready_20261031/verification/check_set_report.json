@@ -1,0 +1,2935 @@
+{
+ "items": "/root/autodl-tmp/haoran.zhang/code/v2d_t1ready/robotic_grounding/flash_chord/scripts/track2/t1best/t1ready_20261031/set_items.json",
+ "items_sha256": "120986777f419419556d390ca9c80a98aeb6a97e5b5dd4a17e25ed8c937574bc",
+ "config_dir": "/root/autodl-tmp/haoran.zhang/code/v2d_t1ready/robotic_grounding/flash_chord/src/flash_chord/configs",
+ "episodes": [
+  {
+   "episode": 0,
+   "item": "ep00",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep00",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": null,
+     "record_belongs_to_stage": 2,
+     "A_composes": true,
+     "A_n_keys": 238
+    },
+    {
+     "stage": 2,
+     "run": "C3r2_runin/ep00",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep00/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep00/model_28000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "28000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep00/model_28000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 1,
+   "item": "ep01-Bc_162000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "runin/ep01",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin/ep01/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 2,
+     "run": "runin_cont/ep01",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin_cont/ep01/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "runin_cont2/ep01",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin_cont2/ep01/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 4,
+     "run": "T1fix/B/ep01",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep01/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 5,
+     "run": "T1improve/arms/ep01-Bc/runs/ep01",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep01-Bc/runs/ep01/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep01-Bc/runs/ep01/model_162000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "162000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep01-Bc_162000/try1/model_162000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 2,
+   "item": "ep02",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep02",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep02/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep02/model_44000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "44000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep02/model_44000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 3,
+   "item": "ep03",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep03",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep03/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep03/model_36000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "36000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep03/model_36000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 4,
+   "item": "ep04",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "runin/ep04",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin/ep04/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 2,
+     "run": "runin_cont/ep04",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin_cont/ep04/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "runin_cont2/ep04",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin_cont2/ep04/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 4,
+     "run": "runin_cont3/ep04",
+     "code": "bc3b1bdf34f2",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/runin_cont3/ep04/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 5,
+     "run": "runin_cont4/ep04",
+     "code": "bc3b1bdf34f2",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/runin_cont4/ep04/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/runin_cont4/ep04/model_358000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "358000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep04/model_358000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 5,
+   "item": "ep05-B3_62000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep05",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep05/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1improve/arms/ep05-B3/runs/ep05",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/runs/ep05/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep05-B3/runs/ep05/model_62000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "62000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep05-B3_62000/try1/model_62000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 6,
+   "item": "ep06",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep06",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep06/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep06/model_114000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "114000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep06/model_114000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 7,
+   "item": "ep07",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep07",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep07/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep07/model_17950.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "17950",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep07/model_17950.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 8,
+   "item": "ep08",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep08",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep08/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep08/model_28000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "28000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep08/model_28000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 9,
+   "item": "ep09",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep09",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep09/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep09/model_32185.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "32185",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep09/model_32185.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 10,
+   "item": "ep10-BT_58000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep10",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep10/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1fix/B/ep10",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "T1improve/arms/ep10-BT/runs/ep10",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/runs/ep10/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/runs/ep10/model_58000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "58000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep10-BT_58000/try1/model_58000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 11,
+   "item": "ep11",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep11",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep11/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep11/model_36000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "36000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep11/model_36000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 12,
+   "item": "ep12",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep12",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep12/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep12/model_28000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "28000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep12/model_28000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 13,
+   "item": "ep13",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep13",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep13/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep13/model_48000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "48000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep13/model_48000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 14,
+   "item": "ep14-R_92000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep14",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep14/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1fix/C/ep14",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/C/ep14/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "T1fix/B/ep14",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 4,
+     "run": "T1improve/arms/ep14-R/runs/ep14",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/runs/ep14/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/runs/ep14/model_92000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "92000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep14-R_92000/try1/model_92000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 15,
+   "item": "ep15-B2_40000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep15",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep15/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1improve/arms/ep15-B2/runs/ep15",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/runs/ep15/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/runs/ep15/model_40000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "40000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep15-B2_40000/try1/model_40000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 16,
+   "item": "ep16",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep16",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep16/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_wide/ep16/model_24000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "24000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep16/model_24000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 17,
+   "item": "ep17",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep17",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep17/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep17/model_44000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "44000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep17/model_44000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 18,
+   "item": "ep18",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep18",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep18/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep18/model_32000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "32000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep18/model_32000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 19,
+   "item": "ep19-Bc_135000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "runin/ep19",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin/ep19/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 2,
+     "run": "runin_cont/ep19",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/zuxing.lu/runs/2026-10-14-patience-runin/runin_cont/ep19/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "T1fix/B/ep19",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 4,
+     "run": "T1improve/arms/ep19-Bc/runs/ep19",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-Bc/runs/ep19/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-Bc/runs/ep19/model_135000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "135000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep19-Bc_135000/try1/model_135000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 20,
+   "item": "ep20",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep20",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": null,
+     "record_belongs_to_stage": 2,
+     "A_composes": true,
+     "A_n_keys": 238
+    },
+    {
+     "stage": 2,
+     "run": "C3r2_runin/ep20",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep20/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep20/model_70000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "70000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep20/model_70000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 21,
+   "item": "ep21",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep21",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep21/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep21/model_119500.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "119500",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep21/model_119500.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 22,
+   "item": "ep22",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep22",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep22/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep22/model_36000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "36000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep22/model_36000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 23,
+   "item": "ep23",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep23",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep23/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep23/model_28000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "28000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep23/model_28000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 24,
+   "item": "ep24",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep24",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep24/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep24/model_118000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "118000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep24/model_118000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 25,
+   "item": "ep25",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep25",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep25/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep25/model_102000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "102000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep25/model_102000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 26,
+   "item": "ep26",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep26",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep26/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep26/model_28000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "28000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep26/model_28000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 27,
+   "item": "ep27",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_runin/ep27",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep27/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 238,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_runin/ep27/model_41500.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "41500",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep27/model_41500.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 28,
+   "item": "ep28-W3H_83000",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep28",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep28/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1fix/B/ep28",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep28/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 3,
+     "run": "T1fix/W2PD/ep28",
+     "code": "7fbc2273a92b",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/W2PD/ep28/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 240,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     }
+    },
+    {
+     "stage": 4,
+     "run": "T1improve/arms/ep28-W3H/runs/ep28",
+     "code": "7fbc2273a92b",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep28-W3H/runs/ep28/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 240,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep28-W3H/runs/ep28/model_83000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "83000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/exports/ep28-W3H_83000/try1/model_83000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  },
+  {
+   "episode": 29,
+   "item": "ep29",
+   "stages": [
+    {
+     "stage": 1,
+     "run": "C3r2_wide/ep29",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "trained_the_checkpoint": false,
+     "record": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/runs/C3r2_wide/ep29/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 236,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "logging.entity",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.mode",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "logging.project",
+        "equal_after_root_mapping": false
+       },
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": false,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [
+       "logging.mode=disabled"
+      ],
+      "only_saved": [
+       "logging.entity=juicer_test",
+       "logging.mode=online",
+       "logging.project=v2d-track2-tier1"
+      ],
+      "ok": false
+     }
+    },
+    {
+     "stage": 2,
+     "run": "T1fix/C/ep29",
+     "code": "b39b69be6c2f",
+     "trained_the_checkpoint": true,
+     "record": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/C/ep29/hydra/.hydra",
+     "A_composes": true,
+     "A_n_keys": 237,
+     "A": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [
+       {
+        "key": "output_dir",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "task.parquet",
+        "equal_after_root_mapping": true
+       },
+       {
+        "key": "training.checkpoint",
+        "equal_after_root_mapping": true
+       }
+      ],
+      "sequence_ok": true,
+      "run_local_ok": true,
+      "ok": true
+     },
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "ok": true
+     },
+     "C": {
+      "only_committed": [],
+      "only_saved": [],
+      "ok": true
+     },
+     "checkpoint_file": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/C/ep29/model_30000.safetensors",
+     "checkpoint_sha256_ok": true,
+     "D_composed_from": "saved overrides.yaml",
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "run_local_differences": [],
+      "iteration": "30000",
+      "ok": true
+     },
+     "export_file": "/root/autodl-tmp/haoran.zhang/transfer/t1best_20261026/payload/exports/ep29/model_30000.safetensors",
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true
+    }
+   ]
+  }
+ ],
+ "failures": [],
+ "notes": [
+  "ep00 ep00 stage 1 (C3r2_runin/ep00): run folder restarted in place by stage 2; its saved record is that stage's (compose only here)",
+  "ep07 ep07 stage 1 (C3r2_wide/ep07): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep07 ep07 stage 1 (C3r2_wide/ep07): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep09 ep09 stage 1 (C3r2_wide/ep09): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep09 ep09 stage 1 (C3r2_wide/ep09): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep10 ep10-BT_58000 stage 1 (C3r2_wide/ep10): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep10 ep10-BT_58000 stage 1 (C3r2_wide/ep10): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep14 ep14-R_92000 stage 1 (C3r2_wide/ep14): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep14 ep14-R_92000 stage 1 (C3r2_wide/ep14): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep15 ep15-B2_40000 stage 1 (C3r2_wide/ep15): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep15 ep15-B2_40000 stage 1 (C3r2_wide/ep15): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep16 ep16 stage 1 (C3r2_wide/ep16): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep16 ep16 stage 1 (C3r2_wide/ep16): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep20 ep20 stage 1 (C3r2_runin/ep20): run folder restarted in place by stage 2; its saved record is that stage's (compose only here)",
+  "ep28 ep28-W3H_83000 stage 1 (C3r2_wide/ep28): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep28 ep28-W3H_83000 stage 1 (C3r2_wide/ep28): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']",
+  "ep29 ep29 stage 1 (C3r2_wide/ep29): run-local values differ after root mapping: ['logging.entity', 'logging.mode', 'logging.project']",
+  "ep29 ep29 stage 1 (C3r2_wide/ep29): C committed overrides differ from saved overrides.yaml: committed-only ['logging.mode=disabled'] saved-only ['logging.entity=juicer_test', 'logging.mode=online', 'logging.project=v2d-track2-tier1']"
+ ],
+ "summary": {
+  "episodes": 30,
+  "stages": 54,
+  "stages_composing": 54,
+  "stages_with_saved_record": 52,
+  "stages_restarted_in_place": 2,
+  "A_ok": 52,
+  "B_ok": 52,
+  "C_ok": 44,
+  "pinned_stages": 30,
+  "pinned_A_ok": 30,
+  "pinned_B_ok": 30,
+  "pinned_C_ok": 27,
+  "pinned_D_ok": 30,
+  "pinned_E_ok": 30,
+  "new_keys_union": [],
+  "hash_checked": true
+ },
+ "ok": true
+}

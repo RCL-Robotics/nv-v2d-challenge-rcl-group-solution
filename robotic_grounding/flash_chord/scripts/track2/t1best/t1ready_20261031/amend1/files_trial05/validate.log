@@ -1,0 +1,3 @@
+$ nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -B /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/t1topup_validate.py /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/expected_checkpoints.json https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/validate.json
+{"ok": true, "rows": 22989, "problems": []}
+

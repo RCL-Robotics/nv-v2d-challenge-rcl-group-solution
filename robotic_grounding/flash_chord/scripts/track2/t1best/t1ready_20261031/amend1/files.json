@@ -1,0 +1,142 @@
+{
+ "generated_at": "2026-10-28 18:03:01",
+ "amendment": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/TOPUP_AMEND1.md",
+ "rules_sha256": "e74f598caebaece84655da9cf86feb7b47c4752eb5b91e2363e44832424fc806",
+ "amend1_sha256": "76143fce2e81bbd2699220b8e158c3aee136516dc56baf029ba5fe0c1c09b843",
+ "t1topup_sha256": "57a79c50f619d42982f38e120755a8d3a35f42da65f21d43b082cf13c526cf12",
+ "this_script_sha256": "16cf7cf620d0c38534671d5e5fdecb8e8c4d409cd0baf2c6ace5945755ac030a",
+ "commit_url": "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca",
+ "commit_check": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/commit_check.json",
+ "commit_remote_check": {
+  "checked_at": "2026-10-28 16:07:58",
+  "how": "git ls-remote https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git from the Mac (the server has no GitHub credentials on PATH)",
+  "result": "0c7516eda6f90deacb1536aabbce98beba5194ca refs/heads/dev.haoran.t1best",
+  "on_remote": true
+ },
+ "files": [
+  {
+   "label": "SUBMITTABLE_W3H_closest_to_mean",
+   "trial": 5,
+   "config": "all7",
+   "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv",
+   "csv_sha256": "53cfe9bfa5a2487f3502035e535ea5fabcbff0cab0a578fbea514108aa0f3f77",
+   "size": 12277775,
+   "pack_command": "nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -B /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/tools/pack_submission.py --track track_2_tier1 --results /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --code-commit https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py -o /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv",
+   "trial_pack_command": "nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -B /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/tools/pack_submission.py --track track_2_tier1 --results /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --code-commit https://github.com/local-placeholder/not-uploaded/commit/0000000000000000000000000000000000000000 --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py -o /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/all7_trial05_LOCAL_NOT_FOR_UPLOAD.csv",
+   "results_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/results",
+   "results_unchanged": true,
+   "rescore_overall_float32": {
+    "AUC": 0.9309696268444406,
+    "SP-SR": 1.0,
+    "MP-SR": 1.0,
+    "MPPE": 0.930148212623876
+   },
+   "trial_overall_float32": {
+    "AUC": 0.9309696268444406,
+    "SP-SR": 1.0,
+    "MP-SR": 1.0,
+    "MPPE": 0.930148212623876
+   },
+   "rescore_overall_float64": {
+    "AUC": 0.9309696268444406,
+    "SP-SR": 1.0,
+    "MP-SR": 1.0,
+    "MPPE": 0.930148212623876
+   },
+   "trial_overall_float64": {
+    "AUC": 0.9309696268444406,
+    "SP-SR": 1.0,
+    "MP-SR": 1.0,
+    "MPPE": 0.930148212623876
+   },
+   "rescore_abs_diffs": {
+    "AUC": 0.0,
+    "SP-SR": 0.0,
+    "MP-SR": 0.0,
+    "MPPE": 0.0
+   },
+   "rescore_overall_equal": true,
+   "rescore_overall_float64_equal": true,
+   "rescore_per_episode_equal": true,
+   "rescore_per_episode_mismatches": [],
+   "rescore_equal": true,
+   "validate_ok": true,
+   "validate": {
+    "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv",
+    "track": "track_2_tier1",
+    "problems": [],
+    "uploader_validate_submission": {
+     "ok": true,
+     "rows": 22989,
+     "episodes": 30
+    },
+    "provenance": {
+     "eval_script_sha256": [
+      "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+     ],
+     "eval_code_sha256": [
+      "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+     ],
+     "packer_script_sha256": [
+      "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+     ],
+     "uploader_script_sha256": [
+      "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+     ],
+     "code_commit_url": [
+      "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+     ]
+    },
+    "checkpoints_match_set": true,
+    "distinct_checkpoints": 30,
+    "ok": true
+   },
+   "expected_checkpoints": {
+    "0": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+    "1": "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+    "2": "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+    "3": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+    "4": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+    "5": "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+    "6": "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+    "7": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+    "8": "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+    "9": "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+    "10": "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+    "11": "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+    "12": "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+    "13": "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+    "14": "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+    "15": "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+    "16": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+    "17": "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+    "18": "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+    "19": "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+    "20": "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+    "21": "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8",
+    "22": "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+    "23": "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+    "24": "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+    "25": "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+    "26": "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+    "27": "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+    "28": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+    "29": "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738"
+   },
+   "ep28_checkpoint": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+   "diff_vs_placeholder_pack": [
+    "code_commit_url"
+   ],
+   "placeholder_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/all7_trial05_LOCAL_NOT_FOR_UPLOAD.csv",
+   "placeholder_csv_sha256": "01b0c321d7fa7dac947198d6d782a175b3a225c0a8c1f888c5d9e0112ae60b91"
+  }
+ ],
+ "fallback": {
+  "config": "final",
+  "trial": 3,
+  "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/files/trial03_SUBMITTABLE_closest_to_mean/T1improve_tier1_trial03_SUBMITTABLE_closest_to_mean.csv",
+  "csv_sha256": "93f1d61592da3788f76c133acefb477ca46e8141705b57ec7e2c14a7a5d69a85"
+ },
+ "problems": [],
+ "ok": true
+}

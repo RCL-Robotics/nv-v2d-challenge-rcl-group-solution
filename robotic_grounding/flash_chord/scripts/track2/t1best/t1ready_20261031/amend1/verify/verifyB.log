@@ -1,0 +1,114 @@
+{
+ "ok": true,
+ "problems": [],
+ "c1": true,
+ "c2": true,
+ "c2b": true,
+ "c3": {
+  "ok": true,
+  "rows": 22989,
+  "episodes": 30,
+  "problems": []
+ },
+ "selection": {
+  "n_complete": 20,
+  "mode_SP": 1.0,
+  "mode_MP": 1.0,
+  "mean_AUC": 0.9311347787846396,
+  "sd_AUC": 0.003332423970020287,
+  "mean_MPPE": 0.972039824140122,
+  "sd_MPPE": 0.28174794204785875,
+  "candidates": [
+   2,
+   3,
+   4,
+   5,
+   7,
+   9,
+   10,
+   11,
+   12,
+   13,
+   15,
+   16,
+   18,
+   19
+  ],
+  "selected": 5,
+  "scores": {
+   "2": 0.332572,
+   "3": 0.268526,
+   "4": 0.391448,
+   "5": 0.198244,
+   "7": 0.63711,
+   "9": 0.521011,
+   "10": 0.411727,
+   "11": 0.649912,
+   "12": 0.627094,
+   "13": 0.713311,
+   "15": 0.549879,
+   "16": 0.685149,
+   "18": 0.518824,
+   "19": 0.64609
+  }
+ },
+ "csv_sha": "53cfe9bfa5a2487f3502035e535ea5fabcbff0cab0a578fbea514108aa0f3f77",
+ "match_trials": [
+  5
+ ],
+ "kit_shas": {
+  "kit_pack_submission_sha256": "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be",
+  "kit_v2d_submit_sha256": "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718",
+  "kit_evaluate_policy_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1",
+  "stock_evaluate_policy_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+ },
+ "uniform": {
+  "eval_script_sha256": [
+   "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+  ],
+  "eval_code_sha256": [
+   "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+  ],
+  "checkpoint_sha256": [
+   "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+   "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+   "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+   "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+   "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+   "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+   "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+   "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+   "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+   "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+   "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+   "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+   "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+   "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+   "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+   "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+   "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+   "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+   "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+   "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+   "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+   "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+   "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+   "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+   "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+   "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+   "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+   "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+   "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+   "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8"
+  ],
+  "packer_script_sha256": [
+   "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+  ],
+  "uploader_script_sha256": [
+   "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+  ],
+  "code_commit_url": [
+   "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+  ]
+ }
+}

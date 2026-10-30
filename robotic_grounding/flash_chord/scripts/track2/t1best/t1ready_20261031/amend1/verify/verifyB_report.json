@@ -1,0 +1,587 @@
+{
+ "checks": {
+  "1_provenance": {
+   "ok": true,
+   "uniform_values": {
+    "eval_script_sha256": [
+     "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+    ],
+    "eval_code_sha256": [
+     "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+    ],
+    "checkpoint_sha256": [
+     "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+     "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+     "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+     "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+     "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+     "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+     "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+     "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+     "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+     "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+     "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+     "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+     "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+     "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+     "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+     "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+     "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+     "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+     "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+     "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+     "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+     "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+     "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+     "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+     "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+     "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+     "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+     "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+     "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+     "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8"
+    ],
+    "packer_script_sha256": [
+     "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+    ],
+    "uploader_script_sha256": [
+     "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+    ],
+    "code_commit_url": [
+     "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+    ]
+   },
+   "n_episodes": 30
+  },
+  "2_checkpoints": {
+   "ok": true,
+   "per_episode": {
+    "0": {
+     "csv": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+     "expected": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+     "basis": "score.json sources kind=B20 name=ep00",
+     "score_src_name": "ep00",
+     "ok": true
+    },
+    "1": {
+     "csv": "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+     "expected": "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+     "basis": "EXPORT_PINS ep01-Bc_162000",
+     "score_src_name": "ep01-Bc_162000",
+     "ok": true
+    },
+    "2": {
+     "csv": "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+     "expected": "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+     "basis": "score.json sources kind=B20 name=ep02",
+     "score_src_name": "ep02",
+     "ok": true
+    },
+    "3": {
+     "csv": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+     "expected": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+     "basis": "score.json sources kind=B20 name=ep03",
+     "score_src_name": "ep03",
+     "ok": true
+    },
+    "4": {
+     "csv": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+     "expected": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+     "basis": "score.json sources kind=B20 name=ep04",
+     "score_src_name": "ep04",
+     "ok": true
+    },
+    "5": {
+     "csv": "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+     "expected": "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+     "basis": "EXPORT_PINS ep05-B3_62000",
+     "score_src_name": "ep05-B3_62000",
+     "ok": true
+    },
+    "6": {
+     "csv": "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+     "expected": "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+     "basis": "score.json sources kind=B20 name=ep06",
+     "score_src_name": "ep06",
+     "ok": true
+    },
+    "7": {
+     "csv": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+     "expected": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+     "basis": "score.json sources kind=B20 name=ep07",
+     "score_src_name": "ep07",
+     "ok": true
+    },
+    "8": {
+     "csv": "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+     "expected": "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+     "basis": "score.json sources kind=B20 name=ep08",
+     "score_src_name": "ep08",
+     "ok": true
+    },
+    "9": {
+     "csv": "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+     "expected": "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+     "basis": "score.json sources kind=B20 name=ep09",
+     "score_src_name": "ep09",
+     "ok": true
+    },
+    "10": {
+     "csv": "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+     "expected": "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+     "basis": "EXPORT_PINS ep10-BT_58000",
+     "score_src_name": "ep10-BT_58000",
+     "ok": true
+    },
+    "11": {
+     "csv": "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+     "expected": "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+     "basis": "score.json sources kind=B20 name=ep11",
+     "score_src_name": "ep11",
+     "ok": true
+    },
+    "12": {
+     "csv": "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+     "expected": "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+     "basis": "score.json sources kind=B20 name=ep12",
+     "score_src_name": "ep12",
+     "ok": true
+    },
+    "13": {
+     "csv": "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+     "expected": "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+     "basis": "score.json sources kind=B20 name=ep13",
+     "score_src_name": "ep13",
+     "ok": true
+    },
+    "14": {
+     "csv": "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+     "expected": "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+     "basis": "EXPORT_PINS ep14-R_92000",
+     "score_src_name": "ep14-R_92000",
+     "ok": true
+    },
+    "15": {
+     "csv": "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+     "expected": "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+     "basis": "EXPORT_PINS ep15-B2_40000",
+     "score_src_name": "ep15-B2_40000",
+     "ok": true
+    },
+    "16": {
+     "csv": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+     "expected": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+     "basis": "score.json sources kind=B20 name=ep16",
+     "score_src_name": "ep16",
+     "ok": true
+    },
+    "17": {
+     "csv": "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+     "expected": "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+     "basis": "score.json sources kind=B20 name=ep17",
+     "score_src_name": "ep17",
+     "ok": true
+    },
+    "18": {
+     "csv": "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+     "expected": "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+     "basis": "score.json sources kind=B20 name=ep18",
+     "score_src_name": "ep18",
+     "ok": true
+    },
+    "19": {
+     "csv": "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+     "expected": "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+     "basis": "EXPORT_PINS ep19-Bc_135000",
+     "score_src_name": "ep19-Bc_135000",
+     "ok": true
+    },
+    "20": {
+     "csv": "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+     "expected": "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+     "basis": "score.json sources kind=B20 name=ep20",
+     "score_src_name": "ep20",
+     "ok": true
+    },
+    "21": {
+     "csv": "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8",
+     "expected": "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8",
+     "basis": "score.json sources kind=B20 name=ep21",
+     "score_src_name": "ep21",
+     "ok": true
+    },
+    "22": {
+     "csv": "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+     "expected": "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+     "basis": "score.json sources kind=B20 name=ep22",
+     "score_src_name": "ep22",
+     "ok": true
+    },
+    "23": {
+     "csv": "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+     "expected": "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+     "basis": "score.json sources kind=B20 name=ep23",
+     "score_src_name": "ep23",
+     "ok": true
+    },
+    "24": {
+     "csv": "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+     "expected": "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+     "basis": "score.json sources kind=B20 name=ep24",
+     "score_src_name": "ep24",
+     "ok": true
+    },
+    "25": {
+     "csv": "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+     "expected": "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+     "basis": "score.json sources kind=B20 name=ep25",
+     "score_src_name": "ep25",
+     "ok": true
+    },
+    "26": {
+     "csv": "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+     "expected": "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+     "basis": "score.json sources kind=B20 name=ep26",
+     "score_src_name": "ep26",
+     "ok": true
+    },
+    "27": {
+     "csv": "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+     "expected": "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+     "basis": "score.json sources kind=B20 name=ep27",
+     "score_src_name": "ep27",
+     "ok": true
+    },
+    "28": {
+     "csv": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+     "expected": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+     "basis": "ep28-W3H_83000 (fixed)",
+     "score_src_name": "ep28-W3H_83000",
+     "ok": true
+    },
+    "29": {
+     "csv": "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+     "expected": "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+     "basis": "score.json sources kind=B20 name=ep29",
+     "score_src_name": "ep29",
+     "ok": true
+    }
+   }
+  },
+  "2b_results_are_selected_trial": {
+   "ok": true,
+   "same_as_local_pack_except_commit": true,
+   "pose_matches_all7_trials": [
+    5
+   ],
+   "local_csv_sha256": "01b0c321d7fa7dac947198d6d782a175b3a225c0a8c1f888c5d9e0112ae60b91",
+   "per_episode": {
+    "0": {
+     "parquet_sha": "705a6dcde6db7237",
+     "inputs": "705a6dcde6db7237",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep00/t05/try1/results/episode_000000.parquet",
+     "json_ck_ok": true
+    },
+    "1": {
+     "parquet_sha": "53da41a856d4a1fa",
+     "inputs": "53da41a856d4a1fa",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep01-Bc_162000/t05/try1/results/episode_000001.parquet",
+     "json_ck_ok": true
+    },
+    "2": {
+     "parquet_sha": "9627f3cbe7b41202",
+     "inputs": "9627f3cbe7b41202",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep02/t05/try1/results/episode_000002.parquet",
+     "json_ck_ok": true
+    },
+    "3": {
+     "parquet_sha": "07183bd6222afea4",
+     "inputs": "07183bd6222afea4",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep03/t05/try1/results/episode_000003.parquet",
+     "json_ck_ok": true
+    },
+    "4": {
+     "parquet_sha": "08fa5e65b19479e3",
+     "inputs": "08fa5e65b19479e3",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep04/t05/try1/results/episode_000004.parquet",
+     "json_ck_ok": true
+    },
+    "5": {
+     "parquet_sha": "d13983395fd2ee89",
+     "inputs": "d13983395fd2ee89",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep05-B3_62000/t05/try1/results/episode_000005.parquet",
+     "json_ck_ok": true
+    },
+    "6": {
+     "parquet_sha": "3ccd46bb62a63edd",
+     "inputs": "3ccd46bb62a63edd",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep06/t05/try1/results/episode_000006.parquet",
+     "json_ck_ok": true
+    },
+    "7": {
+     "parquet_sha": "670ffc0097ec2523",
+     "inputs": "670ffc0097ec2523",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep07/t05/try1/results/episode_000007.parquet",
+     "json_ck_ok": true
+    },
+    "8": {
+     "parquet_sha": "9b18bdb5c7872c93",
+     "inputs": "9b18bdb5c7872c93",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep08/t05/try1/results/episode_000008.parquet",
+     "json_ck_ok": true
+    },
+    "9": {
+     "parquet_sha": "9a8eadb3aee6c96b",
+     "inputs": "9a8eadb3aee6c96b",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep09/t05/try1/results/episode_000009.parquet",
+     "json_ck_ok": true
+    },
+    "10": {
+     "parquet_sha": "6621aee359edf2e2",
+     "inputs": "6621aee359edf2e2",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep10-BT_58000/t05/try1/results/episode_000010.parquet",
+     "json_ck_ok": true
+    },
+    "11": {
+     "parquet_sha": "d5b725825a5ac13a",
+     "inputs": "d5b725825a5ac13a",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep11/t05/try1/results/episode_000011.parquet",
+     "json_ck_ok": true
+    },
+    "12": {
+     "parquet_sha": "cf4b75a4e9581988",
+     "inputs": "cf4b75a4e9581988",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep12/t05/try1/results/episode_000012.parquet",
+     "json_ck_ok": true
+    },
+    "13": {
+     "parquet_sha": "37912dc293ae980e",
+     "inputs": "37912dc293ae980e",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep13/t05/try1/results/episode_000013.parquet",
+     "json_ck_ok": true
+    },
+    "14": {
+     "parquet_sha": "fe8f08da82ef5db7",
+     "inputs": "fe8f08da82ef5db7",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep14-R_92000/t05/try1/results/episode_000014.parquet",
+     "json_ck_ok": true
+    },
+    "15": {
+     "parquet_sha": "44e4d4fc15e3317d",
+     "inputs": "44e4d4fc15e3317d",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep15-B2_40000/t05/try1/results/episode_000015.parquet",
+     "json_ck_ok": true
+    },
+    "16": {
+     "parquet_sha": "8c4e4f6ce6e26b70",
+     "inputs": "8c4e4f6ce6e26b70",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep16/t05/try1/results/episode_000016.parquet",
+     "json_ck_ok": true
+    },
+    "17": {
+     "parquet_sha": "a44d72e9bba5b86f",
+     "inputs": "a44d72e9bba5b86f",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep17/t05/try1/results/episode_000017.parquet",
+     "json_ck_ok": true
+    },
+    "18": {
+     "parquet_sha": "75c8f95a422ae641",
+     "inputs": "75c8f95a422ae641",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep18/t05/try1/results/episode_000018.parquet",
+     "json_ck_ok": true
+    },
+    "19": {
+     "parquet_sha": "f778fb8b8c139a93",
+     "inputs": "f778fb8b8c139a93",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep19-Bc_135000/t05/try1/results/episode_000019.parquet",
+     "json_ck_ok": true
+    },
+    "20": {
+     "parquet_sha": "a06c6de568ecc4ff",
+     "inputs": "a06c6de568ecc4ff",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep20/t05/try1/results/episode_000020.parquet",
+     "json_ck_ok": true
+    },
+    "21": {
+     "parquet_sha": "1ebc11b08336c579",
+     "inputs": "1ebc11b08336c579",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep21/t05/try1/results/episode_000021.parquet",
+     "json_ck_ok": true
+    },
+    "22": {
+     "parquet_sha": "8f1ec33d23fb2541",
+     "inputs": "8f1ec33d23fb2541",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep22/t05/try1/results/episode_000022.parquet",
+     "json_ck_ok": true
+    },
+    "23": {
+     "parquet_sha": "3460fb1d873505ee",
+     "inputs": "3460fb1d873505ee",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep23/t05/try1/results/episode_000023.parquet",
+     "json_ck_ok": true
+    },
+    "24": {
+     "parquet_sha": "c4749b6c7298d40d",
+     "inputs": "c4749b6c7298d40d",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep24/t05/try1/results/episode_000024.parquet",
+     "json_ck_ok": true
+    },
+    "25": {
+     "parquet_sha": "fd033b7ab3a9bb58",
+     "inputs": "fd033b7ab3a9bb58",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep25/t05/try1/results/episode_000025.parquet",
+     "json_ck_ok": true
+    },
+    "26": {
+     "parquet_sha": "26036160e21855d1",
+     "inputs": "26036160e21855d1",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep26/t05/try1/results/episode_000026.parquet",
+     "json_ck_ok": true
+    },
+    "27": {
+     "parquet_sha": "01d8802d2923b241",
+     "inputs": "01d8802d2923b241",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep27/t05/try1/results/episode_000027.parquet",
+     "json_ck_ok": true
+    },
+    "28": {
+     "parquet_sha": "4f2d6e922f4e44a3",
+     "inputs": "4f2d6e922f4e44a3",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/runs/ep28-W3H_83000/t05/try1/results/episode_000028.parquet",
+     "json_ck_ok": true
+    },
+    "29": {
+     "parquet_sha": "7a98f815bca1ff1a",
+     "inputs": "7a98f815bca1ff1a",
+     "orig": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/runs/ep29/t05/try1/results/episode_000029.parquet",
+     "json_ck_ok": true
+    }
+   }
+  },
+  "3_validate_submission": {
+   "ok": true,
+   "rows": 22989,
+   "episodes": 30,
+   "problems": []
+  }
+ },
+ "problems": [],
+ "info": {
+  "csv_sha256": "53cfe9bfa5a2487f3502035e535ea5fabcbff0cab0a578fbea514108aa0f3f77",
+  "columns": [
+   "row_id",
+   "pos_x",
+   "pos_y",
+   "pos_z",
+   "quat_x",
+   "quat_y",
+   "quat_z",
+   "quat_w",
+   "eval_script_sha256",
+   "eval_code_sha256",
+   "checkpoint_sha256",
+   "packer_script_sha256",
+   "uploader_script_sha256",
+   "code_commit_url"
+  ],
+  "rows": 22989,
+  "kit_pack_submission_sha256": "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be",
+  "kit_v2d_submit_sha256": "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718",
+  "kit_evaluate_policy_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1",
+  "stock_evaluate_policy_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1",
+  "csv_distinct_checkpoints": 30,
+  "decisions_ep28alt": {
+   "winner": "ep28-W3H_83000",
+   "keep_new": false,
+   "why": "new has the higher 20-trial kit AUC (0.8158 new vs 0.8074 incumbent); MPPE 2.519 vs 3.466; 8.4(c) exception: MP pass 15/20 < 16/20 (0.8 n)"
+  },
+  "winners": {
+   "1": "ep01-Bc_162000",
+   "5": "ep05-B3_62000",
+   "10": "ep10-BT_58000",
+   "14": "ep14-R_92000",
+   "15": "ep15-B2_40000",
+   "19": "ep19-Bc_135000"
+  },
+  "decision_items": [
+   "ep01",
+   "ep05",
+   "ep10",
+   "ep14",
+   "ep15",
+   "ep19",
+   "ep28alt"
+  ],
+  "selection_recompute": {
+   "n_complete": 20,
+   "mode_SP": 1.0,
+   "mode_MP": 1.0,
+   "mean_AUC": 0.9311347787846396,
+   "sd_AUC": 0.003332423970020287,
+   "mean_MPPE": 0.972039824140122,
+   "sd_MPPE": 0.28174794204785875,
+   "candidates": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    18,
+    19
+   ],
+   "selected": 5,
+   "scores": {
+    "2": 0.332572,
+    "3": 0.268526,
+    "4": 0.391448,
+    "5": 0.198244,
+    "7": 0.63711,
+    "9": 0.521011,
+    "10": 0.411727,
+    "11": 0.649912,
+    "12": 0.627094,
+    "13": 0.713311,
+    "15": 0.549879,
+    "16": 0.685149,
+    "18": 0.518824,
+    "19": 0.64609
+   },
+   "mp_by_trial": {
+    "1": 0.9666666666666667,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 0.9666666666666667,
+    "7": 1.0,
+    "8": 0.9666666666666667,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 0.9666666666666667,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 0.9666666666666667,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 0.9666666666666667
+   }
+  },
+  "selected_trial_set": {
+   "AUC": 0.9309696268444406,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.930148212623876
+  }
+ },
+ "ok": true
+}
