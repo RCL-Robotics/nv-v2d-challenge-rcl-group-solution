@@ -1,0 +1,117 @@
+{
+ "episode": 14,
+ "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet",
+ "written": "2026-10-24 04:12:58",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-05-28_14-44-09_round_table_flip_08_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 993, 'robot_joint_positions': 993, 'object_body_position': 993, 'object_root_position': 993, 'ik_error_per_frame': 993}; episodes.json 993; manifest 993; Tier-1 manifest 993"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 1.29e-07 m / 6.44e-06 rad; root body-relative drift 0.00e+00 m / 2.00e-07 rad; map rotation 152.84 deg, translation [1.2724, 2.1204, 1.3998]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (1.2e-07 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "floor-only: 2026-05-28_14-44-09_round_table_flip_08_support.usda: present, geometry False -> scene.support=false"
+  }
+ },
+ "parquet_sha256": "f3a9e0ed907f94ac9cf57e9283c5380e2b58939f169b84f798ebc4dcba0f3b7a",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 1.2350195520980404e-07,
+   "resid_rad": 9.424321830774485e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 2.655 m, 3.137 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 1.685 m, 3.085 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "floor-only",
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.6514508128166199,
+   0.7691298365592957,
+   0.8328317999839783
+  ],
+  "hand_contact_frames_left_right": [
+   492,
+   603
+  ],
+  "robot_root_z_median_min_max": [
+   0.768502414226532,
+   0.538178563117981,
+   0.8006505966186523
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.7291592955589294,
+   0.8812912225723266,
+   0.930413007736206
+  ],
+  "hand_contact_frames_left_right": [
+   109,
+   335
+  ],
+  "robot_root_z_median_min_max": [
+   0.7631250619888306,
+   0.5456956624984741,
+   0.797831654548645
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": -0.6232927558916357,
+ "retarget_object_ground_correction": "minimum=-0.0162 m, requested=+0.0167 m, applied=+0.0100 m, cap=0.0100 m (capped)",
+ "all_ok": true
+}

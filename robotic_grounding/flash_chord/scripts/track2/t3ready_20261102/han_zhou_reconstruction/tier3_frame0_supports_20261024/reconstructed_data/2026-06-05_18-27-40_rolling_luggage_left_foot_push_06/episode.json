@@ -1,0 +1,14 @@
+{
+ "episode_index": 29,
+ "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+ "object": "rolling_luggage",
+ "task": "Walk over to the rolling luggage within the bounding area and using your left foot push the rolling luggage. within the bounding area. Step away when complete.",
+ "frames": 467,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.34754252433776855,
+  "median": 0.20228464901447296,
+  "max": 2.8821022510528564
+ }
+}

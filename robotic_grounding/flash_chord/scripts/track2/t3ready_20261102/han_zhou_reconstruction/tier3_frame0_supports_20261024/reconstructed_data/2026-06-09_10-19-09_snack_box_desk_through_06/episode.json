@@ -1,0 +1,15 @@
+{
+ "episode_index": 13,
+ "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+ "object": "snack_box",
+ "task": "Walk over to the snack box on the white desk. Put the snack box on the ground and use any foot to push the snack box through the desk. Put the box on the desk when finished.",
+ "frames": 922,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.4201340079307556,
+  "median": 0.2120722085237503,
+  "max": 10.570063591003418
+ },
+ "support": "../../supports/2026-06-09_10-19-09_snack_box_desk_through_06"
+}

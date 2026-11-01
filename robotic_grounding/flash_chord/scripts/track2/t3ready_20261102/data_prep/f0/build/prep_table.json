@@ -1,0 +1,1023 @@
+[
+ {
+  "ep": 0,
+  "object": "tall_bar_stool",
+  "frames": 778,
+  "track_change_vs_opus": "5.23 cm / 2.62 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.1116266250610352e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   340,
+   453
+  ],
+  "hand_contact_frames_LR_opus": [
+   301,
+   448
+  ],
+  "object_ground_lift": "+0.0031",
+  "parquet_sha256": "20dbcd89b6fc09ddacf41847cec60c668f323a4f6a42f5595e41f832afccd3c9",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 1,
+  "object": "vacuum",
+  "frames": 747,
+  "track_change_vs_opus": "6.88 cm / 7.83 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 6.556510925292969e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   148,
+   6
+  ],
+  "hand_contact_frames_LR_opus": [
+   218,
+   34
+  ],
+  "object_ground_lift": "+0.0047",
+  "parquet_sha256": "94ffb6b7eca5346bd5d77e0b3d9c0856155432b6546fd2eace95c8664966181a",
+  "flags": [
+   "Han: stool fit IoU 0.61",
+   "REST_GAP run [658, 747] median sdf 2.7 cm",
+   "SETTLE run [658, 747] dp 2.328 cm rot 4.882 deg; human-object 78.36 cm"
+  ],
+  "support": "tall_bar_stool",
+  "support_geometry": "stool contact patches: 31 boxes (2 cm voxels, carved 1)",
+  "support_pose": "T_world_mesh_contact (shift +0.00 cm) + horizontal [0.44, 2.19] cm; frame-0 contact 0.2 cm; path clearance 0.35 cm",
+  "phys_rest": "0-125:+0.32cm/cov0.00, 658-747:+2.70cm/cov0.00",
+  "phys_human": "0 viol frames (min sdf 13.99 cm)",
+  "phys_g1": "0 viol frames (min body 23.04 / hand 7.82 cm)",
+  "phys_settle": "0-125:ok(1.5cm,3.0deg), 658-747:FAIL(2.3cm,4.9deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 2,
+  "object": "blue_easter_basket",
+  "frames": 980,
+  "track_change_vs_opus": "11.01 cm / 57.43 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 8.881092071533203e-06,
+  "ik_iter_diff": [
+   1.0,
+   1
+  ],
+  "hand_contact_frames_LR_f0": [
+   111,
+   56
+  ],
+  "hand_contact_frames_LR_opus": [
+   181,
+   122
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "b21d7562d6b9098b3f6911935530be49c385b6d5c933871471318e714d6f85c1",
+  "flags": [
+   "PATH object deeper than 1 cm in a box on 8 frames [[125, 132]] (min -1.5 cm; a 3 cm slab allows at most 1.5)"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.780 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift +0.00 cm, refit -0.64 cm (anchor run [0, 125]), net vs video fit -0.64 cm",
+  "phys_rest": "0-125:+0.00cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf 2.34 cm)",
+  "phys_g1": "0 viol frames (min body -0.61 / hand 1.85 cm)",
+  "phys_settle": "0-125:ok(0.1cm,0.7deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 3,
+  "object": "contigo_coffee_mug",
+  "frames": 781,
+  "track_change_vs_opus": "13.85 cm / 12.92 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.055002212524414e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   75
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   515
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "9b058c279ab740a501abcf50b0e560864062ffd19e0ee7c4cb05723166b96c09",
+  "flags": [
+   "PATH object deeper than 1 cm in a box on 48 frames [[527, 530], [604, 644], [686, 688]] (min -1.5 cm; a 3 cm slab allows at most 1.5)"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.781 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift -0.28 cm, refit -0.28 cm (anchor run [0, 130]), net vs video fit -0.56 cm",
+  "phys_rest": "0-130:+0.00cm/cov1.00, 215-269:-0.58cm/cov1.00, 350-399:-0.54cm/cov1.00, 481-527:-0.91cm/cov1.00, 606-641:-1.01cm/cov1.00, 690-781:-0.59cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.18 cm)",
+  "phys_g1": "0 viol frames (min body 2.43 / hand -1.5 cm)",
+  "phys_settle": "0-130:ok(0.4cm,2.8deg), 215-269:ok(0.7cm,3.2deg), 350-399:ok(0.6cm,1.2deg), 481-527:ok(1.2cm,4.2deg), 606-641:ok(1.1cm,1.2deg), 690-781:ok(0.8cm,3.3deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 4,
+  "object": "baseball_bat",
+  "frames": 803,
+  "track_change_vs_opus": "5.86 cm / 175.0 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.1444091796875e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   207,
+   242
+  ],
+  "hand_contact_frames_LR_opus": [
+   343,
+   386
+  ],
+  "object_ground_lift": "+0.0079",
+  "parquet_sha256": "8601e387bb25f55f9975caa9788102d055bc2edfe80a486f40b14d1d2c699884",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 5,
+  "object": "big_black_box",
+  "frames": 1003,
+  "track_change_vs_opus": "3.4 cm / 1.57 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.9371509552001953e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   466,
+   497
+  ],
+  "hand_contact_frames_LR_opus": [
+   484,
+   534
+  ],
+  "object_ground_lift": "+0.0061",
+  "parquet_sha256": "50a54e4af114f6291d4df71398b12a50221431ec9c110124fdb35952ee43de04",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 6,
+  "object": "monitor",
+  "frames": 546,
+  "track_change_vs_opus": "7.89 cm / 4.95 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 7.703900337219238e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   258,
+   202
+  ],
+  "hand_contact_frames_LR_opus": [
+   289,
+   214
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "233c795334e17be1a790d2cdb01e286a8521903a716cd0d2e8019326888320bb",
+  "flags": [
+   "SETTLE anchor run not stable",
+   "SETTLE run [0, 168] dp 2.055 cm rot 4.184 deg; human-object 17.02 cm"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.782 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift +0.75 cm, refit -1.15 cm (anchor run [0, 168]), net vs video fit -0.40 cm",
+  "phys_rest": "0-168:+0.00cm/cov1.00, 470-546:-0.52cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "0 viol frames (min body 2.55 / hand -1.5 cm)",
+  "phys_settle": "0-168:FAIL(2.1cm,4.2deg), 470-546:ok(1.9cm,4.2deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 7,
+  "object": "iron",
+  "frames": 896,
+  "track_change_vs_opus": "4.05 cm / 5.3 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.3232231140136719e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   621
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   677
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "68545de91538dd25f2254eb0ebd40403e165a2dbc758f78a20871515e08d35df",
+  "flags": [
+   "FOOTPRINT run [387, 397] cover 0.769"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.786 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift +1.28 cm, refit -1.27 cm (anchor run [0, 156]), net vs video fit +0.00 cm",
+  "phys_rest": "0-156:+0.00cm/cov1.00, 226-245:+0.90cm/cov0.82, 387-397:-0.69cm/cov0.77, 576-588:+0.90cm/cov0.82, 635-660:+0.56cm/cov1.00, 781-794:+0.58cm/cov1.00, 795-896:+0.58cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "0 viol frames (min body 1.09 / hand -1.5 cm)",
+  "phys_settle": "0-156:ok(0.1cm,0.2deg), 226-245:ok(0.8cm,0.2deg), 387-397:ok(0.8cm,0.4deg), 576-588:ok(0.8cm,0.2deg), 635-660:ok(0.5cm,0.2deg), 781-794:ok(0.5cm,0.7deg), 795-896:ok(0.5cm,0.7deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 8,
+  "object": "skinny_wood_chair",
+  "frames": 708,
+  "track_change_vs_opus": "1.52 cm / 1.68 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.0251998901367188e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   224,
+   149
+  ],
+  "hand_contact_frames_LR_opus": [
+   230,
+   167
+  ],
+  "object_ground_lift": "+0.0021",
+  "parquet_sha256": "4ceac29c6ef84e19f930c1e0b59f613a898779c35a9d499a1f4d1ecad4e9b2c3",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 9,
+  "object": "big_red_bowl",
+  "frames": 870,
+  "track_change_vs_opus": "7.26 cm / 127.72 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 9.626150131225586e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   303,
+   461
+  ],
+  "hand_contact_frames_LR_opus": [
+   407,
+   436
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "270d8df52447be229ebefd274193315e753d788e0fe72ff12e2f37b765e123ec",
+  "flags": [],
+  "support": "skinny_wood_chair",
+  "support_geometry": "rect 0.48 x 0.35 m yaw 5, top z 0.469 m, 3 cm slab, 11 strips (area 90%)",
+  "support_pose": "Han contact shift -2.03 cm, refit -2.53 cm (anchor run [0, 193]), net vs video fit -4.56 cm",
+  "phys_rest": "0-193:+0.00cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf 6.88 cm)",
+  "phys_g1": "0 viol frames (min body 5.84 / hand 0.68 cm)",
+  "phys_settle": "0-193:ok(0.4cm,3.5deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 10,
+  "object": "white_desk",
+  "frames": 794,
+  "track_change_vs_opus": "3.11 cm / 4.29 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 2.1457672119140625e-05,
+  "ik_iter_diff": [
+   1.0,
+   1
+  ],
+  "hand_contact_frames_LR_f0": [
+   97,
+   450
+  ],
+  "hand_contact_frames_LR_opus": [
+   92,
+   425
+  ],
+  "object_ground_lift": "+0.0100",
+  "parquet_sha256": "a64b3a9d1a83a657c9e014183117708669fab5da4865d88f9ea44b1a01f7e931",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 11,
+  "object": "light_blue_book",
+  "frames": 901,
+  "track_change_vs_opus": "2.56 cm / 3.17 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 8.761882781982422e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   466,
+   783
+  ],
+  "hand_contact_frames_LR_opus": [
+   572,
+   770
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "5765586810904a781328e7f829e35bf6ef062edfed51b4cee75f88c9413248f2",
+  "flags": [
+   "FOOTPRINT run [406, 467] cover 0.44",
+   "PATH object deeper than 1 cm in a box on 8 frames [[468, 475]] (min -1.4 cm; a 3 cm slab allows at most 1.5)",
+   "settle (human hand within 3 cm: held, not a free rest) run [406, 467] dp 89.016 cm rot 150.984 deg; human-object 0.05 cm"
+  ],
+  "support": "white_desk",
+  "support_geometry": "rect 1.06 x 0.68 m yaw -79, top z 0.885 m, 3 cm slab, 28 strips (area 95%)",
+  "support_pose": "Han contact shift -1.90 cm, refit -1.09 cm (anchor run [0, 80]), net vs video fit -2.99 cm, footprint shift [5.98, 1.12] cm",
+  "phys_rest": "0-80:+0.00cm/cov1.00, 406-467:-0.42cm/cov0.44",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "0 viol frames (min body 1.12 / hand -1.5 cm)",
+  "phys_settle": "0-80:ok(0.1cm,1.3deg), 406-467:FAIL(89.0cm,151.0deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 12,
+  "object": "black_platform",
+  "frames": 700,
+  "track_change_vs_opus": "6.81 cm / 179.55 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 8.32974910736084e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   309,
+   295
+  ],
+  "hand_contact_frames_LR_opus": [
+   392,
+   319
+  ],
+  "object_ground_lift": "+0.0087",
+  "parquet_sha256": "0133f928c30faf2e9aa33175a239cb8264549d4738aa5e81f69fe3058e87187a",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 13,
+  "object": "snack_box",
+  "frames": 922,
+  "track_change_vs_opus": "5.35 cm / 2.22 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 4.1604042053222656e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   81,
+   135
+  ],
+  "hand_contact_frames_LR_opus": [
+   147,
+   160
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "baf8825a131b0bad7573a694ad4a516877015e539686adfa2d1303f356d2cec5",
+  "flags": [
+   "PATH object deeper than 1 cm in a box on 155 frames [[131, 155], [205, 205], [769, 779], [804, 921]] (min -1.5 cm; a 3 cm slab allows at most 1.5)",
+   "G1 41 frames [[558, 592], [594, 594], [630, 631], [634, 636]] worst 4.99 cm (['g1/left_elbow_link'])"
+  ],
+  "support": "white_desk",
+  "support_geometry": "rect 1.06 x 0.68 m yaw 44, top z 0.883 m, 3 cm slab, 29 strips (area 93%)",
+  "support_pose": "Han contact shift -2.40 cm, refit -0.75 cm (anchor run [0, 130]), net vs video fit -3.15 cm",
+  "phys_rest": "0-130:+0.00cm/cov1.00, 818-922:-1.17cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "41 viol frames (min body -4.99 / hand -1.5 cm)",
+  "phys_settle": "0-130:ok(0.2cm,1.1deg), 818-922:ok(1.2cm,1.7deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 14,
+  "object": "round_table",
+  "frames": 993,
+  "track_change_vs_opus": "3.1 cm / 75.79 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.430511474609375e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   592,
+   647
+  ],
+  "hand_contact_frames_LR_opus": [
+   492,
+   603
+  ],
+  "object_ground_lift": "+0.0011",
+  "parquet_sha256": "f0b0fce012687ef44630188613d8b4b873712e893f5a41736c73e86fe32a01a4",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 15,
+  "object": "wet_floor_sign",
+  "frames": 715,
+  "track_change_vs_opus": "2.91 cm / 175.22 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 5.125999450683594e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   100
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   206
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "d4f007fa28336e1a068f446e49ee20185497feb28f3a9d15cad861a0cf08ca81",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 16,
+  "object": "spray_bottle",
+  "frames": 477,
+  "track_change_vs_opus": "9.8 cm / 2.39 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.0013580322265625e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   59,
+   0
+  ],
+  "hand_contact_frames_LR_opus": [
+   160,
+   0
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "5f6644464cba1a9ebb26a58933cd157f7e2b8ed24e08cb67b59f0a880227d335",
+  "flags": [
+   "G1 29 frames [[295, 321], [323, 323], [325, 325]] worst 4.99 cm (['g1/right_elbow_link'])"
+  ],
+  "support": "white_desk",
+  "support_geometry": "rect 1.06 x 0.68 m yaw 108, top z 0.878 m, 3 cm slab, 29 strips (area 95%)",
+  "support_pose": "Han contact shift -2.04 cm, refit -1.63 cm (anchor run [0, 124]), net vs video fit -3.67 cm",
+  "phys_rest": "0-124:+0.00cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "29 viol frames (min body -4.99 / hand 4.98 cm)",
+  "phys_settle": "0-124:ok(0.2cm,0.8deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 17,
+  "object": "traffic_cone",
+  "frames": 440,
+  "track_change_vs_opus": "11.53 cm / 170.12 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 8.821487426757812e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   56,
+   70
+  ],
+  "hand_contact_frames_LR_opus": [
+   172,
+   189
+  ],
+  "object_ground_lift": "+0.0100",
+  "parquet_sha256": "3591829d8eefee75da473f19615aced72c0e8f6823924dadcfb0a7dfd499d4b3",
+  "flags": [
+   "Han: cone track ~5 cm inside the table (table lowered)",
+   "SETTLE anchor run not stable",
+   "SETTLE run [336, 440] dp 1.135 cm rot 5.238 deg; human-object 37.35 cm"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.741 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift -4.94 cm, refit +0.40 cm (anchor run [336, 440]), net vs video fit -4.54 cm, footprint shift [-2.52, -1.97] cm",
+  "phys_rest": "336-440:+0.00cm/cov0.95",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "0 viol frames (min body 2.08 / hand -1.5 cm)",
+  "phys_settle": "336-440:FAIL(1.1cm,5.2deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 18,
+  "object": "blue_trash_can",
+  "frames": 858,
+  "track_change_vs_opus": "10.89 cm / 4.68 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 7.554888725280762e-06,
+  "ik_iter_diff": [
+   1.0,
+   1
+  ],
+  "hand_contact_frames_LR_f0": [
+   241,
+   197
+  ],
+  "hand_contact_frames_LR_opus": [
+   206,
+   360
+  ],
+  "object_ground_lift": "+0.0048",
+  "parquet_sha256": "86648d4c5efe2cec708807ea913289a194fe642a2d9eefd5703ec4b93f63f31c",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 19,
+  "object": "cane",
+  "frames": 886,
+  "track_change_vs_opus": "12.9 cm / 5.86 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 7.748603820800781e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   64,
+   45
+  ],
+  "hand_contact_frames_LR_opus": [
+   148,
+   207
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "9dc7d6bc5ed5440fbfe4b65af0ede6890dd09b485fac77452c1346265b4b5545",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 20,
+  "object": "rice_cooker",
+  "frames": 553,
+  "track_change_vs_opus": "12.47 cm / 4.91 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 8.77678394317627e-06,
+  "ik_iter_diff": [
+   1.0,
+   2
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   90
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   339
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "7728e9ad49700965dea52aecc45717ee0496ea79d18cfb18b6cab02dffa7ed41",
+  "flags": [],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.798 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift +1.88 cm, refit -0.65 cm (anchor run [0, 212]), net vs video fit +1.23 cm",
+  "phys_rest": "0-212:+0.00cm/cov1.00, 235-257:+0.04cm/cov1.00, 282-318:+0.04cm/cov1.00, 358-376:-0.46cm/cov1.00, 428-553:-0.27cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.41 cm)",
+  "phys_g1": "0 viol frames (min body 1.71 / hand 0.27 cm)",
+  "phys_settle": "0-212:ok(0.1cm,0.6deg), 235-257:ok(0.1cm,0.2deg), 282-318:ok(0.1cm,0.5deg), 358-376:ok(0.5cm,1.3deg), 428-553:ok(0.3cm,1.1deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 21,
+  "object": "tall_bar_stool",
+  "frames": 678,
+  "track_change_vs_opus": "1.39 cm / 3.22 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 7.316470146179199e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   443,
+   431
+  ],
+  "hand_contact_frames_LR_opus": [
+   441,
+   431
+  ],
+  "object_ground_lift": "+0.0077",
+  "parquet_sha256": "1414af597cbd04fe891e04a45517e8ee2ec683092babdfb3a0ff0b99b076b714",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 22,
+  "object": "step_ladder",
+  "frames": 719,
+  "track_change_vs_opus": "8.33 cm / 1.29 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 9.864568710327148e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   220
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   399
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "f750d9933dbb3628520cdd5e444f1df44cbbfb82f42cec70d4ada3e9e4d5c9b7",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 23,
+  "object": "toy_stroller",
+  "frames": 946,
+  "track_change_vs_opus": "5.6 cm / 4.33 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 7.569789886474609e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   419,
+   317
+  ],
+  "hand_contact_frames_LR_opus": [
+   517,
+   570
+  ],
+  "object_ground_lift": "+0.0086",
+  "parquet_sha256": "7782dd48a65a1aac2ed9c2d17b230270b509fa7ca1468250c4e076934681952d",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 24,
+  "object": "watering_can",
+  "frames": 748,
+  "track_change_vs_opus": "1.76 cm / 2.26 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 9.417533874511719e-06,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   333
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   357
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "c8aee4807b0c0de54f4f6d43b15f2f0ec4979ffa40b2d1985dd0a831449dbeee",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 25,
+  "object": "cyan_water_bottle",
+  "frames": 859,
+  "track_change_vs_opus": "9.89 cm / 10.28 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.5914440155029297e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   360,
+   224
+  ],
+  "hand_contact_frames_LR_opus": [
+   272,
+   414
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "530f7fa375fc15afebc11edf7b0e6e07362df60f2fc1d3074c90eb182693913a",
+  "flags": [
+   "PATH object deeper than 1 cm in a box on 4 frames [[773, 776]] (min -1.5 cm; a 3 cm slab allows at most 1.5)",
+   "SETTLE run [778, 859] dp 20.75 cm rot 95.855 deg; human-object 51.85 cm"
+  ],
+  "support": "round_table",
+  "support_geometry": "disk r 0.385 m, top z 0.784 m, 3 cm slab, 18 strips (area 92%)",
+  "support_pose": "Han contact shift +0.43 cm, refit -0.66 cm (anchor run [0, 115]), net vs video fit -0.22 cm",
+  "phys_rest": "0-115:+0.00cm/cov1.00, 778-859:-0.70cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf -1.5 cm)",
+  "phys_g1": "0 viol frames (min body 2.65 / hand -1.5 cm)",
+  "phys_settle": "0-115:ok(0.4cm,1.6deg), 778-859:FAIL(20.8cm,95.9deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 26,
+  "object": "skateboard",
+  "frames": 669,
+  "track_change_vs_opus": "3.31 cm / 175.43 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.2755393981933594e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   166,
+   235
+  ],
+  "hand_contact_frames_LR_opus": [
+   143,
+   220
+  ],
+  "object_ground_lift": "+0.0012",
+  "parquet_sha256": "33084a187258532b727b00c971d9efb78ceb5c32f7c1a8772b41095718257013",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ },
+ {
+  "ep": 27,
+  "object": "woven_basket",
+  "frames": 565,
+  "track_change_vs_opus": "5.32 cm / 179.91 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 0.0006301403045654297,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   208,
+   239
+  ],
+  "hand_contact_frames_LR_opus": [
+   121,
+   199
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "dcbc4099633e2dacd786e2ddcf5447321ff03402bfd761d5a2dd42d968f60de7",
+  "flags": [],
+  "support": "white_desk",
+  "support_geometry": "rect 1.06 x 0.68 m yaw 144, top z 0.883 m, 3 cm slab, 30 strips (area 94%)",
+  "support_pose": "Han contact shift -2.08 cm, refit -1.12 cm (anchor run [451, 565]), net vs video fit -3.20 cm",
+  "phys_rest": "451-565:+0.00cm/cov1.00",
+  "phys_human": "0 viol frames (min sdf 0.43 cm)",
+  "phys_g1": "0 viol frames (min body 0.13 / hand 0.3 cm)",
+  "phys_settle": "451-565:ok(0.1cm,1.6deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 28,
+  "object": "squeegee",
+  "frames": 988,
+  "track_change_vs_opus": "9.54 cm / 6.44 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.4960765838623047e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   16,
+   112
+  ],
+  "hand_contact_frames_LR_opus": [
+   133,
+   562
+  ],
+  "object_ground_lift": "+0.0000",
+  "parquet_sha256": "8153f29408568bfece590c79dce1627d110ac0f61996de933141a7b28c0f2210",
+  "flags": [
+   "Han: squeegee ends ~10 cm from the stool"
+  ],
+  "support": "tall_bar_stool",
+  "support_geometry": "stool contact patches: 24 boxes (3 cm voxels, carved 116)",
+  "support_pose": "T_world_mesh_contact (shift +0.00 cm) + horizontal [0.0, 0.0] cm; frame-0 contact 0.55 cm; path clearance 0.61 cm",
+  "phys_rest": "0-118:+0.61cm/cov0.00",
+  "phys_human": "0 viol frames (min sdf 30.11 cm)",
+  "phys_g1": "0 viol frames (min body 30.47 / hand 22.71 cm)",
+  "phys_settle": "0-118:ok(1.0cm,2.2deg); control moves True",
+  "scene_support": true
+ },
+ {
+  "ep": 29,
+  "object": "rolling_luggage",
+  "frames": 467,
+  "track_change_vs_opus": "3.6 cm / 0.52 deg",
+  "retarget": "rerun (object enters object_*, hand_contact_active, frame-0 object ground lift)",
+  "rcheck_all_ok": true,
+  "rcheck_failed": [],
+  "robot_max_diff_vs_opus": 1.0818243026733398e-05,
+  "ik_iter_diff": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_LR_f0": [
+   0,
+   0
+  ],
+  "hand_contact_frames_LR_opus": [
+   0,
+   0
+  ],
+  "object_ground_lift": "+0.0061",
+  "parquet_sha256": "5135e5fead8a9ba6cb9e0d5873c3b12e171cb6ceef4b9fe044f643a1c2a4e7d1",
+  "flags": [],
+  "support": "floor-only",
+  "support_geometry": "-",
+  "support_pose": "-",
+  "phys_rest": "-",
+  "phys_human": "-",
+  "phys_g1": "-",
+  "phys_settle": "-",
+  "scene_support": false
+ }
+]

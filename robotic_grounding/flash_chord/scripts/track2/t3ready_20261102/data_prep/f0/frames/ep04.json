@@ -1,0 +1,28 @@
+{
+ "ep": 4,
+ "seq": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+ "frames": 803,
+ "n_mesh_v": 296472,
+ "lift_applied": 0.00794364663628392,
+ "lift_min_signed": -0.00744364663628392,
+ "verts": false,
+ "plane_normal": [
+  0.03166572592735566,
+  -0.00950562266080176,
+  0.999453313036344
+ ],
+ "plane_offset": 0.88882404534417,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "21504c0dbbe1c64200b614879bd926c72add94e64d193525c1e581ca920e231f",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "fd22df03e6bc4c6d29cabf41d056c348a19d6de263d5d8d049f90a3a6d270208",
+  "soma_params.npz": "d6e44115f578524b2a92a252672a8c1fb8afecf0fd0cb9dc77d3a5760646cf53",
+  "ground_plane.json": "90a0a9e68820ab7f79790cfc921dd6ac6dc5959c475d8924efd8ccae68d47e4c",
+  "reconstructed_mesh/output_aligned.glb": "5aa2294d698eb370d0d1435963e42022cc1064faa355b547e492ffe893e51cd7"
+ },
+ "seconds": 10.8
+}

@@ -1,0 +1,15 @@
+{
+ "episode_index": 25,
+ "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+ "object": "cyan_water_bottle",
+ "task": "Walk to the cyan water bottle on the round table. Pick up the bottle with your right hand, rotate and hand it over to your left hand. And keep alternating hands while rortating the bottle. Once done, place the bottle back on the round table.",
+ "frames": 859,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.28604501485824585,
+  "median": 0.1827724277973175,
+  "max": 5.369543552398682
+ },
+ "support": "../../supports/2026-03-20_11-59-57_cyan_water_bottle_rotate_01"
+}

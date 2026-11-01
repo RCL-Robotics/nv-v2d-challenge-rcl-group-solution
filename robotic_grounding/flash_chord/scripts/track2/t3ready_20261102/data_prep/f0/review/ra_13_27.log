@@ -1,0 +1,3 @@
+src2rob [[0.0, 0.0, -1.0], [-1.0, 0.0, 0.0], [0.0, 1.0, 0.0]]
+{"ep": 13, "T": 922, "human_f0_vs_opus_max_m": 1.3354327927928011e-06, "THEIRS": {"f0": [70, 2.51, 7.36], "opus": [70, 1.2, 3.8], "qualifies": false}, "HCA_OPUS": {"f0": [307, 1.11, 4.65], "opus": [307, 0.39, 1.69], "qualifies": false}, "HCA_UNION": {"f0": [331, 0.99, 4.55], "opus": [331, 0.43, 2.0], "qualifies": false}}
+{"ep": 27, "T": 565, "human_f0_vs_opus_max_m": 1.6807450142763969e-06, "THEIRS": {"f0": [214, 0.83, 4.13], "opus": [214, 2.32, 6.64], "qualifies": false}, "HCA_OPUS": {"f0": [320, 0.2, 0.97], "opus": [320, 0.21, 1.42], "qualifies": false}, "HCA_UNION": {"f0": [455, 0.23, 1.4], "opus": [455, 0.58, 4.75], "qualifies": false}}

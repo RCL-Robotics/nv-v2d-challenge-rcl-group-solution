@@ -1,0 +1,110 @@
+{
+ "episode": 4,
+ "object": "baseball_bat",
+ "kind": "f0",
+ "eval_sha256": "7744f86c812e391fb9e079b2b127379bc45b679c8b9c6b523770f2b54390e995",
+ "runs": [
+  {
+   "k": 1,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.1708437110834371,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 127.90665913913601
+   },
+   "gpu": 3,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r1/try1/results/episode_000004.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r1/try1/results/episode_000004.parquet",
+   "json_sha256": "1317c57bd9ae72b9da9869b78dec9072fe8f37d98b56395b3bb5ab8f7ba1401d",
+   "parquet_sha256": "f4093db1c1caffcbcb9993aea74dfd2b94dba4356ee722f5b5300de301854b9b"
+  },
+  {
+   "k": 2,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.1708437110834371,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 128.611888544484
+   },
+   "gpu": 0,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r2/try1/results/episode_000004.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r2/try1/results/episode_000004.parquet",
+   "json_sha256": "9603d3c20b378d64c050a52d9ba4307ed756269007d1e11d5a2be1bfbeffea06",
+   "parquet_sha256": "b5fd18f2c068edef1fa134fe17c02f07c1b3f94c326863c3da8937995ffc8123"
+  },
+  {
+   "k": 3,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.1708437110834371,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 124.69061229510065
+   },
+   "gpu": 1,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r3/try1/results/episode_000004.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r3/try1/results/episode_000004.parquet",
+   "json_sha256": "4ddc6fba62bf0f9825020cd8feaac6b3b867b421ec45f7957628e65e4e352c6c",
+   "parquet_sha256": "e423be496c90493cf733a20c5bf0b80f4b232b4b0222d3cc8cd9e54ad16f1ac9"
+  },
+  {
+   "k": 4,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.1708437110834371,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 129.7416179384064
+   },
+   "gpu": 2,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r4/try1/results/episode_000004.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r4/try1/results/episode_000004.parquet",
+   "json_sha256": "317c85b3c42ea8a3b6e9550376563293d18724b5a097d410face68d15152aa1b",
+   "parquet_sha256": "f31048daaee6144fbfb5cba71d4652279acf1ebeb6748328f0e98b043e12829f"
+  },
+  {
+   "k": 5,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.1708437110834371,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 129.61810755973065
+   },
+   "gpu": 7,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r5/try1/results/episode_000004.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep04/r5/try1/results/episode_000004.parquet",
+   "json_sha256": "803682d72265e3130c7370aff49769de7674c1ebeeaed4fe86263ccfe089dd31",
+   "parquet_sha256": "153c213f6e937628acbfb565406bd4c70c0a5e262fc76f6bc6b1e9ec78ec37ed"
+  }
+ ],
+ "chosen_run": 1,
+ "n_ok": 5,
+ "mean_auc": 0.1708437110834371,
+ "auc_by_run": {
+  "1": 0.1708437110834371,
+  "2": 0.1708437110834371,
+  "3": 0.1708437110834371,
+  "4": 0.1708437110834371,
+  "5": 0.1708437110834371
+ },
+ "distances": {
+  "1": 0.0,
+  "2": 0.0,
+  "3": 0.0,
+  "4": 0.0,
+  "5": 0.0
+ },
+ "rule": "own-input ADD-AUC closest to the mean over the ok runs (exact rational arithmetic on the float64 values); ties -> lower run index",
+ "frozen_at": "2026-10-26 21:53:28",
+ "prereg_sha256": "e4e3a5daf239f5b5858e32442c43eb708947b38c20eae76e12af757a747bd0eb",
+ "driver_sha256": "22c26adfc44727fa5ab29e1671229ef350c7d1c26a293f97c9f9baeac83b1e08",
+ "post_own_input_report_only": {
+  "auc": 0.1708437110834371,
+  "sp_sr": 0.0,
+  "mp_sr": 0.0,
+  "mppe": 129.402933369359
+ }
+}

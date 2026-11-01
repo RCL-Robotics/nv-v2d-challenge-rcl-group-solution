@@ -1,0 +1,14 @@
+{
+ "episode_index": 0,
+ "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+ "object": "tall_bar_stool",
+ "task": "Walk over to the tall bar stool and using both hands, tip the stool from a face down lying down position back to upright.",
+ "frames": 778,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.36859071254730225,
+  "median": 0.2127152979373932,
+  "max": 5.955227851867676
+ }
+}

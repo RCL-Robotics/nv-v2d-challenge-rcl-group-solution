@@ -1,0 +1,30 @@
+{
+ "file": "FINAL",
+ "pack": {
+  "exit": 0,
+  "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/packed_LOCAL_NOT_FOR_UPLOAD.csv",
+  "log": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/pack_LOCAL_NOT_FOR_UPLOAD.log",
+  "command": "nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/tools/pack_submission.py --track track_2_tier3 --results /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --frame-references /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/frame_refs --code-commit https://github.com/local-placeholder/not-uploaded/commit/0000000000000000000000000000000000000000 --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py -o /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/packed_LOCAL_NOT_FOR_UPLOAD.csv",
+  "input_reference_residual_m": 1.44e-07,
+  "input_reference_residual_rad": 1.46e-07,
+  "rows": 22989,
+  "converted_episodes": 30,
+  "error_tail": "",
+  "csv_sha256": "6f73715a9a6f046acfedb6e59f1936a4e507694a889e4e4685bde80b05b48cc6"
+ },
+ "n_episodes": 30,
+ "partial": false,
+ "input_reference_ok": true,
+ "validate": {
+  "exit": 0,
+  "uploader_validate_submission": "pass",
+  "problems": [],
+  "pose_columns_sha256": "778b808369df51fa3d176982e2b584de21bf7d87f6579808459a03763c66fefa",
+  "rows": 22989,
+  "ok": true
+ },
+ "score": {
+  "exit": 0,
+  "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/metric_code_LOCAL_NOT_FOR_UPLOAD.json"
+ }
+}

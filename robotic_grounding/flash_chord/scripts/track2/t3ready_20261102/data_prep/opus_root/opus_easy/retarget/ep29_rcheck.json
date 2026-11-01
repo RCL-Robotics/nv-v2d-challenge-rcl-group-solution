@@ -1,0 +1,117 @@
+{
+ "episode": 29,
+ "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+ "written": "2026-10-24 02:47:24",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 467, 'robot_joint_positions': 467, 'object_body_position': 467, 'object_root_position': 467, 'ik_error_per_frame': 467}; episodes.json 467; manifest 467; Tier-1 manifest 467"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 7.35e-08 m / 1.59e-07 rad; root body-relative drift 0.00e+00 m / 1.72e-07 rad; map rotation 93.81 deg, translation [0.2934, -3.5144, 1.3961]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (7.6e-08 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "floor-only: 2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda: present, geometry False -> scene.support=false"
+  }
+ },
+ "parquet_sha256": "7e82e08f359f9a3b9e3581ee027146311514517a2c8d40c3e557cf3f5c58408a",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 7.57684333405941e-08,
+   "resid_rad": 9.424321830774485e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.1112 m, 0.1202 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.04864 m, 0.5283 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "floor-only",
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.6509387493133545,
+   0.7155147075653077,
+   0.7840644717216492
+  ],
+  "hand_contact_frames_left_right": [
+   0,
+   0
+  ],
+  "robot_root_z_median_min_max": [
+   0.7936399579048157,
+   0.7795681953430176,
+   0.8061168789863586
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.6618732810020447,
+   0.7157679975032807,
+   0.7350801229476929
+  ],
+  "hand_contact_frames_left_right": [
+   19,
+   7
+  ],
+  "robot_root_z_median_min_max": [
+   0.7920553684234619,
+   0.7746073007583618,
+   0.8006704449653625
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": -1.9134762068361066,
+ "retarget_object_ground_correction": "minimum=-0.0291 m, requested=+0.0296 m, applied=+0.0100 m, cap=0.0100 m (capped)",
+ "all_ok": true
+}

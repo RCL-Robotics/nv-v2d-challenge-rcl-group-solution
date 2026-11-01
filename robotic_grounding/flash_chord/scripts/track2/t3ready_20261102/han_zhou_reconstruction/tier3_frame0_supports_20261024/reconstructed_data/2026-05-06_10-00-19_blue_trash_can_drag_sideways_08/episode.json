@@ -1,0 +1,14 @@
+{
+ "episode_index": 18,
+ "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+ "object": "blue_trash_can",
+ "task": "Walk over to the blue trash can and slide the blue trash can side ways.",
+ "frames": 858,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.34328240156173706,
+  "median": 0.23421543836593628,
+  "max": 3.372800350189209
+ }
+}

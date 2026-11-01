@@ -1,0 +1,28 @@
+{
+ "ep": 23,
+ "seq": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+ "frames": 946,
+ "n_mesh_v": 290547,
+ "lift_applied": 0.00859919546183252,
+ "lift_min_signed": -0.00809919546183252,
+ "verts": false,
+ "plane_normal": [
+  0.0015572237824706112,
+  0.06867390292744377,
+  0.9976379454044455
+ ],
+ "plane_offset": 0.9698554647504887,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "e69b5602563664bfcd6c5fa28e4aa8c39a784630ff99752f4e44768d26529b36",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "2372cd9e3c7ebd50a032b9d343d43f62f556f05ed909fd2b41139d0ead99f511",
+  "soma_params.npz": "42f6e00964a1f7d565eeeeec89c6d42e081c5231347a6279c46fcf16dd20ec9a",
+  "ground_plane.json": "5c693e01593f88a582037a02da0a237112db8aec24ed1aa76b1cfa3a00ce0156",
+  "reconstructed_mesh/output_aligned.glb": "a9c278ea07d4dac5157210c4e67819fcfaf3254a6afc801c988a3e66b83b9636"
+ },
+ "seconds": 14.3
+}

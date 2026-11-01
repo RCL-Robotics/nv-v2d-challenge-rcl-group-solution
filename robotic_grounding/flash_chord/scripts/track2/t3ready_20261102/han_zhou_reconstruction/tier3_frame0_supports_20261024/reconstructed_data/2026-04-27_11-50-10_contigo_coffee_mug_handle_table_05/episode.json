@@ -1,0 +1,15 @@
+{
+ "episode_index": 3,
+ "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+ "object": "contigo_coffee_mug",
+ "task": "Walk to the coffee mug on the round table, lift it by the handle with your right hand and set it down, then repeat with your left, alternating a few times before leaving it on the table.",
+ "frames": 781,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3123500645160675,
+  "median": 0.1739342361688614,
+  "max": 2.8266894817352295
+ },
+ "support": "../../supports/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05"
+}

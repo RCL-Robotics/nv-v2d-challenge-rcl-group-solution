@@ -1,0 +1,17 @@
+# bash tools/code_identity_t3.sh <repo> <staged tree> <ME>/code/fc_r2 <ME>/code/nv-v2d-challenge-codebase
+# run 2026-11-02 02:32:42 CST on the staged tree before the commit (git write-tree --missing-ok: this sparse clone lacks
+# 449 blobs of 41403d3 outside robotic_grounding, all unchanged here). The tree differs from the commit's only by
+# this file and SHA256SUMS; items 1-6 do not depend on them.
+checked: b70f852b1d598c593125ca1e52430624f5eaac52 (tree b70f852b1d598c593125ca1e52430624f5eaac52)
+1. robotic_grounding/flash_chord/src tree: b70f852b1d598c593125ca1e52430624f5eaac52 b8000f82af18ebdead79e9467aca5d32fa654ad5, 41403d3 b8000f82af18ebdead79e9467aca5d32fa654ad5 -> IDENTICAL
+2. paths changed vs 41403d3 outside the t3ready_20261102 bundle and TIER3_SUBMISSION.md: none
+3. fc_r2 @ 61fa5d3 tracked files: 335; same blob in b70f852b1d598c593125ca1e52430624f5eaac52:robotic_grounding/flash_chord: 327
+   different blob (Git-LFS media pointers vs content): docs/media/g1_policy.gif docs/media/g1_reference.gif docs/media/g1_robot.gif docs/media/g1_scene.gif docs/media/sharpa_policy.gif docs/media/sharpa_reference.gif docs/media/sharpa_robot.gif docs/media/sharpa_scene.gif 
+   missing here: none
+   only here (not tracked in fc_r2): scripts/track2/repro (27 files) scripts/track2/t3ready_20261102 (946 files) src/flash_chord/assets (567 files) 
+4. soma_to_g1.py blob: b70f852b1d598c593125ca1e52430624f5eaac52 8207b16312237b1510858e379705ba7ae2069e61, nv f2923d6 8207b16312237b1510858e379705ba7ae2069e61 -> IDENTICAL
+5. sha256 scripts/track2/eval_all.py: 657295921e820a464160039ad9a65ba92a683108a99dcb197290ae4147363197
+5. sha256 src/flash_chord/training/ppo/coordinate/export.py: 34e3d7f3a7dca4fdd1e7c4d26750c6332abcc1d629f6a9c6c7a965833a22206f
+5. sha256 scripts/train_rl.py: eafa5723fab4a3ee565843d6718a8318a91288437d8cc03dc6829ce2a8e703a7
+   pins (t3_f0_final PREREG section 10): eval_all.py 657295921e820a464160039ad9a65ba92a683108a99dcb197290ae4147363197, export.py 34e3d7f3a7dca4fdd1e7c4d26750c6332abcc1d629f6a9c6c7a965833a22206f
+6. src/flash_chord/assets: 583 files here; fc_r2 working-tree files equal: 559 Git-LFS objects (sha256 = pointer oid) + 24 plain files; problems: none

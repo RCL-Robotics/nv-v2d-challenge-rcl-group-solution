@@ -1,0 +1,28 @@
+{
+ "ep": 22,
+ "seq": "2026-05-22_16-52-36_step_ladder_drag_03",
+ "frames": 719,
+ "n_mesh_v": 179840,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.0032902360243046713,
+ "verts": false,
+ "plane_normal": [
+  -0.037847371171383426,
+  -0.018977135939424274,
+  0.9991033203863113
+ ],
+ "plane_offset": 0.913959624076831,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "562f2849a063fb659ff857bb575c71f1b30fb372f9f3c044a774b387d93e0db9",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "f748f8ec158329ba3fb955036ce546f111da2b16f2981f0d4226b27f1aec54ef",
+  "soma_params.npz": "9965731b11bb75097427408a110326decede4fdb9e6464df7400c49a0bd014c0",
+  "ground_plane.json": "d9976877635c28eed040edccb0e1611af7c62ae033375656930235fd4af3b071",
+  "reconstructed_mesh/output_aligned.glb": "047a78a75436d9ae5e773074a9b4f2508bd35823a7067149f166f04a33341ee1"
+ },
+ "seconds": 12.6
+}

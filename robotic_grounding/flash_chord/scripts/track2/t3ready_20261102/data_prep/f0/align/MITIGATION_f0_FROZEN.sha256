@@ -1,0 +1,6 @@
+2ab767eb9028f3adbe9a091628a957e9bdebf21420a8bed2718e2acec6ebda0e  tmp_analysis/tier3/f0/align/mitigation_f0.json
+1ccbd2963ced0bc0c928307bc2a3e9988dff9873199ccb1592aec6b738cd61b6  tmp_analysis/tier3/f0/align/ALIGN_FILES.sha256
+03ea75fcffb280d722405052f4a05cd25c07abeafb2e0edecc016d9a56531906  scripts/t3f0_align.py
+f7f35d3c648fa25592bf32f1ec84c0e5ce093d9d65fed9947433221bbbc67138  tmp_analysis/tier3/f0/align/summary.json
+a34c3dbaef514dea04dd5d0413ac652ecc081212bafe97342991d6dfef6d089b  tmp_analysis/tier3/f0/align/summary.tsv
+# frozen 2026-10-24 22:51:59 CST before any f0 training; cited by PREREG_f0.md

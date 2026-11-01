@@ -1,0 +1,28 @@
+{
+ "ep": 8,
+ "seq": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+ "frames": 708,
+ "n_mesh_v": 81066,
+ "lift_applied": 0.002088166750802422,
+ "lift_min_signed": -0.0015881667508024222,
+ "verts": false,
+ "plane_normal": [
+  -0.008953993341406254,
+  -0.01533553388053195,
+  0.9998423112690527
+ ],
+ "plane_offset": 0.8775453349528162,
+ "M_vs_object_chain_max_err": [
+  7.91033905045424e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "1fc96684f9ca24707e651c6fa43a57b682d29c1389d0810a343f80956cd323e5",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "2296a9b36d843ded62c71ef1757702efacf29a036a0897419b78db18fc04875d",
+  "soma_params.npz": "4f7f1c43908948d9d763c7f62a9629cdc8f1ecfc91c96d06bb2d7718884f0018",
+  "ground_plane.json": "33e86866ebc96590fcaa3dd2346af1885a2c1c61e9683ffe491e5b105bb72a9e",
+  "reconstructed_mesh/output_aligned.glb": "7982ef074fe2e8b2bbab813ccb4cc848c05571e7c3adef42458b73449481d35a"
+ },
+ "seconds": 8.8
+}

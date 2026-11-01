@@ -1,0 +1,454 @@
+{
+ "written": "2026-10-26 21:48:55",
+ "note": "dry run: nothing started; files only under f0_retry/dryrun/",
+ "gates": {
+  "prereg": {
+   "ok": true,
+   "why": "sha256(PREREG_retry.md) 95ab39f578c9700b... == 95ab39f578c9700b..."
+  },
+  "files": {
+   "ok": true,
+   "why": "pinned files ok: AMENDMENT_1_t3_f0_final.md, launch.sh, recipes/ep01.json, recipes/ep02.json, recipes/ep04.json, recipes/ep05.json, t3retry.py"
+  },
+  "go": {
+   "ok": false,
+   "why": "RETRY_GO absent (nothing starts until the main session writes it after the user's approval)"
+  },
+  "f0_all_launched": {
+   "ok": false,
+   "why": "tmp_analysis/tier3/f0/ALL_LAUNCHED absent (f0 clips still waiting; retries rank below every FRESH f0 clip)"
+  },
+  "stop": {
+   "ok": true,
+   "why": "no STOP"
+  },
+  "all_ok": false
+ },
+ "candidates": [
+  "01",
+  "02",
+  "04",
+  "05"
+ ],
+ "candidate_rows": {
+  "00": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.9665006426735219,
+   "evaluated_iteration": 18910,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "01": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 0.0,
+   "own_input_mp_sr": 0.0,
+   "own_input_auc": 0.1945281124497992,
+   "evaluated_iteration": 44922,
+   "verdict_agrees": true,
+   "candidate": true
+  },
+  "02": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 0.0,
+   "own_input_mp_sr": 0.0,
+   "own_input_auc": 0.18392857142857144,
+   "evaluated_iteration": 44922,
+   "verdict_agrees": true,
+   "candidate": true
+  },
+  "03": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.984314980793854,
+   "evaluated_iteration": 19184,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "04": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 0.0,
+   "own_input_mp_sr": 0.0,
+   "own_input_auc": 0.1708437110834371,
+   "evaluated_iteration": 44922,
+   "verdict_agrees": true,
+   "candidate": true
+  },
+  "05": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 0.0,
+   "own_input_mp_sr": 0.0,
+   "own_input_auc": 0.27928713858424725,
+   "evaluated_iteration": 44922,
+   "verdict_agrees": true,
+   "candidate": true
+  },
+  "06": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.8436355311355311,
+   "evaluated_iteration": 44922,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "07": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.9866768973214286,
+   "evaluated_iteration": 20779,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "08": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.9609816384180792,
+   "evaluated_iteration": 17451,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "10": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.5518734256926952,
+   "evaluated_iteration": 25976,
+   "verdict_agrees": true,
+   "candidate": false
+  },
+  "12": {
+   "post_status": "done",
+   "eval_status": "evaluated",
+   "own_input_sp_sr": 1.0,
+   "own_input_mp_sr": 1.0,
+   "own_input_auc": 0.6872321428571428,
+   "evaluated_iteration": 29267,
+   "verdict_agrees": true,
+   "candidate": false
+  }
+ },
+ "cfgcheck": {
+  "01": {
+   "ok": true,
+   "checks": {
+    "diff_keys_allowed": true,
+    "parquet_same": true,
+    "scene_support_same": true,
+    "seed_same": true,
+    "experiment_same": true,
+    "object_threshold": true,
+    "palm_threshold": true,
+    "start_update": true,
+    "deadline_unchanged": true,
+    "resume": true,
+    "max_iterations": true,
+    "early_stop_off": true,
+    "help_zero_before_cap": true
+   },
+   "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01/hydra/.hydra/config.yaml",
+   "diff": {
+    "logging.experiment": [
+     "C3r2_tier3_f0",
+     "C3r2_tier3_f0_retry"
+    ],
+    "logging.run_name": [
+     "ep01_vacuum",
+     "ep01_vacuum_retry"
+    ],
+    "output_dir": [
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01",
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01"
+    ],
+    "reset.start_update": [
+     0,
+     44922
+    ],
+    "termination.object_position_threshold": [
+     0.1,
+     0.2
+    ],
+    "training.checkpoint": [
+     null,
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01/model_44922.safetensors"
+    ],
+    "training.early_stop_help_zero_tail": [
+     5860,
+     0
+    ],
+    "training.max_iterations": [
+     45000,
+     90000
+    ],
+    "training.resume": [
+     false,
+     true
+    ]
+   }
+  },
+  "02": {
+   "ok": true,
+   "checks": {
+    "diff_keys_allowed": true,
+    "parquet_same": true,
+    "scene_support_same": true,
+    "seed_same": true,
+    "experiment_same": true,
+    "object_threshold": true,
+    "palm_threshold": true,
+    "start_update": true,
+    "deadline_unchanged": true,
+    "resume": true,
+    "max_iterations": true,
+    "early_stop_off": true,
+    "help_zero_before_cap": true
+   },
+   "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02/hydra/.hydra/config.yaml",
+   "diff": {
+    "logging.experiment": [
+     "C3r2_tier3_f0",
+     "C3r2_tier3_f0_retry"
+    ],
+    "logging.run_name": [
+     "ep02_blue_easter_basket",
+     "ep02_blue_easter_basket_retry"
+    ],
+    "output_dir": [
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02",
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02"
+    ],
+    "reset.start_update": [
+     0,
+     44922
+    ],
+    "termination.object_position_threshold": [
+     0.1,
+     0.21
+    ],
+    "training.checkpoint": [
+     null,
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02/model_44922.safetensors"
+    ],
+    "training.early_stop_help_zero_tail": [
+     5860,
+     0
+    ],
+    "training.max_iterations": [
+     45000,
+     90000
+    ],
+    "training.resume": [
+     false,
+     true
+    ]
+   }
+  },
+  "04": {
+   "ok": true,
+   "checks": {
+    "diff_keys_allowed": true,
+    "parquet_same": true,
+    "scene_support_same": true,
+    "seed_same": true,
+    "experiment_same": true,
+    "object_threshold": true,
+    "palm_threshold": true,
+    "start_update": true,
+    "deadline_unchanged": true,
+    "resume": true,
+    "max_iterations": true,
+    "early_stop_off": true,
+    "help_zero_before_cap": true
+   },
+   "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04/hydra/.hydra/config.yaml",
+   "diff": {
+    "logging.experiment": [
+     "C3r2_tier3_f0",
+     "C3r2_tier3_f0_retry"
+    ],
+    "logging.run_name": [
+     "ep04_baseball_bat",
+     "ep04_baseball_bat_retry"
+    ],
+    "output_dir": [
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04",
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04"
+    ],
+    "reset.start_update": [
+     0,
+     44922
+    ],
+    "termination.object_position_threshold": [
+     0.1,
+     0.2
+    ],
+    "termination.palm_position_threshold": [
+     0.15,
+     0.25
+    ],
+    "training.checkpoint": [
+     null,
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04/model_44922.safetensors"
+    ],
+    "training.early_stop_help_zero_tail": [
+     5860,
+     0
+    ],
+    "training.max_iterations": [
+     45000,
+     90000
+    ],
+    "training.resume": [
+     false,
+     true
+    ]
+   }
+  },
+  "05": {
+   "ok": true,
+   "checks": {
+    "diff_keys_allowed": true,
+    "parquet_same": true,
+    "scene_support_same": true,
+    "seed_same": true,
+    "experiment_same": true,
+    "object_threshold": true,
+    "palm_threshold": true,
+    "start_update": true,
+    "deadline_unchanged": true,
+    "resume": true,
+    "max_iterations": true,
+    "early_stop_off": true,
+    "help_zero_before_cap": true
+   },
+   "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05/hydra/.hydra/config.yaml",
+   "diff": {
+    "logging.experiment": [
+     "C3r2_tier3_f0",
+     "C3r2_tier3_f0_retry"
+    ],
+    "logging.run_name": [
+     "ep05_big_black_box",
+     "ep05_big_black_box_retry"
+    ],
+    "output_dir": [
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05",
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05"
+    ],
+    "reset.start_update": [
+     0,
+     44922
+    ],
+    "termination.palm_position_threshold": [
+     0.15,
+     0.25
+    ],
+    "training.checkpoint": [
+     null,
+     "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05/model_44922.safetensors"
+    ],
+    "training.early_stop_help_zero_tail": [
+     5860,
+     0
+    ],
+    "training.max_iterations": [
+     45000,
+     90000
+    ],
+    "training.resume": [
+     false,
+     true
+    ]
+   }
+  }
+ },
+ "commands": {
+  "01": {
+   "state": [
+    "QUEUED",
+    "recipe frozen; waits for the gates and a slot"
+   ],
+   "plan_now": "WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings",
+   "fork": {
+    "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01/model_44922.safetensors",
+    "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01/rsi_44922.safetensors",
+    "to": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01"
+   },
+   "train": "taskset -c <cpus> /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01 training.max_iterations=90000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0_retry logging.run_name=ep01_vacuum_retry logging.upload_checkpoints=false scene.support=true termination.object_position_threshold=0.20 termination.palm_position_threshold=0.25 training.resume=true training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01/model_44922.safetensors training.early_stop_help_zero_tail=0 reset.start_update=44922 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep01/hydra +logging.local_jsonl=true",
+   "eval_f0final_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep01/f0final/r1_tol0.0001_try1 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 1 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep01/f0final/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python",
+   "eval_retry_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep01/retry/r1_tol0.0001_try1 --arm C3r2_tier3_f0_retry --checkpoint-from-final --iteration 90000 --episodes 1 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep01/retry/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python"
+  },
+  "02": {
+   "state": [
+    "QUEUED",
+    "recipe frozen; waits for the gates and a slot"
+   ],
+   "plan_now": "WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings",
+   "fork": {
+    "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02/model_44922.safetensors",
+    "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02/rsi_44922.safetensors",
+    "to": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02"
+   },
+   "train": "taskset -c <cpus> /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02 training.max_iterations=90000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0_retry logging.run_name=ep02_blue_easter_basket_retry logging.upload_checkpoints=false scene.support=true termination.object_position_threshold=0.21 termination.palm_position_threshold=0.25 training.resume=true training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02/model_44922.safetensors training.early_stop_help_zero_tail=0 reset.start_update=44922 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02/hydra +logging.local_jsonl=true",
+   "eval_f0final_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/f0final/r1_tol0.0001_try1 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 2 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/f0final/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python",
+   "eval_retry_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r1_tol0.0001_try1 --arm C3r2_tier3_f0_retry --checkpoint-from-final --iteration 90000 --episodes 2 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python"
+  },
+  "04": {
+   "state": [
+    "QUEUED",
+    "recipe frozen; waits for the gates and a slot"
+   ],
+   "plan_now": "WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings",
+   "fork": {
+    "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04/model_44922.safetensors",
+    "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04/rsi_44922.safetensors",
+    "to": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04"
+   },
+   "train": "taskset -c <cpus> /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04 training.max_iterations=90000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0_retry logging.run_name=ep04_baseball_bat_retry logging.upload_checkpoints=false scene.support=false termination.object_position_threshold=0.20 termination.palm_position_threshold=0.25 training.resume=true training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04/model_44922.safetensors training.early_stop_help_zero_tail=0 reset.start_update=44922 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04/hydra +logging.local_jsonl=true",
+   "eval_f0final_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/f0final/r1_tol0.0001_try1 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 4 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/f0final/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python",
+   "eval_retry_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r1_tol0.0001_try1 --arm C3r2_tier3_f0_retry --checkpoint-from-final --iteration 90000 --episodes 4 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python"
+  },
+  "05": {
+   "state": [
+    "QUEUED",
+    "recipe frozen; waits for the gates and a slot"
+   ],
+   "plan_now": "WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings",
+   "fork": {
+    "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05/model_44922.safetensors",
+    "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05/rsi_44922.safetensors",
+    "to": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05"
+   },
+   "train": "taskset -c <cpus> /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05 training.max_iterations=90000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0_retry logging.run_name=ep05_big_black_box_retry logging.upload_checkpoints=false scene.support=false termination.palm_position_threshold=0.25 training.resume=true training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05/model_44922.safetensors training.early_stop_help_zero_tail=0 reset.start_update=44922 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05/hydra +logging.local_jsonl=true",
+   "eval_f0final_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/f0final/r1_tol0.0001_try1 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 5 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/f0final/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python",
+   "eval_retry_run1": "nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r1_tol0.0001_try1 --arm C3r2_tier3_f0_retry --checkpoint-from-final --iteration 90000 --episodes 5 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r1_tol0.0001_try1/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python"
+  }
+ },
+ "lane_lock_files_gpu0": [
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu0.lock",
+  "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu0.lock"
+ ]
+}

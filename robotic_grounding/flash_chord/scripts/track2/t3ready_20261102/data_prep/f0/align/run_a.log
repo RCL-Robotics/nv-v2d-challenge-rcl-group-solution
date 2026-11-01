@@ -1,0 +1,21 @@
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:333)
+/root/autodl-tmp/haoran.zhang/conda_envs/v2d/lib/python3.11/site-packages/soma/geometry/skeleton_transfer.py:248: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.sparse_rbf_matrix = torch.sparse_csr_tensor(
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, CUDA driver not available (NVRTC compilation available)
+   Devices:
+     "cpu"      : "x86_64"
+   Kernel cache:
+     /root/.cache/warp/1.18.0
+Module soma.geometry.align_vectors_warp 5f6e29d load on device 'cpu' took 1.86 ms  (cached)
+Module soma.geometry.lbs_warp 202b92a load on device 'cpu' took 0.27 ms  (cached)
+{"ep": 0, "n": 137, "j_opus": 0.33, "j_f0": 0.66, "p90_opus": 0.84, "p90_f0": 1.84, "e_opus": 1.33, "e_f0": 1.32, "disp": 4.24, "q": false, "s": 41.7}
+{"ep": 1, "n": 3, "j_opus": 1.44, "j_f0": 2.31, "p90_opus": 1.61, "p90_f0": 2.94, "e_opus": 1.06, "e_f0": 1.44, "disp": 7.26, "q": false, "s": 71.8}
+{"ep": 2, "n": 0, "j_opus": null, "j_f0": null, "p90_opus": null, "p90_f0": null, "e_opus": null, "e_f0": null, "disp": null, "q": null, "s": 76.8}
+{"ep": 4, "n": 3, "j_opus": 0.51, "j_f0": 2.05, "p90_opus": 1.87, "p90_f0": 3.25, "e_opus": 0.71, "e_f0": 0.69, "disp": 10.76, "q": false, "s": 80.7}
+{"ep": 5, "n": 29, "j_opus": 0.27, "j_f0": 0.84, "p90_opus": 0.56, "p90_f0": 2.64, "e_opus": 1.81, "e_f0": 1.22, "disp": 3.94, "q": false, "s": 34.3}
+{"ep": 6, "n": 28, "j_opus": 0.69, "j_f0": 0.24, "p90_opus": 1.59, "p90_f0": 0.5, "e_opus": 0.06, "e_f0": 0.35, "disp": 7.91, "q": false, "s": 23.9}
+{"ep": 7, "n": 106, "j_opus": 0.19, "j_f0": 0.53, "p90_opus": 0.61, "p90_f0": 1.44, "e_opus": 0.55, "e_f0": 0.97, "disp": 4.23, "q": false, "s": 25.6}
+{"ep": 8, "n": 207, "j_opus": 0.55, "j_f0": 0.72, "p90_opus": 2.34, "p90_f0": 2.56, "e_opus": 0.51, "e_f0": 0.53, "disp": 0.63, "q": false, "s": 40.3}
+{"ep": 9, "n": 186, "j_opus": 0.38, "j_f0": 0.69, "p90_opus": 3.11, "p90_f0": 2.7, "e_opus": 0.03, "e_f0": 0.03, "disp": 24.57, "q": false, "s": 131.7}
+{"ep": 10, "n": 71, "j_opus": 0.49, "j_f0": 0.5, "p90_opus": 0.86, "p90_f0": 1.55, "e_opus": 2.88, "e_f0": 1.79, "disp": 2.4, "q": false, "s": 33.2}

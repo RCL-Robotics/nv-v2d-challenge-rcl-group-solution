@@ -1,0 +1,14 @@
+{
+ "episode_index": 10,
+ "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+ "object": "white_desk",
+ "task": "Walk to the white desk, use both your hands to grasp on the edge of the table closest to you, and lower the desk to the ground.",
+ "frames": 794,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.39233914017677307,
+  "median": 0.19884341955184937,
+  "max": 8.304990768432617
+ }
+}

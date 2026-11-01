@@ -1,0 +1,15 @@
+{
+ "episode_index": 16,
+ "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+ "object": "spray_bottle",
+ "task": "Walk to the spray bottle on the white desk, pick up the spray bottle with your left hand and place it on the ground.",
+ "frames": 477,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3790983557701111,
+  "median": 0.1980327069759369,
+  "max": 10.44147777557373
+ },
+ "support": "../../supports/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02"
+}

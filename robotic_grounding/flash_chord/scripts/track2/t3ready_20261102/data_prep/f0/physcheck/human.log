@@ -1,0 +1,14 @@
+{"ep": 1, "frames": 747, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 14.56, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 2, "frames": 980, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 2.34, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 3, "frames": 781, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.18, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 6, "frames": 546, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 7, "frames": 896, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 9, "frames": 870, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 6.88, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 11, "frames": 901, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 13, "frames": 922, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 16, "frames": 477, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 17, "frames": 440, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 20, "frames": 553, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.41, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 25, "frames": 859, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": -1.5, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 27, "frames": 565, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 0.43, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+{"ep": 28, "frames": 988, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 30.11, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}

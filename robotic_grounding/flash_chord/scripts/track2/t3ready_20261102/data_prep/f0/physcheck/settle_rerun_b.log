@@ -1,0 +1,6 @@
+Warp DeprecationWarning: warp.config.quiet is deprecated; use warp.config.log_level = warp.LOG_WARNING to suppress the init banner.
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+{"run": [0, 118], "frame": 59, "anchor": true, "held_min_dist_cm": 14.9, "with_support": {"final_dp_cm": 0.966, "max_dp_cm": 1.741, "final_rot_deg": 2.191, "max_rot_deg": 3.001, "final_z_change_cm": 0.516, "final_disp_cm": [-0.47, -0.66, 0.52], "disp_at_0p2_1_2s_cm": [[-0.25, -0.26, 1.43], [-0.16, -0.95, 1.29], [-0.32, -0.7, 0.64]], "ok": true}, "hulls": 2, "no_support_control": {"final_dp_cm": 52.462, "max_dp_cm": 53.714, "final_rot_deg": 69.734, "max_rot_deg": 72.26, "final_z_change_cm": -51.107, "final_disp_cm": [-6.06, 10.18, -51.11], "disp_at_0p2_1_2s_cm": [[0.25, 0.16, -19.69], [-6.06, 10.18, -51.11], [-6.06, 10.18, -51.11]], "ok": false}}
+settle all_ok True anchor_ok True control moves True
+{"ep": 28, "frames": 988, "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top", "min_sdf_cm": 30.11, "violating_frames": 0, "violating_runs": [], "worst": [], "joints_involved": []}
+DONE

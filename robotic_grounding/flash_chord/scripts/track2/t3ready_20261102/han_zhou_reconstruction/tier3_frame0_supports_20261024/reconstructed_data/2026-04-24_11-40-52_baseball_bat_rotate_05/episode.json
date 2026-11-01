@@ -1,0 +1,14 @@
+{
+ "episode_index": 4,
+ "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+ "object": "baseball_bat",
+ "task": "Walk over to the baseball bat and pick up the baseball bat. Slowly begin to rotate the baseball bat and yourself around the bounding area so that every camera gets a visual of the baseball baat.",
+ "frames": 803,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3588257133960724,
+  "median": 0.19386111199855804,
+  "max": 9.02922248840332
+ }
+}

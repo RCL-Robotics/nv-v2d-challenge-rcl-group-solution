@@ -1,0 +1,28 @@
+{
+ "ep": 25,
+ "seq": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+ "frames": 859,
+ "n_mesh_v": 259484,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.7839093183713585,
+ "verts": true,
+ "plane_normal": [
+  0.02079908587058077,
+  0.01081926772000934,
+  0.9997251329605309
+ ],
+ "plane_offset": 1.014286968849155,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "a836d005a8f57f14f4e32ab2fbd04ebdb8dc21db0ca13701c941ee2184485244",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "1c9ad3090081391c9ec9e90bfd85d139a23f8b1bcef48cdf2d307c6ee3258fb2",
+  "soma_params.npz": "d0d0f631a3912d9ecdad05402a81f46d1a1683a3479c3c27fb75f99819498446",
+  "ground_plane.json": "ae70886b882558cba4b9dc2be7884a02e7df41edded8e1dcf67fadd84f21ae94",
+  "reconstructed_mesh/output_aligned.glb": "ebc656d5de2c6fb0075acd136503ac936b6c821fbfe05b21286efbc9af7225d6"
+ },
+ "seconds": 20.8
+}

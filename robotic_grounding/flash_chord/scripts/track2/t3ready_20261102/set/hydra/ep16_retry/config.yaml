@@ -1,0 +1,315 @@
+task:
+  parquet: /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet
+  motion_speed: 1.0
+  source_frame_playback: true
+  motion_start_frame: 0
+  motion_end_frame: -1
+sim:
+  _target_: flash_chord.runtime.sim.SimConfig
+  fps: 50.0
+  substeps: 4
+  solver: newton
+  integrator: implicitfast
+  cone: pyramidal
+  njmax: 1024
+  nconmax: 512
+  impratio: 1.0
+  iterations: 100
+  ls_iterations: 50
+  use_mujoco_contacts: true
+scene:
+  world_count: 4096
+  support: true
+  decompose_objects: true
+  object_scale_min: 1.0
+  object_scale_max: 1.0
+  object_scale_seed: 0
+  contact_friction: 1.0
+  object_free_joint_damping: 0.01
+collision:
+  _target_: flash_chord.scene.collision.CollisionPolicy
+  robot_scope: all
+  hand_self_collision: true
+  robot_object_collision: true
+  robot_support_collision: true
+  ground: true
+embodiment:
+  _target_: flash_chord.embodiments.g1_dex3.G1Dex3
+  config:
+    _target_: flash_chord.embodiments.g1_dex3.G1Dex3Config
+    asset_id: g1_dex3_upstream_main
+    asset_sha256: 8c7f768dc8da6c969d8a4b4efb3dcbe3d9d2b05fca5104df12205a69879d19e9
+    replace_cylinders_with_capsules: true
+action:
+  _target_: flash_chord.runtime.actions.SonicJointResidualActionConfig
+  residual_joint_names:
+  - left_hip_pitch_joint
+  - right_hip_pitch_joint
+  - waist_yaw_joint
+  - left_hip_roll_joint
+  - right_hip_roll_joint
+  - waist_roll_joint
+  - left_hip_yaw_joint
+  - right_hip_yaw_joint
+  - waist_pitch_joint
+  - left_knee_joint
+  - right_knee_joint
+  - left_shoulder_pitch_joint
+  - right_shoulder_pitch_joint
+  - left_ankle_pitch_joint
+  - right_ankle_pitch_joint
+  - left_shoulder_roll_joint
+  - right_shoulder_roll_joint
+  - left_ankle_roll_joint
+  - right_ankle_roll_joint
+  - left_shoulder_yaw_joint
+  - right_shoulder_yaw_joint
+  - left_elbow_joint
+  - right_elbow_joint
+  - left_wrist_roll_joint
+  - right_wrist_roll_joint
+  - left_wrist_pitch_joint
+  - right_wrist_pitch_joint
+  - left_wrist_yaw_joint
+  - right_wrist_yaw_joint
+  residual_scale: 0.15
+  finger_residual_scale: 0.15
+  use_tanh: false
+  body_delay:
+    _target_: flash_chord.runtime.delay.TargetDelayConfig
+    min_steps: 0
+    max_steps: 2
+    seed: 0
+  enable_cuda_graph: true
+  input_mode: raw
+  normalized_mapping: linear
+observation:
+  _target_: flash_chord.envs.recon_body.ReconBodyObservationConfig
+objective:
+  _target_: flash_chord.objectives.recon_body.ReconBodyObjectiveConfig
+  termination_weight: -300.0
+  action_rate_l2_weight: -0.0001
+  action_l2_weight: -1.0e-06
+  soft_joint_limit_weight: -0.001
+  pelvis_position_weight: 1.0
+  pelvis_orientation_weight: 1.0
+  body_joint_position_weight: 5.0
+  object_position_weight: 1.0
+  progress_weight: 1.0
+  palm_position_weight: 1.0
+  palm_orientation_weight: 1.0
+  force_closure_weight: 5.0
+  pelvis_position_std: 0.3
+  pelvis_orientation_std: 0.4
+  body_joint_position_std: 1.0
+  object_position_std: 0.2
+  palm_position_std: 0.2
+  palm_orientation_std: 0.4
+  soft_joint_limit_factor: 0.9
+  force_closure_min_support: 0.01
+  num_wrench_basis: 512
+  num_friction_cone_edges: 8
+  friction_coefficient: 0.1
+  wrench_basis_seed: 0
+  sides:
+  - left
+  - right
+  object_task_weight: 5.0
+  object_task_position_beta: 10.0
+  object_task_rotation_beta: 1.0
+termination:
+  _target_: flash_chord.lifecycle.termination.ReconBodyTerminationConfig
+  pelvis_position_threshold: 0.7
+  pelvis_orientation_threshold: 1.5
+  palm_position_threshold: 0.25
+  palm_orientation_threshold: 1.5
+  object_position_threshold: 0.1
+  object_orientation_threshold: 1.5
+  reset_freeze_steps: 50
+  truncate_at_reference_end: true
+  sides:
+  - left
+  - right
+reset:
+  _target_: flash_chord.lifecycle.rsi_reset.RSIReconBodyResetConfig
+  reset_freeze_steps: 50
+  voc_decay_steps: 10
+  reset_voc_scale: 1.0
+  shoulder_spread: 0.2
+  start_frame: 0
+  end_frame: -1
+  always_reset_to_first_frame: false
+  reset_to_first_frame_probability: 0.0
+  immediate_first_frame_probability: 0.0
+  seed: 42
+  bin_frames: 25
+  uniform_mix: 0.3
+  credit_gamma: 0.75
+  fail_alpha: 0.02
+  success_up: 0.8
+  success_down: 0.4
+  step: 0.9
+  band: 2.0
+  min_count: 64
+  min_gap: 156
+  wait_iterations: 391
+  top0: 1.0
+  zero_below: 0.000625
+  deadline: 35156
+  zero_ramp: 3906
+  min_horizon: 10
+  frame0_share: 0.25
+  start_update: 44922
+  keyframes: true
+  kf_to_end: true
+  kf_capacity: 256
+  kf_prob: 0.002
+  kf_min_fill: 32
+  kf_min_task: 0.6
+  kf_min_stepped: 15
+  kf_step_score_min: 0.3
+  task_pos_scale: 10.0
+env:
+  _target_: flash_chord.envs.rl.RLEnvConfig
+  sim: ${sim}
+  action: ${action}
+  voc:
+    _target_: flash_chord.runtime.object_control.VOCParams
+    k_lin: 50.0
+    d_lin: 10.0
+    k_ang: 10.0
+    d_ang: 0.1
+    max_force: 60.0
+    max_torque: 60.0
+    gravity: 9.81
+    mass_normalized_gains: false
+  termination: ${termination}
+  contact:
+    _target_: flash_chord.runtime.contact.ContactTrackerConfig
+    sides:
+    - left
+    - right
+  objective: ${objective}
+  voc_scale: 1.0
+  arm_position_integral:
+    _target_: flash_chord.runtime.joint_drive.JointPositionIntegralConfig
+    gain_s_inv2: 0.0
+    max_effort_fraction: 0.15
+  enforce_joint_velocity_limits: true
+  observation: ${observation}
+  reset: ${reset}
+  auto_reset: true
+  capture_terminal_state: false
+  critic_context:
+    _target_: flash_chord.envs.rl.CriticContextConfig
+    reference_phase: false
+    object_body_velocity: false
+curriculum:
+  _target_: flash_chord.configuration.make_fixed_curriculum
+  thresholds:
+  - 20000
+  stages:
+  - _target_: flash_chord.configuration.make_curriculum_stage
+    voc_scale: 0.0
+    objective_weights:
+      termination: -300.0
+      action_rate_l2: -0.0001
+      action_l2: -1.0e-06
+      soft_joint_limit: -0.001
+      pelvis_position: 1.0
+      pelvis_orientation: 1.0
+      body_joint_position: 5.0
+      object_position: 1.0
+      progress: 1.0
+      palm_position: 1.0
+      palm_orientation: 1.0
+      force_closure: 5.0
+      object_task: 5.0
+logging:
+  mode: offline
+  entity: juicer_test
+  project: v2d-track2-tier3
+  experiment: C3r2_tier3_f0_retry
+  run_name: ep16_spray_bottle_retry
+  log_interval: 10
+  upload_checkpoints: false
+  upload_training_state: false
+  local_jsonl: true
+training:
+  _target_: flash_chord.training.ppo.config.TrainingConfig
+  seed: ${reset.seed}
+  world_count: ${scene.world_count}
+  rollout_steps: 24
+  max_iterations: 90000
+  save_interval: 500
+  observation_normalization: true
+  observation_normalization_epsilon: 0.01
+  reward_normalization: false
+  device: cuda:0
+  resume: true
+  checkpoint: /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep16/model_44922.safetensors
+  wandb_entity: ${logging.entity}
+  wandb_project: ${logging.project}
+  experiment_name: ${logging.experiment}
+  run_name: ${logging.run_name}
+  curriculum: ${curriculum}
+  network:
+    _target_: flash_chord.configuration.make_network_config
+    actor_hidden_dims:
+    - 1024
+    - 512
+    - 256
+    - 128
+    critic_hidden_dims:
+    - 1024
+    - 512
+    - 256
+    - 128
+    activation: elu
+    initial_noise_std: 0.5
+    noise_std_type: scalar
+    actor_output_gain: 0.0
+  ppo:
+    _target_: flash_chord.training.ppo.config.PPOConfig
+    value_loss_coefficient: 1.0
+    use_clipped_value_loss: true
+    clip_parameter: 0.2
+    entropy_coefficient: 0.0005
+    learning_epochs: 5
+    mini_batches: 4
+    learning_rate: 0.0005
+    schedule: adaptive
+    minimum_learning_rate: 1.0e-05
+    maximum_learning_rate: 0.01
+    adaptive_schedule_factor: 1.5
+    discount: 0.99
+    gae_lambda: 0.95
+    desired_kl: 0.02
+    max_grad_norm: 0.1
+    normalize_advantage_per_mini_batch: false
+    log_ratio_clip: null
+  early_stop_help_zero_tail: 0
+  coordinate:
+    _target_: flash_chord.training.ppo.config.CoordinateConfig
+    agents:
+    - left
+    - right
+    - body
+    encoder_dim: 128
+    partner_dim: 64
+    message_dim: 64
+    trunk_dims:
+    - 256
+    - 128
+    partner_message: true
+    mirror_body_message: true
+    hand_world_terms: reflect
+    ratio_mode: per_agent
+    value_mode: per_agent
+    export_actor_hidden_dims:
+    - 1024
+    - 1024
+    - 768
+    - 384
+output_dir: /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep16
+voc_scale_override: null

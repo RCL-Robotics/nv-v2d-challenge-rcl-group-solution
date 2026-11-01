@@ -1,0 +1,257 @@
+{
+ "note": "Tier-3 f0 scene table. scene_support=true -> train with scene.support=true (the trainer resolves whole_body/reconstructed_stage/<seq>_support.usda from the parquet path); false -> floor-only (geometry-free file, scene.support=false). Supports: scripts/t3f0_supports.py from Han Zhou's support release.",
+ "episodes": {
+  "00": {
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "01": {
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+   "support_sha256": "03d06c3bd53be483c5ec6667dc491cfcf93d06a5930ff937d6e89722dadb5da9",
+   "support": "tall_bar_stool",
+   "kind": "stool",
+   "n_boxes": 31,
+   "detail": "tmp_analysis/tier3/f0/supports/ep01.json"
+  },
+  "02": {
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+   "support_sha256": "36331e10d6c61512c7a6acc50451ee3a67601266c73cc0ce377b0cdceb7c199b",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep02.json"
+  },
+  "03": {
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda",
+   "support_sha256": "648758f5aa0154ce893b23f11b700704e33022883aac87854d77732c06fe6e4d",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep03.json"
+  },
+  "04": {
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "05": {
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-03-18_19-36-56_g1_box_rotate_01_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "06": {
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+   "support_sha256": "ae25c24376b5d4f7c28bbd1b8215b59381e7fbe0ce9471cb044488b7a0a3f99b",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep06.json"
+  },
+  "07": {
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+   "support_sha256": "155d055f7ce11572e1e23dabd39349a18d6b3d8f75a380b22b639c08a901a11a",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep07.json"
+  },
+  "08": {
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "09": {
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+   "support_sha256": "1cc0d7306ef3977a77febd5e397d4a6f042e76b07bcc3fc416417e44b30d58c1",
+   "support": "skinny_wood_chair",
+   "kind": "top",
+   "n_boxes": 11,
+   "detail": "tmp_analysis/tier3/f0/supports/ep09.json"
+  },
+  "10": {
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "11": {
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda",
+   "support_sha256": "831f3b6e013a8bde7f401b6b34d7287b68fa767aa4588854c856686c5270722f",
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 28,
+   "detail": "tmp_analysis/tier3/f0/supports/ep11.json"
+  },
+  "12": {
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-04-25_17-20-04_black_platform_turn_05_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "13": {
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda",
+   "support_sha256": "310d1d6979b1e9802bbcadebb61e8ac7621a2d656c866039f244db1367b47be7",
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 29,
+   "detail": "tmp_analysis/tier3/f0/supports/ep13.json"
+  },
+  "14": {
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-28_14-44-09_round_table_flip_08_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "15": {
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "16": {
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+   "support_sha256": "248c8f9ea73dcedc1a998120a45addb6d50f6b3ec0cf6b4a06d66c91ca76e7f3",
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 29,
+   "detail": "tmp_analysis/tier3/f0/supports/ep16.json"
+  },
+  "17": {
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda",
+   "support_sha256": "f3e509e96af4c4b6dc328fcd64b6bb2fb4585a1c14bd32a6ceb16ca7c0a6647b",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep17.json"
+  },
+  "18": {
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "19": {
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-19_10-19-48_cane_swing_05_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "20": {
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda",
+   "support_sha256": "3f92eecc15a1b087e9c69b6638718594e457067f892dc6c8c804378d43aee33f",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep20.json"
+  },
+  "21": {
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "22": {
+   "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-22_16-52-36_step_ladder_drag_03_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "23": {
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "24": {
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-05-29_15-43-20_watering_can_pour_right_02_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "25": {
+   "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda",
+   "support_sha256": "21cfbff53af7d38457d7d3bdf4d9ef3c5e8d3c66907d680fccb7e0792375874b",
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "detail": "tmp_analysis/tier3/f0/supports/ep25.json"
+  },
+  "26": {
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  },
+  "27": {
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+   "support_sha256": "88183ae5df98ca6e3dd34b28a81a5fd533447032e54c00d9d5cf2292b32eb11f",
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 30,
+   "detail": "tmp_analysis/tier3/f0/supports/ep27.json"
+  },
+  "28": {
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "scene_support": true,
+   "support_file": "whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda",
+   "support_sha256": "12dafd1f107d140e6a7f4a47f42d779a00059d16915592c3fefee637a9ebd72f",
+   "support": "tall_bar_stool",
+   "kind": "stool",
+   "n_boxes": 24,
+   "detail": "tmp_analysis/tier3/f0/supports/ep28.json"
+  },
+  "29": {
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "scene_support": false,
+   "support_file": "whole_body/reconstructed_stage/2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b",
+   "kind": "floor-only"
+  }
+ }
+}

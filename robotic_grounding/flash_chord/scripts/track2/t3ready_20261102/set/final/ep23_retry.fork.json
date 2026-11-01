@@ -1,0 +1,17 @@
+{
+ "episode": 23,
+ "forked_at": "2026-10-31 01:10:28",
+ "fork_iteration": 44922,
+ "files": {
+  "model": {
+   "src": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep23/model_44922.safetensors",
+   "dst": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep23/model_44922.safetensors",
+   "sha256": "1ff6e74f3186d4bd23e9542a0a2f9357d27e5b87674d2cd18a060ef22057e547"
+  },
+  "rsi": {
+   "src": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep23/rsi_44922.safetensors",
+   "dst": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep23/rsi_44922.safetensors",
+   "sha256": "e8663d3358ead633be8d079d644b5d1606547c9a399c71fd62763ccd3eaf75c1"
+  }
+ }
+}

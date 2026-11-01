@@ -1,0 +1,2679 @@
+{
+ "written": "2026-10-24 19:33:33",
+ "episodes": {
+  "01": {
+   "support": "tall_bar_stool",
+   "kind": "stool",
+   "n_boxes": 31,
+   "flags": [
+    "REST_GAP run [658, 747] median sdf 2.7 cm",
+    "SETTLE run [658, 747] dp 2.328 cm rot 4.882 deg; human-object 78.36 cm"
+   ],
+   "rest": {
+    "ep": 1,
+    "kind": "stool",
+    "frames": 747,
+    "path_min_sdf_cm": 0.32,
+    "path_min_sdf_frame": 0,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       125
+      ],
+      "held_min_dist_cm": 49.74,
+      "min_sdf_cm": 0.32,
+      "median_sdf_cm": 0.32,
+      "bottom_z_m": 0.0005,
+      "footprint_cover": 0.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       658,
+       747
+      ],
+      "held_min_dist_cm": 78.36,
+      "min_sdf_cm": 2.7,
+      "median_sdf_cm": 2.7,
+      "bottom_z_m": 0.0064,
+      "footprint_cover": 0.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 1,
+    "frames": 747,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": 13.99,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 1,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+    "parquet_sha256": "94ffb6b7eca5346bd5d77e0b3d9c0856155432b6546fd2eace95c8664966181a",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+    "frames": 747,
+    "n_boxes": 31,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 23.04,
+    "min_hand_clear_cm": 7.82,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 1,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep01_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       125
+      ],
+      "frame": 62,
+      "anchor": true,
+      "held_min_dist_cm": 49.74,
+      "with_support": {
+       "final_dp_cm": 1.461,
+       "max_dp_cm": 1.461,
+       "final_rot_deg": 3.043,
+       "max_rot_deg": 3.043,
+       "final_z_change_cm": 0.045,
+       "final_disp_cm": [
+        -0.26,
+        1.44,
+        0.04
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         -0.13,
+         0.73,
+         0.17
+        ],
+        [
+         -0.23,
+         0.99,
+         0.18
+        ],
+        [
+         -0.22,
+         1.03,
+         0.17
+        ]
+       ],
+       "ok": true
+      },
+      "hulls": 11,
+      "no_support_control": {
+       "final_dp_cm": 48.662,
+       "max_dp_cm": 49.751,
+       "final_rot_deg": 77.027,
+       "max_rot_deg": 79.097,
+       "final_z_change_cm": -30.729,
+       "final_disp_cm": [
+        -37.56,
+        3.65,
+        -30.73
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         -2.34,
+         1.79,
+         -0.17
+        ],
+        [
+         -37.56,
+         3.67,
+         -30.73
+        ],
+        [
+         -37.55,
+         3.61,
+         -30.73
+        ]
+       ],
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       658,
+       747
+      ],
+      "frame": 702,
+      "anchor": false,
+      "held_min_dist_cm": 78.36,
+      "with_support": {
+       "final_dp_cm": 2.328,
+       "max_dp_cm": 2.687,
+       "final_rot_deg": 4.882,
+       "max_rot_deg": 4.882,
+       "final_z_change_cm": -0.695,
+       "final_disp_cm": [
+        -2.14,
+        -0.6,
+        -0.69
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         -1.78,
+         -0.56,
+         -0.49
+        ],
+        [
+         -2.37,
+         -0.79,
+         -0.6
+        ],
+        [
+         -2.34,
+         -0.77,
+         -0.61
+        ]
+       ],
+       "ok": false
+      },
+      "hulls": 11
+     }
+    ],
+    "all_ok": false,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "02": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "PATH object deeper than 1 cm in a box on 8 frames [[125, 132]] (min -1.5 cm; a 3 cm slab allows at most 1.5)"
+   ],
+   "rest": {
+    "ep": 2,
+    "kind": "top",
+    "frames": 980,
+    "path_min_sdf_cm": -1.5,
+    "path_min_sdf_frame": 125,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       125
+      ],
+      "held_min_dist_cm": 70.78,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7798,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       215,
+       437
+      ],
+      "held_min_dist_cm": 13.43,
+      "min_sdf_cm": 64.65,
+      "median_sdf_cm": 64.65,
+      "bottom_z_m": -0.0385,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       848,
+       980
+      ],
+      "held_min_dist_cm": 33.53,
+      "min_sdf_cm": 70.95,
+      "median_sdf_cm": 70.95,
+      "bottom_z_m": -0.116,
+      "footprint_cover": 0.076,
+      "near_support": false
+     }
+    ],
+    "frames_deeper_1cm": 8,
+    "deep_runs_1cm": [
+     [
+      125,
+      132
+     ]
+    ]
+   },
+   "human": {
+    "ep": 2,
+    "frames": 980,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": 2.34,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 2,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+    "parquet_sha256": "b21d7562d6b9098b3f6911935530be49c385b6d5c933871471318e714d6f85c1",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+    "frames": 980,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": -0.61,
+    "min_hand_clear_cm": 1.85,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 2,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep02_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       125
+      ],
+      "frame": 62,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.085,
+       "max_dp_cm": 0.086,
+       "final_rot_deg": 0.731,
+       "max_rot_deg": 0.733,
+       "final_z_change_cm": -0.016,
+       "ok": true
+      },
+      "hulls": 79,
+      "no_support_control": {
+       "final_dp_cm": 77.989,
+       "max_dp_cm": 80.539,
+       "final_rot_deg": 0.742,
+       "max_rot_deg": 0.761,
+       "final_z_change_cm": -77.989,
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "03": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "PATH object deeper than 1 cm in a box on 48 frames [[527, 530], [604, 644], [686, 688]] (min -1.5 cm; a 3 cm slab allows at most 1.5)"
+   ],
+   "rest": {
+    "ep": 3,
+    "kind": "top",
+    "frames": 781,
+    "path_min_sdf_cm": -1.5,
+    "path_min_sdf_frame": 643,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       130
+      ],
+      "held_min_dist_cm": 38.68,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7806,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       215,
+       269
+      ],
+      "held_min_dist_cm": 6.19,
+      "min_sdf_cm": -0.58,
+      "median_sdf_cm": -0.58,
+      "bottom_z_m": 0.7748,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       350,
+       399
+      ],
+      "held_min_dist_cm": 9.98,
+      "min_sdf_cm": -0.54,
+      "median_sdf_cm": -0.54,
+      "bottom_z_m": 0.7752,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       481,
+       527
+      ],
+      "held_min_dist_cm": 7.62,
+      "min_sdf_cm": -0.91,
+      "median_sdf_cm": -0.91,
+      "bottom_z_m": 0.7715,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       606,
+       641
+      ],
+      "held_min_dist_cm": 8.18,
+      "min_sdf_cm": -1.01,
+      "median_sdf_cm": -1.01,
+      "bottom_z_m": 0.7705,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       690,
+       781
+      ],
+      "held_min_dist_cm": 15.37,
+      "min_sdf_cm": -0.59,
+      "median_sdf_cm": -0.59,
+      "bottom_z_m": 0.7747,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 48,
+    "deep_runs_1cm": [
+     [
+      527,
+      530
+     ],
+     [
+      604,
+      644
+     ],
+     [
+      686,
+      688
+     ]
+    ]
+   },
+   "human": {
+    "ep": 3,
+    "frames": 781,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.18,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 3,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+    "parquet_sha256": "9b058c279ab740a501abcf50b0e560864062ffd19e0ee7c4cb05723166b96c09",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda",
+    "frames": 781,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 2.43,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 3,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep03_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       130
+      ],
+      "frame": 65,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.392,
+       "max_dp_cm": 0.632,
+       "final_rot_deg": 2.784,
+       "max_rot_deg": 3.186,
+       "final_z_change_cm": -0.064,
+       "ok": true
+      },
+      "hulls": 33,
+      "no_support_control": {
+       "final_dp_cm": 86.901,
+       "max_dp_cm": 86.927,
+       "final_rot_deg": 92.814,
+       "max_rot_deg": 110.646,
+       "final_z_change_cm": -85.644,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       215,
+       269
+      ],
+      "frame": 242,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.741,
+       "max_dp_cm": 0.766,
+       "final_rot_deg": 3.171,
+       "max_rot_deg": 3.327,
+       "final_z_change_cm": 0.467,
+       "ok": true
+      },
+      "hulls": 33
+     },
+     {
+      "run": [
+       350,
+       399
+      ],
+      "frame": 374,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.569,
+       "max_dp_cm": 0.575,
+       "final_rot_deg": 1.196,
+       "max_rot_deg": 1.262,
+       "final_z_change_cm": 0.548,
+       "ok": true
+      },
+      "hulls": 33
+     },
+     {
+      "run": [
+       481,
+       527
+      ],
+      "frame": 504,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 1.153,
+       "max_dp_cm": 1.242,
+       "final_rot_deg": 4.186,
+       "max_rot_deg": 5.211,
+       "final_z_change_cm": 0.783,
+       "ok": true
+      },
+      "hulls": 33
+     },
+     {
+      "run": [
+       606,
+       641
+      ],
+      "frame": 623,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 1.111,
+       "max_dp_cm": 1.272,
+       "final_rot_deg": 1.174,
+       "max_rot_deg": 2.058,
+       "final_z_change_cm": 1.047,
+       "ok": true
+      },
+      "hulls": 33
+     },
+     {
+      "run": [
+       690,
+       781
+      ],
+      "frame": 735,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.812,
+       "max_dp_cm": 0.814,
+       "final_rot_deg": 3.294,
+       "max_rot_deg": 3.365,
+       "final_z_change_cm": 0.465,
+       "ok": true
+      },
+      "hulls": 33
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "06": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "SETTLE anchor run not stable",
+    "SETTLE run [0, 168] dp 2.055 cm rot 4.184 deg; human-object 17.02 cm"
+   ],
+   "rest": {
+    "ep": 6,
+    "kind": "top",
+    "frames": 546,
+    "path_min_sdf_cm": -0.52,
+    "path_min_sdf_frame": 469,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       168
+      ],
+      "held_min_dist_cm": 17.02,
+      "min_sdf_cm": -0.02,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7822,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       470,
+       546
+      ],
+      "held_min_dist_cm": 31.0,
+      "min_sdf_cm": -0.52,
+      "median_sdf_cm": -0.52,
+      "bottom_z_m": 0.777,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 6,
+    "frames": 546,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 6,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+    "parquet_sha256": "233c795334e17be1a790d2cdb01e286a8521903a716cd0d2e8019326888320bb",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+    "frames": 546,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 2.55,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 6,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep06_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       168
+      ],
+      "frame": 84,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 2.055,
+       "max_dp_cm": 2.158,
+       "final_rot_deg": 4.184,
+       "max_rot_deg": 4.389,
+       "final_z_change_cm": -0.69,
+       "ok": false
+      },
+      "hulls": 76,
+      "no_support_control": {
+       "final_dp_cm": 78.925,
+       "max_dp_cm": 80.75,
+       "final_rot_deg": 4.181,
+       "max_rot_deg": 4.181,
+       "final_z_change_cm": -78.903,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       470,
+       546
+      ],
+      "frame": 508,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 1.948,
+       "max_dp_cm": 1.95,
+       "final_rot_deg": 4.224,
+       "max_rot_deg": 4.229,
+       "final_z_change_cm": 0.133,
+       "ok": true
+      },
+      "hulls": 76
+     }
+    ],
+    "all_ok": false,
+    "anchor_ok": false,
+    "anchor_control_moves": true
+   }
+  },
+  "07": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "FOOTPRINT run [387, 397] cover 0.769"
+   ],
+   "rest": {
+    "ep": 7,
+    "kind": "top",
+    "frames": 896,
+    "path_min_sdf_cm": -0.69,
+    "path_min_sdf_frame": 389,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       156
+      ],
+      "held_min_dist_cm": 14.38,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7862,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       226,
+       245
+      ],
+      "held_min_dist_cm": 0.01,
+      "min_sdf_cm": 0.9,
+      "median_sdf_cm": 0.9,
+      "bottom_z_m": 0.795,
+      "footprint_cover": 0.825,
+      "near_support": true
+     },
+     {
+      "run": [
+       387,
+       397
+      ],
+      "held_min_dist_cm": 0.05,
+      "min_sdf_cm": -0.69,
+      "median_sdf_cm": -0.69,
+      "bottom_z_m": 0.7792,
+      "footprint_cover": 0.769,
+      "near_support": true
+     },
+     {
+      "run": [
+       576,
+       588
+      ],
+      "held_min_dist_cm": 0.69,
+      "min_sdf_cm": 0.9,
+      "median_sdf_cm": 0.9,
+      "bottom_z_m": 0.795,
+      "footprint_cover": 0.82,
+      "near_support": true
+     },
+     {
+      "run": [
+       635,
+       660
+      ],
+      "held_min_dist_cm": 0.06,
+      "min_sdf_cm": 0.56,
+      "median_sdf_cm": 0.56,
+      "bottom_z_m": 0.7917,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       781,
+       794
+      ],
+      "held_min_dist_cm": 0.03,
+      "min_sdf_cm": 0.58,
+      "median_sdf_cm": 0.58,
+      "bottom_z_m": 0.7919,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       795,
+       896
+      ],
+      "held_min_dist_cm": 24.32,
+      "min_sdf_cm": 0.58,
+      "median_sdf_cm": 0.58,
+      "bottom_z_m": 0.792,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 7,
+    "frames": 896,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 7,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+    "parquet_sha256": "68545de91538dd25f2254eb0ebd40403e165a2dbc758f78a20871515e08d35df",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+    "frames": 896,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 1.09,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 7,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep07_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       156
+      ],
+      "frame": 78,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.091,
+       "max_dp_cm": 0.092,
+       "final_rot_deg": 0.157,
+       "max_rot_deg": 0.162,
+       "final_z_change_cm": 0.09,
+       "ok": true
+      },
+      "hulls": 9,
+      "no_support_control": {
+       "final_dp_cm": 78.521,
+       "max_dp_cm": 80.666,
+       "final_rot_deg": 0.155,
+       "max_rot_deg": 0.155,
+       "final_z_change_cm": -78.521,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       226,
+       245
+      ],
+      "frame": 235,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.794,
+       "max_dp_cm": 1.019,
+       "final_rot_deg": 0.157,
+       "max_rot_deg": 0.868,
+       "final_z_change_cm": -0.794,
+       "ok": true
+      },
+      "hulls": 9
+     },
+     {
+      "run": [
+       387,
+       397
+      ],
+      "frame": 392,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.777,
+       "max_dp_cm": 0.778,
+       "final_rot_deg": 0.436,
+       "max_rot_deg": 0.442,
+       "final_z_change_cm": 0.775,
+       "ok": true
+      },
+      "hulls": 9
+     },
+     {
+      "run": [
+       576,
+       588
+      ],
+      "frame": 582,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.8,
+       "max_dp_cm": 1.02,
+       "final_rot_deg": 0.151,
+       "max_rot_deg": 1.121,
+       "final_z_change_cm": -0.8,
+       "ok": true
+      },
+      "hulls": 9
+     },
+     {
+      "run": [
+       635,
+       660
+      ],
+      "frame": 647,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.47,
+       "max_dp_cm": 0.619,
+       "final_rot_deg": 0.16,
+       "max_rot_deg": 0.935,
+       "final_z_change_cm": -0.469,
+       "ok": true
+      },
+      "hulls": 9
+     },
+     {
+      "run": [
+       781,
+       794
+      ],
+      "frame": 787,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.525,
+       "max_dp_cm": 0.632,
+       "final_rot_deg": 0.691,
+       "max_rot_deg": 0.698,
+       "final_z_change_cm": -0.506,
+       "ok": true
+      },
+      "hulls": 9
+     },
+     {
+      "run": [
+       795,
+       896
+      ],
+      "frame": 845,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.546,
+       "max_dp_cm": 0.636,
+       "final_rot_deg": 0.679,
+       "max_rot_deg": 1.164,
+       "final_z_change_cm": -0.512,
+       "ok": true
+      },
+      "hulls": 9
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "09": {
+   "support": "skinny_wood_chair",
+   "kind": "top",
+   "n_boxes": 11,
+   "flags": [],
+   "rest": {
+    "ep": 9,
+    "kind": "top",
+    "frames": 870,
+    "path_min_sdf_cm": 0.0,
+    "path_min_sdf_frame": 0,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       193
+      ],
+      "held_min_dist_cm": 10.56,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.4694,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       672,
+       712
+      ],
+      "held_min_dist_cm": 0.04,
+      "min_sdf_cm": 35.18,
+      "median_sdf_cm": 35.2,
+      "bottom_z_m": -0.0131,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       761,
+       870
+      ],
+      "held_min_dist_cm": 43.67,
+      "min_sdf_cm": 31.58,
+      "median_sdf_cm": 31.58,
+      "bottom_z_m": -0.0131,
+      "footprint_cover": 1.0,
+      "near_support": false
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 9,
+    "frames": 870,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": 6.88,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 9,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet",
+    "parquet_sha256": "270d8df52447be229ebefd274193315e753d788e0fe72ff12e2f37b765e123ec",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+    "frames": 870,
+    "n_boxes": 11,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 5.84,
+    "min_hand_clear_cm": 0.68,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 9,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep09_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       193
+      ],
+      "frame": 96,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.425,
+       "max_dp_cm": 0.458,
+       "final_rot_deg": 3.535,
+       "max_rot_deg": 3.817,
+       "final_z_change_cm": -0.141,
+       "ok": true
+      },
+      "hulls": 52,
+      "no_support_control": {
+       "final_dp_cm": 47.072,
+       "max_dp_cm": 48.813,
+       "final_rot_deg": 3.484,
+       "max_rot_deg": 3.733,
+       "final_z_change_cm": -47.07,
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "11": {
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 28,
+   "flags": [
+    "FOOTPRINT run [406, 467] cover 0.44",
+    "PATH object deeper than 1 cm in a box on 8 frames [[468, 475]] (min -1.4 cm; a 3 cm slab allows at most 1.5)",
+    "settle (human hand within 3 cm: held, not a free rest) run [406, 467] dp 89.016 cm rot 150.984 deg; human-object 0.05 cm"
+   ],
+   "rest": {
+    "ep": 11,
+    "kind": "top",
+    "frames": 901,
+    "path_min_sdf_cm": -1.4,
+    "path_min_sdf_frame": 475,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       80
+      ],
+      "held_min_dist_cm": 42.69,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.8847,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       213,
+       304
+      ],
+      "held_min_dist_cm": 0.05,
+      "min_sdf_cm": 86.13,
+      "median_sdf_cm": 86.13,
+      "bottom_z_m": -0.005,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       406,
+       467
+      ],
+      "held_min_dist_cm": 0.05,
+      "min_sdf_cm": -0.42,
+      "median_sdf_cm": -0.42,
+      "bottom_z_m": 0.8805,
+      "footprint_cover": 0.44,
+      "near_support": true
+     },
+     {
+      "run": [
+       657,
+       670
+      ],
+      "held_min_dist_cm": 0.06,
+      "min_sdf_cm": 92.42,
+      "median_sdf_cm": 92.42,
+      "bottom_z_m": 0.0108,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       696,
+       748
+      ],
+      "held_min_dist_cm": 0.04,
+      "min_sdf_cm": 90.74,
+      "median_sdf_cm": 90.74,
+      "bottom_z_m": 0.0123,
+      "footprint_cover": 0.0,
+      "near_support": false
+     }
+    ],
+    "frames_deeper_1cm": 8,
+    "deep_runs_1cm": [
+     [
+      468,
+      475
+     ]
+    ]
+   },
+   "human": {
+    "ep": 11,
+    "frames": 901,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 11,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+    "parquet_sha256": "5765586810904a781328e7f829e35bf6ef062edfed51b4cee75f88c9413248f2",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda",
+    "frames": 901,
+    "n_boxes": 28,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 1.12,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 11,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep11_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       80
+      ],
+      "frame": 40,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.108,
+       "max_dp_cm": 0.116,
+       "final_rot_deg": 1.29,
+       "max_rot_deg": 1.43,
+       "final_z_change_cm": -0.032,
+       "ok": true
+      },
+      "hulls": 4,
+      "no_support_control": {
+       "final_dp_cm": 88.471,
+       "max_dp_cm": 92.132,
+       "final_rot_deg": 0.941,
+       "max_rot_deg": 2.007,
+       "final_z_change_cm": -88.471,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       406,
+       467
+      ],
+      "frame": 436,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 89.016,
+       "max_dp_cm": 89.558,
+       "final_rot_deg": 150.984,
+       "max_rot_deg": 179.894,
+       "final_z_change_cm": -88.019,
+       "ok": false
+      },
+      "hulls": 4
+     }
+    ],
+    "all_ok": false,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "13": {
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 29,
+   "flags": [
+    "PATH object deeper than 1 cm in a box on 155 frames [[131, 155], [205, 205], [769, 779], [804, 921]] (min -1.5 cm; a 3 cm slab allows at most 1.5)",
+    "G1 41 frames [[558, 592], [594, 594], [630, 631], [634, 636]] worst 4.99 cm (['g1/left_elbow_link'])"
+   ],
+   "rest": {
+    "ep": 13,
+    "kind": "top",
+    "frames": 922,
+    "path_min_sdf_cm": -1.5,
+    "path_min_sdf_frame": 147,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       130
+      ],
+      "held_min_dist_cm": 38.65,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.8831,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       313,
+       385
+      ],
+      "held_min_dist_cm": 14.0,
+      "min_sdf_cm": 68.88,
+      "median_sdf_cm": 68.88,
+      "bottom_z_m": -0.0457,
+      "footprint_cover": 0.585,
+      "near_support": false
+     },
+     {
+      "run": [
+       484,
+       700
+      ],
+      "held_min_dist_cm": 50.54,
+      "min_sdf_cm": 64.53,
+      "median_sdf_cm": 64.53,
+      "bottom_z_m": -0.0185,
+      "footprint_cover": 0.509,
+      "near_support": false
+     },
+     {
+      "run": [
+       818,
+       922
+      ],
+      "held_min_dist_cm": 50.67,
+      "min_sdf_cm": -1.17,
+      "median_sdf_cm": -1.17,
+      "bottom_z_m": 0.8714,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 155,
+    "deep_runs_1cm": [
+     [
+      131,
+      155
+     ],
+     [
+      205,
+      205
+     ],
+     [
+      769,
+      779
+     ],
+     [
+      804,
+      921
+     ]
+    ]
+   },
+   "human": {
+    "ep": 13,
+    "frames": 922,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 13,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+    "parquet_sha256": "baf8825a131b0bad7573a694ad4a516877015e539686adfa2d1303f356d2cec5",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda",
+    "frames": 922,
+    "n_boxes": 29,
+    "robot_shapes": 94,
+    "min_body_clear_cm": -4.99,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 41,
+    "violating_runs": [
+     [
+      558,
+      592
+     ],
+     [
+      594,
+      594
+     ],
+     [
+      630,
+      631
+     ],
+     [
+      634,
+      636
+     ]
+    ],
+    "worst": [
+     {
+      "frame": 577,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.99,
+      "hand": false
+     },
+     {
+      "frame": 581,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.99,
+      "hand": false
+     },
+     {
+      "frame": 576,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.98,
+      "hand": false
+     },
+     {
+      "frame": 583,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.98,
+      "hand": false
+     },
+     {
+      "frame": 567,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.89,
+      "hand": false
+     },
+     {
+      "frame": 568,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.86,
+      "hand": false
+     },
+     {
+      "frame": 573,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.86,
+      "hand": false
+     },
+     {
+      "frame": 584,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.86,
+      "hand": false
+     },
+     {
+      "frame": 580,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.83,
+      "hand": false
+     },
+     {
+      "frame": 582,
+      "link": "g1/left_elbow_link",
+      "depth_cm": 4.83,
+      "hand": false
+     }
+    ],
+    "links_involved": [
+     "g1/left_elbow_link"
+    ]
+   },
+   "settle": {
+    "ep": 13,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep13_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       130
+      ],
+      "frame": 65,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.2,
+       "max_dp_cm": 0.22,
+       "final_rot_deg": 1.064,
+       "max_rot_deg": 1.181,
+       "final_z_change_cm": 0.054,
+       "ok": true
+      },
+      "hulls": 4,
+      "no_support_control": {
+       "final_dp_cm": 88.253,
+       "max_dp_cm": 90.918,
+       "final_rot_deg": 1.088,
+       "max_rot_deg": 1.104,
+       "final_z_change_cm": -88.252,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       818,
+       922
+      ],
+      "frame": 870,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 1.242,
+       "max_dp_cm": 1.242,
+       "final_rot_deg": 1.657,
+       "max_rot_deg": 1.68,
+       "final_z_change_cm": 1.223,
+       "ok": true
+      },
+      "hulls": 4
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "16": {
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 29,
+   "flags": [
+    "G1 29 frames [[295, 321], [323, 323], [325, 325]] worst 4.99 cm (['g1/right_elbow_link'])"
+   ],
+   "rest": {
+    "ep": 16,
+    "kind": "top",
+    "frames": 477,
+    "path_min_sdf_cm": -0.06,
+    "path_min_sdf_frame": 123,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       124
+      ],
+      "held_min_dist_cm": 61.55,
+      "min_sdf_cm": -0.06,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.8779,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       376,
+       477
+      ],
+      "held_min_dist_cm": 40.75,
+      "min_sdf_cm": 56.53,
+      "median_sdf_cm": 56.53,
+      "bottom_z_m": -0.0152,
+      "footprint_cover": 1.0,
+      "near_support": false
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 16,
+    "frames": 477,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 16,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+    "parquet_sha256": "5f6644464cba1a9ebb26a58933cd157f7e2b8ed24e08cb67b59f0a880227d335",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+    "frames": 477,
+    "n_boxes": 29,
+    "robot_shapes": 94,
+    "min_body_clear_cm": -4.99,
+    "min_hand_clear_cm": 4.98,
+    "violating_frames": 29,
+    "violating_runs": [
+     [
+      295,
+      321
+     ],
+     [
+      323,
+      323
+     ],
+     [
+      325,
+      325
+     ]
+    ],
+    "worst": [
+     {
+      "frame": 308,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.99,
+      "hand": false
+     },
+     {
+      "frame": 310,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.88,
+      "hand": false
+     },
+     {
+      "frame": 307,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.83,
+      "hand": false
+     },
+     {
+      "frame": 309,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.75,
+      "hand": false
+     },
+     {
+      "frame": 312,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.63,
+      "hand": false
+     },
+     {
+      "frame": 311,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.46,
+      "hand": false
+     },
+     {
+      "frame": 300,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.44,
+      "hand": false
+     },
+     {
+      "frame": 299,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.3,
+      "hand": false
+     },
+     {
+      "frame": 303,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.28,
+      "hand": false
+     },
+     {
+      "frame": 313,
+      "link": "g1/right_elbow_link",
+      "depth_cm": 4.27,
+      "hand": false
+     }
+    ],
+    "links_involved": [
+     "g1/right_elbow_link"
+    ]
+   },
+   "settle": {
+    "ep": 16,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep16_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       124
+      ],
+      "frame": 62,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.198,
+       "max_dp_cm": 0.313,
+       "final_rot_deg": 0.831,
+       "max_rot_deg": 1.36,
+       "final_z_change_cm": 0.004,
+       "ok": true
+      },
+      "hulls": 7,
+      "no_support_control": {
+       "final_dp_cm": 87.761,
+       "max_dp_cm": 90.84,
+       "final_rot_deg": 0.906,
+       "max_rot_deg": 1.059,
+       "final_z_change_cm": -87.76,
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "17": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "SETTLE anchor run not stable",
+    "SETTLE run [336, 440] dp 1.135 cm rot 5.238 deg; human-object 37.35 cm"
+   ],
+   "rest": {
+    "ep": 17,
+    "kind": "top",
+    "frames": 440,
+    "path_min_sdf_cm": 0.0,
+    "path_min_sdf_frame": 335,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       126
+      ],
+      "held_min_dist_cm": 59.09,
+      "min_sdf_cm": 87.19,
+      "median_sdf_cm": 87.19,
+      "bottom_z_m": -0.0141,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       336,
+       440
+      ],
+      "held_min_dist_cm": 37.35,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7407,
+      "footprint_cover": 0.953,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 17,
+    "frames": 440,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 17,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+    "parquet_sha256": "3591829d8eefee75da473f19615aced72c0e8f6823924dadcfb0a7dfd499d4b3",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda",
+    "frames": 440,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 2.08,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 17,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep17_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       336,
+       440
+      ],
+      "frame": 388,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 1.135,
+       "max_dp_cm": 1.25,
+       "final_rot_deg": 5.238,
+       "max_rot_deg": 5.278,
+       "final_z_change_cm": -0.714,
+       "ok": false
+      },
+      "hulls": 31,
+      "no_support_control": {
+       "final_dp_cm": 74.785,
+       "max_dp_cm": 76.756,
+       "final_rot_deg": 5.285,
+       "max_rot_deg": 5.285,
+       "final_z_change_cm": -74.78,
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": false,
+    "anchor_ok": false,
+    "anchor_control_moves": true
+   }
+  },
+  "20": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [],
+   "rest": {
+    "ep": 20,
+    "kind": "top",
+    "frames": 553,
+    "path_min_sdf_cm": -0.58,
+    "path_min_sdf_frame": 400,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       212
+      ],
+      "held_min_dist_cm": 8.73,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7984,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       235,
+       257
+      ],
+      "held_min_dist_cm": 2.51,
+      "min_sdf_cm": -0.07,
+      "median_sdf_cm": 0.04,
+      "bottom_z_m": 0.7987,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       282,
+       318
+      ],
+      "held_min_dist_cm": 0.43,
+      "min_sdf_cm": 0.04,
+      "median_sdf_cm": 0.04,
+      "bottom_z_m": 0.7989,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       358,
+       376
+      ],
+      "held_min_dist_cm": 6.5,
+      "min_sdf_cm": -0.5,
+      "median_sdf_cm": -0.46,
+      "bottom_z_m": 0.7936,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       428,
+       553
+      ],
+      "held_min_dist_cm": 43.62,
+      "min_sdf_cm": -0.27,
+      "median_sdf_cm": -0.27,
+      "bottom_z_m": 0.7958,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 20,
+    "frames": 553,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.41,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 20,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet",
+    "parquet_sha256": "7728e9ad49700965dea52aecc45717ee0496ea79d18cfb18b6cab02dffa7ed41",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda",
+    "frames": 553,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 1.71,
+    "min_hand_clear_cm": 0.27,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 20,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep20_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       212
+      ],
+      "frame": 106,
+      "anchor": true,
+      "with_support": {
+       "final_dp_cm": 0.116,
+       "max_dp_cm": 0.116,
+       "final_rot_deg": 0.576,
+       "max_rot_deg": 0.576,
+       "final_z_change_cm": 0.025,
+       "ok": true
+      },
+      "hulls": 48,
+      "no_support_control": {
+       "final_dp_cm": 79.809,
+       "max_dp_cm": 82.589,
+       "final_rot_deg": 0.571,
+       "max_rot_deg": 0.571,
+       "final_z_change_cm": -79.809,
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       235,
+       257
+      ],
+      "frame": 246,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.061,
+       "max_dp_cm": 0.061,
+       "final_rot_deg": 0.155,
+       "max_rot_deg": 0.157,
+       "final_z_change_cm": 0.054,
+       "ok": true
+      },
+      "hulls": 48
+     },
+     {
+      "run": [
+       282,
+       318
+      ],
+      "frame": 300,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.104,
+       "max_dp_cm": 0.107,
+       "final_rot_deg": 0.54,
+       "max_rot_deg": 0.54,
+       "final_z_change_cm": -0.036,
+       "ok": true
+      },
+      "hulls": 48
+     },
+     {
+      "run": [
+       358,
+       376
+      ],
+      "frame": 367,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.502,
+       "max_dp_cm": 0.502,
+       "final_rot_deg": 1.325,
+       "max_rot_deg": 1.327,
+       "final_z_change_cm": 0.417,
+       "ok": true
+      },
+      "hulls": 48
+     },
+     {
+      "run": [
+       428,
+       553
+      ],
+      "frame": 490,
+      "anchor": false,
+      "with_support": {
+       "final_dp_cm": 0.32,
+       "max_dp_cm": 0.32,
+       "final_rot_deg": 1.075,
+       "max_rot_deg": 1.075,
+       "final_z_change_cm": 0.225,
+       "ok": true
+      },
+      "hulls": 48
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "25": {
+   "support": "round_table",
+   "kind": "top",
+   "n_boxes": 18,
+   "flags": [
+    "PATH object deeper than 1 cm in a box on 4 frames [[773, 776]] (min -1.5 cm; a 3 cm slab allows at most 1.5)",
+    "SETTLE run [778, 859] dp 20.75 cm rot 95.855 deg; human-object 51.85 cm"
+   ],
+   "rest": {
+    "ep": 25,
+    "kind": "top",
+    "frames": 859,
+    "path_min_sdf_cm": -1.5,
+    "path_min_sdf_frame": 774,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       115
+      ],
+      "held_min_dist_cm": 56.64,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.7839,
+      "footprint_cover": 1.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       778,
+       859
+      ],
+      "held_min_dist_cm": 51.85,
+      "min_sdf_cm": -0.7,
+      "median_sdf_cm": -0.7,
+      "bottom_z_m": 0.7769,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 4,
+    "deep_runs_1cm": [
+     [
+      773,
+      776
+     ]
+    ]
+   },
+   "human": {
+    "ep": 25,
+    "frames": 859,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 25,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+    "parquet_sha256": "530f7fa375fc15afebc11edf7b0e6e07362df60f2fc1d3074c90eb182693913a",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda",
+    "frames": 859,
+    "n_boxes": 18,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 2.65,
+    "min_hand_clear_cm": -1.5,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 25,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep25_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       115
+      ],
+      "frame": 57,
+      "anchor": true,
+      "held_min_dist_cm": 56.64,
+      "with_support": {
+       "final_dp_cm": 0.393,
+       "max_dp_cm": 0.786,
+       "final_rot_deg": 1.622,
+       "max_rot_deg": 3.298,
+       "final_z_change_cm": -0.008,
+       "final_disp_cm": [
+        0.3,
+        0.25,
+        -0.01
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         0.56,
+         0.55,
+         0.03
+        ],
+        [
+         0.28,
+         0.26,
+         -0.01
+        ],
+        [
+         0.29,
+         0.27,
+         -0.01
+        ]
+       ],
+       "ok": true
+      },
+      "hulls": 8,
+      "no_support_control": {
+       "final_dp_cm": 78.372,
+       "max_dp_cm": 80.682,
+       "final_rot_deg": 1.706,
+       "max_rot_deg": 4.361,
+       "final_z_change_cm": -78.371,
+       "final_disp_cm": [
+        0.25,
+        0.26,
+        -78.37
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         0.0,
+         -0.0,
+         -20.1
+        ],
+        [
+         0.25,
+         0.26,
+         -78.37
+        ],
+        [
+         0.25,
+         0.26,
+         -78.37
+        ]
+       ],
+       "ok": false
+      }
+     },
+     {
+      "run": [
+       778,
+       859
+      ],
+      "frame": 818,
+      "anchor": false,
+      "held_min_dist_cm": 51.85,
+      "with_support": {
+       "final_dp_cm": 20.75,
+       "max_dp_cm": 21.079,
+       "final_rot_deg": 95.855,
+       "max_rot_deg": 97.813,
+       "final_z_change_cm": -8.457,
+       "final_disp_cm": [
+        -3.69,
+        18.59,
+        -8.46
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         -0.5,
+         1.5,
+         0.45
+        ],
+        [
+         -0.32,
+         3.9,
+         0.63
+        ],
+        [
+         -2.36,
+         18.66,
+         -8.34
+        ]
+       ],
+       "ok": false
+      },
+      "hulls": 8
+     }
+    ],
+    "all_ok": false,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "27": {
+   "support": "white_desk",
+   "kind": "top",
+   "n_boxes": 30,
+   "flags": [],
+   "rest": {
+    "ep": 27,
+    "kind": "top",
+    "frames": 565,
+    "path_min_sdf_cm": 0.0,
+    "path_min_sdf_frame": 450,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       149
+      ],
+      "held_min_dist_cm": 14.36,
+      "min_sdf_cm": 78.52,
+      "median_sdf_cm": 78.52,
+      "bottom_z_m": 0.0039,
+      "footprint_cover": 0.0,
+      "near_support": false
+     },
+     {
+      "run": [
+       451,
+       565
+      ],
+      "held_min_dist_cm": 29.3,
+      "min_sdf_cm": 0.0,
+      "median_sdf_cm": 0.0,
+      "bottom_z_m": 0.8826,
+      "footprint_cover": 1.0,
+      "near_support": true
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 27,
+    "frames": 565,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": 0.43,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 27,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet",
+    "parquet_sha256": "dcbc4099633e2dacd786e2ddcf5447321ff03402bfd761d5a2dd42d968f60de7",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+    "frames": 565,
+    "n_boxes": 30,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 0.13,
+    "min_hand_clear_cm": 0.3,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 27,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep27_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       451,
+       565
+      ],
+      "frame": 508,
+      "anchor": true,
+      "held_min_dist_cm": 29.3,
+      "with_support": {
+       "final_dp_cm": 0.1,
+       "max_dp_cm": 0.11,
+       "final_rot_deg": 1.553,
+       "max_rot_deg": 1.557,
+       "final_z_change_cm": -0.051,
+       "final_disp_cm": [
+        0.01,
+        -0.09,
+        -0.05
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         0.01,
+         -0.09,
+         -0.06
+        ],
+        [
+         0.01,
+         -0.09,
+         -0.05
+        ],
+        [
+         0.01,
+         -0.09,
+         -0.05
+        ]
+       ],
+       "ok": true
+      },
+      "hulls": 50,
+      "no_support_control": {
+       "final_dp_cm": 88.297,
+       "max_dp_cm": 90.888,
+       "final_rot_deg": 1.631,
+       "max_rot_deg": 1.631,
+       "final_z_change_cm": -88.297,
+       "final_disp_cm": [
+        0.01,
+        -0.07,
+        -88.3
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         0.0,
+         -0.0,
+         -20.1
+        ],
+        [
+         0.01,
+         -0.07,
+         -88.3
+        ],
+        [
+         0.01,
+         -0.07,
+         -88.3
+        ]
+       ],
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  },
+  "28": {
+   "support": "tall_bar_stool",
+   "kind": "stool",
+   "n_boxes": 24,
+   "flags": [],
+   "rest": {
+    "ep": 28,
+    "kind": "stool",
+    "frames": 988,
+    "path_min_sdf_cm": 0.61,
+    "path_min_sdf_frame": 0,
+    "frames_deeper_1p5cm": 0,
+    "deep_runs": [],
+    "runs": [
+     {
+      "run": [
+       0,
+       118
+      ],
+      "held_min_dist_cm": 14.9,
+      "min_sdf_cm": 0.61,
+      "median_sdf_cm": 0.61,
+      "bottom_z_m": 0.0239,
+      "footprint_cover": 0.0,
+      "near_support": true
+     },
+     {
+      "run": [
+       909,
+       988
+      ],
+      "held_min_dist_cm": 60.33,
+      "min_sdf_cm": 18.89,
+      "median_sdf_cm": 18.89,
+      "bottom_z_m": -0.0597,
+      "footprint_cover": 0.0,
+      "near_support": false
+     }
+    ],
+    "frames_deeper_1cm": 0,
+    "deep_runs_1cm": []
+   },
+   "human": {
+    "ep": 28,
+    "frames": 988,
+    "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+    "min_sdf_cm": 30.11,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "joints_involved": []
+   },
+   "g1": {
+    "ep": 28,
+    "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+    "parquet_sha256": "8153f29408568bfece590c79dce1627d110ac0f61996de933141a7b28c0f2210",
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda",
+    "frames": 988,
+    "n_boxes": 24,
+    "robot_shapes": 94,
+    "min_body_clear_cm": 30.47,
+    "min_hand_clear_cm": 22.71,
+    "violating_frames": 0,
+    "violating_runs": [],
+    "worst": [],
+    "links_involved": []
+   },
+   "settle": {
+    "ep": 28,
+    "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda",
+    "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep28_obj/textured_mesh.obj",
+    "mesh_equal_parquet_mesh": true,
+    "sim": {
+     "fps": 50.0,
+     "substeps": 4,
+     "solver": "newton",
+     "integrator": "implicitfast",
+     "cone": "pyramidal",
+     "njmax": 1024,
+     "nconmax": 512,
+     "impratio": 1.0,
+     "iterations": 100,
+     "ls_iterations": 50,
+     "use_mujoco_contacts": true
+    },
+    "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+    "tests": [
+     {
+      "run": [
+       0,
+       118
+      ],
+      "frame": 59,
+      "anchor": true,
+      "held_min_dist_cm": 14.9,
+      "with_support": {
+       "final_dp_cm": 0.966,
+       "max_dp_cm": 1.741,
+       "final_rot_deg": 2.191,
+       "max_rot_deg": 3.001,
+       "final_z_change_cm": 0.516,
+       "final_disp_cm": [
+        -0.47,
+        -0.66,
+        0.52
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         -0.25,
+         -0.26,
+         1.43
+        ],
+        [
+         -0.16,
+         -0.95,
+         1.29
+        ],
+        [
+         -0.32,
+         -0.7,
+         0.64
+        ]
+       ],
+       "ok": true
+      },
+      "hulls": 2,
+      "no_support_control": {
+       "final_dp_cm": 52.462,
+       "max_dp_cm": 53.714,
+       "final_rot_deg": 69.734,
+       "max_rot_deg": 72.26,
+       "final_z_change_cm": -51.107,
+       "final_disp_cm": [
+        -6.06,
+        10.18,
+        -51.11
+       ],
+       "disp_at_0p2_1_2s_cm": [
+        [
+         0.25,
+         0.16,
+         -19.69
+        ],
+        [
+         -6.06,
+         10.18,
+         -51.11
+        ],
+        [
+         -6.06,
+         10.18,
+         -51.11
+        ]
+       ],
+       "ok": false
+      }
+     }
+    ],
+    "all_ok": true,
+    "anchor_ok": true,
+    "anchor_control_moves": true
+   }
+  }
+ }
+}

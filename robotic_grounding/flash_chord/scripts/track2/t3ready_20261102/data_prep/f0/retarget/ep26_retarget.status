@@ -1,0 +1,4 @@
+start 2026-10-24 19:11:01 ep26 2026-06-05_16-05-08_skateboard_rotate_ground_10 gpu GPU-b359a493-c1a0-d1dc-88ad-b6919201cc94 cpus 54,158,55,159 threads 4
+python /root/autodl-tmp/haoran.zhang/conda_envs/v2d/bin/python; XDG_CACHE_HOME=/root/autodl-tmp/haoran.zhang/.cache; nv HEAD f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf tracked-modified 0; MPS vars 0
+exit 0 after 120 s at 2026-10-24 19:13:01
+DONE

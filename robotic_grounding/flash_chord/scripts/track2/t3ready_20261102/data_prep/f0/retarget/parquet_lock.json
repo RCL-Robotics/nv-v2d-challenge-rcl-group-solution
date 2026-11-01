@@ -1,0 +1,152 @@
+{
+ "00": {
+  "sha256": "20dbcd89b6fc09ddacf41847cec60c668f323a4f6a42f5595e41f832afccd3c9",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:25"
+ },
+ "01": {
+  "sha256": "94ffb6b7eca5346bd5d77e0b3d9c0856155432b6546fd2eace95c8664966181a",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:26"
+ },
+ "03": {
+  "sha256": "9b058c279ab740a501abcf50b0e560864062ffd19e0ee7c4cb05723166b96c09",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:28"
+ },
+ "04": {
+  "sha256": "8601e387bb25f55f9975caa9788102d055bc2edfe80a486f40b14d1d2c699884",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:29"
+ },
+ "05": {
+  "sha256": "50a54e4af114f6291d4df71398b12a50221431ec9c110124fdb35952ee43de04",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:30"
+ },
+ "06": {
+  "sha256": "233c795334e17be1a790d2cdb01e286a8521903a716cd0d2e8019326888320bb",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:31"
+ },
+ "07": {
+  "sha256": "68545de91538dd25f2254eb0ebd40403e165a2dbc758f78a20871515e08d35df",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:33"
+ },
+ "08": {
+  "sha256": "4ceac29c6ef84e19f930c1e0b59f613a898779c35a9d499a1f4d1ecad4e9b2c3",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:34"
+ },
+ "09": {
+  "sha256": "270d8df52447be229ebefd274193315e753d788e0fe72ff12e2f37b765e123ec",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:34"
+ },
+ "10": {
+  "sha256": "a64b3a9d1a83a657c9e014183117708669fab5da4865d88f9ea44b1a01f7e931",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:36"
+ },
+ "11": {
+  "sha256": "5765586810904a781328e7f829e35bf6ef062edfed51b4cee75f88c9413248f2",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:37"
+ },
+ "12": {
+  "sha256": "0133f928c30faf2e9aa33175a239cb8264549d4738aa5e81f69fe3058e87187a",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:38"
+ },
+ "13": {
+  "sha256": "baf8825a131b0bad7573a694ad4a516877015e539686adfa2d1303f356d2cec5",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:39"
+ },
+ "14": {
+  "sha256": "f0b0fce012687ef44630188613d8b4b873712e893f5a41736c73e86fe32a01a4",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:40"
+ },
+ "15": {
+  "sha256": "d4f007fa28336e1a068f446e49ee20185497feb28f3a9d15cad861a0cf08ca81",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:41"
+ },
+ "16": {
+  "sha256": "5f6644464cba1a9ebb26a58933cd157f7e2b8ed24e08cb67b59f0a880227d335",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:42"
+ },
+ "17": {
+  "sha256": "3591829d8eefee75da473f19615aced72c0e8f6823924dadcfb0a7dfd499d4b3",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:43"
+ },
+ "18": {
+  "sha256": "86648d4c5efe2cec708807ea913289a194fe642a2d9eefd5703ec4b93f63f31c",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:44"
+ },
+ "19": {
+  "sha256": "9dc7d6bc5ed5440fbfe4b65af0ede6890dd09b485fac77452c1346265b4b5545",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:45"
+ },
+ "20": {
+  "sha256": "7728e9ad49700965dea52aecc45717ee0496ea79d18cfb18b6cab02dffa7ed41",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:46"
+ },
+ "21": {
+  "sha256": "1414af597cbd04fe891e04a45517e8ee2ec683092babdfb3a0ff0b99b076b714",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:47"
+ },
+ "22": {
+  "sha256": "f750d9933dbb3628520cdd5e444f1df44cbbfb82f42cec70d4ada3e9e4d5c9b7",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:48"
+ },
+ "23": {
+  "sha256": "7782dd48a65a1aac2ed9c2d17b230270b509fa7ca1468250c4e076934681952d",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:49"
+ },
+ "24": {
+  "sha256": "c8aee4807b0c0de54f4f6d43b15f2f0ec4979ffa40b2d1985dd0a831449dbeee",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:50"
+ },
+ "25": {
+  "sha256": "530f7fa375fc15afebc11edf7b0e6e07362df60f2fc1d3074c90eb182693913a",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:51"
+ },
+ "26": {
+  "sha256": "33084a187258532b727b00c971d9efb78ceb5c32f7c1a8772b41095718257013",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:52"
+ },
+ "27": {
+  "sha256": "dcbc4099633e2dacd786e2ddcf5447321ff03402bfd761d5a2dd42d968f60de7",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:53"
+ },
+ "28": {
+  "sha256": "8153f29408568bfece590c79dce1627d110ac0f61996de933141a7b28c0f2210",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:54"
+ },
+ "29": {
+  "sha256": "5135e5fead8a9ba6cb9e0d5873c3b12e171cb6ceef4b9fe044f643a1c2a4e7d1",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:55"
+ },
+ "02": {
+  "sha256": "b21d7562d6b9098b3f6911935530be49c385b6d5c933871471318e714d6f85c1",
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+  "checked": "2026-10-24 19:21:27"
+ }
+}

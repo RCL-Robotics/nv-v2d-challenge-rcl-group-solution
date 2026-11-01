@@ -1,0 +1,13 @@
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:333)
+/root/autodl-tmp/haoran.zhang/conda_envs/v2d/lib/python3.11/site-packages/soma/geometry/skeleton_transfer.py:248: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at /pytorch/aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  self.sparse_rbf_matrix = torch.sparse_csr_tensor(
+Warp 1.18.0 initialized:
+   CUDA Toolkit 13.4, CUDA driver not available (NVRTC compilation available)
+   Devices:
+     "cpu"      : "x86_64"
+   Kernel cache:
+     /root/.cache/warp/1.18.0
+Module soma.geometry.align_vectors_warp 5f6e29d load on device 'cpu' took 2.49 ms  (cached)
+Module soma.geometry.lbs_warp 202b92a load on device 'cpu' took 0.26 ms  (cached)
+{"ep": 2, "n": 0, "j_opus": null, "j_f0": null, "p90_opus": null, "p90_f0": null, "e_opus": null, "e_f0": null, "disp": null, "q": null, "s": 76.5}
+{"ep": 4, "n": 3, "j_opus": 0.51, "j_f0": 2.05, "p90_opus": 1.87, "p90_f0": 3.25, "e_opus": 0.71, "e_f0": 0.69, "disp": 10.76, "q": false, "s": 79.6}

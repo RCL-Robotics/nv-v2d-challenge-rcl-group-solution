@@ -1,0 +1,95 @@
+{
+ "ep": 27,
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+ "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep27_obj/textured_mesh.obj",
+ "mesh_equal_parquet_mesh": true,
+ "sim": {
+  "fps": 50.0,
+  "substeps": 4,
+  "solver": "newton",
+  "integrator": "implicitfast",
+  "cone": "pyramidal",
+  "njmax": 1024,
+  "nconmax": 512,
+  "impratio": 1.0,
+  "iterations": 100,
+  "ls_iterations": 50,
+  "use_mujoco_contacts": true
+ },
+ "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+ "tests": [
+  {
+   "run": [
+    451,
+    565
+   ],
+   "frame": 508,
+   "anchor": true,
+   "held_min_dist_cm": 29.3,
+   "with_support": {
+    "final_dp_cm": 0.1,
+    "max_dp_cm": 0.11,
+    "final_rot_deg": 1.553,
+    "max_rot_deg": 1.557,
+    "final_z_change_cm": -0.051,
+    "final_disp_cm": [
+     0.01,
+     -0.09,
+     -0.05
+    ],
+    "disp_at_0p2_1_2s_cm": [
+     [
+      0.01,
+      -0.09,
+      -0.06
+     ],
+     [
+      0.01,
+      -0.09,
+      -0.05
+     ],
+     [
+      0.01,
+      -0.09,
+      -0.05
+     ]
+    ],
+    "ok": true
+   },
+   "hulls": 50,
+   "no_support_control": {
+    "final_dp_cm": 88.297,
+    "max_dp_cm": 90.888,
+    "final_rot_deg": 1.631,
+    "max_rot_deg": 1.631,
+    "final_z_change_cm": -88.297,
+    "final_disp_cm": [
+     0.01,
+     -0.07,
+     -88.3
+    ],
+    "disp_at_0p2_1_2s_cm": [
+     [
+      0.0,
+      -0.0,
+      -20.1
+     ],
+     [
+      0.01,
+      -0.07,
+      -88.3
+     ],
+     [
+      0.01,
+      -0.07,
+      -88.3
+     ]
+    ],
+    "ok": false
+   }
+  }
+ ],
+ "all_ok": true,
+ "anchor_ok": true,
+ "anchor_control_moves": true
+}

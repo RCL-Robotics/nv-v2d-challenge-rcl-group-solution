@@ -1,0 +1,14 @@
+{
+ "episode_index": 19,
+ "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+ "object": "cane",
+ "task": "Walk over to the cane on the ground and use your right hand to grasp the cane then swing the cane on your side and then proceed to handover the cane to your left hand and perform a swinging motion. Place on the ground when complete.",
+ "frames": 886,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.304067999124527,
+  "median": 0.20976172387599945,
+  "max": 3.216649293899536
+ }
+}

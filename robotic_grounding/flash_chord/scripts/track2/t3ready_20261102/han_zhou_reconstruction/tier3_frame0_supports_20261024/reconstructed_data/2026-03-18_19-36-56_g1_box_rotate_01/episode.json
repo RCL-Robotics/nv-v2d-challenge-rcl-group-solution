@@ -1,0 +1,14 @@
+{
+ "episode_index": 5,
+ "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+ "object": "big_black_box",
+ "task": "Walk over to the G1 Box and rotate the box around the bounding area.",
+ "frames": 1003,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.6010090112686157,
+  "median": 0.2939873933792114,
+  "max": 11.343673706054688
+ }
+}

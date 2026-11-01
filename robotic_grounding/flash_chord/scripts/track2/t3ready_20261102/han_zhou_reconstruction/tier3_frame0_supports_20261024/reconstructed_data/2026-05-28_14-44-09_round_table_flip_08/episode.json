@@ -1,0 +1,14 @@
+{
+ "episode_index": 14,
+ "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+ "object": "round_table",
+ "task": "\"Walk to the round table and use both hands to lower it onto its side. Flip the table so the wheels are facing upward, then rotate it again onto its side, and continue rotating it until it returns to an upright position.",
+ "frames": 993,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.5228307843208313,
+  "median": 0.2933942377567291,
+  "max": 10.428482055664062
+ }
+}

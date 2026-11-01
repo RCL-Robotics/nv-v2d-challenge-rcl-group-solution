@@ -1,0 +1,15 @@
+{
+ "episode_index": 11,
+ "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+ "object": "light_blue_book",
+ "task": "Pick up the book from the table and place it on the floor.",
+ "frames": 901,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.4671371579170227,
+  "median": 0.20439580082893372,
+  "max": 10.381840705871582
+ },
+ "support": "../../supports/2026-04-24_13-56-58_light_blue_book_pick_place_09"
+}

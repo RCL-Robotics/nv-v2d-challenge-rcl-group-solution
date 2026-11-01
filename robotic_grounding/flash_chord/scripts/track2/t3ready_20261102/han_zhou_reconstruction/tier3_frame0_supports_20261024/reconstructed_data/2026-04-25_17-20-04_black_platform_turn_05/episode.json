@@ -1,0 +1,14 @@
+{
+ "episode_index": 12,
+ "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+ "object": "black_platform",
+ "task": "Walk over to the platform on the ground and turn the platform over. Place on the ground when done.",
+ "frames": 700,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.6147599220275879,
+  "median": 0.2674044668674469,
+  "max": 11.774188995361328
+ }
+}

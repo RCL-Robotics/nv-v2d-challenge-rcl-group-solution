@@ -1,0 +1,865 @@
+{
+ "written": "2026-10-22 04:07:13",
+ "source": "/root/autodl-tmp/han.zhou/tier3/release/tier3_opus_20261021",
+ "root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus",
+ "checks": {
+  "episodes_json_0_29": {
+   "ok": true,
+   "detail": "30 entries, indices [0, 1, 2]..29"
+  },
+  "episodes_json_equal_s1": {
+   "ok": true,
+   "detail": "byte-identical to tier3_s1_20261020"
+  },
+  "numbering_matches_tier1_tier2_manifests": {
+   "ok": true,
+   "detail": "30/30 index, sequence id, object and frame count equal"
+  },
+  "named_tier1_numbering": {
+   "ok": true,
+   "detail": {
+    "ep14": "2026-05-28_14-44-09_round_table_flip_08",
+    "ep08": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+    "ep07": "2026-05-29_15-20-43_iron_round_table_02",
+    "ep20": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+    "ep23": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+    "ep18": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+    "ep22": "2026-05-22_16-52-36_step_ladder_drag_03",
+    "ep00": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04"
+   }
+  },
+  "ep00_arrays": {
+   "ok": true,
+   "detail": "T=778 shapes True finite True orth 1.8e-07 pos/xyz_wxyz 1.2e-07 m 5.0e-06 deg"
+  },
+  "ep00_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep01_arrays": {
+   "ok": true,
+   "detail": "T=747 shapes True finite True orth 3.0e-06 pos/xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep01_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep02_arrays": {
+   "ok": true,
+   "detail": "T=980 shapes True finite True orth 6.7e-16 pos/xyz_wxyz 2.3e-07 m 4.7e-06 deg"
+  },
+  "ep02_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep03_arrays": {
+   "ok": true,
+   "detail": "T=781 shapes True finite True orth 2.3e-06 pos/xyz_wxyz 1.2e-07 m 5.2e-06 deg"
+  },
+  "ep03_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep04_arrays": {
+   "ok": true,
+   "detail": "T=803 shapes True finite True orth 5.3e-07 pos/xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep04_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep05_arrays": {
+   "ok": true,
+   "detail": "T=1003 shapes True finite True orth 1.6e-05 pos/xyz_wxyz 1.2e-07 m 5.1e-06 deg"
+  },
+  "ep05_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep06_arrays": {
+   "ok": true,
+   "detail": "T=546 shapes True finite True orth 1.8e-07 pos/xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep06_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep07_arrays": {
+   "ok": true,
+   "detail": "T=896 shapes True finite True orth 4.5e-07 pos/xyz_wxyz 1.2e-07 m 4.9e-06 deg"
+  },
+  "ep07_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep08_arrays": {
+   "ok": true,
+   "detail": "T=708 shapes True finite True orth 9.3e-08 pos/xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep08_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep09_arrays": {
+   "ok": true,
+   "detail": "T=870 shapes True finite True orth 1.6e-06 pos/xyz_wxyz 1.2e-07 m 4.4e-06 deg"
+  },
+  "ep09_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep10_arrays": {
+   "ok": true,
+   "detail": "T=794 shapes True finite True orth 2.2e-15 pos/xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep10_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep11_arrays": {
+   "ok": true,
+   "detail": "T=901 shapes True finite True orth 5.5e-06 pos/xyz_wxyz 1.2e-07 m 4.3e-06 deg"
+  },
+  "ep11_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep12_arrays": {
+   "ok": true,
+   "detail": "T=700 shapes True finite True orth 1.6e-07 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep12_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep13_arrays": {
+   "ok": true,
+   "detail": "T=922 shapes True finite True orth 5.3e-15 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep13_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep14_arrays": {
+   "ok": true,
+   "detail": "T=993 shapes True finite True orth 1.9e-05 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep14_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep15_arrays": {
+   "ok": true,
+   "detail": "T=715 shapes True finite True orth 4.1e-06 pos/xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep15_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep16_arrays": {
+   "ok": true,
+   "detail": "T=477 shapes True finite True orth 4.3e-15 pos/xyz_wxyz 2.3e-07 m 4.8e-06 deg"
+  },
+  "ep16_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep17_arrays": {
+   "ok": true,
+   "detail": "T=440 shapes True finite True orth 4.3e-06 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep17_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep18_arrays": {
+   "ok": true,
+   "detail": "T=858 shapes True finite True orth 2.1e-05 pos/xyz_wxyz 1.2e-07 m 5.0e-06 deg"
+  },
+  "ep18_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep19_arrays": {
+   "ok": true,
+   "detail": "T=886 shapes True finite True orth 2.7e-06 pos/xyz_wxyz 2.4e-07 m 4.9e-06 deg"
+  },
+  "ep19_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep20_arrays": {
+   "ok": true,
+   "detail": "T=553 shapes True finite True orth 3.9e-07 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep20_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep21_arrays": {
+   "ok": true,
+   "detail": "T=678 shapes True finite True orth 1.4e-05 pos/xyz_wxyz 1.2e-07 m 4.9e-06 deg"
+  },
+  "ep21_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep22_arrays": {
+   "ok": true,
+   "detail": "T=719 shapes True finite True orth 1.1e-15 pos/xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep22_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep23_arrays": {
+   "ok": true,
+   "detail": "T=946 shapes True finite True orth 1.1e-15 pos/xyz_wxyz 1.2e-07 m 5.1e-06 deg"
+  },
+  "ep23_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep24_arrays": {
+   "ok": true,
+   "detail": "T=748 shapes True finite True orth 2.4e-15 pos/xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep24_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep25_arrays": {
+   "ok": true,
+   "detail": "T=859 shapes True finite True orth 4.9e-06 pos/xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep25_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep26_arrays": {
+   "ok": true,
+   "detail": "T=669 shapes True finite True orth 1.9e-07 pos/xyz_wxyz 1.2e-07 m 4.4e-06 deg"
+  },
+  "ep26_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep27_arrays": {
+   "ok": true,
+   "detail": "T=565 shapes True finite True orth 8.9e-16 pos/xyz_wxyz 1.2e-07 m 4.0e-06 deg"
+  },
+  "ep27_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep28_arrays": {
+   "ok": true,
+   "detail": "T=988 shapes True finite True orth 2.7e-07 pos/xyz_wxyz 1.2e-07 m 4.4e-06 deg"
+  },
+  "ep28_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ep29_arrays": {
+   "ok": true,
+   "detail": "T=467 shapes True finite True orth 2.7e-07 pos/xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep29_human_is_s1": {
+   "ok": true,
+   "detail": "soma_params.npz byte-identical to s1 (README: human unchanged)"
+  },
+  "ground_planes_released": {
+   "ok": true,
+   "detail": "30/30 ground_plane.json = released Track-2 file"
+  },
+  "meshes_released": {
+   "ok": true,
+   "detail": "30/30 output_aligned.glb = released Track-2 mesh"
+  },
+  "release_frame_refs_are_s1": {
+   "ok": true,
+   "detail": "release frame_references/ byte-identical to s1 (not usable for opus-trained policies)"
+  },
+  "floor_only_count": {
+   "ok": true,
+   "detail": "floor-only [0, 4, 5, 8, 10, 12, 14, 15, 18, 19, 21, 22, 23, 24, 26, 29]; support_pending [1, 2, 3, 6, 7, 9, 11, 13, 16, 17, 20, 25, 27, 28]"
+  }
+ },
+ "episodes": {
+  "00": {
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "object": "tall_bar_stool",
+   "frames": 778,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.7632894311336855e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1822092060853606e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.978250448209971e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.06963675697695892,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "01": {
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "object": "vacuum",
+   "frames": 747,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 3.0321620729800713e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1912280672987663e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.8179931270143195e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.14444796550267247,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "02": {
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "object": "blue_easter_basket",
+   "frames": 980,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 6.661338147750939e-16,
+   "poses_vs_xyz_wxyz_max_pos_m": 2.2933833410121451e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.686992159365021e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 1.9779058490934602,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "03": {
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "object": "contigo_coffee_mug",
+   "frames": 781,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.2553474235964543e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1738704452923798e-07,
+   "poses_vs_xyz_wxyz_max_deg": 5.168420054775592e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.18004425063857799,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "04": {
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "object": "baseball_bat",
+   "frames": 803,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 5.265971123602498e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1891823881171604e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.814863450318115e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.19996795388623845,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "05": {
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "object": "big_black_box",
+   "frames": 1003,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.6263158807094946e-05,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.191701084479746e-07,
+   "poses_vs_xyz_wxyz_max_deg": 5.062081853455518e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.1243854578508099,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "06": {
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "object": "monitor",
+   "frames": 546,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.7924285855563937e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1880082029236405e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.772338839351153e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.12387659170746002,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "07": {
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "object": "iron",
+   "frames": 896,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 4.5147341531937e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1912542108305502e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.895241608244731e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.9207466055374542,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "08": {
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "object": "skinny_wood_chair",
+   "frames": 708,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 9.288527902384658e-08,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1869468519165594e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.697816717714138e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.08098088930813585,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "09": {
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "object": "big_red_bowl",
+   "frames": 870,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.5519016769438565e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1887348350114735e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.367419103952136e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.2401107300242451,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "10": {
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "object": "white_desk",
+   "frames": 794,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.220446049250313e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1877253136560739e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.66480063047959e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.16560006516926684,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "11": {
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "object": "light_blue_book",
+   "frames": 901,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 5.510558790389197e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1920522213770823e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.28470448995865e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.11681779212052884,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "12": {
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "object": "black_platform",
+   "frames": 700,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.590399357764838e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1853053605292985e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.522076344926072e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.17058911450214875,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "13": {
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "object": "snack_box",
+   "frames": 922,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 5.329070518200751e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1907854791104455e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.509588062491346e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.20109180501220336,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "14": {
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "object": "round_table",
+   "frames": 993,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.945772250233624e-05,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1916894848695847e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.488543899228266e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.069229674918311,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "15": {
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "object": "wet_floor_sign",
+   "frames": 715,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 4.068963914360957e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1920726095127065e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.674730793338396e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.08010655677117162,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "16": {
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "object": "spray_bottle",
+   "frames": 477,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 4.3298697960381105e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 2.3367898016601885e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.824208280960133e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 1.29772922671668,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "17": {
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "object": "traffic_cone",
+   "frames": 440,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 4.288250816886219e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1911090513905265e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.514643941342695e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.17437386677703587,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "18": {
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "object": "blue_trash_can",
+   "frames": 858,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.0592931723406593e-05,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1874766814301552e-07,
+   "poses_vs_xyz_wxyz_max_deg": 5.007760881690414e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.06891007427442686,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "19": {
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "object": "cane",
+   "frames": 886,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.718720101047012e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 2.378156089832828e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.866886779228638e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.533727874262552,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "20": {
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "object": "rice_cooker",
+   "frames": 553,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 3.9454243538905587e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1889661033492871e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.4521636962968714e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.13628099276130579,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "21": {
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "object": "tall_bar_stool",
+   "frames": 678,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.3937128937602239e-05,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.191794818389269e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.85281000840957e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.0429756425629666,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "22": {
+   "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+   "object": "step_ladder",
+   "frames": 719,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.1102230246251565e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1900163299216615e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.583335185332579e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.11701964325324266,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "23": {
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "object": "toy_stroller",
+   "frames": 946,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.1102230246251565e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1914848796479305e-07,
+   "poses_vs_xyz_wxyz_max_deg": 5.064054737285747e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.22781196827470707,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "24": {
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "object": "watering_can",
+   "frames": 748,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.4424906541753444e-15,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1785001596820166e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.837866127950656e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.10571639529864818,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "25": {
+   "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "object": "cyan_water_bottle",
+   "frames": 859,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 4.875352851652082e-06,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1918619335915537e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.532680889852709e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.24735660482508637,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "26": {
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "object": "skateboard",
+   "frames": 669,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 1.882537964403852e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1895281026852444e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.435103104693935e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.08775841581462851,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  },
+  "27": {
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "object": "woven_basket",
+   "frames": 565,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 8.881784197001252e-16,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1899716101382296e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.048417749479463e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.08603144689232134,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "28": {
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "object": "squeegee",
+   "frames": 988,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.6859275004120775e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1906344443701755e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.3869805829478855e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.5561417602306566,
+   "released_support_has_geometry": true,
+   "support": "support_pending (no file written)"
+  },
+  "29": {
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "object": "rolling_luggage",
+   "frames": 467,
+   "shapes_ok": true,
+   "finite": true,
+   "max_orthonormality_err": 2.723817473793133e-07,
+   "poses_vs_xyz_wxyz_max_pos_m": 1.1909972252865941e-07,
+   "poses_vs_xyz_wxyz_max_deg": 4.690494241540753e-06,
+   "ground_plane_equal_released": true,
+   "mesh_equal_released": true,
+   "soma_params_equal_s1": true,
+   "poses_equal_s1": false,
+   "release_frame_ref_equal_s1_file": true,
+   "release_frame_ref_vs_opus_max_pos_m": 0.08234379068506437,
+   "released_support_has_geometry": false,
+   "support": "floor-only (released geometry-free file copied; scene.support=false)"
+  }
+ },
+ "floor_only": [
+  0,
+  4,
+  5,
+  8,
+  10,
+  12,
+  14,
+  15,
+  18,
+  19,
+  21,
+  22,
+  23,
+  24,
+  26,
+  29
+ ],
+ "support_pending": [
+  1,
+  2,
+  3,
+  6,
+  7,
+  9,
+  11,
+  13,
+  16,
+  17,
+  20,
+  25,
+  27,
+  28
+ ],
+ "bad": []
+}

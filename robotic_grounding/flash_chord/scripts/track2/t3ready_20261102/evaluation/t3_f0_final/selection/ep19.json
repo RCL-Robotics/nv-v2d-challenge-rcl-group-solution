@@ -1,0 +1,110 @@
+{
+ "episode": 19,
+ "object": "cane",
+ "kind": "f0",
+ "eval_sha256": "3110db808a63a83e36145aaf8e4cbd9956e64a0fad1755514895f97a3124202f",
+ "runs": [
+  {
+   "k": 1,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.13036117381489842,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 50.105402656422605
+   },
+   "gpu": 6,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r1/try1/results/episode_000019.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r1/try1/results/episode_000019.parquet",
+   "json_sha256": "0171190d550eee480c12d38a847c98898ad2aacee0ed1a48951f8d99fc2294db",
+   "parquet_sha256": "5e00a0d2f4c914591ca49f3cf68b510e5b5d59b6b4d398f48d59be2ef1debe80"
+  },
+  {
+   "k": 2,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.13036117381489842,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 50.10982232118023
+   },
+   "gpu": 2,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r2/try1/results/episode_000019.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r2/try1/results/episode_000019.parquet",
+   "json_sha256": "fadf9eb546e1f9fe1a7ff02fb667b3b18ed33a7842567d5ba2bce5da7dd90a32",
+   "parquet_sha256": "cd8b5f997c3080f9d149f1bbfde0d8c87625d5184f4e3c146d4b80603b5cd016"
+  },
+  {
+   "k": 3,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.13036117381489842,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 50.11128535706365
+   },
+   "gpu": 5,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r3/try1/results/episode_000019.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r3/try1/results/episode_000019.parquet",
+   "json_sha256": "301c8842e67a8ff7eeb9abdcb834621f19322c827abaa065e9cd4d6b1e3fd014",
+   "parquet_sha256": "301996af1467a091538a3e3e7cba320044a3245305c2be2bd23c3dcac8c497d1"
+  },
+  {
+   "k": 4,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.13036117381489842,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 50.109538235494036
+   },
+   "gpu": 3,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r4/try1/results/episode_000019.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r4/try1/results/episode_000019.parquet",
+   "json_sha256": "4cad8427bd179cf5a09cf27f79752def187e10a00370a91dc01bd40f83728876",
+   "parquet_sha256": "02bcc57ec74a436b72d3e08a2cf5b6a57fe9f26ef491c4a027d4fe3b23bdd94d"
+  },
+  {
+   "k": 5,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.13036117381489842,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 50.10825734412047
+   },
+   "gpu": 1,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r5/try1/results/episode_000019.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep19/r5/try1/results/episode_000019.parquet",
+   "json_sha256": "e61bec4f76621f7266044eb7d31454538879eee8bba83d3f23927a4df49f6722",
+   "parquet_sha256": "f3e2b118f2942eca3299c7a8ebaf865dba1ecb321beb91707a0df09f88013641"
+  }
+ ],
+ "chosen_run": 1,
+ "n_ok": 5,
+ "mean_auc": 0.13036117381489842,
+ "auc_by_run": {
+  "1": 0.13036117381489842,
+  "2": 0.13036117381489842,
+  "3": 0.13036117381489842,
+  "4": 0.13036117381489842,
+  "5": 0.13036117381489842
+ },
+ "distances": {
+  "1": 0.0,
+  "2": 0.0,
+  "3": 0.0,
+  "4": 0.0,
+  "5": 0.0
+ },
+ "rule": "own-input ADD-AUC closest to the mean over the ok runs (exact rational arithmetic on the float64 values); ties -> lower run index",
+ "frozen_at": "2026-10-27 19:56:54",
+ "prereg_sha256": "e4e3a5daf239f5b5858e32442c43eb708947b38c20eae76e12af757a747bd0eb",
+ "driver_sha256": "22c26adfc44727fa5ab29e1671229ef350c7d1c26a293f97c9f9baeac83b1e08",
+ "post_own_input_report_only": {
+  "auc": 0.13036117381489842,
+  "sp_sr": 0.0,
+  "mp_sr": 0.0,
+  "mppe": 50.10994504755212
+ }
+}

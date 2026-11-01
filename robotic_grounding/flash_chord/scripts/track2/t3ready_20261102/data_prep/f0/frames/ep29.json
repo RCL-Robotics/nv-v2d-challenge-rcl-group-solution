@@ -1,0 +1,28 @@
+{
+ "ep": 29,
+ "seq": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+ "frames": 467,
+ "n_mesh_v": 292750,
+ "lift_applied": 0.0061070678722227045,
+ "lift_min_signed": -0.005607067872222704,
+ "verts": false,
+ "plane_normal": [
+  -0.06958481370582875,
+  0.027107279291873794,
+  0.9972076760188509
+ ],
+ "plane_offset": 0.8900861735569287,
+ "M_vs_object_chain_max_err": [
+  1.1102230246251565e-15,
+  2.220446049250313e-16
+ ],
+ "obj_sha256": "e3f6d409039d502480272df8fa90c8ddb6fdf051af3194c85af8e39c0a4f41f6",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "5cf6eaf406d4f9710f48d87891a39a330601e424c7f15127f005a6b2c9ea9ff2",
+  "soma_params.npz": "cd2c647c9632dc8035d6edbb7c1a2b24eb706ace2dcd77785d518596c34cf272",
+  "ground_plane.json": "2a1e4ae6de1eeadd297c4de854fe018da0b6f2c594a9f1911321903061f4c0b9",
+  "reconstructed_mesh/output_aligned.glb": "cd4c9c2b4d80e47bb5228461d39bec195f5ed0395942b2ebd0d4585eac341b67"
+ },
+ "seconds": 10.4
+}

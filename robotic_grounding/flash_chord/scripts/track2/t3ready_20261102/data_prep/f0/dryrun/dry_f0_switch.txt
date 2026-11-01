@@ -1,0 +1,418 @@
+[dry] CHECK prereg ok sha256(PREREG_f0.md) 82702d85fd119d0a... == PREREG_f0.sha256 82702d85fd119d0a...
+[dry] CHECK code_pin ok /root/autodl-tmp/haoran.zhang/code/fc_r2 HEAD 61fa5d31ff80 (pin 61fa5d3)
+[dry] CHECK nv_pin ok /root/autodl-tmp/haoran.zhang/code/nv-v2d-challenge-codebase/robotic_grounding HEAD f2923d61817e (the retarget pin f2923d6 the parquets were made with)
+[dry] CHECK code_tree_digest ok 2a99fda66b43a594... == opus_easy/build.json (same code as the opus test)
+[dry] CHECK experiment_deadline ok g1_recon_body_coord_rsi_r2.yaml deadline: 35156
+[dry] CHECK experiment_zero_ramp ok g1_recon_body_coord_rsi_r2.yaml zero_ramp: 3906
+[dry] CHECK experiment_early_stop_help_zero_tail ok g1_recon_body_coord_rsi_r2.yaml early_stop_help_zero_tail: 5860
+[dry] CHECK experiment_max_iterations ok g1_recon_body_coord_rsi_r2.yaml max_iterations: 45000
+[dry] CHECK termination_default_palm ok termination/recon_body.yaml palm_position_threshold: 0.15 (default; 0.25 only for the MITIGATED clips)
+[dry] CHECK data_ready ok /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/READY sha256 ee58a62deb3a0bb0... (want ee58a62deb3a0bb0...)
+[dry] CHECK data_files_sha256_file ok FILES.sha256 sha256 f9c94e8550e03223...
+[dry] CHECK data_files_verified ok FILES.sha256 full verification: 576 files, 0 mismatch(es)
+[dry] CHECK scene_table ok SCENE_SUPPORT.json sha256 bce8e9ebfc8d61bc...
+[dry] CHECK support_files_sha256 ok SUPPORT_FILES.sha256 sha256 5deea2b0cfa50d5c...
+[dry] CHECK scene_support_set ok SCENE_SUPPORT.json support episodes = [1, 2, 3, 6, 7, 9, 11, 13, 16, 17, 20, 25, 27, 28]
+[dry] CHECK finalize_report ok build/finalize_report.json bad [], FILES.sha256 sha256 f9c94e8550e03223...
+[dry] CHECK build_report ok build/build_report.json sha256 8aebef6643cf8767..., bad []
+[dry] CHECK prep_table ok build/prep_table.json sha256 61bf2db027ca679f... (report-only flags)
+[dry] CHECK prep_scripts_unchanged ok build/build_files.sha256: all match
+[dry] CHECK retarget_lock_file ok retarget/parquet_lock.json sha256 bdb83b0ee34f05a8... (30 entries)
+[dry] CHECK mitigation_file ok align/mitigation_f0.json sha256 2ab767eb9028f3ad...; episodes [1, 2, 3, 15, 17, 19, 20, 28]; override termination.palm_position_threshold=0.25
+[dry] CHECK align_files ok align/ALIGN_FILES.sha256 sha256 1ccbd2963ced0bc0...
+[dry] CHECK align_script ok scripts/t3f0_align.py sha256 03ea75fcffb280d7...
+[dry] CHECK cfgcheck ok cfgcheck_f0.json: all_ok True, 30 clips
+[dry] CHECK file_t3f0_rcheck.py ok /root/autodl-tmp/haoran.zhang/scripts/t3f0_rcheck.py
+[dry] CHECK file_track2_tier2_clean_scores.py ok /root/autodl-tmp/haoran.zhang/scripts/track2_tier2_clean_scores.py
+[dry] CHECK file_python ok /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python
+[dry] CHECK file_python ok /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python
+[dry] CHECK clip_set ok 30 clips, ORDER = episode index
+[dry] CHECK ep00_manifest ok manifest ('2026-06-04_14-16-23_tall_bar_stool_tip_up_04', 778)
+[dry] CHECK ep00_frame_ref ok episode_000000.npz sha256 7eee722400ca... = build report 7eee722400ca...
+[dry] CHECK ep00_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep00_retarget_lock ok parquet sha256 20dbcd89b6fc09dd... lock 20dbcd89b6fc09dd... rcheck all_ok True
+[dry] CHECK ep00_t2_reference ok C3r2_tier2 help_zero_since 35183 (table 35183; report only)
+[dry] CHECK ep01_manifest ok manifest ('2026-05-18_17-06-21_vacuum_left_lean_02', 747)
+[dry] CHECK ep01_frame_ref ok episode_000001.npz sha256 64bee4590849... = build report 64bee4590849...
+[dry] CHECK ep01_scene ok SUPPORT tall_bar_stool (stool, 31 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 03d06c3bd53b... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep01_retarget_lock ok parquet sha256 94ffb6b7eca5346b... lock 94ffb6b7eca5346b... rcheck all_ok True
+[dry] CHECK ep01_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep02_manifest ok manifest ('2026-06-02_10-04-42_blue_easter_basket_place_10', 980)
+[dry] CHECK ep02_frame_ref ok episode_000002.npz sha256 c7a1fcc99b2d... = build report c7a1fcc99b2d...
+[dry] CHECK ep02_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 36331e10d6c6... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep02_retarget_lock ok parquet sha256 b21d7562d6b9098b... lock b21d7562d6b9098b... rcheck all_ok True
+[dry] CHECK ep02_t2_reference ok C3r2_tier2 help_zero_since 31549 (table 31549; report only)
+[dry] CHECK ep03_manifest ok manifest ('2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05', 781)
+[dry] CHECK ep03_frame_ref ok episode_000003.npz sha256 7b627db7c49b... = build report 7b627db7c49b...
+[dry] CHECK ep03_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 648758f5aa01... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep03_retarget_lock ok parquet sha256 9b058c279ab740a5... lock 9b058c279ab740a5... rcheck all_ok True
+[dry] CHECK ep03_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep04_manifest ok manifest ('2026-04-24_11-40-52_baseball_bat_rotate_05', 803)
+[dry] CHECK ep04_frame_ref ok episode_000004.npz sha256 da4643864cd8... = build report da4643864cd8...
+[dry] CHECK ep04_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep04_retarget_lock ok parquet sha256 8601e387bb25f55f... lock 8601e387bb25f55f... rcheck all_ok True
+[dry] CHECK ep04_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep05_manifest ok manifest ('2026-03-18_19-36-56_g1_box_rotate_01', 1003)
+[dry] CHECK ep05_frame_ref ok episode_000005.npz sha256 f04e0090e860... = build report f04e0090e860...
+[dry] CHECK ep05_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep05_retarget_lock ok parquet sha256 50a54e4af114f629... lock 50a54e4af114f629... rcheck all_ok True
+[dry] CHECK ep05_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep06_manifest ok manifest ('2026-06-01_11-26-44_monitor_rotate_05', 546)
+[dry] CHECK ep06_frame_ref ok episode_000006.npz sha256 33f26940cd51... = build report 33f26940cd51...
+[dry] CHECK ep06_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 ae25c24376b5... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep06_retarget_lock ok parquet sha256 233c795334e17be1... lock 233c795334e17be1... rcheck all_ok True
+[dry] CHECK ep06_t2_reference ok C3r2_tier2 help_zero_since 28034 (table 28034; report only)
+[dry] CHECK ep07_manifest ok manifest ('2026-05-29_15-20-43_iron_round_table_02', 896)
+[dry] CHECK ep07_frame_ref ok episode_000007.npz sha256 bfab0c50e411... = build report bfab0c50e411...
+[dry] CHECK ep07_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 155d055f7ce1... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep07_retarget_lock ok parquet sha256 68545de91538dd25... lock 68545de91538dd25... rcheck all_ok True
+[dry] CHECK ep07_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep08_manifest ok manifest ('2026-06-05_15-08-08_skinny_wood_chair_push_10', 708)
+[dry] CHECK ep08_frame_ref ok episode_000008.npz sha256 4653fa14d50a... = build report 4653fa14d50a...
+[dry] CHECK ep08_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep08_retarget_lock ok parquet sha256 4ceac29c6ef84e19... lock 4ceac29c6ef84e19... rcheck all_ok True
+[dry] CHECK ep08_t2_reference ok C3r2_tier2 help_zero_since 14737 (table 14737; report only)
+[dry] CHECK ep09_manifest ok manifest ('2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03', 870)
+[dry] CHECK ep09_frame_ref ok episode_000009.npz sha256 4a53e25e349a... = build report 4a53e25e349a...
+[dry] CHECK ep09_scene ok SUPPORT skinny_wood_chair (top, 11 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 1cc0d7306ef3... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep09_retarget_lock ok parquet sha256 270d8df52447be22... lock 270d8df52447be22... rcheck all_ok True
+[dry] CHECK ep09_t2_reference ok C3r2_tier2 help_zero_since 33468 (table 33468; report only)
+[dry] CHECK ep10_manifest ok manifest ('2026-05-01_11-36-40_white_desk_lower_to_ground_10', 794)
+[dry] CHECK ep10_frame_ref ok episode_000010.npz sha256 a1549be9307a... = build report a1549be9307a...
+[dry] CHECK ep10_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep10_retarget_lock ok parquet sha256 a64b3a9d1a83a657... lock a64b3a9d1a83a657... rcheck all_ok True
+[dry] CHECK ep10_t2_reference ok C3r2_tier2 help_zero_since 28407 (table 28407; report only)
+[dry] CHECK ep11_manifest ok manifest ('2026-04-24_13-56-58_light_blue_book_pick_place_09', 901)
+[dry] CHECK ep11_frame_ref ok episode_000011.npz sha256 0f044deaf620... = build report 0f044deaf620...
+[dry] CHECK ep11_scene ok SUPPORT white_desk (top, 28 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 831f3b6e013a... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep11_retarget_lock ok parquet sha256 5765586810904a78... lock 5765586810904a78... rcheck all_ok True
+[dry] CHECK ep11_t2_reference ok C3r2_tier2 help_zero_since 23065 (table 23065; report only)
+[dry] CHECK ep12_manifest ok manifest ('2026-04-25_17-20-04_black_platform_turn_05', 700)
+[dry] CHECK ep12_frame_ref ok episode_000012.npz sha256 e14370fb1e20... = build report e14370fb1e20...
+[dry] CHECK ep12_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep12_retarget_lock ok parquet sha256 0133f928c30faf2e... lock 0133f928c30faf2e... rcheck all_ok True
+[dry] CHECK ep12_t2_reference ok C3r2_tier2 help_zero_since 31715 (table 31715; report only)
+[dry] CHECK ep13_manifest ok manifest ('2026-06-09_10-19-09_snack_box_desk_through_06', 922)
+[dry] CHECK ep13_frame_ref ok episode_000013.npz sha256 6a58840e907e... = build report 6a58840e907e...
+[dry] CHECK ep13_scene ok SUPPORT white_desk (top, 29 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 310d1d6979b1... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep13_retarget_lock ok parquet sha256 baf8825a131b0bad... lock baf8825a131b0bad... rcheck all_ok True
+[dry] CHECK ep13_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep14_manifest ok manifest ('2026-05-28_14-44-09_round_table_flip_08', 993)
+[dry] CHECK ep14_frame_ref ok episode_000014.npz sha256 cfc80ed58a8b... = build report cfc80ed58a8b...
+[dry] CHECK ep14_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep14_retarget_lock ok parquet sha256 f0b0fce012687ef4... lock f0b0fce012687ef4... rcheck all_ok True
+[dry] CHECK ep14_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep15_manifest ok manifest ('2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08', 715)
+[dry] CHECK ep15_frame_ref ok episode_000015.npz sha256 818b56241252... = build report 818b56241252...
+[dry] CHECK ep15_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep15_retarget_lock ok parquet sha256 d4f007fa28336e1a... lock d4f007fa28336e1a... rcheck all_ok True
+[dry] CHECK ep15_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep16_manifest ok manifest ('2026-03-12_15-06-36_spray_bottle_left_desk_ground_02', 477)
+[dry] CHECK ep16_frame_ref ok episode_000016.npz sha256 7e9aa640c1cd... = build report 7e9aa640c1cd...
+[dry] CHECK ep16_scene ok SUPPORT white_desk (top, 29 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 248c8f9ea73d... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep16_retarget_lock ok parquet sha256 5f6644464cba1a9e... lock 5f6644464cba1a9e... rcheck all_ok True
+[dry] CHECK ep16_t2_reference ok C3r2_tier2 help_zero_since 25408 (table 25408; report only)
+[dry] CHECK ep17_manifest ok manifest ('2026-05-01_17-04-55_traffic_cone_ground_table_02', 440)
+[dry] CHECK ep17_frame_ref ok episode_000017.npz sha256 390f537c174b... = build report 390f537c174b...
+[dry] CHECK ep17_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 f3e509e96af4... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep17_retarget_lock ok parquet sha256 3591829d8eefee75... lock 3591829d8eefee75... rcheck all_ok True
+[dry] CHECK ep17_t2_reference ok C3r2_tier2 help_zero_since 25947 (table 25947; report only)
+[dry] CHECK ep18_manifest ok manifest ('2026-05-06_10-00-19_blue_trash_can_drag_sideways_08', 858)
+[dry] CHECK ep18_frame_ref ok episode_000018.npz sha256 8f97cc89be27... = build report 8f97cc89be27...
+[dry] CHECK ep18_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep18_retarget_lock ok parquet sha256 86648d4c5efe2cec... lock 86648d4c5efe2cec... rcheck all_ok True
+[dry] CHECK ep18_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep19_manifest ok manifest ('2026-05-19_10-19-48_cane_swing_05', 886)
+[dry] CHECK ep19_frame_ref ok episode_000019.npz sha256 a5494851a1dc... = build report a5494851a1dc...
+[dry] CHECK ep19_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep19_retarget_lock ok parquet sha256 9dc7d6bc5ed5440f... lock 9dc7d6bc5ed5440f... rcheck all_ok True
+[dry] CHECK ep19_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep20_manifest ok manifest ('2026-06-08_16-57-34_rice_cooker_clockwise_04', 553)
+[dry] CHECK ep20_frame_ref ok episode_000020.npz sha256 4c3ee8d7f7e1... = build report 4c3ee8d7f7e1...
+[dry] CHECK ep20_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 3f92eecc15a1... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep20_retarget_lock ok parquet sha256 7728e9ad49700965... lock 7728e9ad49700965... rcheck all_ok True
+[dry] CHECK ep20_t2_reference ok C3r2_tier2 help_zero_since 13174 (table 13174; report only)
+[dry] CHECK ep21_manifest ok manifest ('2026-04-29_11-53-57_tall_bar_stool_pull_08', 678)
+[dry] CHECK ep21_frame_ref ok episode_000021.npz sha256 9bd2c0fe56c2... = build report 9bd2c0fe56c2...
+[dry] CHECK ep21_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep21_retarget_lock ok parquet sha256 1414af597cbd04fe... lock 1414af597cbd04fe... rcheck all_ok True
+[dry] CHECK ep21_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep22_manifest ok manifest ('2026-05-22_16-52-36_step_ladder_drag_03', 719)
+[dry] CHECK ep22_frame_ref ok episode_000022.npz sha256 f4398bad0806... = build report f4398bad0806...
+[dry] CHECK ep22_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep22_retarget_lock ok parquet sha256 f750d9933dbb3628... lock f750d9933dbb3628... rcheck all_ok True
+[dry] CHECK ep22_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep23_manifest ok manifest ('2026-06-03_15-08-03_toy_stroller_back_forth_ground_04', 946)
+[dry] CHECK ep23_frame_ref ok episode_000023.npz sha256 5ff173d104da... = build report 5ff173d104da...
+[dry] CHECK ep23_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep23_retarget_lock ok parquet sha256 7782dd48a65a1aac... lock 7782dd48a65a1aac... rcheck all_ok True
+[dry] CHECK ep23_t2_reference ok C3r2_tier2 help_zero_since 14163 (table 14163; report only)
+[dry] CHECK ep24_manifest ok manifest ('2026-05-29_15-43-20_watering_can_pour_right_02', 748)
+[dry] CHECK ep24_frame_ref ok episode_000024.npz sha256 8259d4e29933... = build report 8259d4e29933...
+[dry] CHECK ep24_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep24_retarget_lock ok parquet sha256 c8aee4807b0c0de5... lock c8aee4807b0c0de5... rcheck all_ok True
+[dry] CHECK ep24_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep25_manifest ok manifest ('2026-03-20_11-59-57_cyan_water_bottle_rotate_01', 859)
+[dry] CHECK ep25_frame_ref ok episode_000025.npz sha256 af4fc32f93de... = build report af4fc32f93de...
+[dry] CHECK ep25_scene ok SUPPORT round_table (top, 18 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 21cfbff53af7... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep25_retarget_lock ok parquet sha256 530f7fa375fc15af... lock 530f7fa375fc15af... rcheck all_ok True
+[dry] CHECK ep25_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep26_manifest ok manifest ('2026-06-05_16-05-08_skateboard_rotate_ground_10', 669)
+[dry] CHECK ep26_frame_ref ok episode_000026.npz sha256 48b874b7aa1d... = build report 48b874b7aa1d...
+[dry] CHECK ep26_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep26_retarget_lock ok parquet sha256 33084a187258532b... lock 33084a187258532b... rcheck all_ok True
+[dry] CHECK ep26_t2_reference ok C3r2_tier2 help_zero_since 29088 (table 29088; report only)
+[dry] CHECK ep27_manifest ok manifest ('2026-05-01_11-15-05_woven_basket_ground_desk_10', 565)
+[dry] CHECK ep27_frame_ref ok episode_000027.npz sha256 a0d770c67155... = build report a0d770c67155...
+[dry] CHECK ep27_scene ok SUPPORT white_desk (top, 30 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 88183ae5df98... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep27_retarget_lock ok parquet sha256 dcbc4099633e2dac... lock dcbc4099633e2dac... rcheck all_ok True
+[dry] CHECK ep27_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep28_manifest ok manifest ('2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_', 988)
+[dry] CHECK ep28_frame_ref ok episode_000028.npz sha256 a4375f4e7484... = build report a4375f4e7484...
+[dry] CHECK ep28_scene ok SUPPORT tall_bar_stool (stool, 24 boxes): f0 rule true, raw Tier-2 rule true, table True; file sha256 12dafd1f107d... = table; no *_g1_support.usda True -> scene.support=true
+[dry] CHECK ep28_retarget_lock ok parquet sha256 8153f29408568bfe... lock 8153f29408568bfe... rcheck all_ok True
+[dry] CHECK ep28_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECK ep29_manifest ok manifest ('2026-06-05_18-27-40_rolling_luggage_left_foot_push_06', 467)
+[dry] CHECK ep29_frame_ref ok episode_000029.npz sha256 47a75076ac60... = build report 47a75076ac60...
+[dry] CHECK ep29_scene ok floor-only: f0 rule false, raw Tier-2 rule false, table False; file sha256 4d1d1a74fced... = table; no *_g1_support.usda True -> scene.support=false
+[dry] CHECK ep29_retarget_lock ok parquet sha256 5135e5fead8a9ba6... lock 5135e5fead8a9ba6... rcheck all_ok True
+[dry] CHECK ep29_t2_reference ok C3r2_tier2 help_zero_since 39062 (table 39062; report only)
+[dry] CHECKS 179/179 ok
+[dry] preflight exit 0 (run would pass the preflight)
+[dry] Tier-3 drivers in run mode now: DRIVER 407728 t3opus_driver_v2.sh scripts/t3opus_driver_v2.sh run --wave 1,2,3 -> 'run' would ABORT until the t3opus driver has exited (switch step 1)
+[dry] singleton: f0/.driver.lock free
+[dry] config check (hydra compose, CPU; --no-write): cfgcheck: OK
+[dry] launch order: 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29
+[dry] prep table (frame references, scene, mitigation, flags, lock):
+[dry]   PREP ep00 tall_bar_stool      T=778  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep01 vacuum              T=747  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags Han: stool fit IoU 0.61; REST_GAP run [658, 747] median sdf 2.7 cm; SETTLE run [658, 747] dp 2.328 cm rot 4.882 deg; human-object 78.36 cm; MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 3.26 cm vs opus_v2 2.84 cm)
+[dry]   PREP ep02 blue_easter_basket  T=980  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags PATH object deeper than 1 cm in a box on 8 frames [[125, 132]] (min -1.5 cm; a 3 cm slab allows at most 1.5); MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 7.71 cm vs opus_v2 1.2 cm)
+[dry]   PREP ep03 contigo_coffee_mug  T=781  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags PATH object deeper than 1 cm in a box on 48 frames [[527, 530], [604, 644], [686, 688]] (min -1.5 cm; a 3 cm slab allows at most 1.5); MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 5.47 cm vs opus_v2 0.28 cm)
+[dry]   PREP ep04 baseball_bat        T=803  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags align: near the threshold, not mitigated (2.84 cm, +1.96)
+[dry]   PREP ep05 big_black_box       T=1003 scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep06 monitor             T=546  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags SETTLE anchor run not stable; SETTLE run [0, 168] dp 2.055 cm rot 4.184 deg; human-object 17.02 cm
+[dry]   PREP ep07 iron                T=896  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags FOOTPRINT run [387, 397] cover 0.769
+[dry]   PREP ep08 skinny_wood_chair   T=708  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep09 big_red_bowl        T=870  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep10 white_desk          T=794  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep11 light_blue_book     T=901  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags FOOTPRINT run [406, 467] cover 0.44; PATH object deeper than 1 cm in a box on 8 frames [[468, 475]] (min -1.4 cm; a 3 cm slab allows at most 1.5); settle (human hand within 3 cm: held, not a free rest) run [406, 467] dp 89.016 cm rot 150.984 deg; human-object 0.05 cm
+[dry]   PREP ep12 black_platform      T=700  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep13 snack_box           T=922  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags PATH object deeper than 1 cm in a box on 155 frames [[131, 155], [205, 205], [769, 779], [804, 921]] (min -1.5 cm; a 3 cm slab allows at most 1.5); G1 41 frames [[558, 592], [594, 594], [630, 631], [634, 636]] worst 4.99 cm (['g1/left_elbow_link']); align: near the threshold, not mitigated (2.51 cm, +1.30)
+[dry]   PREP ep14 round_table         T=993  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep15 wet_floor_sign      T=715  scene floor   (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 3.2 cm vs opus_v2 1.48 cm)
+[dry]   PREP ep16 spray_bottle        T=477  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags G1 29 frames [[295, 321], [323, 323], [325, 325]] worst 4.99 cm (['g1/right_elbow_link']); align: near the threshold, not mitigated (2.98 cm, +1.74)
+[dry]   PREP ep17 traffic_cone        T=440  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags Han: cone track ~5 cm inside the table (table lowered); SETTLE anchor run not stable; SETTLE run [336, 440] dp 1.135 cm rot 5.238 deg; human-object 37.35 cm; MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 3.5 cm vs opus_v2 0.65 cm)
+[dry]   PREP ep18 blue_trash_can      T=858  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep19 cane                T=886  scene floor   (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 11.12 cm vs opus_v2 0.69 cm); align: hand 11 cm from the cane (palm > 15 cm on 58% of contact frames): config relaxation likely insufficient
+[dry]   PREP ep20 rice_cooker         T=553  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 4.23 cm vs opus_v2 0.75 cm)
+[dry]   PREP ep21 tall_bar_stool      T=678  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep22 step_ladder         T=719  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep23 toy_stroller        T=946  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep24 watering_can        T=748  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep25 cyan_water_bottle   T=859  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags PATH object deeper than 1 cm in a box on 4 frames [[773, 776]] (min -1.5 cm; a 3 cm slab allows at most 1.5); SETTLE run [778, 859] dp 20.75 cm rot 95.855 deg; human-object 51.85 cm
+[dry]   PREP ep26 skateboard          T=669  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep27 woven_basket        T=565  scene SUPPORT (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags -
+[dry]   PREP ep28 squeegee            T=988  scene SUPPORT (ok) | mitigated YES | frame_ref sha=build True content ok | lock ok | flags Han: squeegee ends ~10 cm from the stool; MITIGATED termination.palm_position_threshold=0.25 (median contact gap f0 14.75 cm vs opus_v2 1.07 cm); align: hand 15 cm from the squeegee (palm > 15 cm on 54% of contact frames): config relaxation likely insufficient
+[dry]   PREP ep29 rolling_luggage     T=467  scene floor   (ok) | mitigated no  | frame_ref sha=build True content ok | lock ok | flags align: no hand contact (foot push)
+[dry]   PREP 30/30 clips ok (frame references = build = poses.npy; scene decision consistent; parquet locked)
+[dry] GPU view now:
+[dry]   GPU 0 trainings=3 (224294 574184 961166) evals=0 others=0 free=48659MiB mps=no debt=0
+[dry]   GPU 1 trainings=3 (638822 894635 894931) evals=0 others=0 free=48868MiB mps=no debt=0
+[dry]   GPU 2 trainings=3 (442713 574186 745635) evals=1 others=0 free=47538MiB mps=no debt=0
+[dry]   GPU 3 trainings=3 (334816 607334 758786) evals=0 others=0 free=48472MiB mps=no debt=0
+[dry]   GPU 4 trainings=0 () evals=0 others=0 free=97251MiB mps=no debt=0  (never used: GPU 4)
+[dry]   GPU 5 trainings=3 (117167 607684 982563) evals=0 others=0 free=48890MiB mps=no debt=0
+[dry]   GPU 6 trainings=3 (386499 638826 805878) evals=0 others=0 free=48690MiB mps=no debt=0
+[dry]   GPU 7 trainings=4 (414317 423739 638820 638830) evals=0 others=0 free=32642MiB mps=no debt=0
+[dry] GPU view SIMULATED with pids 224294,961166,894635,334816,982563,386499,414317,423739 (and children) gone:
+[dry]   GPU 0 trainings=1 (574184) evals=0 others=0 free=80999MiB mps=no debt=0
+[dry]   GPU 1 trainings=2 (638822 894931) evals=0 others=0 free=64974MiB mps=no debt=0
+[dry]   GPU 2 trainings=3 (442713 574186 745635) evals=1 others=0 free=47538MiB mps=no debt=0
+[dry]   GPU 3 trainings=2 (607334 758786) evals=0 others=0 free=64804MiB mps=no debt=0
+[dry]   GPU 4 trainings=0 () evals=0 others=0 free=97251MiB mps=no debt=0  (never used: GPU 4)
+[dry]   GPU 5 trainings=2 (117167 607684) evals=0 others=0 free=65026MiB mps=no debt=0
+[dry]   GPU 6 trainings=2 (638826 805878) evals=0 others=0 free=65018MiB mps=no debt=0
+[dry]   GPU 7 trainings=2 (638820 638830) evals=0 others=0 free=65014MiB mps=no debt=0
+[dry] live opus_v2 trainers (switch plan):
+[dry]   OPUS ep=4 pid=894635 gpu=1 t3opus_env=1 mps_pipe_env=None age_h=12.85 it=14710 last_model=14500 help_zero_iters=0.0 fail=0.906 cpus=0-1,104-105 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep04
+[dry]   OPUS ep=5 pid=423739 gpu=7 t3opus_env=1 mps_pipe_env=None age_h=19.93 it=15680 last_model=15500 help_zero_iters=0.0 fail=0.924 cpus=76-77,180-181 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep05
+[dry]   OPUS ep=12 pid=334816 gpu=3 t3opus_env=1 mps_pipe_env=None age_h=4.75 it=6400 last_model=6000 help_zero_iters=0.0 fail=0.222 cpus=56-57,160-161 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep12
+[dry]   OPUS ep=14 pid=386499 gpu=6 t3opus_env=1 mps_pipe_env=None age_h=3.93 it=4010 last_model=4000 help_zero_iters=0.0 fail=0.951 cpus=58-59,162-163 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep14
+[dry]   OPUS ep=15 pid=224294 gpu=0 t3opus_env=1 mps_pipe_env=None age_h=5.88 it=7960 last_model=7500 help_zero_iters=0.0 fail=0.783 cpus=2-3,106-107 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep15
+[dry]   OPUS ep=19 pid=961166 gpu=0 t3opus_env=1 mps_pipe_env=None age_h=11.75 it=16070 last_model=16000 help_zero_iters=0.0 fail=0.889 cpus=8-9,112-113 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep19
+[dry]   OPUS ep=21 pid=982563 gpu=5 t3opus_env=1 mps_pipe_env=None age_h=11.36 it=14220 last_model=14000 help_zero_iters=0.0 fail=0.847 cpus=52-53,156-157 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep21
+[dry]   OPUS ep=29 pid=414317 gpu=7 t3opus_env=1 mps_pipe_env=None age_h=19.99 it=19180 last_model=19000 help_zero_iters=0.0 fail=0.126 cpus=64-65,168-169 cmd_output_dir=output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_opus/ep29
+[dry] clip states now:
+[dry]   CLIP 00 FRESH locked (parquet sha256 20dbcd89b6fc09dd... lock 20dbcd89b6fc09dd... rcheck all_ok True); no run files
+[dry]   CLIP 01 FRESH locked (parquet sha256 94ffb6b7eca5346b... lock 94ffb6b7eca5346b... rcheck all_ok True); no run files
+[dry]   CLIP 02 FRESH locked (parquet sha256 b21d7562d6b9098b... lock b21d7562d6b9098b... rcheck all_ok True); no run files
+[dry]   CLIP 03 FRESH locked (parquet sha256 9b058c279ab740a5... lock 9b058c279ab740a5... rcheck all_ok True); no run files
+[dry]   CLIP 04 FRESH locked (parquet sha256 8601e387bb25f55f... lock 8601e387bb25f55f... rcheck all_ok True); no run files
+[dry]   CLIP 05 FRESH locked (parquet sha256 50a54e4af114f629... lock 50a54e4af114f629... rcheck all_ok True); no run files
+[dry]   CLIP 06 FRESH locked (parquet sha256 233c795334e17be1... lock 233c795334e17be1... rcheck all_ok True); no run files
+[dry]   CLIP 07 FRESH locked (parquet sha256 68545de91538dd25... lock 68545de91538dd25... rcheck all_ok True); no run files
+[dry]   CLIP 08 FRESH locked (parquet sha256 4ceac29c6ef84e19... lock 4ceac29c6ef84e19... rcheck all_ok True); no run files
+[dry]   CLIP 09 FRESH locked (parquet sha256 270d8df52447be22... lock 270d8df52447be22... rcheck all_ok True); no run files
+[dry]   CLIP 10 FRESH locked (parquet sha256 a64b3a9d1a83a657... lock a64b3a9d1a83a657... rcheck all_ok True); no run files
+[dry]   CLIP 11 FRESH locked (parquet sha256 5765586810904a78... lock 5765586810904a78... rcheck all_ok True); no run files
+[dry]   CLIP 12 FRESH locked (parquet sha256 0133f928c30faf2e... lock 0133f928c30faf2e... rcheck all_ok True); no run files
+[dry]   CLIP 13 FRESH locked (parquet sha256 baf8825a131b0bad... lock baf8825a131b0bad... rcheck all_ok True); no run files
+[dry]   CLIP 14 FRESH locked (parquet sha256 f0b0fce012687ef4... lock f0b0fce012687ef4... rcheck all_ok True); no run files
+[dry]   CLIP 15 FRESH locked (parquet sha256 d4f007fa28336e1a... lock d4f007fa28336e1a... rcheck all_ok True); no run files
+[dry]   CLIP 16 FRESH locked (parquet sha256 5f6644464cba1a9e... lock 5f6644464cba1a9e... rcheck all_ok True); no run files
+[dry]   CLIP 17 FRESH locked (parquet sha256 3591829d8eefee75... lock 3591829d8eefee75... rcheck all_ok True); no run files
+[dry]   CLIP 18 FRESH locked (parquet sha256 86648d4c5efe2cec... lock 86648d4c5efe2cec... rcheck all_ok True); no run files
+[dry]   CLIP 19 FRESH locked (parquet sha256 9dc7d6bc5ed5440f... lock 9dc7d6bc5ed5440f... rcheck all_ok True); no run files
+[dry]   CLIP 20 FRESH locked (parquet sha256 7728e9ad49700965... lock 7728e9ad49700965... rcheck all_ok True); no run files
+[dry]   CLIP 21 FRESH locked (parquet sha256 1414af597cbd04fe... lock 1414af597cbd04fe... rcheck all_ok True); no run files
+[dry]   CLIP 22 FRESH locked (parquet sha256 f750d9933dbb3628... lock f750d9933dbb3628... rcheck all_ok True); no run files
+[dry]   CLIP 23 FRESH locked (parquet sha256 7782dd48a65a1aac... lock 7782dd48a65a1aac... rcheck all_ok True); no run files
+[dry]   CLIP 24 FRESH locked (parquet sha256 c8aee4807b0c0de5... lock c8aee4807b0c0de5... rcheck all_ok True); no run files
+[dry]   CLIP 25 FRESH locked (parquet sha256 530f7fa375fc15af... lock 530f7fa375fc15af... rcheck all_ok True); no run files
+[dry]   CLIP 26 FRESH locked (parquet sha256 33084a187258532b... lock 33084a187258532b... rcheck all_ok True); no run files
+[dry]   CLIP 27 FRESH locked (parquet sha256 dcbc4099633e2dac... lock dcbc4099633e2dac... rcheck all_ok True); no run files
+[dry]   CLIP 28 FRESH locked (parquet sha256 8153f29408568bfe... lock 8153f29408568bfe... rcheck all_ok True); no run files
+[dry]   CLIP 29 FRESH locked (parquet sha256 5135e5fead8a9ba6... lock 5135e5fead8a9ba6... rcheck all_ok True); no run files
+[dry] pids.tsv: 
+[dry] HOLD files (/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0; a held clip is not launched, later clips go ahead): none
+[dry] STOP file: absent; GPU-choice lock files (read-only, never created): ch_runs/seedstudy/.gpulock=present ch_runs/f0share05/.gpulock=present ch_runs/filler/.gpulock=present 
+[dry] LOCAL scoring self-test (kit packer, track_2_tier3) on the pilot's probe output (must reproduce tmp_analysis/tier3/s4b_probe_LOCAL_NOT_FOR_UPLOAD.json; no clean number printed here):
+[dry]   exit 0: packer exit 0; reproduces s4b_probe_LOCAL_NOT_FOR_UPLOAD.json probe_vs_clean (AUC, SP-SR, MP-SR, MPPE): True (numbers only in score_selftest/*_LOCAL_NOT_FOR_UPLOAD.*)
+[dry] ==== training plans NOW (earlier launches of this list assumed started):
+[dry] launch #1 ep00 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+---- ep00 exact launch command (now; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep00.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=00 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=<gpu> WANDB_MODE=offline OMP_NUM_THREADS=<n> MKL_NUM_THREADS=<n> OPENBLAS_NUM_THREADS=<n> taskset -c <cpus> python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep00 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep00_tall_bar_stool logging.upload_checkpoints=false scene.support=false hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep00/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep00.log 2>&1 < /dev/null &
+[dry] launch #2 ep01 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+---- ep01 exact launch command (now; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep01.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=01 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=<gpu> WANDB_MODE=offline OMP_NUM_THREADS=<n> MKL_NUM_THREADS=<n> OPENBLAS_NUM_THREADS=<n> taskset -c <cpus> python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep01_vacuum logging.upload_checkpoints=false scene.support=true termination.palm_position_threshold=0.25 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep01.log 2>&1 < /dev/null &
+[dry] launch #3 ep02 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+---- ep02 exact launch command (now; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep02.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=02 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=<gpu> WANDB_MODE=offline OMP_NUM_THREADS=<n> MKL_NUM_THREADS=<n> OPENBLAS_NUM_THREADS=<n> taskset -c <cpus> python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep02_blue_easter_basket logging.upload_checkpoints=false scene.support=true termination.palm_position_threshold=0.25 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep02.log 2>&1 < /dev/null &
+[dry] launch #4 ep03 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #5 ep04 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #6 ep05 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #7 ep06 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #8 ep07 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #9 ep08 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #10 ep09 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #11 ep10 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #12 ep11 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #13 ep12 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #14 ep13 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #15 ep14 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #16 ep15 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #17 ep16 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #18 ep17 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #19 ep18 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #20 ep19 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #21 ep20 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #22 ep21 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #23 ep22 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #24 ep23 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #25 ep24 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #26 ep25 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #27 ep26 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #28 ep27 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #29 ep28 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] launch #30 ep29 training plan (now): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 4 trainings
+[dry] planned (now): 0 GPU(s) take launches: ; the rest wait for slots in ORDER
+[dry] ==== training plans SIMULATED after the switch (pids 224294,961166,894635,334816,982563,386499,414317,423739 gone; earlier launches of this list assumed started):
+[dry] launch #1 ep00 training plan (simulated): OK 5 52,156,53,157 4 - | gpu5 (tier 1): 2 training(s) now (117167 607684) -> 3 after the start (cap 3); 65026 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [6, 7, 3, 0, 1]; excluded: gpu2 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep00 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep00.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=00 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=5 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 52,156,53,157 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep00 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep00_tall_bar_stool logging.upload_checkpoints=false scene.support=false hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep00/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep00.log 2>&1 < /dev/null &
+[dry] launch #2 ep01 training plan (simulated): OK 6 56,160,57,161 4 - | gpu6 (tier 1): 2 training(s) now (638826 805878) -> 3 after the start (cap 3); 65018 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [7, 3, 0, 1]; excluded: gpu2 3 trainings; gpu5 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep01 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep01.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=01 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=6 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 56,160,57,161 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep01_vacuum logging.upload_checkpoints=false scene.support=true termination.palm_position_threshold=0.25 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep01/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep01.log 2>&1 < /dev/null &
+[dry] launch #3 ep02 training plan (simulated): OK 7 58,162,59,163 4 - | gpu7 (tier 1): 2 training(s) now (638820 638830) -> 3 after the start (cap 3); 65014 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [3, 0, 1]; excluded: gpu2 3 trainings; gpu5 3 trainings; gpu6 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep02 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep02.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=02 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=7 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 58,162,59,163 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep02_blue_easter_basket logging.upload_checkpoints=false scene.support=true termination.palm_position_threshold=0.25 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep02/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep02.log 2>&1 < /dev/null &
+[dry] launch #4 ep03 training plan (simulated): OK 3 60,164,61,165 4 - | gpu3 (tier 1): 2 training(s) now (607334 758786) -> 3 after the start (cap 3); 64804 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [0, 1]; excluded: gpu2 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep03 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep03.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=03 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=3 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 60,164,61,165 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep03 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep03_contigo_coffee_mug logging.upload_checkpoints=false scene.support=true termination.palm_position_threshold=0.25 hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep03/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep03.log 2>&1 < /dev/null &
+[dry] launch #5 ep04 training plan (simulated): OK 0 0,104,1,105 4 - | gpu0 (tier 2): 1 training(s) now (574184) -> 2 after the start (cap 3); 80999 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [1]; excluded: gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep04 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep04.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=04 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=0 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 0,104,1,105 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep04_baseball_bat logging.upload_checkpoints=false scene.support=false hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep04/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep04.log 2>&1 < /dev/null &
+[dry] launch #6 ep05 training plan (simulated): OK 1 2,106,3,107 4 - | gpu1 (tier 2): 2 training(s) now (638822 894931) -> 3 after the start (cap 3); 64974 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates [0]; excluded: gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep05 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep05.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=05 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=1 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 2,106,3,107 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep05_big_black_box logging.upload_checkpoints=false scene.support=false hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep05.log 2>&1 < /dev/null &
+[dry] launch #7 ep06 training plan (simulated): OK 0 8,112,9,113 4 - | gpu0 (tier 2): 2 training(s) now (574184 + 1 assumed) -> 3 after the start (cap 3); 64103 MiB free >= 37376; no MPS; CPU 2 own-NUMA cores; other candidates []; excluded: gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings; SIMULATED with pids 224294,334816,386499,414317,423739,894635,961166,982563 gone
+---- ep06 exact launch command (simulated; cwd /root/autodl-tmp/haoran.zhang/code/fc_r2; log /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep06.log):
+( cd /root/autodl-tmp/haoran.zhang/code/fc_r2 && exec setsid nohup env T3F0=1 T3F0_EP=06 HUMAN_MOTION_DATA_DIR=/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0 CUDA_VISIBLE_DEVICES=0 WANDB_MODE=offline OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=4 taskset -c 8,112,9,113 python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2 task.parquet=\'/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet\' reset.seed=42 output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep06 training.max_iterations=45000 logging.mode=offline logging.entity=juicer_test logging.project=v2d-track2-tier3 logging.experiment=C3r2_tier3_f0 logging.run_name=ep06_monitor logging.upload_checkpoints=false scene.support=true hydra.run.dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep06/hydra +logging.local_jsonl=true ) >> /root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/logs/ep06.log 2>&1 < /dev/null &
+[dry] launch #8 ep07 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #9 ep08 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #10 ep09 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #11 ep10 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #12 ep11 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #13 ep12 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #14 ep13 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #15 ep14 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #16 ep15 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #17 ep16 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #18 ep17 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #19 ep18 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #20 ep19 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #21 ep20 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #22 ep21 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #23 ep22 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #24 ep23 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #25 ep24 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #26 ep25 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #27 ep26 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #28 ep27 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #29 ep28 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] launch #30 ep29 training plan (simulated): WAIT no GPU fits: gpu0 3 trainings; gpu1 3 trainings; gpu2 3 trainings; gpu3 3 trainings; gpu5 3 trainings; gpu6 3 trainings; gpu7 3 trainings
+[dry] planned (simulated): 6 GPU(s) take launches: gpu7 x1 gpu6 x1 gpu5 x1 gpu3 x1 gpu1 x1 gpu0 x2 ; the rest wait for slots in ORDER
+     env (all trainings): PATH=/root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin:... PYTHONPATH=/root/autodl-tmp/haoran.zhang/code/fc_r2/src PYTHONDONTWRITEBYTECODE=1 XDG_CACHE_HOME=/root/autodl-tmp/haoran.zhang/.cache CUDA_DEVICE_ORDER=PCI_BUS_ID XLA_PYTHON_CLIENT_PREALLOCATE=false WANDB_DIR=/root/autodl-tmp/haoran.zhang/fc_runs/wandb_local CUDA_MPS_PIPE_DIRECTORY=<unset> WANDB_API_KEY=<unset>
+---- after final.json (any clip): ( exec setsid nohup env -u PYTHONPATH CUDA_VISIBLE_DEVICES= /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/scripts/t3f0_helper.py post --ep NN ) >> /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/epNN/post_stdout.log 2>&1 < /dev/null &
+     post commands (training GPU from pids.tsv; shown for gpu 0, ep00 (floor), ep01 (support + mitigated)):
+       ep00: nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 0 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python
+       ep00 only if refused at 1e-4: the same with --export-tolerance 0.0002
+       ep00 then (CPU, LOCAL): nice -n 10 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/scripts/track2_tier2_clean_scores.py --kit /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --out /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00/clean_scores_LOCAL_NOT_FOR_UPLOAD.csv --tier1 /root/autodl-tmp/haoran.zhang/fc_runs/eval_round2/C3r2_wide_final.csv -- --track track_2_tier3 --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --code-commit https://github.com/local-placeholder/not-uploaded/commit/0000000000000000000000000000000000000000 --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py --frame-references /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/frame_references_f0 --config /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00/pack/tracks.json -o /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep00/packed_LOCAL_NOT_FOR_UPLOAD.csv
+       ep01: nice -n 10 taskset -c 48-51,152-155 /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -B /root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/track2/eval_all.py --arm-dir /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01 --arm C3r2_tier3_f0 --checkpoint-from-final --iteration 45000 --episodes 1 --gpus 0 --jobs-per-gpu 1 --world-count 1 --export yes --export-jobs 1 --export-tolerance 0.0001 --skip-pack --kit-root /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --stock-runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --manifest /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/track2_manifest.json --pack-python /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01/results --code /root/autodl-tmp/haoran.zhang/code/fc_r2 --python /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python
+       ep01 only if refused at 1e-4: the same with --export-tolerance 0.0002
+       ep01 then (CPU, LOCAL): nice -n 10 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/scripts/track2_tier2_clean_scores.py --kit /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit --out /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01/clean_scores_LOCAL_NOT_FOR_UPLOAD.csv --tier1 /root/autodl-tmp/haoran.zhang/fc_runs/eval_round2/C3r2_wide_final.csv -- --track track_2_tier3 --results /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --code-commit https://github.com/local-placeholder/not-uploaded/commit/0000000000000000000000000000000000000000 --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py --frame-references /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/frame_references_f0 --config /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01/pack/tracks.json -o /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep01/packed_LOCAL_NOT_FOR_UPLOAD.csv
+[dry] waiting state now (what K3CA / T2fix must yield to; --write only in run mode): WAITING 30 (ep00 ep01 ep02 ep03 ep04 ep05 ep06 ep07 ep08 ep09 ep10 ep11 ep12 ep13 ep14 ep15 ep16 ep17 ep18 ep19 ep20 ep21 ep22 ep23 ep24 ep25 ep26 ep27 ep28 ep29); HELD 0 (-); all launched False
+[dry] verdict now (--no-write):
+[dry]   Tier-3 f0 test (C3r2_tier3_f0) - verdict by the pre-registered rule (sha256(PREREG_f0.md) 82702d85fd119d0a... == PREREG_f0.sha256 82702d85fd119d0a...)
+[dry]   written 2026-10-24 22:52:54
+[dry]   
+[dry]   all            (30 clips): NOT LAUNCHED {'NOT_LAUNCHED': 30} strong 0
+[dry]   floor_only     (16 clips): NOT LAUNCHED {'NOT_LAUNCHED': 16} strong 0
+[dry]   support        (14 clips): NOT LAUNCHED {'NOT_LAUNCHED': 14} strong 0
+[dry]   mitigated      (8 clips): NOT LAUNCHED {'NOT_LAUNCHED': 8} strong 0
+[dry]   not_mitigated  (22 clips): NOT LAUNCHED {'NOT_LAUNCHED': 22} strong 0
+[dry]   
+[dry]   ep00 tall_bar_stool     flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 35183) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 12736
+[dry]   ep01 vacuum             SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep02 blue_easter_basket SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 31549) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep03 contigo_coffee_mug SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep04 baseball_bat       flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep05 big_black_box      flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep06 monitor            SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 28034) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep07 iron               SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep08 skinny_wood_chair  flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 14737) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 11490
+[dry]   ep09 big_red_bowl       SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 33468) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep10 white_desk         flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 28407) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 19320
+[dry]   ep11 light_blue_book    SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 23065) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep12 black_platform     flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 31715) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep13 snack_box          SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep14 round_table        flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep15 wet_floor_sign     flr MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep16 spray_bottle       SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 25408) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep17 traffic_cone       SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 25947) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep18 blue_trash_can     flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 16185
+[dry]   ep19 cane               flr MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep20 rice_cooker        SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 13174) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep21 tall_bar_stool     flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   ep22 step_ladder        flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 14254
+[dry]   ep23 toy_stroller       flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 14163) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: FAIL hz 39062
+[dry]   ep24 watering_can       flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PASS hz 13871
+[dry]   ep25 cyan_water_bottle  SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep26 skateboard         flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 29088) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep27 woven_basket       SUP     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep28 squeegee           SUP MIT NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: NOT_LAUNCHED hz None
+[dry]   ep29 rolling_luggage    flr     NOT_LAUNCHED (a) help zero None (limit 30000; raw Tier-2 39062) -> None | (b) own-input SP-SR None MP-SR None worlds None ckpt it None -> None | post None | opus_v2: PENDING hz None
+[dry]   
+[dry]   Reported, not decided: own-input AUC / MPPE and training fail rates (matched 1000-iteration bins):
+[dry]     clean diagnostics only in VERDICT_clean_LOCAL_NOT_FOR_UPLOAD.json
+[dry] dry run done: nothing was started; files written only under /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/dryrun

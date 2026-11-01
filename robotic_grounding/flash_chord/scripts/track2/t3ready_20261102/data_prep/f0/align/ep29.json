@@ -1,0 +1,322 @@
+{
+ "ep": 29,
+ "seq": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+ "frames": 467,
+ "lifts_cm": {
+  "f0": 0.61,
+  "opus": 1.0
+ },
+ "checks": {
+  "inputs_identical": {
+   "soma_params.npz": true,
+   "ground_plane.json": true,
+   "reconstructed_mesh/output_aligned.glb": true
+  },
+  "obj_mesh_identical": true,
+  "chain_vs_parquet": {
+   "f0": {
+    "obj_pos_max_err_m": 5.8367884969712236e-08,
+    "obj_rot_max_err": 1.3347451155443224e-07,
+    "soma_joints_max_err_m": 4.05351377286145e-06
+   },
+   "opus": {
+    "obj_pos_max_err_m": 5.958338444855826e-08,
+    "obj_rot_max_err": 1.3749876737190192e-07,
+    "soma_joints_max_err_m": 4.015494863840452e-06
+   }
+  },
+  "robot_palm_f0_vs_opus_max_m": 9.5367431640625e-07
+ },
+ "mesh": {
+  "n_v": 292750,
+  "n_f": 97596,
+  "watertight": false,
+  "winding_consistent": true,
+  "orient_volume_m3": 0.038798,
+  "normals_flipped": false,
+  "edge_median_mm": 3.86,
+  "edge_p99_mm": 16.46,
+  "radius_m": 0.666
+ },
+ "sides": {
+  "left": {
+   "n_hand_verts": 2928,
+   "contact_opus": 0,
+   "contact_f0": 0,
+   "contact_union": 0,
+   "contact_both": 0,
+   "static_touch": 0,
+   "retarget_hca_f0": 0,
+   "retarget_hca_opus": 0,
+   "retarget_hca_in_C_f0": 0,
+   "retarget_hca_in_C_opus": 0,
+   "f0": {
+    "e": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "signed_median": null,
+    "joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "robot_palm": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "static_touch_joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    }
+   },
+   "opus": {
+    "e": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "signed_median": null,
+    "joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "robot_palm": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "static_touch_joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    }
+   }
+  },
+  "right": {
+   "n_hand_verts": 2970,
+   "contact_opus": 0,
+   "contact_f0": 0,
+   "contact_union": 0,
+   "contact_both": 0,
+   "static_touch": 0,
+   "retarget_hca_f0": 0,
+   "retarget_hca_opus": 0,
+   "retarget_hca_in_C_f0": 0,
+   "retarget_hca_in_C_opus": 0,
+   "f0": {
+    "e": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "signed_median": null,
+    "joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "robot_palm": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "static_touch_joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    }
+   },
+   "opus": {
+    "e": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "signed_median": null,
+    "joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "robot_palm": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    },
+    "static_touch_joints": {
+     "n": 0,
+     "median": null,
+     "p90": null,
+     "mean": null,
+     "frac_le2": null
+    }
+   }
+  }
+ },
+ "gap_cm": {
+  "f0": {
+   "e": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   },
+   "signed_median": null,
+   "joints": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   },
+   "robot_palm": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   }
+  },
+  "opus": {
+   "e": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   },
+   "signed_median": null,
+   "joints": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   },
+   "robot_palm": {
+    "n": 0,
+    "median": null,
+    "p90": null,
+    "mean": null,
+    "frac_le2": null
+   }
+  }
+ },
+ "robot_palm_frac_gt15": {
+  "f0": null,
+  "opus": null
+ },
+ "robot_palm_frac_gt25": {
+  "f0": null,
+  "opus": null
+ },
+ "correction_disp_at_hand_cm": {
+  "n": 0,
+  "median": null,
+  "p90": null,
+  "mean": null,
+  "frac_le2": null
+ },
+ "correction_disp_vertical_cm": {
+  "n": 0,
+  "median": null,
+  "p90": null,
+  "mean": null,
+  "frac_le2": null
+ },
+ "correction_disp_horizontal_cm": {
+  "n": 0,
+  "median": null,
+  "p90": null,
+  "mean": null,
+  "frac_le2": null
+ },
+ "delta_median_cm": null,
+ "qualifies": null,
+ "few_contact": true,
+ "alt_contact_sets": {
+  "opus_only": {
+   "n": 0,
+   "j_f0_median": null,
+   "j_opus_median": null,
+   "e_f0_median": null,
+   "e_opus_median": null,
+   "qualifies": null
+  },
+  "f0_only": {
+   "n": 0,
+   "j_f0_median": null,
+   "j_opus_median": null,
+   "e_f0_median": null,
+   "e_opus_median": null,
+   "qualifies": null
+  }
+ },
+ "v2_rigid_check": {
+  "n": 0,
+  "j_f0_median": null,
+  "j_opus_median": null,
+  "qualifies": null
+ },
+ "segments": [],
+ "definition": {
+  "V_MIN": 0.03,
+  "W_MIN": 15.0,
+  "K_VEL": 3,
+  "NEAR": 0.05,
+  "RIGID_HALF": 6,
+  "RIGID_TOL": 0.02,
+  "STATIC_TOUCH": 0.02,
+  "RULE_ABS": 3.0,
+  "RULE_DELTA": 2.0,
+  "MIN_CONTACT": 30,
+  "FAR_SKIP": 0.4,
+  "SKIN_UB": 0.4,
+  "SKIN_STRIDE": 2,
+  "rule_metric": "joints",
+  "COMOVE_HALF": 6,
+  "COMOVE_TOL": 0.02,
+  "COMOVE_FRAC": 0.35,
+  "contact": "v3_comove"
+ },
+ "script_sha256": "03ea75fcffb280d722405052f4a05cd25c07abeafb2e0edecc016d9a56531906",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "seconds": 38.6,
+ "seconds_fk": 5.8
+}

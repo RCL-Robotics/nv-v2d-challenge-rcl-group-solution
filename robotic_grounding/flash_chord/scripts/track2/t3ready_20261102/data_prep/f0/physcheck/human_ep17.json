@@ -1,0 +1,10 @@
+{
+ "ep": 17,
+ "frames": 440,
+ "rule": "vertex inside a box deeper than 0.02 m and > 0.025 m below its top",
+ "min_sdf_cm": -1.5,
+ "violating_frames": 0,
+ "violating_runs": [],
+ "worst": [],
+ "joints_involved": []
+}

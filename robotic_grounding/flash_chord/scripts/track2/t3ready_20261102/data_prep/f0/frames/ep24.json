@@ -1,0 +1,28 @@
+{
+ "ep": 24,
+ "seq": "2026-05-29_15-43-20_watering_can_pour_right_02",
+ "frames": 748,
+ "n_mesh_v": 297436,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.0009802994749311261,
+ "verts": false,
+ "plane_normal": [
+  0.002869696761487852,
+  -0.09000357945931255,
+  0.995937307527441
+ ],
+ "plane_offset": 0.6087576893807418,
+ "M_vs_object_chain_max_err": [
+  7.771561172376096e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "9983acac96b27382ab1a55dad52199ca2705a40990ac19e9bdce2e5c6b449aa4",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "b557ac6a5c54d58434b4c4aec92cd490449142788e40d12d706818cc49970992",
+  "soma_params.npz": "30423a086c731b36934a9b17e1658c8b026d5d1f4dab05e90adb3ab6e7d20fa0",
+  "ground_plane.json": "b4652f8e497c76163ad89c1b620dc2bed757c203e3df58196a96f06c5993b2ad",
+  "reconstructed_mesh/output_aligned.glb": "6289b834daf9ac457729cccb550b83eb5da1bc165a78bb970a9e651ab9ce94c2"
+ },
+ "seconds": 10.4
+}

@@ -1,0 +1,14 @@
+{
+ "episode_index": 15,
+ "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+ "object": "wet_floor_sign",
+ "task": "Walk to the wet floor sign, pick it up with one hand and hold onto it while walking around for at least 10 seconds, then place it back on the floor.",
+ "frames": 715,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3526695966720581,
+  "median": 0.2518150508403778,
+  "max": 3.2042315006256104
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "ep": 26,
+ "seq": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+ "frames": 669,
+ "n_mesh_v": 258791,
+ "lift_applied": 0.0012405412799171285,
+ "lift_min_signed": -0.0007405412799171285,
+ "verts": false,
+ "plane_normal": [
+  0.031607004164295766,
+  0.029145769226287387,
+  0.9990753332076446
+ ],
+ "plane_offset": 0.894026879442099,
+ "M_vs_object_chain_max_err": [
+  7.771561172376096e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "8ee319a353972238cc122437f0a9febb41f718927e3299e3490ace95f4c2ebdc",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "859eb4339343465eaa078587ee01723652a1dbe8de981d51c8a6e77667648519",
+  "soma_params.npz": "a23c907bce7b787ebc19075646bc6907eb1402e7aef2a34f2cb124e125fe894e",
+  "ground_plane.json": "d4bcce3a69b84b02c06f144b4f77f88e3f6f656da8bd384268961a961bcce7b5",
+  "reconstructed_mesh/output_aligned.glb": "4b011286643070adeac57d1846d89614bbae2636d63ac286e35c48b8478adde6"
+ },
+ "seconds": 10.2
+}

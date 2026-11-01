@@ -1,0 +1,28 @@
+{
+ "ep": 13,
+ "seq": "2026-06-09_10-19-09_snack_box_desk_through_06",
+ "frames": 922,
+ "n_mesh_v": 293289,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.8831019552569941,
+ "verts": true,
+ "plane_normal": [
+  0.03424678002279989,
+  -0.0071535573116100586,
+  0.999387804946538
+ ],
+ "plane_offset": 0.9094369809080475,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "6a4bbaaf1121c592a4b721278fca2d99576bf1deb3227c559f4c9e981a626157",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "5ffba2ad2b997aacf128fc0b72aee85a54ee1eb906642ab2a9ffa76a4c0c146f",
+  "soma_params.npz": "1981b6e2c86b835d5a499be7fa2eb60cc8956b804663b4248602f5024a589b27",
+  "ground_plane.json": "a81074aec2ce6f52c5e3002195c43dca4501cc7f6202e2e35586502fb822198f",
+  "reconstructed_mesh/output_aligned.glb": "6a3c61c171534be9226a383db02a00b4d951569a7b228c60fc0a2f56e06cd441"
+ },
+ "seconds": 22.9
+}

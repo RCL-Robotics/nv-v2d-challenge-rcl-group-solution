@@ -1,0 +1,54 @@
+/root/autodl-tmp/haoran.zhang/scripts/t3f0_supports.py:66: DeprecationWarning: `Scene.dump(concatenate=True)` DEPRECATED FOR REMOVAL APRIL 2025: replace with `Scene.to_geometry()`
+  return m.dump(concatenate=True) if isinstance(m, trimesh.Scene) else m
+{"ep": 1, "support": "tall_bar_stool", "kind": "stool", "n_boxes": 55, "anchor_run": [0, 125], "refit_residual_cm": null, "total_shift_vs_videofit_cm": null, "strip_area_fraction": null, "frame0_min_sdf_before_cm": 0.46, "horizontal_shift_norm_cm": 0.0}
+{"ep": 2, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 125], "refit_residual_cm": -0.638, "total_shift_vs_videofit_cm": -0.635, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 3, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 130], "refit_residual_cm": -0.276, "total_shift_vs_videofit_cm": -0.558, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 6, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 168], "refit_residual_cm": -1.147, "total_shift_vs_videofit_cm": -0.395, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 7, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 156], "refit_residual_cm": -1.274, "total_shift_vs_videofit_cm": 0.002, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 9, "support": "skinny_wood_chair", "kind": "top", "n_boxes": 11, "anchor_run": [0, 193], "refit_residual_cm": -2.532, "total_shift_vs_videofit_cm": -4.562, "strip_area_fraction": 0.8957, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 11, "support": "white_desk", "kind": "top", "n_boxes": 28, "anchor_run": [0, 80], "refit_residual_cm": -1.095, "total_shift_vs_videofit_cm": -2.991, "strip_area_fraction": 0.9519, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 13, "support": "white_desk", "kind": "top", "n_boxes": 29, "anchor_run": [0, 130], "refit_residual_cm": -0.748, "total_shift_vs_videofit_cm": -3.152, "strip_area_fraction": 0.9328, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 16, "support": "white_desk", "kind": "top", "n_boxes": 29, "anchor_run": [0, 124], "refit_residual_cm": -1.63, "total_shift_vs_videofit_cm": -3.67, "strip_area_fraction": 0.9454, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 17, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [336, 440], "refit_residual_cm": 0.398, "total_shift_vs_videofit_cm": -4.538, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 20, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 212], "refit_residual_cm": -0.65, "total_shift_vs_videofit_cm": 1.231, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 25, "support": "round_table", "kind": "top", "n_boxes": 18, "anchor_run": [0, 115], "refit_residual_cm": -0.655, "total_shift_vs_videofit_cm": -0.222, "strip_area_fraction": 0.9245, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 27, "support": "white_desk", "kind": "top", "n_boxes": 30, "anchor_run": [451, 565], "refit_residual_cm": -1.119, "total_shift_vs_videofit_cm": -3.202, "strip_area_fraction": 0.9367, "frame0_min_sdf_before_cm": null, "horizontal_shift_norm_cm": null}
+{"ep": 28, "support": "tall_bar_stool", "kind": "stool", "n_boxes": 186, "anchor_run": [0, 118], "refit_residual_cm": null, "total_shift_vs_videofit_cm": null, "strip_area_fraction": null, "frame0_min_sdf_before_cm": -2.0, "horizontal_shift_norm_cm": 15.0}
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+Warp 1.14.0 initialized:
+   CUDA Toolkit 12.9, CUDA driver not available (NVRTC compilation available)
+   Devices:
+     "cpu"      : "x86_64"
+   Kernel cache:
+     /root/.cache/warp/1.14.0
+ok   ep00 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda
+ok   ep01 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda; trainer parses 55 shapes = 55 cubes = 55 boxes
+ok   ep02 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep03 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep04 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda
+ok   ep05 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-18_19-36-56_g1_box_rotate_01_support.usda
+ok   ep06 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep07 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep08 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda
+ok   ep09 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda; trainer parses 11 shapes = 11 cubes = 11 boxes
+ok   ep10 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda
+ok   ep11 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda; trainer parses 28 shapes = 28 cubes = 28 boxes
+ok   ep12 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-25_17-20-04_black_platform_turn_05_support.usda
+ok   ep13 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda; trainer parses 29 shapes = 29 cubes = 29 boxes
+ok   ep14 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-28_14-44-09_round_table_flip_08_support.usda
+ok   ep15 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda
+ok   ep16 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda; trainer parses 29 shapes = 29 cubes = 29 boxes
+ok   ep17 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep18 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda
+ok   ep19 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-19_10-19-48_cane_swing_05_support.usda
+ok   ep20 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep21 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda
+ok   ep22 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-22_16-52-36_step_ladder_drag_03_support.usda
+ok   ep23 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda
+ok   ep24 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-29_15-43-20_watering_can_pour_right_02_support.usda
+ok   ep25 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda; trainer parses 18 shapes = 18 cubes = 18 boxes
+ok   ep26 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda
+ok   ep27 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda; trainer parses 30 shapes = 30 cubes = 30 boxes
+ok   ep28 sha True; trainer resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda; trainer parses 186 shapes = 186 cubes = 186 boxes
+ok   ep29 floor-only geometry False; resolves /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda
+SCENE_SUPPORT.json + SUPPORT_FILES.sha256 written

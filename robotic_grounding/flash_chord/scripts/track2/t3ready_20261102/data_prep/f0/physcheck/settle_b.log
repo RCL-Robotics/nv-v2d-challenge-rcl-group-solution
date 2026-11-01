@@ -1,0 +1,22 @@
+Warp DeprecationWarning: warp.config.quiet is deprecated; use warp.config.log_level = warp.LOG_WARNING to suppress the init banner.
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+{"run": [0, 130], "frame": 65, "anchor": true, "with_support": {"final_dp_cm": 0.2, "max_dp_cm": 0.22, "final_rot_deg": 1.064, "max_rot_deg": 1.181, "final_z_change_cm": 0.054, "ok": true}, "hulls": 4, "no_support_control": {"final_dp_cm": 88.253, "max_dp_cm": 90.918, "final_rot_deg": 1.088, "max_rot_deg": 1.104, "final_z_change_cm": -88.252, "ok": false}}
+{"run": [818, 922], "frame": 870, "anchor": false, "with_support": {"final_dp_cm": 1.242, "max_dp_cm": 1.242, "final_rot_deg": 1.657, "max_rot_deg": 1.68, "final_z_change_cm": 1.223, "ok": true}, "hulls": 4}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 124], "frame": 62, "anchor": true, "with_support": {"final_dp_cm": 0.198, "max_dp_cm": 0.313, "final_rot_deg": 0.831, "max_rot_deg": 1.36, "final_z_change_cm": 0.004, "ok": true}, "hulls": 7, "no_support_control": {"final_dp_cm": 87.761, "max_dp_cm": 90.84, "final_rot_deg": 0.906, "max_rot_deg": 1.059, "final_z_change_cm": -87.76, "ok": false}}
+settle all_ok True anchor_ok True control moves True
+{"run": [336, 440], "frame": 388, "anchor": true, "with_support": {"final_dp_cm": 1.135, "max_dp_cm": 1.25, "final_rot_deg": 5.238, "max_rot_deg": 5.278, "final_z_change_cm": -0.714, "ok": false}, "hulls": 31, "no_support_control": {"final_dp_cm": 74.785, "max_dp_cm": 76.756, "final_rot_deg": 5.285, "max_rot_deg": 5.285, "final_z_change_cm": -74.78, "ok": false}}
+settle all_ok False anchor_ok False control moves True
+{"run": [0, 212], "frame": 106, "anchor": true, "with_support": {"final_dp_cm": 0.116, "max_dp_cm": 0.116, "final_rot_deg": 0.576, "max_rot_deg": 0.576, "final_z_change_cm": 0.025, "ok": true}, "hulls": 48, "no_support_control": {"final_dp_cm": 79.809, "max_dp_cm": 82.589, "final_rot_deg": 0.571, "max_rot_deg": 0.571, "final_z_change_cm": -79.809, "ok": false}}
+{"run": [235, 257], "frame": 246, "anchor": false, "with_support": {"final_dp_cm": 0.061, "max_dp_cm": 0.061, "final_rot_deg": 0.155, "max_rot_deg": 0.157, "final_z_change_cm": 0.054, "ok": true}, "hulls": 48}
+{"run": [282, 318], "frame": 300, "anchor": false, "with_support": {"final_dp_cm": 0.104, "max_dp_cm": 0.107, "final_rot_deg": 0.54, "max_rot_deg": 0.54, "final_z_change_cm": -0.036, "ok": true}, "hulls": 48}
+{"run": [358, 376], "frame": 367, "anchor": false, "with_support": {"final_dp_cm": 0.502, "max_dp_cm": 0.502, "final_rot_deg": 1.325, "max_rot_deg": 1.327, "final_z_change_cm": 0.417, "ok": true}, "hulls": 48}
+{"run": [428, 553], "frame": 490, "anchor": false, "with_support": {"final_dp_cm": 0.32, "max_dp_cm": 0.32, "final_rot_deg": 1.075, "max_rot_deg": 1.075, "final_z_change_cm": 0.225, "ok": true}, "hulls": 48}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 115], "frame": 57, "anchor": true, "with_support": {"final_dp_cm": 0.393, "max_dp_cm": 0.786, "final_rot_deg": 1.622, "max_rot_deg": 3.298, "final_z_change_cm": -0.008, "ok": true}, "hulls": 8, "no_support_control": {"final_dp_cm": 78.372, "max_dp_cm": 80.682, "final_rot_deg": 1.706, "max_rot_deg": 4.361, "final_z_change_cm": -78.371, "ok": false}}
+{"run": [778, 859], "frame": 818, "anchor": false, "with_support": {"final_dp_cm": 20.75, "max_dp_cm": 21.079, "final_rot_deg": 95.855, "max_rot_deg": 97.813, "final_z_change_cm": -8.457, "ok": false}, "hulls": 8}
+settle all_ok False anchor_ok True control moves True
+{"run": [451, 565], "frame": 508, "anchor": true, "with_support": {"final_dp_cm": 0.1, "max_dp_cm": 0.11, "final_rot_deg": 1.553, "max_rot_deg": 1.557, "final_z_change_cm": -0.051, "ok": true}, "hulls": 50, "no_support_control": {"final_dp_cm": 88.297, "max_dp_cm": 90.888, "final_rot_deg": 1.631, "max_rot_deg": 1.631, "final_z_change_cm": -88.297, "ok": false}}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 118], "frame": 59, "anchor": true, "with_support": {"final_dp_cm": 0.966, "max_dp_cm": 1.741, "final_rot_deg": 2.191, "max_rot_deg": 3.001, "final_z_change_cm": 0.516, "ok": true}, "hulls": 2, "no_support_control": {"final_dp_cm": 52.462, "max_dp_cm": 53.714, "final_rot_deg": 69.734, "max_rot_deg": 72.26, "final_z_change_cm": -51.107, "ok": false}}
+settle all_ok True anchor_ok True control moves True

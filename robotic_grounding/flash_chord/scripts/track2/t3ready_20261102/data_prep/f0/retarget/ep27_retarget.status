@@ -1,0 +1,4 @@
+start 2026-10-24 19:13:03 ep27 2026-05-01_11-15-05_woven_basket_ground_desk_10 gpu GPU-4f419cf2-8bbf-d37f-5615-d5cbd4687bad cpus 54,158,55,159 threads 4
+python /root/autodl-tmp/haoran.zhang/conda_envs/v2d/bin/python; XDG_CACHE_HOME=/root/autodl-tmp/haoran.zhang/.cache; nv HEAD f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf tracked-modified 0; MPS vars 0
+exit 0 after 146 s at 2026-10-24 19:15:29
+DONE

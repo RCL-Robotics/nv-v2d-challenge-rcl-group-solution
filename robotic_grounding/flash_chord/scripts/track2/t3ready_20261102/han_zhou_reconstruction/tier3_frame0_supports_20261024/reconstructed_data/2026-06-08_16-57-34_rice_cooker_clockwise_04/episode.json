@@ -1,0 +1,15 @@
+{
+ "episode_index": 20,
+ "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+ "object": "rice_cooker",
+ "task": "Walk toward the rice cooker on the round table and pick up the rice cooker and rotate it clockwise using right hand. Place back on the round table.",
+ "frames": 553,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.2745479345321655,
+  "median": 0.16840526461601257,
+  "max": 3.029820680618286
+ },
+ "support": "../../supports/2026-06-08_16-57-34_rice_cooker_clockwise_04"
+}

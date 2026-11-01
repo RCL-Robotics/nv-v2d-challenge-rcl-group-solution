@@ -1,0 +1,10 @@
+# TEMPLATE ONLY. The driver reads tmp_analysis/tier3/f0_retry/RETRY_GO, never this file.
+# The main session writes RETRY_GO only after the user approves the Tier-3 retry queue, and only BEFORE our first Tier-3
+# Kaggle upload (PREREG_retry v2 section 4 gate 2 + 4a). First install the amendment (byte copy; the driver checks it):
+#   ME=/root/autodl-tmp/haoran.zhang; cp $ME/tmp_analysis/tier3/f0_retry/AMENDMENT_1_t3_f0_final.md $ME/fc_runs/submissions/t3_f0_final/AMENDMENT_1.md
+#   cd $ME/fc_runs/submissions/t3_f0_final && sha256sum AMENDMENT_1.md > AMENDMENT_1.sha256 && chmod 444 AMENDMENT_1.md AMENDMENT_1.sha256
+# Then fill the lines below (a user_approval line still containing < or > is refused) and save as RETRY_GO.
+prereg_sha256 <sha256 of PREREG_retry.md, as in PREREG_retry.sha256>
+user_approval: "<the user's approving message, verbatim>", <YYYY-MM-DD HH:MM> CST
+tier3_board_scores_seen: none
+written_by: main session

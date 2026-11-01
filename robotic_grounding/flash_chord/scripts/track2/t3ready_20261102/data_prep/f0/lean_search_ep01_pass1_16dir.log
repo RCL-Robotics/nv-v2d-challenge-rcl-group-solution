@@ -1,0 +1,30 @@
+ep01: 7 directions reach contact, 7 keep the reference path clear
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 2.543, "max_dp_cm": 2.701, "final_rot_deg": 5.421, "max_rot_deg": 5.421, "final_z_change_cm": -0.341, "final_disp_cm": [-1.76, 1.8, -0.34], "disp_at_0p2_1_2s_cm": [[0.41, 0.37, 0.23], [-0.02, 1.22, 0.18], [-0.25, 1.35, 0.13]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 67.5, "shift_cm": [0.91, 2.19, 0.0], "shift_norm_cm": 2.37, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.21, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 2.543, "final_rot_deg": 5.421, "final_disp_cm": [-1.76, 1.8, -0.34]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 47.369, "max_dp_cm": 48.263, "final_rot_deg": 75.658, "max_rot_deg": 77.43, "final_z_change_cm": -30.742, "final_disp_cm": [-35.98, 2.06, -30.74], "disp_at_0p2_1_2s_cm": [[0.28, 0.39, 0.22], [0.04, 1.06, 0.2], [-0.0, 1.14, 0.18]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 0.0, "shift_cm": [4.92, 0.0, 0.0], "shift_norm_cm": 4.92, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.2, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 47.369, "final_rot_deg": 75.658, "final_disp_cm": [-35.98, 2.06, -30.74]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 46.919, "max_dp_cm": 48.048, "final_rot_deg": 75.653, "max_rot_deg": 78.093, "final_z_change_cm": -30.743, "final_disp_cm": [-35.37, 2.26, -30.74], "disp_at_0p2_1_2s_cm": [[-0.81, 1.24, 0.12], [-2.52, 1.63, -0.22], [-2.6, 1.74, -0.26]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 45.0, "shift_cm": [0.97, 0.97, 0.0], "shift_norm_cm": 1.38, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.27, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 46.919, "final_rot_deg": 75.653, "final_disp_cm": [-35.37, 2.26, -30.74]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 46.246, "max_dp_cm": 47.135, "final_rot_deg": 75.713, "max_rot_deg": 77.504, "final_z_change_cm": -30.742, "final_disp_cm": [-34.49, 2.05, -30.74], "disp_at_0p2_1_2s_cm": [[-1.23, 1.31, 0.07], [-4.29, 2.1, -0.64], [-4.25, 2.14, -0.66]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 135.0, "shift_cm": [-2.35, 2.35, 0.0], "shift_norm_cm": 3.32, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.24, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 46.246, "final_rot_deg": 75.713, "final_disp_cm": [-34.49, 2.05, -30.74]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 2.996, "max_dp_cm": 3.375, "final_rot_deg": 6.18, "max_rot_deg": 6.18, "final_z_change_cm": -0.45, "final_disp_cm": [-2.38, 1.77, -0.45], "disp_at_0p2_1_2s_cm": [[-0.59, 1.14, 0.13], [-0.76, 1.32, 0.1], [-2.74, 1.74, -0.31]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 90.0, "shift_cm": [0.0, 2.22, 0.0], "shift_norm_cm": 2.22, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.34, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 2.996, "final_rot_deg": 6.18, "final_disp_cm": [-2.38, 1.77, -0.45]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 45.821, "max_dp_cm": 46.552, "final_rot_deg": 75.761, "max_rot_deg": 77.14, "final_z_change_cm": -30.742, "final_disp_cm": [-33.89, 2.41, -30.74], "disp_at_0p2_1_2s_cm": [[-1.67, 2.2, -0.04], [-33.9, 2.17, -30.72], [-33.89, 2.41, -30.74]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 112.5, "shift_cm": [-0.97, 2.34, 0.0], "shift_norm_cm": 2.53, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.25, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 45.821, "final_rot_deg": 75.761, "final_disp_cm": [-33.89, 2.41, -30.74]}}
+{"run": [0, 125], "frame": 62, "anchor": true, "held_min_dist_cm": null, "with_support": {"final_dp_cm": 47.57, "max_dp_cm": 48.775, "final_rot_deg": 76.92, "max_rot_deg": 78.474, "final_z_change_cm": -30.729, "final_disp_cm": [-36.19, 2.98, -30.73], "disp_at_0p2_1_2s_cm": [[-1.67, 1.46, -0.04], [-36.22, 3.25, -30.73], [-36.18, 2.94, -30.73]], "ok": false}, "hulls": 11}
+settle all_ok False anchor_ok False control moves False
+{"direction_deg": 22.5, "shift_cm": [1.4, 0.58, 0.0], "shift_norm_cm": 1.52, "frame0_sdf_cm": 0.2, "path_min_sdf_cm": 0.32, "path_ok": true, "settle": {"ok": false, "final_dp_cm": 47.57, "final_rot_deg": 76.92, "final_disp_cm": [-36.19, 2.98, -30.73]}}
+chosen None

@@ -1,0 +1,48 @@
+[2026-11-01 19:44:57] build: builder /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/t3final_r_build.py sha256 29dc19339d2e38c96352438a971752332c226ff1a153fc78bdd4e0e413d61057
+[2026-11-01 19:44:57] pin: t3_f0_final/PREREG.md e4e3a5daf239f5b5 ok
+[2026-11-01 19:44:57] pin: t3_f0_final/PREREG.sha256 names e4e3a5da
+[2026-11-01 19:44:57] pin: t3_f0_final/AMENDMENT_1.md e2a434388be69816 ok
+[2026-11-01 19:44:57] pin: f0_retry/AMENDMENT_1_t3_f0_final.md (staged) e2a434388be69816 ok
+[2026-11-01 19:44:57] pin: AMENDMENT_1.sha256 names e2a43438
+[2026-11-01 19:44:57] pin: PREREG_retry.md (v2) 8b40cff0accec12b ok
+[2026-11-01 19:44:57] pin: PREREG_retry.sha256 names 8b40cff0
+[2026-11-01 19:44:57] pin: PREREG_v3.md e62c39b2e092a0ab ok
+[2026-11-01 19:44:57] pin: PREREG_v3.sha256 names e62c39b2
+[2026-11-01 19:44:57] pin: RETRY_FILES.sha256: all pinned files unchanged
+[2026-11-01 19:44:57] pin: RETRY_FILES_v3.sha256: all pinned files unchanged
+[2026-11-01 19:44:57] pin: RETRY_GO present, names PREREG_v3, tier3_board_scores_seen: none
+[2026-11-01 19:44:57] pin: RETRY_NOGO absent
+[2026-11-01 19:44:57] pin: TIER3_FIRST_UPLOAD absent (no Tier-3 file of ours uploaded)
+[2026-11-01 19:44:57] pin: t3final_kit.py 1c8f94b96a05934f ok
+[2026-11-01 19:44:57] pin: kit tools/pack_submission.py 47a4589574ff8284 ok
+[2026-11-01 19:44:57] pin: kit submit/v2d_submit.py fe5cb1dc86d12abd ok
+[2026-11-01 19:44:57] pin: kit flash_chord/scripts/evaluate_policy.py 160d24f5fbeb70cc ok
+[2026-11-01 19:44:57] pin: stock scripts/evaluate_policy.py 160d24f5fbeb70cc ok
+[2026-11-01 19:44:57] pin: kit KIT_MANIFEST.json 398947a778349024 ok
+[2026-11-01 19:44:57] pin: kit config/tracks.json 5799f424a4cd5453 ok
+[2026-11-01 19:44:57] pin: kit metric_code/track_2/AUC.py 58b437697c32c864 ok
+[2026-11-01 19:44:57] pin: kit metric_code/track_2/SP-SR.py d206042872acd1c1 ok
+[2026-11-01 19:44:57] pin: kit metric_code/track_2/MP-SR.py a1d72216eb7745a1 ok
+[2026-11-01 19:44:57] pin: kit metric_code/track_2/MPPE.py 41815bc1e8870fb3 ok
+[2026-11-01 19:44:57] pin: KIT_MANIFEST: 52 files, 0 mismatched []
+[2026-11-01 19:44:57] pin: f0 retarget parquet_lock.json bdb83b0ee34f05a8 ok
+[2026-11-01 19:44:57] pin: f0 data root FILES.sha256 f9c94e8550e03223 ok
+[2026-11-01 19:44:57] pin: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python present
+[2026-11-01 19:44:57] pin: FINAL_f0 packed + validated (csv 6f73715a, pose columns 778b8083, 30 episodes): True
+[2026-11-01 19:44:57] AMENDMENT_2 gate: ok
+[2026-11-01 19:44:57] build-time state: {"at": "2026-11-01 19:44:57", "outcomes": {"01": "POST_DONE", "02": "POST_DONE", "04": "POST_DONE", "05": "POST_DONE", "11": "POST_DONE", "13": "POST_DONE", "14": "POST_DONE", "16": "POST_DONE", "17": "POST_DONE", "19": "POST_DONE", "21": "POST_DONE", "23": "POST_DONE", "25": "POST_DONE", "28": "POST_DONE"}, "all_candidates_have_outcome": true, "deadline_passed": false, "build_time_reached": true, "build_time_rule": "first of: every candidate has an outcome (POST_DONE / LATE / CRASHED / not started by 2026-11-02 12:00 CST) or 2026-11-02 18:00 CST (AMENDMENT_1 (c))", "inconsistent_records": {}, "problems": [], "ready": true}
+[2026-11-01 19:44:57] metric keys {'auc': 'add_auc', 'sp_sr': 'spider_sr_uncentered', 'mp_sr': 'maniptrans_sr', 'mppe': 'mean_per_point_error_cm'} (kit v2dlb/report_schema.py)
+[2026-11-01 19:44:58] ep02: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 4f4150cb162f
+[2026-11-01 19:44:58] ep04: RETRY item: run 2 of 5 valid (r2_tol0.0001_try1), exported sha256 57de1961e89a
+[2026-11-01 19:44:59] ep05: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 c7140312a8ae
+[2026-11-01 19:44:59] ep13: RETRY item: run 2 of 5 valid (r2_tol0.0001_try1), exported sha256 f09bd6a74a23
+[2026-11-01 19:45:00] ep14: RETRY item: run 2 of 5 valid (r2_tol0.0001_try1), exported sha256 425754186590
+[2026-11-01 19:45:00] ep16: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 171a7e45dab5
+[2026-11-01 19:45:00] ep17: RETRY item: run 1 of 5 valid (r1_tol0.0001_try1), exported sha256 96bed6e145ff
+[2026-11-01 19:45:01] ep19: RETRY item: run 1 of 5 valid (r1_tol0.0001_try1), exported sha256 8ccdb5612c2c
+[2026-11-01 19:45:01] ep21: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 507126b56179
+[2026-11-01 19:45:02] ep23: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 0ef63abfb8bc
+[2026-11-01 19:45:02] ep25: RETRY item: run 5 of 5 valid (r5_tol0.0001_try1), exported sha256 b0276722518e
+[2026-11-01 19:45:06] FINAL_r: packer exit 0, rows 22989, converted 30, input reference residual 1.44e-07 m / 1.46e-07 rad, uploader validate pass, provenance problems 0, pose columns 82fef2c7d0932619, csv bd73e0e94e168d05, ok True
+[2026-11-01 19:45:06] FINAL_r built: retry items [2, 4, 5, 13, 14, 16, 17, 19, 21, 23, 25]; csv sha256 bd73e0e94e168d055ec200cf74eeec9cff945345e9d523f589b6587183f23d52; pose columns 82fef2c7d09326191098df29567fcc6d0b51cb8523ad70331b60eb4535c36303; own-input totals {'episodes': 30, 'mean_auc': 0.6759713559653195, 'sp_sr_sum': 22.0, 'mp_sr_sum': 21.0, 'sp_sr_mean': 0.7333333333333333, 'mp_sr_mean': 0.7, 'mean_mppe_cm': 16.394127037956643}
+[2026-11-01 19:45:06] lock: FILES.sha256 + /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/FINAL_r.sha256

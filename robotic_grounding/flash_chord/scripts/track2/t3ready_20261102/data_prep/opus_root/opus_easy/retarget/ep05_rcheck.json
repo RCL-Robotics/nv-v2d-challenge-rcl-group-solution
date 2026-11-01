@@ -1,0 +1,117 @@
+{
+ "episode": 5,
+ "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+ "written": "2026-10-24 02:52:14",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-03-18_19-36-56_g1_box_rotate_01_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 1003, 'robot_joint_positions': 1003, 'object_body_position': 1003, 'object_root_position': 1003, 'ik_error_per_frame': 1003}; episodes.json 1003; manifest 1003; Tier-1 manifest 1003"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 9.83e-08 m / 8.79e-06 rad; root body-relative drift 0.00e+00 m / 2.12e-07 rad; map rotation 93.10 deg, translation [-0.5328, -3.4527, 1.3934]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (8.5e-08 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "floor-only: 2026-03-18_19-36-56_g1_box_rotate_01_support.usda: present, geometry False -> scene.support=false"
+  }
+ },
+ "parquet_sha256": "ab7df58ef645293a50dbb704fdd782c4439d12b111ff043242c009ce4681e242",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 8.513056265021957e-08,
+   "resid_rad": 9.424321830774485e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.1427 m, 0.09956 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.1449 m, 0.513 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "floor-only",
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.9966489672660828,
+   1.226796269416809,
+   1.28959321975708
+  ],
+  "hand_contact_frames_left_right": [
+   484,
+   534
+  ],
+  "robot_root_z_median_min_max": [
+   0.7648813128471375,
+   0.6247641444206238,
+   0.8155895471572876
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   1.0013046264648438,
+   1.0957846879959106,
+   1.161604881286621
+  ],
+  "hand_contact_frames_left_right": [
+   347,
+   396
+  ],
+  "robot_root_z_median_min_max": [
+   0.7618563175201416,
+   0.6280612945556641,
+   0.8125118017196655
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": -1.3063996997216054,
+ "retarget_object_ground_correction": "minimum=-0.0231 m, requested=+0.0236 m, applied=+0.0100 m, cap=0.0100 m (capped)",
+ "all_ok": true
+}

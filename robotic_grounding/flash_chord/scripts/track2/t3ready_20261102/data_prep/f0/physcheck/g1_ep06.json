@@ -1,0 +1,15 @@
+{
+ "ep": 6,
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+ "parquet_sha256": "233c795334e17be1a790d2cdb01e286a8521903a716cd0d2e8019326888320bb",
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+ "frames": 546,
+ "n_boxes": 18,
+ "robot_shapes": 94,
+ "min_body_clear_cm": 2.55,
+ "min_hand_clear_cm": -1.5,
+ "violating_frames": 0,
+ "violating_runs": [],
+ "worst": [],
+ "links_involved": []
+}

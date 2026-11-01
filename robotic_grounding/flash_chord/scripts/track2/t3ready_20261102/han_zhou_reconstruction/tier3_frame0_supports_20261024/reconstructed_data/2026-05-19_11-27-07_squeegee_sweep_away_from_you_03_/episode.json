@@ -1,0 +1,15 @@
+{
+ "episode_index": 28,
+ "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+ "object": "squeegee",
+ "task": "Walk over to the squeegee leaning on the tall bar stool and using both hands to pick up the squeegee proceed to hold the squeegee infront of you and perform sweeping motions away you.",
+ "frames": 988,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.43770524859428406,
+  "median": 0.256586492061615,
+  "max": 4.883294582366943
+ },
+ "support": "../../supports/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_"
+}

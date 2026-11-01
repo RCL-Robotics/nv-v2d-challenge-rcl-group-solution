@@ -1,0 +1,135 @@
+{
+ "ep": 1,
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+ "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep01_obj/textured_mesh.obj",
+ "mesh_equal_parquet_mesh": true,
+ "sim": {
+  "fps": 50.0,
+  "substeps": 4,
+  "solver": "newton",
+  "integrator": "implicitfast",
+  "cone": "pyramidal",
+  "njmax": 1024,
+  "nconmax": 512,
+  "impratio": 1.0,
+  "iterations": 100,
+  "ls_iterations": 50,
+  "use_mujoco_contacts": true
+ },
+ "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+ "tests": [
+  {
+   "run": [
+    0,
+    125
+   ],
+   "frame": 62,
+   "anchor": true,
+   "held_min_dist_cm": 49.74,
+   "with_support": {
+    "final_dp_cm": 1.461,
+    "max_dp_cm": 1.461,
+    "final_rot_deg": 3.043,
+    "max_rot_deg": 3.043,
+    "final_z_change_cm": 0.045,
+    "final_disp_cm": [
+     -0.26,
+     1.44,
+     0.04
+    ],
+    "disp_at_0p2_1_2s_cm": [
+     [
+      -0.13,
+      0.73,
+      0.17
+     ],
+     [
+      -0.23,
+      0.99,
+      0.18
+     ],
+     [
+      -0.22,
+      1.03,
+      0.17
+     ]
+    ],
+    "ok": true
+   },
+   "hulls": 11,
+   "no_support_control": {
+    "final_dp_cm": 48.662,
+    "max_dp_cm": 49.751,
+    "final_rot_deg": 77.027,
+    "max_rot_deg": 79.097,
+    "final_z_change_cm": -30.729,
+    "final_disp_cm": [
+     -37.56,
+     3.65,
+     -30.73
+    ],
+    "disp_at_0p2_1_2s_cm": [
+     [
+      -2.34,
+      1.79,
+      -0.17
+     ],
+     [
+      -37.56,
+      3.67,
+      -30.73
+     ],
+     [
+      -37.55,
+      3.61,
+      -30.73
+     ]
+    ],
+    "ok": false
+   }
+  },
+  {
+   "run": [
+    658,
+    747
+   ],
+   "frame": 702,
+   "anchor": false,
+   "held_min_dist_cm": 78.36,
+   "with_support": {
+    "final_dp_cm": 2.328,
+    "max_dp_cm": 2.687,
+    "final_rot_deg": 4.882,
+    "max_rot_deg": 4.882,
+    "final_z_change_cm": -0.695,
+    "final_disp_cm": [
+     -2.14,
+     -0.6,
+     -0.69
+    ],
+    "disp_at_0p2_1_2s_cm": [
+     [
+      -1.78,
+      -0.56,
+      -0.49
+     ],
+     [
+      -2.37,
+      -0.79,
+      -0.6
+     ],
+     [
+      -2.34,
+      -0.77,
+      -0.61
+     ]
+    ],
+    "ok": false
+   },
+   "hulls": 11
+  }
+ ],
+ "all_ok": false,
+ "anchor_ok": true,
+ "anchor_control_moves": true
+}

@@ -1,0 +1,91 @@
+{
+  "budget": {
+    "available": [
+      1024,
+      1024,
+      768,
+      384
+    ],
+    "used": [
+      640,
+      576,
+      768,
+      384
+    ]
+  },
+  "config_rewrite": {
+    "actor_hidden_dims": [
+      1024,
+      1024,
+      768,
+      384
+    ],
+    "critic_hidden_dims": [
+      1024,
+      512,
+      256,
+      128
+    ],
+    "removed_keys": [
+      "training.coordinate",
+      "training.early_stop_help_zero_tail",
+      "objective.object_task_weight",
+      "objective.object_task_position_beta",
+      "objective.object_task_rotation_beta",
+      "env.objective.object_task_weight",
+      "env.objective.object_task_position_beta",
+      "env.objective.object_task_rotation_beta",
+      "curriculum.stages.0.objective_weights.object_task",
+      "training.curriculum.stages.0.objective_weights.object_task"
+    ],
+    "replaced_subtrees": [
+      "env.reset",
+      "reset"
+    ],
+    "source_reset_target": "flash_chord.lifecycle.rsi_reset.RSIReconBodyResetConfig"
+  },
+  "coordinate_layout_sha256": "ec8ba6a699f491d10dd2f186f79aaae0afaee1f9d67250f028d8e112344b065d",
+  "destination": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep27/export/ep27/model_34196.safetensors",
+  "destination_sha256": "8cbf9d1b96bedff276659cb194fde4816c4e96347aaabb3cf0132feb19226888",
+  "dev_restore": {
+    "finite": true,
+    "max_abs_action": 209.28085327148438,
+    "max_abs_diff": 9.918212890625e-05,
+    "max_rel_diff": 4.38690185546875e-05
+  },
+  "device": "cpu",
+  "export_format": "coordinate_e2_v1",
+  "iteration": "34196",
+  "leaf_count": 72,
+  "log_std_equal": true,
+  "max_abs_diff": 9.918212890625e-05,
+  "max_rel_diff": 4.38690185546875e-05,
+  "probe_count": 8192,
+  "probe_seed": 0,
+  "report_path": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/eval/ep27/export/ep27/export_report.json",
+  "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep27/model_34196.safetensors",
+  "source_kind": "coordinated",
+  "source_sha256": "f64529649312f2bab786f1600b8572ed4c18c337485dffbaff5793b06ddc8bc9",
+  "status": "ok",
+  "stock_runtime": {
+    "algorithm": "ppo",
+    "collision_type": "CollisionPolicy",
+    "comparison": {
+      "finite": true,
+      "max_abs_action": 209.28085327148438,
+      "max_abs_diff": 9.918212890625e-05,
+      "max_rel_diff": 4.38690185546875e-05
+    },
+    "curriculum_stage_voc_scale": 0.0,
+    "embodiment_type": "G1Dex3",
+    "env_reset_type": "ReconBodyResetConfig",
+    "eval_code_sha256": "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1",
+    "flash_chord_module": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord/src/flash_chord/__init__.py",
+    "jax_backend": "cpu",
+    "leaf_count": 72,
+    "log_std_equal": true,
+    "path": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord",
+    "verified": true
+  },
+  "tolerance": 0.0001
+}

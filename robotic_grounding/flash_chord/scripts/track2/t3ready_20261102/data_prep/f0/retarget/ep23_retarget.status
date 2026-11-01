@@ -1,0 +1,4 @@
+start 2026-10-24 19:01:23 ep23 2026-06-03_15-08-03_toy_stroller_back_forth_ground_04 gpu GPU-31a1066a-7574-29d3-ad13-1eabd853bd87 cpus 54,158,55,159 threads 4
+python /root/autodl-tmp/haoran.zhang/conda_envs/v2d/bin/python; XDG_CACHE_HOME=/root/autodl-tmp/haoran.zhang/.cache; nv HEAD f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf tracked-modified 0; MPS vars 0
+exit 0 after 221 s at 2026-10-24 19:05:04
+DONE

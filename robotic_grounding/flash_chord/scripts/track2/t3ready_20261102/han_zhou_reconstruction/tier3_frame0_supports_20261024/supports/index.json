@@ -1,0 +1,86 @@
+{
+ "1": {
+  "support": "tall_bar_stool",
+  "iou": 0.6066921949386597,
+  "surface_height_m": 0.6349325252400649,
+  "gap_cm": null
+ },
+ "2": {
+  "support": "round_table",
+  "iou": 0.6103668212890625,
+  "surface_height_m": 0.786131788791802,
+  "gap_cm": 0.003208780713515047
+ },
+ "3": {
+  "support": "round_table",
+  "iou": 0.7306742072105408,
+  "surface_height_m": 0.7861318561209247,
+  "gap_cm": -0.2813136631180768
+ },
+ "6": {
+  "support": "round_table",
+  "iou": 0.6337060928344727,
+  "surface_height_m": 0.786131884841877,
+  "gap_cm": 0.7519248482176333
+ },
+ "7": {
+  "support": "round_table",
+  "iou": 0.6624311804771423,
+  "surface_height_m": 0.7861319560279473,
+  "gap_cm": 1.275702103667764
+ },
+ "9": {
+  "support": "skinny_wood_chair",
+  "iou": 0.8182047605514526,
+  "surface_height_m": 0.5149953261049204,
+  "gap_cm": -2.0297039126764505
+ },
+ "11": {
+  "support": "white_desk",
+  "iou": 0.7624000906944275,
+  "surface_height_m": 0.9146267335980006,
+  "gap_cm": -1.8964686070482295
+ },
+ "13": {
+  "support": "white_desk",
+  "iou": 0.7645915746688843,
+  "surface_height_m": 0.9146267839186635,
+  "gap_cm": -2.40411086601402
+ },
+ "16": {
+  "support": "white_desk",
+  "iou": 0.761073648929596,
+  "surface_height_m": 0.9146267460954538,
+  "gap_cm": -2.0405032539234758
+ },
+ "17": {
+  "support": "round_table",
+  "iou": 0.7536771297454834,
+  "surface_height_m": 0.7861318987702534,
+  "gap_cm": -4.93647488622877
+ },
+ "20": {
+  "support": "round_table",
+  "iou": 0.660709023475647,
+  "surface_height_m": 0.7861318005719072,
+  "gap_cm": 1.880217656438543
+ },
+ "25": {
+  "support": "round_table",
+  "iou": 0.7616508603096008,
+  "surface_height_m": 0.7861319708142462,
+  "gap_cm": 0.4323978335560863
+ },
+ "27": {
+  "support": "white_desk",
+  "iou": 0.8138709664344788,
+  "surface_height_m": 0.9146267183560983,
+  "gap_cm": -2.0828978266355325
+ },
+ "28": {
+  "support": "tall_bar_stool",
+  "iou": 0.8247060775756836,
+  "surface_height_m": 0.6349326328516546,
+  "gap_cm": null
+ }
+}

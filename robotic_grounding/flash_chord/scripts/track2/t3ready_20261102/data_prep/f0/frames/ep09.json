@@ -1,0 +1,28 @@
+{
+ "ep": 9,
+ "seq": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+ "frames": 870,
+ "n_mesh_v": 295188,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.4693796074261874,
+ "verts": true,
+ "plane_normal": [
+  -0.05489142609913218,
+  0.07053780152555177,
+  0.9959976656080803
+ ],
+ "plane_offset": 0.88118790807476,
+ "M_vs_object_chain_max_err": [
+  7.771561172376096e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "9c1301719f2a0906fddce17a22e367f191d6e6c8091e24863de702e73c528520",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "9552e877e3bf69de5e6192619201ec05b8f0ec1900230e385c9752e833a71d19",
+  "soma_params.npz": "a7877fbf16a971b63a93c70cac9a181305536d5b496d6137277aaf9e77a2caf8",
+  "ground_plane.json": "47bf9516d299dc2a6b7190f74bfd46058d11d611587e2995abc6d05c11f84282",
+  "reconstructed_mesh/output_aligned.glb": "473b0466c0a05c3f2e586e793c4dc81f4c1281534d1402809f32e94e7e6e915d"
+ },
+ "seconds": 20.3
+}

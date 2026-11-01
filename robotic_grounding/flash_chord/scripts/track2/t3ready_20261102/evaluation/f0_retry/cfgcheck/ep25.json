@@ -1,0 +1,63 @@
+{
+ "written": "2026-10-31 01:14:28",
+ "recipe_sha256": "de79eb021886acff91985b80743173a098242e40cd4dc5d4b7a6abe3d9cdd763",
+ "ok": true,
+ "checks": {
+  "diff_keys_allowed": true,
+  "parquet_same": true,
+  "scene_support_same": true,
+  "seed_same": true,
+  "experiment_same": true,
+  "object_threshold": true,
+  "palm_threshold": true,
+  "start_update": true,
+  "deadline_unchanged": true,
+  "resume": true,
+  "max_iterations": true,
+  "early_stop_off": true,
+  "help_zero_before_cap": true
+ },
+ "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep25/hydra/.hydra/config.yaml",
+ "diff": {
+  "logging.experiment": [
+   "C3r2_tier3_f0",
+   "C3r2_tier3_f0_retry"
+  ],
+  "logging.run_name": [
+   "ep25_cyan_water_bottle",
+   "ep25_cyan_water_bottle_retry"
+  ],
+  "output_dir": [
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep25",
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep25"
+  ],
+  "reset.start_update": [
+   0,
+   44922
+  ],
+  "termination.object_position_threshold": [
+   0.1,
+   0.2
+  ],
+  "termination.palm_position_threshold": [
+   0.15,
+   0.25
+  ],
+  "training.checkpoint": [
+   null,
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep25/model_44922.safetensors"
+  ],
+  "training.early_stop_help_zero_tail": [
+   5860,
+   0
+  ],
+  "training.max_iterations": [
+   45000,
+   90000
+  ],
+  "training.resume": [
+   false,
+   true
+  ]
+ }
+}

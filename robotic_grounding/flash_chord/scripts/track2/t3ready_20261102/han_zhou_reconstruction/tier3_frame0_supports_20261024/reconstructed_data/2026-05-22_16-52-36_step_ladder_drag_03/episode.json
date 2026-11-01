@@ -1,0 +1,14 @@
+{
+ "episode_index": 22,
+ "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+ "object": "step_ladder",
+ "task": "Walk over to the step ladder. Using right hand, drag the step ladder on the floor in the bounding area until end of sequence.",
+ "frames": 719,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.34904712438583374,
+  "median": 0.1975233256816864,
+  "max": 3.8430283069610596
+ }
+}

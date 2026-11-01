@@ -1,0 +1,14 @@
+{
+ "episode_index": 8,
+ "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+ "object": "skinny_wood_chair",
+ "task": "Walk over to the skinny wood chair and push the skinny wood chair into the round table.",
+ "frames": 708,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3567869961261749,
+  "median": 0.21886101365089417,
+  "max": 3.201169729232788
+ }
+}

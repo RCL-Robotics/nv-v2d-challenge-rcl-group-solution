@@ -1,0 +1,28 @@
+{
+ "ep": 20,
+ "seq": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+ "frames": 553,
+ "n_mesh_v": 295487,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.7984382729579852,
+ "verts": true,
+ "plane_normal": [
+  -0.10978316391053823,
+  0.03782646822813197,
+  0.9932355285747575
+ ],
+ "plane_offset": 0.9411489364211983,
+ "M_vs_object_chain_max_err": [
+  7.771561172376096e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "13d618a56dfa4a83d9758efe42023ed677a281ab7dc5eabb2f9b9dad6f556b98",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "b9167fee6b1225601e477962c9ca48ab02971ea708eb7941a921f4aecb60e72a",
+  "soma_params.npz": "8152b1520125ecde1dcbc7b828d8d44b44cf3fe33f958e312d9739d7c0a694d5",
+  "ground_plane.json": "bea0e61fffef9b6c6d5284aec9ce1776abd2e82cf78ff69ff7cb111364433f9f",
+  "reconstructed_mesh/output_aligned.glb": "969ef0080979446b5713d6f3c5c450658998844d7db699c01366d93ed11b6d21"
+ },
+ "seconds": 14.7
+}

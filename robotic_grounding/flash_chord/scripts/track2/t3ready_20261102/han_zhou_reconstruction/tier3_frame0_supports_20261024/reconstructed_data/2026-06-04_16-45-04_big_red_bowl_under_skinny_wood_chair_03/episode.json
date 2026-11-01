@@ -1,0 +1,15 @@
+{
+ "episode_index": 9,
+ "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+ "object": "big_red_bowl",
+ "task": "Walk over to the big red bowl on the skinny wood chair and pick up the big red bowl using both hands and proceed to place the big red bowl on the ground in front of the skinny wood chair and then slide the big red bowl underneath the skinny wood chair.",
+ "frames": 870,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3987504839897156,
+  "median": 0.18265122175216675,
+  "max": 11.627439498901367
+ },
+ "support": "../../supports/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03"
+}

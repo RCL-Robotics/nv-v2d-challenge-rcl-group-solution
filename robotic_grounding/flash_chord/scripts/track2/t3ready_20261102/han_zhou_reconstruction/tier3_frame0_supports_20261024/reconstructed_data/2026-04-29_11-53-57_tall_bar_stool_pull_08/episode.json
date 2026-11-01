@@ -1,0 +1,14 @@
+{
+ "episode_index": 21,
+ "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+ "object": "tall_bar_stool",
+ "task": "Walk over to the tall bar stool and pull the tall bar stool away from the desk.",
+ "frames": 678,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.29669687151908875,
+  "median": 0.18092340230941772,
+  "max": 3.8632445335388184
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_90000.safetensors",
+  "early_stop_help_zero_tail": 0,
+  "environment_steps": 8847360000,
+  "finished_at": "2026-10-31T05:52:01-07:00",
+  "help_zero_iterations": 6016,
+  "help_zero_since": 83984,
+  "iteration": 90000,
+  "max_iterations": 90000,
+  "reason": "max_iterations",
+  "resumed_from": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep19/model_44922.safetensors",
+  "rsi_state": "rsi_90000.safetensors",
+  "start_iteration": 44922,
+  "wall_seconds": 71320.0
+}

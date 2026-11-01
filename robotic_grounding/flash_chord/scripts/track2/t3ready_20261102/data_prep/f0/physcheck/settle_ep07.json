@@ -1,0 +1,152 @@
+{
+ "ep": 7,
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+ "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep07_obj/textured_mesh.obj",
+ "mesh_equal_parquet_mesh": true,
+ "sim": {
+  "fps": 50.0,
+  "substeps": 4,
+  "solver": "newton",
+  "integrator": "implicitfast",
+  "cone": "pyramidal",
+  "njmax": 1024,
+  "nconmax": 512,
+  "impratio": 1.0,
+  "iterations": 100,
+  "ls_iterations": 50,
+  "use_mujoco_contacts": true
+ },
+ "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+ "tests": [
+  {
+   "run": [
+    0,
+    156
+   ],
+   "frame": 78,
+   "anchor": true,
+   "with_support": {
+    "final_dp_cm": 0.091,
+    "max_dp_cm": 0.092,
+    "final_rot_deg": 0.157,
+    "max_rot_deg": 0.162,
+    "final_z_change_cm": 0.09,
+    "ok": true
+   },
+   "hulls": 9,
+   "no_support_control": {
+    "final_dp_cm": 78.521,
+    "max_dp_cm": 80.666,
+    "final_rot_deg": 0.155,
+    "max_rot_deg": 0.155,
+    "final_z_change_cm": -78.521,
+    "ok": false
+   }
+  },
+  {
+   "run": [
+    226,
+    245
+   ],
+   "frame": 235,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.794,
+    "max_dp_cm": 1.019,
+    "final_rot_deg": 0.157,
+    "max_rot_deg": 0.868,
+    "final_z_change_cm": -0.794,
+    "ok": true
+   },
+   "hulls": 9
+  },
+  {
+   "run": [
+    387,
+    397
+   ],
+   "frame": 392,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.777,
+    "max_dp_cm": 0.778,
+    "final_rot_deg": 0.436,
+    "max_rot_deg": 0.442,
+    "final_z_change_cm": 0.775,
+    "ok": true
+   },
+   "hulls": 9
+  },
+  {
+   "run": [
+    576,
+    588
+   ],
+   "frame": 582,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.8,
+    "max_dp_cm": 1.02,
+    "final_rot_deg": 0.151,
+    "max_rot_deg": 1.121,
+    "final_z_change_cm": -0.8,
+    "ok": true
+   },
+   "hulls": 9
+  },
+  {
+   "run": [
+    635,
+    660
+   ],
+   "frame": 647,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.47,
+    "max_dp_cm": 0.619,
+    "final_rot_deg": 0.16,
+    "max_rot_deg": 0.935,
+    "final_z_change_cm": -0.469,
+    "ok": true
+   },
+   "hulls": 9
+  },
+  {
+   "run": [
+    781,
+    794
+   ],
+   "frame": 787,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.525,
+    "max_dp_cm": 0.632,
+    "final_rot_deg": 0.691,
+    "max_rot_deg": 0.698,
+    "final_z_change_cm": -0.506,
+    "ok": true
+   },
+   "hulls": 9
+  },
+  {
+   "run": [
+    795,
+    896
+   ],
+   "frame": 845,
+   "anchor": false,
+   "with_support": {
+    "final_dp_cm": 0.546,
+    "max_dp_cm": 0.636,
+    "final_rot_deg": 0.679,
+    "max_rot_deg": 1.164,
+    "final_z_change_cm": -0.512,
+    "ok": true
+   },
+   "hulls": 9
+  }
+ ],
+ "all_ok": true,
+ "anchor_ok": true,
+ "anchor_control_moves": true
+}

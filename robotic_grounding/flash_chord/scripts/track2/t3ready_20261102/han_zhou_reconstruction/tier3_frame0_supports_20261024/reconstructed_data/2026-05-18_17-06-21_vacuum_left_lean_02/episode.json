@@ -1,0 +1,15 @@
+{
+ "episode_index": 1,
+ "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+ "object": "vacuum",
+ "task": "Walk over to the vacuum leaning on the tall bar stool and pick up the vacuum using your left hand and hold the vacuum infront of you and perform side to side vacuum motions. Place it back leaning on the stool when complete.",
+ "frames": 747,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.4134479761123657,
+  "median": 0.24816827476024628,
+  "max": 3.4267282485961914
+ },
+ "support": "../../supports/2026-05-18_17-06-21_vacuum_left_lean_02"
+}

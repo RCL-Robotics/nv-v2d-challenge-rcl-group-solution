@@ -1,0 +1,156 @@
+{
+ "episode": 25,
+ "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+ "written": "2026-10-24 19:21:51",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-03-20_11-59-57_cyan_water_bottle_rotate_01_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 859, 'robot_joint_positions': 859, 'object_body_position': 859, 'object_root_position': 859, 'ik_error_per_frame': 859}; episodes.json 859; manifest 859; Tier-1 manifest 859"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 1.41e-06 m / 3.13e-06 rad; root body-relative drift 0.00e+00 m / 1.56e-07 rad; map rotation 106.11 deg, translation [1.8683, -1.0205, 1.3873]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_f0": "accepted (1.2e-07 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "frame_references_opus_v2": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "support episode: 2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda present, geometry True (gated at finalize); 2026-03-20_11-59-57_cyan_water_bottle_rotate_01_g1_support.usda absent"
+  },
+  "G9_robot_equal_opus": {
+   "ok": true,
+   "detail": "max |robot f0 - robot opus| 1.6e-05 (tol 0.001); ik_num_iterations differ on 0 frames by <= 0 (tol 2); hand-contact frames changed 366"
+  },
+  "G10_frame_chain": {
+   "ok": true,
+   "detail": "object track vs t3f0_frames chain: 6.0e-08 m, 2.2e-04 deg"
+  }
+ },
+ "parquet_sha256": "530f7fa375fc15afebc11edf7b0e6e07362df60f2fc1d3074c90eb182693913a",
+ "packer_emulation": {
+  "frame_references_f0": {
+   "result": "accepted",
+   "resid_m": 1.2287297621416522e-07,
+   "resid_rad": 8.429369702178807e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.2871 m, 3.141 rad). Check frame indices and reference versions."
+  },
+  "frame_references_opus_v2": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.197 m, 9.424e-08 rad). Check frame indices and reference versions"
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.2248 m, 3.12 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "support",
+ "vs_opus_parquet": {
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+  "parquet_sha256": "5969e21443d5c110daffadba0b624cf01b0feb9f3cd2eccf2533067dfce8cbef",
+  "robot_max_abs_diff": {
+   "robot_root_position": 4.172325134277344e-07,
+   "robot_root_wxyz": 9.08970832824707e-07,
+   "robot_joint_positions": 1.5914440155029297e-05,
+   "ee_pose_w": 1.0728836059570312e-06,
+   "ik_error_per_frame": 3.337860107421875e-06,
+   "frame_task_errors": 9.98377799987793e-07
+  },
+  "ik_num_iterations_max_diff_frames": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_f0_left_right": [
+   360,
+   224
+  ],
+  "hand_contact_frames_opus_left_right": [
+   272,
+   414
+  ],
+  "hand_contact_frames_changed": 366,
+  "object_pos_change_cm_max": 9.38
+ },
+ "t3": {
+  "ik_error_median_p95_max": [
+   1.2868252992630005,
+   1.753105723857878,
+   1.9714902639389038
+  ],
+  "hand_contact_frames_left_right": [
+   360,
+   224
+  ],
+  "robot_root_z_median_min_max": [
+   0.7998997569084167,
+   0.7795644998550415,
+   0.8206365704536438
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   1.1723300218582153,
+   1.6567895889282225,
+   1.826025366783142
+  ],
+  "hand_contact_frames_left_right": [
+   297,
+   438
+  ],
+  "robot_root_z_median_min_max": [
+   0.800112783908844,
+   0.774829626083374,
+   0.8165739178657532
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": 78.39092133205342,
+ "retarget_object_ground_correction": "minimum=+0.7839 m, requested=+0.0000 m, applied=+0.0000 m, cap=0.0100 m",
+ "all_ok": true
+}
