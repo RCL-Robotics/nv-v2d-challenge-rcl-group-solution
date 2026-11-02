@@ -2,6 +2,8 @@
 
 每个目录：`AGENT_TASK.md`（任务说明）、`transcript.md`（可读对话记录）、`events.jsonl.gz`（原始事件流，去掉了图片和签名）、`run_manifest.txt`（环境、输入哈希、耗时）、`outputs/`（报告、求解脚本、检查图，不含大数组）。
 
+构成 Tier 3 结果 0.552 的 30 个 run（CL2_ep000–010、CL2b_ep011–021、CL2c_ep022–029）另外带有 `outputs/` 里的数组（包括交付的 `object_poses_world.npz`）和 `scratch/` 里 agent 写的脚本与笔记；复现步骤见 `../REPRODUCE_TIER3_0552.md`。
+
 | run | 系列 | 模型 | episode | 日期 | 耗时(s) | 花费(USD) | 有报告 | 报告标题 |
 |---|---|---|---|---|---|---|---|---|
 | A1_codex_ep003 | Codex GPT 修正轨迹，第一版任务 | gpt-6-astra | 003 | 2026-10-18 | 3102 |  | 是 | Object trajectory refinement |

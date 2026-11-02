@@ -1,0 +1,1 @@
+GPU usage log (approx GPU-active seconds): exp_static ~20s, flips ~120s, exp_move x6 ~250s, solve runs: blk_l01 75, blk_l003 75, nofloor 75, free1 75, free1nf 75, ramp 70, evals ~60

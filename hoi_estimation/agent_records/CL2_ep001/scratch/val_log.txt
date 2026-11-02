@@ -1,0 +1,38 @@
+09:35:48 loading video / masks
+09:36:07 static phases: [0,124] and [657,746]; carried: [125,656]
+09:36:10   static [0,124] hyp rz0: U 0.488 iou 0.685 dR_base 15.4 scale 0.902
+09:36:12   static [0,124] hyp rz-30: U 0.492 iou 0.670 dR_base 11.6 scale 0.927
+09:36:15   static [0,124] hyp rz30: U 0.484 iou 0.719 dR_base 33.3 scale 0.854
+09:36:17   static [0,124] hyp rz90: U 0.877 iou 0.440 dR_base 94.7 scale 0.880
+09:36:19   static [0,124] hyp rz180: U 0.685 iou 0.575 dR_base 155.1 scale 0.913
+09:36:21   static [0,124] hyp rz270: U 0.616 iou 0.659 dR_base 83.2 scale 0.916
+09:36:23   static [0,124] hyp fx: U 0.714 iou 0.558 dR_base 175.5 scale 0.930
+09:36:27   static [0,124] hyp fy: U 0.736 iou 0.552 dR_base 178.2 scale 0.833
+09:36:27   -> static [0,124] chose rz30 U 0.484 (baseline per-frame U 0.671), silhouette scale 0.854
+09:36:29   static [657,746] hyp rz0: U 0.462 iou 0.695 dR_base 8.9 scale 0.901
+09:36:32   static [657,746] hyp rz-30: U 0.463 iou 0.695 dR_base 8.4 scale 0.896
+09:36:34   static [657,746] hyp rz30: U 0.447 iou 0.705 dR_base 9.2 scale 0.896
+09:36:36   static [657,746] hyp rz90: U 0.878 iou 0.466 dR_base 113.6 scale 0.895
+09:36:39   static [657,746] hyp rz180: U 1.235 iou 0.227 dR_base 173.8 scale 0.871
+09:36:41   static [657,746] hyp rz270: U 0.653 iou 0.597 dR_base 79.6 scale 0.868
+09:36:43   static [657,746] hyp fx: U 0.733 iou 0.550 dR_base 173.6 scale 0.929
+09:36:45   static [657,746] hyp fy: U 0.630 iou 0.529 dR_base 160.3 scale 0.809
+09:36:45   -> static [657,746] chose rz30 U 0.447 (baseline per-frame U 0.624), silhouette scale 0.896
+09:36:45 global silhouette scale (mask-size bias) 0.875
+09:37:11   hypotheses 140/532
+09:37:39   hypotheses 280/532
+09:38:32   hypotheses 420/532
+09:39:17   hypotheses 532/532
+09:39:17 viterbi choices {'b0': 225, 'b90': 31, 'b180': 3, 'b270': 5, 'f0': 175, 'f90': 56, 'f180': 33, 'f270': 4}
+09:39:23   it 0 scale 0.8746 img 150.018 acc_r 80.4750 vel_r 38.5558 acc_p 0.958297
+09:39:42   it 25 scale 0.8746 img 153.024 acc_r 8.2379 vel_r 15.0625 acc_p 0.042076
+09:39:58   it 50 scale 0.8746 img 150.797 acc_r 2.6742 vel_r 10.0644 acc_p 0.011200
+09:40:12   it 75 scale 0.8746 img 150.189 acc_r 1.4477 vel_r 7.7999 acc_p 0.006823
+09:40:27   it 100 scale 0.8746 img 149.765 acc_r 0.9726 vel_r 6.5688 acc_p 0.005723
+09:40:42   it 125 scale 0.8746 img 149.875 acc_r 0.7283 vel_r 5.7970 acc_p 0.005377
+09:40:56   it 149 scale 0.8746 img 149.788 acc_r 0.5803 vel_r 5.2650 acc_p 0.005231
+09:40:56 depth re-anchor static_start: factor 1.0000
+09:40:56 depth re-anchor carried: factor 1.0029
+09:40:56 depth re-anchor static_end: factor 1.0000
+09:40:58 HOLDOUT (107 frames): iou base 0.390 viterbi(in-sample) 0.650 joint 0.650 | U base 0.873 joint 0.553
+09:40:58 done in 310.0s -> /work/scratch/val/object_poses_world.npz

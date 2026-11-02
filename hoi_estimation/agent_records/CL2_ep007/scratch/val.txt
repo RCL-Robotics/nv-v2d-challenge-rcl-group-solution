@@ -1,0 +1,24 @@
+P1 rest on sole (static) [0, 156]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.04, 'rot_speed_p95': 18.598, 'trans_speed_cm_per_frame_med': 0.084, 'lowest_point_above_table_cm_med': 23.867, 'hand_to_handle_cm_med_touching': 47.13}
+  result   {'mask_IoU_mean': 0.811, 'mask_IoU_p10': 0.787, 'colour_resid_median': 0.579, 'rot_speed_deg_per_frame_med': 0.0, 'rot_speed_p95': 0.0, 'trans_speed_cm_per_frame_med': 0.0, 'lowest_point_above_table_cm_med': 0.0, 'hand_to_handle_cm_med_touching': 3.338}
+  depth diff (cm) {'mean': -19.6, 'median': -20.1} image offset px 96
+P2 slid on table [156, 660]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.016, 'rot_speed_p95': 47.256, 'trans_speed_cm_per_frame_med': 0.812, 'lowest_point_above_table_cm_med': 39.968, 'hand_to_handle_cm_med_touching': 51.389}
+  result   {'mask_IoU_mean': 0.854, 'mask_IoU_p10': 0.836, 'colour_resid_median': 0.503, 'rot_speed_deg_per_frame_med': 0.084, 'rot_speed_p95': 0.293, 'trans_speed_cm_per_frame_med': 0.327, 'lowest_point_above_table_cm_med': -0.0, 'hand_to_handle_cm_med_touching': 3.922}
+  depth diff (cm) {'mean': -25.0, 'median': -24.9} image offset px 130
+P3 stand-up transition [660, 780]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.024, 'rot_speed_p95': 39.084, 'trans_speed_cm_per_frame_med': 2.053, 'lowest_point_above_table_cm_med': 38.293, 'hand_to_handle_cm_med_touching': 46.439}
+  result   {'mask_IoU_mean': 0.858, 'mask_IoU_p10': 0.834, 'colour_resid_median': 0.576, 'rot_speed_deg_per_frame_med': 0.988, 'rot_speed_p95': 2.077, 'trans_speed_cm_per_frame_med': 0.29, 'lowest_point_above_table_cm_med': 1.22, 'hand_to_handle_cm_med_touching': 6.933}
+  depth diff (cm) {'mean': -23.0, 'median': -22.7} image offset px 98
+P4 standing, held [780, 794]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.024, 'rot_speed_p95': 4.712, 'trans_speed_cm_per_frame_med': 0.033, 'lowest_point_above_table_cm_med': 30.518, 'hand_to_handle_cm_med_touching': 69.789}
+  result   {'mask_IoU_mean': 0.827, 'mask_IoU_p10': 0.819, 'colour_resid_median': 0.561, 'rot_speed_deg_per_frame_med': 0.204, 'rot_speed_p95': 0.866, 'trans_speed_cm_per_frame_med': 0.027, 'lowest_point_above_table_cm_med': 0.661, 'hand_to_handle_cm_med_touching': 4.571}
+  depth diff (cm) {'mean': -48.1, 'median': -52.7} image offset px 84
+P5 standing (static) [794, 896]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.023, 'rot_speed_p95': 0.024, 'trans_speed_cm_per_frame_med': 0.054, 'lowest_point_above_table_cm_med': 30.058, 'hand_to_handle_cm_med_touching': 66.844}
+  result   {'mask_IoU_mean': 0.828, 'mask_IoU_p10': 0.819, 'colour_resid_median': 0.607, 'rot_speed_deg_per_frame_med': 0.03, 'rot_speed_p95': 0.03, 'trans_speed_cm_per_frame_med': 0.0, 'lowest_point_above_table_cm_med': 0.66, 'hand_to_handle_cm_med_touching': 49.629}
+  depth diff (cm) {'mean': -71.3, 'median': -86.9} image offset px 79
+all [0, 896]
+  baseline {'mask_IoU_mean': 0.0, 'mask_IoU_p10': 0.0, 'colour_resid_median': 0.0, 'rot_speed_deg_per_frame_med': 0.024, 'rot_speed_p95': 31.793, 'trans_speed_cm_per_frame_med': 0.158, 'lowest_point_above_table_cm_med': 32.971, 'hand_to_handle_cm_med_touching': 50.08}
+  result   {'mask_IoU_mean': 0.843, 'mask_IoU_p10': 0.806, 'colour_resid_median': 0.56, 'rot_speed_deg_per_frame_med': 0.055, 'rot_speed_p95': 1.196, 'trans_speed_cm_per_frame_med': 0.203, 'lowest_point_above_table_cm_med': -0.0, 'hand_to_handle_cm_med_touching': 4.452}
+  depth diff (cm) {'mean': -29.4, 'median': -23.9} image offset px 113

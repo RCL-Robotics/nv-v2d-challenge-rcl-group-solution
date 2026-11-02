@@ -1,0 +1,21 @@
+import sys,time; sys.path.insert(0,'/work/scratch/s')
+from rc import *
+c=json.load(open('/work/inputs/camera.json')); K=np.array(c['K']); Twc=np.array(c['T_world_cam'])
+mesh=trimesh.load('/work/inputs/object_mesh.glb',force='scene',process=False).to_geometry()
+rc=RC(mesh)
+fr=np.load('/work/scratch/frames_full.npy',mmap_mode='r'); f=h5py.File('/work/inputs/masks.h5')
+rec=np.load('/work/inputs/reconstruction.npz')
+t=int(sys.argv[1]); out=int(sys.argv[2]); it=int(sys.argv[3]); lr=float(sys.argv[4])
+Tc=np.linalg.inv(Twc)@rec['T_world_mesh'][t]
+om=f['object'][t]; ys,xs=np.nonzero(om)
+obs=FrameObs(fr[t],om,f['person'][t],K,xs.mean(),ys.mean(),max(np.ptp(xs),np.ptp(ys))*1.6,out=out)
+pert=Rot.from_rotvec(np.random.RandomState(0).randn(16,3)*np.radians(float(sys.argv[5]))/np.sqrt(3)).as_matrix()
+R0=torch.tensor(pert@Tc[:3,:3],dtype=torch.float32,device=dev)
+t0=torch.tensor(Tc[:3,3],dtype=torch.float32,device=dev).expand(16,3).clone()
+t1=time.time()
+R,tt,tot,ls,lt=optimize(rc,[obs],R0,t0,iters=it,lr_r=lr,lr_t=float(sys.argv[6]),w_tex=float(sys.argv[7]),verbose=True)
+print('time',time.time()-t1)
+L0=losses(rc,obs,torch.tensor(Tc[None,:3,:3],dtype=torch.float32,device=dev),t0[:1],blur=1.0)
+print('baseline loss',L0[0].item(),L0[1].item(),L0[2].item())
+for k in range(16):
+    print('init ang %.1f'%np.degrees(Rot.from_matrix(pert[k]).magnitude()), 'final ang %.1f'%np.degrees(Rot.from_matrix(R[k].cpu().numpy().T@Tc[:3,:3]).magnitude()), 'loss %.3f %.3f %.3f'%(tot[k],ls[k],lt[k]), 'dt',(tt[k].cpu().numpy()-Tc[:3,3]).round(3))

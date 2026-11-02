@@ -1,0 +1,15 @@
+import sys; sys.path.insert(0,'/work/scratch/s')
+from joint import *
+r=Renderer(); K,Kp,Twc=load_cam(); sf=SilFit(r,K)
+Tb=np.linalg.inv(Twc)@np.load('/work/inputs/reconstruction.npz')['T_world_mesh'].astype(np.float64)
+a,b=int(sys.argv[1]),int(sys.argv[2]); lam=float(sys.argv[3]); iters=int(sys.argv[4])
+fr=np.arange(a,b+1); M,V=load_masks(fr)
+dm=(fr%2==0)
+t0=time.time()
+T=joint_fit(sf,Tb[fr],fr,dm,iters=iters,lam=lam,M=M,V=V)
+print('time',time.time()-t0)
+te=~dm
+ib=iou_eval(sf,Tb[fr],M,V); io=iou_eval(sf,T,M,V)
+print(f'lam {lam}: heldout IoU base {ib[te].mean():.4f} fit {io[te].mean():.4f} | train base {ib[dm].mean():.4f} fit {io[dm].mean():.4f}')
+print('rot change deg mean', rot_err_deg(T[:,:3,:3],Tb[fr][:,:3,:3]).mean(), 'trans change cm', np.linalg.norm(T[:,:3,3]-Tb[fr][:,:3,3],axis=1).mean()*100)
+np.save(f'/work/scratch/move_{a}_{b}_{lam}.npy',T)

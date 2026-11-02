@@ -1,0 +1,151 @@
+{
+ "phases": {
+  "A": [
+   0,
+   196
+  ],
+  "M": [
+   197,
+   584
+  ],
+  "B": [
+   585,
+   699
+  ]
+ },
+ "symmetry": {
+  "A": {
+   "frac_base_better_dark": 0.7614213197969543,
+   "frac_base_better_sam": 0.41624365482233505,
+   "mean_dark_base": 0.1142510175704956,
+   "mean_dark_sym": 0.11673584580421448
+  },
+  "M": {
+   "frac_base_better_dark": 0.5309278350515464,
+   "frac_base_better_sam": 0.33762886597938147,
+   "mean_dark_base": 0.08500619977712631,
+   "mean_dark_sym": 0.08491909503936768
+  },
+  "B": {
+   "frac_base_better_dark": 0.7130434782608696,
+   "frac_base_better_sam": 1.0,
+   "mean_dark_base": 0.0886496901512146,
+   "mean_dark_sym": 0.09017810225486755
+  }
+ },
+ "flip": false,
+ "depth_cues": {
+  "shift_floor_cm": -2.2211311387135755,
+  "shift_size_constancy_cm": -4.684921790511652,
+  "shift_hand_contact_cm_reported_only": -3.910871684648229,
+  "disagreement_cm": 2.4637906517980763,
+  "applied": false,
+  "applied_median_shift_cm": 0.0,
+  "s_phase": {
+   "A": 1.0386732540025,
+   "M": 1.0477846675428082,
+   "B": 1.029859763283425
+  },
+  "h0_floor_m": -0.01772788918399648,
+  "s_floor_median": 1.0413756803679666
+ },
+ "table": {
+  "A": {
+   "frames": [
+    0,
+    196
+   ],
+   "iou_base": 0.8682417444106275,
+   "iou_ours": 0.8906981368278128,
+   "darkloss_base": 0.1444031149148941,
+   "darkloss_ours": 0.1174110695719719,
+   "floor_pen_base_cm": -4.35011277944616,
+   "floor_pen_ours_cm": -1.7727889183996481,
+   "accel_base_cm": 2.5175912600867667,
+   "accel_ours_cm": 0.0009550348674951557,
+   "rot_jerk_base_deg": 0.1360694941079795,
+   "rot_jerk_ours_deg": 0.0015833179753085042,
+   "dz_mean_cm": -0.44202618228399976,
+   "dz_median_cm": 0.0,
+   "rot_change_vs_base_mean_deg": 1.2698521038720678,
+   "pos_change_vs_base_mean_cm": 3.325879990525156,
+   "spread_base": {
+    "z_std_cm": 3.279245215692543,
+    "rot_dev_deg": 0.772170498425423
+   },
+   "spread_perframe_fit": {
+    "z_std_cm": 0.4628094081065291,
+    "rot_dev_deg": 0.3685255934697505
+   }
+  },
+  "M": {
+   "frames": [
+    197,
+    584
+   ],
+   "iou_base": 0.8541584288303313,
+   "iou_ours": 0.8834334599050175,
+   "darkloss_base": 0.12103450298309326,
+   "darkloss_ours": 0.09814809262752533,
+   "floor_pen_base_cm": -6.903656926051756,
+   "floor_pen_ours_cm": -4.142429161191621,
+   "accel_base_cm": 4.226181258821575,
+   "accel_ours_cm": 0.11795377299201969,
+   "rot_jerk_base_deg": 0.29315802612409714,
+   "rot_jerk_ours_deg": 0.032670503713463916,
+   "dz_mean_cm": -0.852212891735497,
+   "dz_median_cm": -1.159438037105276,
+   "rot_change_vs_base_mean_deg": 1.5001228397221977,
+   "pos_change_vs_base_mean_cm": 6.600615036263184
+  },
+  "B": {
+   "frames": [
+    585,
+    699
+   ],
+   "iou_base": 0.894520906181307,
+   "iou_ours": 0.90117362011533,
+   "darkloss_base": 0.08988869190216064,
+   "darkloss_ours": 0.08754058182239532,
+   "floor_pen_base_cm": -3.8858900924079176,
+   "floor_pen_ours_cm": -1.2816100080234705,
+   "accel_base_cm": 2.0861708994133292,
+   "accel_ours_cm": 0.023288551174024848,
+   "rot_jerk_base_deg": 0.10638717658772773,
+   "rot_jerk_ours_deg": 0.002084857628971157,
+   "dz_mean_cm": -0.47846122296542387,
+   "dz_median_cm": -4.440892098500626e-14,
+   "rot_change_vs_base_mean_deg": 0.9226903273841762,
+   "pos_change_vs_base_mean_cm": 1.9545676833430714,
+   "spread_base": {
+    "z_std_cm": 2.0866531626749443,
+    "rot_dev_deg": 0.5842517761675506
+   },
+   "spread_perframe_fit": {
+    "z_std_cm": 1.4336507644735108,
+    "rot_dev_deg": 0.30646504019557885
+   }
+  },
+  "all": {
+   "frames": [
+    0,
+    699
+   ],
+   "iou_base": 0.8647528546370178,
+   "iou_ours": 0.8883924024449841,
+   "darkloss_base": 0.12249428778886795,
+   "darkloss_ours": 0.10182658582925797,
+   "floor_pen_base_cm": -5.595103623996769,
+   "floor_pen_ours_cm": -3.810513467456368,
+   "accel_base_cm": 3.3968906847176172,
+   "accel_ours_cm": 0.06963917706127726,
+   "rot_jerk_base_deg": 0.21854308468812983,
+   "rot_jerk_ours_deg": 0.018945787297546104,
+   "dz_mean_cm": -0.6753725722062067,
+   "dz_median_cm": -0.0694390199959205,
+   "rot_change_vs_base_mean_deg": 1.3404541627488435,
+   "pos_change_vs_base_mean_cm": 4.915731822554321
+  }
+ },
+ "runtime_s": 124.51397609710693
+}
