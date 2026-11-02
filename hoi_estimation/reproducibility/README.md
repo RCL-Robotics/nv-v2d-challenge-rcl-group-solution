@@ -43,7 +43,7 @@ directory, one line per file).
 | `agent_runs/T1_ds_ep<3d>/inputs/` | the 30 agent input folders | 2.3 GB |
 | `agent_runs/{CL2,CL2b,CL2c}_ep<3d>/` | the 30 released agent runs: `AGENT_TASK.md`, `outputs/` (`solve.py`, `object_poses_world.npz`, report), `logs/run_manifest.txt` | 14 MB |
 | `support/` | support-fit intermediates (`ep<3d>/` background, occupancy, detections, masks, `support.json`; `vis/`; `contact_report.json`) | 95 MB |
-| `release/{tier3_s1_20261020, tier3_opus_20261021, tier3_supports_20261024}` | the releases the later steps build on | 1 GB |
+| `release/{tier3_s1_20261020, tier3_opus_20261021, tier3_supports_20261024, tier3_frame0_supports_20261024}` | the releases the later steps build on, and the final combined release (for comparison) | 1 GB |
 
 **Access for the organisers:** the NAS and the training server are lab-internal. The files above (about 400 GB in
 total) are **available on request** from Han Zhou (contact person for this part of the submission), who keeps both
@@ -174,33 +174,55 @@ The scripts are left as they ran, so that they rebuild the released files exactl
 
 ## 6. Re-run check (2026-11-02)
 
-`check_steps.sh` re-runs single steps from a clean checkout (`git archive` of the commit named in its output), with
-`V2D_ROOT` pointing to a root that holds **only the files listed in section 0** (symlinks to the NAS originals, which
-were bound read-only, so no released file could be written). Machine: the original workstation (RTX 6000 Ada,
-GPU 0), CARI4D image as released. Each step reads the released upstream files and writes under a new name.
+`check_steps.sh` re-runs single steps from a clean checkout (`git archive fe36ba4 hoi_estimation`; the code is that of
+81a3f6b), with `V2D_ROOT` pointing to a root that holds **only the files listed in section 0** (symlinks to the NAS
+originals, which were bound read-only, so no released file could be written). Each step reads the released upstream
+files and writes under a new name; the full log is `$V2D_ROOT/repro_out/check_results.txt`.
+
+**GPU steps** ran on the original workstation (RTX 6000 Ada, GPU 0) with the released CARI4D image: the training
+server's GPUs are Blackwell (sm_120), which the image does not support (section 0), so no server GPU was used.
+**CPU steps** ran there; frame-0, build_release_opus and build_release_combined were also re-run on the training
+server, in a chroot into the unpacked `v2d_cari4d.sif` (the server has no apptainer), against the server copy of
+the data.
 
 | step | episodes | result |
 |---|---|---|
 | P1_temporal (CPU) | 2, 25 | **byte-identical** bundles |
-| FF2_feet_ref (GPU) | 3 (M1), 25 (P1) | float-level: `pose_abs` max \|Δ\| 4.8e-7, `h0` Δ ≤ 1.2e-7 m |
-| JC2s1_shared_f820_pp (GPU) | 0 (CIAI baseline), 25 | float-level: `pose_abs` max \|Δ\| 7.2e-7; camera centre Δ ≤ 1.9e-6 m, K Δ ≤ 2e-8 |
+| FF2_feet_ref (GPU) | 3 (M1), 25 (P1) | float-level: `pose_abs` max \|Δ\| 2.4e-7, `feet_floor.json` `h0` Δ ≤ 1.7e-9 m |
+| JC2s1_shared_f820_pp (GPU) | 0 (CIAI baseline), 25 | float-level: `pose_abs` max \|Δ\| 1.2e-6; camera centre Δ ≤ 2e-6 m, rotation ≤ 4e-5°, K Δ ≤ 4e-8 |
 | DB_JC2s1_shared_f820_pp (CPU, host python) | 0, 25 | **byte-identical** bundles and `depth_blend.json` entries |
-| build_release (GPU) | 0, 25 | `poses.npy`, `object_pose_xyz_wxyz.npy`, `camera.json`, `ground_plane.json`, `output_aligned.glb` **byte-identical**; the human (`soma_params.npz`, GPU pose inversion) differs: `transl` ≤ 6e-5 m, joint angles mean 0.0017 rad (max 0.1 rad), fit error 0.2860 vs 0.2860 cm |
+| build_release (GPU) | 0, 25 | 5 of 7 files per sequence **byte-identical** (`poses.npy`, `object_pose_xyz_wxyz.npy`, `camera.json`, `ground_plane.json`, `output_aligned.glb`); the human (`soma_params.npz`, GPU pose inversion, and the fit error in `episode.json`) differs: `transl` ≤ 8.3e-5 m, joint angles mean 0.0016 rad (max 0.10 rad) |
 | export_inputs (GPU) | 25 (masks from `cari4d_failed/`) | 7 of 9 files byte-identical; human vertices in `reconstruction.npz` / `frame0_reference_human.npz` ≤ 1.2e-6 m, object poses identical |
 | agent `solve.py` (GPU) | CL2_ep002 | `object_poses_world.npz` **byte-identical** |
-| frame-0 (CPU) | all 30 | **30/30 byte-identical** |
-| build_release_opus (CPU, host python) | all 30 | 331/332 files byte-identical; the other is the hand-written `README.md` (identical after copying `release_files/`) |
-| build_release_combined (CPU, host python) | all 30 | 391/392 files byte-identical; likewise `README.md` |
-| support fit (GPU) | 2, 28 (`fit_20261023T2028Z.py`), 1 (`fit.py`) | `T_world_mesh` **bit-identical** (max \|Δ\| = 0), same IoU |
-| support package (CPU) | all 14 | see `check_steps.sh supportpkg` output in the commit message |
+| frame-0 (CPU) | all 30 | **30/30 byte-identical** (workstation; server chroot, image python: 30/30) |
+| build_release_opus (CPU) | all 30 | **332/332 byte-identical**, host python and image python (server) alike; the hand-written `README.md` is copied from `release_files/` |
+| build_release_combined (CPU) | all 30 | **392/392 byte-identical**, host python and image python (server) alike; `README.md` likewise |
+| support fit (GPU) | 2, 28 (`fit_20261023T2028Z.py`), 1 (`fit.py`) | `T_world_mesh` **bit-identical** (max \|Δ\| = 0), same IoU; `support.json` differs only in its informational `mesh` path |
+| support package: `contact.py --snap` + `package.py` (CPU, image) | all 14 | 60/74 files byte-identical: meshes, `support_mesh.glb`, `support_world.obj`, overlays, `object_poses_world.npz` and `T_world_mesh`. **Not reproducible:** the contact numbers (`contact_report.json`, `index.json` `gap_cm`, `support.json` `T_world_mesh_contact` / `contact_shift_m`): see below |
 
-Summary: every CPU step is byte-identical. The GPU steps that optimise the object or the support (solve.py, support
-fit) are bit-identical on the same GPU model; the GPU SOMA/MHR decoding of the human gives float-level differences,
-which reach the object only at the 1e-7 level (FF2, JC2s1) and leave the released object poses unchanged
-(build_release).
+**Why the contact numbers change:** `contact.py` samples 400 points on the object mesh with `obj.sample(400)` after
+`np.random.seed(0)`. With the image's trimesh 5.1.1 this sampling no longer uses numpy's global generator, so every
+run draws different points (two runs on the same input: ep2 gap −0.050 vs +0.060 cm). The released values come from
+one such draw and cannot be regenerated exactly. In this re-run the median rest gaps differ from the release by
+≤ 0.26 cm, `contact_shift_m` by ≤ 0.4 mm (ep2) and the GT-free snapped trajectories
+(`support/ep*/object_poses_world_snapped.npz`, not part of any release) by ≤ 1.05 cm (ep11). For ep11, the
+leaning distance and the number of rest frames with support below change from run to run. These fields are
+diagnostics: the released object trajectory (`object_poses_world.npz`) is the unsnapped one and is unaffected. With
+the host trimesh 4.11.1 the sampling is deterministic, but it gives a third set of points. The code is left as it was
+when the release was made.
+
+Server data copy: every file listed in section 0 was copied to the server (60978 files and 10 symlinks;
+`MANIFEST.sha256` was computed on the NAS and is placed next to the copy for `sha256sum -c`).
+
+Summary: every CPU step except the contact sampling is byte-identical (and the three re-run on the server are too). The GPU
+steps that optimise the object or the support (solve.py, support fit) are bit-identical on the same GPU model; the GPU
+SOMA/MHR decoding of the human gives float-level differences, which reach the object only at the 1e-6 level (FF2,
+JC2s1) and leave the released object poses unchanged (build_release).
 
 ## What is still not bit-reproducible
 - GPU stages (CARI4D, FoundationPose, GroundingDINO prompts, SAM2) are not guaranteed to be bit-identical on re-run;
   the SOMA/MHR decode in FF2, JC2s1, build_release and export_inputs differs at float level (section 6).
+- The contact diagnostics of the support release (`contact_report.json`, `gap_cm`, `T_world_mesh_contact`) use
+  unseeded surface sampling (section 6).
 - Episode 0's baseline ran on the CIAI cluster with an earlier `run_episode.sh`; episodes 2 5 7 11 13 19 23 28 took
   the `--postopt_batch_size 384` retry branch (details in `s1_runbook.md`).
