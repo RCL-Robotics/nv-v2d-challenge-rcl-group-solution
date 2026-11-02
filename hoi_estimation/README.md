@@ -13,6 +13,8 @@ This directory contains the full workflow for reconstructing human-object intera
 | Diagnostics | `diagnostics/` | Diagnostic-only scripts. All GT use is confined to this directory, e.g. the oracle-extrinsics upper bound `oracle_f0.py` and the GT camera fit and rendering `gt_camera_fit.py` / `gtcam_vis.py`. None of these scripts feed into any pipeline that produces results. |
 | Agent records | `agent_records/` | All 112 agent runs; see `agent_records/INDEX.md`. Each run includes the task prompt, a readable transcript `transcript.md`, the raw event stream `events.jsonl.gz`, the run manifest, and the agent's report and solver script. |
 
+**Reproducibility:** `reproducibility/README.md` gives the exact commands and parameters of every step, the export of the frame-0 reference data, the `reconstruction/modules` revision inside the CARI4D image, and the locations and checksums of the weights and images.
+
 ## Results
 
 Metric: official ADD-AUC (1–9 cm), averaged over 30 episodes. GT is used for evaluation only.
