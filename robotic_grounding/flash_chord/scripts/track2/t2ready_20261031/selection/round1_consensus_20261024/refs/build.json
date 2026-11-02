@@ -1,0 +1,3305 @@
+{
+ "built_at": "2026-10-26 18:18:46",
+ "script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "prereg_sha256": "3eee7268d53d1c3669614c63b69a54fa2462cf624ed88c3f7e215f5cb9f51ee9",
+ "pins_sha256": "9d1493797205e8c60255c50658c536714a3702fe8751c724f37ed1444a040ece",
+ "recipe": "PREREG 2: tracks R,F,C(,G) on the released Tier-2 visible-frame grid via the kit's input_frame_reference; de-duplicated by numpy.array_equal in order R,F,C,G; quaternions normalised (op._normalise_quaternions); position = numpy.median; rotation = top eigenvector of sum q q^T (numpy.linalg.eigh, float64), sign q*.q_R >= 0 (w >= 0 on 0); nothing else",
+ "tracks": {
+  "R": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise",
+  "F": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+  "C": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca",
+  "G": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2"
+ },
+ "variants": {
+  "A": {
+   "tracks": [
+    "R",
+    "F",
+    "C"
+   ],
+   "episodes": {
+    "00": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000000.parquet",
+      "frames": 778,
+      "first": 0,
+      "last": 777,
+      "object_names": [
+       "tall_bar_stool"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000000.parquet",
+       "sha256": "29fada5a3bb751a6a84f92bd9647a4f1a608f94fffd9c01fd4dbbf4e97f958eb"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000000.npz",
+       "sha256": "e7aa72585b11a6183e3c85ef5c53a660532bb494bae2dfade36efaef2f1318fa"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000000.npz",
+       "sha256": "ead9cb307b1816a9b0ba14a77fa60f92a4451669bd94d3f4f425c175aaaae1d0"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000000.npz",
+      "sha256": "b3d87d20a85c61960448f9a0e53609832805c5c37dfa5e4f5d68f3cc7f1d454d"
+     },
+     "min_eigen_gap": 2.9243264869086243,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.0266949516844348,
+       "max_angle_rad": 0.4810218592884931
+      },
+      "R-C": {
+       "max_pos_m": 0.02529781899017346,
+       "max_angle_rad": 0.47798990437905675
+      },
+      "F-C": {
+       "max_pos_m": 0.021195713567732293,
+       "max_angle_rad": 0.3976173793123009
+      }
+     }
+    },
+    "01": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000001.parquet",
+      "frames": 747,
+      "first": 0,
+      "last": 746,
+      "object_names": [
+       "vacuum"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000001.parquet",
+       "sha256": "a035d865bf16bc4c882354ab15528eb3b18abb5a373ec6ae757b94e3ba22efb3"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000001.npz",
+       "sha256": "53792e510d0f7cc2e4cf60cc1fa12c2bc2f6ddb458f212b0e8c132cd163b8547"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000001.npz",
+       "sha256": "53792e510d0f7cc2e4cf60cc1fa12c2bc2f6ddb458f212b0e8c132cd163b8547"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000001.npz",
+      "sha256": "84556b82afbe6c2c0b4c7eb9c5fe05d9dd1bda2992c32dbb5c91c58bfb2ccb8e"
+     },
+     "min_eigen_gap": 1.9730290419866319,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03352120720566339,
+       "max_angle_rad": 0.3288269839245658
+      }
+     }
+    },
+    "02": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000002.parquet",
+      "frames": 980,
+      "first": 0,
+      "last": 979,
+      "object_names": [
+       "blue_easter_basket"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000002.parquet",
+       "sha256": "0332c17de1bf4a420eae52ab530bb980c39b2b4cb2193f1554de48a18c3bdb8c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000002.npz",
+       "sha256": "eb4f96c8fe9f9709a748e6ba702c26825333fb0d420c614868b85b55f64c8b1c"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000002.npz",
+       "sha256": "eb4f96c8fe9f9709a748e6ba702c26825333fb0d420c614868b85b55f64c8b1c"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000002.npz",
+      "sha256": "62ceca593a6093386821d245205190c98eb0fad6b842dc0e4f8102338b176069"
+     },
+     "min_eigen_gap": 1.9562817615792583,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017388676306686147,
+       "max_angle_rad": 0.41894365785727694
+      }
+     }
+    },
+    "03": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000003.parquet",
+      "frames": 781,
+      "first": 0,
+      "last": 780,
+      "object_names": [
+       "contigo_coffee_mug"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000003.parquet",
+       "sha256": "054b3324ded8cdb56437c162c81f48bbbd3ad1bd0e0ec6f0b037cb931e8ee493"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000003.npz",
+       "sha256": "3ed2e3fc2c297d47b8dacbe275b5d1cacd806d8f401348b226d530c0461fb30b"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000003.npz",
+       "sha256": "3ed2e3fc2c297d47b8dacbe275b5d1cacd806d8f401348b226d530c0461fb30b"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000003.npz",
+      "sha256": "e4f6d17910772b62a7ea616272e5a6d1f9bc3a9da81222e453da59a85bc18b79"
+     },
+     "min_eigen_gap": 1.913226386918279,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017095952483537867,
+       "max_angle_rad": 0.5912983927047059
+      }
+     }
+    },
+    "04": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000004.parquet",
+      "frames": 803,
+      "first": 0,
+      "last": 802,
+      "object_names": [
+       "baseball_bat"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000004.parquet",
+       "sha256": "2fc837711233335fce6d82eadaf35b5fc205bb2d5992b4893736ce5a3b9ca4d7"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000004.npz",
+       "sha256": "17c28deadc53eaea627f6764e1932876876ca6ae05de4c4e98b0daac4f334a44"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000004.npz",
+       "sha256": "17c28deadc53eaea627f6764e1932876876ca6ae05de4c4e98b0daac4f334a44"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000004.npz",
+      "sha256": "27d56f6d5edb2e7fb59cf74e5d8c1e3c6f86d0e461441f099880278b51cd52ec"
+     },
+     "min_eigen_gap": 1.9546778461052776,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.014363326877819155,
+       "max_angle_rad": 0.4265881887473624
+      }
+     }
+    },
+    "05": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000005.parquet",
+      "frames": 1003,
+      "first": 0,
+      "last": 1002,
+      "object_names": [
+       "big_black_box"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000005.parquet",
+       "sha256": "90befee65496938afc276e21ea02e1e661debed041eea706c2df8670167a4184"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000005.npz",
+       "sha256": "5f4952b6e9cb4c76a4293c864b11d8af8bee3fe4d9b1631043f836b96660a204"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000005.npz",
+       "sha256": "98c7d4fed41451146810aac996854340c7bd19a4d43d9895484da4b0dcbf2a15"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000005.npz",
+      "sha256": "2a949f6e20b3b69e4eb122760b9ca8ac1f64b395cd4b57ba5ae8c9887c82c8c6"
+     },
+     "min_eigen_gap": 2.914850700188232,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.022442491877315392,
+       "max_angle_rad": 0.5072397940006308
+      },
+      "R-C": {
+       "max_pos_m": 0.022442491877315392,
+       "max_angle_rad": 0.5072397940006308
+      },
+      "F-C": {
+       "max_pos_m": 0.01091456876622438,
+       "max_angle_rad": 0.43617144060385604
+      }
+     }
+    },
+    "06": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000006.parquet",
+      "frames": 546,
+      "first": 0,
+      "last": 545,
+      "object_names": [
+       "monitor"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000006.parquet",
+       "sha256": "97d90f360362d1c7a75d7a14f231109045ea74fef6a27a77b95f8ec2e5a3e77d"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000006.npz",
+       "sha256": "f5b0ad71a211f7b85c738e986db31605ca6606f3dfe00098670efda2dce3940e"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000006.npz",
+       "sha256": "f5b0ad71a211f7b85c738e986db31605ca6606f3dfe00098670efda2dce3940e"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000006.npz",
+      "sha256": "b626b6907ccc4b190548caf64dd59339b7e53a937f5664f9be721d2ae5cfcebd"
+     },
+     "min_eigen_gap": 1.9425336383108838,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.033491740922640185,
+       "max_angle_rad": 0.48059832936289104
+      }
+     }
+    },
+    "07": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000007.parquet",
+      "frames": 896,
+      "first": 0,
+      "last": 895,
+      "object_names": [
+       "iron"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000007.parquet",
+       "sha256": "a5e3dfe5b733523d3deaaaea84d17831fababc7a0765e93e9d2301c64f1fcd4c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000007.npz",
+       "sha256": "42798caa9b564a2c5f447184824f9ba1ae8db1102726f2f1fc43c4d9c6ce66e4"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000007.npz",
+       "sha256": "42798caa9b564a2c5f447184824f9ba1ae8db1102726f2f1fc43c4d9c6ce66e4"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000007.npz",
+      "sha256": "7c429edeab66038a5134027bbf1ca16ae313fa0eabfe7882b50a30869d6ee552"
+     },
+     "min_eigen_gap": 1.9102831589105702,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.018382637579841283,
+       "max_angle_rad": 0.6013176922231027
+      }
+     }
+    },
+    "08": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000008.parquet",
+      "frames": 708,
+      "first": 0,
+      "last": 707,
+      "object_names": [
+       "skinny_wood_chair"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000008.parquet",
+       "sha256": "19427fff3fc9c189693d0142d3d8c4e4781bc9db674b61da0faf21872733a76f"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000008.npz",
+       "sha256": "9624dee44b2c297b2a637e16acac3ac917672e75d051b22341917e1aa1d3d654"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000008.npz",
+       "sha256": "9624dee44b2c297b2a637e16acac3ac917672e75d051b22341917e1aa1d3d654"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000008.npz",
+      "sha256": "5f1b34332fe7abb694349f52667828318e1a5190092e7b7565c099f37b76cff6"
+     },
+     "min_eigen_gap": 1.9260689432961688,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.024565972604009122,
+       "max_angle_rad": 0.5454945796544157
+      }
+     }
+    },
+    "09": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000009.parquet",
+      "frames": 870,
+      "first": 0,
+      "last": 869,
+      "object_names": [
+       "big_red_bowl"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000009.parquet",
+       "sha256": "9eabaedb2e0b6e35534f37313dec566d4c243920f400878db01f8d1b927f65c6"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000009.npz",
+       "sha256": "6024cfc983d3d6dd58ef92cd1ffeb044a0366f4b51b074cd4ae0d35771230a72"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000009.npz",
+       "sha256": "6024cfc983d3d6dd58ef92cd1ffeb044a0366f4b51b074cd4ae0d35771230a72"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000009.npz",
+      "sha256": "c9e9d940efbea16dd53edd652d8f0c34f0ca962c31ab726c60441e9a81b4ce15"
+     },
+     "min_eigen_gap": 1.9581346779245827,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01289135824411852,
+       "max_angle_rad": 0.4099375643904154
+      }
+     }
+    },
+    "10": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000010.parquet",
+      "frames": 794,
+      "first": 0,
+      "last": 793,
+      "object_names": [
+       "white_desk"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000010.parquet",
+       "sha256": "af68274128fae241473a69ee6d63b0507a96140f55973332b143c273aa270d9e"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000010.npz",
+       "sha256": "1de2d4f6a2a53f618338110266ac64bf6ce9c1eb9c83a6045b4907af46cf0cd8"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000010.npz",
+       "sha256": "1de2d4f6a2a53f618338110266ac64bf6ce9c1eb9c83a6045b4907af46cf0cd8"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000010.npz",
+      "sha256": "cc6bcc3efff3457070fe3d7f7121c351e933024716ac23b3d4a3f47660c893ab"
+     },
+     "min_eigen_gap": 1.9677375629043143,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02386012347138068,
+       "max_angle_rad": 0.35971961803148617
+      }
+     }
+    },
+    "11": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000011.parquet",
+      "frames": 900,
+      "first": 0,
+      "last": 899,
+      "object_names": [
+       "light_blue_book"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000011.parquet",
+       "sha256": "cae0ff1a4322807d30ba865077b26e67d8225f3b3445314d3543bffbb3eaef9a"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000011.npz",
+       "sha256": "77be0256dc1fae2710ffd00f3c12113bd91f5855506c0026a3b743e447236dba"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000011.npz",
+       "sha256": "77be0256dc1fae2710ffd00f3c12113bd91f5855506c0026a3b743e447236dba"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000011.npz",
+      "sha256": "85977f00b1490857eb7a60b1419d7df5297e71f7a92d0a68be642950fcd87f91"
+     },
+     "min_eigen_gap": 1.9115333220246211,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.022941209406832,
+       "max_angle_rad": 0.597081830948038
+      }
+     }
+    },
+    "12": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000012.parquet",
+      "frames": 700,
+      "first": 0,
+      "last": 699,
+      "object_names": [
+       "black_platform"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000012.parquet",
+       "sha256": "98a6c165be908eec72b799c18c51b63392f24bc7e8b3d219fb2b894a78d48f22"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000012.npz",
+       "sha256": "7e99d3017ed93d45bd7ba4d889b5135e7bdf2d598204adc87cf792a0c7deec21"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000012.npz",
+       "sha256": "7e99d3017ed93d45bd7ba4d889b5135e7bdf2d598204adc87cf792a0c7deec21"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000012.npz",
+      "sha256": "5bfb766eff82a8d0b6a4fe0d3440ca75943c8a3d0c8df98d343ce1ec27c0acaf"
+     },
+     "min_eigen_gap": 1.9622903027150163,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03213171657567565,
+       "max_angle_rad": 0.3889925372801452
+      }
+     }
+    },
+    "13": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000013.parquet",
+      "frames": 922,
+      "first": 0,
+      "last": 921,
+      "object_names": [
+       "snack_box"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000013.parquet",
+       "sha256": "d068e9fbe043e8d53042034f049cd6ea02b7dba767ce1300dc06b80de690dacb"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000013.npz",
+       "sha256": "480683646be9f99203833a2423562f28b8d4921b8ad5703458242e389c444c7a"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000013.npz",
+       "sha256": "480683646be9f99203833a2423562f28b8d4921b8ad5703458242e389c444c7a"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000013.npz",
+      "sha256": "13905071ce0754db3f3afd4be341eb6b6a33bba51a35eb5562a615c74bc57396"
+     },
+     "min_eigen_gap": 1.9622580499391324,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.0272606683897876,
+       "max_angle_rad": 0.38915937931463607
+      }
+     }
+    },
+    "14": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000014.parquet",
+      "frames": 993,
+      "first": 0,
+      "last": 992,
+      "object_names": [
+       "round_table"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000014.parquet",
+       "sha256": "f21d47696632aaaf73484ad0eca21ba10e090bbebbb4bccff4fe8be6d7ae53c5"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000014.npz",
+       "sha256": "555ec0993df16cd531359947b9498f3f642c41f6ecff6d629e1c0a895204d58d"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000014.npz",
+       "sha256": "555ec0993df16cd531359947b9498f3f642c41f6ecff6d629e1c0a895204d58d"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000014.npz",
+      "sha256": "6b380139918470ca001ed3e4c6cc6039a817fe4e96a7dddfb1779a73704783e4"
+     },
+     "min_eigen_gap": 1.935435972728091,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02366251368678859,
+       "max_angle_rad": 0.5095661888196592
+      }
+     }
+    },
+    "15": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000015.parquet",
+      "frames": 715,
+      "first": 0,
+      "last": 714,
+      "object_names": [
+       "wet_floor_sign"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000015.parquet",
+       "sha256": "93f6de5d075f16e66620b60a319be8d754e005b4194ae6ce9d24874ea844b991"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000015.npz",
+       "sha256": "545336d0fa18c5bf8f10b5fffc6abf6825bbcd25d35d03b83856f4bc9397ee3c"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000015.npz",
+       "sha256": "8ba72e5bb16afd84aa0b6c2be690573697625f7fc82e1af933666cf0bfd74ebb"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000015.npz",
+      "sha256": "6ddccf63005817f9b37376d73cce4d13350f7d0e589458b9fb9f16d8cee2e92b"
+     },
+     "min_eigen_gap": 2.9426297327012327,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.023904118357919293,
+       "max_angle_rad": 0.4158644627163987
+      },
+      "R-C": {
+       "max_pos_m": 0.023904118357919293,
+       "max_angle_rad": 0.4158644627163987
+      },
+      "F-C": {
+       "max_pos_m": 0.01868528354607823,
+       "max_angle_rad": 0.2528418897244809
+      }
+     }
+    },
+    "16": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000016.parquet",
+      "frames": 477,
+      "first": 0,
+      "last": 476,
+      "object_names": [
+       "spray_bottle"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000016.parquet",
+       "sha256": "65abb31cd5d45efd36ebf0e647714a53c4eb1fb0ef6911db3a1c3454863cc03c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000016.npz",
+       "sha256": "d1abf1b5766c0beb1cbd1d3192f3f17654deb4160eaee99419a6aece8d4c6140"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000016.npz",
+       "sha256": "d1abf1b5766c0beb1cbd1d3192f3f17654deb4160eaee99419a6aece8d4c6140"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000016.npz",
+      "sha256": "3d1fd90931bb2bd2acdc764545845f0a72949c64c9949cc01b9c78c33cb01702"
+     },
+     "min_eigen_gap": 1.9763336788925394,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.024414342683021225,
+       "max_angle_rad": 0.30798145083716066
+      }
+     }
+    },
+    "17": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000017.parquet",
+      "frames": 440,
+      "first": 0,
+      "last": 439,
+      "object_names": [
+       "traffic_cone"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000017.parquet",
+       "sha256": "c1256d9e35e3e4c47b6107a533a297c57f3b9a5eb43ba976190b8a60c455bf18"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000017.npz",
+       "sha256": "799597b58a26b80d64adc3913f89a74bf30122c19d5e00f94a5027a5d56905d4"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000017.npz",
+       "sha256": "799597b58a26b80d64adc3913f89a74bf30122c19d5e00f94a5027a5d56905d4"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000017.npz",
+      "sha256": "8130c760c8fb466d6b2af412b94b91b49d09a947d2904185c8efb592e953f13a"
+     },
+     "min_eigen_gap": 1.912693397694997,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01640791240789994,
+       "max_angle_rad": 0.5931249635321441
+      }
+     }
+    },
+    "18": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000018.parquet",
+      "frames": 858,
+      "first": 0,
+      "last": 857,
+      "object_names": [
+       "blue_trash_can"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000018.parquet",
+       "sha256": "5258963a1c435a746db02326db162ac224813846337788fb8c12287a991de4ff"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000018.npz",
+       "sha256": "9edb64511d5d878bdb7f9c19814a88addd7505379716735336905fd128d50e94"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000018.npz",
+       "sha256": "9edb64511d5d878bdb7f9c19814a88addd7505379716735336905fd128d50e94"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000018.npz",
+      "sha256": "36364986eee8d721fa6ee24dffa785be44bd1653768fefb80bf568ae3a199f20"
+     },
+     "min_eigen_gap": 1.921445899900549,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03433011876594166,
+       "max_angle_rad": 0.5624012230376019
+      }
+     }
+    },
+    "19": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000019.parquet",
+      "frames": 886,
+      "first": 0,
+      "last": 885,
+      "object_names": [
+       "cane"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000019.parquet",
+       "sha256": "7aeed1498fbb7f01bcc87de62d055b50cf5328b04aa13993cc352f2e0ca0ab77"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000019.npz",
+       "sha256": "9b922064d2bd7e42260313f9a0c94fde2fe55fd4bc34c235bcedcdf092992dfc"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000019.npz",
+       "sha256": "f7866b117b50b2ee20aaadef61db1671e26a43fc2279e389c24cc8d21dc3e8ab"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000019.npz",
+      "sha256": "ced2dba8dfb748068b9d1d1d006abc743b6d396221e837e4714abfdf65204c34"
+     },
+     "min_eigen_gap": 2.9594113070614245,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01650249508077743,
+       "max_angle_rad": 0.349544454016047
+      },
+      "R-C": {
+       "max_pos_m": 0.01650249508077743,
+       "max_angle_rad": 0.349544454016047
+      },
+      "F-C": {
+       "max_pos_m": 0.00899839682807612,
+       "max_angle_rad": 0.22391943323351957
+      }
+     }
+    },
+    "20": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000020.parquet",
+      "frames": 553,
+      "first": 0,
+      "last": 552,
+      "object_names": [
+       "rice_cooker"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000020.parquet",
+       "sha256": "3969b41812f6289cedef50164838c31ad343522ce8059bb4bc4981c3ab3e8d4e"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000020.npz",
+       "sha256": "cdeebd95f5aa5064d1c817f6d9905fea71b67ed44b99414df67a30ae7d839f8b"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000020.npz",
+       "sha256": "cdeebd95f5aa5064d1c817f6d9905fea71b67ed44b99414df67a30ae7d839f8b"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000020.npz",
+      "sha256": "9df099c974cac756aeeaf97a816195fd68ca9ec2dc5c47e6b6a7e879bf7bf7ea"
+     },
+     "min_eigen_gap": 1.9473836015045751,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.031682510746028056,
+       "max_angle_rad": 0.4597770675342205
+      }
+     }
+    },
+    "21": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000021.parquet",
+      "frames": 678,
+      "first": 0,
+      "last": 677,
+      "object_names": [
+       "tall_bar_stool"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000021.parquet",
+       "sha256": "92da7ac948217c1bc5b067d6917da618291a3435215780bb7b3c6f60d8f6cce7"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000021.npz",
+       "sha256": "9bb13704e19db566b411b1f4d2f57e9ca92c7f02da1c01951d09cc5fb639ba79"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000021.npz",
+       "sha256": "9bb13704e19db566b411b1f4d2f57e9ca92c7f02da1c01951d09cc5fb639ba79"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000021.npz",
+      "sha256": "9bbd65c3afd7aea38f0b4aedd55ce5f1311725adcae3f5dcec3467db214e420f"
+     },
+     "min_eigen_gap": 1.957269263276072,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017225339876134022,
+       "max_angle_rad": 0.41416793356000176
+      }
+     }
+    },
+    "22": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000022.parquet",
+      "frames": 719,
+      "first": 0,
+      "last": 718,
+      "object_names": [
+       "step_ladder"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000022.parquet",
+       "sha256": "aaf8f8f1d1c47d5118790422680be2f39c27d344cb7ee7ccf73b04b39df6257d"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000022.npz",
+       "sha256": "bed8ddc961af59681c7280b76bb7953c2cd8640bcb5660ad47f2268bd5df3383"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000022.npz",
+       "sha256": "002f0c43ab86d18c64a6fe970a8b3c00aa4339a4ce2ff3995dbb6a314b1a661e"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000022.npz",
+      "sha256": "cfeab817d922f31dd94c451f1b9755115a9d701267cbed9594034155665c8231"
+     },
+     "min_eigen_gap": 2.9149944366238816,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03319445117265886,
+       "max_angle_rad": 0.5068083692930538
+      },
+      "R-C": {
+       "max_pos_m": 0.03319445117265886,
+       "max_angle_rad": 0.5068083692930538
+      },
+      "F-C": {
+       "max_pos_m": 0.015493955046779634,
+       "max_angle_rad": 0.24067381683153494
+      }
+     }
+    },
+    "23": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000023.parquet",
+      "frames": 946,
+      "first": 0,
+      "last": 945,
+      "object_names": [
+       "toy_stroller"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000023.parquet",
+       "sha256": "2d6de4969092b37ed33941a9e58123b1b236c0a5917da2898b02acc4bb652c0f"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000023.npz",
+       "sha256": "caa9515ec9bd445eacba18c76d11d347f81885317b1b73f7f26eaff4d4c35590"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000023.npz",
+       "sha256": "caa9515ec9bd445eacba18c76d11d347f81885317b1b73f7f26eaff4d4c35590"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000023.npz",
+      "sha256": "f687c9a93d65e0fc2627ba3dbe603c993f147724c0653d955b626f6f8561f0d6"
+     },
+     "min_eigen_gap": 1.9754463281659609,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02916061882306104,
+       "max_angle_rad": 0.3137137370083697
+      }
+     }
+    },
+    "24": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000024.parquet",
+      "frames": 748,
+      "first": 0,
+      "last": 747,
+      "object_names": [
+       "watering_can"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000024.parquet",
+       "sha256": "e66100251959f94efedb2c497565d18e96321cecc43bcb1c91e21c39485d2bcd"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000024.npz",
+       "sha256": "447b9b323ee75f739e22fcc2cd10365d567fcc2d08d20e6df30f46229abddf2f"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000024.npz",
+       "sha256": "447b9b323ee75f739e22fcc2cd10365d567fcc2d08d20e6df30f46229abddf2f"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000024.npz",
+      "sha256": "7f542a27e2d2bbd5271f33ee0b4ccabde8093415f60c7306291ef25dfbf7aabd"
+     },
+     "min_eigen_gap": 1.9187177656545644,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.028339642010667982,
+       "max_angle_rad": 0.5721497953409364
+      }
+     }
+    },
+    "25": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000025.parquet",
+      "frames": 859,
+      "first": 0,
+      "last": 858,
+      "object_names": [
+       "cyan_water_bottle"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000025.parquet",
+       "sha256": "e035b5a2c29016f58152569dbd047dfc42c432aedac352a6459ad1502f11c287"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000025.npz",
+       "sha256": "879af5af203398b52bf027931096c02d3bdb92a1e7e07c2fbf9f6fd1eaa45544"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000025.npz",
+       "sha256": "879af5af203398b52bf027931096c02d3bdb92a1e7e07c2fbf9f6fd1eaa45544"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000025.npz",
+      "sha256": "1b87917778e85cb1554b74702b00d4e005205851d2f1a932f84e14936f91a0ec"
+     },
+     "min_eigen_gap": 1.9735930907883499,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.014304482428362214,
+       "max_angle_rad": 0.32536272122502663
+      }
+     }
+    },
+    "26": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000026.parquet",
+      "frames": 669,
+      "first": 0,
+      "last": 668,
+      "object_names": [
+       "skateboard"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000026.parquet",
+       "sha256": "9fef382a9e92b4773c68b85c2525b6b13e3aa84be52631f63186fb799650c513"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000026.npz",
+       "sha256": "d50639a5589a8ea04a9d6d82101987a7f02c2f8cc559a415324010658b8601d2"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000026.npz",
+       "sha256": "b9dc98da249fed7cb771a87bd66dbdc84f4f42d4e1d7f78d07bfef809b51f6ff"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000026.npz",
+      "sha256": "bbf91422de5d5c4c4eec52dd2199b08075adb4bd1ac6fd2b157302d5a6452bac"
+     },
+     "min_eigen_gap": 2.910440039654065,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.021735459475709814,
+       "max_angle_rad": 0.5203095957615735
+      },
+      "R-C": {
+       "max_pos_m": 0.021468087215514194,
+       "max_angle_rad": 0.5203095957615735
+      },
+      "F-C": {
+       "max_pos_m": 0.012910081527181611,
+       "max_angle_rad": 0.4204196884690399
+      }
+     }
+    },
+    "27": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000027.parquet",
+      "frames": 565,
+      "first": 0,
+      "last": 564,
+      "object_names": [
+       "woven_basket"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000027.parquet",
+       "sha256": "46aa20d2de966cfa56b559c3d52ca52d859860d53930f4b51ff5ed83221b7d01"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000027.npz",
+       "sha256": "2a8e15870cbad615db6d377275bc128c7c576ca2c1c22da9f0f5089233f5f381"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000027.npz",
+       "sha256": "2a8e15870cbad615db6d377275bc128c7c576ca2c1c22da9f0f5089233f5f381"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000027.npz",
+      "sha256": "1fd2f5947dc5ac3c820fffd080b91552498d8de6adc0bfbe438828005078c1b4"
+     },
+     "min_eigen_gap": 1.91942281031051,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.021977245837212573,
+       "max_angle_rad": 0.5696459810535829
+      }
+     }
+    },
+    "28": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000028.parquet",
+      "frames": 988,
+      "first": 0,
+      "last": 987,
+      "object_names": [
+       "squeegee"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000028.parquet",
+       "sha256": "dc746db779d2fe837138bae403ffd2c1389326a0fec087b89640d8af6c8f2bfc"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000028.npz",
+       "sha256": "9cb87d47d28fb0a5c3149569949b949349a751a23c5d3d7b53698a3d26292240"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000028.npz",
+       "sha256": "e465670a5b0d7ce3001c92c374c2bfef318a9af23e0f1775a2823df4377694df"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000028.npz",
+      "sha256": "4ad53a6aef7835f5700172e8b7c84d9b5d6e1a05963ebf5c810db7382b6e8195"
+     },
+     "min_eigen_gap": 2.879708525412694,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.016984746914941277,
+       "max_angle_rad": 0.6038065552543207
+      },
+      "R-C": {
+       "max_pos_m": 0.016984746914941277,
+       "max_angle_rad": 0.6038065552543207
+      },
+      "F-C": {
+       "max_pos_m": 0.008917636076915508,
+       "max_angle_rad": 0.5055677303468754
+      }
+     }
+    },
+    "29": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000029.parquet",
+      "frames": 467,
+      "first": 0,
+      "last": 466,
+      "object_names": [
+       "rolling_luggage"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000029.parquet",
+       "sha256": "a6082952ff7925caf8fcfc9ddf52de0e35960b3d81797540e23e6a6c8ac126e6"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000029.npz",
+       "sha256": "528cc8535c2c20d1ee3f39df0a98a790ccd013625f42b6e214200d51334721cc"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000029.npz",
+       "sha256": "528cc8535c2c20d1ee3f39df0a98a790ccd013625f42b6e214200d51334721cc"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/A/episode_000029.npz",
+      "sha256": "521cd718677c0f746bc47cfca499d9ac86e90bb0d6e86c0709acfcaf1f654a7a"
+     },
+     "min_eigen_gap": 1.9222388413926783,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.029443660164802526,
+       "max_angle_rad": 0.5595367696324131
+      }
+     }
+    }
+   }
+  },
+  "B": {
+   "tracks": [
+    "R",
+    "F",
+    "C",
+    "G"
+   ],
+   "episodes": {
+    "00": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000000.parquet",
+      "frames": 778,
+      "first": 0,
+      "last": 777,
+      "object_names": [
+       "tall_bar_stool"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000000.parquet",
+       "sha256": "29fada5a3bb751a6a84f92bd9647a4f1a608f94fffd9c01fd4dbbf4e97f958eb"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000000.npz",
+       "sha256": "e7aa72585b11a6183e3c85ef5c53a660532bb494bae2dfade36efaef2f1318fa"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000000.npz",
+       "sha256": "ead9cb307b1816a9b0ba14a77fa60f92a4451669bd94d3f4f425c175aaaae1d0"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000000.npz",
+      "sha256": "b3d87d20a85c61960448f9a0e53609832805c5c37dfa5e4f5d68f3cc7f1d454d"
+     },
+     "min_eigen_gap": 2.9243264869086243,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.0266949516844348,
+       "max_angle_rad": 0.4810218592884931
+      },
+      "R-C": {
+       "max_pos_m": 0.02529781899017346,
+       "max_angle_rad": 0.47798990437905675
+      },
+      "F-C": {
+       "max_pos_m": 0.021195713567732293,
+       "max_angle_rad": 0.3976173793123009
+      }
+     }
+    },
+    "01": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000001.parquet",
+      "frames": 747,
+      "first": 0,
+      "last": 746,
+      "object_names": [
+       "vacuum"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "G"
+     ],
+     "n": 3,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000001.parquet",
+       "sha256": "a035d865bf16bc4c882354ab15528eb3b18abb5a373ec6ae757b94e3ba22efb3"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000001.npz",
+       "sha256": "53792e510d0f7cc2e4cf60cc1fa12c2bc2f6ddb458f212b0e8c132cd163b8547"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000001.npz",
+       "sha256": "53792e510d0f7cc2e4cf60cc1fa12c2bc2f6ddb458f212b0e8c132cd163b8547"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000001.npz",
+       "sha256": "463c6910c42ac7d4d1974c4b32f97f74b4b9d84e62e61f77a43fa2626d16d0a7"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000001.npz",
+      "sha256": "e47ed573e747261ba38a595273353eea5246f50ae47065270b9a8b38a040a5a1"
+     },
+     "min_eigen_gap": 2.927042050357828,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03352120720566339,
+       "max_angle_rad": 0.3288269839245658
+      },
+      "R-G": {
+       "max_pos_m": 0.03234546255598174,
+       "max_angle_rad": 0.5013971774476287
+      },
+      "F-G": {
+       "max_pos_m": 0.03094468342815761,
+       "max_angle_rad": 0.45532630682101116
+      }
+     }
+    },
+    "02": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000002.parquet",
+      "frames": 980,
+      "first": 0,
+      "last": 979,
+      "object_names": [
+       "blue_easter_basket"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000002.parquet",
+       "sha256": "0332c17de1bf4a420eae52ab530bb980c39b2b4cb2193f1554de48a18c3bdb8c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000002.npz",
+       "sha256": "eb4f96c8fe9f9709a748e6ba702c26825333fb0d420c614868b85b55f64c8b1c"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000002.npz",
+       "sha256": "eb4f96c8fe9f9709a748e6ba702c26825333fb0d420c614868b85b55f64c8b1c"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000002.npz",
+      "sha256": "62ceca593a6093386821d245205190c98eb0fad6b842dc0e4f8102338b176069"
+     },
+     "min_eigen_gap": 1.9562817615792583,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017388676306686147,
+       "max_angle_rad": 0.41894365785727694
+      }
+     }
+    },
+    "03": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000003.parquet",
+      "frames": 781,
+      "first": 0,
+      "last": 780,
+      "object_names": [
+       "contigo_coffee_mug"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000003.parquet",
+       "sha256": "054b3324ded8cdb56437c162c81f48bbbd3ad1bd0e0ec6f0b037cb931e8ee493"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000003.npz",
+       "sha256": "3ed2e3fc2c297d47b8dacbe275b5d1cacd806d8f401348b226d530c0461fb30b"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000003.npz",
+       "sha256": "3ed2e3fc2c297d47b8dacbe275b5d1cacd806d8f401348b226d530c0461fb30b"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000003.npz",
+      "sha256": "e4f6d17910772b62a7ea616272e5a6d1f9bc3a9da81222e453da59a85bc18b79"
+     },
+     "min_eigen_gap": 1.913226386918279,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017095952483537867,
+       "max_angle_rad": 0.5912983927047059
+      }
+     }
+    },
+    "04": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000004.parquet",
+      "frames": 803,
+      "first": 0,
+      "last": 802,
+      "object_names": [
+       "baseball_bat"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "G"
+     ],
+     "n": 3,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000004.parquet",
+       "sha256": "2fc837711233335fce6d82eadaf35b5fc205bb2d5992b4893736ce5a3b9ca4d7"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000004.npz",
+       "sha256": "17c28deadc53eaea627f6764e1932876876ca6ae05de4c4e98b0daac4f334a44"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000004.npz",
+       "sha256": "17c28deadc53eaea627f6764e1932876876ca6ae05de4c4e98b0daac4f334a44"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000004.npz",
+       "sha256": "9145827be3ba07deeba604de4074a699e1c3323e7ec6a3385bf279e9f464eaa0"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000004.npz",
+      "sha256": "ca5aba2812856b333178c785a8ab42565059b25902e3cacc946d8c3aabd8e59c"
+     },
+     "min_eigen_gap": 2.7082844752702577,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.014363326877819155,
+       "max_angle_rad": 0.4265881887473624
+      },
+      "R-G": {
+       "max_pos_m": 0.014518073937160841,
+       "max_angle_rad": 0.9505860680160839
+      },
+      "F-G": {
+       "max_pos_m": 0.010804919265692799,
+       "max_angle_rad": 1.0717994506381527
+      }
+     }
+    },
+    "05": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000005.parquet",
+      "frames": 1003,
+      "first": 0,
+      "last": 1002,
+      "object_names": [
+       "big_black_box"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000005.parquet",
+       "sha256": "90befee65496938afc276e21ea02e1e661debed041eea706c2df8670167a4184"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000005.npz",
+       "sha256": "5f4952b6e9cb4c76a4293c864b11d8af8bee3fe4d9b1631043f836b96660a204"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000005.npz",
+       "sha256": "98c7d4fed41451146810aac996854340c7bd19a4d43d9895484da4b0dcbf2a15"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000005.npz",
+      "sha256": "2a949f6e20b3b69e4eb122760b9ca8ac1f64b395cd4b57ba5ae8c9887c82c8c6"
+     },
+     "min_eigen_gap": 2.914850700188232,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.022442491877315392,
+       "max_angle_rad": 0.5072397940006308
+      },
+      "R-C": {
+       "max_pos_m": 0.022442491877315392,
+       "max_angle_rad": 0.5072397940006308
+      },
+      "F-C": {
+       "max_pos_m": 0.01091456876622438,
+       "max_angle_rad": 0.43617144060385604
+      }
+     }
+    },
+    "06": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000006.parquet",
+      "frames": 546,
+      "first": 0,
+      "last": 545,
+      "object_names": [
+       "monitor"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000006.parquet",
+       "sha256": "97d90f360362d1c7a75d7a14f231109045ea74fef6a27a77b95f8ec2e5a3e77d"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000006.npz",
+       "sha256": "f5b0ad71a211f7b85c738e986db31605ca6606f3dfe00098670efda2dce3940e"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000006.npz",
+       "sha256": "f5b0ad71a211f7b85c738e986db31605ca6606f3dfe00098670efda2dce3940e"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000006.npz",
+      "sha256": "b626b6907ccc4b190548caf64dd59339b7e53a937f5664f9be721d2ae5cfcebd"
+     },
+     "min_eigen_gap": 1.9425336383108838,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.033491740922640185,
+       "max_angle_rad": 0.48059832936289104
+      }
+     }
+    },
+    "07": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000007.parquet",
+      "frames": 896,
+      "first": 0,
+      "last": 895,
+      "object_names": [
+       "iron"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000007.parquet",
+       "sha256": "a5e3dfe5b733523d3deaaaea84d17831fababc7a0765e93e9d2301c64f1fcd4c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000007.npz",
+       "sha256": "42798caa9b564a2c5f447184824f9ba1ae8db1102726f2f1fc43c4d9c6ce66e4"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000007.npz",
+       "sha256": "42798caa9b564a2c5f447184824f9ba1ae8db1102726f2f1fc43c4d9c6ce66e4"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000007.npz",
+      "sha256": "7c429edeab66038a5134027bbf1ca16ae313fa0eabfe7882b50a30869d6ee552"
+     },
+     "min_eigen_gap": 1.9102831589105702,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.018382637579841283,
+       "max_angle_rad": 0.6013176922231027
+      }
+     }
+    },
+    "08": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000008.parquet",
+      "frames": 708,
+      "first": 0,
+      "last": 707,
+      "object_names": [
+       "skinny_wood_chair"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000008.parquet",
+       "sha256": "19427fff3fc9c189693d0142d3d8c4e4781bc9db674b61da0faf21872733a76f"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000008.npz",
+       "sha256": "9624dee44b2c297b2a637e16acac3ac917672e75d051b22341917e1aa1d3d654"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000008.npz",
+       "sha256": "9624dee44b2c297b2a637e16acac3ac917672e75d051b22341917e1aa1d3d654"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000008.npz",
+      "sha256": "5f1b34332fe7abb694349f52667828318e1a5190092e7b7565c099f37b76cff6"
+     },
+     "min_eigen_gap": 1.9260689432961688,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.024565972604009122,
+       "max_angle_rad": 0.5454945796544157
+      }
+     }
+    },
+    "09": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000009.parquet",
+      "frames": 870,
+      "first": 0,
+      "last": 869,
+      "object_names": [
+       "big_red_bowl"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "G"
+     ],
+     "n": 3,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000009.parquet",
+       "sha256": "9eabaedb2e0b6e35534f37313dec566d4c243920f400878db01f8d1b927f65c6"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000009.npz",
+       "sha256": "6024cfc983d3d6dd58ef92cd1ffeb044a0366f4b51b074cd4ae0d35771230a72"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000009.npz",
+       "sha256": "6024cfc983d3d6dd58ef92cd1ffeb044a0366f4b51b074cd4ae0d35771230a72"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000009.npz",
+       "sha256": "f21fde955b748144035d09de4c1b2fc4666f434dcd7ab4a4bf72dc01d3cfaba1"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000009.npz",
+      "sha256": "3bc1d136fadd9e51fc6572cc3ff4261eebce627f31a6ffe793e4eb4b14305ac4"
+     },
+     "min_eigen_gap": 2.871234543614659,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01289135824411852,
+       "max_angle_rad": 0.4099375643904154
+      },
+      "R-G": {
+       "max_pos_m": 0.05838048486465109,
+       "max_angle_rad": 0.5721182371545788
+      },
+      "F-G": {
+       "max_pos_m": 0.06133709906358851,
+       "max_angle_rad": 0.6881415354371038
+      }
+     }
+    },
+    "10": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000010.parquet",
+      "frames": 794,
+      "first": 0,
+      "last": 793,
+      "object_names": [
+       "white_desk"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000010.parquet",
+       "sha256": "af68274128fae241473a69ee6d63b0507a96140f55973332b143c273aa270d9e"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000010.npz",
+       "sha256": "1de2d4f6a2a53f618338110266ac64bf6ce9c1eb9c83a6045b4907af46cf0cd8"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000010.npz",
+       "sha256": "1de2d4f6a2a53f618338110266ac64bf6ce9c1eb9c83a6045b4907af46cf0cd8"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000010.npz",
+      "sha256": "cc6bcc3efff3457070fe3d7f7121c351e933024716ac23b3d4a3f47660c893ab"
+     },
+     "min_eigen_gap": 1.9677375629043143,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02386012347138068,
+       "max_angle_rad": 0.35971961803148617
+      }
+     }
+    },
+    "11": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000011.parquet",
+      "frames": 900,
+      "first": 0,
+      "last": 899,
+      "object_names": [
+       "light_blue_book"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000011.parquet",
+       "sha256": "cae0ff1a4322807d30ba865077b26e67d8225f3b3445314d3543bffbb3eaef9a"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000011.npz",
+       "sha256": "77be0256dc1fae2710ffd00f3c12113bd91f5855506c0026a3b743e447236dba"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000011.npz",
+       "sha256": "77be0256dc1fae2710ffd00f3c12113bd91f5855506c0026a3b743e447236dba"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000011.npz",
+      "sha256": "85977f00b1490857eb7a60b1419d7df5297e71f7a92d0a68be642950fcd87f91"
+     },
+     "min_eigen_gap": 1.9115333220246211,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.022941209406832,
+       "max_angle_rad": 0.597081830948038
+      }
+     }
+    },
+    "12": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000012.parquet",
+      "frames": 700,
+      "first": 0,
+      "last": 699,
+      "object_names": [
+       "black_platform"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000012.parquet",
+       "sha256": "98a6c165be908eec72b799c18c51b63392f24bc7e8b3d219fb2b894a78d48f22"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000012.npz",
+       "sha256": "7e99d3017ed93d45bd7ba4d889b5135e7bdf2d598204adc87cf792a0c7deec21"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000012.npz",
+       "sha256": "7e99d3017ed93d45bd7ba4d889b5135e7bdf2d598204adc87cf792a0c7deec21"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000012.npz",
+      "sha256": "5bfb766eff82a8d0b6a4fe0d3440ca75943c8a3d0c8df98d343ce1ec27c0acaf"
+     },
+     "min_eigen_gap": 1.9622903027150163,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03213171657567565,
+       "max_angle_rad": 0.3889925372801452
+      }
+     }
+    },
+    "13": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000013.parquet",
+      "frames": 922,
+      "first": 0,
+      "last": 921,
+      "object_names": [
+       "snack_box"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000013.parquet",
+       "sha256": "d068e9fbe043e8d53042034f049cd6ea02b7dba767ce1300dc06b80de690dacb"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000013.npz",
+       "sha256": "480683646be9f99203833a2423562f28b8d4921b8ad5703458242e389c444c7a"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000013.npz",
+       "sha256": "480683646be9f99203833a2423562f28b8d4921b8ad5703458242e389c444c7a"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000013.npz",
+      "sha256": "13905071ce0754db3f3afd4be341eb6b6a33bba51a35eb5562a615c74bc57396"
+     },
+     "min_eigen_gap": 1.9622580499391324,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.0272606683897876,
+       "max_angle_rad": 0.38915937931463607
+      }
+     }
+    },
+    "14": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000014.parquet",
+      "frames": 993,
+      "first": 0,
+      "last": 992,
+      "object_names": [
+       "round_table"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000014.parquet",
+       "sha256": "f21d47696632aaaf73484ad0eca21ba10e090bbebbb4bccff4fe8be6d7ae53c5"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000014.npz",
+       "sha256": "555ec0993df16cd531359947b9498f3f642c41f6ecff6d629e1c0a895204d58d"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000014.npz",
+       "sha256": "555ec0993df16cd531359947b9498f3f642c41f6ecff6d629e1c0a895204d58d"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000014.npz",
+      "sha256": "6b380139918470ca001ed3e4c6cc6039a817fe4e96a7dddfb1779a73704783e4"
+     },
+     "min_eigen_gap": 1.935435972728091,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02366251368678859,
+       "max_angle_rad": 0.5095661888196592
+      }
+     }
+    },
+    "15": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000015.parquet",
+      "frames": 715,
+      "first": 0,
+      "last": 714,
+      "object_names": [
+       "wet_floor_sign"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000015.parquet",
+       "sha256": "93f6de5d075f16e66620b60a319be8d754e005b4194ae6ce9d24874ea844b991"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000015.npz",
+       "sha256": "545336d0fa18c5bf8f10b5fffc6abf6825bbcd25d35d03b83856f4bc9397ee3c"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000015.npz",
+       "sha256": "8ba72e5bb16afd84aa0b6c2be690573697625f7fc82e1af933666cf0bfd74ebb"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000015.npz",
+      "sha256": "6ddccf63005817f9b37376d73cce4d13350f7d0e589458b9fb9f16d8cee2e92b"
+     },
+     "min_eigen_gap": 2.9426297327012327,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.023904118357919293,
+       "max_angle_rad": 0.4158644627163987
+      },
+      "R-C": {
+       "max_pos_m": 0.023904118357919293,
+       "max_angle_rad": 0.4158644627163987
+      },
+      "F-C": {
+       "max_pos_m": 0.01868528354607823,
+       "max_angle_rad": 0.2528418897244809
+      }
+     }
+    },
+    "16": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000016.parquet",
+      "frames": 477,
+      "first": 0,
+      "last": 476,
+      "object_names": [
+       "spray_bottle"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000016.parquet",
+       "sha256": "65abb31cd5d45efd36ebf0e647714a53c4eb1fb0ef6911db3a1c3454863cc03c"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000016.npz",
+       "sha256": "d1abf1b5766c0beb1cbd1d3192f3f17654deb4160eaee99419a6aece8d4c6140"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000016.npz",
+       "sha256": "d1abf1b5766c0beb1cbd1d3192f3f17654deb4160eaee99419a6aece8d4c6140"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000016.npz",
+      "sha256": "3d1fd90931bb2bd2acdc764545845f0a72949c64c9949cc01b9c78c33cb01702"
+     },
+     "min_eigen_gap": 1.9763336788925394,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.024414342683021225,
+       "max_angle_rad": 0.30798145083716066
+      }
+     }
+    },
+    "17": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000017.parquet",
+      "frames": 440,
+      "first": 0,
+      "last": 439,
+      "object_names": [
+       "traffic_cone"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000017.parquet",
+       "sha256": "c1256d9e35e3e4c47b6107a533a297c57f3b9a5eb43ba976190b8a60c455bf18"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000017.npz",
+       "sha256": "799597b58a26b80d64adc3913f89a74bf30122c19d5e00f94a5027a5d56905d4"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000017.npz",
+       "sha256": "799597b58a26b80d64adc3913f89a74bf30122c19d5e00f94a5027a5d56905d4"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000017.npz",
+      "sha256": "8130c760c8fb466d6b2af412b94b91b49d09a947d2904185c8efb592e953f13a"
+     },
+     "min_eigen_gap": 1.912693397694997,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01640791240789994,
+       "max_angle_rad": 0.5931249635321441
+      }
+     }
+    },
+    "18": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000018.parquet",
+      "frames": 858,
+      "first": 0,
+      "last": 857,
+      "object_names": [
+       "blue_trash_can"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000018.parquet",
+       "sha256": "5258963a1c435a746db02326db162ac224813846337788fb8c12287a991de4ff"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000018.npz",
+       "sha256": "9edb64511d5d878bdb7f9c19814a88addd7505379716735336905fd128d50e94"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000018.npz",
+       "sha256": "9edb64511d5d878bdb7f9c19814a88addd7505379716735336905fd128d50e94"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000018.npz",
+      "sha256": "36364986eee8d721fa6ee24dffa785be44bd1653768fefb80bf568ae3a199f20"
+     },
+     "min_eigen_gap": 1.921445899900549,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03433011876594166,
+       "max_angle_rad": 0.5624012230376019
+      }
+     }
+    },
+    "19": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000019.parquet",
+      "frames": 886,
+      "first": 0,
+      "last": 885,
+      "object_names": [
+       "cane"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "n": 4,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000019.parquet",
+       "sha256": "7aeed1498fbb7f01bcc87de62d055b50cf5328b04aa13993cc352f2e0ca0ab77"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000019.npz",
+       "sha256": "9b922064d2bd7e42260313f9a0c94fde2fe55fd4bc34c235bcedcdf092992dfc"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000019.npz",
+       "sha256": "f7866b117b50b2ee20aaadef61db1671e26a43fc2279e389c24cc8d21dc3e8ab"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000019.npz",
+       "sha256": "3fedfb569eafa7b8804528dd38b604ea513baaedb373c4e25339f56002098883"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000019.npz",
+      "sha256": "59d3101458922a499f4f0c340c8d1b09d9f67d2ab6d7c87552f4c27e5a2a081c"
+     },
+     "min_eigen_gap": 3.934529869224119,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.01650249508077743,
+       "max_angle_rad": 0.349544454016047
+      },
+      "R-C": {
+       "max_pos_m": 0.01650249508077743,
+       "max_angle_rad": 0.349544454016047
+      },
+      "R-G": {
+       "max_pos_m": 0.021489784723699112,
+       "max_angle_rad": 0.4512177020281548
+      },
+      "F-C": {
+       "max_pos_m": 0.00899839682807612,
+       "max_angle_rad": 0.22391943323351957
+      },
+      "F-G": {
+       "max_pos_m": 0.02219228693818441,
+       "max_angle_rad": 0.38550930554143503
+      },
+      "C-G": {
+       "max_pos_m": 0.02219228693818441,
+       "max_angle_rad": 0.3775187268358303
+      }
+     }
+    },
+    "20": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000020.parquet",
+      "frames": 553,
+      "first": 0,
+      "last": 552,
+      "object_names": [
+       "rice_cooker"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000020.parquet",
+       "sha256": "3969b41812f6289cedef50164838c31ad343522ce8059bb4bc4981c3ab3e8d4e"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000020.npz",
+       "sha256": "cdeebd95f5aa5064d1c817f6d9905fea71b67ed44b99414df67a30ae7d839f8b"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000020.npz",
+       "sha256": "cdeebd95f5aa5064d1c817f6d9905fea71b67ed44b99414df67a30ae7d839f8b"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000020.npz",
+      "sha256": "9df099c974cac756aeeaf97a816195fd68ca9ec2dc5c47e6b6a7e879bf7bf7ea"
+     },
+     "min_eigen_gap": 1.9473836015045751,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.031682510746028056,
+       "max_angle_rad": 0.4597770675342205
+      }
+     }
+    },
+    "21": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000021.parquet",
+      "frames": 678,
+      "first": 0,
+      "last": 677,
+      "object_names": [
+       "tall_bar_stool"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "G"
+     ],
+     "n": 3,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000021.parquet",
+       "sha256": "92da7ac948217c1bc5b067d6917da618291a3435215780bb7b3c6f60d8f6cce7"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000021.npz",
+       "sha256": "9bb13704e19db566b411b1f4d2f57e9ca92c7f02da1c01951d09cc5fb639ba79"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000021.npz",
+       "sha256": "9bb13704e19db566b411b1f4d2f57e9ca92c7f02da1c01951d09cc5fb639ba79"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000021.npz",
+       "sha256": "68f12b53b19e8f725ec1d1ed1a740c06a34aa4e5c2eb10daadf7080bb79a7363"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000021.npz",
+      "sha256": "e7ae1699f97590ee7dfab6abd5601095d6fb9d27092e2ad8c3e158b23152980c"
+     },
+     "min_eigen_gap": 2.928258368370906,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.017225339876134022,
+       "max_angle_rad": 0.41416793356000176
+      },
+      "R-G": {
+       "max_pos_m": 0.03531476068645385,
+       "max_angle_rad": 0.5123321094883929
+      },
+      "F-G": {
+       "max_pos_m": 0.02211961054893026,
+       "max_angle_rad": 0.19281367650498116
+      }
+     }
+    },
+    "22": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000022.parquet",
+      "frames": 719,
+      "first": 0,
+      "last": 718,
+      "object_names": [
+       "step_ladder"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000022.parquet",
+       "sha256": "aaf8f8f1d1c47d5118790422680be2f39c27d344cb7ee7ccf73b04b39df6257d"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000022.npz",
+       "sha256": "bed8ddc961af59681c7280b76bb7953c2cd8640bcb5660ad47f2268bd5df3383"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000022.npz",
+       "sha256": "002f0c43ab86d18c64a6fe970a8b3c00aa4339a4ce2ff3995dbb6a314b1a661e"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000022.npz",
+      "sha256": "cfeab817d922f31dd94c451f1b9755115a9d701267cbed9594034155665c8231"
+     },
+     "min_eigen_gap": 2.9149944366238816,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.03319445117265886,
+       "max_angle_rad": 0.5068083692930538
+      },
+      "R-C": {
+       "max_pos_m": 0.03319445117265886,
+       "max_angle_rad": 0.5068083692930538
+      },
+      "F-C": {
+       "max_pos_m": 0.015493955046779634,
+       "max_angle_rad": 0.24067381683153494
+      }
+     }
+    },
+    "23": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000023.parquet",
+      "frames": 946,
+      "first": 0,
+      "last": 945,
+      "object_names": [
+       "toy_stroller"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000023.parquet",
+       "sha256": "2d6de4969092b37ed33941a9e58123b1b236c0a5917da2898b02acc4bb652c0f"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000023.npz",
+       "sha256": "caa9515ec9bd445eacba18c76d11d347f81885317b1b73f7f26eaff4d4c35590"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000023.npz",
+       "sha256": "caa9515ec9bd445eacba18c76d11d347f81885317b1b73f7f26eaff4d4c35590"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000023.npz",
+      "sha256": "f687c9a93d65e0fc2627ba3dbe603c993f147724c0653d955b626f6f8561f0d6"
+     },
+     "min_eigen_gap": 1.9754463281659609,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.02916061882306104,
+       "max_angle_rad": 0.3137137370083697
+      }
+     }
+    },
+    "24": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000024.parquet",
+      "frames": 748,
+      "first": 0,
+      "last": 747,
+      "object_names": [
+       "watering_can"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000024.parquet",
+       "sha256": "e66100251959f94efedb2c497565d18e96321cecc43bcb1c91e21c39485d2bcd"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000024.npz",
+       "sha256": "447b9b323ee75f739e22fcc2cd10365d567fcc2d08d20e6df30f46229abddf2f"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000024.npz",
+       "sha256": "447b9b323ee75f739e22fcc2cd10365d567fcc2d08d20e6df30f46229abddf2f"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000024.npz",
+      "sha256": "7f542a27e2d2bbd5271f33ee0b4ccabde8093415f60c7306291ef25dfbf7aabd"
+     },
+     "min_eigen_gap": 1.9187177656545644,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.028339642010667982,
+       "max_angle_rad": 0.5721497953409364
+      }
+     }
+    },
+    "25": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000025.parquet",
+      "frames": 859,
+      "first": 0,
+      "last": 858,
+      "object_names": [
+       "cyan_water_bottle"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000025.parquet",
+       "sha256": "e035b5a2c29016f58152569dbd047dfc42c432aedac352a6459ad1502f11c287"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000025.npz",
+       "sha256": "879af5af203398b52bf027931096c02d3bdb92a1e7e07c2fbf9f6fd1eaa45544"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000025.npz",
+       "sha256": "879af5af203398b52bf027931096c02d3bdb92a1e7e07c2fbf9f6fd1eaa45544"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000025.npz",
+      "sha256": "1b87917778e85cb1554b74702b00d4e005205851d2f1a932f84e14936f91a0ec"
+     },
+     "min_eigen_gap": 1.9735930907883499,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.014304482428362214,
+       "max_angle_rad": 0.32536272122502663
+      }
+     }
+    },
+    "26": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000026.parquet",
+      "frames": 669,
+      "first": 0,
+      "last": 668,
+      "object_names": [
+       "skateboard"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C"
+     ],
+     "n": 3,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000026.parquet",
+       "sha256": "9fef382a9e92b4773c68b85c2525b6b13e3aa84be52631f63186fb799650c513"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000026.npz",
+       "sha256": "d50639a5589a8ea04a9d6d82101987a7f02c2f8cc559a415324010658b8601d2"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000026.npz",
+       "sha256": "b9dc98da249fed7cb771a87bd66dbdc84f4f42d4e1d7f78d07bfef809b51f6ff"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000026.npz",
+      "sha256": "bbf91422de5d5c4c4eec52dd2199b08075adb4bd1ac6fd2b157302d5a6452bac"
+     },
+     "min_eigen_gap": 2.910440039654065,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.021735459475709814,
+       "max_angle_rad": 0.5203095957615735
+      },
+      "R-C": {
+       "max_pos_m": 0.021468087215514194,
+       "max_angle_rad": 0.5203095957615735
+      },
+      "F-C": {
+       "max_pos_m": 0.012910081527181611,
+       "max_angle_rad": 0.4204196884690399
+      }
+     }
+    },
+    "27": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000027.parquet",
+      "frames": 565,
+      "first": 0,
+      "last": 564,
+      "object_names": [
+       "woven_basket"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000027.parquet",
+       "sha256": "46aa20d2de966cfa56b559c3d52ca52d859860d53930f4b51ff5ed83221b7d01"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000027.npz",
+       "sha256": "2a8e15870cbad615db6d377275bc128c7c576ca2c1c22da9f0f5089233f5f381"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000027.npz",
+       "sha256": "2a8e15870cbad615db6d377275bc128c7c576ca2c1c22da9f0f5089233f5f381"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000027.npz",
+      "sha256": "1fd2f5947dc5ac3c820fffd080b91552498d8de6adc0bfbe438828005078c1b4"
+     },
+     "min_eigen_gap": 1.91942281031051,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.021977245837212573,
+       "max_angle_rad": 0.5696459810535829
+      }
+     }
+    },
+    "28": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000028.parquet",
+      "frames": 988,
+      "first": 0,
+      "last": 987,
+      "object_names": [
+       "squeegee"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "used": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "n": 4,
+     "duplicates_dropped": [],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000028.parquet",
+       "sha256": "dc746db779d2fe837138bae403ffd2c1389326a0fec087b89640d8af6c8f2bfc"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000028.npz",
+       "sha256": "9cb87d47d28fb0a5c3149569949b949349a751a23c5d3d7b53698a3d26292240"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000028.npz",
+       "sha256": "e465670a5b0d7ce3001c92c374c2bfef318a9af23e0f1775a2823df4377694df"
+      },
+      "G": {
+       "file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000028.npz",
+       "sha256": "a6b9584dde132a0fb42b15a915518e65f8d6e449e1164fe1d36eddbdf413031f"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000028.npz",
+      "sha256": "9d1c82c5db15ab87db7c5168d73c359ac2c2a21da76ab9821cef6c85c1e79f6a"
+     },
+     "min_eigen_gap": 3.8357467374902723,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.016984746914941277,
+       "max_angle_rad": 0.6038065552543207
+      },
+      "R-C": {
+       "max_pos_m": 0.016984746914941277,
+       "max_angle_rad": 0.6038065552543207
+      },
+      "R-G": {
+       "max_pos_m": 0.044665050927632045,
+       "max_angle_rad": 0.6990801932652272
+      },
+      "F-C": {
+       "max_pos_m": 0.008917636076915508,
+       "max_angle_rad": 0.5055677303468754
+      },
+      "F-G": {
+       "max_pos_m": 0.04207172273090611,
+       "max_angle_rad": 0.627762142059274
+      },
+      "C-G": {
+       "max_pos_m": 0.04207172273090611,
+       "max_angle_rad": 0.5578419855276102
+      }
+     }
+    },
+    "29": {
+     "grid": {
+      "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000029.parquet",
+      "frames": 467,
+      "first": 0,
+      "last": 466,
+      "object_names": [
+       "rolling_luggage"
+      ]
+     },
+     "available": [
+      "R",
+      "F",
+      "C"
+     ],
+     "used": [
+      "R",
+      "F"
+     ],
+     "n": 2,
+     "duplicates_dropped": [
+      [
+       "C",
+       "F"
+      ]
+     ],
+     "inputs": {
+      "R": {
+       "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000029.parquet",
+       "sha256": "a6082952ff7925caf8fcfc9ddf52de0e35960b3d81797540e23e6a6c8ac126e6"
+      },
+      "F": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000029.npz",
+       "sha256": "528cc8535c2c20d1ee3f39df0a98a790ccd013625f42b6e214200d51334721cc"
+      },
+      "C": {
+       "file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca/episode_000029.npz",
+       "sha256": "528cc8535c2c20d1ee3f39df0a98a790ccd013625f42b6e214200d51334721cc"
+      }
+     },
+     "output": {
+      "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/refs/B/episode_000029.npz",
+      "sha256": "521cd718677c0f746bc47cfca499d9ac86e90bb0d6e86c0709acfcaf1f654a7a"
+     },
+     "min_eigen_gap": 1.9222388413926783,
+     "pairwise_max_distance_report_only": {
+      "R-F": {
+       "max_pos_m": 0.029443660164802526,
+       "max_angle_rad": 0.5595367696324131
+      }
+     }
+    }
+   }
+  }
+ },
+ "problems": [],
+ "integrity_kit_stock_unchanged": true,
+ "ok": true
+}

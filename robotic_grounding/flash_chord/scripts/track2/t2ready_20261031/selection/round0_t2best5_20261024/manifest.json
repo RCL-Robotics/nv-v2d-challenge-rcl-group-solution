@@ -1,0 +1,3138 @@
+{
+ "built_at": "2026-10-24 19:06:28",
+ "prereg_sha256": "d778cb29b878e87d3d9538da0c3617f5a13dc490924b2a26187e0d427461b704",
+ "rows": [
+  {
+   "job": "ep00_raw_final41043",
+   "episode": 0,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep00",
+   "iteration": 41043,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "tall_bar_stool",
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep00/model_41043.safetensors",
+   "expected_sha256": "49323000af185103e9811a8ee73401bd1bc2e30c59d6ab1ad617c1aa4a781b57",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "49323000af185103e9811a8ee73401bd1bc2e30c59d6ab1ad617c1aa4a781b57",
+   "final_json": {
+    "iteration": 41043,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T05:53:49-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "bec9fcbb0737f510b296dcc643c3fd669f541e41b97ba66e56b395d3b8d33416",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep00/model_41043.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "228b2dc97a7f8ce0"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep01_raw_final44922",
+   "episode": 1,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep01",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "vacuum",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep01/model_44922.safetensors",
+   "expected_sha256": "0774dd47e6a99bce363094459c915ae26d1f055109e431303fe9cc4da3405693",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "0774dd47e6a99bce363094459c915ae26d1f055109e431303fe9cc4da3405693",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-16T23:40:56-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "d31aba51c56f5b8bbbf8bcdf855c95b8f1587c0c3b19dac99cb3265053979812",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep01/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep02_raw_final37409",
+   "episode": 2,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep02",
+   "iteration": 37409,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_easter_basket",
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep02/model_37409.safetensors",
+   "expected_sha256": "ad269e9949280f3bf3d51ae89aab54f2a2d3e57cf587f2138d0e692e9728674c",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "ad269e9949280f3bf3d51ae89aab54f2a2d3e57cf587f2138d0e692e9728674c",
+   "final_json": {
+    "iteration": 37409,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-16T21:54:29-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "c207aef829051af2e82fa0135305497bcfab6da25427546b8799e724ad016c07",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep02/model_37409.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "2734be0a2a1c6c0b"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep03_raw_final44922",
+   "episode": 3,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep03",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "contigo_coffee_mug",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep03/model_44922.safetensors",
+   "expected_sha256": "77322707d242f1f83f137fe9d3d52308ff2a11d5e3064926e4605203b9864746",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "77322707d242f1f83f137fe9d3d52308ff2a11d5e3064926e4605203b9864746",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T00:22:31-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "86bb862ab9034a030a9584ac20bb5047dae6fd4290e449fb7ea8859121e29201",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep03/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b7b4dc010d8e8f97"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep04_raw_final44922",
+   "episode": 4,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep04",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "baseball_bat",
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep04/model_44922.safetensors",
+   "expected_sha256": "e5d58f0229898261236f28a3433eecf673906d0eb61bff30f2ba120f4d532507",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "e5d58f0229898261236f28a3433eecf673906d0eb61bff30f2ba120f4d532507",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T22:32:32-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "42f9f807e24b80bd4bb8810d208e5da82d41aaaab47de25e00db1625b2f3c44f",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep04/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8572ed3bf973b08a"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep05_raw_final44922",
+   "episode": 5,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep05",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "big_black_box",
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep05/model_44922.safetensors",
+   "expected_sha256": "e1fe64278e88e960a6b04d942278c2b7ad0ffd448438782a39c42395e31474ab",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "e1fe64278e88e960a6b04d942278c2b7ad0ffd448438782a39c42395e31474ab",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T04:05:46-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "parquet_sha256": "b6ed9f13a7dafb73a157065c37a15724f8fb6dee781141370ad3c6df2a064af4",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep05/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c0749211ce6d40ec"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep06_raw_final33894",
+   "episode": 6,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep06",
+   "iteration": 33894,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "monitor",
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep06/model_33894.safetensors",
+   "expected_sha256": "542847afa6d4b7df265a0b33616365e44cf2fdb1b8f9dc30df1594fddbcac86d",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "542847afa6d4b7df265a0b33616365e44cf2fdb1b8f9dc30df1594fddbcac86d",
+   "final_json": {
+    "iteration": 33894,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T20:02:43-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "c1fb42a8ece7d56a101b1cbae4379aa1d56964d0f796477d8dca19404eba62c3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep06/model_33894.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "bb0e2324ec806b17"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep07_raw_final44922",
+   "episode": 7,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep07",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "iron",
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep07/model_44922.safetensors",
+   "expected_sha256": "e4fce7f0c07a866bfa86548b9608f3f7c6cda60ae81c7e686ede23da52280e87",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "e4fce7f0c07a866bfa86548b9608f3f7c6cda60ae81c7e686ede23da52280e87",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T01:49:56-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "f7a86a692c331d75307e200139a795023b70c855f79b6a0a0e5dd60c5d4b7e41",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep07/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c2c470411a6004da"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep08_raw_final20597",
+   "episode": 8,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep08",
+   "iteration": 20597,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "skinny_wood_chair",
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep08/model_20597.safetensors",
+   "expected_sha256": "7fa36fade6bad7700e324cb13aa1a643d983cf97c99fcaa25ec65c412abf0719",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "7fa36fade6bad7700e324cb13aa1a643d983cf97c99fcaa25ec65c412abf0719",
+   "final_json": {
+    "iteration": 20597,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T13:45:04-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "90cd6d1bfd2c6411cd879ee9f05088383b11c7272f0fbab477a52dedc741e1f0",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep08/model_20597.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "4ab390367b8b8050"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep09_raw_final39328",
+   "episode": 9,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep09",
+   "iteration": 39328,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "big_red_bowl",
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep09/model_39328.safetensors",
+   "expected_sha256": "2f395947f7531111f4486b38662f6f82d8fe9bbd5a6c2f2198a1d9df39ee0818",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "2f395947f7531111f4486b38662f6f82d8fe9bbd5a6c2f2198a1d9df39ee0818",
+   "final_json": {
+    "iteration": 39328,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T03:22:38-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet",
+   "parquet_sha256": "7a85d63ffc4e5f8f03795c9e99ab483c8d2bde07e6975502305acea2f6953e6d",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep09/model_39328.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5381c3ca4fc41131"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep10_raw_final34267",
+   "episode": 10,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep10",
+   "iteration": 34267,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "white_desk",
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep10/model_34267.safetensors",
+   "expected_sha256": "6047240691d41a0726350ce0a0afa7ecabef1e7602d7dc9db106c6f6f71801a2",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "6047240691d41a0726350ce0a0afa7ecabef1e7602d7dc9db106c6f6f71801a2",
+   "final_json": {
+    "iteration": 34267,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T21:24:07-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "f825703de37a1b445802bda995ad7b3a41cf599d50ec140ca1aee44093298e39",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep10/model_34267.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b1a56fe315a143bd"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep11_raw_final28925",
+   "episode": 11,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep11",
+   "iteration": 28925,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "light_blue_book",
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep11/model_28925.safetensors",
+   "expected_sha256": "5f31f3ce09d305af7aea3c21cee720d72e1e3ee5b2d8ece73cb24350d9768ead",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "5f31f3ce09d305af7aea3c21cee720d72e1e3ee5b2d8ece73cb24350d9768ead",
+   "final_json": {
+    "iteration": 28925,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T17:06:39-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "parquet_sha256": "a3104698172ebb47e624eed07525baf9e5aa732ce7da6f63d38af1f60d42b182",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep11/model_28925.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e5e1deb33e5acdee"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep12_raw_final37575",
+   "episode": 12,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep12",
+   "iteration": 37575,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "black_platform",
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep12/model_37575.safetensors",
+   "expected_sha256": "1acb679e2d83ed06544d8fa522090d160cfada1c99f48fd3ebbd603663ea7bdc",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "1acb679e2d83ed06544d8fa522090d160cfada1c99f48fd3ebbd603663ea7bdc",
+   "final_json": {
+    "iteration": 37575,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T04:33:17-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "c087740d01411cd3fc128cfd13a15e685f90e4621b7ba493ade2923f655e486b",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep12/model_37575.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e015176cd4ed4ea3"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep13_raw_final44922",
+   "episode": 13,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep13",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "snack_box",
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep13/model_44922.safetensors",
+   "expected_sha256": "a6803e2b2e102c8e36a71ab17decbaf91bb14772bcde62ac39562306160a1d4f",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "a6803e2b2e102c8e36a71ab17decbaf91bb14772bcde62ac39562306160a1d4f",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T05:08:31-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "aaf8c28c175c19c140e5b934aa938dbca961b6c34099296cdaec1a5f19d40352",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep13/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "cd8660560ac5876b"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep14_raw_final44922",
+   "episode": 14,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep14",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "round_table",
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep14/model_44922.safetensors",
+   "expected_sha256": "313e5f7df0f3254df3266407638419815dca2e768b61fbe70f896046afbe53e6",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "313e5f7df0f3254df3266407638419815dca2e768b61fbe70f896046afbe53e6",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T08:33:26-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "5edf5e6ae115be3498132bf3baa20d46f4269bd48b2b23097045a6501f556d49",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep14/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "6c7584c98b6a755d"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep15_raw_final44922",
+   "episode": 15,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep15",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "wet_floor_sign",
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep15/model_44922.safetensors",
+   "expected_sha256": "db94b3d049043c87d183449f112eb18a1f141cf32fedea8657da7d1283204963",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "db94b3d049043c87d183449f112eb18a1f141cf32fedea8657da7d1283204963",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T09:30:14-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "bf06225bc599066bcc51dc80b3652ec7f91736d1f6bf2d19125c6d1fc54fded3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep15/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "dd4639fc0cde3051"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep16_raw_final31268",
+   "episode": 16,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep16",
+   "iteration": 31268,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "spray_bottle",
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep16/model_31268.safetensors",
+   "expected_sha256": "1a4d16b23692581fd5bb07cae635d7d35c9395ff540d7d3c13489d7d5210f3a2",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "1a4d16b23692581fd5bb07cae635d7d35c9395ff540d7d3c13489d7d5210f3a2",
+   "final_json": {
+    "iteration": 31268,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-16T16:27:00-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "d318f471e7e39c5438331cd79806223098e1cab3b541ced34e36becbe8740901",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep16/model_31268.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "4012583526d658b8"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep17_raw_final31807",
+   "episode": 17,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep17",
+   "iteration": 31807,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "traffic_cone",
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep17/model_31807.safetensors",
+   "expected_sha256": "9982179485955a64e69d44f11bab1d5cc0b2c73211e42b4bfa9520e3bea7765b",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "9982179485955a64e69d44f11bab1d5cc0b2c73211e42b4bfa9520e3bea7765b",
+   "final_json": {
+    "iteration": 31807,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T00:34:13-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "b31f0a7c0689eb57fb9275cffffd1697a5eef662f9930300efe9546c10e72c7b",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep17/model_31807.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "2d1ab5ad2a1cf28e"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep18_raw_final44922",
+   "episode": 18,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep18",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_trash_can",
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep18/model_44922.safetensors",
+   "expected_sha256": "5e62032f1f21fa55c1694bedad07384673bc479349f011931041ab548385768a",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "5e62032f1f21fa55c1694bedad07384673bc479349f011931041ab548385768a",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T03:59:56-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "8407b81c034871e2ac2f0cd18495a6c834f0fd7128834c0f00c9ef23c4807bdf",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep18/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5b02f369220a9ba7"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep19_raw_final44922",
+   "episode": 19,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep19",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "cane",
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep19/model_44922.safetensors",
+   "expected_sha256": "651a438d9b344dc89568697c0a584d42a575cb009cef329e2842fe0717ba521e",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "651a438d9b344dc89568697c0a584d42a575cb009cef329e2842fe0717ba521e",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T04:50:28-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "9179b0ac91f6ced6a1b3aced68b20de96e424e666d9892384f455dcdffb84ace",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep19/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "7d05b4ab00818a6f"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep20_raw_final19034",
+   "episode": 20,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep20",
+   "iteration": 19034,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "rice_cooker",
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep20/model_19034.safetensors",
+   "expected_sha256": "cb8b59540bf8c9b9277074c01569ab305202be9929df16a8482c4203016169b8",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "cb8b59540bf8c9b9277074c01569ab305202be9929df16a8482c4203016169b8",
+   "final_json": {
+    "iteration": 19034,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-16T10:03:42-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "bc8bef7c6e7006afccfc5ab47f3f85389a152475a46095041695f4ec1956f0b2",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep20/model_19034.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "a2aaaaed864c9219"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep21_raw_final44922",
+   "episode": 21,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep21",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "tall_bar_stool",
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep21/model_44922.safetensors",
+   "expected_sha256": "523f168c36e44f3f375e57aac03fe17f7dd41d72c7cad493943decd094dfe38e",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "523f168c36e44f3f375e57aac03fe17f7dd41d72c7cad493943decd094dfe38e",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T09:46:14-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "97cd0d4fbce2efd3774c96543339e149008cc3978ea66e3475949abfd97d1720",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep21/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "228b2dc97a7f8ce0"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep22_raw_final44922",
+   "episode": 22,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep22",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "step_ladder",
+   "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep22/model_44922.safetensors",
+   "expected_sha256": "402aa8bce79591f9eb00ac665c3b063623011ff7fa9266eebf90b39703a8b24c",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "402aa8bce79591f9eb00ac665c3b063623011ff7fa9266eebf90b39703a8b24c",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T07:57:31-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet",
+   "parquet_sha256": "12d1318f3ff459b05905cbb59dd1741d6281eb0ff6ca386fbc45e569773aa290",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep22/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "77ec56c8d6852e09"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep23_raw_final20023",
+   "episode": 23,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep23",
+   "iteration": 20023,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "toy_stroller",
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep23/model_20023.safetensors",
+   "expected_sha256": "0f95efb02d2b0c4f2ce7c64e7b9cd0ab948314a1313a7486e7a906bbd92fdaac",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "0f95efb02d2b0c4f2ce7c64e7b9cd0ab948314a1313a7486e7a906bbd92fdaac",
+   "final_json": {
+    "iteration": 20023,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T19:09:21-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "e9e8739735e98ea0a4d6fbb28a8cc9f415d0af9e1b768c8a5257a84167cfc24c",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep23/model_20023.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "f3f3736cabff9d73"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep24_raw_final44922",
+   "episode": 24,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep24",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "watering_can",
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep24/model_44922.safetensors",
+   "expected_sha256": "3fa5b224a0ffd495c586877e551f9a76ac373a572925a874ab1f491fd1661341",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "3fa5b224a0ffd495c586877e551f9a76ac373a572925a874ab1f491fd1661341",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T01:59:18-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "7f412f4b130db12430b2090f6749ce780d65c9a06377a22d9a08ab96453dbea6",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep24/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8be3b5f6c9a93e1c"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep25_raw_final44922",
+   "episode": 25,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep25",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "cyan_water_bottle",
+   "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep25/model_44922.safetensors",
+   "expected_sha256": "0007a33a20f4b60816a50333b0b6c0a6bbb87f0b8bec4dbde838c97f8b464030",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "0007a33a20f4b60816a50333b0b6c0a6bbb87f0b8bec4dbde838c97f8b464030",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T20:14:58-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+   "parquet_sha256": "916eab429f0f6d8cce2630e94bea658f0895a11c4dc1d4706ef16b7a623bb08c",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep25/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "15263099f076b724"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep26_raw_final34948",
+   "episode": 26,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep26",
+   "iteration": 34948,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "skateboard",
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep26/model_34948.safetensors",
+   "expected_sha256": "b7c6a9afe06eeb47ab268cb6dd9ace98f48804c4f3ec711dd935f4781926e0f8",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "b7c6a9afe06eeb47ab268cb6dd9ace98f48804c4f3ec711dd935f4781926e0f8",
+   "final_json": {
+    "iteration": 34948,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T08:03:44-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "074c06f5ee107acd3ec4f9343c5ab45293fb3ab5eb7ad24c04c9ae77ff947e16",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep26/model_34948.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "d3a4a2498480e715"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep27_raw_final44922",
+   "episode": 27,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep27",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "woven_basket",
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep27/model_44922.safetensors",
+   "expected_sha256": "93bb623891455554137aaa58fe44d6c8cf7a11c270098a5d2947ea39364f0d75",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "93bb623891455554137aaa58fe44d6c8cf7a11c270098a5d2947ea39364f0d75",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T13:30:04-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "7b1d5f6b5748b6ad1eb2fa114e8250c1f1534a1756bbd4541e3ba91a7e7299b8",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep27/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e55d56b39bf819e7"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep28_raw_final44922",
+   "episode": 28,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep28",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "squeegee",
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep28/model_44922.safetensors",
+   "expected_sha256": "edb882c78872ee24f28be10f9b6713f14f63d6a60968a45410512705eff982f4",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "edb882c78872ee24f28be10f9b6713f14f63d6a60968a45410512705eff982f4",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-17T23:21:43-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+   "parquet_sha256": "24b10cba03d85ef38fb91f2caf1ced2f54a0b2fe112cb3c213a0fad1038c3d78",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep28/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "0885d534a2fd2869"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep29_raw_final44922",
+   "episode": 29,
+   "family": "raw",
+   "owner": "ours",
+   "arm": "raw C3r2_tier2",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep29",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "rolling_luggage",
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep29/model_44922.safetensors",
+   "expected_sha256": "c9c4a3886048224a77479a0355148a30d0c5db1ca7f7bedce5a5307db90d2b58",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "c9c4a3886048224a77479a0355148a30d0c5db1ca7f7bedce5a5307db90d2b58",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-18T12:15:43-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "f3a5b6ce865f6e7e7e4b7f3bb2fad652aecb0be381a13bb37f4b4132bb8ec270",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep29/model_44922.safetensors",
+   "problems": [],
+   "notes": [
+    "no hydra/.hydra/overrides.yaml task.parquet: the inventory's parquet is used"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "1a31f88533da8edd"
+    ],
+    "missing": []
+   },
+   "priority": 2
+  },
+  {
+   "job": "ep01_k3fix_final44922",
+   "episode": 1,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "vacuum",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42/model_44922.safetensors",
+   "expected_sha256": "d40a325a7e1c45eeb81a8f278d868d3e2ab2daeb5210fd511963356a3d3e518b",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "d40a325a7e1c45eeb81a8f278d868d3e2ab2daeb5210fd511963356a3d3e518b",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T01:12:54-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42/model_44922.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep02_k3fix_final34093",
+   "episode": 2,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42",
+   "iteration": 34093,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_easter_basket",
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42/model_34093.safetensors",
+   "expected_sha256": "3311068b016654b9bbf8178dc7aae73cf0f19c40308bd8844f1a19839d9198cf",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "3311068b016654b9bbf8178dc7aae73cf0f19c40308bd8844f1a19839d9198cf",
+   "final_json": {
+    "iteration": 34093,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T02:14:40-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42/model_34093.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "2734be0a2a1c6c0b"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep03_k3fix_final27068",
+   "episode": 3,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42",
+   "iteration": 27068,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "contigo_coffee_mug",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42/model_27068.safetensors",
+   "expected_sha256": "88278b72cb51aad1b02d6347fa23487bab2a49c1524690b997d30c7b4802bc85",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "88278b72cb51aad1b02d6347fa23487bab2a49c1524690b997d30c7b4802bc85",
+   "final_json": {
+    "iteration": 27068,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T02:42:25-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42/model_27068.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b7b4dc010d8e8f97"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep06_k3fix_final28420",
+   "episode": 6,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42",
+   "iteration": 28420,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "monitor",
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42/model_28420.safetensors",
+   "expected_sha256": "88dafebf221671b029996227fe60974a7b5467b74fa38ac3a02d65c318438347",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "88dafebf221671b029996227fe60974a7b5467b74fa38ac3a02d65c318438347",
+   "final_json": {
+    "iteration": 28420,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T18:43:50-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42/model_28420.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "bb0e2324ec806b17"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep07_k3fix_final18529",
+   "episode": 7,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42",
+   "iteration": 18529,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "iron",
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42/model_18529.safetensors",
+   "expected_sha256": "bd6639ec7ff5fa65f8fc1cb6eacd9fa503f45e2509ced2d8d3d3c936f4102476",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "bd6639ec7ff5fa65f8fc1cb6eacd9fa503f45e2509ced2d8d3d3c936f4102476",
+   "final_json": {
+    "iteration": 18529,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-21T21:05:03-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42/model_18529.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c2c470411a6004da"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep08_k3easy_final17496",
+   "episode": 8,
+   "family": "k3easy_final",
+   "owner": "ours",
+   "arm": "K3 easy-clip C3r2_tier2_k3easy",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep08",
+   "iteration": 17496,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "skinny_wood_chair",
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep08/model_17496.safetensors",
+   "expected_sha256": "c8988396d70af9644c299844c949557be44fdefa17aff1ec90cd780710966bca",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "c8988396d70af9644c299844c949557be44fdefa17aff1ec90cd780710966bca",
+   "final_json": {
+    "iteration": 17496,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-21T11:59:25-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "510bdc3d29bd9c4425e90b3a1ff479afb4f0a815dde1c816be6822bfb69ae592",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3",
+   "root_kind": "k3",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep08/model_17496.safetensors",
+   "problems": [],
+   "notes": [
+    "K3 root parquet byte-identical to the K3fix root (510bdc3d29bd)"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "4ab390367b8b8050"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep09_k3fix_final39449",
+   "episode": 9,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep09_k3fix_s42",
+   "iteration": 39449,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "big_red_bowl",
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep09_k3fix_s42/model_39449.safetensors",
+   "expected_sha256": "4d962b4ed8653d597e0e2179594b9337282ca3e8000b601d3630f9aa0eec013b",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "4d962b4ed8653d597e0e2179594b9337282ca3e8000b601d3630f9aa0eec013b",
+   "final_json": {
+    "iteration": 39449,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T06:43:27-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet",
+   "parquet_sha256": "b1d62056ee50d25f8e34acd4bf7dfca7200922c1f14fe525546a8abdad49434a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep09_k3fix_s42/model_39449.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5381c3ca4fc41131"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep10_k3fix_final25319",
+   "episode": 10,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42",
+   "iteration": 25319,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "white_desk",
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42/model_25319.safetensors",
+   "expected_sha256": "79ec18cf8a1a5135d5240115a1a8de20f05fd5d1a82a31a355460499c430d3ae",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "79ec18cf8a1a5135d5240115a1a8de20f05fd5d1a82a31a355460499c430d3ae",
+   "final_json": {
+    "iteration": 25319,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T19:11:04-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "884179d706682b5a8b037b01440e67bf2cf5308436c7b95663e4a2a21c0b9993",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42/model_25319.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b1a56fe315a143bd"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep11_k3fix_final29175",
+   "episode": 11,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42",
+   "iteration": 29175,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "light_blue_book",
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42/model_29175.safetensors",
+   "expected_sha256": "3a330ab0aea650bf0f6893e1a6fc23c73a123a6c1ec1a6d027b3c1ca8bdb689b",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "3a330ab0aea650bf0f6893e1a6fc23c73a123a6c1ec1a6d027b3c1ca8bdb689b",
+   "final_json": {
+    "iteration": 29175,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T18:16:21-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "parquet_sha256": "814245569ed35da6fa17153b7a8dd016495b4eec2223dcd7f4ccf9fd8f21ba70",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42/model_29175.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e5e1deb33e5acdee"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep12_k3fix_final23178",
+   "episode": 12,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42",
+   "iteration": 23178,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "black_platform",
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42/model_23178.safetensors",
+   "expected_sha256": "3a25f30e76191f9b32e4ff7caf7b5ba98b508b64ba57b7a09e31f00c495885db",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "3a25f30e76191f9b32e4ff7caf7b5ba98b508b64ba57b7a09e31f00c495885db",
+   "final_json": {
+    "iteration": 23178,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T19:00:30-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42/model_23178.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e015176cd4ed4ea3"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep13_k3fix_final39254",
+   "episode": 13,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep13_k3fix_s42",
+   "iteration": 39254,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "snack_box",
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep13_k3fix_s42/model_39254.safetensors",
+   "expected_sha256": "dbb526df769794ccfc8b186a82b9eafd3fc78fa32eca11cecf7db5bfed3608b2",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "dbb526df769794ccfc8b186a82b9eafd3fc78fa32eca11cecf7db5bfed3608b2",
+   "final_json": {
+    "iteration": 39254,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T09:57:44-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "c36c13db6440cd363a618e2261804e4ba36591f17b46f81d5af03f65dd091c16",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep13_k3fix_s42/model_39254.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "cd8660560ac5876b"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep16_k3fix_final32063",
+   "episode": 16,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42",
+   "iteration": 32063,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "spray_bottle",
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42/model_32063.safetensors",
+   "expected_sha256": "c5571c15eac6bbc1481283800b19109791e0f13514d98a5e2a8e2fede3135634",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "c5571c15eac6bbc1481283800b19109791e0f13514d98a5e2a8e2fede3135634",
+   "final_json": {
+    "iteration": 32063,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T17:49:22-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "5adf79bdfc8edff59ff3579769332890651ede89ff921b87e51ed0f7c696cbe8",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42/model_32063.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "4012583526d658b8"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep17_k3fix_final29845",
+   "episode": 17,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep17_k3fix_s42",
+   "iteration": 29845,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "traffic_cone",
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep17_k3fix_s42/model_29845.safetensors",
+   "expected_sha256": "64cbd5eccb86df679ec873f32d212ca4aa340069d251b6e83600ad6a6b77e714",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "64cbd5eccb86df679ec873f32d212ca4aa340069d251b6e83600ad6a6b77e714",
+   "final_json": {
+    "iteration": 29845,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T13:57:18-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "25c13883a34052b7c6bdb04357c868d975bb0bf54d4acd1b807e53fdf9e11c7a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep17_k3fix_s42/model_29845.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "2d1ab5ad2a1cf28e"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep18_k3fix_final18911",
+   "episode": 18,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42",
+   "iteration": 18911,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_trash_can",
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42/model_18911.safetensors",
+   "expected_sha256": "6772981a857ebca570901d968d9bebd16b5e2253d5f4e1705506adcaf195020f",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "6772981a857ebca570901d968d9bebd16b5e2253d5f4e1705506adcaf195020f",
+   "final_json": {
+    "iteration": 18911,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-21T21:15:46-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42/model_18911.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5b02f369220a9ba7"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep20_k3easy_final18450",
+   "episode": 20,
+   "family": "k3easy_final",
+   "owner": "ours",
+   "arm": "K3 easy-clip C3r2_tier2_k3easy",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep20",
+   "iteration": 18450,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "rice_cooker",
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep20/model_18450.safetensors",
+   "expected_sha256": "46dc08c194ae3d50cb7307b90fe92d9fbcfef39474e7601297879f364f3b1081",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "46dc08c194ae3d50cb7307b90fe92d9fbcfef39474e7601297879f364f3b1081",
+   "final_json": {
+    "iteration": 18450,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-21T18:05:33-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "2784cae6dc09774f0ed7536e00c884276bbe0c49f2d0aa0e14c2feea6b964558",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3",
+   "root_kind": "k3",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep20/model_18450.safetensors",
+   "problems": [],
+   "notes": [
+    "K3 root parquet byte-identical to the K3fix root (2784cae6dc09)"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "a2aaaaed864c9219"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep23_k3easy_final19162",
+   "episode": 23,
+   "family": "k3easy_final",
+   "owner": "ours",
+   "arm": "K3 easy-clip C3r2_tier2_k3easy",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep23",
+   "iteration": 19162,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "toy_stroller",
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep23/model_19162.safetensors",
+   "expected_sha256": "8cea19c9f47df856f04bb25644541a9deeb5a4f09c4c97cbbc5edd7cd00db302",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "8cea19c9f47df856f04bb25644541a9deeb5a4f09c4c97cbbc5edd7cd00db302",
+   "final_json": {
+    "iteration": 19162,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-21T22:08:16-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "3f6aaa9e0378028395c9fcf835b9c306e38950fa4e99acfcf1bbc5284af34e84",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3",
+   "root_kind": "k3",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep23/model_19162.safetensors",
+   "problems": [],
+   "notes": [
+    "K3 root parquet byte-identical to the K3fix root (3f6aaa9e0378)"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "f3f3736cabff9d73"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep24_k3fix_final20636",
+   "episode": 24,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep24_k3fix_s42",
+   "iteration": 20636,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "watering_can",
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep24_k3fix_s42/model_20636.safetensors",
+   "expected_sha256": "ff795e7181ea56d9f56e54528bde7fd31bd57c5047ddafad55057bc1ebd9ba33",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "ff795e7181ea56d9f56e54528bde7fd31bd57c5047ddafad55057bc1ebd9ba33",
+   "final_json": {
+    "iteration": 20636,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T07:31:34-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "cafbf612668ef29466c2db5720380dc8e1227c2479a798ade81ec56005caf1f2",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep24_k3fix_s42/model_20636.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8be3b5f6c9a93e1c"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep27_k3fix_final20863",
+   "episode": 27,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep27_k3fix_s42",
+   "iteration": 20863,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "woven_basket",
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep27_k3fix_s42/model_20863.safetensors",
+   "expected_sha256": "ffb5aae505e0aaa956092f9e513db3d0ae02db2d07e29e08a2ba579cb6d51cf7",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "ffb5aae505e0aaa956092f9e513db3d0ae02db2d07e29e08a2ba579cb6d51cf7",
+   "final_json": {
+    "iteration": 20863,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T20:06:56-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "28fe6aee2fc74dab47895b0d4aa9f968cb0f7fc238e894fd3786cb5b2c5cb045",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep27_k3fix_s42/model_20863.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e55d56b39bf819e7"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep29_k3fix_final17358",
+   "episode": 29,
+   "family": "k3fix_final",
+   "owner": "ours",
+   "arm": "K3fix C3r2_tier2_k3fix",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42",
+   "iteration": 17358,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "rolling_luggage",
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42/model_17358.safetensors",
+   "expected_sha256": "52dae9a8478ae47643a173b18a68e8f1b8929a4811bb4b2fca1a901868916210",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "52dae9a8478ae47643a173b18a68e8f1b8929a4811bb4b2fca1a901868916210",
+   "final_json": {
+    "iteration": 17358,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-23T16:48:14-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42/model_17358.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "1a31f88533da8edd"
+    ],
+    "missing": []
+   },
+   "priority": 1
+  },
+  {
+   "job": "ep01_k3fix_t2wbest18000",
+   "episode": 1,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42",
+   "iteration": 18000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep01_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "vacuum",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42/model_18000.safetensors",
+   "expected_sha256": "d413e8d82babd6f4558618e726cff6c0679431172020c1ff4d683b5f79236ced",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "d413e8d82babd6f4558618e726cff6c0679431172020c1ff4d683b5f79236ced",
+   "best_json_evidence": {
+    "iteration": 18000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 03:58:49",
+    "updated_at": "2026-10-23 03:58:49",
+    "source_sha256": "d413e8d82babd6f4558618e726cff6c0679431172020c1ff4d683b5f79236ced"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42/model_18000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep02_k3fix_t2wbest34000",
+   "episode": 2,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42",
+   "iteration": 34000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep02_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_easter_basket",
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42/model_34000.safetensors",
+   "expected_sha256": "f5a89d215ddc3fa625e24ffd865b9354bfef56992f3807eff2c2ccf19eb6169a",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "f5a89d215ddc3fa625e24ffd865b9354bfef56992f3807eff2c2ccf19eb6169a",
+   "best_json_evidence": {
+    "iteration": 34000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 17:13:01",
+    "updated_at": "2026-10-23 17:13:01",
+    "source_sha256": "f5a89d215ddc3fa625e24ffd865b9354bfef56992f3807eff2c2ccf19eb6169a"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42/model_34000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "2734be0a2a1c6c0b"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep03_k3fix_t2wbest24000",
+   "episode": 3,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42",
+   "iteration": 24000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep03_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "contigo_coffee_mug",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42/model_24000.safetensors",
+   "expected_sha256": "1020420ac071c85e577a8bcbd18358cf7370e580d3fc1cf413ac6aa63f702972",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "1020420ac071c85e577a8bcbd18358cf7370e580d3fc1cf413ac6aa63f702972",
+   "best_json_evidence": {
+    "iteration": 24000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-22 15:38:09",
+    "updated_at": "2026-10-22 15:38:09",
+    "source_sha256": "1020420ac071c85e577a8bcbd18358cf7370e580d3fc1cf413ac6aa63f702972"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42/model_24000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b7b4dc010d8e8f97"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep06_k3fix_t2wbest28000",
+   "episode": 6,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42",
+   "iteration": 28000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep06_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "monitor",
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42/model_28000.safetensors",
+   "expected_sha256": "15f3d75c9ed4de5e241da9d74a94cb5d46026aa8cafd11016af3ac602fbfaaf1",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "15f3d75c9ed4de5e241da9d74a94cb5d46026aa8cafd11016af3ac602fbfaaf1",
+   "best_json_evidence": {
+    "iteration": 28000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 09:29:21",
+    "updated_at": "2026-10-23 09:29:21",
+    "source_sha256": "15f3d75c9ed4de5e241da9d74a94cb5d46026aa8cafd11016af3ac602fbfaaf1"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42/model_28000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "bb0e2324ec806b17"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep07_k3fix_t2wbest14000",
+   "episode": 7,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42",
+   "iteration": 14000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep07_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "iron",
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42/model_14000.safetensors",
+   "expected_sha256": "efcbff674747a272041ba65ab528adb1e76d906e47d6202c67734073fe11af43",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "efcbff674747a272041ba65ab528adb1e76d906e47d6202c67734073fe11af43",
+   "best_json_evidence": {
+    "iteration": 14000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-22 09:08:21",
+    "updated_at": "2026-10-22 09:08:21",
+    "source_sha256": "efcbff674747a272041ba65ab528adb1e76d906e47d6202c67734073fe11af43"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42/model_14000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c2c470411a6004da"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep10_k3fix_t2wbest18000",
+   "episode": 10,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42",
+   "iteration": 18000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep10_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "white_desk",
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42/model_18000.safetensors",
+   "expected_sha256": "7ca68b5e9099ad7b5497cdac36ce3a4fb849b6fb450f5e90f8e7ec3c23a0d4c6",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "7ca68b5e9099ad7b5497cdac36ce3a4fb849b6fb450f5e90f8e7ec3c23a0d4c6",
+   "best_json_evidence": {
+    "iteration": 18000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 04:24:02",
+    "updated_at": "2026-10-23 04:24:02",
+    "source_sha256": "7ca68b5e9099ad7b5497cdac36ce3a4fb849b6fb450f5e90f8e7ec3c23a0d4c6"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "884179d706682b5a8b037b01440e67bf2cf5308436c7b95663e4a2a21c0b9993",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42/model_18000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b1a56fe315a143bd"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep11_k3fix_t2wbest28000",
+   "episode": 11,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42",
+   "iteration": 28000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep11_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "light_blue_book",
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42/model_28000.safetensors",
+   "expected_sha256": "966654cceacc8bb91e724302424d8626f953f40d86560a0c576a3c0b4ffd41f9",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "966654cceacc8bb91e724302424d8626f953f40d86560a0c576a3c0b4ffd41f9",
+   "best_json_evidence": {
+    "iteration": 28000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 08:27:17",
+    "updated_at": "2026-10-23 08:27:17",
+    "source_sha256": "966654cceacc8bb91e724302424d8626f953f40d86560a0c576a3c0b4ffd41f9"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "parquet_sha256": "814245569ed35da6fa17153b7a8dd016495b4eec2223dcd7f4ccf9fd8f21ba70",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42/model_28000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e5e1deb33e5acdee"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep12_k3fix_t2wbest20000",
+   "episode": 12,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42",
+   "iteration": 20000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep12_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "black_platform",
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42/model_20000.safetensors",
+   "expected_sha256": "fc092d19b49a543fde1ce7fb6934095d174cf31b3af7e3277ac1fe8e39f43281",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "fc092d19b49a543fde1ce7fb6934095d174cf31b3af7e3277ac1fe8e39f43281",
+   "best_json_evidence": {
+    "iteration": 20000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 08:04:04",
+    "updated_at": "2026-10-23 08:04:04",
+    "source_sha256": "fc092d19b49a543fde1ce7fb6934095d174cf31b3af7e3277ac1fe8e39f43281"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42/model_20000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "e015176cd4ed4ea3"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep16_k3fix_t2wbest32000",
+   "episode": 16,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42",
+   "iteration": 32000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep16_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "spray_bottle",
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42/model_32000.safetensors",
+   "expected_sha256": "d4c731063fdde020e1b8085209b2e123b72e9f708a72385675839d41cae7c4c8",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "d4c731063fdde020e1b8085209b2e123b72e9f708a72385675839d41cae7c4c8",
+   "best_json_evidence": {
+    "iteration": 32000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 08:49:56",
+    "updated_at": "2026-10-23 08:49:56",
+    "source_sha256": "d4c731063fdde020e1b8085209b2e123b72e9f708a72385675839d41cae7c4c8"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "5adf79bdfc8edff59ff3579769332890651ede89ff921b87e51ed0f7c696cbe8",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42/model_32000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "4012583526d658b8"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep18_k3fix_t2wbest18000",
+   "episode": 18,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42",
+   "iteration": 18000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep18_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "blue_trash_can",
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42/model_18000.safetensors",
+   "expected_sha256": "7db77c9852b79854e31202aa3d25c8c530ca76fd31aecce85c8ca8390c0edf3a",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "7db77c9852b79854e31202aa3d25c8c530ca76fd31aecce85c8ca8390c0edf3a",
+   "best_json_evidence": {
+    "iteration": 18000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-22 11:41:05",
+    "updated_at": "2026-10-22 11:41:05",
+    "source_sha256": "7db77c9852b79854e31202aa3d25c8c530ca76fd31aecce85c8ca8390c0edf3a"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42/model_18000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5b02f369220a9ba7"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep29_k3fix_t2wbest16000",
+   "episode": 29,
+   "family": "t2watch_best",
+   "owner": "ours",
+   "arm": "K3fix t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42",
+   "iteration": 16000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep29_k3fix_s42/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "rolling_luggage",
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42/model_16000.safetensors",
+   "expected_sha256": "a4cf58342102de160cb6bdfed90da59ce8bed09e65e09651acbd06d5ededb3af",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "a4cf58342102de160cb6bdfed90da59ce8bed09e65e09651acbd06d5ededb3af",
+   "best_json_evidence": {
+    "iteration": 16000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-24 06:34:53",
+    "updated_at": "2026-10-24 06:34:53",
+    "source_sha256": "a4cf58342102de160cb6bdfed90da59ce8bed09e65e09651acbd06d5ededb3af"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42/model_16000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "1a31f88533da8edd"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep01_t2fixL_p62000",
+   "episode": 1,
+   "family": "t2fix",
+   "owner": "ours",
+   "arm": "T2fix ep01-L (provisional)",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01",
+   "iteration": 62000,
+   "tree": "fc_r2",
+   "designation": "T2fix best single eval_ARM eval by 17:58:27",
+   "t2fix_episode": 1,
+   "provisional": true,
+   "stage": "A",
+   "object": "vacuum",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01/model_62000.safetensors",
+   "expected_sha256": "2d69e2da0647d4c3f5b23880eede56ac3bb370deffed7c9c2799a08d4ca6416f",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "2d69e2da0647d4c3f5b23880eede56ac3bb370deffed7c9c2799a08d4ca6416f",
+   "t2fix_rows": [
+    {
+     "iteration": "62000",
+     "auc": "0.14683734939759036",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "purpose": "scan",
+     "finished_at": "2026-10-24 15:45:18"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01/model_62000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   },
+   "priority": 3
+  },
+  {
+   "job": "ep01_zx_g2_10000",
+   "episode": 1,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01",
+   "iteration": 10000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "provisional": true,
+   "stage": "A",
+   "object": "vacuum",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/model_10000.safetensors",
+   "expected_sha256": "4e9423d74fee4c83fb0dc3a18f6af3e40f6185b7e1505929415279727b5829ef",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "4e9423d74fee4c83fb0dc3a18f6af3e40f6185b7e1505929415279727b5829ef",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep01/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "10000",
+     "add_auc": "0.20707831325301204",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "44.143925930874516",
+     "export_max_rel_diff": "7.867813110351562e-06",
+     "stock_verified": "True",
+     "source_sha256": "4e9423d74fee4c83fb0dc3a18f6af3e40f6185b7e1505929415279727b5829ef",
+     "finished_at": "2026-10-24T10:48:56+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "1107c47df05f7e5b570dc3e11cfe58c01793977885e77340a0639fccfbad3177",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep01/model_10000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/rsi_10000.safetensors",
+   "rsi_sha256": "b8c502643a489ff37f34d45ab74dbffd3580888368b36457a07e67a3bd4ad546",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep04_zx_g2_12000",
+   "episode": 4,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04",
+   "iteration": 12000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "provisional": true,
+   "stage": "A",
+   "object": "baseball_bat",
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/model_12000.safetensors",
+   "expected_sha256": "9a33c97d5a04e5162d1c3873db8df74c0c47d6ea731a150771ca2cc4778804e8",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "9a33c97d5a04e5162d1c3873db8df74c0c47d6ea731a150771ca2cc4778804e8",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep04/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "12000",
+     "add_auc": "0.13986612702366127",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "112.3786239040088",
+     "export_max_rel_diff": "8.881092071533203e-06",
+     "stock_verified": "True",
+     "source_sha256": "9a33c97d5a04e5162d1c3873db8df74c0c47d6ea731a150771ca2cc4778804e8",
+     "finished_at": "2026-10-24T16:32:48+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "4b07b0d1bd56cb48fe54642206a8939310470475de8cc785802a247fa4571bd1",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep04/model_12000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/rsi_12000.safetensors",
+   "rsi_sha256": "6bea53258ded993f5a4effe74d6cb2c992138db7c0fbd5a1da1436bbea52d9ba",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8572ed3bf973b08a"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep04_zx_k3fix_12000",
+   "episode": 4,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-k3fix-ep04 (k3fix)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/ep04",
+   "iteration": 12000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-k3fix-ep04",
+   "provisional": false,
+   "stage": "A",
+   "object": "baseball_bat",
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/ep04/model_12000.safetensors",
+   "expected_sha256": "3efcbf86a775c8a3e9b5be5265242a7f90e309e998d6224f300e80ab3995105a",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "3efcbf86a775c8a3e9b5be5265242a7f90e309e998d6224f300e80ab3995105a",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/eval/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "12000",
+     "add_auc": "0.11036737235367372",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "99.41132897482231",
+     "export_max_rel_diff": "8.940696716308594e-06",
+     "stock_verified": "True",
+     "source_sha256": "3efcbf86a775c8a3e9b5be5265242a7f90e309e998d6224f300e80ab3995105a",
+     "finished_at": "2026-10-24T05:07:05+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "7405d01e2af93eaf1db670f7b6cfa815cd2807155c4baccbb244cc5b7eb3f6a2",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-k3fix-ep04/ep04/model_12000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/ep04/rsi_12000.safetensors",
+   "rsi_sha256": "ade9cf416d2baa96d3cc7e601048647e8bfd4d48a3c3e267280b2d9740ca6905",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8572ed3bf973b08a"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep05_zx_k3fix_18000",
+   "episode": 5,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-k3fix-ep05-ep26 (k3fix)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05",
+   "iteration": 18000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "provisional": true,
+   "stage": "A",
+   "object": "big_black_box",
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_18000.safetensors",
+   "expected_sha256": "d17dd768f48f36c166908cb1424f6086db5a9609338de64c3bd3dca7b27f1033",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "d17dd768f48f36c166908cb1424f6086db5a9609338de64c3bd3dca7b27f1033",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/eval_ep05/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "18000",
+     "add_auc": "0.6144690927218346",
+     "sp_sr": "1.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "9.659880179283661",
+     "export_max_rel_diff": "9.059906005859375e-06",
+     "stock_verified": "True",
+     "source_sha256": "d17dd768f48f36c166908cb1424f6086db5a9609338de64c3bd3dca7b27f1033",
+     "finished_at": "2026-10-24T17:31:56+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "parquet_sha256": "2ccbe480076996db60963e0e6e88098f06a6a50107e02550c1915a63ea9c7115",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_18000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/rsi_18000.safetensors",
+   "rsi_sha256": "5e9f79061ed40525fb84c556d69928cc44f962c1306cd05b6f044e05527ee25a",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c0749211ce6d40ec"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep19_zx_g2_18000",
+   "episode": 19,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19",
+   "iteration": 18000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "provisional": true,
+   "stage": "A",
+   "object": "cane",
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/model_18000.safetensors",
+   "expected_sha256": "a9c60e435d8008267573305c1492135e7a3c0f111d5de73b5f1f9736deaa7b90",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "a9c60e435d8008267573305c1492135e7a3c0f111d5de73b5f1f9736deaa7b90",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep19/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "18000",
+     "add_auc": "0.1325479683972912",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "58.90804303641273",
+     "export_max_rel_diff": "1.2874603271484375e-05",
+     "stock_verified": "True",
+     "source_sha256": "a9c60e435d8008267573305c1492135e7a3c0f111d5de73b5f1f9736deaa7b90",
+     "finished_at": "2026-10-24T17:47:08+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "46039cd277b05a370082c5999fc51a8c5716db40ac35c5cc03ffab9f4260325a",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep19/model_18000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/rsi_18000.safetensors",
+   "rsi_sha256": "fccdd51f039aa66a24ed6a50d5e25782fd2a013bc71a19a520aee01f5655f708",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "7d05b4ab00818a6f"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep26_zx_k3fix_16000",
+   "episode": 26,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-k3fix-ep05-ep26 (k3fix)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26",
+   "iteration": 16000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "provisional": true,
+   "stage": "A",
+   "object": "skateboard",
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_16000.safetensors",
+   "expected_sha256": "0f3aed40fe6aab7ff07ea5897fe748aa3374b466c6cc100d9ad31e7ee3250680",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "0f3aed40fe6aab7ff07ea5897fe748aa3374b466c6cc100d9ad31e7ee3250680",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/eval_ep26/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "16000",
+     "add_auc": "0.9003176382660687",
+     "sp_sr": "1.0",
+     "mp_sr": "1.0",
+     "mppe_cm": "1.0842068063905934",
+     "export_max_rel_diff": "1.4841556549072266e-05",
+     "stock_verified": "True",
+     "source_sha256": "0f3aed40fe6aab7ff07ea5897fe748aa3374b466c6cc100d9ad31e7ee3250680",
+     "finished_at": "2026-10-24T16:28:50+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "01637248631c38d0ecf15041cf9a1a223adb542d6b615e9ce34e6b0e88c9d9cc",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_16000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/rsi_16000.safetensors",
+   "rsi_sha256": "809df893fdc54e08de9ff74749bf328b6db8a0b4fa9c75e23cec375d25213042",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "d3a4a2498480e715"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep28_zx_g2_16000",
+   "episode": 28,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28",
+   "iteration": 16000,
+   "tree": "b39b69b",
+   "designation": "Zuxing frozen pick (his metrics.csv by 17:58:27)",
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "provisional": true,
+   "stage": "A",
+   "object": "squeegee",
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/model_16000.safetensors",
+   "expected_sha256": "9d448d81a72e9f0bac3e95029b494d2c5deaa25c320cece1d2703a588990f8d1",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "9d448d81a72e9f0bac3e95029b494d2c5deaa25c320cece1d2703a588990f8d1",
+   "zuxing_metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep28/metrics.csv",
+   "zuxing_rows": [
+    {
+     "iteration": "16000",
+     "add_auc": "0.09128289473684212",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "103.73449159462392",
+     "export_max_rel_diff": "1.049041748046875e-05",
+     "stock_verified": "True",
+     "source_sha256": "9d448d81a72e9f0bac3e95029b494d2c5deaa25c320cece1d2703a588990f8d1",
+     "finished_at": "2026-10-24T17:43:09+08:00"
+    }
+   ],
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+   "parquet_sha256": "0d49273db7dc2eabd1a3f8c541f6211da6af50927dbcc60d2237adc22f3474d9",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep28/model_16000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/rsi_16000.safetensors",
+   "rsi_sha256": "11c9e405b0ab5d36915f28991e0846916f32beb5402cdc19124ee9f425d96c43",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "0885d534a2fd2869"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep03_raws7_final44922",
+   "episode": 3,
+   "family": "raws7_final",
+   "owner": "ours",
+   "arm": "raw seed-7 control",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7",
+   "iteration": 44922,
+   "tree": "fc_r2",
+   "designation": "final.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "contigo_coffee_mug",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7/model_44922.safetensors",
+   "expected_sha256": "fd1f762455ec013f7517b4039f2f1016ba2f83c15fc98f8adbddd714ba1f2f63",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "fd1f762455ec013f7517b4039f2f1016ba2f83c15fc98f8adbddd714ba1f2f63",
+   "final_json": {
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "finished_at": "2026-10-22T17:08:06-07:00"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "86bb862ab9034a030a9584ac20bb5047dae6fd4290e449fb7ea8859121e29201",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7/model_44922.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b7b4dc010d8e8f97"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  },
+  {
+   "job": "ep03_raws7_t2wbest38000",
+   "episode": 3,
+   "family": "raws7_t2watch_best",
+   "owner": "ours",
+   "arm": "raw seed-7 t2watch best",
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7",
+   "iteration": 38000,
+   "tree": "fc_r2",
+   "designation": "t2watch best.json",
+   "best_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/t2watch/best/C3r2_tier2_k3fix/ep03_raw_s7/best.json",
+   "provisional": false,
+   "stage": "A",
+   "object": "contigo_coffee_mug",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "training_checkpoint_original": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7/model_38000.safetensors",
+   "expected_sha256": "d4a192edc981173f40e3c75b7e007bec9486d5efeb0a840cf7c5cd1634ef73a8",
+   "expected_sha256_from": "inventory.json",
+   "training_sha256": "d4a192edc981173f40e3c75b7e007bec9486d5efeb0a840cf7c5cd1634ef73a8",
+   "best_json_evidence": {
+    "iteration": 38000,
+    "kind": "grid",
+    "evaluated_at": "2026-10-23 03:05:36",
+    "updated_at": "2026-10-23 03:05:36",
+    "source_sha256": "d4a192edc981173f40e3c75b7e007bec9486d5efeb0a840cf7c5cd1634ef73a8"
+   },
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "86bb862ab9034a030a9584ac20bb5047dae6fd4290e449fb7ea8859121e29201",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "root_kind": "raw",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_raw_s7/model_38000.safetensors",
+   "problems": [],
+   "notes": [],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "b7b4dc010d8e8f97"
+    ],
+    "missing": []
+   },
+   "priority": 4
+  }
+ ]
+}

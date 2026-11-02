@@ -1,0 +1,22 @@
+K3CA - noisy-only input gates G1-G4 on the 7 K3fix gate failures (same gate formulas and Tier-2-only constants as gates_all30: envelope 49.23 deg / 4.62 cm; G4 share <= 0.05 with >= 50 contact frames)
+k3ca_tracks.npz ad2044df614c644d; checks 14/14 ok
+
+ep  object             track  G1   G2   G3   G4    rot_max pos_max beyond deeper excess_cm  G4 n/share   -> verdict
+00  tall_bar_stool     K3fix  pass pass pass FAIL    27.6    2.67      0      0      0.25   136/0.0956  -> (K3fix gate fail)
+00  tall_bar_stool     K3CA   pass pass pass pass    27.4    2.53      0      0      0.25   136/0.0000  -> K3CA candidate
+05  big_black_box      K3fix  pass pass pass FAIL    29.1    2.24      0      0      1.69   609/0.0591  -> (K3fix gate fail)
+05  big_black_box      K3CA   pass pass pass pass    29.1    2.24      0      0      1.69   609/0.0000  -> K3CA candidate
+15  wet_floor_sign     K3fix  pass pass pass FAIL    23.8    2.39      0      0      0.00   211/0.2085  -> (K3fix gate fail)
+15  wet_floor_sign     K3CA   pass pass pass pass    23.8    2.39      0      0      0.00   211/0.0000  -> K3CA candidate
+19  cane               K3fix  pass pass pass FAIL    20.0    1.65      0      0      0.52   164/0.3415  -> (K3fix gate fail)
+19  cane               K3CA   pass pass pass pass    20.0    1.65      0      0      0.52   164/0.0000  -> K3CA candidate
+22  step_ladder        K3fix  pass pass pass FAIL    29.0    3.32      0      0      4.43   141/0.1915  -> (K3fix gate fail)
+22  step_ladder        K3CA   pass pass pass pass    29.0    3.32      0      0      2.28   141/0.0000  -> K3CA candidate
+26  skateboard         K3fix  pass pass pass FAIL    29.8    2.17      0      0      0.77   261/0.0728  -> (K3fix gate fail)
+26  skateboard         K3CA   pass pass pass pass    29.8    2.15      0      0      0.77   261/0.0000  -> K3CA candidate
+28  squeegee           K3fix  pass FAIL pass FAIL    34.6    1.70      0    194     13.70    77/0.1558  -> (K3fix gate fail)
+28  squeegee           K3CA   pass pass pass pass    34.6    1.70      0      0      2.17    77/0.0000  -> K3CA candidate
+
+K3CA PASS (7): 00 05 15 19 22 26 28
+K3CA FAIL (0): -
+wrote /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/build/gates.json

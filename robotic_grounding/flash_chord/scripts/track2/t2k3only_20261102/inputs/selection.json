@@ -1,0 +1,1183 @@
+{
+ "generated_at": "2026-11-02 15:50:02",
+ "verdict_sha256": "c54d5f6f2e55468ef8ba7436df9ffee7b1a95cb8c50fdae4e84df80584adfbfd",
+ "verdict_written": "2026-10-25 05:15:23",
+ "verdict_prereg_check_ok": true,
+ "rule": "PREREG section 2 (own-input only; +0.01 mean5 AUC, SP/MP not lower; same training parquet sha256; SELECTED settled only, SELECTED+P incl. provisional)",
+ "episodes": [
+  {
+   "episode": 0,
+   "object": "tall_bar_stool",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep00_raw_final41043",
+   "chosen_input": "raw",
+   "chosen_parquet": "bec9fcbb0737f510b296dcc643c3fd669f541e41b97ba66e56b395d3b8d33416",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.26188946015424164,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.8028947191135551
+   },
+   "challengers": [],
+   "selected": "ep00_raw_final41043",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep00_raw_final41043",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep00_raw_final41043",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 1,
+   "object": "vacuum",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep01_k3fix_final44922",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.1420515394912985,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 34.899226885697004
+   },
+   "challengers": [
+    {
+     "job": "ep01_k3fix_t2wbest18000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.14437751004016067,
+      "sp_sr": 0.0,
+      "mp_sr": 0.0,
+      "mppe": 47.225406954536965
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      18000
+     ]
+    },
+    {
+     "job": "ep01_t2fixL_p62000",
+     "family": "t2fix",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.14354082998661313,
+      "sp_sr": 0.0,
+      "mp_sr": 0.0,
+      "mppe": 77.07842209268584
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      1,
+      "A",
+      62000
+     ]
+    }
+   ],
+   "selected": "ep01_k3fix_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep01_k3fix_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep01_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep01_k3fix_t2wbest18000",
+    "ep01_t2fixL_p62000"
+   ],
+   "diff_input": [
+    "ep01_zx_g2_10000"
+   ]
+  },
+  {
+   "episode": 2,
+   "object": "blue_easter_basket",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep02_k3fix_final34093",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9306505102040816,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.0476187307343021
+   },
+   "challengers": [
+    {
+     "job": "ep02_k3fix_t2wbest34000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9370535714285715,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 1.0283543461828706
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      34000
+     ]
+    }
+   ],
+   "selected": "ep02_k3fix_final34093",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep02_k3fix_final34093",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep02_raw_final37409",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep02_k3fix_t2wbest34000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 3,
+   "object": "contigo_coffee_mug",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep03_k3fix_final27068",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9824263764404609,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.5967575111695165
+   },
+   "challengers": [
+    {
+     "job": "ep03_k3fix_t2wbest24000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9840108834827145,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 0.6156677163206741
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      24000
+     ]
+    }
+   ],
+   "selected": "ep03_k3fix_final27068",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep03_k3fix_final27068",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep03_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep03_k3fix_t2wbest24000"
+   ],
+   "diff_input": [
+    "ep03_raws7_final44922",
+    "ep03_raws7_t2wbest38000"
+   ]
+  },
+  {
+   "episode": 4,
+   "object": "baseball_bat",
+   "verdict_choice": "PENDING",
+   "verdict_settled": false,
+   "flags": [
+    "PENDING"
+   ],
+   "chosen": "ep04_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "42f9f807e24b80bd4bb8810d208e5da82d41aaaab47de25e00db1625b2f3c44f",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.10985367372353674,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 125.69474276228482
+   },
+   "challengers": [],
+   "selected": "ep04_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep04_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep04_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": [
+    "ep04_zx_g2_12000",
+    "ep04_zx_k3fix_12000"
+   ]
+  },
+  {
+   "episode": 5,
+   "object": "big_black_box",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep05_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "b6ed9f13a7dafb73a157065c37a15724f8fb6dee781141370ad3c6df2a064af4",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.25463609172482554,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.2838475089649157
+   },
+   "challengers": [],
+   "selected": "ep05_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep05_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep05_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": [
+    "ep05_zx_k3fix_18000"
+   ]
+  },
+  {
+   "episode": 6,
+   "object": "monitor",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep06_k3fix_final28420",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9212912087912087,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.0751235771286158
+   },
+   "challengers": [
+    {
+     "job": "ep06_k3fix_t2wbest28000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9218635531135531,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 1.0573805389305466
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      28000
+     ]
+    }
+   ],
+   "selected": "ep06_k3fix_final28420",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep06_k3fix_final28420",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep06_raw_final33894",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep06_k3fix_t2wbest28000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 7,
+   "object": "iron",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep07_k3fix_final18529",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9785295758928572,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.69908039613185
+   },
+   "challengers": [
+    {
+     "job": "ep07_k3fix_t2wbest14000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9757672991071429,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 0.7781825743204186
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      14000
+     ]
+    }
+   ],
+   "selected": "ep07_k3fix_final18529",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep07_k3fix_final18529",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep07_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep07_k3fix_t2wbest14000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 8,
+   "object": "skinny_wood_chair",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep08_k3easy_final17496",
+   "chosen_input": "k3",
+   "chosen_parquet": "510bdc3d29bd9c4425e90b3a1ff479afb4f0a815dde1c816be6822bfb69ae592",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9259180790960453,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.9417975659316179
+   },
+   "challengers": [],
+   "selected": "ep08_k3easy_final17496",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep08_k3easy_final17496",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep08_raw_final20597",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 9,
+   "object": "big_red_bowl",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep09_k3fix_final39449",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "b1d62056ee50d25f8e34acd4bf7dfca7200922c1f14fe525546a8abdad49434a",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.5810344827586207,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.521532109973816
+   },
+   "challengers": [
+    {
+     "job": "ep09_t2fixB_designated54449",
+     "family": "t2fix",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.6837212643678161,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 2.1153170975062694
+     },
+     "qualifies": true,
+     "why_not": [],
+     "order": [
+      1,
+      "B",
+      54449
+     ]
+    }
+   ],
+   "selected": "ep09_t2fixB_designated54449",
+   "selected_reason": "replaced by ep09_t2fixB_designated54449 (mean AUC 0.6837 >= 0.5810 + 0.01, SP/MP not lower)",
+   "selected_p": "ep09_t2fixB_designated54449",
+   "selected_p_reason": "replaced by ep09_t2fixB_designated54449 (mean AUC 0.6837 >= 0.5810 + 0.01, SP/MP not lower)",
+   "rawref": "ep09_raw_final39328",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep09_t2fixB_designated54449"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 10,
+   "object": "white_desk",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep10_k3fix_final25319",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "884179d706682b5a8b037b01440e67bf2cf5308436c7b95663e4a2a21c0b9993",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.6153652392947103,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.5966277291936333
+   },
+   "challengers": [
+    {
+     "job": "ep10_k3fix_t2wbest18000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.6232210327455919,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 1.7519307168143166
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      18000
+     ]
+    }
+   ],
+   "selected": "ep10_k3fix_final25319",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep10_k3fix_final25319",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep10_raw_final34267",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep10_k3fix_t2wbest18000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 11,
+   "object": "light_blue_book",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep11_k3fix_final29175",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "814245569ed35da6fa17153b7a8dd016495b4eec2223dcd7f4ccf9fd8f21ba70",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.8817425083240845,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.3648188798937881
+   },
+   "challengers": [
+    {
+     "job": "ep11_k3fix_t2wbest28000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.8714622641509433,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 1.42895179893994
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      28000
+     ]
+    }
+   ],
+   "selected": "ep11_k3fix_final29175",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep11_k3fix_final29175",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep11_raw_final28925",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep11_k3fix_t2wbest28000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 12,
+   "object": "black_platform",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep12_k3fix_final23178",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.7196071428571429,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.8428037105896303
+   },
+   "challengers": [
+    {
+     "job": "ep12_k3fix_t2wbest20000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.7206964285714286,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 0.8664742398454489
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      20000
+     ]
+    }
+   ],
+   "selected": "ep12_k3fix_final23178",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep12_k3fix_final23178",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep12_raw_final37575",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep12_k3fix_t2wbest20000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 13,
+   "object": "snack_box",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep13_k3fix_final39254",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "c36c13db6440cd363a618e2261804e4ba36591f17b46f81d5af03f65dd091c16",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.8405504338394794,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.1724630287811055
+   },
+   "challengers": [],
+   "selected": "ep13_k3fix_final39254",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep13_k3fix_final39254",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep13_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 14,
+   "object": "round_table",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep14_k3fix_final44922",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "98ec1c57bdcadd2b7b63adabe1defc25501bd685ee96ff4066220b5d23a27d76",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.556885699899295,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 28.72866745334418
+   },
+   "challengers": [
+    {
+     "job": "ep14_k3fix_t2wbest36000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.5648413897280966,
+      "sp_sr": 0.0,
+      "mp_sr": 0.0,
+      "mppe": 23.712760544809534
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "B",
+      36000
+     ]
+    }
+   ],
+   "selected": "ep14_k3fix_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep14_k3fix_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep14_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep14_k3fix_t2wbest36000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 15,
+   "object": "wet_floor_sign",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep15_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "bf06225bc599066bcc51dc80b3652ec7f91736d1f6bf2d19125c6d1fc54fded3",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.6995804195804196,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.150843122794107
+   },
+   "challengers": [],
+   "selected": "ep15_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep15_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep15_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 16,
+   "object": "spray_bottle",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep16_k3fix_final32063",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "5adf79bdfc8edff59ff3579769332890651ede89ff921b87e51ed0f7c696cbe8",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.7669811320754718,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.5199539609389414
+   },
+   "challengers": [
+    {
+     "job": "ep16_k3fix_t2wbest32000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.7630503144654088,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 1.55550083637969
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      32000
+     ]
+    }
+   ],
+   "selected": "ep16_k3fix_final32063",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep16_k3fix_final32063",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep16_raw_final31268",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep16_k3fix_t2wbest32000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 17,
+   "object": "traffic_cone",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep17_k3fix_final29845",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "25c13883a34052b7c6bdb04357c868d975bb0bf54d4acd1b807e53fdf9e11c7a",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.7542613636363636,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.9179325649133667
+   },
+   "challengers": [],
+   "selected": "ep17_k3fix_final29845",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep17_k3fix_final29845",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep17_raw_final31807",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 18,
+   "object": "blue_trash_can",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep18_k3fix_final18911",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9297202797202798,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6796237997061993
+   },
+   "challengers": [
+    {
+     "job": "ep18_k3fix_t2wbest18000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9339306526806528,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 0.6761535617046712
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      18000
+     ]
+    }
+   ],
+   "selected": "ep18_k3fix_final18911",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep18_k3fix_final18911",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep18_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep18_k3fix_t2wbest18000"
+   ],
+   "diff_input": []
+  },
+  {
+   "episode": 19,
+   "object": "cane",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep19_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "9179b0ac91f6ced6a1b3aced68b20de96e424e666d9892384f455dcdffb84ace",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.1658860045146727,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 59.55367070537653
+   },
+   "challengers": [],
+   "selected": "ep19_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep19_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep19_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": [
+    "ep19_zx_g2_18000"
+   ]
+  },
+  {
+   "episode": 20,
+   "object": "rice_cooker",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep20_k3easy_final18450",
+   "chosen_input": "k3",
+   "chosen_parquet": "2784cae6dc09774f0ed7536e00c884276bbe0c49f2d0aa0e14c2feea6b964558",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9088833634719711,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 1.0567415008879446
+   },
+   "challengers": [],
+   "selected": "ep20_k3easy_final18450",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep20_k3easy_final18450",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep20_raw_final19034",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 21,
+   "object": "tall_bar_stool",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep21_k3fix_final44922",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "57ae96f315735435f34f387fca5bd2b82126d4be4c87bba5f14971e8c1fdb734",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.5469210914454277,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.1143644128495516
+   },
+   "challengers": [],
+   "selected": "ep21_k3fix_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep21_k3fix_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep21_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 22,
+   "object": "step_ladder",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep22_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "12d1318f3ff459b05905cbb59dd1741d6281eb0ff6ca386fbc45e569773aa290",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.4777121001390821,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.4399793153925287
+   },
+   "challengers": [],
+   "selected": "ep22_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep22_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep22_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 23,
+   "object": "toy_stroller",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep23_k3easy_final19162",
+   "chosen_input": "k3",
+   "chosen_parquet": "3f6aaa9e0378028395c9fcf835b9c306e38950fa4e99acfcf1bbc5284af34e84",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9525898520084567,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.7585033697666429
+   },
+   "challengers": [],
+   "selected": "ep23_k3easy_final19162",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep23_k3easy_final19162",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep23_raw_final20023",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 24,
+   "object": "watering_can",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep24_k3fix_final20636",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "cafbf612668ef29466c2db5720380dc8e1227c2479a798ade81ec56005caf1f2",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9483288770053475,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6607438096301224
+   },
+   "challengers": [],
+   "selected": "ep24_k3fix_final20636",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep24_k3fix_final20636",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep24_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 25,
+   "object": "cyan_water_bottle",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep25_k3fix_final42819",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "273a87f5d475548e386977ae6da34b389a9a473f65d8b1e5555c48825410808e",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.34447031431897557,
+    "sp_sr": 0.4,
+    "mp_sr": 0.4,
+    "mppe": 78.04504268500804
+   },
+   "challengers": [],
+   "selected": "ep25_k3fix_final42819",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep25_k3fix_final42819",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep25_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 26,
+   "object": "skateboard",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep26_raw_final34948",
+   "chosen_input": "raw",
+   "chosen_parquet": "074c06f5ee107acd3ec4f9343c5ab45293fb3ab5eb7ad24c04c9ae77ff947e16",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.2699177877428999,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.5758043758268725
+   },
+   "challengers": [],
+   "selected": "ep26_raw_final34948",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep26_raw_final34948",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep26_raw_final34948",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": [
+    "ep26_zx_k3fix_16000"
+   ]
+  },
+  {
+   "episode": 27,
+   "object": "woven_basket",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep27_k3fix_final20863",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "28fe6aee2fc74dab47895b0d4aa9f968cb0f7fc238e894fd3786cb5b2c5cb045",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9753761061946904,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6455800819418087
+   },
+   "challengers": [],
+   "selected": "ep27_k3fix_final20863",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep27_k3fix_final20863",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep27_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": []
+  },
+  {
+   "episode": 28,
+   "object": "squeegee",
+   "verdict_choice": "RAW",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep28_raw_final44922",
+   "chosen_input": "raw",
+   "chosen_parquet": "24b10cba03d85ef38fb91f2caf1ced2f54a0b2fe112cb3c213a0fad1038c3d78",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.03223684210526316,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 54.918334889637876
+   },
+   "challengers": [],
+   "selected": "ep28_raw_final44922",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep28_raw_final44922",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep28_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [],
+   "diff_input": [
+    "ep28_zx_g2_16000"
+   ]
+  },
+  {
+   "episode": 29,
+   "object": "rolling_luggage",
+   "verdict_choice": "K3FIX",
+   "verdict_settled": true,
+   "flags": [],
+   "chosen": "ep29_k3fix_final17358",
+   "chosen_input": "k3fix",
+   "chosen_parquet": "9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830",
+   "chosen_n_ok": 5,
+   "chosen_n_final": 5,
+   "chosen_mean": {
+    "auc": 0.9267933618843683,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6696138667179458
+   },
+   "challengers": [
+    {
+     "job": "ep29_k3fix_t2wbest16000",
+     "family": "t2watch_best",
+     "settled": true,
+     "n_ok": 5,
+     "n_final": 5,
+     "mean": {
+      "auc": 0.9273286937901499,
+      "sp_sr": 1.0,
+      "mp_sr": 1.0,
+      "mppe": 0.6783070631256816
+     },
+     "qualifies": false,
+     "why_not": [
+      "mean AUC < CHOSEN + 0.01"
+     ],
+     "order": [
+      0,
+      "A",
+      16000
+     ]
+    }
+   ],
+   "selected": "ep29_k3fix_final17358",
+   "selected_reason": "CHOSEN kept (no qualifying challenger)",
+   "selected_p": "ep29_k3fix_final17358",
+   "selected_p_reason": "CHOSEN kept (no qualifying challenger)",
+   "rawref": "ep29_raw_final44922",
+   "evaluations_pending": false,
+   "same_input_other": [
+    "ep29_k3fix_t2wbest16000"
+   ],
+   "diff_input": []
+  }
+ ]
+}

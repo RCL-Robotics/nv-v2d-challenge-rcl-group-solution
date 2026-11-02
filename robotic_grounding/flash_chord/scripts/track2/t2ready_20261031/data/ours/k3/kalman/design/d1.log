@@ -1,0 +1,186 @@
+ep00 tall_bar_stool       res s2r 2.2e-16 cv2r pos 6.3e-08 rot 4.76e-06 C 0.00deg up.hips 0.91 rest 0.55 stance L 0.41 R 0.32 empty_support True
+ep01 vacuum               res s2r 5.4e-16 cv2r pos 4.1e-08 rot 4.38e-06 C 0.00deg up.hips 0.94 rest 0.30 stance L 0.22 R 0.24 empty_support False
+ep02 blue_easter_basket   res s2r 2.2e-16 cv2r pos 6.8e-08 rot 5.25e-06 C 0.00deg up.hips 0.95 rest 0.43 stance L 0.36 R 0.36 empty_support False
+ep03 contigo_coffee_mug   res s2r 1.3e-16 cv2r pos 8.5e-08 rot 4.93e-06 C 0.00deg up.hips 0.91 rest 0.40 stance L 0.81 R 0.82 empty_support False
+ep04 baseball_bat         res s2r 1.4e-15 cv2r pos 8.3e-08 rot 4.73e-06 C 0.00deg up.hips 0.91 rest 0.23 stance L 0.11 R 0.13 empty_support True
+ep05 big_black_box        res s2r 3.3e-16 cv2r pos 6.0e-08 rot 4.67e-06 C 0.00deg up.hips 0.96 rest 0.49 stance L 0.13 R 0.06 empty_support True
+ep06 monitor              res s2r 2.2e-16 cv2r pos 7.9e-08 rot 6.20e-06 C 0.00deg up.hips 0.91 rest 0.59 stance L 0.35 R 0.28 empty_support False
+ep07 iron                 res s2r 3.7e-16 cv2r pos 6.5e-08 rot 4.66e-06 C 0.00deg up.hips 0.92 rest 0.35 stance L 0.75 R 0.73 empty_support False
+ep08 skinny_wood_chair    res s2r 2.2e-16 cv2r pos 4.3e-08 rot 5.18e-06 C 0.00deg up.hips 0.91 rest 0.70 stance L 0.35 R 0.33 empty_support True
+ep09 big_red_bowl         res s2r 3.1e-16 cv2r pos 6.9e-08 rot 5.03e-06 C 0.00deg up.hips 0.90 rest 0.29 stance L 0.26 R 0.23 empty_support False
+ep10 white_desk           res s2r 8.9e-16 cv2r pos 7.1e-08 rot 4.82e-06 C 0.00deg up.hips 0.97 rest 0.60 stance L 0.22 R 0.25 empty_support True
+ep11 light_blue_book      res s2r 1.1e-16 cv2r pos 6.3e-08 rot 5.38e-06 C 0.00deg up.hips 0.93 rest 0.29 stance L 0.35 R 0.31 empty_support False
+ep12 black_platform       res s2r 2.9e-15 cv2r pos 4.2e-08 rot 5.97e-06 C 0.00deg up.hips 0.92 rest 0.47 stance L 0.25 R 0.29 empty_support True
+ep13 snack_box            res s2r 6.7e-16 cv2r pos 7.1e-08 rot 4.94e-06 C 0.00deg up.hips 0.91 rest 0.51 stance L 0.22 R 0.29 empty_support False
+ep14 round_table          res s2r 1.7e-16 cv2r pos 6.9e-08 rot 4.67e-06 C 0.00deg up.hips 0.90 rest 0.32 stance L 0.18 R 0.15 empty_support True
+ep15 wet_floor_sign       res s2r 3.6e-16 cv2r pos 6.5e-08 rot 4.69e-06 C 0.00deg up.hips 0.98 rest 0.39 stance L 0.10 R 0.11 empty_support True
+ep16 spray_bottle         res s2r 4.4e-16 cv2r pos 7.5e-08 rot 4.10e-06 C 0.00deg up.hips 0.92 rest 0.44 stance L 0.03 R 0.12 empty_support False
+ep17 traffic_cone         res s2r 3.3e-16 cv2r pos 6.7e-08 rot 3.15e-06 C 0.00deg up.hips 0.95 rest 0.52 stance L 0.11 R 0.10 empty_support False
+ep18 blue_trash_can       res s2r 3.3e-16 cv2r pos 6.1e-08 rot 4.84e-06 C 0.00deg up.hips 0.99 rest 0.59 stance L 0.18 R 0.27 empty_support True
+ep19 cane                 res s2r 4.4e-16 cv2r pos 7.9e-08 rot 4.26e-06 C 0.00deg up.hips 1.00 rest 0.18 stance L 0.13 R 0.14 empty_support True
+ep20 rice_cooker          res s2r 1.3e-15 cv2r pos 4.3e-08 rot 1.43e-05 C 0.00deg up.hips 0.95 rest 0.67 stance L 0.56 R 0.57 empty_support False
+ep21 tall_bar_stool       res s2r 8.1e-16 cv2r pos 7.3e-08 rot 4.91e-06 C 0.00deg up.hips 0.96 rest 0.41 stance L 0.17 R 0.17 empty_support True
+ep22 step_ladder          res s2r 4.6e-16 cv2r pos 8.2e-08 rot 4.59e-06 C 0.00deg up.hips 0.91 rest 0.46 stance L 0.03 R 0.05 empty_support True
+ep23 toy_stroller         res s2r 3.2e-15 cv2r pos 6.5e-08 rot 4.55e-06 C 0.00deg up.hips 0.95 rest 0.17 stance L 0.12 R 0.24 empty_support True
+ep24 watering_can         res s2r 1.1e-16 cv2r pos 2.2e-08 rot 4.59e-06 C 0.00deg up.hips 0.53 rest 0.49 stance L 0.68 R 0.78 empty_support True
+ep25 cyan_water_bottle    res s2r 1.1e-16 cv2r pos 8.2e-08 rot 5.15e-06 C 0.00deg up.hips 1.03 rest 0.20 stance L 0.41 R 0.45 empty_support False
+ep26 skateboard           res s2r 1.4e-16 cv2r pos 3.2e-08 rot 5.08e-06 C 0.00deg up.hips 0.88 rest 0.62 stance L 0.59 R 0.57 empty_support True
+ep27 woven_basket         res s2r 2.2e-16 cv2r pos 7.5e-08 rot 4.60e-06 C 0.00deg up.hips 0.97 rest 0.38 stance L 0.27 R 0.14 empty_support False
+ep28 squeegee             res s2r 5.4e-16 cv2r pos 8.2e-08 rot 4.78e-06 C 0.00deg up.hips 1.00 rest 0.12 stance L 0.30 R 0.21 empty_support False
+ep29 rolling_luggage      res s2r 2.2e-16 cv2r pos 5.9e-08 rot 4.60e-06 C 0.00deg up.hips 0.91 rest 0.63 stance L 0.07 R 0.34 empty_support True
+{
+ "lags": [
+  1,
+  2,
+  4,
+  8,
+  16,
+  32
+ ],
+ "fit": "gamma(l) = a + s*l least squares on lags [1, 2, 4, 8]",
+ "object": {
+  "n_runs_ge80": 48,
+  "gamma_pos_cm2": [
+   0.017455730649701056,
+   0.037055546338040764,
+   0.07868913901154034,
+   0.16102261391335335,
+   0.3092643388558429,
+   0.5883871214438938
+  ],
+  "gamma_rot_deg2": [
+   1.4763159873240361,
+   3.090111175795476,
+   6.462124640914069,
+   13.407223857760904,
+   28.415586656962812,
+   62.21967082784335
+  ],
+  "pos_intercept_cm2": -0.0035531027618047125,
+  "pos_slope_cm2_per_frame": 0.020562362730656952,
+  "rot_intercept_deg2": -0.2991433497160569,
+  "rot_slope_deg2_per_frame": 1.70882327071058,
+  "pos_slope_ci95": [
+   0.018421756030148635,
+   0.022868144092588957
+  ],
+  "pos_intercept_ci95": [
+   -0.00548288595200645,
+   -0.0017500696439749506
+  ],
+  "rot_slope_ci95": [
+   1.4094163374328907,
+   2.032848685701968
+  ],
+  "rot_intercept_ci95": [
+   -0.6392959064436425,
+   -0.030950169249251216
+  ],
+  "pos_slope_per_world_axis": [
+   0.007050509401509316,
+   0.006411062612522859,
+   0.007100790716624774
+  ],
+  "rot_slope_per_world_axis": [
+   0.5829970492996569,
+   0.5808951704216042,
+   0.5449310509893173
+  ],
+  "q_b_pos_cm_per_frame_per_axis": 0.082789618372227,
+  "q_b_rot_deg_per_frame_per_axis": 0.7547236294853412,
+  "n_runs_ge40": 83
+ },
+ "feet_ge80": {
+  "n_runs": 38,
+  "gamma_pos_cm2": [
+   0.1698037142273231,
+   0.3405526906962071,
+   0.6936291254868686,
+   1.355163855889227,
+   2.586266414403565,
+   5.334755387472335
+  ],
+  "gamma_rot_deg2": [
+   0.10964810771538484,
+   0.23060352124853978,
+   0.4992423157062272,
+   1.093216749113245,
+   2.352250892168007,
+   5.169925121659227
+  ],
+  "pos_intercept_cm2": 0.00457957535002415,
+  "pos_slope": 0.1693887389933019,
+  "rot_intercept_deg2": -0.04715623580488058,
+  "rot_slope": 0.14142237580019457,
+  "rot_slope_ci95": [
+   0.1234827137539714,
+   0.1587788268048497
+  ],
+  "pos_slope_ci95": [
+   0.14306721631662936,
+   0.19430085803662805
+  ],
+  "rot_slope_per_world_axis": [
+   0.045555462850311604,
+   0.04893536208859687,
+   0.04693155086128616
+  ],
+  "mean_sq_lever_toe_minus_hips_cm2": 7758.049927109286,
+  "rotation_lever_contribution_cm2_per_frame": 0.22280974168425466,
+  "q_root_rot_deg_per_frame_per_axis": 0.21711930345641353,
+  "q_root_trans_cm_per_frame_per_axis": 0.0
+ },
+ "feet_ge40": {
+  "n_runs": 86,
+  "gamma_pos_cm2": [
+   0.18484298250327022,
+   0.3683588172964413,
+   0.7272630793684264,
+   1.411441667029542,
+   2.7605180680990498
+  ],
+  "gamma_rot_deg2": [
+   0.11767473647976436,
+   0.24858650275636432,
+   0.5432353495421319,
+   1.2180748768166552,
+   2.7942072173475525
+  ],
+  "pos_intercept_cm2": 0.017216194475738123,
+  "pos_slope": 0.17486945121964845,
+  "rot_intercept_deg2": -0.06210650212909628,
+  "rot_slope": 0.15839983160742005,
+  "rot_slope_ci95": null,
+  "pos_slope_ci95": null,
+  "rot_slope_per_world_axis": [
+   0.04928979144719858,
+   0.056856374377724644,
+   0.05225366578249689
+  ],
+  "mean_sq_lever_toe_minus_hips_cm2": 7826.707005292632,
+  "rotation_lever_contribution_cm2_per_frame": 0.25176610893187623,
+  "q_root_rot_deg_per_frame_per_axis": 0.22978238372238202,
+  "q_root_trans_cm_per_frame_per_axis": 0.0
+ },
+ "hips_double_stance_ge80": {
+  "n_runs": 15,
+  "pos_slope": 0.07385488758435434,
+  "rot_slope": 0.26785974069978313,
+  "gamma_pos_cm2": [
+   0.01796471612027611,
+   0.05131115766129361,
+   0.16036340120226414,
+   0.5229258030559165,
+   1.6506718628607089,
+   4.650927408398047
+  ],
+  "gamma_rot_deg2": [
+   0.12282265387831479,
+   0.2836595850889995,
+   0.7155674512356694,
+   1.9661746480896387,
+   5.920976716648228,
+   17.267959008732298
+  ]
+ }
+}

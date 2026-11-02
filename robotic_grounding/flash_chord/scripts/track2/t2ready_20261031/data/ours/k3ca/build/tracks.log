@@ -1,0 +1,8 @@
+ep00 tall_bar_stool   contact  136 windows  6 | lam>0 0.13 mean 0.045 =1 0 (req contact 14, support 0) rounds [1, 0] | vs K3fix max 2.12 cm 22.8 deg | ok True
+ep05 big_black_box    contact  609 windows  5 | lam>0 0.30 mean 0.118 =1 0 (req contact 71, support 0) rounds [5, 2, 1, 1, 0] | vs K3fix max 1.09 cm 25.0 deg | ok True
+ep15 wet_floor_sign   contact  211 windows  3 | lam>0 0.25 mean 0.083 =1 0 (req contact 79, support 0) rounds [0] | vs K3fix max 1.87 cm 14.5 deg | ok True
+ep19 cane             contact  164 windows  9 | lam>0 0.45 mean 0.139 =1 0 (req contact 90, support 0) rounds [2, 0] | vs K3fix max 0.90 cm 12.8 deg | ok True
+ep22 step_ladder      contact  141 windows  3 | lam>0 0.37 mean 0.104 =1 0 (req contact 85, support 51) rounds [0] | vs K3fix max 1.55 cm 13.8 deg | ok True
+ep26 skateboard       contact  261 windows  2 | lam>0 0.29 mean 0.084 =1 0 (req contact 51, support 0) rounds [0] | vs K3fix max 1.29 cm 24.1 deg | ok True
+ep28 squeegee         contact   77 windows  3 | lam>0 0.40 mean 0.227 =1 0 (req contact 20, support 240) rounds [0] | vs K3fix max 0.89 cm 29.0 deg | ok True
+all_ok True; wrote /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/build/k3ca_tracks.npz (ad2044df614c644d)

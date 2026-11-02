@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-10-24 19:06:39",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "15263099f076b724"
+   ],
+   "missing": []
+  }
+ }
+}

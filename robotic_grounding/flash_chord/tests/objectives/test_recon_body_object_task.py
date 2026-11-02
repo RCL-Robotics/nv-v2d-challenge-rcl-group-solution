@@ -558,7 +558,9 @@ def test_dataclass_fields_append_only():
     from flash_chord.objectives.recon_body import ReconBodyObjective, ReconBodyObjectiveConfig
 
     names = [field.name for field in dataclasses.fields(ReconBodyObjectiveConfig)]
-    assert names[-3:] == ["object_task_weight", "object_task_position_beta", "object_task_rotation_beta"]
-    assert names[:-3][-1] == "sides" and len(names) == 28
+    assert names[-6:-3] == ["object_task_weight", "object_task_position_beta", "object_task_rotation_beta"]
+    # The post-release options (tests/objectives/test_recon_body_object_task_release.py) come after object_task.
+    assert names[-3:] == ["object_task_position_only_after_release", "no_drop_weight", "no_drop_margin_m"]
+    assert names[:-6][-1] == "sides" and len(names) == 31
     objective_names = [field.name for field in dataclasses.fields(ReconBodyObjective)]
-    assert objective_names[-1] == "stock_terms" and objective_names[-2] == "score"
+    assert objective_names[-3:] == ["score", "stock_terms", "release_mask"]

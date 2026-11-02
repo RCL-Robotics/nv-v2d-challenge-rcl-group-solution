@@ -1,0 +1,309 @@
+{
+ "built_at": "2026-10-24 23:45:23",
+ "prereg_sha256": "3eee7268d53d1c3669614c63b69a54fa2462cf624ed88c3f7e215f5cb9f51ee9",
+ "t2best5_driver_sha256": "24b9af39a2e2708641e7870447b12b6475c23aec9cd18ba71086768dd69cfc89",
+ "t2cons_eval_sha256": "2cf427866a9432a3bd1b8fbb7864149d4258a5d19100c20da92d32bfe4fbfa9b",
+ "t_c": "2026-10-24 23:24:16 CST",
+ "rows": [
+  {
+   "job": "ep05_zx_k3fix_26000",
+   "episode": 5,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-k3fix-ep05-ep26 (k3fix)",
+   "stage": "consensus PREREG 4.2 (new)",
+   "variants": "A,B",
+   "priority": 1,
+   "provisional": true,
+   "zuxing_run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05",
+   "iteration": 26000,
+   "tree": "b39b69b",
+   "designation": "Zuxing designated checkpoint at T_c (snapshot metrics.csv; PREREG 4.2)",
+   "designation_evidence": {
+    "snapshot_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs/zuxing_metrics/2026-10-24-tier2-runin-k3fix-ep05-ep26_eval_ep05__metrics.csv",
+    "n_rows": 13,
+    "n_eligible": 13,
+    "row": {
+     "iteration": "26000",
+     "add_auc": "0.6816425722831505",
+     "sp_sr": "1.0",
+     "mp_sr": "1.0",
+     "mppe_cm": "1.7373497316278412",
+     "chord_sr": "1.0",
+     "export_max_rel_diff": "1.52587890625e-05",
+     "stock_verified": "True",
+     "source_sha256": "4f925b2a34b93a540cdba278030d104355711d0165deec6f8ac6bcc97be574f6",
+     "finished_at": "2026-10-24T22:54:08+08:00"
+    }
+   },
+   "expected_sha256": "4f925b2a34b93a540cdba278030d104355711d0165deec6f8ac6bcc97be574f6",
+   "same_run_t2best5_job": "ep05_zx_k3fix_18000",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_26000.safetensors",
+   "object": "big_black_box",
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "training_sha256": "4f925b2a34b93a540cdba278030d104355711d0165deec6f8ac6bcc97be574f6",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "parquet_sha256": "2ccbe480076996db60963e0e6e88098f06a6a50107e02550c1915a63ea9c7115",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_26000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/rsi_26000.safetensors",
+   "rsi_sha256": "8ac781914b274b60b10e47fda0b86dabc4ae52b1fa5508513e30a37d6ba0055b",
+   "problems": [],
+   "notes": [
+    "hydra overrides task.parquet == t2_best5 row parquet"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "c0749211ce6d40ec"
+    ],
+    "missing": []
+   }
+  },
+  {
+   "job": "ep26_zx_k3fix_20000",
+   "episode": 26,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-k3fix-ep05-ep26 (k3fix)",
+   "stage": "consensus PREREG 4.2 (new)",
+   "variants": "A,B",
+   "priority": 1,
+   "provisional": true,
+   "zuxing_run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26",
+   "iteration": 20000,
+   "tree": "b39b69b",
+   "designation": "Zuxing designated checkpoint at T_c (snapshot metrics.csv; PREREG 4.2)",
+   "designation_evidence": {
+    "snapshot_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs/zuxing_metrics/2026-10-24-tier2-runin-k3fix-ep05-ep26_eval_ep26__metrics.csv",
+    "n_rows": 13,
+    "n_eligible": 13,
+    "row": {
+     "iteration": "20000",
+     "add_auc": "0.9032137518684603",
+     "sp_sr": "1.0",
+     "mp_sr": "1.0",
+     "mppe_cm": "1.0700109488454224",
+     "chord_sr": "1.0",
+     "export_max_rel_diff": "1.621246337890625e-05",
+     "stock_verified": "True",
+     "source_sha256": "249ed85df2fcbf14103e86931cf883ce2f5e6da36aca659c9d0310b14c38d081",
+     "finished_at": "2026-10-24T19:22:00+08:00"
+    }
+   },
+   "expected_sha256": "249ed85df2fcbf14103e86931cf883ce2f5e6da36aca659c9d0310b14c38d081",
+   "same_run_t2best5_job": "ep26_zx_k3fix_16000",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_20000.safetensors",
+   "object": "skateboard",
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "training_sha256": "249ed85df2fcbf14103e86931cf883ce2f5e6da36aca659c9d0310b14c38d081",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "01637248631c38d0ecf15041cf9a1a223adb542d6b615e9ce34e6b0e88c9d9cc",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_20000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/rsi_20000.safetensors",
+   "rsi_sha256": "7232b525d1c34bb33b9d424e5e539993b2ef00371199f321a8314394d3dde284",
+   "problems": [],
+   "notes": [
+    "hydra overrides task.parquet == t2_best5 row parquet"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "d3a4a2498480e715"
+    ],
+    "missing": []
+   }
+  },
+  {
+   "job": "ep04_zx_g2_18000",
+   "episode": 4,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "stage": "consensus PREREG 4.2 (new)",
+   "variants": "B",
+   "priority": 2,
+   "provisional": true,
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04",
+   "iteration": 18000,
+   "tree": "b39b69b",
+   "designation": "Zuxing designated checkpoint at T_c (snapshot metrics.csv; PREREG 4.2)",
+   "designation_evidence": {
+    "snapshot_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep04__metrics.csv",
+    "n_rows": 10,
+    "n_eligible": 10,
+    "row": {
+     "iteration": "18000",
+     "add_auc": "0.14352428393524283",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "117.50483360493472",
+     "chord_sr": "0.0",
+     "export_max_rel_diff": "9.059906005859375e-06",
+     "stock_verified": "True",
+     "source_sha256": "91e1a200eb75a1b312f10f16019243ca21a1b1627a80129942791fe134579f78",
+     "finished_at": "2026-10-24T21:23:23+08:00"
+    }
+   },
+   "expected_sha256": "91e1a200eb75a1b312f10f16019243ca21a1b1627a80129942791fe134579f78",
+   "same_run_t2best5_job": "ep04_zx_g2_12000",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/model_18000.safetensors",
+   "object": "baseball_bat",
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "training_sha256": "91e1a200eb75a1b312f10f16019243ca21a1b1627a80129942791fe134579f78",
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "4b07b0d1bd56cb48fe54642206a8939310470475de8cc785802a247fa4571bd1",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep04/model_18000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/rsi_18000.safetensors",
+   "rsi_sha256": "4f38bd00a07b8e839b38316f6f3562759d4159ac1027813a676d761b2dfdb79e",
+   "problems": [],
+   "notes": [
+    "hydra overrides task.parquet == t2_best5 row parquet"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "8572ed3bf973b08a"
+    ],
+    "missing": []
+   }
+  },
+  {
+   "job": "ep19_zx_g2_20000",
+   "episode": 19,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "stage": "consensus PREREG 4.2 (new)",
+   "variants": "B",
+   "priority": 2,
+   "provisional": true,
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19",
+   "iteration": 20000,
+   "tree": "b39b69b",
+   "designation": "Zuxing designated checkpoint at T_c (snapshot metrics.csv; PREREG 4.2)",
+   "designation_evidence": {
+    "snapshot_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep19__metrics.csv",
+    "n_rows": 13,
+    "n_eligible": 13,
+    "row": {
+     "iteration": "20000",
+     "add_auc": "0.13297121896162528",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "59.262281963425814",
+     "chord_sr": "0.0",
+     "export_max_rel_diff": "1.33514404296875e-05",
+     "stock_verified": "True",
+     "source_sha256": "9f0f090efb6ae2848db74e053ee4a4983bbb2cff690ccc70deb5f0db5940f977",
+     "finished_at": "2026-10-24T18:53:50+08:00"
+    }
+   },
+   "expected_sha256": "9f0f090efb6ae2848db74e053ee4a4983bbb2cff690ccc70deb5f0db5940f977",
+   "same_run_t2best5_job": "ep19_zx_g2_18000",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/model_20000.safetensors",
+   "object": "cane",
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "training_sha256": "9f0f090efb6ae2848db74e053ee4a4983bbb2cff690ccc70deb5f0db5940f977",
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "46039cd277b05a370082c5999fc51a8c5716db40ac35c5cc03ffab9f4260325a",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep19/model_20000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/rsi_20000.safetensors",
+   "rsi_sha256": "e2e5a647bf3aabdf2c9de302b2fe0057deb7ee3150035e796b3e99eb0f3211ea",
+   "problems": [],
+   "notes": [
+    "hydra overrides task.parquet == t2_best5 row parquet"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "7d05b4ab00818a6f"
+    ],
+    "missing": []
+   }
+  },
+  {
+   "job": "ep28_zx_g2_22000",
+   "episode": 28,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "Zuxing 2026-10-24-tier2-runin-g2 (g2)",
+   "stage": "consensus PREREG 4.2 (new)",
+   "variants": "B",
+   "priority": 2,
+   "provisional": true,
+   "zuxing_run": "2026-10-24-tier2-runin-g2",
+   "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28",
+   "iteration": 22000,
+   "tree": "b39b69b",
+   "designation": "Zuxing designated checkpoint at T_c (snapshot metrics.csv; PREREG 4.2)",
+   "designation_evidence": {
+    "snapshot_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep28__metrics.csv",
+    "n_rows": 12,
+    "n_eligible": 12,
+    "row": {
+     "iteration": "22000",
+     "add_auc": "0.41308198380566796",
+     "sp_sr": "0.0",
+     "mp_sr": "0.0",
+     "mppe_cm": "8.424795343821586",
+     "chord_sr": "0.0",
+     "export_max_rel_diff": "1.7642974853515625e-05",
+     "stock_verified": "True",
+     "source_sha256": "8750a1427b4bf729ecd2061fe45d07dd756ef4722004a2f5688e84edd35b1b4f",
+     "finished_at": "2026-10-24T21:39:25+08:00"
+    }
+   },
+   "expected_sha256": "8750a1427b4bf729ecd2061fe45d07dd756ef4722004a2f5688e84edd35b1b4f",
+   "same_run_t2best5_job": "ep28_zx_g2_16000",
+   "training_checkpoint_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/model_22000.safetensors",
+   "object": "squeegee",
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "training_sha256": "8750a1427b4bf729ecd2061fe45d07dd756ef4722004a2f5688e84edd35b1b4f",
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+   "parquet_sha256": "0d49273db7dc2eabd1a3f8c541f6211da6af50927dbcc60d2237adc22f3474d9",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts/2026-10-24-tier2-runin-g2/ep28/model_22000.safetensors",
+   "rsi_original": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/rsi_22000.safetensors",
+   "rsi_sha256": "ab24d457436fce554de9313a83f479329af24fdd4a1b5a713ba44b2fd964ecda",
+   "problems": [],
+   "notes": [
+    "hydra overrides task.parquet == t2_best5 row parquet"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "0885d534a2fd2869"
+    ],
+    "missing": []
+   }
+  }
+ ]
+}

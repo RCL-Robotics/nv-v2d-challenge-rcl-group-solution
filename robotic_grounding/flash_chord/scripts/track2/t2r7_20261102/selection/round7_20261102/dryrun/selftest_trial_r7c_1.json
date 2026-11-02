@@ -1,0 +1,234 @@
+{
+ "written_at": "2026-11-02 07:01:49",
+ "script_sha256": "f81e6308fdb53259f989f2b3e0e88fa9ada90b43f00b138cc7ca18d3c20392c8",
+ "round2_scorer_sha256": "ddee0b8b6fa25029275b21a3dc82d15c36f4de71c0a61f2a1046869b01ec13aa",
+ "gate_script_sha256": "a29c997b7271e9299db109e97af5210f528484719210bb58685523b0ae0eb16b",
+ "consensus_script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "pass": true,
+ "n_tests": 44,
+ "problems": [],
+ "trial": 1,
+ "tests": [
+  {
+   "test": "pinned modules: round 2's scorer (ddee0b8b) -> gate (a29c997b) -> consensus (e1b943b1); run_flags / SCORE_COLS / pin_lines are round 2's objects; gate seeds 0..9, band 0.02",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "constants: margin 0.01, floors 2/3 and 8/10, >= 8 fresh / ok runs, 3 / 10 runs, STRICT = 00 16 19 20 22 25 28, 23 incumbents + 7 references = 30 episodes",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "precondition: 3 runs with mean exactly m_P + 0.01 exist",
+   "ok": true,
+   "detail": "[0.51, 0.51, 0.51]"
+  },
+  {
+   "test": "5.4: cons_S exactly m_P_frozen + 0.01 qualifies (>=, exact floats)",
+   "ok": true,
+   "detail": "[{'job': 'a', 'export_ok': True, 'n_own_ok': 3, 'own_runs': [1, 2, 3], 'flagged': False, 'floor_count': 3, 'cons_runs': [1, 2, 3], 'cons_auc': [0.51, 0.51, 0.51], 'cons_mean': 0.51, 'cons_var': 0.0, 'cons_mppe_mean': 1.0, 'eligible': True, 'three_ok_unflagged': True, 'why_not': [], 'm_P_frozen': 0.5, 'bar': 0.51, 'delta_vs_m_P': 0.010000000000000009, 'barred': False, 'qualifies': True}]"
+  },
+  {
+   "test": "5.4: cons_S 1e-12 below m_P + 0.01 does not qualify",
+   "ok": true,
+   "detail": "[{'job': 'a', 'export_ok': True, 'n_own_ok': 3, 'own_runs': [1, 2, 3], 'flagged': False, 'floor_count': 3, 'cons_runs': [1, 2, 3], 'cons_auc': [0.509999999999, 0.509999999999, 0.509999999999], 'cons_mean': 0.509999999999, 'cons_var': 0.0, 'cons_mppe_mean': 1.0, 'eligible': True, 'three_ok_unflagged': True, 'why_not': ['cons_S < m_P_frozen + 0.01'], 'm_P_frozen': 0.5, 'bar': 0.51, 'delta_vs_m_P': 0"
+  },
+  {
+   "test": "5.4: floor 1/3, flagged, 2 scored runs, export not ok, 2 official runs are out; floor 2/3 qualifies; the highest qualifying mean wins",
+   "ok": true,
+   "detail": "[('fl1', ['floor 1/3 < 2']), ('fl2', []), ('flag', ['validation_failed (a run flagged by the own-input gate, 5.1)']), ('low', ['cons_S < m_P_frozen + 0.01']), ('noexp', ['export not ok']), ('own2', ['2 of 3 official runs ok']), ('two', ['2 of 3 official runs ok', 'not 3 consensus-scored runs'])]"
+  },
+  {
+   "test": "5.4 ties: equal means -> lower variance, then lower MPPE, then job name",
+   "ok": true,
+   "detail": "t_b {'t_a': 0.6, 't_b': 0.6, 't_c': 0.6, 't_d': 0.6}"
+  },
+  {
+   "test": "5.4: no candidate -> no finalist",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "5.4 (PREREG_R7): a barred reused candidate stays S-eligible but is never the finalist; the next qualifying wins",
+   "ok": true,
+   "detail": "[{'job': 'best', 'export_ok': True, 'n_own_ok': 3, 'own_runs': [1, 2, 3], 'flagged': False, 'floor_count': 3, 'cons_runs': [1, 2, 3], 'cons_auc': [0.9, 0.9, 0.9], 'cons_mean': 0.9, 'cons_var': 0.0, 'cons_mppe_mean': 1.0, 'eligible': True, 'three_ok_unflagged': True, 'why_not': [\"reused round-6 finalist with the phase-F verdict 'no replacement' against the same incumbent (PREREG_R7 5.4): not a fina"
+  },
+  {
+   "test": "5.4 (PREREG_R7): only a barred candidate qualifies by value -> no finalist",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "5.4: select_s == an independent re-derivation on 800 random episodes (with barred candidates)",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "test": "5.4 STRICT: the top 2 S-eligible by cons_S (floor 1/3 and flagged out); rank 1 = best, rank 2 = next",
+   "ok": true,
+   "detail": "(['a', 'c'], 'S-eligible')"
+  },
+  {
+   "test": "5.4 STRICT: one S-eligible candidate -> one finalist",
+   "ok": true,
+   "detail": "(['a'], 'S-eligible')"
+  },
+  {
+   "test": "5.4 STRICT fallback: none S-eligible -> top 2 by (floor desc, cons_S desc) among 3 ok, unflagged runs (r: floor 1, 0.95; p: floor 1, 0.9; q: floor 0), marked fallback_unconfirmed_S",
+   "ok": true,
+   "detail": "(['r', 'p'], 'fallback_unconfirmed_S')"
+  },
+  {
+   "test": "5.4 STRICT: no candidate with 3 ok, unflagged runs -> halt",
+   "ok": true,
+   "detail": "([], 'halt')"
+  },
+  {
+   "test": "5.4 STRICT ties: variance, MPPE, job name",
+   "ok": true,
+   "detail": "['x2', 'x4']"
+  },
+  {
+   "test": "5.4 STRICT: select_strict == an independent re-derivation on 800 random episodes",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "test": "5.5: m_F exactly max(frozen, fresh) + 0.01 replaces (exact floats)",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': True, 'why_not': [], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.51, 'delta_vs_bar': 0.0}"
+  },
+  {
+   "test": "5.5: fresh incumbent mean above frozen raises the bar (0.58 >= 0.56 replaces; 0.555 does not)",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.55, 'm_P_fresh_infinite': False, 'bar': 0.56, 'finalist': 'f', 'changed': True, 'why_not': [], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.58, 'delta_vs_bar': 0.019999999999999907}"
+  },
+  {
+   "test": "5.5: frozen above fresh: the bar is m_P_frozen + 0.01",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.6, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.61, 'finalist': 'f', 'changed': False, 'why_not': ['(c) m_F < max(m_P_frozen, m_P_fresh) + 0.01'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.6050000000000001, 'delta_vs_bar': -0.004999999999999893}"
+  },
+  {
+   "test": "5.5: incumbent with 7 good runs -> m_P_fresh = +inf, no change",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': None, 'm_P_fresh_infinite': True, 'bar': None, 'finalist': 'f', 'changed': False, 'why_not': ['(c) m_F < max(m_P_frozen, m_P_fresh) + 0.01'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.9, 'delta_vs_bar': None}"
+  },
+  {
+   "test": "5.5: incumbent with 8 good runs -> m_P_fresh over them",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': True, 'why_not': [], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.9, 'delta_vs_bar': 0.39}"
+  },
+  {
+   "test": "5.5: a flagged finalist run -> not qualifying",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(a) 9 of 10 ok, non-flagged phase-F runs'], 'finalist_good_runs': [1, 2, 3, 5, 6, 7, 8, 9, 10], 'floor_count': 9, 'm_F': 0.8999999999999999, 'delta_vs_bar': 0.3899999999999999}"
+  },
+  {
+   "test": "5.5: 9 finalist runs -> not qualifying",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(a) 9 of 10 ok, non-flagged phase-F runs'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9], 'floor_count': 9, 'm_F': 0.8999999999999999, 'delta_vs_bar': 0.3899999999999999}"
+  },
+  {
+   "test": "5.5: floor 7/10 -> not qualifying",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(b) own-input SP-SR = MP-SR = 1 in 7 < 8 runs'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.9, 'delta_vs_bar': 0.39}"
+  },
+  {
+   "test": "5.5: floor 8/10 qualifies",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': True, 'why_not': [], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 8, 'm_F': 0.9, 'delta_vs_bar': 0.39}"
+  },
+  {
+   "test": "5.5: no finalist -> P stays",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.5, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': None, 'changed': False, 'why_not': ['no finalist (5.4)']}"
+  },
+  {
+   "test": "5.5 STRICT: rank 1 confirmed -> rank 1 (whatever rank 2's m_F)",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.5, 'confirmed': True, 'why_not_confirmed': []}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.9, 'confirmed': True, 'why_not_confirmed': []}], 'pick': 'r1', 'pick_rank': 1, 'status': 'confirmed', 'changed': False}"
+  },
+  {
+   "test": "5.5 STRICT: rank 1 floor 7/10 -> rank 2 if confirmed (floor 8/10)",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.9, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 7 < 8 runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 8, 'm_F': 0.5, 'confirmed': True, 'why_not_confirmed': []}], 'pick': 'r2', 'pick_rank': 2, 'status': 'confirm"
+  },
+  {
+   "test": "5.5 STRICT: rank 1 with 9 runs is not confirmed -> rank 2",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 9, 'm_F': 0.8999999999999999, 'confirmed': False, 'why_not_confirmed': ['9 of 10 ok, non-flagged phase-F runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.5, 'confirmed': True, 'why_not_confirmed': []}], 'pick': 'r2', 'pick_rank': 2, 'status': "
+  },
+  {
+   "test": "5.5 STRICT: neither confirmed -> more SP=MP=1 runs wins (rank 1: 9 good runs, floor 9 vs 0)",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 9, 'm_F': 0.8999999999999999, 'confirmed': False, 'why_not_confirmed': ['9 of 10 ok, non-flagged phase-F runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 0, 'm_F': 0.5, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 0 < 8 runs']}"
+  },
+  {
+   "test": "5.5 STRICT: neither confirmed, equal floors -> higher m_F",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 6, 'm_F': 0.5, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 6 < 8 runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 6, 'm_F': 0.9, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 6 < 8 runs']}], 'pic"
+  },
+  {
+   "test": "5.5 STRICT: neither confirmed, equal floors and m_F -> phase-S rank",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 6, 'm_F': 0.5, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 6 < 8 runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 6, 'm_F': 0.5, 'confirmed': False, 'why_not_confirmed': ['own-input SP-SR = MP-SR = 1 in 6 < 8 runs']}], 'pic"
+  },
+  {
+   "test": "5.5 STRICT: a finalist with 7 ok runs is out of the unconfirmed choice",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.9000000000000001, 'confirmed': False, 'why_not_confirmed': ['7 of 10 ok, non-flagged phase-F runs', 'own-input SP-SR = MP-SR = 1 in 7 < 8 runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 0, 'm_F': 0.9, 'confirmed': False, 'why_not_confirmed': ['own-i"
+  },
+  {
+   "test": "5.5 STRICT: neither has >= 8 ok, non-flagged runs -> halt",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.9000000000000001, 'confirmed': False, 'why_not_confirmed': ['7 of 10 ok, non-flagged phase-F runs', 'own-input SP-SR = MP-SR = 1 in 7 < 8 runs']}, {'job': 'r2', 'rank': 2, 'good_runs': [4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.9000000000000001, 'confirmed': False, 'why_not_confirmed': ["
+  },
+  {
+   "test": "5.5 STRICT: a single finalist, confirmed",
+   "ok": true,
+   "detail": "{'finalists': [{'job': 'r1', 'rank': 1, 'good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.9, 'confirmed': True, 'why_not_confirmed': []}], 'pick': 'r1', 'pick_rank': 1, 'status': 'confirmed', 'changed': False}"
+  },
+  {
+   "test": "5.6: a flagged run (trial 3) or a missing run (trial 8) makes the trial incomplete",
+   "ok": true,
+   "detail": "{'trial': 3, 'complete': False, 'missing_episodes': [7]}"
+  },
+  {
+   "test": "5.6: R7-CLOSEST = the complete trial closest to the own-input mean (independent re-derivation)",
+   "ok": true,
+   "detail": "5 5"
+  },
+  {
+   "test": "5.6 ties (exact binary values): equal own-input distance -> smaller consensus-B distance (trials 2, 4), then lower t (2); all equal -> lower t; no complete trial -> none",
+   "ok": true,
+   "detail": "2 1"
+  },
+  {
+   "test": "5.6: Delta_B (report only) is paired over the trials complete for BOTH sets",
+   "ok": true,
+   "detail": "{'report_only': True, 'shared_trials': [1, 3, 4, 6, 7, 8, 9, 10], 'delta_B': 0.010000000000000009, 's7_own_sp': 0.9, 'ref6_own_sp': 0.9, 's7_own_mp': 0.9, 'ref6_own_mp': 0.9, 's7_own_auc': 0.5, 'ref6_own_auc': 0.5, 's7_own_mppe': 1.0, 'ref6_own_mppe': 1.0, 's7_cons_auc': 0.61, 'ref6_cons_auc': 0.6, 's7_cons_mppe': 1.0, 'ref6_cons_mppe': 1.0}"
+  },
+  {
+   "test": "guard refuses every forbidden pattern of PREREG_R7 5.2",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "test": "guard passes the rule inputs of 5.1-5.6",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "test": "input references: raw = released Tier 2, k3fix / k3 / k3ca / g2 = round 1's INPUT_REF",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "incumbents: 23 rows == PREREG_R7 4.1 table; frozen runs == the frozen scores CSV of the selecting round; m_P_frozen = the pinned stats() mean == that round's frozen job stats mean (exact; ep04 / ep11 also == selection_r6.json m_F); references == PREREG_R7 4.2 table and round 6's S6, none in the pool; barred == ep12_raw_37575, ep13_raw_44922; pool roles 154 / 245 / 20",
+   "ok": true,
+   "detail": "23 incumbents, 7 references; resolver field differs in the last bits on []; barred {'12': ['ep12_raw_37575'], '13': ['ep13_raw_44922']}; reference files in the pool: []; pool roles {'reuse': 245, 'screen': 154, 'incumbent': 20}"
+  }
+ ],
+ "note": "synthetic values plus the pinned incumbent / reference / pool records; no round-7 score was read or computed"
+}

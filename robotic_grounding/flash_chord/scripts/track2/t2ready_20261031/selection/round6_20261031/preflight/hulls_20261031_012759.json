@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-10-31 01:27:59",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "d3a4a2498480e715"
+   ],
+   "missing": []
+  }
+ }
+}

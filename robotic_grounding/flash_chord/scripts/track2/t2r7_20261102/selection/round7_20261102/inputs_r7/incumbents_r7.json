@@ -1,0 +1,1746 @@
+{
+ "t_c": "2026-11-02 06:16:08 CST",
+ "t_c_epoch": 1793571368.5183752,
+ "script": "/root/autodl-tmp/haoran.zhang/scripts/t2cons_r7_pool.py",
+ "script_sha256": "7a08fa6d8be91140e139d914b8119352fabb05f58b415eb4a8904f9a02733770",
+ "K": 3,
+ "min_last_iteration": 10000,
+ "settle_seconds": 300.0,
+ "strict_episodes": [
+  0,
+  16,
+  19,
+  20,
+  22,
+  25,
+  28
+ ],
+ "rule": " (PREREG_R7 2.1, = round 6's R1-R5 plus R1b for the 5090 copies):\n  R1  a pro6000 TRAINING-RUN directory = a directory under the scanned roots holding model_<N>.safetensors files whose\n      embedded config output_dir resolves to that same directory; ours only if it is in round 6's eligible run list;\n      Zuxing's copy / retest / selection bundles are not training-run directories (never entered);\n  R1b a 5090 run = a row of Zuxing's 2026-11-01-round7-5090-ckpts/MANIFEST.tsv (45 rows): directory <run>, embedded\n      output_dir == /mnt/gfs/home/zuxinglu/workspace/runs/<run> exactly, MANIFEST episode / data root / sequence == the\n      checkpoint's, every selected file's sha256 == its SHA256SUMS line;\n  R2  the training parquet lies in a Tier-2-derived data root: raw Tier 2, K3, K3fix, K3CA (ours) or G2 (Zuxing's);\n  R3  only checkpoints written at least 300 s before T_c count; L = the largest such iteration; L < 10000 not eligible;\n  R4  K = 3: targets tau_j = L (1 - j / 6), j = 0..3; per target the saved iteration >= L/2 nearest to it (ties: the\n      larger); duplicates collapse (1..4 checkpoints per run; j = 0 is the run's last checkpoint at T_c);\n  R5  roles, in the deterministic order (episode, owner, directory): 'incumbent' = sha256 of the episode's round-7\n      incumbent training file (not screened); 'reuse' = sha256 of a round-6 phase-S screen candidate whose input\n      parquet and frame reference are unchanged (its round-6 export and 3 runs are reused, never re-run); 'duplicate' =\n      a sha256 selected earlier; every other file is 'screen' (one export, 3 fresh runs).\n",
+ "source": "round-6 S6 (selection_r6.json, SELECTION_R6.sha256) outside STRICT",
+ "incumbents": {
+  "01": {
+   "episode": 1,
+   "job": "ep01_k3fix_final44922",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 44922,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep01_k3fix_final44922/export.json",
+   "export_record_sha256": "a55e582efcbb74e25cabb5cbc2bacf8786c7f72f355d8500d46a0c3f42cba50e",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep01_k3fix_final44922/try1/model_44922.safetensors",
+   "export_sha256": "a15d9e85b0458c8de2daeae826d26e48fcfa465f72c2b99480b0c2f711faa382",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42/model_44922.safetensors",
+   "training_sha256": "d40a325a7e1c45eeb81a8f278d868d3e2ab2daeb5210fd511963356a3d3e518b",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "object": "vacuum",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000001.npz",
+   "frame_ref_sha256": "53792e510d0f7cc2e4cf60cc1fa12c2bc2f6ddb458f212b0e8c132cd163b8547",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.17478246318607765,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 36.082634816997285
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.17034805890227578,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 36.33442052918603
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.16900937081659972,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 34.78792225290107
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.1683400267737617,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 36.226551213980215
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.17411311914323963,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 33.71503600317855
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.1713186077643909,
+   "r5_closest_run": 2,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "a15d9e85b0458c8de2daeae826d26e48fcfa465f72c2b99480b0c2f711faa382",
+   "role": "incumbent"
+  },
+  "02": {
+   "episode": 2,
+   "job": "ep02_k3fix_final34093",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 34093,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep02_k3fix_final34093/export.json",
+   "export_record_sha256": "37b74a93a11e1e2d78e48f3f74d06fa4b2810c1200a40a14f5c163b0aec10613",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep02_k3fix_final34093/try1/model_34093.safetensors",
+   "export_sha256": "3f1ae6373cfb88772bd88f69abbcd4c5e2968cf6c5e1dd8c0206d3593a9aedc6",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42/model_34093.safetensors",
+   "training_sha256": "3311068b016654b9bbf8178dc7aae73cf0f19c40308bd8844f1a19839d9198cf",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "object": "blue_easter_basket",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000002.npz",
+   "frame_ref_sha256": "eb4f96c8fe9f9709a748e6ba702c26825333fb0d420c614868b85b55f64c8b1c",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.8480229591836734,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3086698077079804
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.8725127551020408,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2940632824155676
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.8735969387755103,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2687746362044299
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.8699617346938775,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2421033435470472
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.876594387755102,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2384438175777528
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.8681377551020407,
+   "r5_closest_run": 4,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "3f1ae6373cfb88772bd88f69abbcd4c5e2968cf6c5e1dd8c0206d3593a9aedc6",
+   "role": "incumbent"
+  },
+  "03": {
+   "episode": 3,
+   "job": "ep03_k3fix_final27068",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 27068,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep03_k3fix_final27068/export.json",
+   "export_record_sha256": "14f7f780343a47a5cd0b6e37fcfc1d641728b6b4e594f6da23e2bd9f944eb381",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep03_k3fix_final27068/try1/model_27068.safetensors",
+   "export_sha256": "e042571ca8a01236598826c001a8618e32272dfb2bea9011a94b60a8cb4d5adb",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42/model_27068.safetensors",
+   "training_sha256": "88278b72cb51aad1b02d6347fa23487bab2a49c1524690b997d30c7b4802bc85",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "object": "contigo_coffee_mug",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000003.npz",
+   "frame_ref_sha256": "3ed2e3fc2c297d47b8dacbe275b5d1cacd806d8f401348b226d530c0461fb30b",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.9238156209987196,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1863734707552114
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.9250960307298335,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1686980138064031
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.9261363636363636,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1942398301290529
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.9102912932138284,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2323034856397779
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.9222951344430218,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1741635075205588
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.9215268886043534,
+   "r5_closest_run": 5,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "e042571ca8a01236598826c001a8618e32272dfb2bea9011a94b60a8cb4d5adb",
+   "role": "incumbent"
+  },
+  "04": {
+   "episode": 4,
+   "job": "ep04_zxg2_421500",
+   "source_round": "round6",
+   "input": "g2",
+   "owner": "zuxing",
+   "tree": "b39b69b",
+   "iteration": 421500,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep04_zxg2_421500/export.json",
+   "export_record_sha256": "f3c60703d9af2e445f59c2a8d50021f7e5e300c4798a9e449f98ab70820a03d4",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep04_zxg2_421500/try2/model_421500.safetensors",
+   "export_sha256": "ddb5605fdb14ca2a085aa3a801c6935406bd6bcea9e3ceb3d89c15d73b7fcf3c",
+   "export_tolerance": 0.0002,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/zuxing_copies_r6/2026-10-24-tier2-runin-g2/ep04/model_421500.safetensors",
+   "training_sha256": "967149d89fb81b46e3d6dbb4c2eb295beda7ea2645cc05805d7c14b5188b12f8",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/inputs_r6/pool_r6.json",
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "4b07b0d1bd56cb48fe54642206a8939310470475de8cc785802a247fa4571bd1",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "object": null,
+   "frame_ref_file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000004.npz",
+   "frame_ref_sha256": "9145827be3ba07deeba604de4074a699e1c3323e7ec6a3385bf279e9f464eaa0",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.413060398505604,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.982377367080075
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.42092154420921546,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.95216870626477
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.4105697384806974,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.976604507492811
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.424813200498132,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.947562340801044
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.4143057285180573,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.980163886601812
+    },
+    {
+     "run": 6,
+     "cons_auc": 0.41594022415940224,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.965259988892199
+    },
+    {
+     "run": 7,
+     "cons_auc": 0.4158623910336239,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 3.005378582074113
+    },
+    {
+     "run": 8,
+     "cons_auc": 0.41858655043586546,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.96735279359699
+    },
+    {
+     "run": 9,
+     "cons_auc": 0.41625155666251556,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.9852183832323766
+    },
+    {
+     "run": 10,
+     "cons_auc": 0.41726338729763385,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 2.9593795876855395
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/scores_f6/consensus_scores_f6.csv",
+   "frozen_scores_csv_sha256": "74c9c8856d5f2fd671b1e3f97763a03c26936be794c581581972c2d837e84ab4",
+   "m_P_frozen": 0.41675747198007473,
+   "selected_in": "round6",
+   "record_from": "round-6 phase-F replacement (final_r6.json, scores_f6, exports/)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "ddb5605fdb14ca2a085aa3a801c6935406bd6bcea9e3ceb3d89c15d73b7fcf3c",
+   "role": "incumbent"
+  },
+  "05": {
+   "episode": 5,
+   "job": "ep05_zx_k3fix_88000",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "zuxing",
+   "tree": "b39b69b",
+   "iteration": 88000,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/exports/ep05_zx_k3fix_88000/export.json",
+   "export_record_sha256": "f2276733147deaa28bf1b1857abc05a9bf278a68d37d46fa1b0e9476921f3c94",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/exports/ep05_zx_k3fix_88000/try1/model_88000.safetensors",
+   "export_sha256": "248dd05779f67e58165d6b5c77e54c75dbf7b7deb63fa4906770fe02781f9155",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts_a1/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_88000.safetensors",
+   "training_sha256": "f0234031e9eb5416ea43046797162da4224c5f939e73ca74928ac207be6e8dc1",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/manifest_a1.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "parquet_sha256": "2ccbe480076996db60963e0e6e88098f06a6a50107e02550c1915a63ea9c7115",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "object": "big_black_box",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000005.npz",
+   "frame_ref_sha256": "5f4952b6e9cb4c76a4293c864b11d8af8bee3fe4d9b1631043f836b96660a204",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.5770189431704886,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.175507560038801
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.5811316051844466,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1567532197325614
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.580134596211366,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1630086562072408
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.5778913260219343,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.157790430124923
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.5745887337986042,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1936170108459636
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.578153040877368,
+   "r5_closest_run": 4,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "248dd05779f67e58165d6b5c77e54c75dbf7b7deb63fa4906770fe02781f9155",
+   "role": "incumbent"
+  },
+  "06": {
+   "episode": 6,
+   "job": "ep06_k3fix_final28420",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 28420,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep06_k3fix_final28420/export.json",
+   "export_record_sha256": "d227f06438a354d2e00bfe0025af715e390b36bb532e3e9b4b952485d2f3171b",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep06_k3fix_final28420/try1/model_28420.safetensors",
+   "export_sha256": "84bd485806402cb21465b73efd4a84f0449cc00bc8e76eb7bd28bb73c69e848a",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42/model_28420.safetensors",
+   "training_sha256": "88dafebf221671b029996227fe60974a7b5467b74fa38ac3a02d65c318438347",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "object": "monitor",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000006.npz",
+   "frame_ref_sha256": "f5b0ad71a211f7b85c738e986db31605ca6606f3dfe00098670efda2dce3940e",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.7967032967032968,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1881926859747456
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.7923534798534798,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2308844984099259
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.7905219780219781,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1875328591828804
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.8036858974358975,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1945986553417132
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.8031135531135531,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1746375522346304
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.7972756410256411,
+   "r5_closest_run": 1,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "84bd485806402cb21465b73efd4a84f0449cc00bc8e76eb7bd28bb73c69e848a",
+   "role": "incumbent"
+  },
+  "07": {
+   "episode": 7,
+   "job": "ep07_k3fix_final18529",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 18529,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep07_k3fix_final18529/export.json",
+   "export_record_sha256": "ebdab268fe07672a2718f7bb48373854d9f6aea2d03a2151aca7191299ea9cb2",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep07_k3fix_final18529/try1/model_18529.safetensors",
+   "export_sha256": "b02cb8f6597f3b548b85f7be8f0c8a764e436d440566feaaf92102038c318bbf",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42/model_18529.safetensors",
+   "training_sha256": "bd6639ec7ff5fa65f8fc1cb6eacd9fa503f45e2509ced2d8d3d3c936f4102476",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "object": "iron",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000007.npz",
+   "frame_ref_sha256": "42798caa9b564a2c5f447184824f9ba1ae8db1102726f2f1fc43c4d9c6ce66e4",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.92041015625,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.191313410383316
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.9186662946428572,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1985355185789126
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.9185965401785714,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.215409597979954
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.9220145089285714,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.204175063149388
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.9225725446428572,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1863170207352087
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.9204520089285715,
+   "r5_closest_run": 1,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "b02cb8f6597f3b548b85f7be8f0c8a764e436d440566feaaf92102038c318bbf",
+   "role": "incumbent"
+  },
+  "08": {
+   "episode": 8,
+   "job": "ep08_k3easy_final17496",
+   "source_round": "round1",
+   "input": "k3",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 17496,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep08_k3easy_final17496/export.json",
+   "export_record_sha256": "18e5e61a6ceba3a44757e590c654e11478a60873ea3056a5af024b2003689772",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep08_k3easy_final17496/try1/model_17496.safetensors",
+   "export_sha256": "17d421a1938181f0aa75b28dcbbbab9f4987d7dbd68304736e41dcbd73d31bd7",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep08/model_17496.safetensors",
+   "training_sha256": "c8988396d70af9644c299844c949557be44fdefa17aff1ec90cd780710966bca",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "510bdc3d29bd9c4425e90b3a1ff479afb4f0a815dde1c816be6822bfb69ae592",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3",
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "object": "skinny_wood_chair",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3/episode_000008.npz",
+   "frame_ref_sha256": "9624dee44b2c297b2a637e16acac3ac917672e75d051b22341917e1aa1d3d654",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.6020480225988701,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.348332658764896
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.598340395480226,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.363363523049962
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.6016949152542372,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3399471419586841
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.5889830508474576,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3761950089107866
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.5907485875706214,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3743179202742286
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.5963629943502824,
+   "r5_closest_run": 2,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "17d421a1938181f0aa75b28dcbbbab9f4987d7dbd68304736e41dcbd73d31bd7",
+   "role": "incumbent"
+  },
+  "09": {
+   "episode": 9,
+   "job": "ep09_raw_final39328",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 39328,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep09_raw_final39328/export.json",
+   "export_record_sha256": "463d1cda88b7546cbca9b2dc8c693d727d4e688b8ccb04de8b632323cf42e0d4",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep09_raw_final39328/try1/model_39328.safetensors",
+   "export_sha256": "c73692c5b01ed77e927f23776cce655241ee92ae7f40b9cea65ab9a07441fb9b",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep09/model_39328.safetensors",
+   "training_sha256": "2f395947f7531111f4486b38662f6f82d8fe9bbd5a6c2f2198a1d9df39ee0818",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet",
+   "parquet_sha256": "7a85d63ffc4e5f8f03795c9e99ab483c8d2bde07e6975502305acea2f6953e6d",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "object": "big_red_bowl",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.7915229885057471,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6934560096504583
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.7949712643678162,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6644505081305692
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.7778735632183909,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6815730527100563
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.6533764367816093,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.619298179383421
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.7845545977011494,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6966898196739126
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.7604597701149426,
+   "r5_closest_run": 3,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "c73692c5b01ed77e927f23776cce655241ee92ae7f40b9cea65ab9a07441fb9b",
+   "role": "incumbent"
+  },
+  "10": {
+   "episode": 10,
+   "job": "ep10_raw_final34267",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 34267,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep10_raw_final34267/export.json",
+   "export_record_sha256": "e71f588e20c983459e2d6d5d1192b31a44397bd78f8d30b19b101b54fa6c542f",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep10_raw_final34267/try1/model_34267.safetensors",
+   "export_sha256": "2490e879451fe43d48528a98fee16b2765062c0a0d6d8fff4462f4d06eeb4f42",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep10/model_34267.safetensors",
+   "training_sha256": "6047240691d41a0726350ce0a0afa7ecabef1e7602d7dc9db106c6f6f71801a2",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "f825703de37a1b445802bda995ad7b3a41cf599d50ec140ca1aee44093298e39",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "object": "white_desk",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.423095088161209,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.836788783058075
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.4091624685138539,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8474953925006712
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.4056989924433249,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7930128137170616
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.4103431989924433,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8477852044257388
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.4140428211586902,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8570249878257834
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.41246851385390426,
+   "r5_closest_run": 5,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "2490e879451fe43d48528a98fee16b2765062c0a0d6d8fff4462f4d06eeb4f42",
+   "role": "incumbent"
+  },
+  "11": {
+   "episode": 11,
+   "job": "ep11_raw_24000",
+   "source_round": "round6",
+   "input": "raw",
+   "owner": "haoran",
+   "tree": "fc_r2",
+   "iteration": 24000,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep11_raw_24000/export.json",
+   "export_record_sha256": "74c2edef9c0b630ee9672c1e2dbd3117ae3bb4fc81d4b59a34fc556453d006e8",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep11_raw_24000/try1/model_24000.safetensors",
+   "export_sha256": "00cf20569e0c1c7566a840ff4cc3c4ba7f9b6741e80a96a38e390b541fdfd80d",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep11/model_24000.safetensors",
+   "training_sha256": "73c6e20d40c2871eb5aa34069be959bbdd939748b1df49db0d3f561a13ae945b",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/inputs_r6/pool_r6.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "parquet_sha256": "a3104698172ebb47e624eed07525baf9e5aa732ce7da6f63d38af1f60d42b182",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "object": null,
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.8024305555555555,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7320715014737655
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.8143750000000001,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6658167373120893
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.8072916666666667,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7653284709123
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.8009027777777777,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7355504469157208
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.8169444444444445,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7177609587495406
+    },
+    {
+     "run": 6,
+     "cons_auc": 0.8164583333333333,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7316752796514128
+    },
+    {
+     "run": 7,
+     "cons_auc": 0.7919444444444445,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8106058175426438
+    },
+    {
+     "run": 8,
+     "cons_auc": 0.8066666666666666,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.769327207104706
+    },
+    {
+     "run": 9,
+     "cons_auc": 0.803611111111111,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7648132240935144
+    },
+    {
+     "run": 10,
+     "cons_auc": 0.8125694444444445,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7610990593300926
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/scores_f6/consensus_scores_f6.csv",
+   "frozen_scores_csv_sha256": "74c9c8856d5f2fd671b1e3f97763a03c26936be794c581581972c2d837e84ab4",
+   "m_P_frozen": 0.8073194444444445,
+   "selected_in": "round6",
+   "record_from": "round-6 phase-F replacement (final_r6.json, scores_f6, exports/)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "00cf20569e0c1c7566a840ff4cc3c4ba7f9b6741e80a96a38e390b541fdfd80d",
+   "role": "incumbent"
+  },
+  "12": {
+   "episode": 12,
+   "job": "ep12_k3fix_final23178",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 23178,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep12_k3fix_final23178/export.json",
+   "export_record_sha256": "374fbd1576631de37d4749ef48ad1e9122f98166fd6bd384a89562612cf1eed7",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep12_k3fix_final23178/try1/model_23178.safetensors",
+   "export_sha256": "b455bb4dc1707de7e5a72a1d2de104d71e6a17318aea7652da9e983558b76605",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42/model_23178.safetensors",
+   "training_sha256": "3a25f30e76191f9b32e4ff7caf7b5ba98b508b64ba57b7a09e31f00c495885db",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+   "parquet_sha256": "5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "object": "black_platform",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000012.npz",
+   "frame_ref_sha256": "7e99d3017ed93d45bd7ba4d889b5135e7bdf2d598204adc87cf792a0c7deec21",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.5474107142857143,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.188267640917372
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.5416964285714285,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1781256941184832
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.5389285714285714,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2695864308699745
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.5483035714285716,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.191956063988009
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.5432142857142858,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1753567839113903
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.5439107142857142,
+   "r5_closest_run": 5,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "b455bb4dc1707de7e5a72a1d2de104d71e6a17318aea7652da9e983558b76605",
+   "role": "incumbent"
+  },
+  "13": {
+   "episode": 13,
+   "job": "ep13_k3fix_final39254",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 39254,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep13_k3fix_final39254/export.json",
+   "export_record_sha256": "95413400176f3edbd0d1c2a72d2e864fb1d0a154af0327638b15e2a50f8cc917",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep13_k3fix_final39254/try1/model_39254.safetensors",
+   "export_sha256": "bc146e3ea4a98084c9c0f6eb2e3e8802e7e380c7eb8791e9c4f2c98b5e5c9852",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep13_k3fix_s42/model_39254.safetensors",
+   "training_sha256": "dbb526df769794ccfc8b186a82b9eafd3fc78fa32eca11cecf7db5bfed3608b2",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "c36c13db6440cd363a618e2261804e4ba36591f17b46f81d5af03f65dd091c16",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "object": "snack_box",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000013.npz",
+   "frame_ref_sha256": "480683646be9f99203833a2423562f28b8d4921b8ad5703458242e389c444c7a",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.667367136659436,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8578719239697252
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.6666892624728851,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7377387208373896
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.6723156182212582,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7935075346729599
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.661808568329718,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7078896898254012
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.6592326464208244,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6343237063051006
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.6654826464208243,
+   "r5_closest_run": 2,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "bc146e3ea4a98084c9c0f6eb2e3e8802e7e380c7eb8791e9c4f2c98b5e5c9852",
+   "role": "incumbent"
+  },
+  "14": {
+   "episode": 14,
+   "job": "ep14_k3fix_final44922",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 44922,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep14_k3fix_final44922/export.json",
+   "export_record_sha256": "60bc374fc6985ff340e744f36aebc5ba7e0527a993d74a14d0f6e500ec2fca5c",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep14_k3fix_final44922/try1/model_44922.safetensors",
+   "export_sha256": "3c4740ef7bd4f60c49e8b9618ccf8ad788c36e34247407be979ef4e3dd39f453",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep14_k3fix_s42/model_44922.safetensors",
+   "training_sha256": "0f42a389a68ad1b71b4df5517ebc902b7172c803d6d6e94a105967b7bfabdccd",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest_stageB.jsonl",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "98ec1c57bdcadd2b7b63adabe1defc25501bd685ee96ff4066220b5d23a27d76",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "object": "round_table",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000014.npz",
+   "frame_ref_sha256": "555ec0993df16cd531359947b9498f3f642c41f6ecff6d629e1c0a895204d58d",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.3269133937562941,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 35.4412137792134
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.33345921450151056,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 36.74964956118678
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.330060422960725,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 24.439701461309905
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.33157099697885195,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 27.33297927359483
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.33106747230614303,
+     "cons_sp_sr": 0.0,
+     "cons_mp_sr": 0.0,
+     "cons_mppe": 20.610868314159024
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.3306143001007049,
+   "r5_closest_run": 5,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "3c4740ef7bd4f60c49e8b9618ccf8ad788c36e34247407be979ef4e3dd39f453",
+   "role": "incumbent"
+  },
+  "15": {
+   "episode": 15,
+   "job": "ep15_raw_final44922",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 44922,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep15_raw_final44922/export.json",
+   "export_record_sha256": "c59ef4defc243d5bc679d185c57a4c7c4c0f7d1af321dafde6926bb22ffd5e10",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep15_raw_final44922/try1/model_44922.safetensors",
+   "export_sha256": "d4bbb317cb71ebe6078b0b4cb089a778069b1efd12c9573033454c4d93bcdfe6",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep15/model_44922.safetensors",
+   "training_sha256": "db94b3d049043c87d183449f112eb18a1f141cf32fedea8657da7d1283204963",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "bf06225bc599066bcc51dc80b3652ec7f91736d1f6bf2d19125c6d1fc54fded3",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "object": "wet_floor_sign",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.7312937062937063,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.9326117493930965
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.7273601398601399,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8363473156152967
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.7326048951048951,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7822433102286273
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.7312062937062938,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8578837478087942
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.7270104895104895,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8133403380518178
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.7298951048951048,
+   "r5_closest_run": 4,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "d4bbb317cb71ebe6078b0b4cb089a778069b1efd12c9573033454c4d93bcdfe6",
+   "role": "incumbent"
+  },
+  "17": {
+   "episode": 17,
+   "job": "ep17_raw_final31807",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 31807,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep17_raw_final31807/export.json",
+   "export_record_sha256": "16a36ff931754a63548a956cc8a9d2fbeabbeffdc89a5f20870bf701fdcc12d6",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep17_raw_final31807/try1/model_31807.safetensors",
+   "export_sha256": "2188283c46ef28c8fa40786421ac64fbbaa5c2ac16c880caaf0c8631036a7c40",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep17/model_31807.safetensors",
+   "training_sha256": "9982179485955a64e69d44f11bab1d5cc0b2c73211e42b4bfa9520e3bea7765b",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "b31f0a7c0689eb57fb9275cffffd1697a5eef662f9930300efe9546c10e72c7b",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "object": "traffic_cone",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.6357954545454546,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.286037466695705
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.6519886363636364,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.247574228079505
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.6511363636363636,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.2482450756205767
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.6467329545454545,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.2637652738086054
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.6519886363636365,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.257683035014662
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.6475284090909093,
+   "r5_closest_run": 4,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "2188283c46ef28c8fa40786421ac64fbbaa5c2ac16c880caaf0c8631036a7c40",
+   "role": "incumbent"
+  },
+  "18": {
+   "episode": 18,
+   "job": "ep18_k3fix_final18911",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 18911,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep18_k3fix_final18911/export.json",
+   "export_record_sha256": "9ae7aa5b72247e1f3aa23b39916d2ef78b6a36395b5ea9632a5f1e7d4bcfc9f9",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep18_k3fix_final18911/try1/model_18911.safetensors",
+   "export_sha256": "de312489bafbc36a719240f5ef8d9b6d7b2907ae051e886ce1081f0763f7d592",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42/model_18911.safetensors",
+   "training_sha256": "6772981a857ebca570901d968d9bebd16b5e2253d5f4e1705506adcaf195020f",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "object": "blue_trash_can",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000018.npz",
+   "frame_ref_sha256": "9edb64511d5d878bdb7f9c19814a88addd7505379716735336905fd128d50e94",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.4206730769230769,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.7315305411172908
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.41892482517482516,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.736527891620279
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.413243006993007,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.8049969967517534
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.42271270396270394,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6945777984585353
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.4200903263403264,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.734525847008338
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.4191287878787879,
+   "r5_closest_run": 2,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "de312489bafbc36a719240f5ef8d9b6d7b2907ae051e886ce1081f0763f7d592",
+   "role": "incumbent"
+  },
+  "21": {
+   "episode": 21,
+   "job": "ep21_k3fix_final44922",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 44922,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep21_k3fix_final44922/export.json",
+   "export_record_sha256": "f318730eb1fbe0bdecea5fc6ddfaa9a859e6fdc5199ae38c80b19709aac861f3",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep21_k3fix_final44922/try1/model_44922.safetensors",
+   "export_sha256": "0e6399890edfc6f6bf67d4930fd9fddc4b6458ab14c3e85d03d97d48ccf9bb49",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep21_k3fix_s42/model_44922.safetensors",
+   "training_sha256": "86f0cccea46db21965592b6f37ba9ab327e3a13b55c7d6fc670ba141b7a6dc61",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest_stageB.jsonl",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet",
+   "parquet_sha256": "57ae96f315735435f34f387fca5bd2b82126d4be4c87bba5f14971e8c1fdb734",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "object": "tall_bar_stool",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000021.npz",
+   "frame_ref_sha256": "9bb13704e19db566b411b1f4d2f57e9ca92c7f02da1c01951d09cc5fb639ba79",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.4476401179941003,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.2077086192217608
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.44856194690265483,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.1953076857089417
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.4420169616519174,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.1928265812589065
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.4482853982300885,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.1993012901942723
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.4358407079646018,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 2.3085979799747594
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.44446902654867254,
+   "r5_closest_run": 3,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "0e6399890edfc6f6bf67d4930fd9fddc4b6458ab14c3e85d03d97d48ccf9bb49",
+   "role": "incumbent"
+  },
+  "23": {
+   "episode": 23,
+   "job": "ep23_raw_final20023",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 20023,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep23_raw_final20023/export.json",
+   "export_record_sha256": "f621977d26efffd0686be84a3bb867b7e602b6b4fcce2ef77b31f593911aa06e",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep23_raw_final20023/try1/model_20023.safetensors",
+   "export_sha256": "961b538e4679015e29a9de09205896d279e7838fa0148a86f8292a0c1d3e5c3f",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep23/model_20023.safetensors",
+   "training_sha256": "0f95efb02d2b0c4f2ce7c64e7b9cd0ab948314a1313a7486e7a906bbd92fdaac",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "e9e8739735e98ea0a4d6fbb28a8cc9f415d0af9e1b768c8a5257a84167cfc24c",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "object": "toy_stroller",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.9028805496828752,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3321725175742074
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.9010967230443975,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3196255840912334
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.9046643763213531,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3053088385989513
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.9014270613107822,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.32776513174915
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.9042679704016914,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3159571416949478
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.9028673361522198,
+   "r5_closest_run": 1,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "961b538e4679015e29a9de09205896d279e7838fa0148a86f8292a0c1d3e5c3f",
+   "role": "incumbent"
+  },
+  "24": {
+   "episode": 24,
+   "job": "ep24_raw_final44922",
+   "source_round": "round1",
+   "input": "raw",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 44922,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep24_raw_final44922/export.json",
+   "export_record_sha256": "2aeb5806b6e3fd8e47c02b44ccfc2319b0a34f457ef39d532e00f71d19e5adbf",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep24_raw_final44922/try1/model_44922.safetensors",
+   "export_sha256": "7bffc41746d13913657a0fe222af7619d83461437d8f37d66593f5ff18d959d0",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep24/model_44922.safetensors",
+   "training_sha256": "3fa5b224a0ffd495c586877e551f9a76ac373a572925a874ab1f491fd1661341",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "7f412f4b130db12430b2090f6749ce780d65c9a06377a22d9a08ab96453dbea6",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/track2_manifest.json",
+   "frame_refs": null,
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "object": "watering_can",
+   "frame_ref_file": null,
+   "frame_ref_sha256": null,
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.8922961229946524,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1932601434854457
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.8963903743315508,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2150350999265431
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.8959725935828877,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1776232148838734
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.8939672459893049,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2005536038364886
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.8970588235294118,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2081945797371796
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.8951370320855615,
+   "r5_closest_run": 3,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "7bffc41746d13913657a0fe222af7619d83461437d8f37d66593f5ff18d959d0",
+   "role": "incumbent"
+  },
+  "26": {
+   "episode": 26,
+   "job": "ep26_zx_k3fix_92000",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "zuxing",
+   "tree": "b39b69b",
+   "iteration": 92000,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/exports/ep26_zx_k3fix_92000/export.json",
+   "export_record_sha256": "a17266b2836fe3d03326cfbffaa5b9a309fd3e215263b43a2a4c506ccb6734b4",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/exports/ep26_zx_k3fix_92000/try1/model_92000.safetensors",
+   "export_sha256": "25c600cb20fbd44804b00369b12366a0267166bfe3e138a0044f5b2c3913feb7",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/zuxing_ckpts_a1/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_92000.safetensors",
+   "training_sha256": "0b02cea1635cc07ebb4b275d58e9c40751e82f7a4a82ac81426f2b12de348992",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/manifest_a1.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "01637248631c38d0ecf15041cf9a1a223adb542d6b615e9ce34e6b0e88c9d9cc",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "object": "skateboard",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000026.npz",
+   "frame_ref_sha256": "d50639a5589a8ea04a9d6d82101987a7f02c2f8cc559a415324010658b8601d2",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.7308482810164425,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3249780669361242
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.7310351270553065,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3293775523827929
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.7314088191330343,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3286460446372221
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.7327167414050821,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3151999468534286
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.7314088191330343,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.3267140221798597
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.73148355754858,
+   "r5_closest_run": 3,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "25c600cb20fbd44804b00369b12366a0267166bfe3e138a0044f5b2c3913feb7",
+   "role": "incumbent"
+  },
+  "27": {
+   "episode": 27,
+   "job": "ep27_k3fix_final20863",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 20863,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep27_k3fix_final20863/export.json",
+   "export_record_sha256": "c5b07a74ed9ab5d73970bbad569d789a29a00340538bf618db798bf103514366",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep27_k3fix_final20863/try1/model_20863.safetensors",
+   "export_sha256": "e560ebffd9545b1104dfeb9bea87d48aca74bdbee325b022b24e6556b0016dc8",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep27_k3fix_s42/model_20863.safetensors",
+   "training_sha256": "ffb5aae505e0aaa956092f9e513db3d0ae02db2d07e29e08a2ba579cb6d51cf7",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet",
+   "parquet_sha256": "28fe6aee2fc74dab47895b0d4aa9f968cb0f7fc238e894fd3786cb5b2c5cb045",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "object": "woven_basket",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000027.npz",
+   "frame_ref_sha256": "2a8e15870cbad615db6d377275bc128c7c576ca2c1c22da9f0f5089233f5f381",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.9040929203539823,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1561669598532782
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.8814159292035398,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.388184349122936
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.8973451327433628,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.1775865440335034
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.8986725663716815,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.2114219385288556
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.9077433628318584,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.13481967932873
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.897853982300885,
+   "r5_closest_run": 3,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "e560ebffd9545b1104dfeb9bea87d48aca74bdbee325b022b24e6556b0016dc8",
+   "role": "incumbent"
+  },
+  "29": {
+   "episode": 29,
+   "job": "ep29_k3fix_final17358",
+   "source_round": "round1",
+   "input": "k3fix",
+   "owner": "ours",
+   "tree": "fc_r2",
+   "iteration": 17358,
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep29_k3fix_final17358/export.json",
+   "export_record_sha256": "c07e9367f81006f0ad8d500a9bff6865918a1ad1786fcd8792d81aced92cd442",
+   "export_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/exports/ep29_k3fix_final17358/try1/model_17358.safetensors",
+   "export_sha256": "8c984002495d5a75606f0a014525f3411ab1d40952204a6a685e2835f2983d32",
+   "export_tolerance": 0.0001,
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42/model_17358.safetensors",
+   "training_sha256": "52dae9a8478ae47643a173b18a68e8f1b8929a4811bb4b2fca1a901868916210",
+   "manifest_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_best5_20261024/manifest.json",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet",
+   "parquet_sha256": "9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "object": "rolling_luggage",
+   "frame_ref_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000029.npz",
+   "frame_ref_sha256": "528cc8535c2c20d1ee3f39df0a98a790ccd013625f42b6e214200d51334721cc",
+   "frozen_runs": [
+    {
+     "run": 1,
+     "cons_auc": 0.5061563169164882,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.5727570451174997
+    },
+    {
+     "run": 2,
+     "cons_auc": 0.5069593147751605,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6186470907959156
+    },
+    {
+     "run": 3,
+     "cons_auc": 0.5072269807280514,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.5546202219745162
+    },
+    {
+     "run": 4,
+     "cons_auc": 0.5048179871520343,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.5951630974789601
+    },
+    {
+     "run": 5,
+     "cons_auc": 0.5032119914346895,
+     "cons_sp_sr": 1.0,
+     "cons_mp_sr": 1.0,
+     "cons_mppe": 1.6129977065788739
+    }
+   ],
+   "frozen_scores_csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/consensus_scores.csv",
+   "frozen_scores_csv_sha256": "50cc6e9401ad8c88594918490cee345d8aaf7368740fb3626c65525bfcb40a52",
+   "m_P_frozen": 0.5056745182012848,
+   "r5_closest_run": 1,
+   "selected_in": "round1",
+   "record_from": "inputs_r6/incumbents_r6.json (round-5 incumbent kept in round 6)",
+   "r6_closest_run": 9,
+   "r6_closest_export_sha256": "8c984002495d5a75606f0a014525f3411ab1d40952204a6a685e2835f2983d32",
+   "role": "incumbent"
+  }
+ }
+}

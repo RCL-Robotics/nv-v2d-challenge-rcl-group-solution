@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_31807.safetensors",
+  "early_stop_help_zero_tail": 5860,
+  "environment_steps": 3126755328,
+  "finished_at": "2026-10-18T00:34:13-07:00",
+  "help_zero_iterations": 5860,
+  "help_zero_since": 25947,
+  "iteration": 31807,
+  "max_iterations": 45000,
+  "reason": "help_zero_tail",
+  "resumed_from": null,
+  "rsi_state": "rsi_31807.safetensors",
+  "start_iteration": 0,
+  "wall_seconds": 70873.5
+}

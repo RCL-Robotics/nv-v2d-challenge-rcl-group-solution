@@ -1,0 +1,42 @@
+{
+  "provenance": {
+    "kit_root": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit",
+    "eval_script": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py",
+    "eval_script_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1",
+    "stock_runtime": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord",
+    "stock_flash_chord": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord/src/flash_chord/__init__.py"
+  },
+  "packing": {
+    "packed": false,
+    "episodes": [
+      1
+    ],
+    "reason": "--skip-pack"
+  },
+  "means": {
+    "add_auc": 0.20791499330655958,
+    "chord_sr": 0.0,
+    "maniptrans_sr": 0.0,
+    "mppe_cm": 41.838114990117745
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "object": "vacuum",
+      "sequence": "2026-05-18_17-06-21_vacuum_left_lean_02",
+      "status": "evaluated",
+      "iteration": 120000,
+      "selected_by": "--iteration 120000",
+      "source_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_final_20261102_063807/ep01_zxg2_120000/run1/try1/ep01/model_120000.safetensors",
+      "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_final_20261102_063807/ep01_zxg2_120000/run1/try1/ep01/model_120000.safetensors",
+      "add_auc": 0.20791499330655958,
+      "chord_sr": 0.0,
+      "maniptrans_sr": 0.0,
+      "mppe_cm": 41.838114990117745,
+      "object_position_error_m": 0.41646190482759976,
+      "object_orientation_error_deg": 58.62571535093379,
+      "reference_success_rate": 0.0,
+      "checkpoint_sha256": "7bcf2d3e0a13cb7477debd4bc8c97d73c964d7cc9c4f1ef2a53ca454d8e5e931"
+    }
+  ]
+}

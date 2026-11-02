@@ -1,0 +1,168 @@
+selection 2026-10-26 18:19:42 (noisy-only consensus; binding variant B; refs 9646de2daf02; scores 50cc6e9401ad)
+ep00 [B BINDING] D ep00_raw_final41043 [raw] cons-B AUC 0.6612 own floor 5/5 -> ep00_raw_final41043 (D kept (no qualifying challenger))
+ep00 [A report] D ep00_raw_final41043 [raw] cons-A AUC 0.6612 own floor 5/5 -> ep00_raw_final41043 (D kept (no qualifying challenger))
+ep01 [B BINDING] D ep01_k3fix_final44922 [k3fix] cons-B AUC 0.1713 own floor 0/5 -> ep01_k3fix_final44922 (D kept (no qualifying challenger))
+      ep01_k3fix_t2wbest18000 [k3fix] cons-B AUC 0.1594 sd 0.0048 delta -0.0120 floor 0/5 qualifies=False ['cons_mean_AUC 0.1594 < D 0.1713 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_raw_final44922 [raw] cons-B AUC 0.1768 sd 0.0018 delta +0.0055 floor 0/5 qualifies=False ['cons_mean_AUC 0.1768 < D 0.1713 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_t2fixL_p62000 [k3fix] cons-B AUC 0.1697 sd 0.0021 delta -0.0016 floor 0/5 qualifies=False ['cons_mean_AUC 0.1697 < D 0.1713 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_zx_g2_10000 [g2] cons-B AUC 0.1466 sd 0.0002 delta -0.0247 floor 0/5 qualifies=False ['cons_mean_AUC 0.1466 < D 0.1713 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_zx_g2_124000 [g2] cons-B AUC 0.1851 sd 0.0009 delta +0.0138 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_zx_g2hard_102000 [g2] cons-B AUC 0.1861 sd 0.0019 delta +0.0148 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep01 [A report] D ep01_k3fix_final44922 [k3fix] cons-A AUC 0.1673 own floor 0/5 -> ep01_k3fix_final44922 (D kept (no qualifying challenger))
+      ep01_k3fix_t2wbest18000 [k3fix] cons-A AUC 0.1648 sd 0.0039 delta -0.0024 floor 0/5 qualifies=False ['cons_mean_AUC 0.1648 < D 0.1673 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_raw_final44922 [raw] cons-A AUC 0.1650 sd 0.0015 delta -0.0023 floor 0/5 qualifies=False ['cons_mean_AUC 0.1650 < D 0.1673 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep01_t2fixL_p62000 [k3fix] cons-A AUC 0.1675 sd 0.0012 delta +0.0003 floor 0/5 qualifies=False ['cons_mean_AUC 0.1675 < D 0.1673 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep02 [B BINDING] D ep02_k3fix_final34093 [k3fix] cons-B AUC 0.8681 own floor 5/5 -> ep02_k3fix_final34093 (D kept (no qualifying challenger))
+      ep02_k3fix_t2wbest34000 [k3fix] cons-B AUC 0.8714 sd 0.0042 delta +0.0033 floor 5/5 qualifies=False ['cons_mean_AUC 0.8714 < D 0.8681 + 0.01']
+      ep02_raw_final37409 [raw] cons-B AUC 0.7521 sd 0.0217 delta -0.1160 floor 5/5 qualifies=False ['cons_mean_AUC 0.7521 < D 0.8681 + 0.01']
+ep02 [A report] D ep02_k3fix_final34093 [k3fix] cons-A AUC 0.8681 own floor 5/5 -> ep02_k3fix_final34093 (D kept (no qualifying challenger))
+      ep02_k3fix_t2wbest34000 [k3fix] cons-A AUC 0.8714 sd 0.0042 delta +0.0033 floor 5/5 qualifies=False ['cons_mean_AUC 0.8714 < D 0.8681 + 0.01']
+      ep02_raw_final37409 [raw] cons-A AUC 0.7521 sd 0.0217 delta -0.1160 floor 5/5 qualifies=False ['cons_mean_AUC 0.7521 < D 0.8681 + 0.01']
+ep03 [B BINDING] D ep03_k3fix_final27068 [k3fix] cons-B AUC 0.9215 own floor 5/5 -> ep03_k3fix_final27068 (D kept (no qualifying challenger))
+      ep03_k3fix_t2wbest24000 [k3fix] cons-B AUC 0.9230 sd 0.0010 delta +0.0014 floor 5/5 qualifies=False ['cons_mean_AUC 0.9230 < D 0.9215 + 0.01']
+      ep03_raw_final44922 [raw] cons-B AUC 0.8411 sd 0.0019 delta -0.0805 floor 5/5 qualifies=False ['cons_mean_AUC 0.8411 < D 0.9215 + 0.01']
+      ep03_raws7_final44922 [raw] cons-B AUC 0.8476 sd 0.0007 delta -0.0739 floor 5/5 qualifies=False ['cons_mean_AUC 0.8476 < D 0.9215 + 0.01']
+      ep03_raws7_t2wbest38000 [raw] cons-B AUC 0.8473 sd 0.0016 delta -0.0742 floor 5/5 qualifies=False ['cons_mean_AUC 0.8473 < D 0.9215 + 0.01']
+ep03 [A report] D ep03_k3fix_final27068 [k3fix] cons-A AUC 0.9215 own floor 5/5 -> ep03_k3fix_final27068 (D kept (no qualifying challenger))
+      ep03_k3fix_t2wbest24000 [k3fix] cons-A AUC 0.9230 sd 0.0010 delta +0.0014 floor 5/5 qualifies=False ['cons_mean_AUC 0.9230 < D 0.9215 + 0.01']
+      ep03_raw_final44922 [raw] cons-A AUC 0.8411 sd 0.0019 delta -0.0805 floor 5/5 qualifies=False ['cons_mean_AUC 0.8411 < D 0.9215 + 0.01']
+      ep03_raws7_final44922 [raw] cons-A AUC 0.8476 sd 0.0007 delta -0.0739 floor 5/5 qualifies=False ['cons_mean_AUC 0.8476 < D 0.9215 + 0.01']
+      ep03_raws7_t2wbest38000 [raw] cons-A AUC 0.8473 sd 0.0016 delta -0.0742 floor 5/5 qualifies=False ['cons_mean_AUC 0.8473 < D 0.9215 + 0.01']
+ep04 [B BINDING] D ep04_raw_final44922 [raw] cons-B AUC 0.1203 own floor 0/5 -> ep04_raw_final44922 (D kept (no qualifying challenger)) flags ['PENDING']
+      ep04_k3fix_final44922 [k3fix] cons-B AUC 0.1236 sd 0.0001 delta +0.0033 floor 0/5 qualifies=False ['cons_mean_AUC 0.1236 < D 0.1203 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep04_zx_g2_12000 [g2] cons-B AUC 0.1317 sd 0.0002 delta +0.0114 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep04_zx_g2_18000 [g2] cons-B AUC 0.1363 sd 0.0002 delta +0.0160 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep04_zx_g2_88000 [g2] cons-B AUC 0.1785 sd 0.0005 delta +0.0582 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep04_zx_k3fix_12000 [k3fix] cons-B AUC 0.1196 sd 0.0000 delta -0.0007 floor 0/5 qualifies=False ['cons_mean_AUC 0.1196 < D 0.1203 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep04 [A report] D ep04_raw_final44922 [raw] cons-A AUC 0.1106 own floor 0/5 -> ep04_raw_final44922 (D kept (no qualifying challenger)) flags ['PENDING']
+      ep04_k3fix_final44922 [k3fix] cons-A AUC 0.1134 sd 0.0003 delta +0.0028 floor 0/5 qualifies=False ['cons_mean_AUC 0.1134 < D 0.1106 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep04_zx_k3fix_12000 [k3fix] cons-A AUC 0.1111 sd 0.0000 delta +0.0005 floor 0/5 qualifies=False ['cons_mean_AUC 0.1111 < D 0.1106 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep05 [B BINDING] D ep05_raw_final44922 [raw] cons-B AUC 0.5049 own floor 5/5 -> ep05_zx_k3fix_88000 (replaced by ep05_zx_k3fix_88000 (cons_mean_AUC 0.5782 >= D 0.5049 + 0.01; floor 5/5))
+      ep05_zx_k3fix_18000 [k3fix] cons-B AUC 0.4966 sd 0.0062 delta -0.0083 floor 0/5 qualifies=False ['cons_mean_AUC 0.4966 < D 0.5049 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep05_zx_k3fix_26000 [k3fix] cons-B AUC 0.5084 sd 0.0108 delta +0.0035 floor 5/5 qualifies=False ['cons_mean_AUC 0.5084 < D 0.5049 + 0.01']
+      ep05_zx_k3fix_88000 [k3fix] cons-B AUC 0.5782 sd 0.0023 delta +0.0733 floor 5/5 qualifies=True []
+ep05 [A report] D ep05_raw_final44922 [raw] cons-A AUC 0.5049 own floor 5/5 -> ep05_zx_k3fix_88000 (replaced by ep05_zx_k3fix_88000 (cons_mean_AUC 0.5782 >= D 0.5049 + 0.01; floor 5/5))
+      ep05_zx_k3fix_18000 [k3fix] cons-A AUC 0.4966 sd 0.0062 delta -0.0083 floor 0/5 qualifies=False ['cons_mean_AUC 0.4966 < D 0.5049 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep05_zx_k3fix_26000 [k3fix] cons-A AUC 0.5084 sd 0.0108 delta +0.0035 floor 5/5 qualifies=False ['cons_mean_AUC 0.5084 < D 0.5049 + 0.01']
+      ep05_zx_k3fix_88000 [k3fix] cons-A AUC 0.5782 sd 0.0023 delta +0.0733 floor 5/5 qualifies=True []
+ep06 [B BINDING] D ep06_k3fix_final28420 [k3fix] cons-B AUC 0.7973 own floor 5/5 -> ep06_k3fix_final28420 (D kept (no qualifying challenger))
+      ep06_k3fix_t2wbest28000 [k3fix] cons-B AUC 0.7899 sd 0.0082 delta -0.0074 floor 5/5 qualifies=False ['cons_mean_AUC 0.7899 < D 0.7973 + 0.01']
+      ep06_raw_final33894 [raw] cons-B AUC 0.7751 sd 0.0053 delta -0.0222 floor 5/5 qualifies=False ['cons_mean_AUC 0.7751 < D 0.7973 + 0.01']
+ep06 [A report] D ep06_k3fix_final28420 [k3fix] cons-A AUC 0.7973 own floor 5/5 -> ep06_k3fix_final28420 (D kept (no qualifying challenger))
+      ep06_k3fix_t2wbest28000 [k3fix] cons-A AUC 0.7899 sd 0.0082 delta -0.0074 floor 5/5 qualifies=False ['cons_mean_AUC 0.7899 < D 0.7973 + 0.01']
+      ep06_raw_final33894 [raw] cons-A AUC 0.7751 sd 0.0053 delta -0.0222 floor 5/5 qualifies=False ['cons_mean_AUC 0.7751 < D 0.7973 + 0.01']
+ep07 [B BINDING] D ep07_k3fix_final18529 [k3fix] cons-B AUC 0.9205 own floor 5/5 -> ep07_k3fix_final18529 (D kept (no qualifying challenger))
+      ep07_k3fix_t2wbest14000 [k3fix] cons-B AUC 0.9155 sd 0.0015 delta -0.0050 floor 5/5 qualifies=False ['cons_mean_AUC 0.9155 < D 0.9205 + 0.01']
+      ep07_raw_final44922 [raw] cons-B AUC 0.9157 sd 0.0039 delta -0.0048 floor 5/5 qualifies=False ['cons_mean_AUC 0.9157 < D 0.9205 + 0.01']
+ep07 [A report] D ep07_k3fix_final18529 [k3fix] cons-A AUC 0.9205 own floor 5/5 -> ep07_k3fix_final18529 (D kept (no qualifying challenger))
+      ep07_k3fix_t2wbest14000 [k3fix] cons-A AUC 0.9155 sd 0.0015 delta -0.0050 floor 5/5 qualifies=False ['cons_mean_AUC 0.9155 < D 0.9205 + 0.01']
+      ep07_raw_final44922 [raw] cons-A AUC 0.9157 sd 0.0039 delta -0.0048 floor 5/5 qualifies=False ['cons_mean_AUC 0.9157 < D 0.9205 + 0.01']
+ep08 [B BINDING] D ep08_k3easy_final17496 [k3] cons-B AUC 0.5964 own floor 5/5 -> ep08_k3easy_final17496 (D kept (no qualifying challenger))
+      ep08_raw_final20597 [raw] cons-B AUC 0.5431 sd 0.0039 delta -0.0533 floor 5/5 qualifies=False ['cons_mean_AUC 0.5431 < D 0.5964 + 0.01']
+ep08 [A report] D ep08_k3easy_final17496 [k3] cons-A AUC 0.5964 own floor 5/5 -> ep08_k3easy_final17496 (D kept (no qualifying challenger))
+      ep08_raw_final20597 [raw] cons-A AUC 0.5431 sd 0.0039 delta -0.0533 floor 5/5 qualifies=False ['cons_mean_AUC 0.5431 < D 0.5964 + 0.01']
+ep09 [B BINDING] D ep09_t2fixB_designated54449 [k3fix] cons-B AUC 0.6777 own floor 5/5 -> ep09_raw_final39328 (replaced by ep09_raw_final39328 (cons_mean_AUC 0.7605 >= D 0.6777 + 0.01; floor 5/5))
+      ep09_k3fix_final39449 [k3fix] cons-B AUC 0.5920 sd 0.0079 delta -0.0857 floor 5/5 qualifies=False ['cons_mean_AUC 0.5920 < D 0.6777 + 0.01']
+      ep09_raw_final39328 [raw] cons-B AUC 0.7605 sd 0.0539 delta +0.0828 floor 5/5 qualifies=True []
+ep09 [A report] D ep09_t2fixB_designated54449 [k3fix] cons-A AUC 0.6759 own floor 5/5 -> ep09_raw_final39328 (replaced by ep09_raw_final39328 (cons_mean_AUC 0.7558 >= D 0.6759 + 0.01; floor 5/5))
+      ep09_k3fix_final39449 [k3fix] cons-A AUC 0.5823 sd 0.0050 delta -0.0937 floor 5/5 qualifies=False ['cons_mean_AUC 0.5823 < D 0.6759 + 0.01']
+      ep09_raw_final39328 [raw] cons-A AUC 0.7558 sd 0.0514 delta +0.0799 floor 5/5 qualifies=True []
+ep10 [B BINDING] D ep10_k3fix_final25319 [k3fix] cons-B AUC 0.3754 own floor 5/5 -> ep10_raw_final34267 (replaced by ep10_raw_final34267 (cons_mean_AUC 0.4125 >= D 0.3754 + 0.01; floor 5/5))
+      ep10_k3fix_t2wbest18000 [k3fix] cons-B AUC 0.3878 sd 0.0210 delta +0.0123 floor 5/5 qualifies=True []
+      ep10_raw_final34267 [raw] cons-B AUC 0.4125 sd 0.0059 delta +0.0371 floor 5/5 qualifies=True []
+ep10 [A report] D ep10_k3fix_final25319 [k3fix] cons-A AUC 0.3754 own floor 5/5 -> ep10_raw_final34267 (replaced by ep10_raw_final34267 (cons_mean_AUC 0.4125 >= D 0.3754 + 0.01; floor 5/5))
+      ep10_k3fix_t2wbest18000 [k3fix] cons-A AUC 0.3878 sd 0.0210 delta +0.0123 floor 5/5 qualifies=True []
+      ep10_raw_final34267 [raw] cons-A AUC 0.4125 sd 0.0059 delta +0.0371 floor 5/5 qualifies=True []
+ep11 [B BINDING] D ep11_k3fix_final29175 [k3fix] cons-B AUC 0.7832 own floor 5/5 -> ep11_k3fix_final29175 (D kept (no qualifying challenger))
+      ep11_k3fix_t2wbest28000 [k3fix] cons-B AUC 0.7844 sd 0.0039 delta +0.0012 floor 5/5 qualifies=False ['cons_mean_AUC 0.7844 < D 0.7832 + 0.01']
+      ep11_raw_final28925 [raw] cons-B AUC 0.7878 sd 0.0096 delta +0.0046 floor 5/5 qualifies=False ['cons_mean_AUC 0.7878 < D 0.7832 + 0.01']
+ep11 [A report] D ep11_k3fix_final29175 [k3fix] cons-A AUC 0.7832 own floor 5/5 -> ep11_k3fix_final29175 (D kept (no qualifying challenger))
+      ep11_k3fix_t2wbest28000 [k3fix] cons-A AUC 0.7844 sd 0.0039 delta +0.0012 floor 5/5 qualifies=False ['cons_mean_AUC 0.7844 < D 0.7832 + 0.01']
+      ep11_raw_final28925 [raw] cons-A AUC 0.7878 sd 0.0096 delta +0.0046 floor 5/5 qualifies=False ['cons_mean_AUC 0.7878 < D 0.7832 + 0.01']
+ep12 [B BINDING] D ep12_k3fix_final23178 [k3fix] cons-B AUC 0.5439 own floor 5/5 -> ep12_k3fix_final23178 (D kept (no qualifying challenger))
+      ep12_k3fix_t2wbest20000 [k3fix] cons-B AUC 0.5304 sd 0.0091 delta -0.0135 floor 5/5 qualifies=False ['cons_mean_AUC 0.5304 < D 0.5439 + 0.01']
+      ep12_raw_final37575 [raw] cons-B AUC 0.5527 sd 0.0055 delta +0.0088 floor 5/5 qualifies=False ['cons_mean_AUC 0.5527 < D 0.5439 + 0.01']
+ep12 [A report] D ep12_k3fix_final23178 [k3fix] cons-A AUC 0.5439 own floor 5/5 -> ep12_k3fix_final23178 (D kept (no qualifying challenger))
+      ep12_k3fix_t2wbest20000 [k3fix] cons-A AUC 0.5304 sd 0.0091 delta -0.0135 floor 5/5 qualifies=False ['cons_mean_AUC 0.5304 < D 0.5439 + 0.01']
+      ep12_raw_final37575 [raw] cons-A AUC 0.5527 sd 0.0055 delta +0.0088 floor 5/5 qualifies=False ['cons_mean_AUC 0.5527 < D 0.5439 + 0.01']
+ep13 [B BINDING] D ep13_k3fix_final39254 [k3fix] cons-B AUC 0.6655 own floor 5/5 -> ep13_k3fix_final39254 (D kept (no qualifying challenger))
+      ep13_raw_final44922 [raw] cons-B AUC 0.6564 sd 0.0101 delta -0.0090 floor 5/5 qualifies=False ['cons_mean_AUC 0.6564 < D 0.6655 + 0.01']
+ep13 [A report] D ep13_k3fix_final39254 [k3fix] cons-A AUC 0.6655 own floor 5/5 -> ep13_k3fix_final39254 (D kept (no qualifying challenger))
+      ep13_raw_final44922 [raw] cons-A AUC 0.6564 sd 0.0101 delta -0.0090 floor 5/5 qualifies=False ['cons_mean_AUC 0.6564 < D 0.6655 + 0.01']
+ep14 [B BINDING] D ep14_k3fix_final44922 [k3fix] cons-B AUC 0.3306 own floor 0/5 -> ep14_k3fix_final44922 (D kept (no qualifying challenger))
+      ep14_k3fix_t2wbest36000 [k3fix] cons-B AUC 0.3478 sd 0.0043 delta +0.0172 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep14_raw_final44922 [raw] cons-B AUC 0.2561 sd 0.0066 delta -0.0745 floor 0/5 qualifies=False ['cons_mean_AUC 0.2561 < D 0.3306 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep14 [A report] D ep14_k3fix_final44922 [k3fix] cons-A AUC 0.3306 own floor 0/5 -> ep14_k3fix_final44922 (D kept (no qualifying challenger))
+      ep14_k3fix_t2wbest36000 [k3fix] cons-A AUC 0.3478 sd 0.0043 delta +0.0172 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep14_raw_final44922 [raw] cons-A AUC 0.2561 sd 0.0066 delta -0.0745 floor 0/5 qualifies=False ['cons_mean_AUC 0.2561 < D 0.3306 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep15 [B BINDING] D ep15_raw_final44922 [raw] cons-B AUC 0.7299 own floor 5/5 -> ep15_raw_final44922 (D kept (no qualifying challenger))
+ep15 [A report] D ep15_raw_final44922 [raw] cons-A AUC 0.7299 own floor 5/5 -> ep15_raw_final44922 (D kept (no qualifying challenger))
+ep16 [B BINDING] D ep16_k3fix_final32063 [k3fix] cons-B AUC 0.7441 own floor 5/5 -> ep16_raw_final31268 (replaced by ep16_raw_final31268 (cons_mean_AUC 0.9125 >= D 0.7441 + 0.01; floor 5/5))
+      ep16_k3fix_t2wbest32000 [k3fix] cons-B AUC 0.7330 sd 0.0104 delta -0.0110 floor 5/5 qualifies=False ['cons_mean_AUC 0.7330 < D 0.7441 + 0.01']
+      ep16_raw_final31268 [raw] cons-B AUC 0.9125 sd 0.0058 delta +0.1684 floor 5/5 qualifies=True []
+ep16 [A report] D ep16_k3fix_final32063 [k3fix] cons-A AUC 0.7441 own floor 5/5 -> ep16_raw_final31268 (replaced by ep16_raw_final31268 (cons_mean_AUC 0.9125 >= D 0.7441 + 0.01; floor 5/5))
+      ep16_k3fix_t2wbest32000 [k3fix] cons-A AUC 0.7330 sd 0.0104 delta -0.0110 floor 5/5 qualifies=False ['cons_mean_AUC 0.7330 < D 0.7441 + 0.01']
+      ep16_raw_final31268 [raw] cons-A AUC 0.9125 sd 0.0058 delta +0.1684 floor 5/5 qualifies=True []
+ep17 [B BINDING] D ep17_k3fix_final29845 [k3fix] cons-B AUC 0.6341 own floor 5/5 -> ep17_raw_final31807 (replaced by ep17_raw_final31807 (cons_mean_AUC 0.6475 >= D 0.6341 + 0.01; floor 5/5))
+      ep17_raw_final31807 [raw] cons-B AUC 0.6475 sd 0.0062 delta +0.0135 floor 5/5 qualifies=True []
+ep17 [A report] D ep17_k3fix_final29845 [k3fix] cons-A AUC 0.6341 own floor 5/5 -> ep17_raw_final31807 (replaced by ep17_raw_final31807 (cons_mean_AUC 0.6475 >= D 0.6341 + 0.01; floor 5/5))
+      ep17_raw_final31807 [raw] cons-A AUC 0.6475 sd 0.0062 delta +0.0135 floor 5/5 qualifies=True []
+ep18 [B BINDING] D ep18_k3fix_final18911 [k3fix] cons-B AUC 0.4191 own floor 5/5 -> ep18_k3fix_final18911 (D kept (no qualifying challenger))
+      ep18_k3fix_t2wbest18000 [k3fix] cons-B AUC 0.4193 sd 0.0010 delta +0.0002 floor 5/5 qualifies=False ['cons_mean_AUC 0.4193 < D 0.4191 + 0.01']
+      ep18_raw_final44922 [raw] cons-B AUC 0.3876 sd 0.0068 delta -0.0316 floor 5/5 qualifies=False ['cons_mean_AUC 0.3876 < D 0.4191 + 0.01']
+ep18 [A report] D ep18_k3fix_final18911 [k3fix] cons-A AUC 0.4191 own floor 5/5 -> ep18_k3fix_final18911 (D kept (no qualifying challenger))
+      ep18_k3fix_t2wbest18000 [k3fix] cons-A AUC 0.4193 sd 0.0010 delta +0.0002 floor 5/5 qualifies=False ['cons_mean_AUC 0.4193 < D 0.4191 + 0.01']
+      ep18_raw_final44922 [raw] cons-A AUC 0.3876 sd 0.0068 delta -0.0316 floor 5/5 qualifies=False ['cons_mean_AUC 0.3876 < D 0.4191 + 0.01']
+ep19 [B BINDING] D ep19_raw_final44922 [raw] cons-B AUC 0.1749 own floor 0/5 -> ep19_zx_g2_92000 (replaced by ep19_zx_g2_92000 (cons_mean_AUC 0.5170 >= D 0.1749 + 0.01; floor 5/5))
+      ep19_zx_g2_18000 [g2] cons-B AUC 0.1168 sd 0.0003 delta -0.0581 floor 0/5 qualifies=False ['cons_mean_AUC 0.1168 < D 0.1749 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep19_zx_g2_20000 [g2] cons-B AUC 0.1179 sd 0.0004 delta -0.0570 floor 0/5 qualifies=False ['cons_mean_AUC 0.1179 < D 0.1749 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep19_zx_g2_92000 [g2] cons-B AUC 0.5170 sd 0.0029 delta +0.3421 floor 5/5 qualifies=True []
+      ep19_zx_g2hard_52000 [g2] cons-B AUC 0.1182 sd 0.0003 delta -0.0567 floor 0/5 qualifies=False ['cons_mean_AUC 0.1182 < D 0.1749 + 0.01', 'stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep19 [A report] D ep19_raw_final44922 [raw] cons-A AUC 0.1783 own floor 0/5 -> ep19_raw_final44922 (D kept (no qualifying challenger))
+ep20 [B BINDING] D ep20_k3easy_final18450 [k3] cons-B AUC 0.8175 own floor 5/5 -> ep20_k3easy_final18450 (D kept (no qualifying challenger))
+      ep20_raw_final19034 [raw] cons-B AUC 0.8229 sd 0.0032 delta +0.0054 floor 5/5 qualifies=False ['cons_mean_AUC 0.8229 < D 0.8175 + 0.01']
+ep20 [A report] D ep20_k3easy_final18450 [k3] cons-A AUC 0.8175 own floor 5/5 -> ep20_k3easy_final18450 (D kept (no qualifying challenger))
+      ep20_raw_final19034 [raw] cons-A AUC 0.8229 sd 0.0032 delta +0.0054 floor 5/5 qualifies=False ['cons_mean_AUC 0.8229 < D 0.8175 + 0.01']
+ep21 [B BINDING] D ep21_k3fix_final44922 [k3fix] cons-B AUC 0.4445 own floor 5/5 -> ep21_k3fix_final44922 (D kept (no qualifying challenger))
+      ep21_raw_final44922 [raw] cons-B AUC 0.3523 sd 0.0039 delta -0.0921 floor 5/5 qualifies=False ['cons_mean_AUC 0.3523 < D 0.4445 + 0.01']
+ep21 [A report] D ep21_k3fix_final44922 [k3fix] cons-A AUC 0.3362 own floor 5/5 -> ep21_k3fix_final44922 (D kept (no qualifying challenger))
+      ep21_raw_final44922 [raw] cons-A AUC 0.3120 sd 0.0044 delta -0.0242 floor 5/5 qualifies=False ['cons_mean_AUC 0.3120 < D 0.3362 + 0.01']
+ep22 [B BINDING] D ep22_raw_final44922 [raw] cons-B AUC 0.6040 own floor 5/5 -> ep22_raw_final44922 (D kept (no qualifying challenger))
+ep22 [A report] D ep22_raw_final44922 [raw] cons-A AUC 0.6040 own floor 5/5 -> ep22_raw_final44922 (D kept (no qualifying challenger))
+ep23 [B BINDING] D ep23_k3easy_final19162 [k3] cons-B AUC 0.8906 own floor 5/5 -> ep23_raw_final20023 (replaced by ep23_raw_final20023 (cons_mean_AUC 0.9029 >= D 0.8906 + 0.01; floor 5/5))
+      ep23_raw_final20023 [raw] cons-B AUC 0.9029 sd 0.0014 delta +0.0123 floor 5/5 qualifies=True []
+ep23 [A report] D ep23_k3easy_final19162 [k3] cons-A AUC 0.8906 own floor 5/5 -> ep23_raw_final20023 (replaced by ep23_raw_final20023 (cons_mean_AUC 0.9029 >= D 0.8906 + 0.01; floor 5/5))
+      ep23_raw_final20023 [raw] cons-A AUC 0.9029 sd 0.0014 delta +0.0123 floor 5/5 qualifies=True []
+ep24 [B BINDING] D ep24_k3fix_final20636 [k3fix] cons-B AUC 0.8401 own floor 5/5 -> ep24_raw_final44922 (replaced by ep24_raw_final44922 (cons_mean_AUC 0.8951 >= D 0.8401 + 0.01; floor 5/5))
+      ep24_raw_final44922 [raw] cons-B AUC 0.8951 sd 0.0018 delta +0.0550 floor 5/5 qualifies=True []
+ep24 [A report] D ep24_k3fix_final20636 [k3fix] cons-A AUC 0.8401 own floor 5/5 -> ep24_raw_final44922 (replaced by ep24_raw_final44922 (cons_mean_AUC 0.8951 >= D 0.8401 + 0.01; floor 5/5))
+      ep24_raw_final44922 [raw] cons-A AUC 0.8951 sd 0.0018 delta +0.0550 floor 5/5 qualifies=True []
+ep25 [B BINDING] D ep25_k3fix_final42819 [k3fix] cons-B AUC 0.3319 own floor 2/5 -> ep25_raw_final44922 (replaced by ep25_raw_final44922 (cons_mean_AUC 0.7013 >= D 0.3319 + 0.01; floor 5/5))
+      ep25_raw_final44922 [raw] cons-B AUC 0.7013 sd 0.0032 delta +0.3694 floor 5/5 qualifies=True []
+ep25 [A report] D ep25_k3fix_final42819 [k3fix] cons-A AUC 0.3319 own floor 2/5 -> ep25_raw_final44922 (replaced by ep25_raw_final44922 (cons_mean_AUC 0.7013 >= D 0.3319 + 0.01; floor 5/5))
+      ep25_raw_final44922 [raw] cons-A AUC 0.7013 sd 0.0032 delta +0.3694 floor 5/5 qualifies=True []
+ep26 [B BINDING] D ep26_raw_final34948 [raw] cons-B AUC 0.6768 own floor 5/5 -> ep26_zx_k3fix_92000 (replaced by ep26_zx_k3fix_92000 (cons_mean_AUC 0.7315 >= D 0.6768 + 0.01; floor 5/5))
+      ep26_k3ca_final25298 [k3ca] cons-B AUC 0.7018 sd 0.0030 delta +0.0250 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_16000 [k3fix] cons-B AUC 0.7298 sd 0.0007 delta +0.0530 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_20000 [k3fix] cons-B AUC 0.7297 sd 0.0011 delta +0.0529 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_92000 [k3fix] cons-B AUC 0.7315 sd 0.0007 delta +0.0547 floor 5/5 qualifies=True []
+ep26 [A report] D ep26_raw_final34948 [raw] cons-A AUC 0.6768 own floor 5/5 -> ep26_zx_k3fix_92000 (replaced by ep26_zx_k3fix_92000 (cons_mean_AUC 0.7315 >= D 0.6768 + 0.01; floor 5/5))
+      ep26_k3ca_final25298 [k3ca] cons-A AUC 0.7018 sd 0.0030 delta +0.0250 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_16000 [k3fix] cons-A AUC 0.7298 sd 0.0007 delta +0.0530 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_20000 [k3fix] cons-A AUC 0.7297 sd 0.0011 delta +0.0529 floor 5/5 qualifies=True []
+      ep26_zx_k3fix_92000 [k3fix] cons-A AUC 0.7315 sd 0.0007 delta +0.0547 floor 5/5 qualifies=True []
+ep27 [B BINDING] D ep27_k3fix_final20863 [k3fix] cons-B AUC 0.8979 own floor 5/5 -> ep27_k3fix_final20863 (D kept (no qualifying challenger))
+      ep27_raw_final44922 [raw] cons-B AUC 0.8948 sd 0.0089 delta -0.0030 floor 5/5 qualifies=False ['cons_mean_AUC 0.8948 < D 0.8979 + 0.01']
+ep27 [A report] D ep27_k3fix_final20863 [k3fix] cons-A AUC 0.8979 own floor 5/5 -> ep27_k3fix_final20863 (D kept (no qualifying challenger))
+      ep27_raw_final44922 [raw] cons-A AUC 0.8948 sd 0.0089 delta -0.0030 floor 5/5 qualifies=False ['cons_mean_AUC 0.8948 < D 0.8979 + 0.01']
+ep28 [B BINDING] D ep28_raw_final44922 [raw] cons-B AUC 0.0540 own floor 0/5 -> ep28_zx_g2_100000 (replaced by ep28_zx_g2_100000 (cons_mean_AUC 0.1326 >= D 0.0540 + 0.01; floor 4/5))
+      ep28_zx_g2_100000 [g2] cons-B AUC 0.1326 sd 0.0336 delta +0.0787 floor 4/5 qualifies=True []
+      ep28_zx_g2_16000 [g2] cons-B AUC 0.0876 sd 0.0171 delta +0.0336 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+      ep28_zx_g2_22000 [g2] cons-B AUC 0.1236 sd 0.0289 delta +0.0697 floor 0/5 qualifies=False ['stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)']
+ep28 [A report] D ep28_raw_final44922 [raw] cons-A AUC 0.0424 own floor 0/5 -> ep28_raw_final44922 (D kept (no qualifying challenger))
+ep29 [B BINDING] D ep29_k3fix_final17358 [k3fix] cons-B AUC 0.5057 own floor 5/5 -> ep29_k3fix_final17358 (D kept (no qualifying challenger))
+      ep29_k3fix_t2wbest16000 [k3fix] cons-B AUC 0.5046 sd 0.0016 delta -0.0011 floor 5/5 qualifies=False ['cons_mean_AUC 0.5046 < D 0.5057 + 0.01']
+      ep29_raw_final44922 [raw] cons-B AUC 0.5073 sd 0.0093 delta +0.0016 floor 5/5 qualifies=False ['cons_mean_AUC 0.5073 < D 0.5057 + 0.01']
+ep29 [A report] D ep29_k3fix_final17358 [k3fix] cons-A AUC 0.5057 own floor 5/5 -> ep29_k3fix_final17358 (D kept (no qualifying challenger))
+      ep29_k3fix_t2wbest16000 [k3fix] cons-A AUC 0.5046 sd 0.0016 delta -0.0011 floor 5/5 qualifies=False ['cons_mean_AUC 0.5046 < D 0.5057 + 0.01']
+      ep29_raw_final44922 [raw] cons-A AUC 0.5073 sd 0.0093 delta +0.0016 floor 5/5 qualifies=False ['cons_mean_AUC 0.5073 < D 0.5057 + 0.01']

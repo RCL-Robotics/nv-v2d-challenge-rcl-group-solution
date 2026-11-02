@@ -1,0 +1,11 @@
+envelope 49.227 deg / 4.624 cm; replication of root-cause numbers for frozen K3: OK; identity checks: OK
+  ep07 rot_max_deg 34.453/34.453  pos_max_cm 1.8383/1.8383  pen_p95_cm 0.31435/0.31435  pen_p95_raw_cm 0.4992/0.4992  r4_n_contact 701/701  r4_literal_share 0/0
+  ep18 rot_max_deg 32.223/32.223  pos_max_cm 3.433/3.433  pen_p95_cm 1.2881/1.2881  pen_p95_raw_cm 6.7781/6.7781  r4_n_contact 132/132  r4_literal_share 0.037879/0.037879
+  ep07 identity: K3fix parquet 4c2d6fb3fa04439f == K3 4c2d6fb3fa04439f: True; != raw f7a86a692c331d75: True; track |K3fix-K3| 4.2e-15; READY True; data_build True; frame ref True; packer accepted/REJECTED -> ok
+  ep18 identity: K3fix parquet d8d027012a2322b2 == K3 d8d027012a2322b2: True; != raw 8407b81c034871e2: True; track |K3fix-K3| 5.0e-15; READY True; data_build True; frame ref True; packer accepted/REJECTED -> ok
+ep07 iron               K3fix     G1 pass (rot max 34.5 pos max 1.84, 0 frames beyond) | G2 pass (0 frames, max excess 0.0 cm; p95 0.31 vs raw 0.50, F5 form fires False; 1 support prims) | G3 pass (flagged [] w0 forced []) | G4 pass (n 701, share 0.0000) -> PASS
+ep07 iron               K3_frozen G1 pass (rot max 34.5 pos max 1.84, 0 frames beyond) | G2 pass (0 frames, max excess 0.0 cm; p95 0.31 vs raw 0.50, F5 form fires False; 1 support prims) | G3 pass (flagged [] w0 forced []) | G4 pass (n 701, share 0.0000) -> PASS
+ep18 blue_trash_can     K3fix     G1 pass (rot max 32.2 pos max 3.43, 0 frames beyond) | G2 pass (0 frames, max excess 0.0 cm; p95 1.29 vs raw 6.78, F5 form fires False; 0 support prims) | G3 pass (flagged [] w0 forced []) | G4 pass (n 132, share 0.0379) -> PASS
+ep18 blue_trash_can     K3_frozen G1 pass (rot max 32.2 pos max 3.43, 0 frames beyond) | G2 pass (0 frames, max excess 0.0 cm; p95 1.29 vs raw 6.78, F5 form fires False; 0 support prims) | G3 pass (flagged [] w0 forced []) | G4 pass (n 132, share 0.0379) -> PASS
+stage-1 unchanged clips passing all gates: [7, 18]; failing: []
+wrote /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/build/gates_v2.json

@@ -1,0 +1,32 @@
+READY 2026-10-21 22:33:06 CST: K3fix root (noisy Tier-2 body + K3fix object; K3fix = tmp_analysis/tier2/k3_rootcause/ep04/k3fix_v1_precommit.py sha256 6f126f3e, fixAsC). ep03/04/09/17 rebuilt by scripts/k3fix_build_data.py (e2_build_eval_inputs.py part (a) maths) from tmp_analysis/tier2/k3fix_pilot/build/k3fix_tracks.npz (sha256 1a4bb14c9da05ea3); the other 26 parquets, ground planes, support stages and the manifest are byte copies of data/human_motion_data_tier2_k3 (26 parquets regenerated from K3fix byte-identical; ground planes / support / manifest = data/human_motion_data_tier2). Object assets referenced in data/human_motion_data_tier2. Kit packer: 30/30 accepted vs tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix, 30/30 rejected vs the released raw input. Details: tmp_analysis/tier2/k3fix_pilot/build/data_build.json.
+# sha256  path (relative to this root) of every parquet
+98376ade2bd0f57b09bcb75584bdce5d10597a2c22bf2aaa6c84f56720e6ff5a  whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet
+2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a  whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet
+8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435  whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet
+c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3  whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet
+7405d01e2af93eaf1db670f7b6cfa815cd2807155c4baccbb244cc5b7eb3f6a2  whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet
+2ccbe480076996db60963e0e6e88098f06a6a50107e02550c1915a63ea9c7115  whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet
+553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778  whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet
+4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4  whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet
+510bdc3d29bd9c4425e90b3a1ff479afb4f0a815dde1c816be6822bfb69ae592  whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet
+b1d62056ee50d25f8e34acd4bf7dfca7200922c1f14fe525546a8abdad49434a  whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet
+884179d706682b5a8b037b01440e67bf2cf5308436c7b95663e4a2a21c0b9993  whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet
+814245569ed35da6fa17153b7a8dd016495b4eec2223dcd7f4ccf9fd8f21ba70  whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet
+5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641  whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet
+c36c13db6440cd363a618e2261804e4ba36591f17b46f81d5af03f65dd091c16  whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet
+98ec1c57bdcadd2b7b63adabe1defc25501bd685ee96ff4066220b5d23a27d76  whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet
+f85d39d7e29f2fe08a03c80c13977cbb40060f59c4b9fb139aaa1dd0abef56cb  whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet
+5adf79bdfc8edff59ff3579769332890651ede89ff921b87e51ed0f7c696cbe8  whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet
+25c13883a34052b7c6bdb04357c868d975bb0bf54d4acd1b807e53fdf9e11c7a  whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet
+d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a  whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet
+4595f1e2912fe04ef1f6d3b31b87bbb749f4b3aebeaf295354f4ffe3be70c452  whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet
+2784cae6dc09774f0ed7536e00c884276bbe0c49f2d0aa0e14c2feea6b964558  whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet
+57ae96f315735435f34f387fca5bd2b82126d4be4c87bba5f14971e8c1fdb734  whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet
+b2d906b822c4bc3d439038550326c63a18f633fc4c3ed4350514575a2d838c42  whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet
+3f6aaa9e0378028395c9fcf835b9c306e38950fa4e99acfcf1bbc5284af34e84  whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet
+cafbf612668ef29466c2db5720380dc8e1227c2479a798ade81ec56005caf1f2  whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet
+273a87f5d475548e386977ae6da34b389a9a473f65d8b1e5555c48825410808e  whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet
+01637248631c38d0ecf15041cf9a1a223adb542d6b615e9ce34e6b0e88c9d9cc  whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet
+28fe6aee2fc74dab47895b0d4aa9f968cb0f7fc238e894fd3786cb5b2c5cb045  whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet
+14a21f8c0336d31144cd02ae23f683bb4d7dd801be8d0f8c2aaa1ec89d6bff82  whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet
+9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830  whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet

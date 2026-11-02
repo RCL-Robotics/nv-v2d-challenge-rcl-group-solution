@@ -141,6 +141,11 @@ class SonicJointResidualActionConfig:
     normalized_mapping: Literal["linear"] = "linear"
     body_delay: TargetDelayConfig = field(default_factory=lambda: TargetDelayConfig(min_steps=0, max_steps=2))
     enable_cuda_graph: bool = True
+    # Steady-state ONNX Runtime runs return without a host synchronization: the encoder and decoder run on Warp's
+    # stream (user_compute_stream, unified EP stream) and every producer/consumer of their bound buffers is a Warp
+    # kernel on that stream, so stream order alone keeps the results identical. True restores ORT's default
+    # (block the host after each run), which serialized the CPU and GPU twice per control step.
+    synchronize_ort_runs: bool = False
 
     def __post_init__(self) -> None:
         object.__setattr__(self, "policy_dir", Path(self.policy_dir))
@@ -502,6 +507,7 @@ class _OrtBoundSession:
     session: object
     io_binding: object
     provider: str
+    run_options: object = None  # None: ORT default (host synchronization after every run)
 
     @classmethod
     def build(
@@ -514,6 +520,7 @@ class _OrtBoundSession:
         expected_output_name: str,
         device,
         enable_cuda_graph: bool,
+        synchronize_runs: bool = True,
     ) -> _OrtBoundSession:
         try:
             import onnxruntime as ort
@@ -577,13 +584,18 @@ class _OrtBoundSession:
             int(output_array.ptr),
         )
         bound = cls(session=session, io_binding=binding, provider=session.get_providers()[0])
+        # Warm-up (and the ORT CUDA-graph capture on the second run) keep the synchronous default.
         bound.run()
         if device.is_cuda and enable_cuda_graph:
             bound.run()
+        if device.is_cuda and not synchronize_runs:
+            run_options = ort.RunOptions()
+            run_options.add_run_config_entry("disable_synchronize_execution_providers", "1")
+            bound.run_options = run_options
         return bound
 
     def run(self) -> None:
-        self.session.run_with_iobinding(self.io_binding)
+        self.session.run_with_iobinding(self.io_binding, self.run_options)
 
 
 @dataclass
@@ -713,6 +725,7 @@ class SonicJointResidualAction:
             expected_output_name="encoded_tokens",
             device=device,
             enable_cuda_graph=config.enable_cuda_graph,
+            synchronize_runs=config.synchronize_ort_runs,
         )
         decoder_session = _OrtBoundSession.build(
             decoder_path,
@@ -722,6 +735,7 @@ class SonicJointResidualAction:
             expected_output_name="action",
             device=device,
             enable_cuda_graph=config.enable_cuda_graph,
+            synchronize_runs=config.synchronize_ort_runs,
         )
 
         delays = ()

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_180000.safetensors",
+  "early_stop_help_zero_tail": 0,
+  "environment_steps": 17694720000,
+  "finished_at": "2026-10-23T21:38:28-07:00",
+  "help_zero_iterations": 103500,
+  "help_zero_since": 76500,
+  "iteration": 180000,
+  "max_iterations": 180000,
+  "reason": "max_iterations",
+  "resumed_from": "/mnt/gfs/home/zuxinglu/workspace/runs/2026-10-23-tier2-helpfix-hard/ep28/model_90000.safetensors",
+  "rsi_state": "rsi_180000.safetensors",
+  "start_iteration": 90000,
+  "wall_seconds": 66974.8
+}

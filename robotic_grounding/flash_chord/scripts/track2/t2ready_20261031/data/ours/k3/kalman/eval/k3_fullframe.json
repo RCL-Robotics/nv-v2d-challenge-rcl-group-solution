@@ -1,0 +1,182 @@
+[
+ {
+  "episode": 0,
+  "T": 778,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.3306690738754696e-16
+ },
+ {
+  "episode": 1,
+  "T": 747,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.885780586188048e-16
+ },
+ {
+  "episode": 2,
+  "T": 980,
+  "invisible": 0,
+  "max_diff_vs_frozen": 4.163336342344337e-15
+ },
+ {
+  "episode": 3,
+  "T": 781,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.9968028886505635e-15
+ },
+ {
+  "episode": 4,
+  "T": 803,
+  "invisible": 0,
+  "max_diff_vs_frozen": 1.4155343563970746e-15
+ },
+ {
+  "episode": 5,
+  "T": 1003,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.552713678800501e-15
+ },
+ {
+  "episode": 6,
+  "T": 546,
+  "invisible": 0,
+  "max_diff_vs_frozen": 1.4155343563970746e-15
+ },
+ {
+  "episode": 7,
+  "T": 896,
+  "invisible": 0,
+  "max_diff_vs_frozen": 4.163336342344337e-15
+ },
+ {
+  "episode": 8,
+  "T": 708,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.220446049250313e-15
+ },
+ {
+  "episode": 9,
+  "T": 870,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.1593837828959295e-14
+ },
+ {
+  "episode": 10,
+  "T": 794,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.9968028886505635e-15
+ },
+ {
+  "episode": 11,
+  "T": 901,
+  "invisible": 1,
+  "max_diff_vs_frozen": 5.051514762044462e-15
+ },
+ {
+  "episode": 12,
+  "T": 700,
+  "invisible": 0,
+  "max_diff_vs_frozen": 1.0075273948473296e-14
+ },
+ {
+  "episode": 13,
+  "T": 922,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.6645352591003757e-15
+ },
+ {
+  "episode": 14,
+  "T": 993,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.552713678800501e-15
+ },
+ {
+  "episode": 15,
+  "T": 715,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.3306690738754696e-15
+ },
+ {
+  "episode": 16,
+  "T": 477,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.220446049250313e-16
+ },
+ {
+  "episode": 17,
+  "T": 440,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.3306690738754696e-16
+ },
+ {
+  "episode": 18,
+  "T": 858,
+  "invisible": 0,
+  "max_diff_vs_frozen": 4.9960036108132044e-15
+ },
+ {
+  "episode": 19,
+  "T": 886,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.3306690738754696e-16
+ },
+ {
+  "episode": 20,
+  "T": 553,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.220446049250313e-16
+ },
+ {
+  "episode": 21,
+  "T": 678,
+  "invisible": 0,
+  "max_diff_vs_frozen": 1.7763568394002505e-15
+ },
+ {
+  "episode": 22,
+  "T": 719,
+  "invisible": 0,
+  "max_diff_vs_frozen": 8.326672684688674e-15
+ },
+ {
+  "episode": 23,
+  "T": 946,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.3306690738754696e-15
+ },
+ {
+  "episode": 24,
+  "T": 748,
+  "invisible": 0,
+  "max_diff_vs_frozen": 3.913536161803677e-15
+ },
+ {
+  "episode": 25,
+  "T": 859,
+  "invisible": 0,
+  "max_diff_vs_frozen": 8.43769498715119e-15
+ },
+ {
+  "episode": 26,
+  "T": 669,
+  "invisible": 0,
+  "max_diff_vs_frozen": 4.6629367034256575e-15
+ },
+ {
+  "episode": 27,
+  "T": 565,
+  "invisible": 0,
+  "max_diff_vs_frozen": 6.494804694057166e-15
+ },
+ {
+  "episode": 28,
+  "T": 988,
+  "invisible": 0,
+  "max_diff_vs_frozen": 5.551115123125783e-17
+ },
+ {
+  "episode": 29,
+  "T": 467,
+  "invisible": 0,
+  "max_diff_vs_frozen": 2.220446049250313e-16
+ }
+]

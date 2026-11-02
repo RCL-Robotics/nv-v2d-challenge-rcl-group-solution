@@ -1,0 +1,1079 @@
+{
+ "summary": {
+  "k3ca": {
+   "n_ok": 30,
+   "total_frames": 22990
+  },
+  "tier2_control": {
+   "n_ok": 30,
+   "total_frames": 22990
+  },
+  "same_num_frames": true,
+  "k3ca_episodes": [
+   0,
+   5,
+   15,
+   19,
+   22,
+   26,
+   28
+  ],
+  "all_ok": true
+ },
+ "per_root": {
+  "k3ca": [
+   {
+    "ep": 0,
+    "num_frames": 778,
+    "obj_pos_shape": [
+     778,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.020213782787322998,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.14413330990259457,
+    "changed": true
+   },
+   {
+    "ep": 1,
+    "num_frames": 747,
+    "obj_pos_shape": [
+     747,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 2,
+    "num_frames": 980,
+    "obj_pos_shape": [
+     980,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 3,
+    "num_frames": 781,
+    "obj_pos_shape": [
+     781,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 4,
+    "num_frames": 803,
+    "obj_pos_shape": [
+     803,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 5,
+    "num_frames": 1003,
+    "obj_pos_shape": [
+     1003,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-03-18_19-36-56_g1_box_rotate_01_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.010455965995788574,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.17461365741404694,
+    "changed": true
+   },
+   {
+    "ep": 6,
+    "num_frames": 546,
+    "obj_pos_shape": [
+     546,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 7,
+    "num_frames": 896,
+    "obj_pos_shape": [
+     896,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 8,
+    "num_frames": 708,
+    "obj_pos_shape": [
+     708,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 9,
+    "num_frames": 870,
+    "obj_pos_shape": [
+     870,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 10,
+    "num_frames": 794,
+    "obj_pos_shape": [
+     794,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 11,
+    "num_frames": 901,
+    "obj_pos_shape": [
+     901,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 12,
+    "num_frames": 700,
+    "obj_pos_shape": [
+     700,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-04-25_17-20-04_black_platform_turn_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 13,
+    "num_frames": 922,
+    "obj_pos_shape": [
+     922,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 14,
+    "num_frames": 993,
+    "obj_pos_shape": [
+     993,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-28_14-44-09_round_table_flip_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 15,
+    "num_frames": 715,
+    "obj_pos_shape": [
+     715,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.018231511116027832,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.10432991516324916,
+    "changed": true
+   },
+   {
+    "ep": 16,
+    "num_frames": 477,
+    "obj_pos_shape": [
+     477,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 17,
+    "num_frames": 440,
+    "obj_pos_shape": [
+     440,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 18,
+    "num_frames": 858,
+    "obj_pos_shape": [
+     858,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 19,
+    "num_frames": 886,
+    "obj_pos_shape": [
+     886,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-19_10-19-48_cane_swing_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.007268160581588745,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.10618042106001069,
+    "changed": true
+   },
+   {
+    "ep": 20,
+    "num_frames": 553,
+    "obj_pos_shape": [
+     553,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 21,
+    "num_frames": 678,
+    "obj_pos_shape": [
+     678,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 22,
+    "num_frames": 719,
+    "obj_pos_shape": [
+     719,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-22_16-52-36_step_ladder_drag_03_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.012227498227730393,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.09060444810399935,
+    "changed": true
+   },
+   {
+    "ep": 23,
+    "num_frames": 946,
+    "obj_pos_shape": [
+     946,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 24,
+    "num_frames": 748,
+    "obj_pos_shape": [
+     748,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-29_15-43-20_watering_can_pour_right_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 25,
+    "num_frames": 859,
+    "obj_pos_shape": [
+     859,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 26,
+    "num_frames": 669,
+    "obj_pos_shape": [
+     669,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.010704617947340012,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.13837504846623727,
+    "changed": true
+   },
+   {
+    "ep": 27,
+    "num_frames": 565,
+    "obj_pos_shape": [
+     565,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   },
+   {
+    "ep": 28,
+    "num_frames": 988,
+    "obj_pos_shape": [
+     988,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.007569551467895508,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.18762080573712508,
+    "changed": true
+   },
+   {
+    "ep": 29,
+    "num_frames": 467,
+    "obj_pos_shape": [
+     467,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/reconstructed_stage/2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda",
+    "support_in_own_root": true,
+    "ok": true,
+    "obj_pos_max_abs_diff_vs_k3fix_root_m": 0.0,
+    "obj_quat_max_abs_diff_vs_k3fix_root": 0.0,
+    "changed": false
+   }
+  ],
+  "tier2_control": [
+   {
+    "ep": 0,
+    "num_frames": 778,
+    "obj_pos_shape": [
+     778,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 1,
+    "num_frames": 747,
+    "obj_pos_shape": [
+     747,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-18_17-06-21_vacuum_left_lean_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 2,
+    "num_frames": 980,
+    "obj_pos_shape": [
+     980,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 3,
+    "num_frames": 781,
+    "obj_pos_shape": [
+     781,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 4,
+    "num_frames": 803,
+    "obj_pos_shape": [
+     803,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 5,
+    "num_frames": 1003,
+    "obj_pos_shape": [
+     1003,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-03-18_19-36-56_g1_box_rotate_01_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 6,
+    "num_frames": 546,
+    "obj_pos_shape": [
+     546,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-01_11-26-44_monitor_rotate_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 7,
+    "num_frames": 896,
+    "obj_pos_shape": [
+     896,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-29_15-20-43_iron_round_table_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 8,
+    "num_frames": 708,
+    "obj_pos_shape": [
+     708,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 9,
+    "num_frames": 870,
+    "obj_pos_shape": [
+     870,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 10,
+    "num_frames": 794,
+    "obj_pos_shape": [
+     794,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 11,
+    "num_frames": 901,
+    "obj_pos_shape": [
+     901,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-04-24_13-56-58_light_blue_book_pick_place_09_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 12,
+    "num_frames": 700,
+    "obj_pos_shape": [
+     700,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-04-25_17-20-04_black_platform_turn_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 13,
+    "num_frames": 922,
+    "obj_pos_shape": [
+     922,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-09_10-19-09_snack_box_desk_through_06_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 14,
+    "num_frames": 993,
+    "obj_pos_shape": [
+     993,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-28_14-44-09_round_table_flip_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 15,
+    "num_frames": 715,
+    "obj_pos_shape": [
+     715,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 16,
+    "num_frames": 477,
+    "obj_pos_shape": [
+     477,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 17,
+    "num_frames": 440,
+    "obj_pos_shape": [
+     440,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 18,
+    "num_frames": 858,
+    "obj_pos_shape": [
+     858,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 19,
+    "num_frames": 886,
+    "obj_pos_shape": [
+     886,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-19_10-19-48_cane_swing_05_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 20,
+    "num_frames": 553,
+    "obj_pos_shape": [
+     553,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-08_16-57-34_rice_cooker_clockwise_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 21,
+    "num_frames": 678,
+    "obj_pos_shape": [
+     678,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 22,
+    "num_frames": 719,
+    "obj_pos_shape": [
+     719,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-22_16-52-36_step_ladder_drag_03_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 23,
+    "num_frames": 946,
+    "obj_pos_shape": [
+     946,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 24,
+    "num_frames": 748,
+    "obj_pos_shape": [
+     748,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-29_15-43-20_watering_can_pour_right_02_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 25,
+    "num_frames": 859,
+    "obj_pos_shape": [
+     859,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-03-20_11-59-57_cyan_water_bottle_rotate_01_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 26,
+    "num_frames": 669,
+    "obj_pos_shape": [
+     669,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 27,
+    "num_frames": 565,
+    "obj_pos_shape": [
+     565,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-01_11-15-05_woven_basket_ground_desk_10_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 28,
+    "num_frames": 988,
+    "obj_pos_shape": [
+     988,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03__support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   },
+   {
+    "ep": 29,
+    "num_frames": 467,
+    "obj_pos_shape": [
+     467,
+     1,
+     3
+    ],
+    "urdfs": [
+     "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/object/textured_mesh.urdf"
+    ],
+    "urdfs_exist": true,
+    "support": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/reconstructed_stage/2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda",
+    "support_in_own_root": true,
+    "ok": true
+   }
+  ]
+ }
+}

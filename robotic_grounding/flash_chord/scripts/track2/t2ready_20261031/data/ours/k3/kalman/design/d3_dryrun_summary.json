@@ -1,0 +1,39 @@
+{
+ "K0": {
+  "mean_abs_bias_rot_deg": 0.6725257721439583,
+  "max_abs_bias_rot_deg": 5.049523249550087,
+  "mean_abs_bias_pos_cm": 0.05734668869534425,
+  "secs": 0.06600000000000002
+ },
+ "K1": {
+  "mean_abs_bias_rot_deg": 16.676358674519847,
+  "max_abs_bias_rot_deg": 25.44457874882382,
+  "mean_abs_bias_pos_cm": 1.212508507373119,
+  "secs": 0.07433333333333333
+ },
+ "K2": {
+  "mean_abs_bias_rot_deg": 20.05326697697088,
+  "max_abs_bias_rot_deg": 30.205761354851195,
+  "mean_abs_bias_pos_cm": 1.3482602161526125,
+  "secs": 0.15066666666666664,
+  "rest_runs": 136,
+  "candidates": 115,
+  "tilt_accepted": 111,
+  "height_accepted": 66,
+  "tilt_no_pose_in_gate": 4
+ },
+ "K3": {
+  "mean_abs_bias_rot_deg": 20.373481664268844,
+  "max_abs_bias_rot_deg": 30.793567595306065,
+  "mean_abs_bias_pos_cm": 1.3775591343843954,
+  "secs": 0.38033333333333336,
+  "rest_runs": 136,
+  "candidates": 115,
+  "tilt_accepted": 111,
+  "height_accepted": 66,
+  "tilt_no_pose_in_gate": 4,
+  "carry_runs": 84,
+  "hand_frames": 2487,
+  "hand_frames_gated": 38
+ }
+}

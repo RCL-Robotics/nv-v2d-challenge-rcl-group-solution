@@ -1,0 +1,4499 @@
+{
+ "taken_at": "2026-10-24 19:06:28",
+ "kit": {
+  "KIT_MANIFEST.json": [
+   5762,
+   1791673048378379220
+  ],
+  "LEADERBOARDS.md": [
+   3467,
+   1791673048382379228
+  ],
+  "README.md": [
+   3339,
+   1791673048382379228
+  ],
+  "eval_reconstruction.py": [
+   442,
+   1791673048406379279
+  ],
+  "requirements.txt": [
+   468,
+   1791673048410379287
+  ],
+  "config/tracks.json": [
+   13963,
+   1791673048382379228
+  ],
+  "data/track_1_sample_submission.parquet": [
+   3495851,
+   1791673048386379236
+  ],
+  "data/track_2_sample_submission.csv": [
+   11632601,
+   1791673048398379262
+  ],
+  "data/track_3_evaluation_objects.json": [
+   1330,
+   1791673048398379262
+  ],
+  "data/track_3_mesh_sample_submission.parquet": [
+   1548077,
+   1791673048402379269
+  ],
+  "data/track_3_sample_submission.csv": [
+   4614887,
+   1791673048406379279
+  ],
+  "examples/run_policy_evaluation.py": [
+   3825,
+   1791673048406379279
+  ],
+  "flash_chord/scripts/evaluate_policy.py": [
+   3312,
+   1791673048406379279
+  ],
+  "flash_chord/src/flash_chord/configs/evaluate_policy.yaml": [
+   372,
+   1791673048406379279
+  ],
+  "flash_chord/src/flash_chord/configs/evaluation/flash_sac.yaml": [
+   336,
+   1791673048406379279
+  ],
+  "flash_chord/src/flash_chord/configs/logging/wandb.yaml": [
+   162,
+   1791673048406379279
+  ],
+  "metric_code/README.md": [
+   684,
+   1791673048406379279
+  ],
+  "metric_code/track_1/ACC-H.py": [
+   49672,
+   1791673048406379279
+  ],
+  "metric_code/track_1/ACC-O.py": [
+   49672,
+   1791673048406379279
+  ],
+  "metric_code/track_1/CD-H.py": [
+   49670,
+   1791673048406379279
+  ],
+  "metric_code/track_1/CD-O.py": [
+   49670,
+   1791673048406379279
+  ],
+  "metric_code/track_1/LICENSE.txt": [
+   11358,
+   1791673048406379279
+  ],
+  "metric_code/track_1/NOTICE.md": [
+   788,
+   1791673048406379279
+  ],
+  "metric_code/track_1/PEN.py": [
+   50109,
+   1791673048406379279
+  ],
+  "metric_code/track_2/AUC.py": [
+   21270,
+   1791673048406379279
+  ],
+  "metric_code/track_2/MP-SR.py": [
+   21278,
+   1791673048406379279
+  ],
+  "metric_code/track_2/MPPE.py": [
+   21276,
+   1791673048406379279
+  ],
+  "metric_code/track_2/SP-SR.py": [
+   21274,
+   1791673048406379279
+  ],
+  "metric_code/track_3/AUC.py": [
+   21263,
+   1791673048406379279
+  ],
+  "metric_code/track_3/CD-O.py": [
+   13406,
+   1791673048406379279
+  ],
+  "metric_code/track_3/MP-SR.py": [
+   21271,
+   1791673048406379279
+  ],
+  "metric_code/track_3/MPPE.py": [
+   21269,
+   1791673048406379279
+  ],
+  "metric_code/track_3/RPE.py": [
+   21267,
+   1791673048406379279
+  ],
+  "metric_code/track_3/SP-SR.py": [
+   21267,
+   1791673048406379279
+  ],
+  "skills/v2d-submit/SKILL.md": [
+   8379,
+   1791673048410379287
+  ],
+  "submit/v2d_submit.py": [
+   26688,
+   1791673048410379287
+  ],
+  "tools/pack_reconstruction.py": [
+   11149,
+   1791673048410379287
+  ],
+  "tools/pack_submission.py": [
+   31806,
+   1791673048410379287
+  ],
+  "tools/preflight.py": [
+   11114,
+   1791673048410379287
+  ],
+  "tools/track1/MESH_TO_MHR_PARAMS.md": [
+   8564,
+   1791673048410379287
+  ],
+  "tools/track1/mesh_to_mhr_params.py": [
+   21553,
+   1791673048410379287
+  ],
+  "tools/__pycache__/pack_submission.cpython-311.pyc": [
+   48247,
+   1792104192662269641
+  ],
+  "tools/__pycache__/pack_submission.cpython-312.pyc": [
+   42151,
+   1792790299103855608
+  ],
+  "tracks/track_1/README.md": [
+   4348,
+   1791673048410379287
+  ],
+  "tracks/track_2/README.md": [
+   7208,
+   1791673048410379287
+  ],
+  "tracks/track_3/README.md": [
+   5632,
+   1791673048410379287
+  ],
+  "v2dlb/dataset.py": [
+   5443,
+   1791673048410379287
+  ],
+  "v2dlb/mesh_budget.py": [
+   2031,
+   1791673048410379287
+  ],
+  "v2dlb/mesh_common.py": [
+   2175,
+   1791673048410379287
+  ],
+  "v2dlb/mhr_metrics.py": [
+   25647,
+   1791673048410379287
+  ],
+  "v2dlb/mhr_submission.py": [
+   24344,
+   1791673048410379287
+  ],
+  "v2dlb/object_mesh.py": [
+   10707,
+   1791673048410379287
+  ],
+  "v2dlb/object_pose.py": [
+   16129,
+   1791673048410379287
+  ],
+  "v2dlb/report_schema.py": [
+   5441,
+   1791673048410379287
+  ],
+  "v2dlb/submission_parquet.py": [
+   11283,
+   1791673048410379287
+  ],
+  "v2dlb/trajectory.py": [
+   4729,
+   1791673048410379287
+  ],
+  "v2dlb/vertices.py": [
+   3578,
+   1791673048410379287
+  ],
+  "v2dlb/__pycache__/object_pose.cpython-311.pyc": [
+   22590,
+   1791673114734481805
+  ],
+  "v2dlb/__pycache__/report_schema.cpython-311.pyc": [
+   5655,
+   1791673114734481805
+  ],
+  "v2dlb/__pycache__/dataset.cpython-311.pyc": [
+   9296,
+   1791673114734481805
+  ],
+  "v2dlb/__pycache__/submission_parquet.cpython-311.pyc": [
+   17890,
+   1791673114738481808
+  ],
+  "v2dlb/__pycache__/trajectory.cpython-311.pyc": [
+   8082,
+   1791673114738481808
+  ],
+  "v2dlb/__pycache__/vertices.cpython-311.pyc": [
+   5690,
+   1791781999579250951
+  ],
+  "v2dlb/__pycache__/trajectory.cpython-312.pyc": [
+   6792,
+   1792790299095855931
+  ],
+  "v2dlb/__pycache__/object_pose.cpython-312.pyc": [
+   20525,
+   1792790299251849622
+  ],
+  "v2dlb/__pycache__/report_schema.cpython-312.pyc": [
+   4905,
+   1792790299251849622
+  ],
+  "v2dlb/__pycache__/dataset.cpython-312.pyc": [
+   7746,
+   1792790299255849461
+  ],
+  "v2dlb/__pycache__/submission_parquet.cpython-312.pyc": [
+   15698,
+   1792790299255849461
+  ]
+ },
+ "stock": {
+  ".gitattributes": [
+   1182,
+   1791672113899752967
+  ],
+  ".gitignore": [
+   434,
+   1791672113899752967
+  ],
+  "LICENSE": [
+   30209,
+   1791672113903752919
+  ],
+  "README.md": [
+   11425,
+   1791672113903752919
+  ],
+  "SECURITY.md": [
+   1917,
+   1791672113903752919
+  ],
+  "run_e2e.sh": [
+   163,
+   1791672114067750965
+  ],
+  "robotic_grounding/.dockerignore": [
+   1181,
+   1791672113903752919
+  ],
+  "robotic_grounding/.gitattributes": [
+   3651,
+   1791672113903752919
+  ],
+  "robotic_grounding/.gitignore": [
+   7183,
+   1791672113903752919
+  ],
+  "robotic_grounding/.pre-commit-config.yaml": [
+   3327,
+   1791672113903752919
+  ],
+  "robotic_grounding/CLAUDE.md": [
+   9526,
+   1791672113903752919
+  ],
+  "robotic_grounding/README.md": [
+   37005,
+   1791672113903752919
+  ],
+  "robotic_grounding/pyproject.toml": [
+   6306,
+   1791672114067750965
+  ],
+  "robotic_grounding/run_example_sequences.sh": [
+   3876,
+   1791672114067750965
+  ],
+  "robotic_grounding/run_load_local.sh": [
+   4535,
+   1791672114067750965
+  ],
+  "robotic_grounding/run_pipeline_local.sh": [
+   1664,
+   1791672114067750965
+  ],
+  "robotic_grounding/run_retarget_local.sh": [
+   7079,
+   1791672114067750965
+  ],
+  "robotic_grounding/flash_chord/.dockerignore": [
+   471,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/.gitattributes": [
+   990,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/.gitignore": [
+   404,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/.pre-commit-config.yaml": [
+   1947,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/CONVENTIONS.md": [
+   1002,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/README.md": [
+   12926,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/SOURCE.json": [
+   1802,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/V2D_INTEGRATION.md": [
+   6980,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/pyproject.toml": [
+   2285,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/uv.lock": [
+   244149,
+   1791672114067750965
+  ],
+  "robotic_grounding/flash_chord/docker/Dockerfile": [
+   3126,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/docker/run.sh": [
+   8907,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/docs/.gitignore": [
+   113,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/docs/configuration.md": [
+   4498,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/docs/package_structure.md": [
+   1901,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/docs/media/README.md": [
+   982,
+   1791672113903752919
+  ],
+  "robotic_grounding/flash_chord/docs/media/manifest.json": [
+   10149,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/docs/media/g1_policy.gif": [
+   1029926,
+   1791672168787100703
+  ],
+  "robotic_grounding/flash_chord/docs/media/g1_reference.gif": [
+   870436,
+   1791672168787100703
+  ],
+  "robotic_grounding/flash_chord/docs/media/g1_robot.gif": [
+   443981,
+   1791672168787100703
+  ],
+  "robotic_grounding/flash_chord/docs/media/g1_scene.gif": [
+   360588,
+   1791672168791100656
+  ],
+  "robotic_grounding/flash_chord/docs/media/sharpa_policy.gif": [
+   1530849,
+   1791672168791100656
+  ],
+  "robotic_grounding/flash_chord/docs/media/sharpa_reference.gif": [
+   2501977,
+   1791672168799100560
+  ],
+  "robotic_grounding/flash_chord/docs/media/sharpa_robot.gif": [
+   395059,
+   1791672168803100513
+  ],
+  "robotic_grounding/flash_chord/docs/media/sharpa_scene.gif": [
+   612888,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/scripts/evaluate_policy.py": [
+   3312,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/license_header_hook.py": [
+   4475,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/train_flash_sac.py": [
+   4732,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/train_rl.py": [
+   4421,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/view_policy.py": [
+   17379,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/assets/generate_vega_sharpa.py": [
+   10954,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/debug/replay.py": [
+   8548,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/debug/view_robot.py": [
+   1561,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/scripts/debug/view_scene.py": [
+   1999,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/__init__.py": [
+   137,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configuration.py": [
+   3240,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/__init__.py": [
+   277,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/mesh.py": [
+   4106,
+   1791672113935752538
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/registry.py": [
+   10024,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/LICENSE": [
+   1559,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/NOTICE": [
+   305,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/head_link.STL": [
+   932784,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_ankle_pitch_link.STL": [
+   71184,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_ankle_roll_link.STL": [
+   653384,
+   1791672168815100371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_elbow_link.STL": [
+   88784,
+   1791672168815100371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_index_0_link.STL": [
+   475984,
+   1791672168815100371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_index_1_link.STL": [
+   1521784,
+   1791672168819100324
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_middle_0_link.STL": [
+   475984,
+   1791672168819100324
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_middle_1_link.STL": [
+   1521784,
+   1791672168823100276
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_palm_link.STL": [
+   2140184,
+   1791672168827100229
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_thumb_0_link.STL": [
+   8884,
+   1791672168831100181
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_thumb_1_link.STL": [
+   475984,
+   1791672168831100181
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hand_thumb_2_link.STL": [
+   1521784,
+   1791672168835100134
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hip_pitch_link.STL": [
+   181684,
+   1791672168835100134
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hip_roll_link.STL": [
+   192184,
+   1791672168835100134
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_hip_yaw_link.STL": [
+   296284,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_knee_link.STL": [
+   854884,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_shoulder_pitch_link.STL": [
+   176784,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_shoulder_roll_link.STL": [
+   400284,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_shoulder_yaw_link.STL": [
+   249184,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_wrist_pitch_link.STL": [
+   85984,
+   1791672168839100087
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_wrist_roll_link.STL": [
+   356184,
+   1791672168843100039
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/left_wrist_yaw_link.STL": [
+   318684,
+   1791672168843100039
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/logo_link.STL": [
+   243384,
+   1791672168843100039
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/pelvis.STL": [
+   1060884,
+   1791672168847099992
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/pelvis_contour_link.STL": [
+   1805184,
+   1791672168847099992
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_ankle_pitch_link.STL": [
+   71184,
+   1791672168851099944
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_ankle_roll_link.STL": [
+   653784,
+   1791672168851099944
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_elbow_link.STL": [
+   88784,
+   1791672168851099944
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_index_0_link.STL": [
+   475984,
+   1791672168855099897
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_index_1_link.STL": [
+   1521784,
+   1791672168859099850
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_middle_0_link.STL": [
+   475984,
+   1791672168859099850
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_middle_1_link.STL": [
+   1521784,
+   1791672168863099802
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_palm_link.STL": [
+   2140184,
+   1791672168867099755
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_thumb_0_link.STL": [
+   8884,
+   1791672168867099755
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_thumb_1_link.STL": [
+   475984,
+   1791672168867099755
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hand_thumb_2_link.STL": [
+   1521784,
+   1791672168871099708
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hip_pitch_link.STL": [
+   181284,
+   1791672168871099708
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hip_roll_link.STL": [
+   192684,
+   1791672168871099708
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_hip_yaw_link.STL": [
+   296284,
+   1791672168875099660
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_knee_link.STL": [
+   852284,
+   1791672168875099660
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_shoulder_pitch_link.STL": [
+   176784,
+   1791672168875099660
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_shoulder_roll_link.STL": [
+   401884,
+   1791672168875099660
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_shoulder_yaw_link.STL": [
+   249984,
+   1791672168875099660
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_wrist_pitch_link.STL": [
+   79584,
+   1791672168879099612
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_wrist_roll_link.STL": [
+   356084,
+   1791672168879099612
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/right_wrist_yaw_link.STL": [
+   341484,
+   1791672168879099612
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/torso_link_rev_1_0.STL": [
+   2570584,
+   1791672168883099565
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/waist_roll_link_rev_1_0.STL": [
+   85884,
+   1791672168883099565
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/waist_yaw_link_rev_1_0.STL": [
+   619984,
+   1791672168883099565
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_0_link.mtl": [
+   237,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_0_link.obj": [
+   3746,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_1_link.mtl": [
+   241,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_1_link.obj": [
+   13835,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_2_link.mtl": [
+   241,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/left_hand_thumb_2_link.obj": [
+   17720,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_0_link.mtl": [
+   241,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_0_link.obj": [
+   3210,
+   1791672168807100466
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_1_link.mtl": [
+   241,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_1_link.obj": [
+   12589,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_2_link.mtl": [
+   241,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/g1/collision/hands/right_hand_thumb_2_link.obj": [
+   16947,
+   1791672168811100418
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/DP_elastomer.STL": [
+   136684,
+   1791672168883099565
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/MCP_VL.STL": [
+   75184,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/elastomer.STL": [
+   271584,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/elastomer_surface.STL": [
+   362534,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_DP.STL": [
+   101684,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_DP_visual.STL": [
+   320284,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_MCP_VL_visual.STL": [
+   322584,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_MP.STL": [
+   37084,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_MP_visual.STL": [
+   369384,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_PP.STL": [
+   82484,
+   1791672168887099518
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_PP_visual.STL": [
+   559934,
+   1791672168891099470
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_hand_C_MC.STL": [
+   174184,
+   1791672168891099470
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_hand_C_MC_visual.STL": [
+   1201049,
+   1791672168891099470
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_hand_C_MC_visual_.STL": [
+   214484,
+   1791672168891099470
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_pinky_MC.STL": [
+   41984,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_pinky_MC_visual.STL": [
+   66184,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_CMC_VL.STL": [
+   317984,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_DP.STL": [
+   66484,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_DP_visual.STL": [
+   335484,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_MC.STL": [
+   171084,
+   1791672168895099423
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_MC_visual.STL": [
+   580084,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_PP.STL": [
+   83784,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/left_thumb_PP_visual.STL": [
+   772184,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/thumb_DP_elastomer.STL": [
+   124184,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/thumb_elastomer.STL": [
+   270684,
+   1791672168899099375
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left/thumb_elastomer_surface.STL": [
+   506484,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/DP_elastomer.STL": [
+   8884,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/MCP_VL.STL": [
+   7484,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/elastomer.STL": [
+   24184,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/elastomer_surface.STL": [
+   19984,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_DP.STL": [
+   5984,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_DP_visual.STL": [
+   320284,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_MCP_VL_visual.STL": [
+   322584,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_MP.STL": [
+   3684,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_MP_visual.STL": [
+   369384,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_PP.STL": [
+   8284,
+   1791672168903099328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_PP_visual.STL": [
+   559934,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_hand_C_MC.STL": [
+   4384,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_hand_C_MC_cut.STL": [
+   7984,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_hand_C_MC_visual.STL": [
+   285084,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_hand_C_MC_visual_.STL": [
+   214484,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_pinky_MC.STL": [
+   4184,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_pinky_MC_visual.STL": [
+   66184,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_CMC_VL.STL": [
+   8684,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_DP.STL": [
+   3984,
+   1791672168907099281
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_DP_visual.STL": [
+   335484,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_MC.STL": [
+   17084,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_MC_cut.STL": [
+   19184,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_MC_visual.STL": [
+   580084,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_PP.STL": [
+   8384,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/left_thumb_PP_visual.STL": [
+   772184,
+   1791672168911099233
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/thumb_DP_elastomer.STL": [
+   9884,
+   1791672168915099186
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/thumb_elastomer.STL": [
+   26284,
+   1791672168915099186
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_cvx/thumb_elastomer_surface.STL": [
+   22684,
+   1791672168915099186
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC.bin": [
+   1896848,
+   1791672168915099186
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC.gltf": [
+   2391,
+   1791672168919099139
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC.mtl": [
+   231,
+   1791672168919099139
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC.obj": [
+   3812598,
+   1791672168923099092
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC_no_mount.bin": [
+   1650648,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_hand_C_MC_no_mount.gltf": [
+   2398,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_DP.bin": [
+   209604,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_DP.gltf": [
+   2375,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_DP.mtl": [
+   231,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_DP.obj": [
+   413099,
+   1791672168931098996
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MCP_VL.bin": [
+   252996,
+   1791672168935098949
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MCP_VL.gltf": [
+   2389,
+   1791672168935098949
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MCP_VL.mtl": [
+   231,
+   1791672168935098949
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MCP_VL.obj": [
+   451903,
+   1791672168935098949
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MP.bin": [
+   900048,
+   1791672168939098902
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MP.gltf": [
+   2386,
+   1791672168939098902
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MP.mtl": [
+   231,
+   1791672168939098902
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_MP.obj": [
+   2298506,
+   1791672168943098854
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_PP.bin": [
+   734480,
+   1791672168947098807
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_PP.gltf": [
+   2385,
+   1791672168947098807
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_PP.mtl": [
+   231,
+   1791672168947098807
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_PP.obj": [
+   1399944,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_elastomer.bin": [
+   84120,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_elastomer.gltf": [
+   2389,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_elastomer.mtl": [
+   231,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_index_elastomer.obj": [
+   159360,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_DP.bin": [
+   209604,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_DP.gltf": [
+   2380,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_DP.mtl": [
+   231,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_DP.obj": [
+   412203,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MCP_VL.bin": [
+   252996,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MCP_VL.gltf": [
+   2392,
+   1791672168951098759
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MCP_VL.mtl": [
+   231,
+   1791672168955098712
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MCP_VL.obj": [
+   454816,
+   1791672168955098712
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MP.bin": [
+   900048,
+   1791672168955098712
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MP.gltf": [
+   2389,
+   1791672168955098712
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MP.mtl": [
+   231,
+   1791672168955098712
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_MP.obj": [
+   2298393,
+   1791672168959098664
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_PP.bin": [
+   734528,
+   1791672168963098617
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_PP.gltf": [
+   2389,
+   1791672168963098617
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_PP.mtl": [
+   231,
+   1791672168963098617
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_PP.obj": [
+   1401733,
+   1791672168963098617
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_elastomer.bin": [
+   84120,
+   1791672168963098617
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_elastomer.gltf": [
+   2396,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_elastomer.mtl": [
+   231,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_middle_elastomer.obj": [
+   158990,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_DP.bin": [
+   209604,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_DP.gltf": [
+   2376,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_DP.mtl": [
+   231,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_DP.obj": [
+   413376,
+   1791672168967098570
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MC.bin": [
+   449544,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MC.gltf": [
+   2376,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MC.mtl": [
+   231,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MC.obj": [
+   885466,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MCP_VL.bin": [
+   252996,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MCP_VL.gltf": [
+   2386,
+   1791672168971098523
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MCP_VL.mtl": [
+   231,
+   1791672168975098475
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MCP_VL.obj": [
+   453079,
+   1791672168975098475
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MP.bin": [
+   900048,
+   1791672168975098475
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MP.gltf": [
+   2387,
+   1791672168975098475
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MP.mtl": [
+   231,
+   1791672168979098427
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_MP.obj": [
+   2298202,
+   1791672168979098427
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_PP.bin": [
+   734144,
+   1791672168983098380
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_PP.gltf": [
+   2386,
+   1791672168983098380
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_PP.mtl": [
+   231,
+   1791672168983098380
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_PP.obj": [
+   1404295,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_elastomer.bin": [
+   84120,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_elastomer.gltf": [
+   2394,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_elastomer.mtl": [
+   231,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_pinky_elastomer.obj": [
+   158782,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_DP.bin": [
+   209604,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_DP.gltf": [
+   2373,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_DP.mtl": [
+   231,
+   1791672168987098333
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_DP.obj": [
+   411685,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MCP_VL.bin": [
+   252996,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MCP_VL.gltf": [
+   2386,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MCP_VL.mtl": [
+   231,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MCP_VL.obj": [
+   454156,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MP.bin": [
+   900048,
+   1791672168991098285
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MP.gltf": [
+   2383,
+   1791672168995098238
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MP.mtl": [
+   231,
+   1791672168995098238
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_MP.obj": [
+   2298559,
+   1791672168999098191
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_PP.bin": [
+   734576,
+   1791672169003098143
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_PP.gltf": [
+   2384,
+   1791672169003098143
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_PP.mtl": [
+   231,
+   1791672169003098143
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_PP.obj": [
+   1402728,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_elastomer.bin": [
+   84120,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_elastomer.gltf": [
+   2393,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_elastomer.mtl": [
+   231,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_ring_elastomer.obj": [
+   158408,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_CMC_VL.bin": [
+   366744,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_CMC_VL.gltf": [
+   2388,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_CMC_VL.mtl": [
+   235,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_CMC_VL.obj": [
+   696033,
+   1791672169007098095
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_DP.bin": [
+   365552,
+   1791672169011098048
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_DP.gltf": [
+   2379,
+   1791672169011098048
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_DP.mtl": [
+   231,
+   1791672169011098048
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_DP.obj": [
+   887056,
+   1791672169011098048
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MC.bin": [
+   497304,
+   1791672169015098001
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MC.gltf": [
+   2378,
+   1791672169015098001
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MC.mtl": [
+   231,
+   1791672169015098001
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MC.obj": [
+   1077081,
+   1791672169019097953
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MCP_VL.bin": [
+   292524,
+   1791672169019097953
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MCP_VL.gltf": [
+   2387,
+   1791672169019097953
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MCP_VL.mtl": [
+   231,
+   1791672169019097953
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_MCP_VL.obj": [
+   564856,
+   1791672169019097953
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_PP.bin": [
+   721844,
+   1791672169023097906
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_PP.gltf": [
+   2384,
+   1791672169023097906
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_PP.mtl": [
+   231,
+   1791672169023097906
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_PP.obj": [
+   1787212,
+   1791672169027097858
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_elastomer.bin": [
+   319008,
+   1791672169027097858
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_elastomer.gltf": [
+   2399,
+   1791672169027097858
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_elastomer.mtl": [
+   231,
+   1791672169027097858
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/left_thumb_elastomer.obj": [
+   888352,
+   1791672169027097858
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/t_Sharpa_alb.png": [
+   17072131,
+   1791672169071097337
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/t_Sharpa_nor.png": [
+   18591635,
+   1791672169115096816
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/left_hi/t_Sharpa_orm.png": [
+   17910338,
+   1791672169159096295
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/DP_elastomer.STL": [
+   136684,
+   1791672169159096295
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/MCP_VL.STL": [
+   75184,
+   1791672169159096295
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/elastomer.STL": [
+   271584,
+   1791672169163096247
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/elastomer_surface.STL": [
+   362534,
+   1791672169163096247
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_DP.STL": [
+   101684,
+   1791672169163096247
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_DP_visual.STL": [
+   320284,
+   1791672169163096247
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_MCP_VL_visual.STL": [
+   322584,
+   1791672169167096199
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_MP.STL": [
+   37084,
+   1791672169167096199
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_MP_visual.STL": [
+   369384,
+   1791672169167096199
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_PP.STL": [
+   81784,
+   1791672169167096199
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_PP_visual.STL": [
+   560734,
+   1791672169167096199
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_hand_C_MC.STL": [
+   174184,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_hand_C_MC_visual.STL": [
+   1197032,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_hand_C_MC_visual_.STL": [
+   214484,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_pinky_MC.STL": [
+   41884,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_pinky_MC_visual.STL": [
+   66184,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_CMC_VL_visual.STL": [
+   317984,
+   1791672169171096152
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_DP.STL": [
+   66484,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_DP_visual.STL": [
+   335484,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_MC.STL": [
+   149584,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_MC_visual.STL": [
+   625334,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_PP.STL": [
+   85884,
+   1791672169175096105
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/right_thumb_PP_visual.STL": [
+   719834,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/thumb_DP_elastomer.STL": [
+   124184,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/thumb_elastomer.STL": [
+   270684,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right/thumb_elastomer_surface.STL": [
+   506484,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/DP_elastomer.STL": [
+   8884,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/MCP_VL.STL": [
+   7484,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/elastomer.STL": [
+   24184,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/elastomer_surface.STL": [
+   19984,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_DP.STL": [
+   5984,
+   1791672169179096057
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_DP_visual.STL": [
+   320284,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_MCP_VL_visual.STL": [
+   322584,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_MP.STL": [
+   3684,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_MP_visual.STL": [
+   369384,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_PP.STL": [
+   8184,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_PP_visual.STL": [
+   560734,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_hand_C_MC.STL": [
+   4384,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_hand_C_MC_cut.STL": [
+   6084,
+   1791672169183096010
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_hand_C_MC_visual.STL": [
+   285084,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_hand_C_MC_visual_.STL": [
+   214484,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_pinky_MC.STL": [
+   4184,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_pinky_MC_visual.STL": [
+   66184,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_CMC_VL_visual.STL": [
+   317984,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_DP.STL": [
+   3984,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_DP_visual.STL": [
+   335484,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_MC.STL": [
+   14984,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_MC_cut.STL": [
+   16284,
+   1791672169187095963
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_MC_visual.STL": [
+   625334,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_PP.STL": [
+   8584,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/right_thumb_PP_visual.STL": [
+   719834,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/thumb_DP_elastomer.STL": [
+   9884,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/thumb_elastomer.STL": [
+   26284,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_cvx/thumb_elastomer_surface.STL": [
+   22684,
+   1791672169191095915
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC.bin": [
+   1901840,
+   1791672169195095868
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC.gltf": [
+   2393,
+   1791672169195095868
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC.mtl": [
+   231,
+   1791672169195095868
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC.obj": [
+   3818552,
+   1791672169207095726
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC_no_mount.bin": [
+   1649952,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_hand_C_MC_no_mount.gltf": [
+   2401,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_DP.bin": [
+   209604,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_DP.gltf": [
+   2381,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_DP.mtl": [
+   231,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_DP.obj": [
+   409845,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MCP_VL.bin": [
+   252996,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MCP_VL.gltf": [
+   2392,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MCP_VL.mtl": [
+   231,
+   1791672169211095679
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MCP_VL.obj": [
+   451433,
+   1791672169215095630
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MP.bin": [
+   900048,
+   1791672169215095630
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MP.gltf": [
+   2391,
+   1791672169215095630
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MP.mtl": [
+   231,
+   1791672169215095630
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_MP.obj": [
+   2298260,
+   1791672169219095583
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_PP.bin": [
+   734576,
+   1791672169223095536
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_PP.gltf": [
+   2389,
+   1791672169223095536
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_PP.mtl": [
+   231,
+   1791672169223095536
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_PP.obj": [
+   1386776,
+   1791672169223095536
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_elastomer.bin": [
+   84120,
+   1791672169223095536
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_elastomer.gltf": [
+   2396,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_elastomer.mtl": [
+   231,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_index_elastomer.obj": [
+   157822,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_DP.bin": [
+   209604,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_DP.gltf": [
+   2383,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_DP.mtl": [
+   231,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_DP.obj": [
+   409939,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MCP_VL.bin": [
+   252996,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MCP_VL.gltf": [
+   2393,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MCP_VL.mtl": [
+   231,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MCP_VL.obj": [
+   451226,
+   1791672169227095488
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MP.bin": [
+   900048,
+   1791672169231095441
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MP.gltf": [
+   2394,
+   1791672169231095441
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MP.mtl": [
+   231,
+   1791672169231095441
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_MP.obj": [
+   2298246,
+   1791672169235095394
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_PP.bin": [
+   734624,
+   1791672169235095394
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_PP.gltf": [
+   2391,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_PP.mtl": [
+   231,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_PP.obj": [
+   1388399,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_elastomer.bin": [
+   84120,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_elastomer.gltf": [
+   2400,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_elastomer.mtl": [
+   231,
+   1791672169239095347
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_middle_elastomer.obj": [
+   157800,
+   1791672169243095299
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_DP.bin": [
+   209604,
+   1791672169243095299
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_DP.gltf": [
+   2382,
+   1791672169243095299
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_DP.mtl": [
+   231,
+   1791672169247095251
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_DP.obj": [
+   409584,
+   1791672169247095251
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MC.bin": [
+   449544,
+   1791672169247095251
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MC.gltf": [
+   2380,
+   1791672169247095251
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MC.mtl": [
+   231,
+   1791672169247095251
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MC.obj": [
+   889489,
+   1791672169251095204
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MCP_VL.bin": [
+   252996,
+   1791672169251095204
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MCP_VL.gltf": [
+   2390,
+   1791672169251095204
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MCP_VL.mtl": [
+   231,
+   1791672169251095204
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MCP_VL.obj": [
+   451268,
+   1791672169251095204
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MP.bin": [
+   900048,
+   1791672169255095157
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MP.gltf": [
+   2391,
+   1791672169255095157
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MP.mtl": [
+   231,
+   1791672169255095157
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_MP.obj": [
+   2298147,
+   1791672169259095109
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_PP.bin": [
+   734192,
+   1791672169263095062
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_PP.gltf": [
+   2390,
+   1791672169263095062
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_PP.mtl": [
+   231,
+   1791672169263095062
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_PP.obj": [
+   1388049,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_elastomer.bin": [
+   84120,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_elastomer.gltf": [
+   2395,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_elastomer.mtl": [
+   231,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_pinky_elastomer.obj": [
+   157915,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_DP.bin": [
+   209604,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_DP.gltf": [
+   2377,
+   1791672169267095015
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_DP.mtl": [
+   231,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_DP.obj": [
+   409862,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MCP_VL.bin": [
+   252996,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MCP_VL.gltf": [
+   2387,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MCP_VL.mtl": [
+   231,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MCP_VL.obj": [
+   451237,
+   1791672169271094967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MP.bin": [
+   900048,
+   1791672169275094920
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MP.gltf": [
+   2388,
+   1791672169275094920
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MP.mtl": [
+   231,
+   1791672169275094920
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_MP.obj": [
+   2298213,
+   1791672169275094920
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_PP.bin": [
+   734576,
+   1791672169279094872
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_PP.gltf": [
+   2386,
+   1791672169279094872
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_PP.mtl": [
+   231,
+   1791672169279094872
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_PP.obj": [
+   1388396,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_elastomer.bin": [
+   84120,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_elastomer.gltf": [
+   2393,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_elastomer.mtl": [
+   231,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_ring_elastomer.obj": [
+   157823,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_CMC_VL.bin": [
+   366744,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_CMC_VL.gltf": [
+   2393,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_CMC_VL.mtl": [
+   235,
+   1791672169283094825
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_CMC_VL.obj": [
+   695494,
+   1791672169287094778
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_DP.bin": [
+   365552,
+   1791672169287094778
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_DP.gltf": [
+   2383,
+   1791672169287094778
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_DP.mtl": [
+   231,
+   1791672169287094778
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_DP.obj": [
+   886900,
+   1791672169287094778
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MC.bin": [
+   497304,
+   1791672169291094731
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MC.gltf": [
+   2382,
+   1791672169291094731
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MC.mtl": [
+   231,
+   1791672169291094731
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MC.obj": [
+   1072814,
+   1791672169295094682
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MCP_VL.bin": [
+   292524,
+   1791672169295094682
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MCP_VL.gltf": [
+   2390,
+   1791672169295094682
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MCP_VL.mtl": [
+   235,
+   1791672169295094682
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_MCP_VL.obj": [
+   564490,
+   1791672169299094635
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_PP.bin": [
+   721844,
+   1791672169299094635
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_PP.gltf": [
+   2387,
+   1791672169299094635
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_PP.mtl": [
+   231,
+   1791672169299094635
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_PP.obj": [
+   1789492,
+   1791672169303094588
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_elastomer.bin": [
+   319008,
+   1791672169303094588
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_elastomer.gltf": [
+   2402,
+   1791672169303094588
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_elastomer.mtl": [
+   231,
+   1791672169303094588
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/right_thumb_elastomer.obj": [
+   888304,
+   1791672169307094540
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/t_Sharpa_alb.png": [
+   17072131,
+   1791672169339094161
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/t_Sharpa_nor.png": [
+   18591635,
+   1791672169379093687
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/sharpawave/right_hi/t_Sharpa_orm.png": [
+   17910338,
+   1791672169415093261
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/collision/arm_l2.obj": [
+   449493,
+   1791672169419093213
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/collision/arm_l4.obj": [
+   477741,
+   1791672169419093213
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/collision/arm_l5.obj": [
+   291506,
+   1791672169419093213
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/collision/arm_l7.obj": [
+   506793,
+   1791672169423093166
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/collision/torso_l3.obj": [
+   205317,
+   1791672169423093166
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/B_wheel_l2.obj": [
+   1027982,
+   1791672169423093166
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/L_arm_l1.obj": [
+   515061,
+   1791672169427093119
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/L_arm_l6.obj": [
+   532278,
+   1791672169427093119
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/R_arm_l1.obj": [
+   519344,
+   1791672169427093119
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/R_arm_l6.obj": [
+   573521,
+   1791672169431093071
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l2.obj": [
+   449494,
+   1791672169431093071
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l3.obj": [
+   599957,
+   1791672169431093071
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l4.obj": [
+   477742,
+   1791672169435093023
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l5.obj": [
+   291507,
+   1791672169435093023
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l7.obj": [
+   506794,
+   1791672169435093023
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/arm_l8.obj": [
+   195588,
+   1791672169435093023
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/base.obj": [
+   566670,
+   1791672169439092976
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/head_l1.obj": [
+   451629,
+   1791672169439092976
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/head_l2.obj": [
+   272356,
+   1791672169439092976
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/head_l3.obj": [
+   689012,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/torso_l1.obj": [
+   194061,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/torso_l2.obj": [
+   70309,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/torso_l3.obj": [
+   205318,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/wheel_l2.obj": [
+   882416,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/wrist_mount_l.obj": [
+   240751,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/collision/wrist_mount_r.obj": [
+   245719,
+   1791672169443092929
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/MCP_VL.STL": [
+   75184,
+   1791672169447092881
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/elastomer.STL": [
+   271584,
+   1791672169447092881
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/elastomer_surface.STL": [
+   362534,
+   1791672169447092881
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_DP.STL": [
+   101684,
+   1791672169451092834
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_DP_visual.STL": [
+   320284,
+   1791672169451092834
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_MCP_VL_visual.STL": [
+   322584,
+   1791672169451092834
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_MP.STL": [
+   37084,
+   1791672169451092834
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_MP_visual.STL": [
+   369384,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_PP.STL": [
+   82484,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_PP_visual.STL": [
+   559934,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_hand_C_MC.STL": [
+   174184,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_hand_C_MC_visual.STL": [
+   214484,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_pinky_MC.STL": [
+   41984,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_pinky_MC_visual.STL": [
+   66184,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_CMC_VL.STL": [
+   317984,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_DP.STL": [
+   66484,
+   1791672169455092787
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_DP_visual.STL": [
+   335484,
+   1791672169459092739
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_MC.STL": [
+   171084,
+   1791672169459092739
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672169459092739
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_MC_visual.STL": [
+   580084,
+   1791672169459092739
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_PP.STL": [
+   83784,
+   1791672169459092739
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/left_thumb_PP_visual.STL": [
+   772184,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/thumb_elastomer.STL": [
+   270684,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/left_sharpa_ha4/thumb_elastomer_surface.STL": [
+   506484,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/MCP_VL.STL": [
+   75184,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/elastomer.STL": [
+   271584,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/elastomer_surface.STL": [
+   362534,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_DP.STL": [
+   101684,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_DP_visual.STL": [
+   320284,
+   1791672169463092692
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_MCP_VL_visual.STL": [
+   322584,
+   1791672169467092644
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_MP.STL": [
+   37084,
+   1791672169467092644
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_MP_visual.STL": [
+   369384,
+   1791672169467092644
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_PP.STL": [
+   81784,
+   1791672169467092644
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_PP_visual.STL": [
+   560734,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_hand_C_MC.STL": [
+   174184,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_hand_C_MC_visual.STL": [
+   214484,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_pinky_MC.STL": [
+   41884,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_pinky_MC_visual.STL": [
+   66184,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_CMC_VL_visual.STL": [
+   317984,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_DP.STL": [
+   66484,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_DP_visual.STL": [
+   335484,
+   1791672169471092597
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_MC.STL": [
+   149584,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_MCP_VL_visual.STL": [
+   300784,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_MC_visual.STL": [
+   625334,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_PP.STL": [
+   85884,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/right_thumb_PP_visual.STL": [
+   719834,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/thumb_elastomer.STL": [
+   270684,
+   1791672169475092550
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/sharpa/right_sharpa_ha4/thumb_elastomer_surface.STL": [
+   506484,
+   1791672169479092503
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/B_wheel_l1.glb": [
+   158724,
+   1791672169479092503
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/B_wheel_l2.glb": [
+   754284,
+   1791672169479092503
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/L_arm_l1.glb": [
+   556372,
+   1791672169479092503
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/L_arm_l6.glb": [
+   570932,
+   1791672169483092455
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/R_arm_l1.glb": [
+   565284,
+   1791672169483092455
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/R_arm_l6.glb": [
+   572188,
+   1791672169483092455
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l2.glb": [
+   758816,
+   1791672169483092455
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l3.glb": [
+   719920,
+   1791672169491092360
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l4.glb": [
+   705008,
+   1791672169491092360
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l5.glb": [
+   454116,
+   1791672169491092360
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l7.glb": [
+   808376,
+   1791672169495092313
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/arm_l8.glb": [
+   535932,
+   1791672169495092313
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/base.glb": [
+   3818648,
+   1791672169503092218
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/base_cam.glb": [
+   52788,
+   1791672169503092218
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/head_l1.glb": [
+   574468,
+   1791672169503092218
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/head_l2.glb": [
+   384196,
+   1791672169507092171
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/head_l3.glb": [
+   923200,
+   1791672169507092171
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/imu.glb": [
+   22528,
+   1791672169507092171
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/lidar.glb": [
+   505620,
+   1791672169511092123
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/torso_l1.glb": [
+   298680,
+   1791672169511092123
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/torso_l2.glb": [
+   173156,
+   1791672169511092123
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/torso_l3.glb": [
+   1271764,
+   1791672169515092075
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/ultrasonic.glb": [
+   105076,
+   1791672169515092075
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/wheel_l1.glb": [
+   393292,
+   1791672169515092075
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/v2/visual/wheel_l2.glb": [
+   472844,
+   1791672169519092028
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/B_wheel_l1.mtl": [
+   145,
+   1791672169519092028
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/B_wheel_l1.obj": [
+   417854,
+   1791672169519092028
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/B_wheel_l2.mtl": [
+   173,
+   1791672169519092028
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/B_wheel_l2.obj": [
+   1076660,
+   1791672169519092028
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/B_wheel_l2_material_0.png": [
+   5348,
+   1791672169523091981
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/L_arm_l1.mtl": [
+   144,
+   1791672169523091981
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/L_arm_l1.obj": [
+   966924,
+   1791672169523091981
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/L_arm_l6.mtl": [
+   144,
+   1791672169523091981
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/L_arm_l6.obj": [
+   1010693,
+   1791672169523091981
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/R_arm_l1.mtl": [
+   144,
+   1791672169527091933
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/R_arm_l1.obj": [
+   995194,
+   1791672169527091933
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/R_arm_l6.mtl": [
+   144,
+   1791672169527091933
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/R_arm_l6.obj": [
+   1000031,
+   1791672169531091886
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l2.mtl": [
+   144,
+   1791672169531091886
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l2.obj": [
+   1337768,
+   1791672169531091886
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l3.mtl": [
+   144,
+   1791672169531091886
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l3.obj": [
+   1248194,
+   1791672169535091839
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l4.mtl": [
+   144,
+   1791672169535091839
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l4.obj": [
+   1246967,
+   1791672169539091791
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l5.mtl": [
+   144,
+   1791672169539091791
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l5.obj": [
+   790252,
+   1791672169539091791
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l7.mtl": [
+   144,
+   1791672169539091791
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l7.obj": [
+   1429199,
+   1791672169543091744
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l8.mtl": [
+   169,
+   1791672169543091744
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/arm_l8_material_0.png": [
+   5378,
+   1791672169543091744
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/base.mtl": [
+   167,
+   1791672169543091744
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/base.obj": [
+   12074666,
+   1791672169563091507
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/base_cam.mtl": [
+   141,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/base_material_0.png": [
+   154,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/head_l1.mtl": [
+   142,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/head_l2.mtl": [
+   144,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/head_l3.mtl": [
+   170,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/head_l3_material_0.png": [
+   112,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/imu.mtl": [
+   142,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/lidar.mtl": [
+   148,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l1.mtl": [
+   144,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l1.obj": [
+   505756,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l2.mtl": [
+   171,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l2.obj": [
+   504262,
+   1791672169567091459
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l2_material_0.png": [
+   89,
+   1791672169571091412
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l3.mtl": [
+   171,
+   1791672169571091412
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l3.obj": [
+   3943320,
+   1791672169575091365
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/torso_l3_material_0.png": [
+   111,
+   1791672169579091317
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/ultrasonic.mtl": [
+   145,
+   1791672169579091317
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/wheel_l1.mtl": [
+   141,
+   1791672169579091317
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/wheel_l1.obj": [
+   690585,
+   1791672169579091317
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/wheel_l2.mtl": [
+   171,
+   1791672169579091317
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/wheel_l2.obj": [
+   1239018,
+   1791672169583091270
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/meshes/vega_sharpa/visual_clean/wheel_l2_material_0.png": [
+   97,
+   1791672169583091270
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/LICENSE": [
+   8884,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/MODEL_CARD.md": [
+   7514,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/NOTICE": [
+   349,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/SOURCE.json": [
+   1037,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/decoder_batched.onnx": [
+   40903373,
+   1791672169683090085
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/encoder_batched.onnx": [
+   50112213,
+   1791672169799088710
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/model-card-subcards/bias.md": [
+   696,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/model-card-subcards/explainability.md": [
+   2985,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/model-card-subcards/privacy.md": [
+   1658,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/policies/sonic/model-card-subcards/safety_security.md": [
+   933,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/g1/LICENSE": [
+   1559,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/g1/NOTICE": [
+   406,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/g1/SOURCE.json": [
+   1011,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/g1/main_with_hand.urdf": [
+   58075,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/left_sharpawave.urdf": [
+   34305,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/left_sharpawave_hi.urdf": [
+   31702,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/left_sharpawave_primitive.urdf": [
+   34502,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/right_sharpawave.urdf": [
+   34368,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/right_sharpawave_hi.urdf": [
+   31765,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/sharpawave/right_sharpawave_primitive.urdf": [
+   34491,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/vega_sharpa/v2/SOURCE.json": [
+   12870,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/vega_sharpa/v2/vega_sharpa_58dof.urdf": [
+   95896,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/urdfs/vega_sharpa/v2/upstream/vega_sharpa.urdf": [
+   93067,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/__pycache__/__init__.cpython-311.pyc": [
+   451,
+   1791672541910145737
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/__pycache__/registry.cpython-311.pyc": [
+   14520,
+   1791672542934163173
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/__pycache__/mesh.cpython-311.pyc": [
+   7840,
+   1791672596187005040
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/2d1ab5ad2a1cf28e.npz": [
+   267420,
+   1791672621607364283
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/8572ed3bf973b08a.npz": [
+   115124,
+   1791673163566514065
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/4012583526d658b8.npz": [
+   94564,
+   1791673168190515364
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/e5e1deb33e5acdee.npz": [
+   36124,
+   1791673169442515665
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/15263099f076b724.npz": [
+   120476,
+   1791673169702515725
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/228b2dc97a7f8ce0.npz": [
+   233132,
+   1791673175630516841
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/e015176cd4ed4ea3.npz": [
+   342152,
+   1791673180570517409
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/c0749211ce6d40ec.npz": [
+   126948,
+   1791673181782517499
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/b7b4dc010d8e8f97.npz": [
+   342880,
+   1791673194714517246
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/0885d534a2fd2869.npz": [
+   7916,
+   1791673400231744208
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/7d05b4ab00818a6f.npz": [
+   42232,
+   1791673401971740190
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/5367fdef34ef90d3.npz": [
+   73476,
+   1791673406431729770
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/b1a56fe315a143bd.npz": [
+   74532,
+   1791673411771717072
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/dd4639fc0cde3051.npz": [
+   154288,
+   1791673413827712118
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/e55d56b39bf819e7.npz": [
+   142692,
+   1791673415455708170
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/5b02f369220a9ba7.npz": [
+   186176,
+   1791673429979671967
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/c2c470411a6004da.npz": [
+   120900,
+   1791674821510473253
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/77ec56c8d6852e09.npz": [
+   211848,
+   1791674824490407666
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/8be3b5f6c9a93e1c.npz": [
+   375432,
+   1791674834358191780
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/6c7584c98b6a755d.npz": [
+   300028,
+   1791674845993939730
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/f3f3736cabff9d73.npz": [
+   372036,
+   1791675617901070289
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/2734be0a2a1c6c0b.npz": [
+   283796,
+   1791675629668909361
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/bb0e2324ec806b17.npz": [
+   296664,
+   1791675633236860686
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/4ab390367b8b8050.npz": [
+   132024,
+   1791773545637024231
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/cd8660560ac5876b.npz": [
+   48508,
+   1791773583489226395
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/5381c3ca4fc41131.npz": [
+   571732,
+   1791773611185338534
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/d3a4a2498480e715.npz": [
+   66864,
+   1791773655749459891
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/1a31f88533da8edd.npz": [
+   104524,
+   1791773675189491328
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/assets/.cache/convex/a2aaaaed864c9219.npz": [
+   643360,
+   1791773684553502027
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/README.md": [
+   1944,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/__init__.py": [
+   209,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/evaluate_policy.yaml": [
+   372,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/replay.yaml": [
+   323,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/sonic_replay.yaml": [
+   1011,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/train.yaml": [
+   510,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/train_flash_sac.yaml": [
+   849,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/view_policy.yaml": [
+   536,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/action/residual_hand_pose.yaml": [
+   381,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/action/residual_hand_pose_stiff.yaml": [
+   84,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/action/residual_joint_position.yaml": [
+   540,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/action/sonic_joint_residual.yaml": [
+   1026,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/collision/kinematic.yaml": [
+   173,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/collision/manipulation.yaml": [
+   180,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/collision/physical.yaml": [
+   169,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/collision/training.yaml": [
+   170,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/curriculum/dexmate_tracking_250m_mixed_reset.yaml": [
+   330,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/curriculum/recon_body_flash_sac.yaml": [
+   2008,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/curriculum/recon_body_ppo.yaml": [
+   2104,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/curriculum/reference.yaml": [
+   1964,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/curriculum/tracking_250m_mixed_reset.yaml": [
+   2234,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/embodiment/dexmate_sharpa.yaml": [
+   2957,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/embodiment/g1_dex3.yaml": [
+   269,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/embodiment/sharpa_hands.yaml": [
+   134,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/embodiment/sharpa_hands_primitive.yaml": [
+   570,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/embodiment/sharpa_hands_stiff.yaml": [
+   149,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/env/rl.yaml": [
+   653,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/evaluation/default.yaml": [
+   156,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/evaluation/flash_sac.yaml": [
+   336,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/evaluation/view.yaml": [
+   232,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/experiment/dexmate_sharpa_flash_sac.yaml": [
+   2449,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_flash_sac.yaml": [
+   2306,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_ppo.yaml": [
+   2292,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/experiment/sharpa_flash_sac.yaml": [
+   1331,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/experiment/sharpa_ppo.yaml": [
+   678,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/logging/wandb.yaml": [
+   162,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/markers/default.yaml": [
+   95,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/objective/recon_body.yaml": [
+   742,
+   1791672114051751156
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/objective/tracking.yaml": [
+   1711,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/objective/unassisted_tracking.yaml": [
+   1319,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/observation/articulated_arm.yaml": [
+   148,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/observation/policy.yaml": [
+   2268,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/observation/recon_body.yaml": [
+   65,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/replay/kinematic.yaml": [
+   282,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/replay/physical.yaml": [
+   276,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/reset/recon_body.yaml": [
+   294,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/reset/reference.yaml": [
+   240,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/scene/eval.yaml": [
+   171,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/scene/replay.yaml": [
+   171,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/scene/train.yaml": [
+   174,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/sim/recon_body.yaml": [
+   354,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/sim/replay.yaml": [
+   224,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/sim/rl.yaml": [
+   221,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/task/default.yaml": [
+   237,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/termination/recon_body.yaml": [
+   344,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/termination/tracking.yaml": [
+   697,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/training/reference_flash_sac.yaml": [
+   2401,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/training/reference_ppo.yaml": [
+   1217,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/configs/viewer/default.yaml": [
+   438,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__init__.py": [
+   1509,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/buffers.py": [
+   1998,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/loader.py": [
+   2554,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/mano_sharpa.py": [
+   17038,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/motion_v1.py": [
+   25904,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/parquet.py": [
+   3302,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/reference.py": [
+   11326,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/resampling.py": [
+   4679,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/__init__.cpython-311.pyc": [
+   1877,
+   1791672539674107490
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/reference.cpython-311.pyc": [
+   20127,
+   1791672539678107559
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/loader.cpython-311.pyc": [
+   3012,
+   1791672569250594832
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/mano_sharpa.cpython-311.pyc": [
+   28221,
+   1791672569254594895
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/parquet.cpython-311.pyc": [
+   5986,
+   1791672569254594895
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/resampling.cpython-311.pyc": [
+   7754,
+   1791672569406597297
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/data/__pycache__/motion_v1.cpython-311.pyc": [
+   39815,
+   1791672569530599256
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__init__.py": [
+   561,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/base.py": [
+   28192,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/binding.py": [
+   20899,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/frames.py": [
+   6111,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/g1_dex3.py": [
+   22106,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/sharpa_collision.py": [
+   12066,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/sharpa_hands.py": [
+   14670,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/vega_sharpa.py": [
+   27242,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__pycache__/__init__.cpython-311.pyc": [
+   677,
+   1791672539666107353
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__pycache__/base.cpython-311.pyc": [
+   49480,
+   1791672539670107422
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__pycache__/binding.cpython-311.pyc": [
+   33775,
+   1791672541818144166
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__pycache__/frames.cpython-311.pyc": [
+   11119,
+   1791672541822144234
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/embodiments/__pycache__/g1_dex3.cpython-311.pyc": [
+   36875,
+   1791672541914145804
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__init__.py": [
+   137,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/base.py": [
+   15228,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/observation.py": [
+   37076,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/recon_body.py": [
+   17604,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/rl.py": [
+   20686,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__pycache__/__init__.cpython-311.pyc": [
+   228,
+   1791672539674107490
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__pycache__/rl.cpython-311.pyc": [
+   24451,
+   1791672539674107490
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__pycache__/base.cpython-311.pyc": [
+   19650,
+   1791672539682107628
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__pycache__/observation.cpython-311.pyc": [
+   42443,
+   1791672542914162832
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/envs/__pycache__/recon_body.cpython-311.pyc": [
+   22220,
+   1791672568626584956
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/__init__.py": [
+   863,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/harness.py": [
+   28029,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/metrics.py": [
+   20050,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/rollout.py": [
+   20033,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/view.py": [
+   1619,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/__pycache__/__init__.cpython-311.pyc": [
+   1217,
+   1791673068906418642
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/__pycache__/harness.cpython-311.pyc": [
+   40545,
+   1791673068910418649
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/__pycache__/metrics.cpython-311.pyc": [
+   31895,
+   1791673072394424636
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/evaluation/__pycache__/rollout.cpython-311.pyc": [
+   30014,
+   1791673072398424642
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/__init__.py": [
+   274,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/curriculum.py": [
+   6327,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/reset.py": [
+   41295,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/termination.py": [
+   30821,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/__pycache__/__init__.cpython-311.pyc": [
+   388,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/__pycache__/curriculum.cpython-311.pyc": [
+   11570,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/__pycache__/reset.cpython-311.pyc": [
+   50256,
+   1791672541814144097
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/lifecycle/__pycache__/termination.cpython-311.pyc": [
+   37238,
+   1791672541854144780
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__init__.py": [
+   373,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/composition.py": [
+   6367,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/config.py": [
+   10367,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/contact.py": [
+   10173,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/joints.py": [
+   1580,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/keypoints.py": [
+   3366,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py": [
+   22491,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/shaping.py": [
+   1069,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/tracking.py": [
+   31762,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/wrench.py": [
+   9741,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/__init__.cpython-311.pyc": [
+   488,
+   1791672541870145054
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/composition.cpython-311.pyc": [
+   8788,
+   1791672541870145054
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/config.cpython-311.pyc": [
+   17275,
+   1791672541870145054
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/shaping.cpython-311.pyc": [
+   1722,
+   1791672541870145054
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/recon_body.cpython-311.pyc": [
+   28584,
+   1791672568606584639
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/objectives/__pycache__/wrench.cpython-311.pyc": [
+   13956,
+   1791672568610584702
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__init__.py": [
+   451,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/command.py": [
+   15951,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/contact.py": [
+   21412,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/control.py": [
+   4695,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/delay.py": [
+   8280,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/jax.py": [
+   944,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/joint_drive.py": [
+   17180,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/object_control.py": [
+   7977,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/replay.py": [
+   7316,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/residual.py": [
+   4007,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/sim.py": [
+   3349,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/__init__.py": [
+   1036,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/hand_pose.py": [
+   23739,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/joint_position.py": [
+   18029,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/sonic.py": [
+   40281,
+   1791672114055751108
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/__pycache__/__init__.cpython-311.pyc": [
+   1109,
+   1791672541878145190
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/__pycache__/hand_pose.cpython-311.pyc": [
+   31065,
+   1791672541878145190
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/__pycache__/joint_position.cpython-311.pyc": [
+   23515,
+   1791672541902145600
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/actions/__pycache__/sonic.cpython-311.pyc": [
+   51963,
+   1791672541910145737
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/__init__.cpython-311.pyc": [
+   562,
+   1791672541878145190
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/control.cpython-311.pyc": [
+   7015,
+   1791672541882145258
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/delay.cpython-311.pyc": [
+   10242,
+   1791672541882145258
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/residual.cpython-311.pyc": [
+   5885,
+   1791672541890145395
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/command.cpython-311.pyc": [
+   20683,
+   1791672541930146078
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/contact.cpython-311.pyc": [
+   27366,
+   1791672541934146146
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/joint_drive.cpython-311.pyc": [
+   23635,
+   1791672541946146351
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/object_control.cpython-311.pyc": [
+   9529,
+   1791672542902162629
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/sim.cpython-311.pyc": [
+   4121,
+   1791672542906162696
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/runtime/__pycache__/jax.cpython-311.pyc": [
+   1619,
+   1791672543382170782
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__init__.py": [
+   327,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/builder.py": [
+   24657,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/collision.py": [
+   7416,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/objects.py": [
+   22575,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/setup.py": [
+   3147,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/support.py": [
+   6085,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/__init__.cpython-311.pyc": [
+   434,
+   1791672541822144234
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/builder.cpython-311.pyc": [
+   34978,
+   1791672541822144234
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/collision.cpython-311.pyc": [
+   14372,
+   1791672541826144302
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/objects.cpython-311.pyc": [
+   38911,
+   1791672541830144371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/support.cpython-311.pyc": [
+   10425,
+   1791672541834144439
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/scene/__pycache__/setup.cpython-311.pyc": [
+   3755,
+   1791672542930163104
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/README.md": [
+   2661,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__init__.py": [
+   198,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/checkpoint.py": [
+   5665,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/checkpoint_metadata.py": [
+   19261,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/environment.py": [
+   11885,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/progress.py": [
+   4634,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/NOTICE": [
+   1309,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__init__.py": [
+   626,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/checkpoint.py": [
+   8571,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/config.py": [
+   18335,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/evaluation.py": [
+   5784,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/exploration.py": [
+   5717,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/learner.py": [
+   44960,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/network.py": [
+   20944,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/replay.py": [
+   19992,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/reward_normalization.py": [
+   5456,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/runner.py": [
+   31103,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/update.py": [
+   10287,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/__init__.cpython-311.pyc": [
+   744,
+   1791673072850425406
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/config.cpython-311.pyc": [
+   26040,
+   1791673072854425413
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/evaluation.cpython-311.pyc": [
+   8021,
+   1791673072858425419
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/checkpoint.cpython-311.pyc": [
+   10769,
+   1791673072858425419
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/exploration.cpython-311.pyc": [
+   8418,
+   1791673072862425426
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/network.cpython-311.pyc": [
+   33540,
+   1791673072862425426
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/learner.cpython-311.pyc": [
+   57797,
+   1791673072874425446
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/replay.cpython-311.pyc": [
+   27775,
+   1791673072906425500
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/reward_normalization.cpython-311.pyc": [
+   8181,
+   1791673072910425507
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/update.cpython-311.pyc": [
+   15599,
+   1791673072910425507
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/flash_sac/__pycache__/runner.cpython-311.pyc": [
+   36019,
+   1791673072922425527
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__init__.py": [
+   193,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/algorithm.py": [
+   10048,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/config.py": [
+   6593,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/evaluation.py": [
+   2069,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/learner.py": [
+   3712,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/network.py": [
+   1868,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/normalization.py": [
+   1937,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/rollout.py": [
+   6481,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/runner.py": [
+   17744,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/__init__.cpython-311.pyc": [
+   301,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/config.cpython-311.pyc": [
+   9876,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/runner.cpython-311.pyc": [
+   20606,
+   1791672543386170850
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/learner.cpython-311.pyc": [
+   5384,
+   1791672543390170917
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/network.cpython-311.pyc": [
+   3205,
+   1791672543422171461
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/normalization.cpython-311.pyc": [
+   3264,
+   1791672543694176078
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/algorithm.cpython-311.pyc": [
+   15667,
+   1791672543694176078
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/rollout.cpython-311.pyc": [
+   9766,
+   1791672543698176147
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/ppo/__pycache__/evaluation.cpython-311.pyc": [
+   3495,
+   1791673072922425527
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__pycache__/__init__.cpython-311.pyc": [
+   302,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__pycache__/checkpoint_metadata.cpython-311.pyc": [
+   25366,
+   1791672542934163173
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__pycache__/environment.cpython-311.pyc": [
+   14388,
+   1791672542938163241
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__pycache__/checkpoint.cpython-311.pyc": [
+   10169,
+   1791672543386170850
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/training/__pycache__/progress.cpython-311.pyc": [
+   6166,
+   1791672543698176147
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/utils/__init__.py": [
+   137,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/utils/labels.py": [
+   1118,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/utils/quat.py": [
+   2747,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/utils/__pycache__/__init__.cpython-311.pyc": [
+   229,
+   1791672541830144371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/utils/__pycache__/quat.cpython-311.pyc": [
+   5988,
+   1791672541830144371
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/__init__.py": [
+   303,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/markers.py": [
+   11044,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/viewer.py": [
+   15214,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/__pycache__/__init__.cpython-311.pyc": [
+   421,
+   1791970297261390892
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/__pycache__/markers.cpython-311.pyc": [
+   16793,
+   1791970297265391005
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/visualization/__pycache__/viewer.cpython-311.pyc": [
+   23562,
+   1791970297293391801
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/__pycache__/__init__.cpython-311.pyc": [
+   223,
+   1791672239734262625
+  ],
+  "robotic_grounding/flash_chord/src/flash_chord/__pycache__/configuration.cpython-311.pyc": [
+   5048,
+   1791672539662107284
+  ],
+  "robotic_grounding/flash_chord/tests/conftest.py": [
+   1481,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/test_configuration.py": [
+   6370,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/test_interfaces.py": [
+   10936,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/assets/test_registry.py": [
+   3454,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/assets/test_vega_sharpa_v2_asset.py": [
+   7949,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_buffers.py": [
+   1431,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_loader.py": [
+   3961,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_mano_sharpa.py": [
+   4632,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_motion_v1.py": [
+   15362,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_parquet.py": [
+   2052,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/data/test_resampling.py": [
+   2885,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_binding.py": [
+   14911,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_frames.py": [
+   5327,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_g1_dex3.py": [
+   7709,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_g1_reference_binding.py": [
+   3883,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_sharpa_hands.py": [
+   5572,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_vega_reference_binding.py": [
+   7338,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_vega_sharpa.py": [
+   9493,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/embodiments/test_vega_sharpa_v2.py": [
+   6521,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/envs/test_base.py": [
+   5604,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/envs/test_observation.py": [
+   22736,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/envs/test_recon_body.py": [
+   9503,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/envs/test_rl.py": [
+   23294,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/evaluation/test_evaluation_harness.py": [
+   10839,
+   1791672114059751060
+  ],
+  "robotic_grounding/flash_chord/tests/evaluation/test_evaluation_metrics.py": [
+   21616,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/evaluation/test_evaluation_rollout.py": [
+   8502,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/evaluation/test_object_trajectory_export.py": [
+   5886,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/lifecycle/test_curriculum.py": [
+   5826,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/lifecycle/test_reset.py": [
+   19151,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/lifecycle/test_termination.py": [
+   15180,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_composition.py": [
+   3873,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_contact_wrench.py": [
+   2316,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_hand_tracking.py": [
+   2907,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_keypoints.py": [
+   1780,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_recon_body_objective.py": [
+   4146,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_reference_supports.py": [
+   1233,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_shaping.py": [
+   1852,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_tracking.py": [
+   8552,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/objectives/test_wrench.py": [
+   3983,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_action.py": [
+   24622,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_command.py": [
+   8630,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_contact.py": [
+   2653,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_contact_tracker.py": [
+   10073,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_control.py": [
+   1503,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_delay.py": [
+   4438,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_jax.py": [
+   1959,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_joint_action.py": [
+   22004,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_joint_drive.py": [
+   9031,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_object_control.py": [
+   12711,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_replay.py": [
+   8592,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/runtime/test_sonic_action.py": [
+   16021,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/scene/test_builder.py": [
+   7577,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/scene/test_collision.py": [
+   10766,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/scene/test_objects.py": [
+   10066,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/scene/test_setup.py": [
+   5459,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/scene/test_support.py": [
+   3271,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/test_checkpoint.py": [
+   2414,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/test_checkpoint_metadata.py": [
+   10006,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/test_environment.py": [
+   13595,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/test_progress.py": [
+   1840,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_checkpoint.py": [
+   10632,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_config.py": [
+   11285,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_evaluation.py": [
+   6286,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_exploration.py": [
+   8331,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_learner.py": [
+   35582,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_network.py": [
+   22846,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_package.py": [
+   1166,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_replay.py": [
+   16401,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_reward_normalization.py": [
+   8261,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_runner.py": [
+   21997,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/test_flash_sac_update.py": [
+   13533,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/fixtures/network_oracle.json": [
+   11024,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/fixtures/replay_oracle.json": [
+   905,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/fixtures/reward_normalization_oracle.json": [
+   2396,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/flash_sac/fixtures/update_oracle.json": [
+   5613,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_algorithm.py": [
+   8547,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_checkpoint.py": [
+   5431,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_config.py": [
+   3412,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_evaluation.py": [
+   2337,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_learner.py": [
+   3438,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_network.py": [
+   2049,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_normalization.py": [
+   2094,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_rollout.py": [
+   6438,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/training/ppo/test_ppo_runner.py": [
+   11282,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/utils/test_quat.py": [
+   1035,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/visualization/test_markers.py": [
+   4076,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/visualization/test_policy_viewer_resets.py": [
+   7326,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/tests/visualization/test_viewer.py": [
+   7323,
+   1791672114063751013
+  ],
+  "robotic_grounding/flash_chord/workflow/evaluate_policy.yaml": [
+   2523,
+   1791672114067750965
+  ],
+  "robotic_grounding/flash_chord/workflow/train_flash_sac.yaml": [
+   2891,
+   1791672114067750965
+  ],
+  "robotic_grounding/flash_chord/workflow/train_rl.yaml": [
+   2860,
+   1791672114067750965
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-49-28_g1_recon_body_ppo/train_rl.log": [
+   0,
+   1791672568586584322
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-49-28_g1_recon_body_ppo/.hydra/config.yaml": [
+   10594,
+   1791672568594584449
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-49-28_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4625,
+   1791672568598584512
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-49-28_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   364,
+   1791672568598584512
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-52-49_g1_recon_body_ppo/train_rl.log": [
+   196,
+   1791672964406138849
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-52-49_g1_recon_body_ppo/.hydra/config.yaml": [
+   10594,
+   1791672769300980259
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-52-49_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4625,
+   1791672769300980259
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-52-49_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   364,
+   1791672769304980293
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-59-11_g1_recon_body_ppo/train_rl.log": [
+   784,
+   1791673248223982984
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-59-11_g1_recon_body_ppo/.hydra/config.yaml": [
+   10602,
+   1791673151822509433
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-59-11_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4641,
+   1791673151826509435
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_15-59-11_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   365,
+   1791673151826509435
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-03-06_g1_recon_body_ppo/train_rl.log": [
+   980,
+   1791673451103616238
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-03-06_g1_recon_body_ppo/.hydra/config.yaml": [
+   10595,
+   1791673386727774490
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-03-06_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4627,
+   1791673386731774482
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-03-06_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   365,
+   1791673386731774482
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-04-37_g1_recon_body_ppo/train_rl.log": [
+   784,
+   1791673550359309672
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-04-37_g1_recon_body_ppo/.hydra/config.yaml": [
+   10605,
+   1791673477387542012
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-04-37_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4661,
+   1791673477391542000
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-04-37_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   381,
+   1791673477391542000
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-08-55_g1_recon_body_ppo/train_rl.log": [
+   1568,
+   1791673848522047096
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-08-55_g1_recon_body_ppo/.hydra/config.yaml": [
+   10605,
+   1791673736006573267
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-08-55_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4673,
+   1791673736286572023
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-08-55_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   387,
+   1791673736286572023
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-28_g1_recon_body_ppo/train_rl.log": [
+   2744,
+   1791674274471708594
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-28_g1_recon_body_ppo/.hydra/config.yaml": [
+   10605,
+   1791674128956554763
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-28_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4647,
+   1791674128960554740
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-28_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   375,
+   1791674128960554740
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-29_g1_recon_body_ppo/train_rl.log": [
+   392,
+   1791674194464178618
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-29_g1_recon_body_ppo/.hydra/config.yaml": [
+   10606,
+   1791674129076554082
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-29_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4693,
+   1791674129080554059
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-15-29_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   397,
+   1791674129080554059
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-26-39_g1_recon_body_ppo/train_rl.log": [
+   3920,
+   1791674967487456502
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-26-39_g1_recon_body_ppo/.hydra/config.yaml": [
+   10600,
+   1791674799510963192
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-26-39_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4637,
+   1791674799514963102
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-26-39_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   370,
+   1791674799514963102
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-46_g1_recon_body_ppo/train_rl.log": [
+   784,
+   1791675703903907230
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-46_g1_recon_body_ppo/.hydra/config.yaml": [
+   10601,
+   1791675586905497083
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-46_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4639,
+   1791675586909497028
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-46_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   363,
+   1791675586909497028
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-47_g1_recon_body_ppo/train_rl.log": [
+   3528,
+   1791675763559116777
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-47_g1_recon_body_ppo/.hydra/config.yaml": [
+   10600,
+   1791675587645486844
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-47_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4637,
+   1791675587649486788
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_16-39-47_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   370,
+   1791675587649486788
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-58_g1_recon_body_ppo/train_rl.log": [
+   784,
+   1791692774007109106
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-58_g1_recon_body_ppo/.hydra/config.yaml": [
+   10597,
+   1791692698875189341
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-58_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4631,
+   1791692698879189336
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-58_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   367,
+   1791692698879189336
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-59_g1_recon_body_ppo/train_rl.log": [
+   2352,
+   1791692846294708245
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-59_g1_recon_body_ppo/.hydra/config.yaml": [
+   10611,
+   1791692699351188825
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-59_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4659,
+   1791692699355188821
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-24-59_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   381,
+   1791692699355188821
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-34_g1_recon_body_ppo/train_rl.log": [
+   980,
+   1791693321312970195
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-34_g1_recon_body_ppo/.hydra/config.yaml": [
+   10610,
+   1791693214833957620
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-34_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4677,
+   1791693214837957581
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-34_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   389,
+   1791693214837957581
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-35_g1_recon_body_ppo/train_rl.log": [
+   2940,
+   1791693383152451593
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-35_g1_recon_body_ppo/.hydra/config.yaml": [
+   10610,
+   1791693215221953781
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-35_g1_recon_body_ppo/.hydra/hydra.yaml": [
+   4701,
+   1791693215225953742
+  ],
+  "robotic_grounding/flash_chord/logs/rl/sharpa/2026-10-10_21-33-35_g1_recon_body_ppo/.hydra/overrides.yaml": [
+   401,
+   1791693215225953742
+  ]
+ }
+}

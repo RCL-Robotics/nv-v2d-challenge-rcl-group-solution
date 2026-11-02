@@ -1,0 +1,64 @@
+selection_r7 2026-11-02 14:56:29 CST (PREREG_R7 5.5 / 5.6; noisy-only; refs = round-1 refs/B, frozen)
+ep00 STRICT rank 1 ep00_z5k3fix_90000 [k3fix] cons_S 0.719768: 10 good runs, floor 10/10, m_F 0.719120 -> confirmed
+ep00 STRICT rank 2 ep00_z5k3fix_89500 [k3fix] cons_S 0.719527: 10 good runs, floor 10/10, m_F 0.719296 -> confirmed
+ep00 STRICT pick ep00_z5k3fix_90000 (confirmed, rank 1)
+ep01 P ep01_k3fix_final44922 [k3fix] m_P_frozen 0.171319 m_P_fresh 0.168566 (10 good runs) bar 0.181319; no finalist
+ep02 P ep02_k3fix_final34093 [k3fix] m_P_frozen 0.868138 m_P_fresh 0.872717 (10 good runs) bar 0.882717; finalist ep02_z5q_180000 [k3fix] m_F 0.835236 floor 9/10 -> no: (c) m_F < max(m_P_frozen, m_P_fresh) + 0.01
+ep03 P ep03_k3fix_final27068 [k3fix] m_P_frozen 0.921527 m_P_fresh 0.907122 (10 good runs) bar 0.931527; no finalist
+ep04 P ep04_zxg2_421500 [g2] m_P_frozen 0.416757 m_P_fresh 0.416501 (10 good runs) bar 0.426757; finalist ep04_zxg2_450000 [g2] m_F 0.429436 floor 10/10 -> REPLACES
+ep05 P ep05_zx_k3fix_88000 [k3fix] m_P_frozen 0.578153 m_P_fresh 0.579742 (10 good runs) bar 0.589742; no finalist
+ep06 P ep06_k3fix_final28420 [k3fix] m_P_frozen 0.797276 m_P_fresh 0.798993 (10 good runs) bar 0.808993; no finalist
+ep07 P ep07_k3fix_final18529 [k3fix] m_P_frozen 0.920452 m_P_fresh 0.894092 (10 good runs) bar 0.930452; no finalist
+ep08 P ep08_k3easy_final17496 [k3] m_P_frozen 0.596363 m_P_fresh 0.595904 (10 good runs) bar 0.606363; no finalist
+ep09 P ep09_raw_final39328 [raw] m_P_frozen 0.760460 m_P_fresh 0.778527 (10 good runs) bar 0.788527; no finalist
+ep10 P ep10_raw_final34267 [raw] m_P_frozen 0.412469 m_P_fresh 0.410682 (10 good runs) bar 0.422469; no finalist
+ep11 P ep11_raw_24000 [raw] m_P_frozen 0.807319 m_P_fresh 0.802563 (10 good runs) bar 0.817319; no finalist
+ep12 P ep12_k3fix_final23178 [k3fix] m_P_frozen 0.543911 m_P_fresh 0.543741 (10 good runs) bar 0.553911; no finalist
+ep13 P ep13_k3fix_final39254 [k3fix] m_P_frozen 0.665483 m_P_fresh 0.665971 (10 good runs) bar 0.675971; no finalist
+ep14 P ep14_k3fix_final44922 [k3fix] m_P_frozen 0.330614 m_P_fresh 0.335807 (10 good runs) bar 0.345807; no finalist
+ep15 P ep15_raw_final44922 [raw] m_P_frozen 0.729895 m_P_fresh 0.734423 (10 good runs) bar 0.744423; no finalist
+ep16 STRICT rank 1 ep16_z5a5_120000 [g2] cons_S 0.953398: 10 good runs, floor 10/10, m_F 0.951297 -> confirmed
+ep16 STRICT rank 2 ep16_z5a5_180000 [g2] cons_S 0.952437: 10 good runs, floor 9/10, m_F 0.936295 -> confirmed
+ep16 STRICT pick ep16_z5a5_120000 (confirmed, rank 1)
+ep17 P ep17_raw_final31807 [raw] m_P_frozen 0.647528 m_P_fresh 0.646648 (10 good runs) bar 0.657528; finalist ep17_z5r2_61500 [k3fix] m_F 0.659403 floor 10/10 -> REPLACES
+ep18 P ep18_k3fix_final18911 [k3fix] m_P_frozen 0.419129 m_P_fresh 0.421081 (10 good runs) bar 0.431081; no finalist
+ep19 STRICT rank 1 ep19_z5g2hardc2_360000 [g2] cons_S 0.581382: 10 good runs, floor 10/10, m_F 0.581095 -> confirmed
+ep19 STRICT rank 2 ep19_z5g2hardc2_300000 [g2] cons_S 0.568520: 10 good runs, floor 10/10, m_F 0.569526 -> confirmed
+ep19 STRICT pick ep19_z5g2hardc2_360000 (confirmed, rank 1)
+ep20 STRICT rank 1 ep20_z5fill_90000 [k3fix] cons_S 0.873644: 10 good runs, floor 10/10, m_F 0.872502 -> confirmed
+ep20 STRICT rank 2 ep20_z5fill_120000 [k3fix] cons_S 0.871459: 10 good runs, floor 10/10, m_F 0.866456 -> confirmed
+ep20 STRICT pick ep20_z5fill_90000 (confirmed, rank 1)
+ep21 P ep21_k3fix_final44922 [k3fix] m_P_frozen 0.444469 m_P_fresh 0.444183 (10 good runs) bar 0.454469; finalist ep21_z5fillc_282500 [g2] m_F 0.494543 floor 10/10 -> REPLACES
+ep22 STRICT rank 1 ep22_z5k3fix_89500 [k3fix] cons_S 0.757360: 10 good runs, floor 10/10, m_F 0.757867 -> confirmed
+ep22 STRICT rank 2 ep22_z5k3fix_90000 [k3fix] cons_S 0.756577: 10 good runs, floor 10/10, m_F 0.755781 -> confirmed
+ep22 STRICT pick ep22_z5k3fix_89500 (confirmed, rank 1)
+ep23 P ep23_raw_final20023 [raw] m_P_frozen 0.902867 m_P_fresh 0.903356 (10 good runs) bar 0.913356; no finalist
+ep24 P ep24_raw_final44922 [raw] m_P_frozen 0.895137 m_P_fresh 0.894928 (10 good runs) bar 0.905137; finalist ep24_z5q_150000 [g2] m_F 0.905657 floor 10/10 -> REPLACES
+ep25 STRICT rank 1 ep25_z5a5c_280500 [k3fix] cons_S 0.876552: 10 good runs, floor 10/10, m_F 0.878012 -> confirmed
+ep25 STRICT rank 2 ep25_z5a5c_190000 [k3fix] cons_S 0.872187: 10 good runs, floor 10/10, m_F 0.862609 -> confirmed
+ep25 STRICT pick ep25_z5a5c_280500 (confirmed, rank 1)
+ep26 P ep26_zx_k3fix_92000 [k3fix] m_P_frozen 0.731484 m_P_fresh 0.731605 (10 good runs) bar 0.741605; no finalist
+ep27 P ep27_k3fix_final20863 [k3fix] m_P_frozen 0.897854 m_P_fresh 0.905354 (10 good runs) bar 0.915354; no finalist
+ep28 STRICT rank 1 ep28_z5q_180000 [g2] cons_S 0.153171: 10 good runs, floor 9/10, m_F 0.150076 -> confirmed
+ep28 STRICT rank 2 ep28_z5qc_230000 [g2] cons_S 0.151274: 10 good runs, floor 8/10, m_F 0.153429 -> confirmed
+ep28 STRICT pick ep28_z5q_180000 (confirmed, rank 1)
+ep29 P ep29_k3fix_final17358 [k3fix] m_P_frozen 0.505675 m_P_fresh 0.504416 (10 good runs) bar 0.515675; no finalist
+
+replaced incumbents: 04, 17, 21, 24
+STRICT picks not confirmed: none
+changed vs round 6 (report only): 00, 04, 16, 17, 19, 20, 21, 22, 24, 25, 28
+trials:
+  trial  1: S7 own AUC 0.7939 SP 0.933 MP 0.933 MPPE 2.911 cons-B 0.6669 | REF6 (report only) own AUC 0.7875 cons-B 0.6599
+  trial  2: S7 own AUC 0.7933 SP 0.933 MP 0.933 MPPE 3.575 cons-B 0.6670 | REF6 (report only) own AUC 0.7873 cons-B 0.6595
+  trial  3: S7 own AUC 0.7934 SP 0.933 MP 0.933 MPPE 3.410 cons-B 0.6676 | REF6 (report only) own AUC 0.7890 cons-B 0.6615
+  trial  4: S7 own AUC 0.7884 SP 0.933 MP 0.900 MPPE 3.059 cons-B 0.6622 | REF6 (report only) own AUC 0.7841 cons-B 0.6546
+  trial  5: S7 own AUC 0.7796 SP 0.867 MP 0.867 MPPE 4.344 cons-B 0.6565 | REF6 (report only) own AUC 0.7766 cons-B 0.6494
+  trial  6: S7 own AUC 0.7937 SP 0.933 MP 0.933 MPPE 2.997 cons-B 0.6666 | REF6 (report only) own AUC 0.7866 cons-B 0.6596
+  trial  7: S7 own AUC 0.7936 SP 0.933 MP 0.933 MPPE 2.880 cons-B 0.6663 | REF6 (report only) own AUC 0.7884 cons-B 0.6593
+  trial  8: S7 own AUC 0.7947 SP 0.933 MP 0.933 MPPE 2.718 cons-B 0.6657 | REF6 (report only) own AUC 0.7897 cons-B 0.6603
+  trial  9: S7 own AUC 0.7945 SP 0.933 MP 0.933 MPPE 2.965 cons-B 0.6662 | REF6 (report only) own AUC 0.7895 cons-B 0.6597
+  trial 10: S7 own AUC 0.7934 SP 0.933 MP 0.933 MPPE 3.916 cons-B 0.6662 | REF6 (report only) own AUC 0.7891 cons-B 0.6597
+
+R7-CLOSEST trial: 2
+REF6 report only: Delta_B 0.006766702419993153 over trials [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+R7-CLOSEST (trial 2 of S7) is the upload-eligible Tier-2 file under the STRICT standard (PREREG_R7 5.6)

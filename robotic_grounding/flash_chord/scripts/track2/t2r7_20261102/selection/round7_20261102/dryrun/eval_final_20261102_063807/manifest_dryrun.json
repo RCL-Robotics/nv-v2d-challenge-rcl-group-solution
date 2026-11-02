@@ -1,0 +1,86 @@
+{
+ "built_at": "2026-11-02 06:38:18",
+ "phase": "final",
+ "prereg_r7_sha256": "749649a79ca5616b8ddbfc5124828c13da20f2e10e850a39647a74d83c939ec6",
+ "prereg_r7_pins_sha256": "8378c5a418c9b1ece0ac8a1c518237666d4649cba211229b18d95d89bff14fce",
+ "pool_r7_sha256": "7c4b553bf2d15ffdae0d2b19097ab6abccfba03d1575b268fb3c0338b0f99464",
+ "incumbents_r7_sha256": "cb55fa7a886e5f62f9dbf6f86771fe89c73c6d2137e38c39f82a7a7e72b77e82",
+ "r6refs_r7_sha256": "0bc58249b13827bfa843747658378df9d7d045bb0f0427e438126c4a0851df03",
+ "relocation_r7_sha256": "ccd24c5d9b367ad68cf6d9c3c8fbc47affd5d9a75ca8ac1b292ea350eb74079c",
+ "final_r7_sha256": null,
+ "selection_s7_lock_sha256": null,
+ "t2best5_driver_sha256": "24b9af39a2e2708641e7870447b12b6475c23aec9cd18ba71086768dd69cfc89",
+ "t2cons_eval_sha256": "2cf427866a9432a3bd1b8fbb7864149d4258a5d19100c20da92d32bfe4fbfa9b",
+ "t2cons_r7_pool_sha256": "7a08fa6d8be91140e139d914b8119352fabb05f58b415eb4a8904f9a02733770",
+ "t2cons_r7_eval_sha256": "1d66a2dba53287c6a320310c9524fd9ed00e50289852c9eccba74882028a9f2a",
+ "t_c": "2026-11-02 06:16:08 CST",
+ "runs_per_job": 10,
+ "rows": [
+  {
+   "job": "ep01_zxg2_120000",
+   "episode": 1,
+   "object": null,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "zxg2 (g2) j2 (4/6 L) [reused round-6 candidate]",
+   "stage": "round 7 phase F (PREREG_R7 3.3)",
+   "source": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01",
+   "variants": "B",
+   "priority": 1,
+   "provisional": false,
+   "role": "finalist",
+   "runs": 10,
+   "iteration": 120000,
+   "tree": "b39b69b",
+   "run_label": "zxg2",
+   "slot": "j2 (4/6 L)",
+   "machine": "pro6000",
+   "strict_episode": false,
+   "pool_sha256": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+   "expected_sha256": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+   "expected_sha256_from": "inputs_r7/pool_r7.json role reuse (== round-6 pool_r6.json screen row)",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/zuxing_copies_r6/2026-10-24-tier2-runin-g2/ep01/model_120000.safetensors",
+   "source_checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/model_120000.safetensors",
+   "export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep01_zxg2_120000/export.json",
+   "training_sha256": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+   "export_sha256": "7bcf2d3e0a13cb7477debd4bc8c97d73c964d7cc9c4f1ef2a53ca454d8e5e931",
+   "designation_evidence": {
+    "rule": "pool rule R1-R5 (PREREG_R7 2.1 R5): reused round-6 phase-S candidate",
+    "r6_job": "ep01_zxg2_120000",
+    "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01",
+    "slot": "j2 (4/6 L)",
+    "copy_row": {
+     "source": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/model_120000.safetensors",
+     "copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/zuxing_copies_r6/2026-10-24-tier2-runin-g2/ep01/model_120000.safetensors",
+     "sha256_source_before": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+     "sha256_copy": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+     "sha256_source_after": "21b4226fa3cea52a45f0175a0e9bf2eb300cf83fd539973ba02c10370b0114dc",
+     "equal": "True",
+     "size": "24993208",
+     "source_mtime": "2026-10-26 15:18:15",
+     "copied_at": "2026-10-31 01:09:20"
+    },
+    "r6_export_record": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/exports/ep01_zxg2_120000/export.json"
+   },
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "parquet_sha256": "1107c47df05f7e5b570dc3e11cfe58c01793977885e77340a0639fccfbad3177",
+   "data_root": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24",
+   "root_kind": "g2",
+   "manifest": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "problems": [],
+   "notes": [
+    "training parquet sha256 1107c47df05f == record == TRACKS_R7.sha256"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "5367fdef34ef90d3"
+    ],
+    "missing": []
+   }
+  }
+ ]
+}

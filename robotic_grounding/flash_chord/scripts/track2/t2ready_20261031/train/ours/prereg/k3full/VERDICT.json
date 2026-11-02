@@ -1,0 +1,824 @@
+{
+ "written": "2026-10-25 05:15:23",
+ "prereg_check": "sha256(PREREG_v3.md) 0f4fa433f3368072... == PREREG_v3.sha256 0f4fa433f3368072...",
+ "final": false,
+ "counts": {
+  "k3fix": 22,
+  "raw": 7,
+  "pending": 1
+ },
+ "episodes": [
+  {
+   "episode": 0,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep00",
+    "final": 41043,
+    "own_auc": 0.2591580976863753,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 1,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep01",
+    "final": 44922,
+    "own_auc": 0.19084672021419008,
+    "own_sp": 0.0,
+    "own_mp": 0.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 18000,
+    "own_auc": 0.1488453815261044,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep01_k3fix_s42",
+   "finished": true,
+   "final_iteration": 44922,
+   "help_zero_since": 39062,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.13980923694779118,
+   "own_sp": 0.0,
+   "own_mp": 0.0,
+   "export_max_rel_diff": 2.1338462829589844e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_44922), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 2,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep02",
+    "final": 37409,
+    "own_auc": 0.758673469387755,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 34000,
+    "own_auc": 0.9479591836734693,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep02_k3fix_s42",
+   "finished": true,
+   "final_iteration": 34093,
+   "help_zero_since": 28233,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9493622448979592,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.124826238982116e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_34093), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 3,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep03",
+    "final": 44922,
+    "own_auc": 0.8896446862996159,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 24000,
+    "own_auc": 0.9853553137003841,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3fix pilot",
+   "k3fix_run": "C3r2_tier2_k3fix/ep03_k3fix_s42",
+   "finished": true,
+   "final_iteration": 27068,
+   "help_zero_since": 21208,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9867157490396927,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.0517578125e-05,
+   "prereg_v2_ep03": "PASS (GO: ep03 on K3fix in a full arm)",
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_27068), exported (2e-4); PREREG_v2 ep03 rule: PASS (GO: ep03 on K3fix in a full arm)",
+   "settled": true
+  },
+  {
+   "episode": 4,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep04",
+    "final": 44922,
+    "own_auc": 0.11036737235367372,
+    "own_sp": 0.0,
+    "own_mp": 0.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 40000,
+    "own_auc": 0.11449252801992528,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full (k3fix pilot job)",
+   "k3fix_run": "C3r2_tier2_k3fix/ep04_k3fix_s42",
+   "finished": false,
+   "final_iteration": null,
+   "help_zero_since": null,
+   "post_status": null,
+   "exported": false,
+   "crash_marker": false,
+   "own_auc": null,
+   "own_sp": null,
+   "own_mp": null,
+   "export_max_rel_diff": null,
+   "choice": "PENDING",
+   "why": "training",
+   "settled": false
+  },
+  {
+   "episode": 5,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep05",
+    "final": 44922,
+    "own_auc": 0.25373878364905283,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 6,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep06",
+    "final": 33894,
+    "own_auc": 0.7400412087912088,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 28000,
+    "own_auc": 0.9271978021978022,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep06_k3fix_s42",
+   "finished": true,
+   "final_iteration": 28420,
+   "help_zero_since": 22560,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.918841575091575,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.6570091247558594e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_28420), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 7,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep07",
+    "final": 44922,
+    "own_auc": 0.8987862723214286,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 14000,
+    "own_auc": 0.9797014508928572,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3fix pilot",
+   "k3fix_run": "C3r2_tier2_k3fix/ep07_k3fix_s42",
+   "finished": true,
+   "final_iteration": 18529,
+   "help_zero_since": 12669,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9775390625,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.2278556823730469e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_18529), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 8,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep08",
+    "final": 20597,
+    "own_auc": 0.4162252824858757,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 17496,
+    "own_auc": 0.9276129943502824,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3easy",
+   "k3fix_run": "C3r2_tier2_k3easy/ep08",
+   "finished": true,
+   "final_iteration": 17496,
+   "help_zero_since": 11636,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9285840395480226,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.52587890625e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_17496), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 9,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep09",
+    "final": 39328,
+    "own_auc": 0.7857758620689655,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 39449,
+    "own_auc": 0.5762931034482759,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full (k3fix pilot job)",
+   "k3fix_run": "C3r2_tier2_k3fix/ep09_k3fix_s42",
+   "finished": true,
+   "final_iteration": 39449,
+   "help_zero_since": 33589,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.572485632183908,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.627784338650947e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_39449), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 10,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep10",
+    "final": 34267,
+    "own_auc": 0.2541719143576826,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 18000,
+    "own_auc": 0.6356265743073048,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep10_k3fix_s42",
+   "finished": true,
+   "final_iteration": 25319,
+   "help_zero_since": 19459,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.6261020151133501,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.0967254638671875e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_25319), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 11,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep11",
+    "final": 28925,
+    "own_auc": 0.8704217536071033,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 28000,
+    "own_auc": 0.8839483906770256,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep11_k3fix_s42",
+   "finished": true,
+   "final_iteration": 29175,
+   "help_zero_since": 23315,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.8795088790233074,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.62396240234375e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_29175), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 12,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep12",
+    "final": 37575,
+    "own_auc": 0.341875,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 20000,
+    "own_auc": 0.7308035714285714,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep12_k3fix_s42",
+   "finished": true,
+   "final_iteration": 23178,
+   "help_zero_since": 17318,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.7254464285714285,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.2636184692382812e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_23178), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 13,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep13",
+    "final": 44922,
+    "own_auc": 0.5885303687635575,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 39254,
+    "own_auc": 0.8541214750542299,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep13_k3fix_s42",
+   "finished": true,
+   "final_iteration": 39254,
+   "help_zero_since": 33394,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.8404962039045554,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.6716461181640625e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_39254), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 14,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep14",
+    "final": 44922,
+    "own_auc": 0.20631923464249746,
+    "own_sp": 0.0,
+    "own_mp": 0.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 36000,
+    "own_auc": 0.5610523665659618,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep14_k3fix_s42",
+   "finished": true,
+   "final_iteration": 44922,
+   "help_zero_since": 39062,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.5585347432024169,
+   "own_sp": 0.0,
+   "own_mp": 0.0,
+   "export_max_rel_diff": 4.1484832763671875e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_44922), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 15,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep15",
+    "final": 44922,
+    "own_auc": 0.7018356643356644,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 16,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep16",
+    "final": 31268,
+    "own_auc": 0.9157494758909853,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 32000,
+    "own_auc": 0.7676886792452831,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep16_k3fix_s42",
+   "finished": true,
+   "final_iteration": 32063,
+   "help_zero_since": 26203,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.7644129979035639,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 3.1948089599609375e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_32063), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 17,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep17",
+    "final": 31807,
+    "own_auc": 0.5153409090909091,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 29845,
+    "own_auc": 0.7582386363636364,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full (k3fix pilot job)",
+   "k3fix_run": "C3r2_tier2_k3fix/ep17_k3fix_s42",
+   "finished": true,
+   "final_iteration": 29845,
+   "help_zero_since": 23985,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.7494318181818183,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 2.6226043701171875e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_29845), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 18,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep18",
+    "final": 44922,
+    "own_auc": 0.07022144522144523,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 18000,
+    "own_auc": 0.9348776223776224,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3fix pilot",
+   "k3fix_run": "C3r2_tier2_k3fix/ep18_k3fix_s42",
+   "finished": true,
+   "final_iteration": 18911,
+   "help_zero_since": 13051,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9264277389277389,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.9550323486328125e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_18911), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 19,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep19",
+    "final": 44922,
+    "own_auc": 0.16711343115124155,
+    "own_sp": 0.0,
+    "own_mp": 0.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 20,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep20",
+    "final": 19034,
+    "own_auc": 0.8700271247739603,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 18450,
+    "own_auc": 0.9090189873417721,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3easy",
+   "k3fix_run": "C3r2_tier2_k3easy/ep20",
+   "finished": true,
+   "final_iteration": 18450,
+   "help_zero_since": 12590,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9085669077757685,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.5735626220703125e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_18450), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 21,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep21",
+    "final": 44922,
+    "own_auc": 0.2051069321533923,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 44922,
+    "own_auc": 0.5451696165191741,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep21_k3fix_s42",
+   "finished": true,
+   "final_iteration": 44922,
+   "help_zero_since": 39062,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.5445243362831858,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 4.9591064453125e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_44922), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 22,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep22",
+    "final": 44922,
+    "own_auc": 0.45923157162726014,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 23,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep23",
+    "final": 20023,
+    "own_auc": 0.8141516913319239,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 19162,
+    "own_auc": 0.9530919661733614,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3easy",
+   "k3fix_run": "C3r2_tier2_k3easy/ep23",
+   "finished": true,
+   "final_iteration": 19162,
+   "help_zero_since": 13302,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9522330866807611,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.1920928955078125e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_19162), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 24,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep24",
+    "final": 44922,
+    "own_auc": 0.912182486631016,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 20636,
+    "own_auc": 0.9487800802139037,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep24_k3fix_s42",
+   "finished": true,
+   "final_iteration": 20636,
+   "help_zero_since": 14776,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9483622994652406,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 1.2874603271484375e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_20636), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 25,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep25",
+    "final": 44922,
+    "own_auc": 0.6829161816065192,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 42819,
+    "own_auc": 0.7566210710128056,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep25_k3fix_s42",
+   "finished": true,
+   "final_iteration": 42819,
+   "help_zero_since": 36959,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.7543655413271246,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 4.673004150390625e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_42819), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 26,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep26",
+    "final": 34948,
+    "own_auc": 0.2688714499252616,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 27,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep27",
+    "final": 44922,
+    "own_auc": 0.9075221238938054,
+    "own_sp": 1.0,
+    "own_mp": 1.0
+   },
+   "t2watch_best_secondary": {
+    "iteration": 20863,
+    "own_auc": 0.9787610619469027,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep27_k3fix_s42",
+   "finished": true,
+   "final_iteration": 20863,
+   "help_zero_since": 15003,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9790929203539823,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 2.4318695068359375e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_20863), exported (2e-4)",
+   "settled": true
+  },
+  {
+   "episode": 28,
+   "gate": "FAIL",
+   "raw": {
+    "run": "C3r2_tier2/ep28",
+    "final": 44922,
+    "own_auc": 0.0440915991902834,
+    "own_sp": 0.0,
+    "own_mp": 0.0
+   },
+   "choice": "RAW",
+   "why": "gate FAIL (noisy-only input rule)",
+   "settled": true
+  },
+  {
+   "episode": 29,
+   "gate": "PASS",
+   "raw": {
+    "run": "C3r2_tier2/ep29",
+    "final": 44922,
+    "own_auc": null,
+    "own_sp": null,
+    "own_mp": null
+   },
+   "t2watch_best_secondary": {
+    "iteration": 16000,
+    "own_auc": 0.9312098501070664,
+    "note": "best-by-own-input (t2watch), secondary information only; the arm uses final.json"
+   },
+   "source": "k3full",
+   "k3fix_run": "C3r2_tier2_k3fix/ep29_k3fix_s42",
+   "finished": true,
+   "final_iteration": 17358,
+   "help_zero_since": 11498,
+   "post_status": "done",
+   "exported": true,
+   "crash_marker": false,
+   "own_auc": 0.9203693790149893,
+   "own_sp": 1.0,
+   "own_mp": 1.0,
+   "export_max_rel_diff": 2.09808349609375e-05,
+   "choice": "K3FIX",
+   "why": "trained, finished (final.json model_17358), exported (2e-4)",
+   "settled": true
+  }
+ ]
+}

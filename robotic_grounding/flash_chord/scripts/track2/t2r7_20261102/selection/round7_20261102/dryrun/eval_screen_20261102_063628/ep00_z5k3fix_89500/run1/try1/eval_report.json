@@ -1,0 +1,42 @@
+{
+  "provenance": {
+    "kit_root": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit",
+    "eval_script": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py",
+    "eval_script_sha256": "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1",
+    "stock_runtime": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord",
+    "stock_flash_chord": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord/src/flash_chord/__init__.py"
+  },
+  "packing": {
+    "packed": false,
+    "episodes": [
+      0
+    ],
+    "reason": "--skip-pack"
+  },
+  "means": {
+    "add_auc": 0.9524421593830334,
+    "chord_sr": 1.0,
+    "maniptrans_sr": 1.0,
+    "mppe_cm": 0.6230882734927284
+  },
+  "episodes": [
+    {
+      "episode": 0,
+      "object": "tall_bar_stool",
+      "sequence": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+      "status": "evaluated",
+      "iteration": 89500,
+      "selected_by": "--iteration 89500",
+      "source_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628/ep00_z5k3fix_89500/run1/try1/ep00/model_89500.safetensors",
+      "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628/ep00_z5k3fix_89500/run1/try1/ep00/model_89500.safetensors",
+      "add_auc": 0.9524421593830334,
+      "chord_sr": 1.0,
+      "maniptrans_sr": 1.0,
+      "mppe_cm": 0.6230882734927284,
+      "object_position_error_m": 0.005884517730675692,
+      "object_orientation_error_deg": 2.4294948782828323,
+      "reference_success_rate": 1.0,
+      "checkpoint_sha256": "97f8323f8917a55ade419148eaeb91cbe8dfc14cbf93f8d98ac90b1f85229e13"
+    }
+  ]
+}

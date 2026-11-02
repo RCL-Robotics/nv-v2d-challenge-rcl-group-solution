@@ -1,0 +1,18 @@
+t2cons_r7_consensus CHECK phase S 2026-11-02 10:39:10: no metric, reference or score is computed
+chain: PREREG_R7.md 749649a79ca5616b == PREREG_R7.sha256 == hard-coded; 77 section-11 pins / commits hold
+chain: PREREG_R7_PINS.md 8378c5a418c9b1ec == its sha file == hard-coded; 11 pins hold
+chain: DRYRUN_R7.sha256: 17 lines hold
+chain: LOCK_R7.sha256: 28 lines hold
+chain: SNAPSHOT_R7.sha256: 525 lines hold
+chain: TRACKS_R7.sha256: 131 lines hold
+chain: RELOCATION_R7.sha256: 130 lines hold
+chain: pool / incumbents / references == pinned; 9 round-6 records == pinned
+chain: round-1 chain (pinned t2cons_consensus.check_pins): 0 fatal
+chain: phase S: heartbeat state done, exports {'ok': 154, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 462, 'failed': 0, 'pending': 0, 'no_export': 0}; no driver / driver.pid: True
+chain: kit + stock trees == integrity/baseline.json (ef9b5035): True
+chain: scripts/t2cons_r7_consensus.py sha256 e7545dfa7fdff0681123d77e2dde3f65ed6a22ead8d4d12057d9b61af9e2708a
+phase S jobs 399 {'reuse': 245, 'screen': 154}; export ok 399; complete (3 ok runs) 399; ok runs 1197; non-ok rows in the evals CSV(s): 0
+seed signatures over 1197 runs: ['delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42', 'delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=7']
+reused round-6 rollouts == round 6's ROLLOUTS_S6.sha256: True (735 runs)
+wrote inputs_r7/ROLLOUTS_S7.sha256: 1197 rollout parquets, sha256 4d43946552b3562b9d077f5b9fada99ffccc6c7bff5bea1a66cfbbcae545969e
+check: OK

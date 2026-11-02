@@ -1,0 +1,1650 @@
+{
+ "written_at": "2026-11-02 15:55:03 CST",
+ "script_sha256": "667bd8c22747cae72ac19946ac829d86ae92f86958c5df5cf24c92e361331f4d",
+ "rule": "trial k = run k of every episode's K3FULL job; T_k = 30-episode mean own-input AUC; chosen = argmin |T_k - mean_k T_k|, ties to the lower k",
+ "own_input_only": true,
+ "inputs": {
+  "PREREG.md": "d778cb29b878e87d3d9538da0c3617f5a13dc490924b2a26187e0d427461b704",
+  "PREREG.sha256": "e2dbb640f5dcc4d77fb76cb75163d8ed70a0f58d8974ab275f2174b6f3f6f30e",
+  "PREREG_PINS.md": "e6cc7e4bcf1ae0d992b9a878fbaf22f3a9903b0a4d1f1a5ad28ebfe23c8f2c25",
+  "PREREG_PINS.sha256": "c7a76711aec7664de897c779f1bfb4aeab80146f17ea18308d58720a7cb98cb9",
+  "PREREG_v3_k3full.md": "0f4fa433f3368072e161d255c18de18bda03668b4095f3958e6411aaec2d3995",
+  "VERDICT_k3full.json": "c54d5f6f2e55468ef8ba7436df9ffee7b1a95cb8c50fdae4e84df80584adfbfd",
+  "manifest.json": "61b75c557f7a72c1f70164fcd44bb84dd6d7ba8dc91ca0ff3ca88c2f153039fb",
+  "manifest_stageB.jsonl": "1ace9a17350e89bc873d6d3db10db76425661d204d9b75426a22d70d6c03630a",
+  "own_input_evals.csv": "f3ea6a2a327cfa77f9ecf51d1ffbc7d31c40e96bfcd58eedd682f486ad46c9cc",
+  "selection.json": "63054e0cbf49a1cf2c8f24f37577f87d4b7ea5437b5d35c0caa99d85379241c5",
+  "stageB_resolutions.jsonl": "7a0df329de4497bc604013e3a06fb5bec1a9fd58f2d67f55bc8986f278e8467f",
+  "summary_own_input.json": "4e2d4ceb1a4fe2396e998c54a378f3d2d83f3679f3bf82fbc31f437a514ac2ba",
+  "summary_own_input.md": "601687cb7beaead8943d37c0fb075adf5d0677b7d1af9874c825f9e34f545bec"
+ },
+ "composition": "K3FULL (t2_best5_20261024 PREREG section 4; summary_own_input.json composition_jobs)",
+ "n_k3fix_or_k3": 22,
+ "n_raw": 8,
+ "gate_fail_raw": [
+  0,
+  5,
+  15,
+  19,
+  22,
+  26,
+  28
+ ],
+ "pending_to_raw": [
+  4
+ ],
+ "episodes": {
+  "00": {
+   "job": "ep00_raw_final41043",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 41043,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep00",
+   "training_sha256": "49323000af185103e9811a8ee73401bd1bc2e30c59d6ab1ad617c1aa4a781b57",
+   "parquet_sha256": "bec9fcbb0737f510b296dcc643c3fd669f541e41b97ba66e56b395d3b8d33416",
+   "runs": {
+    "1": {
+     "auc": 0.2644601542,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.767813818,
+     "try": 1,
+     "export_sha256_16": "55aa98f983387c31"
+    },
+    "2": {
+     "auc": 0.2631748072,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.793911899,
+     "try": 1,
+     "export_sha256_16": "55aa98f983387c31"
+    },
+    "3": {
+     "auc": 0.2620501285,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.810631226,
+     "try": 1,
+     "export_sha256_16": "55aa98f983387c31"
+    },
+    "4": {
+     "auc": 0.2619697943,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.820670259,
+     "try": 1,
+     "export_sha256_16": "55aa98f983387c31"
+    },
+    "5": {
+     "auc": 0.2577924165,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.821446394,
+     "try": 1,
+     "export_sha256_16": "55aa98f983387c31"
+    }
+   }
+  },
+  "01": {
+   "job": "ep01_k3fix_final44922",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep01_k3fix_s42",
+   "training_sha256": "d40a325a7e1c45eeb81a8f278d868d3e2ab2daeb5210fd511963356a3d3e518b",
+   "parquet_sha256": "2b178b1dc9677bf5867699f597fab8968c555141300eb28287fa6d827ca6946a",
+   "runs": {
+    "1": {
+     "auc": 0.1419846051,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 35.58199037,
+     "try": 1,
+     "export_sha256_16": "a15d9e85b0458c8d"
+    },
+    "2": {
+     "auc": 0.141064257,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 35.82750717,
+     "try": 1,
+     "export_sha256_16": "a15d9e85b0458c8d"
+    },
+    "3": {
+     "auc": 0.1445783133,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 34.21644429,
+     "try": 1,
+     "export_sha256_16": "a15d9e85b0458c8d"
+    },
+    "4": {
+     "auc": 0.1381358768,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 35.72006339,
+     "try": 1,
+     "export_sha256_16": "a15d9e85b0458c8d"
+    },
+    "5": {
+     "auc": 0.1444946452,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 33.1501292,
+     "try": 1,
+     "export_sha256_16": "a15d9e85b0458c8d"
+    }
+   }
+  },
+  "02": {
+   "job": "ep02_k3fix_final34093",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 34093,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep02_k3fix_s42",
+   "training_sha256": "3311068b016654b9bbf8178dc7aae73cf0f19c40308bd8844f1a19839d9198cf",
+   "parquet_sha256": "8f83fd9f44e882a0676bf1371469d32fedbdba710af986530ecd9c6440046435",
+   "runs": {
+    "1": {
+     "auc": 0.9281887755,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.087355833,
+     "try": 1,
+     "export_sha256_16": "3f1ae6373cfb8877"
+    },
+    "2": {
+     "auc": 0.9213647959,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.051207856,
+     "try": 1,
+     "export_sha256_16": "3f1ae6373cfb8877"
+    },
+    "3": {
+     "auc": 0.9242984694,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.037547131,
+     "try": 1,
+     "export_sha256_16": "3f1ae6373cfb8877"
+    },
+    "4": {
+     "auc": 0.940497449,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.016501701,
+     "try": 1,
+     "export_sha256_16": "3f1ae6373cfb8877"
+    },
+    "5": {
+     "auc": 0.9389030612,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.045481132,
+     "try": 1,
+     "export_sha256_16": "3f1ae6373cfb8877"
+    }
+   }
+  },
+  "03": {
+   "job": "ep03_k3fix_final27068",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 27068,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep03_k3fix_s42",
+   "training_sha256": "88278b72cb51aad1b02d6347fa23487bab2a49c1524690b997d30c7b4802bc85",
+   "parquet_sha256": "c9f6c9756357e74f25c3844a32f5c8bf9f5afa443d4478ee172647893d8e93a3",
+   "runs": {
+    "1": {
+     "auc": 0.986715749,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5808813226,
+     "try": 1,
+     "export_sha256_16": "e042571ca8a01236"
+    },
+    "2": {
+     "auc": 0.9847151088,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5582585733,
+     "try": 1,
+     "export_sha256_16": "e042571ca8a01236"
+    },
+    "3": {
+     "auc": 0.9852752881,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.601770656,
+     "try": 1,
+     "export_sha256_16": "e042571ca8a01236"
+    },
+    "4": {
+     "auc": 0.9704705506,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6847776828,
+     "try": 1,
+     "export_sha256_16": "e042571ca8a01236"
+    },
+    "5": {
+     "auc": 0.9849551857,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5580993212,
+     "try": 1,
+     "export_sha256_16": "e042571ca8a01236"
+    }
+   }
+  },
+  "04": {
+   "job": "ep04_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "PENDING",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep04",
+   "training_sha256": "e5d58f0229898261236f28a3433eecf673906d0eb61bff30f2ba120f4d532507",
+   "parquet_sha256": "42f9f807e24b80bd4bb8810d208e5da82d41aaaab47de25e00db1625b2f3c44f",
+   "runs": {
+    "1": {
+     "auc": 0.1093555417,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 129.672538,
+     "try": 1,
+     "export_sha256_16": "1de36ebdd4f1447e"
+    },
+    "2": {
+     "auc": 0.1103673724,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 123.1510134,
+     "try": 1,
+     "export_sha256_16": "1de36ebdd4f1447e"
+    },
+    "3": {
+     "auc": 0.1098225405,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 121.0850696,
+     "try": 1,
+     "export_sha256_16": "1de36ebdd4f1447e"
+    },
+    "4": {
+     "auc": 0.1103673724,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 125.5795917,
+     "try": 1,
+     "export_sha256_16": "1de36ebdd4f1447e"
+    },
+    "5": {
+     "auc": 0.1093555417,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 128.9855011,
+     "try": 1,
+     "export_sha256_16": "1de36ebdd4f1447e"
+    }
+   }
+  },
+  "05": {
+   "job": "ep05_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep05",
+   "training_sha256": "e1fe64278e88e960a6b04d942278c2b7ad0ffd448438782a39c42395e31474ab",
+   "parquet_sha256": "b6ed9f13a7dafb73a157065c37a15724f8fb6dee781141370ad3c6df2a064af4",
+   "runs": {
+    "1": {
+     "auc": 0.2535518445,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.365987822,
+     "try": 1,
+     "export_sha256_16": "bc861de57c73c99f"
+    },
+    "2": {
+     "auc": 0.2559820538,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.315903396,
+     "try": 1,
+     "export_sha256_16": "bc861de57c73c99f"
+    },
+    "3": {
+     "auc": 0.2536141575,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.267752067,
+     "try": 1,
+     "export_sha256_16": "bc861de57c73c99f"
+    },
+    "4": {
+     "auc": 0.2533649053,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.241317089,
+     "try": 1,
+     "export_sha256_16": "bc861de57c73c99f"
+    },
+    "5": {
+     "auc": 0.2566674975,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.228277171,
+     "try": 1,
+     "export_sha256_16": "bc861de57c73c99f"
+    }
+   }
+  },
+  "06": {
+   "job": "ep06_k3fix_final28420",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 28420,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep06_k3fix_s42",
+   "training_sha256": "88dafebf221671b029996227fe60974a7b5467b74fa38ac3a02d65c318438347",
+   "parquet_sha256": "553e4322a50706ab8c27c71dad2874e833e8cfd3cea6f9ea4631963cdd5de778",
+   "runs": {
+    "1": {
+     "auc": 0.9192994505,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.093917403,
+     "try": 1,
+     "export_sha256_16": "84bd485806402cb2"
+    },
+    "2": {
+     "auc": 0.9238782051,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.06025357,
+     "try": 1,
+     "export_sha256_16": "84bd485806402cb2"
+    },
+    "3": {
+     "auc": 0.9223901099,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.076150705,
+     "try": 1,
+     "export_sha256_16": "84bd485806402cb2"
+    },
+    "4": {
+     "auc": 0.9173534799,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.091859618,
+     "try": 1,
+     "export_sha256_16": "84bd485806402cb2"
+    },
+    "5": {
+     "auc": 0.9235347985,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.053436589,
+     "try": 1,
+     "export_sha256_16": "84bd485806402cb2"
+    }
+   }
+  },
+  "07": {
+   "job": "ep07_k3fix_final18529",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 18529,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep07_k3fix_s42",
+   "training_sha256": "bd6639ec7ff5fa65f8fc1cb6eacd9fa503f45e2509ced2d8d3d3c936f4102476",
+   "parquet_sha256": "4c2d6fb3fa04439f55fc94515fce85915476cc579e368b71e0bc1b9527315ff4",
+   "runs": {
+    "1": {
+     "auc": 0.9768415179,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7128764991,
+     "try": 1,
+     "export_sha256_16": "b02cb8f6597f3b54"
+    },
+    "2": {
+     "auc": 0.9793526786,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6793728583,
+     "try": 1,
+     "export_sha256_16": "b02cb8f6597f3b54"
+    },
+    "3": {
+     "auc": 0.9781668527,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6925910535,
+     "try": 1,
+     "export_sha256_16": "b02cb8f6597f3b54"
+    },
+    "4": {
+     "auc": 0.977608817,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7175205423,
+     "try": 1,
+     "export_sha256_16": "b02cb8f6597f3b54"
+    },
+    "5": {
+     "auc": 0.9806780134,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6930410274,
+     "try": 1,
+     "export_sha256_16": "b02cb8f6597f3b54"
+    }
+   }
+  },
+  "08": {
+   "job": "ep08_k3easy_final17496",
+   "family": "k3easy_final",
+   "input": "k3",
+   "verdict_choice": "K3FIX",
+   "iteration": 17496,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep08",
+   "training_sha256": "c8988396d70af9644c299844c949557be44fdefa17aff1ec90cd780710966bca",
+   "parquet_sha256": "510bdc3d29bd9c4425e90b3a1ff479afb4f0a815dde1c816be6822bfb69ae592",
+   "runs": {
+    "1": {
+     "auc": 0.9277012712,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9337609272,
+     "try": 1,
+     "export_sha256_16": "17d421a1938181f0"
+    },
+    "2": {
+     "auc": 0.9247881356,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9319988593,
+     "try": 1,
+     "export_sha256_16": "17d421a1938181f0"
+    },
+    "3": {
+     "auc": 0.9247881356,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9171540939,
+     "try": 1,
+     "export_sha256_16": "17d421a1938181f0"
+    },
+    "4": {
+     "auc": 0.9284074859,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9641786749,
+     "try": 1,
+     "export_sha256_16": "17d421a1938181f0"
+    },
+    "5": {
+     "auc": 0.9239053672,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9618952743,
+     "try": 1,
+     "export_sha256_16": "17d421a1938181f0"
+    }
+   }
+  },
+  "09": {
+   "job": "ep09_k3fix_final39449",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 39449,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep09_k3fix_s42",
+   "training_sha256": "4d962b4ed8653d597e0e2179594b9337282ca3e8000b601d3630f9aa0eec013b",
+   "parquet_sha256": "b1d62056ee50d25f8e34acd4bf7dfca7200922c1f14fe525546a8abdad49434a",
+   "runs": {
+    "1": {
+     "auc": 0.5864942529,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.53039157,
+     "try": 1,
+     "export_sha256_16": "d1e88add25d956a9"
+    },
+    "2": {
+     "auc": 0.5913793103,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.458945666,
+     "try": 1,
+     "export_sha256_16": "d1e88add25d956a9"
+    },
+    "3": {
+     "auc": 0.5643678161,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.556816618,
+     "try": 1,
+     "export_sha256_16": "d1e88add25d956a9"
+    },
+    "4": {
+     "auc": 0.5822557471,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.537285126,
+     "try": 1,
+     "export_sha256_16": "d1e88add25d956a9"
+    },
+    "5": {
+     "auc": 0.5806752874,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.524221569,
+     "try": 1,
+     "export_sha256_16": "d1e88add25d956a9"
+    }
+   }
+  },
+  "10": {
+   "job": "ep10_k3fix_final25319",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 25319,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep10_k3fix_s42",
+   "training_sha256": "79ec18cf8a1a5135d5240115a1a8de20f05fd5d1a82a31a355460499c430d3ae",
+   "parquet_sha256": "884179d706682b5a8b037b01440e67bf2cf5308436c7b95663e4a2a21c0b9993",
+   "runs": {
+    "1": {
+     "auc": 0.6386177582,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.574366067,
+     "try": 1,
+     "export_sha256_16": "ea2a605c0ef3646f"
+    },
+    "2": {
+     "auc": 0.6072103275,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.543173543,
+     "try": 1,
+     "export_sha256_16": "ea2a605c0ef3646f"
+    },
+    "3": {
+     "auc": 0.6089420655,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.589611798,
+     "try": 1,
+     "export_sha256_16": "ea2a605c0ef3646f"
+    },
+    "4": {
+     "auc": 0.5892632242,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.636080791,
+     "try": 1,
+     "export_sha256_16": "ea2a605c0ef3646f"
+    },
+    "5": {
+     "auc": 0.6327928212,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.639906448,
+     "try": 1,
+     "export_sha256_16": "ea2a605c0ef3646f"
+    }
+   }
+  },
+  "11": {
+   "job": "ep11_k3fix_final29175",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 29175,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep11_k3fix_s42",
+   "training_sha256": "3a330ab0aea650bf0f6893e1a6fc23c73a123a6c1ec1a6d027b3c1ca8bdb689b",
+   "parquet_sha256": "814245569ed35da6fa17153b7a8dd016495b4eec2223dcd7f4ccf9fd8f21ba70",
+   "runs": {
+    "1": {
+     "auc": 0.8807574917,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.40732852,
+     "try": 1,
+     "export_sha256_16": "3b834654d0b7a1b2"
+    },
+    "2": {
+     "auc": 0.8826304107,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.363544082,
+     "try": 1,
+     "export_sha256_16": "3b834654d0b7a1b2"
+    },
+    "3": {
+     "auc": 0.8799944506,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.375168404,
+     "try": 1,
+     "export_sha256_16": "3b834654d0b7a1b2"
+    },
+    "4": {
+     "auc": 0.8842258602,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.335457611,
+     "try": 1,
+     "export_sha256_16": "3b834654d0b7a1b2"
+    },
+    "5": {
+     "auc": 0.8811043285,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.342595782,
+     "try": 1,
+     "export_sha256_16": "3b834654d0b7a1b2"
+    }
+   }
+  },
+  "12": {
+   "job": "ep12_k3fix_final23178",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 23178,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep12_k3fix_s42",
+   "training_sha256": "3a25f30e76191f9b32e4ff7caf7b5ba98b508b64ba57b7a09e31f00c495885db",
+   "parquet_sha256": "5f2d1c6672239ec04db98d7cc3c7b45d275eea09281e3d3f2d2cba95ec830641",
+   "runs": {
+    "1": {
+     "auc": 0.7153571429,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.8239858236,
+     "try": 1,
+     "export_sha256_16": "b455bb4dc1707de7"
+    },
+    "2": {
+     "auc": 0.7244642857,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.8269916437,
+     "try": 1,
+     "export_sha256_16": "b455bb4dc1707de7"
+    },
+    "3": {
+     "auc": 0.7176785714,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.8863661399,
+     "try": 1,
+     "export_sha256_16": "b455bb4dc1707de7"
+    },
+    "4": {
+     "auc": 0.716875,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.8440167609,
+     "try": 1,
+     "export_sha256_16": "b455bb4dc1707de7"
+    },
+    "5": {
+     "auc": 0.7236607143,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.8326581849,
+     "try": 1,
+     "export_sha256_16": "b455bb4dc1707de7"
+    }
+   }
+  },
+  "13": {
+   "job": "ep13_k3fix_final39254",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 39254,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep13_k3fix_s42",
+   "training_sha256": "dbb526df769794ccfc8b186a82b9eafd3fc78fa32eca11cecf7db5bfed3608b2",
+   "parquet_sha256": "c36c13db6440cd363a618e2261804e4ba36591f17b46f81d5af03f65dd091c16",
+   "runs": {
+    "1": {
+     "auc": 0.8137201735,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.383002173,
+     "try": 1,
+     "export_sha256_16": "bc146e3ea4a98084"
+    },
+    "2": {
+     "auc": 0.8439533623,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.161538513,
+     "try": 1,
+     "export_sha256_16": "bc146e3ea4a98084"
+    },
+    "3": {
+     "auc": 0.8380558568,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.200613216,
+     "try": 1,
+     "export_sha256_16": "bc146e3ea4a98084"
+    },
+    "4": {
+     "auc": 0.853308026,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.0947925,
+     "try": 1,
+     "export_sha256_16": "bc146e3ea4a98084"
+    },
+    "5": {
+     "auc": 0.8537147505,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.022368742,
+     "try": 1,
+     "export_sha256_16": "bc146e3ea4a98084"
+    }
+   }
+  },
+  "14": {
+   "job": "ep14_k3fix_final44922",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep14_k3fix_s42",
+   "training_sha256": "0f42a389a68ad1b71b4df5517ebc902b7172c803d6d6e94a105967b7bfabdccd",
+   "parquet_sha256": "98ec1c57bdcadd2b7b63adabe1defc25501bd685ee96ff4066220b5d23a27d76",
+   "runs": {
+    "1": {
+     "auc": 0.5575276939,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 35.17467919,
+     "try": 1,
+     "export_sha256_16": "3c4740ef7bd4f60c"
+    },
+    "2": {
+     "auc": 0.5566465257,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 36.61459552,
+     "try": 1,
+     "export_sha256_16": "3c4740ef7bd4f60c"
+    },
+    "3": {
+     "auc": 0.5560171198,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 24.29545767,
+     "try": 1,
+     "export_sha256_16": "3c4740ef7bd4f60c"
+    },
+    "4": {
+     "auc": 0.5572759315,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 27.13275346,
+     "try": 1,
+     "export_sha256_16": "3c4740ef7bd4f60c"
+    },
+    "5": {
+     "auc": 0.5569612286,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 20.42585142,
+     "try": 1,
+     "export_sha256_16": "3c4740ef7bd4f60c"
+    }
+   }
+  },
+  "15": {
+   "job": "ep15_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep15",
+   "training_sha256": "db94b3d049043c87d183449f112eb18a1f141cf32fedea8657da7d1283204963",
+   "parquet_sha256": "bf06225bc599066bcc51dc80b3652ec7f91736d1f6bf2d19125c6d1fc54fded3",
+   "runs": {
+    "1": {
+     "auc": 0.6963286713,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.212003069,
+     "try": 1,
+     "export_sha256_16": "d4bbb317cb71ebe6"
+    },
+    "2": {
+     "auc": 0.7017482517,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.142123241,
+     "try": 1,
+     "export_sha256_16": "d4bbb317cb71ebe6"
+    },
+    "3": {
+     "auc": 0.6980769231,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.127003025,
+     "try": 1,
+     "export_sha256_16": "d4bbb317cb71ebe6"
+    },
+    "4": {
+     "auc": 0.6997377622,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.147868655,
+     "try": 1,
+     "export_sha256_16": "d4bbb317cb71ebe6"
+    },
+    "5": {
+     "auc": 0.7020104895,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.125217625,
+     "try": 1,
+     "export_sha256_16": "d4bbb317cb71ebe6"
+    }
+   }
+  },
+  "16": {
+   "job": "ep16_k3fix_final32063",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 32063,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep16_k3fix_s42",
+   "training_sha256": "c5571c15eac6bbc1481283800b19109791e0f13514d98a5e2a8e2fede3135634",
+   "parquet_sha256": "5adf79bdfc8edff59ff3579769332890651ede89ff921b87e51ed0f7c696cbe8",
+   "runs": {
+    "1": {
+     "auc": 0.7604821803,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.52929903,
+     "try": 1,
+     "export_sha256_16": "ae1c2d2bc8704fba"
+    },
+    "2": {
+     "auc": 0.7651991614,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.592450695,
+     "try": 1,
+     "export_sha256_16": "ae1c2d2bc8704fba"
+    },
+    "3": {
+     "auc": 0.7713574423,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.460876102,
+     "try": 1,
+     "export_sha256_16": "ae1c2d2bc8704fba"
+    },
+    "4": {
+     "auc": 0.7679507338,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.527173286,
+     "try": 1,
+     "export_sha256_16": "ae1c2d2bc8704fba"
+    },
+    "5": {
+     "auc": 0.7699161426,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.489970692,
+     "try": 1,
+     "export_sha256_16": "ae1c2d2bc8704fba"
+    }
+   }
+  },
+  "17": {
+   "job": "ep17_k3fix_final29845",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 29845,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep17_k3fix_s42",
+   "training_sha256": "64cbd5eccb86df679ec873f32d212ca4aa340069d251b6e83600ad6a6b77e714",
+   "parquet_sha256": "25c13883a34052b7c6bdb04357c868d975bb0bf54d4acd1b807e53fdf9e11c7a",
+   "runs": {
+    "1": {
+     "auc": 0.7454545455,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.939166858,
+     "try": 1,
+     "export_sha256_16": "dd00794ee21fca2f"
+    },
+    "2": {
+     "auc": 0.7535511364,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.931509023,
+     "try": 1,
+     "export_sha256_16": "dd00794ee21fca2f"
+    },
+    "3": {
+     "auc": 0.7534090909,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.927014409,
+     "try": 1,
+     "export_sha256_16": "dd00794ee21fca2f"
+    },
+    "4": {
+     "auc": 0.7612215909,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.913412013,
+     "try": 1,
+     "export_sha256_16": "dd00794ee21fca2f"
+    },
+    "5": {
+     "auc": 0.7576704545,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.878560522,
+     "try": 1,
+     "export_sha256_16": "dd00794ee21fca2f"
+    }
+   }
+  },
+  "18": {
+   "job": "ep18_k3fix_final18911",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 18911,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep18_k3fix_s42",
+   "training_sha256": "6772981a857ebca570901d968d9bebd16b5e2253d5f4e1705506adcaf195020f",
+   "parquet_sha256": "d8d027012a2322b2591db8019ac0511eab42974632346413415e2a6e5f0df88a",
+   "runs": {
+    "1": {
+     "auc": 0.9314539627,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.656195159,
+     "try": 1,
+     "export_sha256_16": "de312489bafbc36a"
+    },
+    "2": {
+     "auc": 0.9311625874,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6836374922,
+     "try": 1,
+     "export_sha256_16": "de312489bafbc36a"
+    },
+    "3": {
+     "auc": 0.9261363636,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7546794787,
+     "try": 1,
+     "export_sha256_16": "de312489bafbc36a"
+    },
+    "4": {
+     "auc": 0.9294871795,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6290773493,
+     "try": 1,
+     "export_sha256_16": "de312489bafbc36a"
+    },
+    "5": {
+     "auc": 0.9303613054,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6745295194,
+     "try": 1,
+     "export_sha256_16": "de312489bafbc36a"
+    }
+   }
+  },
+  "19": {
+   "job": "ep19_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep19",
+   "training_sha256": "651a438d9b344dc89568697c0a584d42a575cb009cef329e2842fe0717ba521e",
+   "parquet_sha256": "9179b0ac91f6ced6a1b3aced68b20de96e424e666d9892384f455dcdffb84ace",
+   "runs": {
+    "1": {
+     "auc": 0.1661258465,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 66.1620187,
+     "try": 1,
+     "export_sha256_16": "344e6f23ed888cd9"
+    },
+    "2": {
+     "auc": 0.1663374718,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 49.65136635,
+     "try": 1,
+     "export_sha256_16": "344e6f23ed888cd9"
+    },
+    "3": {
+     "auc": 0.1630925508,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 64.59172362,
+     "try": 1,
+     "export_sha256_16": "344e6f23ed888cd9"
+    },
+    "4": {
+     "auc": 0.1669018059,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 57.21366592,
+     "try": 1,
+     "export_sha256_16": "344e6f23ed888cd9"
+    },
+    "5": {
+     "auc": 0.1669723476,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 60.14957894,
+     "try": 1,
+     "export_sha256_16": "344e6f23ed888cd9"
+    }
+   }
+  },
+  "20": {
+   "job": "ep20_k3easy_final18450",
+   "family": "k3easy_final",
+   "input": "k3",
+   "verdict_choice": "K3FIX",
+   "iteration": 18450,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep20",
+   "training_sha256": "46dc08c194ae3d50cb7307b90fe92d9fbcfef39474e7601297879f364f3b1081",
+   "parquet_sha256": "2784cae6dc09774f0ed7536e00c884276bbe0c49f2d0aa0e14c2feea6b964558",
+   "runs": {
+    "1": {
+     "auc": 0.9085669078,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.068866438,
+     "try": 1,
+     "export_sha256_16": "b0dcb320a841e2a1"
+    },
+    "2": {
+     "auc": 0.9106012658,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.059121409,
+     "try": 1,
+     "export_sha256_16": "b0dcb320a841e2a1"
+    },
+    "3": {
+     "auc": 0.9032549729,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.101206208,
+     "try": 1,
+     "export_sha256_16": "b0dcb320a841e2a1"
+    },
+    "4": {
+     "auc": 0.9117314647,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.05633489,
+     "try": 1,
+     "export_sha256_16": "b0dcb320a841e2a1"
+    },
+    "5": {
+     "auc": 0.9102622061,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9981785592,
+     "try": 1,
+     "export_sha256_16": "b0dcb320a841e2a1"
+    }
+   }
+  },
+  "21": {
+   "job": "ep21_k3fix_final44922",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep21_k3fix_s42",
+   "training_sha256": "86f0cccea46db21965592b6f37ba9ab327e3a13b55c7d6fc670ba141b7a6dc61",
+   "parquet_sha256": "57ae96f315735435f34f387fca5bd2b82126d4be4c87bba5f14971e8c1fdb734",
+   "runs": {
+    "1": {
+     "auc": 0.5483960177,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.09942753,
+     "try": 1,
+     "export_sha256_16": "0e6399890edfc6f6"
+    },
+    "2": {
+     "auc": 0.5521755162,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.093869396,
+     "try": 1,
+     "export_sha256_16": "0e6399890edfc6f6"
+    },
+    "3": {
+     "auc": 0.5499631268,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.081370729,
+     "try": 1,
+     "export_sha256_16": "0e6399890edfc6f6"
+    },
+    "4": {
+     "auc": 0.5503318584,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.092829099,
+     "try": 1,
+     "export_sha256_16": "0e6399890edfc6f6"
+    },
+    "5": {
+     "auc": 0.5337389381,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.20432531,
+     "try": 1,
+     "export_sha256_16": "0e6399890edfc6f6"
+    }
+   }
+  },
+  "22": {
+   "job": "ep22_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep22",
+   "training_sha256": "402aa8bce79591f9eb00ac665c3b063623011ff7fa9266eebf90b39703a8b24c",
+   "parquet_sha256": "12d1318f3ff459b05905cbb59dd1741d6281eb0ff6ca386fbc45e569773aa290",
+   "runs": {
+    "1": {
+     "auc": 0.4680111266,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 3.050066971,
+     "try": 1,
+     "export_sha256_16": "0e9e237b2f155e21"
+    },
+    "2": {
+     "auc": 0.4836578581,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.393791651,
+     "try": 1,
+     "export_sha256_16": "0e9e237b2f155e21"
+    },
+    "3": {
+     "auc": 0.4780945758,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.160180034,
+     "try": 1,
+     "export_sha256_16": "0e9e237b2f155e21"
+    },
+    "4": {
+     "auc": 0.4774860918,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.445776707,
+     "try": 1,
+     "export_sha256_16": "0e9e237b2f155e21"
+    },
+    "5": {
+     "auc": 0.4813108484,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.150081214,
+     "try": 1,
+     "export_sha256_16": "0e9e237b2f155e21"
+    }
+   }
+  },
+  "23": {
+   "job": "ep23_k3easy_final19162",
+   "family": "k3easy_final",
+   "input": "k3",
+   "verdict_choice": "K3FIX",
+   "iteration": 19162,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3easy/ep23",
+   "training_sha256": "8cea19c9f47df856f04bb25644541a9deeb5a4f09c4c97cbbc5edd7cd00db302",
+   "parquet_sha256": "3f6aaa9e0378028395c9fcf835b9c306e38950fa4e99acfcf1bbc5284af34e84",
+   "runs": {
+    "1": {
+     "auc": 0.953884778,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7523998523,
+     "try": 1,
+     "export_sha256_16": "9c3309e8677692cd"
+    },
+    "2": {
+     "auc": 0.9502510571,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7799993696,
+     "try": 1,
+     "export_sha256_16": "9c3309e8677692cd"
+    },
+    "3": {
+     "auc": 0.9535544397,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7556237659,
+     "try": 1,
+     "export_sha256_16": "9c3309e8677692cd"
+    },
+    "4": {
+     "auc": 0.9515063425,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7530312901,
+     "try": 1,
+     "export_sha256_16": "9c3309e8677692cd"
+    },
+    "5": {
+     "auc": 0.9537526427,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.751462571,
+     "try": 1,
+     "export_sha256_16": "9c3309e8677692cd"
+    }
+   }
+  },
+  "24": {
+   "job": "ep24_k3fix_final20636",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 20636,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep24_k3fix_s42",
+   "training_sha256": "ff795e7181ea56d9f56e54528bde7fd31bd57c5047ddafad55057bc1ebd9ba33",
+   "parquet_sha256": "cafbf612668ef29466c2db5720380dc8e1227c2479a798ade81ec56005caf1f2",
+   "runs": {
+    "1": {
+     "auc": 0.9477774064,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6675909187,
+     "try": 1,
+     "export_sha256_16": "7d1d36ec7fdbebe6"
+    },
+    "2": {
+     "auc": 0.9482787433,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6549867059,
+     "try": 1,
+     "export_sha256_16": "7d1d36ec7fdbebe6"
+    },
+    "3": {
+     "auc": 0.9480280749,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6549013418,
+     "try": 1,
+     "export_sha256_16": "7d1d36ec7fdbebe6"
+    },
+    "4": {
+     "auc": 0.9490307487,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6631784093,
+     "try": 1,
+     "export_sha256_16": "7d1d36ec7fdbebe6"
+    },
+    "5": {
+     "auc": 0.9485294118,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6630616724,
+     "try": 1,
+     "export_sha256_16": "7d1d36ec7fdbebe6"
+    }
+   }
+  },
+  "25": {
+   "job": "ep25_k3fix_final42819",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 42819,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep25_k3fix_s42",
+   "training_sha256": "80f7ffebbf83cd0bf72e382461014253b06881de9912c7e0a9ac9fcf374137e3",
+   "parquet_sha256": "273a87f5d475548e386977ae6da34b389a9a473f65d8b1e5555c48825410808e",
+   "runs": {
+    "1": {
+     "auc": 0.06562863795,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 127.9670141,
+     "try": 1,
+     "export_sha256_16": "f5cdaa960e8b20de"
+    },
+    "2": {
+     "auc": 0.06591967404,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 136.8825925,
+     "try": 1,
+     "export_sha256_16": "f5cdaa960e8b20de"
+    },
+    "3": {
+     "auc": 0.7628055879,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.06810951,
+     "try": 1,
+     "export_sha256_16": "f5cdaa960e8b20de"
+    },
+    "4": {
+     "auc": 0.06330034924,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 121.321555,
+     "try": 1,
+     "export_sha256_16": "f5cdaa960e8b20de"
+    },
+    "5": {
+     "auc": 0.7646973225,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.985942257,
+     "try": 1,
+     "export_sha256_16": "f5cdaa960e8b20de"
+    }
+   }
+  },
+  "26": {
+   "job": "ep26_raw_final34948",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 34948,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep26",
+   "training_sha256": "b7c6a9afe06eeb47ab268cb6dd9ace98f48804c4f3ec711dd935f4781926e0f8",
+   "parquet_sha256": "074c06f5ee107acd3ec4f9343c5ab45293fb3ab5eb7ad24c04c9ae77ff947e16",
+   "runs": {
+    "1": {
+     "auc": 0.2659753363,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.576068938,
+     "try": 1,
+     "export_sha256_16": "fdb54e1a2a4dcf1d"
+    },
+    "2": {
+     "auc": 0.2727952167,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.573626796,
+     "try": 1,
+     "export_sha256_16": "fdb54e1a2a4dcf1d"
+    },
+    "3": {
+     "auc": 0.2683109118,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.575827917,
+     "try": 1,
+     "export_sha256_16": "fdb54e1a2a4dcf1d"
+    },
+    "4": {
+     "auc": 0.2727952167,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.581046373,
+     "try": 1,
+     "export_sha256_16": "fdb54e1a2a4dcf1d"
+    },
+    "5": {
+     "auc": 0.2697122571,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.572451855,
+     "try": 1,
+     "export_sha256_16": "fdb54e1a2a4dcf1d"
+    }
+   }
+  },
+  "27": {
+   "job": "ep27_k3fix_final20863",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 20863,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep27_k3fix_s42",
+   "training_sha256": "ffb5aae505e0aaa956092f9e513db3d0ae02db2d07e29e08a2ba579cb6d51cf7",
+   "parquet_sha256": "28fe6aee2fc74dab47895b0d4aa9f968cb0f7fc238e894fd3786cb5b2c5cb045",
+   "runs": {
+    "1": {
+     "auc": 0.9788716814,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6093465129,
+     "try": 1,
+     "export_sha256_16": "e560ebffd9545b11"
+    },
+    "2": {
+     "auc": 0.9599557522,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7832988384,
+     "try": 1,
+     "export_sha256_16": "e560ebffd9545b11"
+    },
+    "3": {
+     "auc": 0.978539823,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6038690085,
+     "try": 1,
+     "export_sha256_16": "e560ebffd9545b11"
+    },
+    "4": {
+     "auc": 0.9790929204,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6492626176,
+     "try": 1,
+     "export_sha256_16": "e560ebffd9545b11"
+    },
+    "5": {
+     "auc": 0.980420354,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5821234323,
+     "try": 1,
+     "export_sha256_16": "e560ebffd9545b11"
+    }
+   }
+  },
+  "28": {
+   "job": "ep28_raw_final44922",
+   "family": "raw",
+   "input": "raw",
+   "verdict_choice": "RAW",
+   "iteration": 44922,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep28",
+   "training_sha256": "edb882c78872ee24f28be10f9b6713f14f63d6a60968a45410512705eff982f4",
+   "parquet_sha256": "24b10cba03d85ef38fb91f2caf1ced2f54a0b2fe112cb3c213a0fad1038c3d78",
+   "runs": {
+    "1": {
+     "auc": 0.03125,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 50.82486237,
+     "try": 1,
+     "export_sha256_16": "57c4bbb157f2b282"
+    },
+    "2": {
+     "auc": 0.03371710526,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 55.56452615,
+     "try": 1,
+     "export_sha256_16": "57c4bbb157f2b282"
+    },
+    "3": {
+     "auc": 0.02827682186,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 52.0688904,
+     "try": 1,
+     "export_sha256_16": "57c4bbb157f2b282"
+    },
+    "4": {
+     "auc": 0.03137651822,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 54.62550393,
+     "try": 1,
+     "export_sha256_16": "57c4bbb157f2b282"
+    },
+    "5": {
+     "auc": 0.03656376518,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "mppe": 61.50789159,
+     "try": 1,
+     "export_sha256_16": "57c4bbb157f2b282"
+    }
+   }
+  },
+  "29": {
+   "job": "ep29_k3fix_final17358",
+   "family": "k3fix_final",
+   "input": "k3fix",
+   "verdict_choice": "K3FIX",
+   "iteration": 17358,
+   "run_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep29_k3fix_s42",
+   "training_sha256": "52dae9a8478ae47643a173b18a68e8f1b8929a4811bb4b2fca1a901868916210",
+   "parquet_sha256": "9412a5a47f66bb4a018bd3e40d3ec824322695959c6d662d122e22050a7c1830",
+   "runs": {
+    "1": {
+     "auc": 0.9285331906,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6381526739,
+     "try": 1,
+     "export_sha256_16": "8c984002495d5a75"
+    },
+    "2": {
+     "auc": 0.9269271949,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6914929365,
+     "try": 1,
+     "export_sha256_16": "8c984002495d5a75"
+    },
+    "3": {
+     "auc": 0.925856531,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6728881886,
+     "try": 1,
+     "export_sha256_16": "8c984002495d5a75"
+    },
+    "4": {
+     "auc": 0.9267933619,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6618310063,
+     "try": 1,
+     "export_sha256_16": "8c984002495d5a75"
+    },
+    "5": {
+     "auc": 0.925856531,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6837045283,
+     "try": 1,
+     "export_sha256_16": "8c984002495d5a75"
+    }
+   }
+  }
+ },
+ "trials_own_input": {
+  "1": {
+   "auc": 0.6365771237249999,
+   "sp_sr": 0.8,
+   "mp_sr": 0.8,
+   "mppe": 15.948111815309998
+  },
+  "2": {
+   "auc": 0.63777498763,
+   "sp_sr": 0.8,
+   "mp_sr": 0.8,
+   "mppe": 15.660553636773335
+  },
+  "3": {
+   "auc": 0.6592932370686667,
+   "sp_sr": 0.8333333333333334,
+   "mp_sr": 0.8333333333333334,
+   "mppe": 11.007110280193332
+  },
+  "4": {
+   "auc": 0.6373374488353333,
+   "sp_sr": 0.8,
+   "mp_sr": 0.8,
+   "mppe": 15.123280448383333
+  },
+  "5": {
+   "auc": 0.6626990224626664,
+   "sp_sr": 0.8333333333333334,
+   "mp_sr": 0.8333333333333334,
+   "mppe": 11.256732988079998
+  }
+ },
+ "mean_of_trials_own_input": {
+  "auc": 0.6467363639443333,
+  "sp_sr": 0.8133333333333332,
+  "mp_sr": 0.8133333333333332,
+  "mppe": 13.799157833748001
+ },
+ "abs_dist_to_mean_auc": {
+  "1": 0.010159240219333454,
+  "2": 0.008961376314333358,
+  "3": 0.0125568731243334,
+  "4": 0.009398915109000039,
+  "5": 0.015962658518333117
+ },
+ "chosen_trial": 2,
+ "chosen_trial_own_input": {
+  "auc": 0.63777498763,
+  "sp_sr": 0.8,
+  "mp_sr": 0.8,
+  "mppe": 15.660553636773335
+ }
+}

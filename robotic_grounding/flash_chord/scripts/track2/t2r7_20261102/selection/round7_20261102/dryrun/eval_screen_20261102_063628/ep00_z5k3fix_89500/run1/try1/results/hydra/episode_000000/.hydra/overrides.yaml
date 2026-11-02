@@ -1,0 +1,6 @@
+- evaluation.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/exports/ep00_z5k3fix_89500/try1/model_89500.safetensors
+- evaluation.world_count=1
+- evaluation.reset_mode=explicit
+- evaluation.metrics_output=/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628/ep00_z5k3fix_89500/run1/try1/results/episode_000000.json
+- evaluation.object_trajectories_output=/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628/ep00_z5k3fix_89500/run1/try1/results/episode_000000.parquet
+- logging.mode=disabled

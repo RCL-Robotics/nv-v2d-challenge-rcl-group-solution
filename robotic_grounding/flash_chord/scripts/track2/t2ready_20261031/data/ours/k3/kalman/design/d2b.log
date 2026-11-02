@@ -1,0 +1,77 @@
+{'episode': 0, 'object': 'tall_bar_stool', 'rigid_carry_frac': 0.0, 'moving_frac': 0.448586118251928, 'n_runs': 0, 'sig_p_rel': 0.23239343190510336, 'sig_r_rel': 0.7853333997971338}
+{'episode': 1, 'object': 'vacuum', 'rigid_carry_frac': 0.0, 'moving_frac': 0.6987951807228916, 'n_runs': 0, 'sig_p_rel': 0.29698787343437066, 'sig_r_rel': 0.7853333997971338}
+{'episode': 2, 'object': 'blue_easter_basket', 'rigid_carry_frac': 0.3448979591836735, 'moving_frac': 0.5683673469387756, 'n_runs': 4, 'sig_p_rel': 0.29124191297988244, 'sig_r_rel': 0.7853333997971338}
+{'episode': 3, 'object': 'contigo_coffee_mug', 'rigid_carry_frac': 0.16005121638924455, 'moving_frac': 0.5992317541613317, 'n_runs': 8, 'sig_p_rel': 0.19743548236358907, 'sig_r_rel': 0.7853333997971338}
+{'episode': 4, 'object': 'baseball_bat', 'rigid_carry_frac': 0.0, 'moving_frac': 0.7658779576587795, 'n_runs': 0, 'sig_p_rel': 0.2508613877423775, 'sig_r_rel': 0.7853333997971338}
+{'episode': 5, 'object': 'big_black_box', 'rigid_carry_frac': 0.05084745762711865, 'moving_frac': 0.5104685942173479, 'n_runs': 3, 'sig_p_rel': 0.27404541016118955, 'sig_r_rel': 0.7853333997971338}
+{'episode': 6, 'object': 'monitor', 'rigid_carry_frac': 0.23992673992673993, 'moving_frac': 0.41025641025641024, 'n_runs': 7, 'sig_p_rel': 0.1827492227309941, 'sig_r_rel': 0.7853333997971338}
+{'episode': 7, 'object': 'iron', 'rigid_carry_frac': 0.5491071428571429, 'moving_frac': 0.6529017857142857, 'n_runs': 5, 'sig_p_rel': 0.2077335123698408, 'sig_r_rel': 0.7853333997971338}
+{'episode': 8, 'object': 'skinny_wood_chair', 'rigid_carry_frac': 0.18220338983050846, 'moving_frac': 0.2994350282485876, 'n_runs': 3, 'sig_p_rel': 0.2637542059999448, 'sig_r_rel': 0.7853333997971338}
+{'episode': 9, 'object': 'big_red_bowl', 'rigid_carry_frac': 0.11379310344827587, 'moving_frac': 0.7057471264367816, 'n_runs': 6, 'sig_p_rel': 0.1987647926067466, 'sig_r_rel': 0.7853333997971338}
+{'episode': 10, 'object': 'white_desk', 'rigid_carry_frac': 0.061712846347607056, 'moving_frac': 0.3954659949622166, 'n_runs': 4, 'sig_p_rel': 0.27050822470324537, 'sig_r_rel': 0.7853333997971338}
+{'episode': 11, 'object': 'light_blue_book', 'rigid_carry_frac': 0.21753607103218647, 'moving_frac': 0.7125416204217536, 'n_runs': 7, 'sig_p_rel': 0.21155738508767585, 'sig_r_rel': 0.7853333997971338}
+{'episode': 12, 'object': 'black_platform', 'rigid_carry_frac': 0.03, 'moving_frac': 0.5271428571428571, 'n_runs': 1, 'sig_p_rel': 0.31266201294087115, 'sig_r_rel': 0.7853333997971338}
+{'episode': 13, 'object': 'snack_box', 'rigid_carry_frac': 0.1279826464208243, 'moving_frac': 0.48698481561822127, 'n_runs': 4, 'sig_p_rel': 0.31236149905698923, 'sig_r_rel': 0.7853333997971338}
+{'episode': 14, 'object': 'round_table', 'rigid_carry_frac': 0.022155085599194362, 'moving_frac': 0.6847935548841894, 'n_runs': 2, 'sig_p_rel': 0.2707191004954235, 'sig_r_rel': 0.7853333997971338}
+{'episode': 15, 'object': 'wet_floor_sign', 'rigid_carry_frac': 0.023776223776223775, 'moving_frac': 0.6125874125874126, 'n_runs': 1, 'sig_p_rel': 0.2403079462851513, 'sig_r_rel': 0.7853333997971338}
+{'episode': 16, 'object': 'spray_bottle', 'rigid_carry_frac': 0.0, 'moving_frac': 0.559748427672956, 'n_runs': 0, 'sig_p_rel': 0.24844922135665848, 'sig_r_rel': 0.7853333997971338}
+{'episode': 17, 'object': 'traffic_cone', 'rigid_carry_frac': 0.0, 'moving_frac': 0.48409090909090907, 'n_runs': 0, 'sig_p_rel': 0.194992223187428, 'sig_r_rel': 0.7853333997971338}
+{'episode': 18, 'object': 'blue_trash_can', 'rigid_carry_frac': 0.027972027972027972, 'moving_frac': 0.4114219114219114, 'n_runs': 1, 'sig_p_rel': 0.2602421128132181, 'sig_r_rel': 0.7853333997971338}
+{'episode': 19, 'object': 'cane', 'rigid_carry_frac': 0.0, 'moving_frac': 0.8171557562076749, 'n_runs': 0, 'sig_p_rel': 0.25042475380889506, 'sig_r_rel': 0.7853333997971338}
+{'episode': 20, 'object': 'rice_cooker', 'rigid_carry_frac': 0.0, 'moving_frac': 0.3309222423146474, 'n_runs': 0, 'sig_p_rel': 0.21103071812477475, 'sig_r_rel': 0.7853333997971338}
+{'episode': 21, 'object': 'tall_bar_stool', 'rigid_carry_frac': 0.05604719764011799, 'moving_frac': 0.588495575221239, 'n_runs': 3, 'sig_p_rel': 0.2336609663103026, 'sig_r_rel': 0.7853333997971338}
+{'episode': 22, 'object': 'step_ladder', 'rigid_carry_frac': 0.06258692628650904, 'moving_frac': 0.5354659248956884, 'n_runs': 2, 'sig_p_rel': 0.2617252724831116, 'sig_r_rel': 0.7853333997971338}
+{'episode': 23, 'object': 'toy_stroller', 'rigid_carry_frac': 0.23678646934460887, 'moving_frac': 0.8298097251585623, 'n_runs': 8, 'sig_p_rel': 0.3024208670878459, 'sig_r_rel': 0.7853333997971338}
+{'episode': 24, 'object': 'watering_can', 'rigid_carry_frac': 0.2540106951871658, 'moving_frac': 0.5093582887700535, 'n_runs': 6, 'sig_p_rel': 0.20834211009355655, 'sig_r_rel': 0.7853333997971338}
+{'episode': 25, 'object': 'cyan_water_bottle', 'rigid_carry_frac': 0.09778812572759023, 'moving_frac': 0.7986030267753201, 'n_runs': 4, 'sig_p_rel': 0.21598880493203546, 'sig_r_rel': 0.7853333997971338}
+{'episode': 26, 'object': 'skateboard', 'rigid_carry_frac': 0.017937219730941704, 'moving_frac': 0.3841554559043348, 'n_runs': 1, 'sig_p_rel': 0.3158889402729278, 'sig_r_rel': 0.7853333997971338}
+{'episode': 27, 'object': 'woven_basket', 'rigid_carry_frac': 0.14513274336283186, 'moving_frac': 0.6247787610619469, 'n_runs': 2, 'sig_p_rel': 0.20026416383956858, 'sig_r_rel': 0.7853333997971338}
+{'episode': 28, 'object': 'squeegee', 'rigid_carry_frac': 0.0, 'moving_frac': 0.8795546558704453, 'n_runs': 0, 'sig_p_rel': 0.23978132393258794, 'sig_r_rel': 0.7853333997971338}
+{'episode': 29, 'object': 'rolling_luggage', 'rigid_carry_frac': 0.0, 'moving_frac': 0.3683083511777302, 'n_runs': 0, 'sig_p_rel': 0.2738101112274105, 'sig_r_rel': 0.7853333997971338}
+{
+ "n_rigid_runs_ge40": 15,
+ "rel_rot_gamma_deg2": [
+  1.8076851066694284,
+  4.1193737077887995,
+  9.518737388042,
+  21.119717784473426,
+  46.959054433197544
+ ],
+ "rel_pos_gamma_cm2": [
+  0.13730032587310595,
+  0.30393765932644107,
+  0.6871654692517792,
+  1.5461391374371418,
+  3.580920369940105
+ ],
+ "rel_rot_intercept": -1.287984142263266,
+ "rel_rot_slope": 2.7811633704017806,
+ "rel_pos_intercept": -0.09224468699942448,
+ "rel_pos_slope": 0.20290142265907768,
+ "pred_rot_slope": 1.8502456465107744,
+ "pred_pos_slope": 0.13854532331707045,
+ "slip_rw_rot_deg2_per_frame_per_axis": 0.31030590796366875,
+ "slip_rw_pos_cm2_per_frame_per_axis": 0.02145203311400241,
+ "slip_white_rot_deg2_per_axis": 0.0,
+ "slip_white_pos_cm2_per_axis": 0.0,
+ "rigid_carry_frac_mean": 0.10074170958968444,
+ "moving_frac_mean": 0.5733684189922398
+}
+{
+ "tilt": {
+  "sigma_model_deg_per_axis": 3.0,
+  "t_sat_frames": 375.0,
+  "outlier_eps": 0.05,
+  "loglik": -395.67166894381285,
+  "implied_sat_std_per_axis_deg": 14.919883003523267,
+  "n": 115
+ },
+ "height": {
+  "mu_cm": -0.2999999999999985,
+  "sigma_model_cm": 0.3500000000000001,
+  "t_sat_frames": 275.0,
+  "outlier_eps": 0.0,
+  "loglik": -101.43833347716227,
+  "n": 68
+ }
+}

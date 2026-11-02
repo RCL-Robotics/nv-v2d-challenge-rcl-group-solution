@@ -1,0 +1,602 @@
+[
+ {
+  "episode": 0,
+  "object": "tall_bar_stool",
+  "frames": 778,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 778,
+  "soma_joints": [
+   778,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   2.0,
+   104.0
+  ],
+  "object_lift_m": 0.01
+ },
+ {
+  "episode": 1,
+  "object": "vacuum",
+  "frames": 747,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 747,
+  "soma_joints": [
+   747,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   2.0,
+   0.0
+  ],
+  "object_lift_m": 0.005032061195945903
+ },
+ {
+  "episode": 2,
+  "object": "blue_easter_basket",
+  "frames": 980,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 980,
+  "soma_joints": [
+   980,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   386.0,
+   99.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 3,
+  "object": "contigo_coffee_mug",
+  "frames": 781,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 781,
+  "soma_joints": [
+   781,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   513.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 4,
+  "object": "baseball_bat",
+  "frames": 803,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 803,
+  "soma_joints": [
+   803,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   360.0,
+   277.0
+  ],
+  "object_lift_m": 0.005234630363380406
+ },
+ {
+  "episode": 5,
+  "object": "big_black_box",
+  "frames": 1003,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 1003,
+  "soma_joints": [
+   1003,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   347.0,
+   396.0
+  ],
+  "object_lift_m": 0.005380097179787935
+ },
+ {
+  "episode": 6,
+  "object": "monitor",
+  "frames": 546,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 546,
+  "soma_joints": [
+   546,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   337.0,
+   202.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 7,
+  "object": "iron",
+  "frames": 896,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 896,
+  "soma_joints": [
+   896,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   695.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 8,
+  "object": "skinny_wood_chair",
+  "frames": 708,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 708,
+  "soma_joints": [
+   708,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   92.0,
+   192.0
+  ],
+  "object_lift_m": 0.006637635821131471
+ },
+ {
+  "episode": 9,
+  "object": "big_red_bowl",
+  "frames": 870,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 870,
+  "soma_joints": [
+   870,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   458.0,
+   334.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 10,
+  "object": "white_desk",
+  "frames": 794,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 794,
+  "soma_joints": [
+   794,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   161.0,
+   305.0
+  ],
+  "object_lift_m": 0.01
+ },
+ {
+  "episode": 11,
+  "object": "light_blue_book",
+  "frames": 901,
+  "visible_frac": 0.9988901220865705,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 901,
+  "soma_joints": [
+   901,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   456.0,
+   740.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 12,
+  "object": "black_platform",
+  "frames": 700,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 700,
+  "soma_joints": [
+   700,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   234.0,
+   24.0
+  ],
+  "object_lift_m": 0.009160304747197034
+ },
+ {
+  "episode": 13,
+  "object": "snack_box",
+  "frames": 922,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 922,
+  "soma_joints": [
+   922,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   294.0,
+   197.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 14,
+  "object": "round_table",
+  "frames": 993,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 993,
+  "soma_joints": [
+   993,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   109.0,
+   335.0
+  ],
+  "object_lift_m": 0.003626218621108845
+ },
+ {
+  "episode": 15,
+  "object": "wet_floor_sign",
+  "frames": 715,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 715,
+  "soma_joints": [
+   715,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   164.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 16,
+  "object": "spray_bottle",
+  "frames": 477,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 477,
+  "soma_joints": [
+   477,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   109.0,
+   0.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 17,
+  "object": "traffic_cone",
+  "frames": 440,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 440,
+  "soma_joints": [
+   440,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   108.0,
+   176.0
+  ],
+  "object_lift_m": 0.01
+ },
+ {
+  "episode": 18,
+  "object": "blue_trash_can",
+  "frames": 858,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 858,
+  "soma_joints": [
+   858,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   121.0
+  ],
+  "object_lift_m": 0.004107828822714044
+ },
+ {
+  "episode": 19,
+  "object": "cane",
+  "frames": 886,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 886,
+  "soma_joints": [
+   886,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   70.0,
+   46.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 20,
+  "object": "rice_cooker",
+  "frames": 553,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 553,
+  "soma_joints": [
+   553,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   276.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 21,
+  "object": "tall_bar_stool",
+  "frames": 678,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 678,
+  "soma_joints": [
+   678,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   317.0,
+   287.0
+  ],
+  "object_lift_m": 0.007871698142963901
+ },
+ {
+  "episode": 22,
+  "object": "step_ladder",
+  "frames": 719,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 719,
+  "soma_joints": [
+   719,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   129.0
+  ],
+  "object_lift_m": 0.0014564941186047116
+ },
+ {
+  "episode": 23,
+  "object": "toy_stroller",
+  "frames": 946,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 946,
+  "soma_joints": [
+   946,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   461.0,
+   494.0
+  ],
+  "object_lift_m": 0.009265235709580488
+ },
+ {
+  "episode": 24,
+  "object": "watering_can",
+  "frames": 748,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 748,
+  "soma_joints": [
+   748,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   0.0,
+   461.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 25,
+  "object": "cyan_water_bottle",
+  "frames": 859,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 859,
+  "soma_joints": [
+   859,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   297.0,
+   438.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 26,
+  "object": "skateboard",
+  "frames": 669,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 669,
+  "soma_joints": [
+   669,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   188.0,
+   184.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 27,
+  "object": "woven_basket",
+  "frames": 565,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 565,
+  "soma_joints": [
+   565,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   133.0,
+   262.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 28,
+  "object": "squeegee",
+  "frames": 988,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": false,
+  "g1_frames": 988,
+  "soma_joints": [
+   988,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   29.0,
+   12.0
+  ],
+  "object_lift_m": 0.0
+ },
+ {
+  "episode": 29,
+  "object": "rolling_luggage",
+  "frames": 467,
+  "visible_frac": 1.0,
+  "mesh_exists": true,
+  "ground_plane_exists": true,
+  "support_stage_empty": true,
+  "g1_frames": 467,
+  "soma_joints": [
+   467,
+   77,
+   3
+  ],
+  "contact_label_frames_LR": [
+   19.0,
+   7.0
+  ],
+  "object_lift_m": 0.00593228122942463
+ }
+]

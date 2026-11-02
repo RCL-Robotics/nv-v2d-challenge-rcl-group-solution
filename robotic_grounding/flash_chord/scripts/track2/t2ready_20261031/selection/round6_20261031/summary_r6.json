@@ -1,0 +1,63 @@
+{
+ "generated_at": "2026-10-31 16:10:03",
+ "changed_episodes": [
+  "04",
+  "11"
+ ],
+ "r6_closest_trial": 9,
+ "replace_verdict": {
+  "n_changed": 2,
+  "shared_trials": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "delta_B": 0.010620826414833284,
+  "s6_own_sp": 0.9333333333333333,
+  "s5_own_sp": 0.9,
+  "s6_own_mp": 0.93,
+  "s5_own_mp": 0.8966666666666667,
+  "s6_own_auc_report_only": 0.7718770374637537,
+  "s5_own_auc_report_only": 0.7592703628888039,
+  "i_changed": true,
+  "ii_delta_B": true,
+  "iii_sp_mp": true,
+  "replace": true,
+  "r6_closest_trial": 9
+ },
+ "upload_eligibility": "R6-CLOSEST replaces R5-CLOSEST as the upload-eligible Tier-2 file (PREREG_R6 5.6)",
+ "means_over_complete_trials": {
+  "S5": {
+   "own_auc": 0.7592703628888039,
+   "own_sp": 0.9,
+   "own_mp": 0.8966666666666667,
+   "own_mppe": 7.81945349152865,
+   "cons_auc": 0.6432023344736792,
+   "cons_sp": 0.8966666666666667,
+   "cons_mp": 0.8633333333333335,
+   "cons_mppe": 8.187514547277079
+  },
+  "S6": {
+   "own_auc": 0.7718770374637537,
+   "own_sp": 0.9333333333333333,
+   "own_mp": 0.93,
+   "own_mppe": 3.515105793145709,
+   "cons_auc": 0.6538231608885126,
+   "cons_sp": 0.8966666666666667,
+   "cons_mp": 0.8633333333333335,
+   "cons_mppe": 3.8835145243497933
+  }
+ },
+ "n_complete_trials": {
+  "S5": 10,
+  "S6": 10
+ },
+ "note": "noisy-only: own-input = each policy vs its OWN Tier-2-derived input (evaluator values); cons-B = vs round 1's frozen consensus refs/B. Not leaderboard estimates. Own-input composites of S5 and S6 use different references on changed episodes and are not compared (report only)."
+}

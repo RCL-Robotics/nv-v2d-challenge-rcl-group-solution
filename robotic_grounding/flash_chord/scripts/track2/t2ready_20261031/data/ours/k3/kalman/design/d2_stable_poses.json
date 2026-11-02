@@ -1,0 +1,543 @@
+{
+ "baseball_bat": {
+  "n_vertices": 296472,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 118,
+  "probs_top5": [
+   0.03,
+   0.026,
+   0.025,
+   0.024,
+   0.022
+  ],
+  "h_check_maxdiff_m": 6.938893903907228e-18,
+  "extent_cm": [
+   8.9,
+   8.9,
+   54.3
+  ]
+ },
+ "big_black_box": {
+  "n_vertices": 289270,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 7,
+  "probs_top5": [
+   0.298,
+   0.254,
+   0.181,
+   0.172,
+   0.039
+  ],
+  "h_check_maxdiff_m": 5.551115123125783e-17,
+  "extent_cm": [
+   52.1,
+   39.6,
+   86.1
+  ]
+ },
+ "big_red_bowl": {
+  "n_vertices": 295188,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 3,
+  "probs_top5": [
+   0.702,
+   0.297,
+   0.0
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   29.5,
+   13.3,
+   29.7
+  ]
+ },
+ "black_platform": {
+  "n_vertices": 285889,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 2,
+  "probs_top5": [
+   0.538,
+   0.462
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   60.5,
+   14.3,
+   80.5
+  ]
+ },
+ "blue_easter_basket": {
+  "n_vertices": 263964,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 53,
+  "probs_top5": [
+   0.233,
+   0.199,
+   0.177,
+   0.126,
+   0.054
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   23.4,
+   15.6,
+   24.3
+  ]
+ },
+ "blue_trash_can": {
+  "n_vertices": 255564,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 7,
+  "probs_top5": [
+   0.221,
+   0.217,
+   0.214,
+   0.211,
+   0.098
+  ],
+  "h_check_maxdiff_m": 2.7755575615628914e-17,
+  "extent_cm": [
+   37.8,
+   37.4,
+   71.3
+  ]
+ },
+ "cane": {
+  "n_vertices": 297734,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 6,
+  "probs_top5": [
+   0.384,
+   0.337,
+   0.132,
+   0.129,
+   0.016
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   20.6,
+   15.1,
+   90.8
+  ]
+ },
+ "contigo_coffee_mug": {
+  "n_vertices": 297718,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 9,
+  "probs_top5": [
+   0.458,
+   0.445,
+   0.048,
+   0.019,
+   0.019
+  ],
+  "h_check_maxdiff_m": 6.938893903907228e-18,
+  "extent_cm": [
+   12.2,
+   8.8,
+   20.3
+  ]
+ },
+ "cyan_water_bottle": {
+  "n_vertices": 259484,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 43,
+  "probs_top5": [
+   0.194,
+   0.166,
+   0.137,
+   0.101,
+   0.08
+  ],
+  "h_check_maxdiff_m": 6.938893903907228e-18,
+  "extent_cm": [
+   9.2,
+   9.1,
+   28.3
+  ]
+ },
+ "iron": {
+  "n_vertices": 298533,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 7,
+  "probs_top5": [
+   0.321,
+   0.271,
+   0.267,
+   0.084,
+   0.055
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   13.4,
+   12.0,
+   30.5
+  ]
+ },
+ "light_blue_book": {
+  "n_vertices": 271275,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 6,
+  "probs_top5": [
+   0.397,
+   0.392,
+   0.078,
+   0.055,
+   0.039
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   19.1,
+   5.9,
+   26.1
+  ]
+ },
+ "monitor": {
+  "n_vertices": 294042,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.446,
+   0.267,
+   0.237,
+   0.041,
+   0.009
+  ],
+  "h_check_maxdiff_m": 5.551115123125783e-17,
+  "extent_cm": [
+   52.2,
+   18.7,
+   53.9
+  ]
+ },
+ "rice_cooker": {
+  "n_vertices": 295487,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 45,
+  "probs_top5": [
+   0.203,
+   0.141,
+   0.138,
+   0.099,
+   0.084
+  ],
+  "h_check_maxdiff_m": 2.7755575615628914e-17,
+  "extent_cm": [
+   22.0,
+   21.7,
+   23.3
+  ]
+ },
+ "rolling_luggage": {
+  "n_vertices": 292750,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 6,
+  "probs_top5": [
+   0.329,
+   0.323,
+   0.134,
+   0.126,
+   0.046
+  ],
+  "h_check_maxdiff_m": 2.7755575615628914e-17,
+  "extent_cm": [
+   38.4,
+   25.7,
+   97.8
+  ]
+ },
+ "round_table": {
+  "n_vertices": 240494,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 24,
+  "probs_top5": [
+   0.363,
+   0.121,
+   0.089,
+   0.086,
+   0.07
+  ],
+  "h_check_maxdiff_m": 5.551115123125783e-17,
+  "extent_cm": [
+   78.5,
+   77.2,
+   78.6
+  ]
+ },
+ "skateboard": {
+  "n_vertices": 258791,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.463,
+   0.298,
+   0.12,
+   0.118,
+   0.001
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   19.3,
+   11.0,
+   78.5
+  ]
+ },
+ "skinny_wood_chair": {
+  "n_vertices": 81066,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 7,
+  "probs_top5": [
+   0.345,
+   0.249,
+   0.178,
+   0.151,
+   0.053
+  ],
+  "h_check_maxdiff_m": 2.7755575615628914e-17,
+  "extent_cm": [
+   52.3,
+   47.8,
+   87.7
+  ]
+ },
+ "snack_box": {
+  "n_vertices": 293289,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 7,
+  "probs_top5": [
+   0.283,
+   0.282,
+   0.127,
+   0.126,
+   0.091
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   34.0,
+   20.5,
+   40.5
+  ]
+ },
+ "spray_bottle": {
+  "n_vertices": 297065,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 46,
+  "probs_top5": [
+   0.138,
+   0.131,
+   0.083,
+   0.076,
+   0.061
+  ],
+  "h_check_maxdiff_m": 6.938893903907228e-18,
+  "extent_cm": [
+   9.0,
+   8.7,
+   29.7
+  ]
+ },
+ "squeegee": {
+  "n_vertices": 286679,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 2,
+  "probs_top5": [
+   0.501,
+   0.499
+  ],
+  "h_check_maxdiff_m": 3.469446951953614e-18,
+  "extent_cm": [
+   43.7,
+   5.3,
+   153.7
+  ]
+ },
+ "step_ladder": {
+  "n_vertices": 179840,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.37,
+   0.335,
+   0.111,
+   0.092,
+   0.091
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   43.0,
+   34.9,
+   60.6
+  ]
+ },
+ "tall_bar_stool": {
+  "n_vertices": 51247,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 11,
+  "probs_top5": [
+   0.238,
+   0.2,
+   0.197,
+   0.193,
+   0.123
+  ],
+  "h_check_maxdiff_m": 5.551115123125783e-17,
+  "extent_cm": [
+   46.7,
+   45.6,
+   88.9
+  ]
+ },
+ "toy_stroller": {
+  "n_vertices": 290547,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 12,
+  "probs_top5": [
+   0.307,
+   0.193,
+   0.171,
+   0.147,
+   0.045
+  ],
+  "h_check_maxdiff_m": 2.7755575615628914e-17,
+  "extent_cm": [
+   34.1,
+   28.1,
+   53.5
+  ]
+ },
+ "traffic_cone": {
+  "n_vertices": 282928,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.22,
+   0.215,
+   0.195,
+   0.193,
+   0.177
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   20.5,
+   20.3,
+   38.3
+  ]
+ },
+ "vacuum": {
+  "n_vertices": 283294,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 8,
+  "probs_top5": [
+   0.277,
+   0.238,
+   0.154,
+   0.112,
+   0.084
+  ],
+  "h_check_maxdiff_m": 1.3877787807814457e-17,
+  "extent_cm": [
+   25.2,
+   14.4,
+   104.9
+  ]
+ },
+ "watering_can": {
+  "n_vertices": 297436,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.459,
+   0.244,
+   0.218,
+   0.076,
+   0.002
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   17.7,
+   9.8,
+   27.8
+  ]
+ },
+ "wet_floor_sign": {
+  "n_vertices": 199398,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 5,
+  "probs_top5": [
+   0.317,
+   0.312,
+   0.163,
+   0.154,
+   0.054
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   29.0,
+   28.2,
+   64.6
+  ]
+ },
+ "white_desk": {
+  "n_vertices": 296588,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 8,
+  "probs_top5": [
+   0.312,
+   0.213,
+   0.209,
+   0.1,
+   0.057
+  ],
+  "h_check_maxdiff_m": 0.0,
+  "extent_cm": [
+   91.5,
+   62.8,
+   103.2
+  ]
+ },
+ "woven_basket": {
+  "n_vertices": 293827,
+  "is_volume": false,
+  "com_kind": "surface",
+  "n_stable": 3,
+  "probs_top5": [
+   0.616,
+   0.384,
+   0.0
+  ],
+  "h_check_maxdiff_m": 3.469446951953614e-18,
+  "extent_cm": [
+   25.2,
+   7.3,
+   35.0
+  ]
+ }
+}

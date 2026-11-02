@@ -1,0 +1,19 @@
+{
+ "15": {
+  "fit_resid_m": 1.449288210132719e-07,
+  "fit_resid_rad": 1.1832037612493454e-07,
+  "change_vs_raw_mean_cm": 1.0857602431439732,
+  "change_vs_raw_max_cm": 1.6107071662815295,
+  "change_vs_raw_mean_deg": 18.040023867378213,
+  "change_vs_raw_max_deg": 26.187192827343065,
+  "vs_frame_refs_g2": "accepted",
+  "packer_resid_m": 1.1707958739561746e-07,
+  "packer_resid_rad": 1.1920928955078128e-07,
+  "vs_released_raw": "REJECTED",
+  "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+  "g2_pose_sha256": "8d640dc6cbe24136f57ddf426b18eaad761b56a43785c62bad5e8ea00d494fa9",
+  "parquet_sha256": "c89bd31271ada5088a6d82f34bf22bb138b932f25d65c1c4643d2abae36f3cfe",
+  "frame_ref_sha256": "390e16b55516520533b2c7a4b0ee1052f6be8b78b389495f86764fc18855bf1e",
+  "ok": true
+ }
+}

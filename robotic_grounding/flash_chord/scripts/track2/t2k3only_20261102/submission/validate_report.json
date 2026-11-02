@@ -1,0 +1,30 @@
+{
+ "at": "2026-11-02 16:05:06",
+ "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_k3only_20261102/submission/T2_K3only_closest_trial02_d769f0c.csv",
+ "csv_sha256": "5115f48dca3983fbd4a52236c6d620a5cd30ff1d95ab31eca68a6db99cf40345",
+ "problems": [],
+ "uploader_validate_submission": "pass",
+ "rows": 22989,
+ "sample_rows": 22989,
+ "uniform_columns": {
+  "eval_script_sha256": [
+   "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+  ],
+  "eval_code_sha256": [
+   "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+  ],
+  "packer_script_sha256": [
+   "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+  ],
+  "uploader_script_sha256": [
+   "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+  ],
+  "code_commit_url": [
+   "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/d769f0c257c12314c5f53123b8e81de010778c7f"
+  ]
+ },
+ "distinct_checkpoints": 30,
+ "pose_columns_sha256": "0b0e3544d69fdbc1173f13fc887598a31a8bd477aeb6391ed35eca474873a2a8",
+ "pose_header_ok": true,
+ "ok": true
+}

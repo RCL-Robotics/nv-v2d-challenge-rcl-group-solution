@@ -1,0 +1,296 @@
+{
+ "written_at": "2026-10-26 18:18:31",
+ "script_sha256": "5dd430ec78f32cdff7921cfdcc5eca2b9de2a925cf29f6c41b141c7d0a580658",
+ "consensus_script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "gate_script_sha256": "a29c997b7271e9299db109e97af5210f528484719210bb58685523b0ae0eb16b",
+ "amendments_sha256": "f648226a95a061eeefcfd5138cb01823db8a060fe121a0f4968ffa163dc4229f",
+ "pins_a1c_sha256": "b740e43730fa24db0724e1ab42b1f1dc171bcbf95fa5a915c618c04b63894830",
+ "prereg": "AMENDMENTS A1.4 (A1.3 gate on the A3 runs)",
+ "gate": "A1-GATE: min_s AUC_s - 0.02 <= eval_AUC <= max_s AUC_s + 0.02 (s = 0..9), for every run",
+ "thresholds": {
+  "auc_band_around_seed_range": 0.02,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "max_abs_d_mppe": 0.5,
+  "min_sp_equal_frac": 0.95,
+  "min_mp_equal_frac": 0.95
+ },
+ "pass": true,
+ "parts_new_runs": {
+  "auc_band": true,
+  "mppe": true,
+  "sp_equal": true,
+  "mp_equal": true,
+  "no_problem_runs": true,
+  "kit_stock_unchanged": true,
+  "_n_runs": 50,
+  "_max_abs_d_mppe": 1.78001837980446e-06,
+  "_sp_equal_frac": 1.0,
+  "_mp_equal_frac": 1.0
+ },
+ "parts_all_450": {
+  "auc_band": true,
+  "mppe": true,
+  "sp_equal": true,
+  "mp_equal": true,
+  "no_problem_runs": true,
+  "kit_stock_unchanged": true,
+  "_n_runs": 450,
+  "_max_abs_d_mppe": 0.0010870057235619068,
+  "_sp_equal_frac": 1.0,
+  "_mp_equal_frac": 1.0
+ },
+ "parts_after_exclusion": null,
+ "validation_failed_jobs": [],
+ "flagged_jobs": [],
+ "n_new_jobs": 10,
+ "n_new_runs": 50,
+ "n_new_scored": 50,
+ "problems": [],
+ "n_band_fail_new": 0,
+ "n_inside_seed_range_new": 39,
+ "max_excess_outside_range_new": 0.0005605380781764646,
+ "max_seed_range_new": 0.034212753950338515,
+ "max_abs_d_auc_seed0_new": 0.006726457394768293,
+ "max_conv_pos_residual_m": 1.6694943694356962e-07,
+ "max_conv_ang_residual_rad": 1.5196262340524156e-07,
+ "old_400_runs": {
+  "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/scores/own_input_validation_a1.csv",
+  "sha256": "10e29bf0c36ca30ae91a283d7ff89e8560737b8e2293bc313168103969dcf957",
+  "parts_reevaluated": {
+   "auc_band": true,
+   "mppe": true,
+   "sp_equal": true,
+   "mp_equal": true,
+   "no_problem_runs": true,
+   "kit_stock_unchanged": true,
+   "_n_runs": 400,
+   "_max_abs_d_mppe": 0.0010870057235619068,
+   "_sp_equal_frac": 1.0,
+   "_mp_equal_frac": 1.0
+  }
+ },
+ "by_job": {
+  "ep01_zx_g2_124000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 1,
+   "max_excess_outside_range": 0.00025100402409639067,
+   "max_seed_range": 0.0014223560910308075,
+   "max_abs_d_mppe": 1.263124843831065e-06,
+   "flagged_runs": []
+  },
+  "ep01_zx_g2hard_102000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 3,
+   "max_excess_outside_range": 0.0002510039915662732,
+   "max_seed_range": 0.0030120481927710663,
+   "max_abs_d_mppe": 1.78001837980446e-06,
+   "flagged_runs": []
+  },
+  "ep04_k3fix_final44922": {
+   "input": "k3fix",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.003813823163138219,
+   "max_abs_d_mppe": 6.338238733860635e-07,
+   "flagged_runs": []
+  },
+  "ep04_zx_g2_88000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.0031911581569115943,
+   "max_abs_d_mppe": 1.4692025729345914e-06,
+   "flagged_runs": []
+  },
+  "ep05_zx_k3fix_88000": {
+   "input": "k3fix",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.00978315054835499,
+   "max_abs_d_mppe": 7.352488838874294e-07,
+   "flagged_runs": []
+  },
+  "ep19_zx_g2_92000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.034212753950338515,
+   "max_abs_d_mppe": 5.341227908850499e-07,
+   "flagged_runs": []
+  },
+  "ep19_zx_g2hard_52000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.005220090293453716,
+   "max_abs_d_mppe": 1.0028652397409132e-06,
+   "flagged_runs": []
+  },
+  "ep26_k3ca_final25298": {
+   "input": "k3ca",
+   "n_scored": 5,
+   "n_inside_seed_range": 0,
+   "max_excess_outside_range": 0.0005605380781764646,
+   "max_seed_range": 0.013452914798206317,
+   "max_abs_d_mppe": 7.116203977197699e-07,
+   "flagged_runs": []
+  },
+  "ep26_zx_k3fix_92000": {
+   "input": "k3fix",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.008968609865470878,
+   "max_abs_d_mppe": 5.064540453680877e-07,
+   "flagged_runs": []
+  },
+  "ep28_zx_g2_100000": {
+   "input": "g2",
+   "n_scored": 5,
+   "n_inside_seed_range": 5,
+   "max_excess_outside_range": 0.0,
+   "max_seed_range": 0.012715080971659964,
+   "max_abs_d_mppe": 8.599324017311005e-07,
+   "flagged_runs": []
+  }
+ },
+ "worst_excess_runs": [
+  {
+   "job": "ep26_k3ca_final25298",
+   "run": 5,
+   "eval_auc": 0.8089499253,
+   "seed_min": 0.8095104633781764,
+   "seed_max": 0.8188527653213752,
+   "excess_outside_range": 0.0005605380781764646,
+   "d_auc_seed0": 0.004577727913751883
+  },
+  {
+   "job": "ep26_k3ca_final25298",
+   "run": 3,
+   "eval_auc": 0.7994207773,
+   "seed_min": 0.7997944693572496,
+   "seed_max": 0.8104446935724963,
+   "excess_outside_range": 0.000373692057249575,
+   "d_auc_seed0": 0.005418535106576972
+  },
+  {
+   "job": "ep01_zx_g2_124000",
+   "run": 2,
+   "eval_auc": 0.218624498,
+   "seed_min": 0.2169511378848728,
+   "seed_max": 0.2183734939759036,
+   "excess_outside_range": 0.00025100402409639067,
+   "d_auc_seed0": -0.00041834003480589743
+  },
+  {
+   "job": "ep01_zx_g2_124000",
+   "run": 5,
+   "eval_auc": 0.2172021419,
+   "seed_min": 0.2161144578313253,
+   "seed_max": 0.21695113788487283,
+   "excess_outside_range": 0.0002510040151271764,
+   "d_auc_seed0": -0.0003346720204819298
+  },
+  {
+   "job": "ep01_zx_g2hard_102000",
+   "run": 4,
+   "eval_auc": 0.2050702811,
+   "seed_min": 0.20306224899598393,
+   "seed_max": 0.20481927710843373,
+   "excess_outside_range": 0.0002510039915662732,
+   "d_auc_seed0": -0.001087684045113807
+  },
+  {
+   "job": "ep01_zx_g2_124000",
+   "run": 1,
+   "eval_auc": 0.2175368139,
+   "seed_min": 0.21636546184738956,
+   "seed_max": 0.21736947791164657,
+   "excess_outside_range": 0.00016733598835341756,
+   "d_auc_seed0": -0.0005020080097724311
+  },
+  {
+   "job": "ep01_zx_g2_124000",
+   "run": 4,
+   "eval_auc": 0.2176204819,
+   "seed_min": 0.21653279785809906,
+   "seed_max": 0.21745314591700132,
+   "excess_outside_range": 0.00016733598299867314,
+   "d_auc_seed0": -0.00058567600977244
+  },
+  {
+   "job": "ep26_k3ca_final25298",
+   "run": 4,
+   "eval_auc": 0.8033445441,
+   "seed_min": 0.8034379671150971,
+   "seed_max": 0.8168908819133034,
+   "excess_outside_range": 9.342301509707163e-05,
+   "d_auc_seed0": 0.006726457394768293
+  },
+  {
+   "job": "ep26_k3ca_final25298",
+   "run": 2,
+   "eval_auc": 0.8041853513,
+   "seed_min": 0.8042787742899851,
+   "seed_max": 0.8151158445440957,
+   "excess_outside_range": 9.342298998504805e-05,
+   "d_auc_seed0": 0.004951420000448459
+  },
+  {
+   "job": "ep01_zx_g2hard_102000",
+   "run": 2,
+   "eval_auc": 0.2167838019,
+   "seed_min": 0.2143574297188755,
+   "seed_max": 0.21670013386880857,
+   "excess_outside_range": 8.366803119141952e-05,
+   "d_auc_seed0": -0.0015060241222221993
+  }
+ ],
+ "vertex_meshes": {
+  "baseball_bat": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/baseball_bat/baseball_bat.glb",
+   "sha256": "5aa2294d698eb370d0d1435963e42022cc1064faa355b547e492ffe893e51cd7"
+  },
+  "big_black_box": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/big_black_box/big_black_box.glb",
+   "sha256": "e6d434d16811524b8b3725e32c9ba2781bb878c47962f2e6a25b22e0cc2e4427"
+  },
+  "cane": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/cane/cane.glb",
+   "sha256": "33a74ed590f246417efd58260ec1083966195c669a4ee02a9eb6b8a5b9c3e737"
+  },
+  "skateboard": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/skateboard/skateboard.glb",
+   "sha256": "4b011286643070adeac57d1846d89614bbae2636d63ac286e35c48b8478adde6"
+  },
+  "squeegee": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/squeegee/squeegee.glb",
+   "sha256": "aa3e2fad95d7201aab1e76b0e2321ad34d593e42a6fa8996031e4b4d5f690cc2"
+  },
+  "vacuum": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/vacuum/vacuum.glb",
+   "sha256": "fc017067c2783cd29cf7536988d7f662c7c1fbd49e6b1336a3f32fbdd47cebee"
+  }
+ },
+ "integrity_diff": [],
+ "note": "own-input check only (each run vs its OWN training input); seeds 1..9 used only for this gate; no consensus reference exists or is read; nothing is selected",
+ "csv_sha256": "884060725de787c4e6609616e76d5cf146b20d02ece99861dba30e37730cf66d"
+}

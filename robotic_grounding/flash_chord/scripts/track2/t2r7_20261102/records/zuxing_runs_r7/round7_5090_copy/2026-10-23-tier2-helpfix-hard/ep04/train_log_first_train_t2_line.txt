@@ -1,0 +1,1 @@
+train_t2: exp=g1_recon_body_coord_rsi_r2_helpfix_hard root=human_motion_data_tier2_k3fix seq=2026-04-24_11-40-52_baseball_bat_rotate_05 support=false gpu=0 commit=82837c8

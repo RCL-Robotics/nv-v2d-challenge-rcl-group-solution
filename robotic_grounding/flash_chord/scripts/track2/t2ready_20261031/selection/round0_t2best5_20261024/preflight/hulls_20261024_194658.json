@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-10-24 19:46:58",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "228b2dc97a7f8ce0"
+   ],
+   "missing": []
+  }
+ }
+}

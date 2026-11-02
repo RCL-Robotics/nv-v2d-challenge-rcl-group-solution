@@ -1,0 +1,19 @@
+{
+ "16": {
+  "fit_resid_m": 1.0884448155066327e-07,
+  "fit_resid_rad": 7.819899174341884e-08,
+  "change_vs_raw_mean_cm": 1.187129558262128,
+  "change_vs_raw_max_cm": 2.4187342004164543,
+  "change_vs_raw_mean_deg": 11.79204210471061,
+  "change_vs_raw_max_deg": 18.62984281589443,
+  "vs_frame_refs_g2": "accepted",
+  "packer_resid_m": 8.658299901824874e-08,
+  "packer_resid_rad": 7.300048299977715e-08,
+  "vs_released_raw": "REJECTED",
+  "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+  "g2_pose_sha256": "c0ced513912b11e3a16bbf74c704ae1ba8b5e14f40e02eadbb2fc1cf53157625",
+  "parquet_sha256": "97fee0f9d1d308eab117ecca71efcab7b30ea75e7fca6b5a4f65816ab6d5c509",
+  "frame_ref_sha256": "2b05efe36e2f90652ac34ea744b36a6b946cb3c80b345c718670e369ba61fa66",
+  "ok": true
+ }
+}

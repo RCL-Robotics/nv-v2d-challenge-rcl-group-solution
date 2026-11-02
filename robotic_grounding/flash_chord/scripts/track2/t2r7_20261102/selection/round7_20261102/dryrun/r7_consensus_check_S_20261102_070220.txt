@@ -1,0 +1,173 @@
+t2cons_r7_consensus CHECK phase S 2026-11-02 07:02:03: no metric, reference or score is computed
+chain: PREREG_R7.md 749649a79ca5616b == PREREG_R7.sha256 == hard-coded; 77 section-11 pins / commits hold
+chain: PREREG_R7_PINS.md 8378c5a418c9b1ec == its sha file == hard-coded; 11 pins hold
+chain: DRYRUN_R7.sha256: 17 lines hold
+chain: LOCK_R7.sha256: 28 lines hold
+chain: SNAPSHOT_R7.sha256: 525 lines hold
+chain: TRACKS_R7.sha256: 131 lines hold
+chain: RELOCATION_R7.sha256: 130 lines hold
+chain: pool / incumbents / references == pinned; 9 round-6 records == pinned
+chain: round-1 chain (pinned t2cons_consensus.check_pins): 0 fatal
+chain: phase S: heartbeat state running, exports {'ok': 57, 'refused': 0, 'failed': 0, 'pending': 97}, evals {'ok': 30, 'failed': 0, 'pending': 432, 'no_export': 0}; no driver / driver.pid: False
+chain: kit + stock trees == integrity/baseline.json (ef9b5035): True
+chain: scripts/t2cons_r7_consensus.py sha256 f81e6308fdb53259f989f2b3e0e88fa9ada90b43f00b138cc7ca18d3c20392c8
+chain FAILED: phase S evaluations not finished: heartbeat state running evals {'ok': 30, 'failed': 0, 'pending': 432, 'no_export': 0} exports {'ok': 57, 'refused': 0, 'failed': 0, 'pending': 97}
+chain FAILED: an eval driver is running or driver.pid exists: ['pid 560180: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/scripts/t2cons_r7_eval.py run --phase screen --gpus 6,7 --max']
+phase S jobs 399 {'reuse': 245, 'screen': 154}; export ok 302; complete (3 ok runs) 245; ok runs 766; non-ok rows in the evals CSV(s): 0
+INCOMPLETE ep00_z5k3fix_89500: ok runs [1, 2] of 3
+INCOMPLETE ep00_z5k3fix_90000: ok runs [1] of 3
+INCOMPLETE ep01_z5g2hard_179500: ok runs [1] of 3
+INCOMPLETE ep01_z5g2hard_180000: ok runs [1] of 3
+INCOMPLETE ep01_z5g2hardc_262000: ok runs [1] of 3
+INCOMPLETE ep01_z5g2hardc_262500: ok runs [1] of 3
+INCOMPLETE ep01_z5hfh_89500: ok runs [1] of 3
+INCOMPLETE ep01_z5hfh_90000: ok runs [1] of 3
+INCOMPLETE ep01_z5hfhc_179500: ok runs [1] of 3
+INCOMPLETE ep01_z5hfhc_180000: ok runs [1] of 3
+INCOMPLETE ep02_z5q_120000: ok runs [1] of 3
+INCOMPLETE ep02_z5q_150000: ok runs [1] of 3
+INCOMPLETE ep02_z5q_180000: ok runs [1] of 3
+INCOMPLETE ep02_z5q_90000: ok runs [1] of 3
+INCOMPLETE ep04_raw_44922: ok runs [1] of 3
+INCOMPLETE ep04_z5g2_10500: ok runs [1] of 3
+INCOMPLETE ep04_z5g2_11000: ok runs [1] of 3
+INCOMPLETE ep04_z5hfh_89500: ok runs [1] of 3
+INCOMPLETE ep04_z5hfh_90000: ok runs [1] of 3
+INCOMPLETE ep04_z5hfhc_179500: ok runs [1] of 3
+INCOMPLETE ep04_z5hfhc_180000: ok runs [1] of 3
+INCOMPLETE ep04_zxg2_225000: ok runs [1] of 3
+INCOMPLETE ep04_zxg2_300000: ok runs [1] of 3
+INCOMPLETE ep04_zxg2_375000: ok runs [1] of 3
+INCOMPLETE ep04_zxg2_450000: ok runs [1] of 3
+INCOMPLETE ep06_z5q_120000: ok runs [1] of 3
+INCOMPLETE ep06_z5q_150000: ok runs [1] of 3
+INCOMPLETE ep06_z5q_180000: ok runs [1] of 3
+INCOMPLETE ep06_z5q_90000: ok runs [1] of 3
+INCOMPLETE ep08_z5q_120000: ok runs [1] of 3
+INCOMPLETE ep08_z5q_150000: ok runs [] of 3
+INCOMPLETE ep08_z5q_180000: ok runs [] of 3
+INCOMPLETE ep08_z5q_90000: ok runs [] of 3
+INCOMPLETE ep09_z5g2_179500: ok runs [] of 3
+INCOMPLETE ep09_z5g2_180000: ok runs [] of 3
+INCOMPLETE ep09_z5r2_40000: ok runs [] of 3
+INCOMPLETE ep09_z5r2_50000: ok runs [] of 3
+INCOMPLETE ep09_z5r2_60000: ok runs [] of 3
+INCOMPLETE ep09_z5r2_70000: ok runs [] of 3
+INCOMPLETE ep11_k3fix_29175: ok runs [] of 3
+INCOMPLETE ep11_z5r2_30000: ok runs [] of 3
+INCOMPLETE ep11_z5r2_40000: ok runs [] of 3
+INCOMPLETE ep11_z5r2_48000: ok runs [] of 3
+INCOMPLETE ep14_z5a5_120000: ok runs [] of 3
+INCOMPLETE ep14_z5a5_150000: ok runs [] of 3
+INCOMPLETE ep14_z5a5_180000: ok runs [] of 3
+INCOMPLETE ep14_z5a5_90000: ok runs [] of 3
+INCOMPLETE ep14_z5a5c_190000: ok runs [] of 3
+INCOMPLETE ep14_z5a5c_220000: ok runs [] of 3
+INCOMPLETE ep14_z5a5c_263500: ok runs [] of 3
+INCOMPLETE ep14_z5r2_40000: ok runs [] of 3
+INCOMPLETE ep14_z5r2_50000: ok runs [] of 3
+INCOMPLETE ep14_z5r2_64500: ok runs [] of 3
+INCOMPLETE ep15_z5g2_93000: ok runs [] of 3
+INCOMPLETE ep15_z5g2_93500: ok runs [] of 3
+INCOMPLETE ep15_z5hfh_89500: ok runs [] of 3
+INCOMPLETE ep15_z5hfh_90000: ok runs [] of 3
+NO EXPORT ep15_z5hfhc_93500: missing
+NO EXPORT ep15_z5hfhc_94000: missing
+NO EXPORT ep15_z5r2_40000: missing
+NO EXPORT ep15_z5r2_50000: missing
+NO EXPORT ep15_z5r2_60000: missing
+NO EXPORT ep15_z5r2_74000: missing
+NO EXPORT ep16_z5a5_120000: missing
+NO EXPORT ep16_z5a5_150000: missing
+NO EXPORT ep16_z5a5_180000: missing
+NO EXPORT ep16_z5a5_90000: missing
+NO EXPORT ep17_z5r2_40000: missing
+NO EXPORT ep17_z5r2_50000: missing
+NO EXPORT ep17_z5r2_61500: missing
+NO EXPORT ep19_z5g2hard_179500: missing
+NO EXPORT ep19_z5g2hard_180000: missing
+NO EXPORT ep19_z5g2hardc2_230000: missing
+NO EXPORT ep19_z5g2hardc2_240000: missing
+NO EXPORT ep19_z5g2hardc2_300000: missing
+NO EXPORT ep19_z5g2hardc2_360000: missing
+NO EXPORT ep19_z5g2hardc_223500: missing
+NO EXPORT ep19_z5g2hardc_224000: missing
+NO EXPORT ep19_z5hfh_89500: missing
+NO EXPORT ep19_z5hfh_90000: missing
+NO EXPORT ep19_z5hfhc_179500: missing
+NO EXPORT ep19_z5hfhc_180000: missing
+NO EXPORT ep20_z5fill_120000: missing
+NO EXPORT ep20_z5fill_150000: missing
+NO EXPORT ep20_z5fill_180000: missing
+NO EXPORT ep20_z5fill_90000: missing
+NO EXPORT ep20_zxg2rest_29000: missing
+NO EXPORT ep20_zxg2rest_38500: missing
+NO EXPORT ep20_zxg2rest_48000: missing
+NO EXPORT ep20_zxg2rest_57500: missing
+NO EXPORT ep21_z5fill_120000: missing
+NO EXPORT ep21_z5fill_150000: missing
+NO EXPORT ep21_z5fill_180000: missing
+NO EXPORT ep21_z5fill_90000: missing
+NO EXPORT ep21_z5fillc_190000: missing
+NO EXPORT ep21_z5fillc_240000: missing
+NO EXPORT ep21_z5fillc_282500: missing
+NO EXPORT ep21_z5g2_179500: missing
+NO EXPORT ep21_z5g2_180000: missing
+NO EXPORT ep21_z5g2c_255500: missing
+NO EXPORT ep21_z5g2c_256000: missing
+NO EXPORT ep21_z5r2_40000: missing
+NO EXPORT ep21_z5r2_50000: missing
+NO EXPORT ep21_z5r2_60000: missing
+NO EXPORT ep21_z5r2_69500: missing
+NO EXPORT ep22_z5k3fix_89500: missing
+NO EXPORT ep22_z5k3fix_90000: missing
+NO EXPORT ep22_zxg2rest_26500: missing
+NO EXPORT ep22_zxg2rest_35000: missing
+NO EXPORT ep22_zxg2rest_44000: missing
+NO EXPORT ep22_zxg2rest_52500: missing
+NO EXPORT ep23_z5hfh_83000: missing
+NO EXPORT ep23_z5hfh_83500: missing
+NO EXPORT ep24_z5fill_120000: missing
+NO EXPORT ep24_z5fill_150000: missing
+NO EXPORT ep24_z5fill_180000: missing
+NO EXPORT ep24_z5fill_90000: missing
+NO EXPORT ep24_z5q_120000: missing
+NO EXPORT ep24_z5q_150000: missing
+NO EXPORT ep24_z5q_180000: missing
+NO EXPORT ep24_z5q_90000: missing
+NO EXPORT ep25_z5a5_120000: missing
+NO EXPORT ep25_z5a5_150000: missing
+NO EXPORT ep25_z5a5_180000: missing
+NO EXPORT ep25_z5a5_90000: missing
+NO EXPORT ep25_z5a5c_190000: missing
+NO EXPORT ep25_z5a5c_230000: missing
+NO EXPORT ep25_z5a5c_280500: missing
+NO EXPORT ep26_zxg2rest_106500: missing
+NO EXPORT ep26_zxg2rest_53500: missing
+NO EXPORT ep26_zxg2rest_71000: missing
+NO EXPORT ep26_zxg2rest_89000: missing
+NO EXPORT ep27_z5r2_30000: missing
+NO EXPORT ep27_z5r2_40000: missing
+NO EXPORT ep27_z5r2_51000: missing
+NO EXPORT ep27_zxg2rest_20500: missing
+NO EXPORT ep27_zxg2rest_27000: missing
+NO EXPORT ep27_zxg2rest_34000: missing
+NO EXPORT ep27_zxg2rest_40500: missing
+NO EXPORT ep28_z5hfh_89500: missing
+NO EXPORT ep28_z5hfh_90000: missing
+NO EXPORT ep28_z5hfhc_179500: missing
+NO EXPORT ep28_z5hfhc_180000: missing
+NO EXPORT ep28_z5q_120000: missing
+NO EXPORT ep28_z5q_150000: missing
+NO EXPORT ep28_z5q_180000: missing
+NO EXPORT ep28_z5q_90000: missing
+NO EXPORT ep28_z5qc_190000: missing
+NO EXPORT ep28_z5qc_230000: missing
+NO EXPORT ep28_z5qc_271500: missing
+NO EXPORT ep29_zxg2rest_22500: missing
+NO EXPORT ep29_zxg2rest_30000: missing
+NO EXPORT ep29_zxg2rest_37500: missing
+NO EXPORT ep29_zxg2rest_45000: missing
+seed signatures over 766 runs: ['', 'delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42', 'delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=7']
+reused round-6 rollouts == round 6's ROLLOUTS_S6.sha256: True (735 runs)
+check: PROBLEMS

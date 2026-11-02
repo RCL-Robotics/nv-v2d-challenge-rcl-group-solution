@@ -1,0 +1,1307 @@
+{
+ "written_at": "2026-10-26 17:29:57",
+ "amendment": "A3",
+ "T_a": "2026-10-26 17:29:25 CST",
+ "amendments_sha256": "f648226a95a061eeefcfd5138cb01823db8a060fe121a0f4968ffa163dc4229f",
+ "prereg_sha256": "3eee7268d53d1c3669614c63b69a54fa2462cf624ed88c3f7e215f5cb9f51ee9",
+ "script_sha256": "f41e5c6dabb7125377e29ed2db59dafb259901f15979bac60c0c9ad3a4a1e28f",
+ "consensus_script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "zuxing_tier2_run_folders": [
+  "2026-10-24-tier2-runin-g2",
+  "2026-10-24-tier2-runin-k3fix-ep04",
+  "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+  "2026-10-25-tier2-runin-hard-g2"
+ ],
+ "resolutions": [
+  {
+   "id": "Z1",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "episode": 1,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep01/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep01__metrics.csv",
+   "metrics_copy_sha256": "336d4f3d8beffe20b61b3bdbab825adc4b6a59ae9406a8026f4ea62558f4b950",
+   "n_rows": 62,
+   "n_eligible": 62,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 124000,
+     "add_auc": 0.21879183400267738,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T17:16:54+08:00"
+    },
+    {
+     "iteration": 122000,
+     "add_auc": 0.2183734939759036,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T16:20:17+08:00"
+    },
+    {
+     "iteration": 114000,
+     "add_auc": 0.21828982597054886,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T12:32:20+08:00"
+    },
+    {
+     "iteration": 112000,
+     "add_auc": 0.2178714859437751,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T11:35:53+08:00"
+    },
+    {
+     "iteration": 118000,
+     "add_auc": 0.2169511378848728,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T14:25:33+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 124000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/model_124000.safetensors",
+   "sha256": "32fab5306c205a5e2bb880f75e3239d984fa69791d95f437b9a78db77896f5a0",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/rsi_124000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "124000",
+    "add_auc": "0.21879183400267738",
+    "sp_sr": "0.0",
+    "mp_sr": "0.0",
+    "mppe_cm": "34.40714741881575",
+    "chord_sr": "0.0",
+    "export_max_rel_diff": "6.29425048828125e-05",
+    "stock_verified": "True",
+    "source_sha256": "32fab5306c205a5e2bb880f75e3239d984fa69791d95f437b9a78db77896f5a0",
+    "finished_at": "2026-10-26T17:16:54+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep01_zx_g2_124000",
+   "job": "ep01_zx_g2_124000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z1",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "episode": 4,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep04/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep04__metrics.csv",
+   "metrics_copy_sha256": "ba797e773cacbfdfdd22e48403eb4f50a14008da824be80d527e06c4496b6c17",
+   "n_rows": 44,
+   "n_eligible": 44,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 88000,
+     "add_auc": 0.19754047322540472,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T16:23:04+08:00"
+    },
+    {
+     "iteration": 86000,
+     "add_auc": 0.19613947696139478,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T15:11:24+08:00"
+    },
+    {
+     "iteration": 84000,
+     "add_auc": 0.19380448318804483,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T13:54:45+08:00"
+    },
+    {
+     "iteration": 80000,
+     "add_auc": 0.19162515566625155,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T11:31:26+08:00"
+    },
+    {
+     "iteration": 78000,
+     "add_auc": 0.18866749688667495,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T10:14:47+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 88000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/model_88000.safetensors",
+   "sha256": "16faf35fd7cfc26e76297e810ba3b691b82b80d03f0706a52803300e09fe9d48",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/rsi_88000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "88000",
+    "add_auc": "0.19754047322540472",
+    "sp_sr": "0.0",
+    "mp_sr": "0.0",
+    "mppe_cm": "178.5185669017637",
+    "chord_sr": "0.0",
+    "export_max_rel_diff": "1.8835067749023438e-05",
+    "stock_verified": "True",
+    "source_sha256": "16faf35fd7cfc26e76297e810ba3b691b82b80d03f0706a52803300e09fe9d48",
+    "finished_at": "2026-10-26T16:23:04+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep04_zx_g2_88000",
+   "job": "ep04_zx_g2_88000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z1",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "episode": 19,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep19/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep19__metrics.csv",
+   "metrics_copy_sha256": "f79e56d3ae2079a6b5ba51e04653896a23bf7549d738085bb125cbe23bc0cbf4",
+   "n_rows": 50,
+   "n_eligible": 42,
+   "excluded": {
+    "status": 8,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 92000,
+     "add_auc": 0.5293453724604966,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T16:19:11+08:00"
+    },
+    {
+     "iteration": 88000,
+     "add_auc": 0.5142494356659143,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T13:38:05+08:00"
+    },
+    {
+     "iteration": 82000,
+     "add_auc": 0.5110750564334086,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T09:47:51+08:00"
+    },
+    {
+     "iteration": 84000,
+     "add_auc": 0.5062076749435666,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T11:09:35+08:00"
+    },
+    {
+     "iteration": 90000,
+     "add_auc": 0.5059960496613995,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T14:54:50+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 92000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/model_92000.safetensors",
+   "sha256": "62ca1cf7eac3f791ba95396a9c77be2c13e0fcf86cb77a204c776fc6dd4b2257",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/rsi_92000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "92000",
+    "add_auc": "0.5293453724604966",
+    "sp_sr": "1.0",
+    "mp_sr": "1.0",
+    "mppe_cm": "2.3516805747926828",
+    "chord_sr": "1.0",
+    "export_max_rel_diff": "6.67572021484375e-05",
+    "stock_verified": "True",
+    "source_sha256": "62ca1cf7eac3f791ba95396a9c77be2c13e0fcf86cb77a204c776fc6dd4b2257",
+    "finished_at": "2026-10-26T16:19:11+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep19_zx_g2_92000",
+   "job": "ep19_zx_g2_92000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z1",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "episode": 28,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/eval_ep28/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-g2_eval_ep28__metrics.csv",
+   "metrics_copy_sha256": "9137f1b6f73ac9aaedf344f57c63ba39e691c4600513651fa0abe832eb9e8ebf",
+   "n_rows": 53,
+   "n_eligible": 51,
+   "excluded": {
+    "status": 2,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 100000,
+     "add_auc": 0.5729377530364372,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T15:14:46+08:00"
+    },
+    {
+     "iteration": 86000,
+     "add_auc": 0.5657262145748988,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T07:47:49+08:00"
+    },
+    {
+     "iteration": 72000,
+     "add_auc": 0.5653466599190284,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T00:26:29+08:00"
+    },
+    {
+     "iteration": 96000,
+     "add_auc": 0.5633856275303644,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T13:06:57+08:00"
+    },
+    {
+     "iteration": 76000,
+     "add_auc": 0.5587677125506073,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T02:35:08+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 100000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/model_100000.safetensors",
+   "sha256": "cbb46ce7034b9b1bb436233bdf969e8c29d6c15eca2b7c7adb7bee8b03a161c3",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/rsi_100000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "100000",
+    "add_auc": "0.5729377530364372",
+    "sp_sr": "1.0",
+    "mp_sr": "1.0",
+    "mppe_cm": "1.9574004345522023",
+    "chord_sr": "1.0",
+    "export_max_rel_diff": "7.05718994140625e-05",
+    "stock_verified": "True",
+    "source_sha256": "cbb46ce7034b9b1bb436233bdf969e8c29d6c15eca2b7c7adb7bee8b03a161c3",
+    "finished_at": "2026-10-26T15:14:46+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep28_zx_g2_100000",
+   "job": "ep28_zx_g2_100000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z2",
+   "owner": "zuxing",
+   "run": "2026-10-25-tier2-runin-hard-g2",
+   "episode": 1,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/eval_ep01/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-25-tier2-runin-hard-g2_eval_ep01__metrics.csv",
+   "metrics_copy_sha256": "7fe20c3b4584c76078dcf1d108ad374a5108000e53c50e296183fef933eafb05",
+   "n_rows": 52,
+   "n_eligible": 52,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 102000,
+     "add_auc": 0.2240629183400268,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T16:24:39+08:00"
+    },
+    {
+     "iteration": 84000,
+     "add_auc": 0.22130187416331995,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T09:51:51+08:00"
+    },
+    {
+     "iteration": 82000,
+     "add_auc": 0.2210508701472557,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T09:05:29+08:00"
+    },
+    {
+     "iteration": 58000,
+     "add_auc": 0.2201305220883534,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T00:28:49+08:00"
+    },
+    {
+     "iteration": 66000,
+     "add_auc": 0.2191265060240964,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T03:19:21+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 102000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep01/model_102000.safetensors",
+   "sha256": "09bc72a0371827f13b9ab4862ea4e8226412266468decc64bae8dba0aa4e53b9",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep01/rsi_102000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "102000",
+    "add_auc": "0.2240629183400268",
+    "sp_sr": "0.0",
+    "mp_sr": "0.0",
+    "mppe_cm": "35.809157160722776",
+    "chord_sr": "0.0",
+    "export_max_rel_diff": "6.35385513305664e-05",
+    "stock_verified": "True",
+    "source_sha256": "09bc72a0371827f13b9ab4862ea4e8226412266468decc64bae8dba0aa4e53b9",
+    "finished_at": "2026-10-26T16:24:39+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep01_zx_g2hard_102000",
+   "job": "ep01_zx_g2hard_102000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z2",
+   "owner": "zuxing",
+   "run": "2026-10-25-tier2-runin-hard-g2",
+   "episode": 19,
+   "input": "g2",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/eval_ep19/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-25-tier2-runin-hard-g2_eval_ep19__metrics.csv",
+   "metrics_copy_sha256": "d89355c269e3439cb391bca814be4b47cb87178e51ed4767135642f1a69c1d6e",
+   "n_rows": 45,
+   "n_eligible": 45,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 52000,
+     "add_auc": 0.13261851015801351,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T01:11:26+08:00"
+    },
+    {
+     "iteration": 60000,
+     "add_auc": 0.13254796839729122,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T04:27:24+08:00"
+    },
+    {
+     "iteration": 42000,
+     "add_auc": 0.13254796839729122,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-25T21:08:51+08:00"
+    },
+    {
+     "iteration": 30000,
+     "add_auc": 0.1325479683972912,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-25T16:15:06+08:00"
+    },
+    {
+     "iteration": 54000,
+     "add_auc": 0.13233634311512416,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-26T02:02:56+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 52000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep19/model_52000.safetensors",
+   "sha256": "a6ef35703984e31f8ed5036b4ded7fc65cc42929cadc49781b175e754cedb2fc",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep19/rsi_52000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "52000",
+    "add_auc": "0.13261851015801351",
+    "sp_sr": "0.0",
+    "mp_sr": "0.0",
+    "mppe_cm": "59.074264511018114",
+    "chord_sr": "0.0",
+    "export_max_rel_diff": "1.3470649719238281e-05",
+    "stock_verified": "True",
+    "source_sha256": "a6ef35703984e31f8ed5036b4ded7fc65cc42929cadc49781b175e754cedb2fc",
+    "finished_at": "2026-10-26T01:11:26+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep19_zx_g2hard_52000",
+   "job": "ep19_zx_g2hard_52000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z3",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "episode": 5,
+   "input": "k3fix",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/eval_ep05/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-k3fix-ep05-ep26_eval_ep05__metrics.csv",
+   "metrics_copy_sha256": "d7d763e910f3a1569eae70d11739a4ddfe10ecf32a36aecd7382d6f6b8866428",
+   "n_rows": 45,
+   "n_eligible": 45,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 88000,
+     "add_auc": 0.7819042871385843,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T16:00:36+08:00"
+    },
+    {
+     "iteration": 86000,
+     "add_auc": 0.7759845463609172,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T14:43:47+08:00"
+    },
+    {
+     "iteration": 80000,
+     "add_auc": 0.7747382851445663,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T10:43:19+08:00"
+    },
+    {
+     "iteration": 90000,
+     "add_auc": 0.7720588235294118,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T17:17:24+08:00"
+    },
+    {
+     "iteration": 84000,
+     "add_auc": 0.769130109670987,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T13:21:58+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 88000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_88000.safetensors",
+   "sha256": "f0234031e9eb5416ea43046797162da4224c5f939e73ca74928ac207be6e8dc1",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/rsi_88000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "88000",
+    "add_auc": "0.7819042871385843",
+    "sp_sr": "1.0",
+    "mp_sr": "1.0",
+    "mppe_cm": "0.9699835434796793",
+    "chord_sr": "1.0",
+    "export_max_rel_diff": "2.956390380859375e-05",
+    "stock_verified": "True",
+    "source_sha256": "f0234031e9eb5416ea43046797162da4224c5f939e73ca74928ac207be6e8dc1",
+    "finished_at": "2026-10-26T16:00:36+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep05_zx_k3fix_88000",
+   "job": "ep05_zx_k3fix_88000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z3",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "episode": 26,
+   "input": "k3fix",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/eval_ep26/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-k3fix-ep05-ep26_eval_ep26__metrics.csv",
+   "metrics_copy_sha256": "79456954bacd33977846d7f4a109c29490df0cf82b20a3844a31ef546ac683f7",
+   "n_rows": 49,
+   "n_eligible": 49,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 92000,
+     "add_auc": 0.9057361733931241,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T13:00:52+08:00"
+    },
+    {
+     "iteration": 98000,
+     "add_auc": 0.9055493273542601,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T16:35:23+08:00"
+    },
+    {
+     "iteration": 90000,
+     "add_auc": 0.9052690582959642,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T11:44:21+08:00"
+    },
+    {
+     "iteration": 88000,
+     "add_auc": 0.9050822122571001,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T10:32:50+08:00"
+    },
+    {
+     "iteration": 94000,
+     "add_auc": 0.9044282511210762,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "finished_at": "2026-10-26T14:12:22+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 92000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_92000.safetensors",
+   "sha256": "0b02cea1635cc07ebb4b275d58e9c40751e82f7a4a82ac81426f2b12de348992",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/rsi_92000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "92000",
+    "add_auc": "0.9057361733931241",
+    "sp_sr": "1.0",
+    "mp_sr": "1.0",
+    "mppe_cm": "1.0561575972078487",
+    "chord_sr": "1.0",
+    "export_max_rel_diff": "2.6106834411621094e-05",
+    "stock_verified": "True",
+    "source_sha256": "0b02cea1635cc07ebb4b275d58e9c40751e82f7a4a82ac81426f2b12de348992",
+    "finished_at": "2026-10-26T13:00:52+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep26_zx_k3fix_92000",
+   "job": "ep26_zx_k3fix_92000",
+   "job_status": "new"
+  },
+  {
+   "id": "Z4",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-k3fix-ep04",
+   "episode": 4,
+   "input": "k3fix",
+   "metrics_csv": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/eval/metrics.csv",
+   "metrics_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/inputs_a1/zuxing_metrics/2026-10-24-tier2-runin-k3fix-ep04_eval__metrics.csv",
+   "metrics_copy_sha256": "7f820389a067ca9140f07a5bc089d01ac991f1f0b3cbab988506cfbe6a526e5f",
+   "n_rows": 6,
+   "n_eligible": 6,
+   "excluded": {
+    "status": 0,
+    "stock_verified": 0,
+    "after_T_a": 0,
+    "episode": 0,
+    "bad": 0
+   },
+   "skipped": [],
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "designation": "rule Z (AMENDMENTS A3.2)",
+   "top5_own_input": [
+    {
+     "iteration": 12000,
+     "add_auc": 0.11036737235367372,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-24T05:07:05+08:00"
+    },
+    {
+     "iteration": 10000,
+     "add_auc": 0.11036737235367372,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-24T04:00:30+08:00"
+    },
+    {
+     "iteration": 8000,
+     "add_auc": 0.11036737235367372,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-24T03:03:57+08:00"
+    },
+    {
+     "iteration": 6000,
+     "add_auc": 0.11036737235367372,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-24T02:37:33+08:00"
+    },
+    {
+     "iteration": 4000,
+     "add_auc": 0.11036737235367372,
+     "sp_sr": 0.0,
+     "mp_sr": 0.0,
+     "finished_at": "2026-10-24T02:11:25+08:00"
+    }
+   ],
+   "status": "resolved",
+   "iteration": 12000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/ep04/model_12000.safetensors",
+   "sha256": "3efcbf86a775c8a3e9b5be5265242a7f90e309e998d6224f300e80ab3995105a",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep04/ep04/rsi_12000.safetensors",
+   "rsi_exists": true,
+   "row": {
+    "iteration": "12000",
+    "add_auc": "0.11036737235367372",
+    "sp_sr": "0.0",
+    "mp_sr": "0.0",
+    "mppe_cm": "99.41132897482231",
+    "chord_sr": "0.0",
+    "export_max_rel_diff": "8.940696716308594e-06",
+    "stock_verified": "True",
+    "source_sha256": "3efcbf86a775c8a3e9b5be5265242a7f90e309e998d6224f300e80ab3995105a",
+    "finished_at": "2026-10-24T05:07:05+08:00",
+    "attempt": "1"
+   },
+   "default_name": "ep04_zx_k3fix_12000",
+   "job": "ep04_zx_k3fix_12000",
+   "job_status": "reused",
+   "is_candidate_already": true,
+   "was_provisional": false,
+   "settled_now": false
+  },
+  {
+   "id": "O1",
+   "owner": "ours",
+   "run": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42",
+   "episode": 26,
+   "input": "k3ca",
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "designation": "final.json",
+   "final_json": {
+    "checkpoint": "model_25298.safetensors",
+    "iteration": 25298,
+    "reason": "help_zero_tail",
+    "help_zero_since": 19438,
+    "finished_at": "2026-10-25T02:30:10-07:00"
+   },
+   "verdict": {
+    "file": "tmp_analysis/tier2/k3ca/train/VERDICT.json",
+    "written": "2026-10-26 17:07:53",
+    "choice": "K3CA",
+    "settled": true,
+    "state": "POST_DONE",
+    "k3ca_gates_pass": true,
+    "final_iteration": 25298,
+    "own_auc": 0.8077354260089686,
+    "own_sp": 1.0,
+    "own_mp": 1.0,
+    "exported": true
+   },
+   "status": "resolved",
+   "iteration": 25298,
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42/model_25298.safetensors",
+   "sha256": "daeee885d36ca24a7d6fe485354ef038dc7a617c1c85c553ad99fa3e2771180e",
+   "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42/rsi_25298.safetensors",
+   "rsi_exists": true,
+   "default_name": "ep26_k3ca_final25298",
+   "job": "ep26_k3ca_final25298",
+   "job_status": "new"
+  },
+  {
+   "id": "O2",
+   "owner": "ours",
+   "run": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42",
+   "episode": 4,
+   "input": "k3fix",
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "designation": "final.json",
+   "final_json": {
+    "checkpoint": "model_44922.safetensors",
+    "iteration": 44922,
+    "reason": "help_zero_tail",
+    "help_zero_since": 39062,
+    "finished_at": "2026-10-24T14:39:42-07:00"
+   },
+   "verdict": {
+    "file": "tmp_analysis/tier2/k3full/VERDICT.json",
+    "written": "2026-10-25 05:15:23",
+    "gate": "PASS",
+    "finished": false,
+    "final_iteration": null,
+    "exported": false,
+    "note": "not regenerated after ep04 finished (05:43 verdict run crashed); designation is final.json regardless"
+   },
+   "status": "resolved",
+   "iteration": 44922,
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42/model_44922.safetensors",
+   "sha256": "b5331be91e9abcb65d7ab4ed39a67f3cfb1af67b32b12ee9f4e198912644ec79",
+   "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42/rsi_44922.safetensors",
+   "rsi_exists": true,
+   "default_name": "ep04_k3fix_final44922",
+   "job": "ep04_k3fix_final44922",
+   "job_status": "new"
+  },
+  {
+   "id": "O3",
+   "owner": "ours",
+   "run": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01",
+   "episode": 1,
+   "input": "k3fix",
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "designation": "T2fix runin_final.json best",
+   "final_json": {
+    "checkpoint": "model_90000.safetensors",
+    "iteration": 90000,
+    "reason": "max_iterations",
+    "help_zero_since": 39062,
+    "finished_at": "2026-10-24T18:16:08-07:00"
+   },
+   "verdict": {
+    "file": "fc_runs/T2fix/verdict.json",
+    "verdict": "KEEP_BASE",
+    "arm_mean3": 0.14457831325301204,
+    "arm_best_iteration": 62000,
+    "arm_sp_mp": [
+     0.0,
+     0.0
+    ],
+    "base": "ep01_k3fix_s42 model_44922",
+    "base_mean3": 0.14340696117804552,
+    "threshold": 0.15340696117804553,
+    "runin_final": {
+     "best_iteration": 62000,
+     "mean_auc": 0.14457831325301204,
+     "mean_sp_sr": 0.0,
+     "mean_mp_sr": 0.0,
+     "n_evals": 3,
+     "finished_at": "2026-10-25 09:20:12"
+    },
+    "best_json_checkpoint_sha256": "e78f836d2baff59eb5ef4f8aca6395141b0de181fbcc1187d0688dd60a69c1d5",
+    "best_json_sha_matches_file": false
+   },
+   "status": "resolved",
+   "iteration": 62000,
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01/model_62000.safetensors",
+   "sha256": "2d69e2da0647d4c3f5b23880eede56ac3bb370deffed7c9c2799a08d4ca6416f",
+   "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/T2fix/T2L/ep01/rsi_62000.safetensors",
+   "rsi_exists": true,
+   "default_name": "ep01_t2fixL_designated62000",
+   "job": "ep01_t2fixL_p62000",
+   "job_status": "reused",
+   "is_candidate_already": true,
+   "was_provisional": true,
+   "settled_now": true
+  }
+ ],
+ "new_jobs": [
+  {
+   "job": "ep01_zx_g2_124000",
+   "episode": 1,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "iteration": 124000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/model_124000.safetensors",
+   "sha256": "32fab5306c205a5e2bb880f75e3239d984fa69791d95f437b9a78db77896f5a0",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep01/rsi_124000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep04_zx_g2_88000",
+   "episode": 4,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "iteration": 88000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/model_88000.safetensors",
+   "sha256": "16faf35fd7cfc26e76297e810ba3b691b82b80d03f0706a52803300e09fe9d48",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep04/rsi_88000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep19_zx_g2_92000",
+   "episode": 19,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "iteration": 92000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/model_92000.safetensors",
+   "sha256": "62ca1cf7eac3f791ba95396a9c77be2c13e0fcf86cb77a204c776fc6dd4b2257",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep19/rsi_92000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep28_zx_g2_100000",
+   "episode": 28,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-g2",
+   "iteration": 100000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/model_100000.safetensors",
+   "sha256": "cbb46ce7034b9b1bb436233bdf969e8c29d6c15eca2b7c7adb7bee8b03a161c3",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-g2/ep28/rsi_100000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep01_zx_g2hard_102000",
+   "episode": 1,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-25-tier2-runin-hard-g2",
+   "iteration": 102000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep01/model_102000.safetensors",
+   "sha256": "09bc72a0371827f13b9ab4862ea4e8226412266468decc64bae8dba0aa4e53b9",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep01/rsi_102000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep19_zx_g2hard_52000",
+   "episode": 19,
+   "input": "g2",
+   "owner": "zuxing",
+   "run": "2026-10-25-tier2-runin-hard-g2",
+   "iteration": 52000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep19/model_52000.safetensors",
+   "sha256": "a6ef35703984e31f8ed5036b4ded7fc65cc42929cadc49781b175e754cedb2fc",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-25-tier2-runin-hard-g2/ep19/rsi_52000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "variants": "B"
+  },
+  {
+   "job": "ep05_zx_k3fix_88000",
+   "episode": 5,
+   "input": "k3fix",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "iteration": 88000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_88000.safetensors",
+   "sha256": "f0234031e9eb5416ea43046797162da4224c5f939e73ca74928ac207be6e8dc1",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/rsi_88000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "variants": "A,B"
+  },
+  {
+   "job": "ep26_zx_k3fix_92000",
+   "episode": 26,
+   "input": "k3fix",
+   "owner": "zuxing",
+   "run": "2026-10-24-tier2-runin-k3fix-ep05-ep26",
+   "iteration": 92000,
+   "checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_92000.safetensors",
+   "sha256": "0b02cea1635cc07ebb4b275d58e9c40751e82f7a4a82ac81426f2b12de348992",
+   "rsi": "/root/autodl-tmp/zuxing.lu/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/rsi_92000.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "variants": "A,B"
+  },
+  {
+   "job": "ep26_k3ca_final25298",
+   "episode": 26,
+   "input": "k3ca",
+   "owner": "ours",
+   "run": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42",
+   "iteration": 25298,
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42/model_25298.safetensors",
+   "sha256": "daeee885d36ca24a7d6fe485354ef038dc7a617c1c85c553ad99fa3e2771180e",
+   "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3ca/ep26_k3ca_s42/rsi_25298.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/frame_refs_k3ca",
+   "variants": "A,B"
+  },
+  {
+   "job": "ep04_k3fix_final44922",
+   "episode": 4,
+   "input": "k3fix",
+   "owner": "ours",
+   "run": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42",
+   "iteration": 44922,
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42/model_44922.safetensors",
+   "sha256": "b5331be91e9abcb65d7ab4ed39a67f3cfb1af67b32b12ee9f4e198912644ec79",
+   "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2_k3fix/ep04_k3fix_s42/rsi_44922.safetensors",
+   "rsi_exists": true,
+   "training_parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "variants": "A,B"
+  }
+ ],
+ "reused_jobs": [
+  "ep04_zx_k3fix_12000",
+  "ep01_t2fixL_p62000"
+ ],
+ "defaults": {
+  "00": "ep00_raw_final41043",
+  "01": "ep01_k3fix_final44922",
+  "02": "ep02_k3fix_final34093",
+  "03": "ep03_k3fix_final27068",
+  "04": "ep04_raw_final44922",
+  "05": "ep05_raw_final44922",
+  "06": "ep06_k3fix_final28420",
+  "07": "ep07_k3fix_final18529",
+  "08": "ep08_k3easy_final17496",
+  "09": "ep09_t2fixB_designated54449",
+  "10": "ep10_k3fix_final25319",
+  "11": "ep11_k3fix_final29175",
+  "12": "ep12_k3fix_final23178",
+  "13": "ep13_k3fix_final39254",
+  "14": "ep14_k3fix_final44922",
+  "15": "ep15_raw_final44922",
+  "16": "ep16_k3fix_final32063",
+  "17": "ep17_k3fix_final29845",
+  "18": "ep18_k3fix_final18911",
+  "19": "ep19_raw_final44922",
+  "20": "ep20_k3easy_final18450",
+  "21": "ep21_k3fix_final44922",
+  "22": "ep22_raw_final44922",
+  "23": "ep23_k3easy_final19162",
+  "24": "ep24_k3fix_final20636",
+  "25": "ep25_k3fix_final42819",
+  "26": "ep26_raw_final34948",
+  "27": "ep27_k3fix_final20863",
+  "28": "ep28_raw_final44922",
+  "29": "ep29_k3fix_final17358"
+ },
+ "challenger_counts": {
+  "A": {
+   "00": {
+    "before": 0,
+    "after": 0
+   },
+   "01": {
+    "before": 3,
+    "after": 3
+   },
+   "02": {
+    "before": 2,
+    "after": 2
+   },
+   "03": {
+    "before": 4,
+    "after": 4
+   },
+   "04": {
+    "before": 1,
+    "after": 2
+   },
+   "05": {
+    "before": 2,
+    "after": 3
+   },
+   "06": {
+    "before": 2,
+    "after": 2
+   },
+   "07": {
+    "before": 2,
+    "after": 2
+   },
+   "08": {
+    "before": 1,
+    "after": 1
+   },
+   "09": {
+    "before": 2,
+    "after": 2
+   },
+   "10": {
+    "before": 2,
+    "after": 2
+   },
+   "11": {
+    "before": 2,
+    "after": 2
+   },
+   "12": {
+    "before": 2,
+    "after": 2
+   },
+   "13": {
+    "before": 1,
+    "after": 1
+   },
+   "14": {
+    "before": 2,
+    "after": 2
+   },
+   "15": {
+    "before": 0,
+    "after": 0
+   },
+   "16": {
+    "before": 2,
+    "after": 2
+   },
+   "17": {
+    "before": 1,
+    "after": 1
+   },
+   "18": {
+    "before": 2,
+    "after": 2
+   },
+   "19": {
+    "before": 0,
+    "after": 0
+   },
+   "20": {
+    "before": 1,
+    "after": 1
+   },
+   "21": {
+    "before": 1,
+    "after": 1
+   },
+   "22": {
+    "before": 0,
+    "after": 0
+   },
+   "23": {
+    "before": 1,
+    "after": 1
+   },
+   "24": {
+    "before": 1,
+    "after": 1
+   },
+   "25": {
+    "before": 1,
+    "after": 1
+   },
+   "26": {
+    "before": 2,
+    "after": 4
+   },
+   "27": {
+    "before": 1,
+    "after": 1
+   },
+   "28": {
+    "before": 0,
+    "after": 0
+   },
+   "29": {
+    "before": 2,
+    "after": 2
+   }
+  },
+  "B": {
+   "00": {
+    "before": 0,
+    "after": 0
+   },
+   "01": {
+    "before": 4,
+    "after": 6
+   },
+   "02": {
+    "before": 2,
+    "after": 2
+   },
+   "03": {
+    "before": 4,
+    "after": 4
+   },
+   "04": {
+    "before": 3,
+    "after": 5
+   },
+   "05": {
+    "before": 2,
+    "after": 3
+   },
+   "06": {
+    "before": 2,
+    "after": 2
+   },
+   "07": {
+    "before": 2,
+    "after": 2
+   },
+   "08": {
+    "before": 1,
+    "after": 1
+   },
+   "09": {
+    "before": 2,
+    "after": 2
+   },
+   "10": {
+    "before": 2,
+    "after": 2
+   },
+   "11": {
+    "before": 2,
+    "after": 2
+   },
+   "12": {
+    "before": 2,
+    "after": 2
+   },
+   "13": {
+    "before": 1,
+    "after": 1
+   },
+   "14": {
+    "before": 2,
+    "after": 2
+   },
+   "15": {
+    "before": 0,
+    "after": 0
+   },
+   "16": {
+    "before": 2,
+    "after": 2
+   },
+   "17": {
+    "before": 1,
+    "after": 1
+   },
+   "18": {
+    "before": 2,
+    "after": 2
+   },
+   "19": {
+    "before": 2,
+    "after": 4
+   },
+   "20": {
+    "before": 1,
+    "after": 1
+   },
+   "21": {
+    "before": 1,
+    "after": 1
+   },
+   "22": {
+    "before": 0,
+    "after": 0
+   },
+   "23": {
+    "before": 1,
+    "after": 1
+   },
+   "24": {
+    "before": 1,
+    "after": 1
+   },
+   "25": {
+    "before": 1,
+    "after": 1
+   },
+   "26": {
+    "before": 2,
+    "after": 4
+   },
+   "27": {
+    "before": 1,
+    "after": 1
+   },
+   "28": {
+    "before": 2,
+    "after": 3
+   },
+   "29": {
+    "before": 2,
+    "after": 2
+   }
+  }
+ },
+ "note": "own-input values (PREREG 5.7 path guard on every path)"
+}

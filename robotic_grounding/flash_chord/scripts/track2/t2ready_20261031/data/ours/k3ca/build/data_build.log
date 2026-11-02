@@ -1,0 +1,31 @@
+ep00 K3CA     regen-K3fix byte-identical True | root f00aab34ecbc | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 1.60 cm 17.0 deg | ok True
+ep01 as K3fix regen-K3fix byte-identical True | root 2b178b1dc967 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep02 as K3fix regen-K3fix byte-identical True | root 8f83fd9f44e8 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep03 as K3fix regen-K3fix byte-identical True | root c9f6c9756357 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep04 as K3fix regen-K3fix byte-identical True | root 7405d01e2af9 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep05 K3CA     regen-K3fix byte-identical True | root cd899f10f010 | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 0.91 cm 15.8 deg | ok True
+ep06 as K3fix regen-K3fix byte-identical True | root 553e4322a507 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep07 as K3fix regen-K3fix byte-identical True | root 4c2d6fb3fa04 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep08 as K3fix regen-K3fix byte-identical True | root 510bdc3d29bd | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep09 as K3fix regen-K3fix byte-identical True | root b1d62056ee50 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep10 as K3fix regen-K3fix byte-identical True | root 884179d70668 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep11 as K3fix regen-K3fix byte-identical True | root 814245569ed3 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep12 as K3fix regen-K3fix byte-identical True | root 5f2d1c667223 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep13 as K3fix regen-K3fix byte-identical True | root c36c13db6440 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep14 as K3fix regen-K3fix byte-identical True | root 98ec1c57bdca | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep15 K3CA     regen-K3fix byte-identical True | root 8b5f81677534 | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 1.68 cm 13.2 deg | ok True
+ep16 as K3fix regen-K3fix byte-identical True | root 5adf79bdfc8e | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep17 as K3fix regen-K3fix byte-identical True | root 25c13883a340 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep18 as K3fix regen-K3fix byte-identical True | root d8d027012a23 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep19 K3CA     regen-K3fix byte-identical True | root 46426e6ae873 | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 0.91 cm 9.2 deg | ok True
+ep20 as K3fix regen-K3fix byte-identical True | root 2784cae6dc09 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep21 as K3fix regen-K3fix byte-identical True | root 57ae96f31573 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep22 K3CA     regen-K3fix byte-identical True | root 66eecb3fa9f7 | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 1.81 cm 18.0 deg | ok True
+ep23 as K3fix regen-K3fix byte-identical True | root 3f6aaa9e0378 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep24 as K3fix regen-K3fix byte-identical True | root cafbf612668e | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep25 as K3fix regen-K3fix byte-identical True | root 273a87f5d475 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep26 K3CA     regen-K3fix byte-identical True | root d9a210fad4ef | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 1.12 cm 23.2 deg | ok True
+ep27 as K3fix regen-K3fix byte-identical True | root 28fe6aee2fc7 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+ep28 K3CA     regen-K3fix byte-identical True | root ddcd637e0a32 | packer own refs accepted vs raw REJECTED vs K3fix refs REJECTED | change vs raw mean 0.69 cm 17.6 deg | ok True
+ep29 as K3fix regen-K3fix byte-identical True | root 9412a5a47f66 | packer own refs accepted vs raw REJECTED vs K3fix refs accepted | ok True
+all ok; wrote /root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/READY sha256 e4920e985eed145f5daa4cb2cbbca9d5d8e8c3fc526057f64679cd26000157a0 (3.5 s)

@@ -1,0 +1,87 @@
+{
+ "built_at": "2026-11-02 06:36:39",
+ "phase": "screen",
+ "prereg_r7_sha256": "749649a79ca5616b8ddbfc5124828c13da20f2e10e850a39647a74d83c939ec6",
+ "prereg_r7_pins_sha256": "8378c5a418c9b1ece0ac8a1c518237666d4649cba211229b18d95d89bff14fce",
+ "pool_r7_sha256": "7c4b553bf2d15ffdae0d2b19097ab6abccfba03d1575b268fb3c0338b0f99464",
+ "incumbents_r7_sha256": "cb55fa7a886e5f62f9dbf6f86771fe89c73c6d2137e38c39f82a7a7e72b77e82",
+ "r6refs_r7_sha256": "0bc58249b13827bfa843747658378df9d7d045bb0f0427e438126c4a0851df03",
+ "relocation_r7_sha256": "ccd24c5d9b367ad68cf6d9c3c8fbc47affd5d9a75ca8ac1b292ea350eb74079c",
+ "final_r7_sha256": null,
+ "selection_s7_lock_sha256": null,
+ "t2best5_driver_sha256": "24b9af39a2e2708641e7870447b12b6475c23aec9cd18ba71086768dd69cfc89",
+ "t2cons_eval_sha256": "2cf427866a9432a3bd1b8fbb7864149d4258a5d19100c20da92d32bfe4fbfa9b",
+ "t2cons_r7_pool_sha256": "7a08fa6d8be91140e139d914b8119352fabb05f58b415eb4a8904f9a02733770",
+ "t2cons_r7_eval_sha256": "1d66a2dba53287c6a320310c9524fd9ed00e50289852c9eccba74882028a9f2a",
+ "t_c": "2026-11-02 06:16:08 CST",
+ "runs_per_job": 3,
+ "rows": [
+  {
+   "job": "ep00_z5k3fix_89500",
+   "episode": 0,
+   "object": null,
+   "family": "zuxing",
+   "owner": "zuxing",
+   "arm": "z5k3fix (k3fix) j1 (5/6 L)",
+   "stage": "round 7 phase S (PREREG_R7 3.2)",
+   "source": "/root/autodl-tmp/zuxing.lu/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00",
+   "variants": "B",
+   "priority": 1,
+   "provisional": false,
+   "role": "screen",
+   "runs": 3,
+   "iteration": 89500,
+   "tree": "b39b69b",
+   "run_label": "z5k3fix",
+   "slot": "j1 (5/6 L)",
+   "machine": "5090",
+   "strict_episode": true,
+   "pool_sha256": "3fa0fc437aad06f695a24945af6fd140361f00cccf8044e6d67f3f848ef28d3a",
+   "expected_sha256_from": "inputs_r7/pool_r7.json (PREREG_R7 2)",
+   "training_checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/relocated_r7/2026-10-24-tier2-runin-k3fix/ep00/model_89500.safetensors",
+   "source_checkpoint": "/root/autodl-tmp/zuxing.lu/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00/model_89500.safetensors",
+   "expected_sha256": "4b5853b1edfae9574024a8065abfdd6a843e00ceb06cf831593234a8843d4402",
+   "training_sha256": "4b5853b1edfae9574024a8065abfdd6a843e00ceb06cf831593234a8843d4402",
+   "designation_evidence": {
+    "rule": "pool rule R1-R5 (PREREG_R7 2.1): Zuxing's 5090 training run, sha256-verified copy",
+    "run_dir": "/root/autodl-tmp/zuxing.lu/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00",
+    "slot": "j1 (5/6 L)",
+    "copy_row": {
+     "source": "/root/autodl-tmp/zuxing.lu/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00/model_89500.safetensors",
+     "copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/zuxing_copies_r7/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00/model_89500.safetensors",
+     "sha256_source_before": "3fa0fc437aad06f695a24945af6fd140361f00cccf8044e6d67f3f848ef28d3a",
+     "sha256_copy": "3fa0fc437aad06f695a24945af6fd140361f00cccf8044e6d67f3f848ef28d3a",
+     "sha256_source_after": "3fa0fc437aad06f695a24945af6fd140361f00cccf8044e6d67f3f848ef28d3a",
+     "equal": "True",
+     "size": "24993224",
+     "source_mtime": "2026-11-01 01:11:59",
+     "copied_at": "2026-11-02 06:16:10"
+    },
+    "relocated_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/relocated_r7/2026-10-24-tier2-runin-k3fix/ep00/model_89500.safetensors",
+    "relocated_sha256": "4b5853b1edfae9574024a8065abfdd6a843e00ceb06cf831593234a8843d4402",
+    "old_parquet_path": "/mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+    "new_parquet_path": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+    "relocation_verified": true
+   },
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+   "parquet_sha256": "98376ade2bd0f57b09bcb75584bdce5d10597a2c22bf2aaa6c84f56720e6ff5a",
+   "data_root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix",
+   "root_kind": "k3fix",
+   "manifest": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/track2_manifest.json",
+   "frame_refs": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "problems": [],
+   "notes": [
+    "training parquet sha256 98376ade2bd0 == record == TRACKS_R7.sha256"
+   ],
+   "status": "ok",
+   "hulls": {
+    "ok": true,
+    "keys": [
+     "228b2dc97a7f8ce0"
+    ],
+    "missing": []
+   }
+  }
+ ]
+}

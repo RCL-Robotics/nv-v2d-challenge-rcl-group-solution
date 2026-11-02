@@ -1,0 +1,38 @@
+K3fix full arm - noisy-only input rule G1-G4 on all 30 Tier-2 episodes (envelope 49.23 deg / 4.62 cm; G4 share <= 0.05 with >= 50 contact frames)
+checks 71/71 ok
+
+ep  object               G1   G2   G3   G4         rot_max  pos_max  beyond  deeper  excess_cm  G4 n/share      -> input
+00  tall_bar_stool       pass pass pass FAIL          27.6     2.67       0       0       0.25   136/0.0956   -> RAW (gate fail)
+01  vacuum               pass pass pass exempt        18.8     3.35       0       0       3.79     7/1.0000   -> K3fix candidate
+02  blue_easter_basket   pass pass pass pass          24.0     1.74       0       0       0.00   495/0.0000   -> K3fix candidate
+03  contigo_coffee_mug   pass pass pass pass          33.9     1.71       0       0       0.25   566/0.0000   -> K3fix candidate
+04  baseball_bat         pass pass pass pass          24.4     1.44       0       0       0.81   477/0.0000   -> K3fix candidate
+05  big_black_box        pass pass pass FAIL          29.1     2.24       0       0       1.69   609/0.0591   -> RAW (gate fail)
+06  monitor              pass pass pass pass          27.5     3.35       0       0       0.34   350/0.0200   -> K3fix candidate
+07  iron                 pass pass pass pass          34.5     1.84       0       0       0.00   701/0.0000   -> K3fix candidate
+08  skinny_wood_chair    pass pass pass pass          31.3     2.46       0       0       0.00   261/0.0460   -> K3fix candidate
+09  big_red_bowl         pass pass pass pass          23.5     1.29       0       0       0.27   506/0.0000   -> K3fix candidate
+10  white_desk           pass pass pass pass          20.6     2.39       0       0       0.03   443/0.0361   -> K3fix candidate
+11  light_blue_book      pass pass pass pass          34.2     2.29       0       0       3.10   836/0.0000   -> K3fix candidate
+12  black_platform       pass pass pass pass          22.3     3.21       0       0       0.00   268/0.0000   -> K3fix candidate
+13  snack_box            pass pass pass pass          22.3     2.73       0       0       0.32   316/0.0000   -> K3fix candidate
+14  round_table          pass pass pass pass          29.2     2.37       0       0       1.70   439/0.0068   -> K3fix candidate
+15  wet_floor_sign       pass pass pass FAIL          23.8     2.39       0       0       0.00   211/0.2085   -> RAW (gate fail)
+16  spray_bottle         pass pass pass pass          17.6     2.44       0       0       0.06   129/0.0000   -> K3fix candidate
+17  traffic_cone         pass pass pass pass          34.0     1.64       0       0       0.22   203/0.0099   -> K3fix candidate
+18  blue_trash_can       pass pass pass pass          32.2     3.43       0       0       0.00   132/0.0379   -> K3fix candidate
+19  cane                 pass pass pass FAIL          20.0     1.65       0       0       0.52   164/0.3415   -> RAW (gate fail)
+20  rice_cooker          pass pass pass pass          26.3     3.17       0       0       0.97   293/0.0273   -> K3fix candidate
+21  tall_bar_stool       pass pass pass pass          23.7     1.72       0       0       1.12   434/0.0000   -> K3fix candidate
+22  step_ladder          pass pass pass FAIL          29.0     3.32       0       0       4.43   141/0.1915   -> RAW (gate fail)
+23  toy_stroller         pass pass pass pass          18.0     2.92       0       0       0.80   615/0.0000   -> K3fix candidate
+24  watering_can         pass pass pass pass          32.8     2.83       0       0       0.31   478/0.0000   -> K3fix candidate
+25  cyan_water_bottle    pass pass pass pass          18.6     1.43       0       0       0.05   669/0.0000   -> K3fix candidate
+26  skateboard           pass pass pass FAIL          29.8     2.17       0       0       0.77   261/0.0728   -> RAW (gate fail)
+27  woven_basket         pass pass pass pass          32.6     2.20       0       0       0.00   291/0.0000   -> K3fix candidate
+28  squeegee             pass FAIL pass FAIL          34.6     1.70       0     194      13.70    77/0.1558   -> RAW (gate fail)
+29  rolling_luggage      pass pass pass exempt        32.1     2.94       0       0       0.31    37/1.0000   -> K3fix candidate
+
+PASS (K3fix candidates, 23): 01 02 03 04 06 07 08 09 10 11 12 13 14 16 17 18 20 21 23 24 25 27 29
+FAIL (raw fallback, 7): 00 05 15 19 22 26 28
+G4 exempt (< 50 contact frames): 01 29

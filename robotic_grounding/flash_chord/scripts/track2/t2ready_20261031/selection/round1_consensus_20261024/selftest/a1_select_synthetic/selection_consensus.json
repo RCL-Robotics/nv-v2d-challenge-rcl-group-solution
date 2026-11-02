@@ -1,0 +1,6256 @@
+{
+ "generated_at": "2026-10-26 18:18:45",
+ "synthetic": true,
+ "synthetic_seed": 20261026,
+ "refs_build_sha256": null,
+ "consensus_scores_sha256": null,
+ "prereg_sha256": "3eee7268d53d1c3669614c63b69a54fa2462cf624ed88c3f7e215f5cb9f51ee9",
+ "amendments_sha256": "f648226a95a061eeefcfd5138cb01823db8a060fe121a0f4968ffa163dc4229f",
+ "pins_sha256": "9d1493797205e8c60255c50658c536714a3702fe8751c724f37ed1444a040ece",
+ "pins_a1b_sha256": "7239bc561eacc1d3ed6b3f210ae80193c30ad3168d8e0255dd7ee63016bd7c7a",
+ "pins_a1c_sha256": "b740e43730fa24db0724e1ab42b1f1dc171bcbf95fa5a915c618c04b63894830",
+ "script_sha256": "5dd430ec78f32cdff7921cfdcc5eca2b9de2a925cf29f6c41b141c7d0a580658",
+ "consensus_script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "gate_script_sha256": "a29c997b7271e9299db109e97af5210f528484719210bb58685523b0ae0eb16b",
+ "own_input_validation_a1_sha256": "c6af3fd5ee7362b434b557bc844a0eb3da34c55ddcb31ee9c098ae2ea8b7e6a7",
+ "own_input_validation_a1_new_sha256": "4f57c937a6f2fbc850f8051c9eda22e40127278fa21911b6091da5d2ec7abc7b",
+ "manifest_a1_sha256": "a4ed1f2a59b82a5f6fc6775c72f03784b8db1cbaac604e1ca15ce43029d2aadd",
+ "own_input_evals_a1_sha256": "5cf2bb5a4b55c56bb5279b76c5b439e934822d99de985cba566f20837fa21001",
+ "candidates_a1_sha256": "be42b6ddd32ff708365b894852cdbbfbdda583504f44038dc4790827a97301e4",
+ "rollouts_list_sha256": "8a545ea10287e7eb7098f6274a20c373e83ebb64fce425e32ed7473338f99b1f",
+ "snapshot_selection_sha256": "55ee16518f79f9763e9987ccc4fd69c69a4934c361b2aeccc9aba730a41535b2",
+ "rule": "PREREG 5 as amended (AMENDMENTS A2.2): default D = t2_best5 SELECTED (snapshot), the same for both variants; a challenger qualifies iff cons_mean_AUC >= cons_mean_AUC(D) + 0.01 (exact floats) AND own-input SP-SR = MP-SR = 1 in >= 4 of its 5 official runs; pick the qualifying one with the highest cons_mean_AUC (ties: lower population variance, lower cons_mean MPPE, job name). Variant B (reference R/F/C/G, all candidates incl. G2 input) is BINDING; variant A (reference R/F/C, no G2-input job) is reported only. CLOSEST run = the run of the pick whose variant-B consensus AUC is closest to its 5-run variant-B mean (ties: lower run).",
+ "binding_variant": "B",
+ "noisy_only": true,
+ "validation_failed_jobs": [],
+ "n_candidates": 90,
+ "n_candidates_variant_A": 77,
+ "changed_episodes_B": [
+  "03",
+  "05",
+  "06",
+  "07",
+  "09",
+  "13",
+  "16",
+  "17",
+  "18",
+  "23",
+  "26",
+  "29"
+ ],
+ "changed_episodes_A": [
+  "02",
+  "03",
+  "08",
+  "09",
+  "10",
+  "11",
+  "12",
+  "17",
+  "18",
+  "21",
+  "23",
+  "25",
+  "26"
+ ],
+ "cons_B_closest_runs": {
+  "00": {
+   "job": "ep00_raw_final41043",
+   "run": 5,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "01": {
+   "job": "ep01_k3fix_final44922",
+   "run": 3,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "02": {
+   "job": "ep02_k3fix_final34093",
+   "run": 3,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "03": {
+   "job": "ep03_k3fix_t2wbest24000",
+   "run": 1,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "04": {
+   "job": "ep04_raw_final44922",
+   "run": 5,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "05": {
+   "job": "ep05_zx_k3fix_88000",
+   "run": 1,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "06": {
+   "job": "ep06_raw_final33894",
+   "run": 5,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "07": {
+   "job": "ep07_k3fix_t2wbest14000",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "08": {
+   "job": "ep08_k3easy_final17496",
+   "run": 2,
+   "input": "k3",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3"
+  },
+  "09": {
+   "job": "ep09_raw_final39328",
+   "run": 3,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "10": {
+   "job": "ep10_k3fix_final25319",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "11": {
+   "job": "ep11_k3fix_final29175",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "12": {
+   "job": "ep12_k3fix_final23178",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "13": {
+   "job": "ep13_raw_final44922",
+   "run": 1,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "14": {
+   "job": "ep14_k3fix_final44922",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "15": {
+   "job": "ep15_raw_final44922",
+   "run": 4,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "16": {
+   "job": "ep16_k3fix_t2wbest32000",
+   "run": 5,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "17": {
+   "job": "ep17_raw_final31807",
+   "run": 4,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "18": {
+   "job": "ep18_raw_final44922",
+   "run": 5,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "19": {
+   "job": "ep19_raw_final44922",
+   "run": 1,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "20": {
+   "job": "ep20_k3easy_final18450",
+   "run": 5,
+   "input": "k3",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3"
+  },
+  "21": {
+   "job": "ep21_k3fix_final44922",
+   "run": 4,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "22": {
+   "job": "ep22_raw_final44922",
+   "run": 5,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "23": {
+   "job": "ep23_raw_final20023",
+   "run": 3,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "24": {
+   "job": "ep24_k3fix_final20636",
+   "run": 1,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "25": {
+   "job": "ep25_k3fix_final42819",
+   "run": 1,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "26": {
+   "job": "ep26_zx_k3fix_92000",
+   "run": 2,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "27": {
+   "job": "ep27_k3fix_final20863",
+   "run": 2,
+   "input": "k3fix",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix"
+  },
+  "28": {
+   "job": "ep28_raw_final44922",
+   "run": 4,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  },
+  "29": {
+   "job": "ep29_raw_final44922",
+   "run": 2,
+   "input": "raw",
+   "frame_reference": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise"
+  }
+ },
+ "compositions": {
+  "CONS-B": {
+   "00": "ep00_raw_final41043",
+   "01": "ep01_k3fix_final44922",
+   "02": "ep02_k3fix_final34093",
+   "03": "ep03_k3fix_t2wbest24000",
+   "04": "ep04_raw_final44922",
+   "05": "ep05_zx_k3fix_88000",
+   "06": "ep06_raw_final33894",
+   "07": "ep07_k3fix_t2wbest14000",
+   "08": "ep08_k3easy_final17496",
+   "09": "ep09_raw_final39328",
+   "10": "ep10_k3fix_final25319",
+   "11": "ep11_k3fix_final29175",
+   "12": "ep12_k3fix_final23178",
+   "13": "ep13_raw_final44922",
+   "14": "ep14_k3fix_final44922",
+   "15": "ep15_raw_final44922",
+   "16": "ep16_k3fix_t2wbest32000",
+   "17": "ep17_raw_final31807",
+   "18": "ep18_raw_final44922",
+   "19": "ep19_raw_final44922",
+   "20": "ep20_k3easy_final18450",
+   "21": "ep21_k3fix_final44922",
+   "22": "ep22_raw_final44922",
+   "23": "ep23_raw_final20023",
+   "24": "ep24_k3fix_final20636",
+   "25": "ep25_k3fix_final42819",
+   "26": "ep26_zx_k3fix_92000",
+   "27": "ep27_k3fix_final20863",
+   "28": "ep28_raw_final44922",
+   "29": "ep29_raw_final44922"
+  },
+  "CONS-A": {
+   "00": "ep00_raw_final41043",
+   "01": "ep01_k3fix_final44922",
+   "02": "ep02_raw_final37409",
+   "03": "ep03_k3fix_t2wbest24000",
+   "04": "ep04_raw_final44922",
+   "05": "ep05_raw_final44922",
+   "06": "ep06_k3fix_final28420",
+   "07": "ep07_k3fix_final18529",
+   "08": "ep08_raw_final20597",
+   "09": "ep09_k3fix_final39449",
+   "10": "ep10_raw_final34267",
+   "11": "ep11_k3fix_t2wbest28000",
+   "12": "ep12_k3fix_t2wbest20000",
+   "13": "ep13_k3fix_final39254",
+   "14": "ep14_k3fix_final44922",
+   "15": "ep15_raw_final44922",
+   "16": "ep16_k3fix_final32063",
+   "17": "ep17_raw_final31807",
+   "18": "ep18_raw_final44922",
+   "19": "ep19_raw_final44922",
+   "20": "ep20_k3easy_final18450",
+   "21": "ep21_raw_final44922",
+   "22": "ep22_raw_final44922",
+   "23": "ep23_raw_final20023",
+   "24": "ep24_k3fix_final20636",
+   "25": "ep25_raw_final44922",
+   "26": "ep26_zx_k3fix_20000",
+   "27": "ep27_k3fix_final20863",
+   "28": "ep28_raw_final44922",
+   "29": "ep29_k3fix_final17358"
+  },
+  "DEFAULT": {
+   "00": "ep00_raw_final41043",
+   "01": "ep01_k3fix_final44922",
+   "02": "ep02_k3fix_final34093",
+   "03": "ep03_k3fix_final27068",
+   "04": "ep04_raw_final44922",
+   "05": "ep05_raw_final44922",
+   "06": "ep06_k3fix_final28420",
+   "07": "ep07_k3fix_final18529",
+   "08": "ep08_k3easy_final17496",
+   "09": "ep09_t2fixB_designated54449",
+   "10": "ep10_k3fix_final25319",
+   "11": "ep11_k3fix_final29175",
+   "12": "ep12_k3fix_final23178",
+   "13": "ep13_k3fix_final39254",
+   "14": "ep14_k3fix_final44922",
+   "15": "ep15_raw_final44922",
+   "16": "ep16_k3fix_final32063",
+   "17": "ep17_k3fix_final29845",
+   "18": "ep18_k3fix_final18911",
+   "19": "ep19_raw_final44922",
+   "20": "ep20_k3easy_final18450",
+   "21": "ep21_k3fix_final44922",
+   "22": "ep22_raw_final44922",
+   "23": "ep23_k3easy_final19162",
+   "24": "ep24_k3fix_final20636",
+   "25": "ep25_k3fix_final42819",
+   "26": "ep26_raw_final34948",
+   "27": "ep27_k3fix_final20863",
+   "28": "ep28_raw_final44922",
+   "29": "ep29_k3fix_final17358"
+  },
+  "RAW-ONLY": {
+   "00": "ep00_raw_final41043",
+   "01": "ep01_raw_final44922",
+   "02": "ep02_raw_final37409",
+   "03": "ep03_raw_final44922",
+   "04": "ep04_raw_final44922",
+   "05": "ep05_raw_final44922",
+   "06": "ep06_raw_final33894",
+   "07": "ep07_raw_final44922",
+   "08": "ep08_raw_final20597",
+   "09": "ep09_raw_final39328",
+   "10": "ep10_raw_final34267",
+   "11": "ep11_raw_final28925",
+   "12": "ep12_raw_final37575",
+   "13": "ep13_raw_final44922",
+   "14": "ep14_raw_final44922",
+   "15": "ep15_raw_final44922",
+   "16": "ep16_raw_final31268",
+   "17": "ep17_raw_final31807",
+   "18": "ep18_raw_final44922",
+   "19": "ep19_raw_final44922",
+   "20": "ep20_raw_final19034",
+   "21": "ep21_raw_final44922",
+   "22": "ep22_raw_final44922",
+   "23": "ep23_raw_final20023",
+   "24": "ep24_raw_final44922",
+   "25": "ep25_raw_final44922",
+   "26": "ep26_raw_final34948",
+   "27": "ep27_raw_final44922",
+   "28": "ep28_raw_final44922",
+   "29": "ep29_raw_final44922"
+  },
+  "K3FULL": {
+   "00": "ep00_raw_final41043",
+   "01": "ep01_k3fix_final44922",
+   "02": "ep02_k3fix_final34093",
+   "03": "ep03_k3fix_final27068",
+   "04": "ep04_raw_final44922",
+   "05": "ep05_raw_final44922",
+   "06": "ep06_k3fix_final28420",
+   "07": "ep07_k3fix_final18529",
+   "08": "ep08_k3easy_final17496",
+   "09": "ep09_k3fix_final39449",
+   "10": "ep10_k3fix_final25319",
+   "11": "ep11_k3fix_final29175",
+   "12": "ep12_k3fix_final23178",
+   "13": "ep13_k3fix_final39254",
+   "14": "ep14_k3fix_final44922",
+   "15": "ep15_raw_final44922",
+   "16": "ep16_k3fix_final32063",
+   "17": "ep17_k3fix_final29845",
+   "18": "ep18_k3fix_final18911",
+   "19": "ep19_raw_final44922",
+   "20": "ep20_k3easy_final18450",
+   "21": "ep21_k3fix_final44922",
+   "22": "ep22_raw_final44922",
+   "23": "ep23_k3easy_final19162",
+   "24": "ep24_k3fix_final20636",
+   "25": "ep25_k3fix_final42819",
+   "26": "ep26_raw_final34948",
+   "27": "ep27_k3fix_final20863",
+   "28": "ep28_raw_final44922",
+   "29": "ep29_k3fix_final17358"
+  }
+ },
+ "episodes": [
+  {
+   "episode": 0,
+   "object": "tall_bar_stool",
+   "default": "ep00_raw_final41043",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep00_raw_final41043"
+     ],
+     "default": {
+      "job": "ep00_raw_final41043",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.7276702002821436,
+       0.7355369297837641,
+       0.7481770567874125,
+       0.7342433788083241,
+       0.7372485234486511
+      ],
+      "cons_auc_mean": 0.736575217822059,
+      "cons_auc_var": 4.417417209348795e-05,
+      "cons_mppe_mean": 12.70390001317152,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.26188946014000003,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep00_raw_final41043",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep00_raw_final41043"
+     ],
+     "default": {
+      "job": "ep00_raw_final41043",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8866460748794189,
+       0.8892026670629319,
+       0.8743790578614237,
+       0.8678713992854482,
+       0.8751254817978033
+      ],
+      "cons_auc_mean": 0.8786449361774051,
+      "cons_auc_var": 6.442745521585726e-05,
+      "cons_mppe_mean": 10.570215951669521,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.26188946014000003,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep00_raw_final41043",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep00_raw_final41043",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep00_raw_final41043",
+   "pick_A": "ep00_raw_final41043",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 1,
+   "object": "vacuum",
+   "default": "ep01_k3fix_final44922",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep01_k3fix_final44922",
+      "ep01_k3fix_t2wbest18000",
+      "ep01_raw_final44922",
+      "ep01_t2fixL_p62000"
+     ],
+     "default": {
+      "job": "ep01_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.4224092523089878,
+       0.3972791114031389,
+       0.4235286661754899,
+       0.4328660615445285,
+       0.4111037227459246
+      ],
+      "cons_auc_mean": 0.4174373628356139,
+      "cons_auc_var": 0.00014926770055297893,
+      "cons_mppe_mean": 9.286476649159006,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.14205153948000002,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep01_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.735973515734685,
+        0.766354413935118,
+        0.7446505990587294,
+        0.7423515167146986,
+        0.7325027086287614
+       ],
+       "cons_auc_mean": 0.7443665508143985,
+       "cons_auc_var": 0.0001397601919397128,
+       "cons_mppe_mean": 6.824422090891244,
+       "delta_vs_D": 0.3269291879787846,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.14437751004000002,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      },
+      {
+       "job": "ep01_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.20160174984032989,
+        0.20225674114387482,
+        0.2080374367683668,
+        0.19843912178843306,
+        0.2379784176556727
+       ],
+       "cons_auc_mean": 0.20966269343933544,
+       "cons_auc_var": 0.00021004343977082466,
+       "cons_mppe_mean": 12.93118801690819,
+       "delta_vs_D": -0.20777466939627845,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2097 < D 0.4174 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.18525769746,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep01_t2fixL_p62000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.9050184910635249,
+        0.8704139680665364,
+        0.8667374352032109,
+        0.8743021416251113,
+        0.86638771732086
+       ],
+       "cons_auc_mean": 0.8765719506558487,
+       "cons_auc_var": 0.00021054294931630314,
+       "cons_mppe_mean": 10.628647195876564,
+       "delta_vs_D": 0.4591345878202348,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2fix",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.14354082998,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep01_k3fix_final44922",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "G"
+     ],
+     "pool": [
+      "ep01_k3fix_final44922",
+      "ep01_k3fix_t2wbest18000",
+      "ep01_raw_final44922",
+      "ep01_t2fixL_p62000",
+      "ep01_zx_g2_10000",
+      "ep01_zx_g2_124000",
+      "ep01_zx_g2hard_102000"
+     ],
+     "default": {
+      "job": "ep01_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8610626006603813,
+       0.871723572473174,
+       0.8709842818786536,
+       0.8769022425082672,
+       0.8750623970685087
+      ],
+      "cons_auc_mean": 0.871147018917797,
+      "cons_auc_var": 3.0101434715200295e-05,
+      "cons_mppe_mean": 10.611472298123953,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.14205153948000002,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep01_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.3506191521636609,
+        0.34539093373944,
+        0.3519626737261827,
+        0.3449562854829881,
+        0.3567706667668449
+       ],
+       "cons_auc_mean": 0.3499399423758233,
+       "cons_auc_var": 1.9348375871422283e-05,
+       "cons_mppe_mean": 4.950776208621049,
+       "delta_vs_D": -0.5212070765419736,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3499 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.14437751004000002,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep01_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.601528549359478,
+        0.5945100143638856,
+        0.6400210949101816,
+        0.6191803959850127,
+        0.6048235785954678
+       ],
+       "cons_auc_mean": 0.6120127266428051,
+       "cons_auc_var": 0.00026075818737472184,
+       "cons_mppe_mean": 12.108327415277952,
+       "delta_vs_D": -0.25913429227499185,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.6120 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.18525769746,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep01_t2fixL_p62000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.15591556554152106,
+        0.14393054335361954,
+        0.13909555540547397,
+        0.12904317941001545,
+        0.1715991486626611
+       ],
+       "cons_auc_mean": 0.14791679847465825,
+       "cons_auc_var": 0.000214950408158003,
+       "cons_mppe_mean": 6.595536258467023,
+       "delta_vs_D": -0.7232302204431388,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1479 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2fix",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.14354082998,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep01_zx_g2_10000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.2683043039841397,
+        0.27119509654173923,
+        0.2398816929765496,
+        0.2615260997656062,
+        0.24196418626641675
+       ],
+       "cons_auc_mean": 0.2565742759068903,
+       "cons_auc_var": 0.00017359591168924113,
+       "cons_mppe_mean": 8.615110836236225,
+       "delta_vs_D": -0.6145727430109067,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2566 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.17232262379999996,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep01_zx_g2_124000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.2996891181750544,
+        0.3068715468481412,
+        0.2965769389337471,
+        0.307996644726749,
+        0.27757657800238755
+       ],
+       "cons_auc_mean": 0.29774216533721587,
+       "cons_auc_var": 0.0001200598489610163,
+       "cons_mppe_mean": 9.704705360693172,
+       "delta_vs_D": -0.5734048535805811,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2977 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.21782128514000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep01_zx_g2hard_102000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.43405493100632236,
+        0.4699556801903129,
+        0.4310565356961259,
+        0.41348814465251016,
+        0.4453627821271992
+       ],
+       "cons_auc_mean": 0.43878361473449407,
+       "cons_auc_var": 0.0003473824230595794,
+       "cons_mppe_mean": 10.63696002068261,
+       "delta_vs_D": -0.43236340418330294,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4388 < D 0.8711 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.21449129853999999,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep01_k3fix_final44922",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 3
+    }
+   },
+   "pick": "ep01_k3fix_final44922",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep01_k3fix_final44922",
+   "pick_A": "ep01_k3fix_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 3,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 2,
+   "object": "blue_easter_basket",
+   "default": "ep02_k3fix_final34093",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep02_k3fix_final34093",
+      "ep02_k3fix_t2wbest34000",
+      "ep02_raw_final37409"
+     ],
+     "default": {
+      "job": "ep02_k3fix_final34093",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.14188138846897413,
+       0.1712746527856246,
+       0.15298107739667394,
+       0.16769667082491196,
+       0.13982911930089872
+      ],
+      "cons_auc_mean": 0.15473258175541665,
+      "cons_auc_var": 0.00016640836978153563,
+      "cons_mppe_mean": 10.955913054845645,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.9306505101999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep02_k3fix_t2wbest34000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3264130804379897,
+        0.3348053031508596,
+        0.3506381057004408,
+        0.31069776867945254,
+        0.348257212139762
+       ],
+       "cons_auc_mean": 0.33416229402170095,
+       "cons_auc_var": 0.00021623336173426413,
+       "cons_mppe_mean": 10.069121523470344,
+       "delta_vs_D": 0.1794297122662843,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9370535714200001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep02_raw_final37409",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7514092114115718,
+        0.7292144390604975,
+        0.7170539143313668,
+        0.6914111519090042,
+        0.7191488022791801
+       ],
+       "cons_auc_mean": 0.7216475037983241,
+       "cons_auc_var": 0.0003769198596731731,
+       "cons_mppe_mean": 12.989807083677267,
+       "delta_vs_D": 0.5669149220429075,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.75594387756,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep02_raw_final37409",
+     "pick_input": "raw",
+     "reason": "replaced by ep02_raw_final37409 (cons_mean_AUC 0.7216 >= D 0.1547 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep02_k3fix_final34093",
+      "ep02_k3fix_t2wbest34000",
+      "ep02_raw_final37409"
+     ],
+     "default": {
+      "job": "ep02_k3fix_final34093",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8239167257439649,
+       0.8206857169781534,
+       0.8397974233641059,
+       0.8667351361890054,
+       0.8788235775901182
+      ],
+      "cons_auc_mean": 0.8459917159730697,
+      "cons_auc_var": 0.0005348577318334309,
+      "cons_mppe_mean": 6.32173955243647,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.9306505101999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep02_k3fix_t2wbest34000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.522190854810091,
+        0.48793829747020023,
+        0.5071502190623366,
+        0.5363833849291954,
+        0.5460994998859621
+       ],
+       "cons_auc_mean": 0.519952451231557,
+       "cons_auc_var": 0.00042949147513256453,
+       "cons_mppe_mean": 9.152426524211528,
+       "delta_vs_D": -0.3260392647415127,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.5200 < D 0.8460 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9370535714200001,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep02_raw_final37409",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.07127553522467919,
+        0.07246976204083878,
+        0.0619551970155184,
+        0.10784667261247438,
+        0.08715153494616479
+       ],
+       "cons_auc_mean": 0.08013974036793511,
+       "cons_auc_var": 0.00025698393498131114,
+       "cons_mppe_mean": 10.11544932890772,
+       "delta_vs_D": -0.7658519756051345,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.0801 < D 0.8460 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.75594387756,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep02_k3fix_final34093",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 3
+    }
+   },
+   "pick": "ep02_k3fix_final34093",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep02_k3fix_final34093",
+   "pick_A": "ep02_raw_final37409",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 3,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep02_raw_final37409 (cons_mean_AUC 0.7216 >= D 0.1547 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 3,
+   "object": "contigo_coffee_mug",
+   "default": "ep03_k3fix_final27068",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep03_k3fix_final27068",
+      "ep03_k3fix_t2wbest24000",
+      "ep03_raw_final44922",
+      "ep03_raws7_final44922",
+      "ep03_raws7_t2wbest38000"
+     ],
+     "default": {
+      "job": "ep03_k3fix_final27068",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.3758819467053442,
+       0.38579513731260645,
+       0.343549537129199,
+       0.3321099705643865,
+       0.3188933406957139
+      ],
+      "cons_auc_mean": 0.35124598648145006,
+      "cons_auc_var": 0.0006545380972908949,
+      "cons_mppe_mean": 9.013010608388232,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.98242637644,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep03_k3fix_t2wbest24000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7091090334630233,
+        0.6854892986906966,
+        0.6870435227309358,
+        0.681059396328421,
+        0.6448884863565054
+       ],
+       "cons_auc_mean": 0.6815179475139164,
+       "cons_auc_var": 0.0004298998658742517,
+       "cons_mppe_mean": 9.771428775541818,
+       "delta_vs_D": 0.3302719610324663,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9840108834600001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.8
+      },
+      {
+       "job": "ep03_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.4067795360276552,
+        0.39757557541660105,
+        0.39315552655765706,
+        0.4097384317190203,
+        0.3692192692879727
+       ],
+       "cons_auc_mean": 0.39529366780178127,
+       "cons_auc_var": 0.00020604587634524206,
+       "cons_mppe_mean": 10.38156190527987,
+       "delta_vs_D": 0.04404768132033121,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.88879641486,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep03_raws7_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.49502948113843415,
+        0.4727518742739923,
+        0.5055593117565905,
+        0.49358330959990626,
+        0.5012588834068902
+       ],
+       "cons_auc_mean": 0.49363657203516265,
+       "cons_auc_var": 0.00012767299726898024,
+       "cons_mppe_mean": 12.923592512148101,
+       "delta_vs_D": 0.1423905855537126,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raws7_final",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8897247118999999,
+       "cons_sp_mean": 1.0,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep03_raws7_t2wbest38000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3612787556294845,
+        0.32845514497784145,
+        0.34159751184832154,
+        0.29553713686995986,
+        0.3163246163780354
+       ],
+       "cons_auc_mean": 0.32863863314072855,
+       "cons_auc_var": 0.0004961375731081246,
+       "cons_mppe_mean": 15.914027514450272,
+       "delta_vs_D": -0.022607353340721503,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3286 < D 0.3512 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raws7_t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8867157490400001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep03_k3fix_t2wbest24000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep03_k3fix_t2wbest24000 (cons_mean_AUC 0.6815 >= D 0.3512 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 4
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep03_k3fix_final27068",
+      "ep03_k3fix_t2wbest24000",
+      "ep03_raw_final44922",
+      "ep03_raws7_final44922",
+      "ep03_raws7_t2wbest38000"
+     ],
+     "default": {
+      "job": "ep03_k3fix_final27068",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.12467972865420902,
+       0.1068453058206375,
+       0.12433279890949775,
+       0.14196227825915045,
+       0.1547420296749212
+      ],
+      "cons_auc_mean": 0.1305124282636832,
+      "cons_auc_var": 0.0002701027075779512,
+      "cons_mppe_mean": 7.753249110484619,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.98242637644,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep03_k3fix_t2wbest24000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7823560238265157,
+        0.7872937799096009,
+        0.7452072370957241,
+        0.7858749552945253,
+        0.78802007733961
+       ],
+       "cons_auc_mean": 0.7777504146931953,
+       "cons_auc_var": 0.00026856399882740017,
+       "cons_mppe_mean": 8.02574121029524,
+       "delta_vs_D": 0.6472379864295121,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9840108834600001,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep03_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7560128696829534,
+        0.7651439447441366,
+        0.7513811143365507,
+        0.7427351742887781,
+        0.7552175130454578
+       ],
+       "cons_auc_mean": 0.7540981232195754,
+       "cons_auc_var": 5.268564128562192e-05,
+       "cons_mppe_mean": 9.910749748389073,
+       "delta_vs_D": 0.6235856949558922,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.88879641486,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep03_raws7_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.11886436997915074,
+        0.11191312271156205,
+        0.13733173431769274,
+        0.1002451285733286,
+        0.11848892209547962
+       ],
+       "cons_auc_mean": 0.11736865553544273,
+       "cons_auc_var": 0.0001449989374687327,
+       "cons_mppe_mean": 9.915270271923571,
+       "delta_vs_D": -0.013143772728240466,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1174 < D 0.1305 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raws7_final",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8897247118999999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep03_raws7_t2wbest38000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3878604322720424,
+        0.426910158881708,
+        0.41471216868957556,
+        0.40692521855704017,
+        0.4213288525782545
+       ],
+       "cons_auc_mean": 0.4115473661957242,
+       "cons_auc_var": 0.00018482878745757804,
+       "cons_mppe_mean": 12.87466932924051,
+       "delta_vs_D": 0.281034937932041,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raws7_t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8867157490400001,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep03_k3fix_t2wbest24000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep03_k3fix_t2wbest24000 (cons_mean_AUC 0.7778 >= D 0.1305 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep03_k3fix_t2wbest24000",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep03_k3fix_t2wbest24000",
+   "pick_A": "ep03_k3fix_t2wbest24000",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 1,
+   "reason_B": "replaced by ep03_k3fix_t2wbest24000 (cons_mean_AUC 0.7778 >= D 0.1305 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep03_k3fix_t2wbest24000 (cons_mean_AUC 0.6815 >= D 0.3512 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 4,
+   "object": "baseball_bat",
+   "default": "ep04_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [
+    "PENDING"
+   ],
+   "flags": [
+    "PENDING"
+   ],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep04_k3fix_final44922",
+      "ep04_raw_final44922",
+      "ep04_zx_k3fix_12000"
+     ],
+     "default": {
+      "job": "ep04_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6225244038335961,
+       0.5735121883766996,
+       0.5866615009182226,
+       0.5859224568137483,
+       0.601628537308517
+      ],
+      "cons_auc_mean": 0.5940498174501567,
+      "cons_auc_var": 0.0002821348968897316,
+      "cons_mppe_mean": 10.41110558943709,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.10985367373999999,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep04_k3fix_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.4256043632101238,
+        0.4106655013265041,
+        0.41332482790614733,
+        0.40882188205267067,
+        0.4344624126870762
+       ],
+       "cons_auc_mean": 0.4185757974365044,
+       "cons_auc_var": 9.741392236508139e-05,
+       "cons_mppe_mean": 10.639637901592057,
+       "delta_vs_D": -0.1754740200136523,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4186 < D 0.5940 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "k3fix_final",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.11170610208000001,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep04_zx_k3fix_12000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.4611435970942365,
+        0.48231671297355144,
+        0.4999215778132229,
+        0.4375244889722842,
+        0.44879894310626917
+       ],
+       "cons_auc_mean": 0.4659410639919129,
+       "cons_auc_var": 0.0005094413864137178,
+       "cons_mppe_mean": 7.507319364540862,
+       "delta_vs_D": -0.12810875345824385,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4659 < D 0.5940 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.11036737240000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep04_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 3
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "G"
+     ],
+     "pool": [
+      "ep04_k3fix_final44922",
+      "ep04_raw_final44922",
+      "ep04_zx_g2_12000",
+      "ep04_zx_g2_18000",
+      "ep04_zx_g2_88000",
+      "ep04_zx_k3fix_12000"
+     ],
+     "default": {
+      "job": "ep04_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.43923701658364844,
+       0.4876303184781599,
+       0.4426980803963629,
+       0.4652152033925972,
+       0.4607576422204736
+      ],
+      "cons_auc_mean": 0.45910765221424843,
+      "cons_auc_var": 0.00030353666936593597,
+      "cons_mppe_mean": 13.028043863862859,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.10985367373999999,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep04_k3fix_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.1981746692351853,
+        0.19272547929053435,
+        0.18108350691007682,
+        0.22712907609929728,
+        0.23572084464434562
+       ],
+       "cons_auc_mean": 0.20696671523588783,
+       "cons_auc_var": 0.00043667482019834225,
+       "cons_mppe_mean": 6.144785970476514,
+       "delta_vs_D": -0.2521409369783606,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2070 < D 0.4591 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "k3fix_final",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.11170610208000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep04_zx_g2_12000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.34405095329257396,
+        0.35858829409322496,
+        0.37319480611855954,
+        0.40922095064619096,
+        0.35901197800951695
+       ],
+       "cons_auc_mean": 0.3688133964320133,
+       "cons_auc_var": 0.0004931532599157161,
+       "cons_mppe_mean": 8.885780730689346,
+       "delta_vs_D": -0.09029425578223516,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3688 < D 0.4591 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.13949252804,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep04_zx_g2_18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.24273027740719832,
+        0.2615558570913926,
+        0.24990802010496527,
+        0.23804364543275428,
+        0.27647721796717667
+       ],
+       "cons_auc_mean": 0.25374300360069746,
+       "cons_auc_var": 0.0001920684532077964,
+       "cons_mppe_mean": 7.701298217864003,
+       "delta_vs_D": -0.20536464861355097,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2537 < D 0.4591 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.14442714822,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.0
+      },
+      {
+       "job": "ep04_zx_g2_88000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.7133966610963706,
+        0.6748208171680616,
+        0.7141972271674173,
+        0.7310347573599402,
+        0.7180384012072887
+       ],
+       "cons_auc_mean": 0.7102975727998156,
+       "cons_auc_var": 0.0003546726181052792,
+       "cons_mppe_mean": 9.50689090945271,
+       "delta_vs_D": 0.2511899205855672,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.19680884184,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep04_zx_k3fix_12000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.7573520159204984,
+        0.7410219207173481,
+        0.777050089107426,
+        0.7611046653993443,
+        0.7552951155168968
+       ],
+       "cons_auc_mean": 0.7583647613323027,
+       "cons_auc_var": 0.00013357420953145509,
+       "cons_mppe_mean": 8.167038229493238,
+       "delta_vs_D": 0.29925710911805425,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.11036737240000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep04_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep04_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep04_raw_final44922",
+   "pick_A": "ep04_raw_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 5,
+   "object": "big_black_box",
+   "default": "ep05_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep05_raw_final44922",
+      "ep05_zx_k3fix_18000",
+      "ep05_zx_k3fix_26000",
+      "ep05_zx_k3fix_88000"
+     ],
+     "default": {
+      "job": "ep05_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6459969066222329,
+       0.6881903858388094,
+       0.6805849067298001,
+       0.6320142104088201,
+       0.6588007381095424
+      ],
+      "cons_auc_mean": 0.6611174295418409,
+      "cons_auc_var": 0.0004385844534361568,
+      "cons_mppe_mean": 6.520416145341903,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.25463609172,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep05_zx_k3fix_18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.6304693437539487,
+        0.6217158834224944,
+        0.6094097217940777,
+        0.6613330226271424,
+        0.6313575835489971
+       ],
+       "cons_auc_mean": 0.6308571110293321,
+       "cons_auc_var": 0.00029454691421777334,
+       "cons_mppe_mean": 12.15829561679195,
+       "delta_vs_D": -0.030260318512508877,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.6309 < D 0.6611 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.60896061816,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep05_zx_k3fix_26000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.5863807473440955,
+        0.6084565572869519,
+        0.569604328813247,
+        0.5736813865385072,
+        0.5650408823166551
+       ],
+       "cons_auc_mean": 0.5806327804598913,
+       "cons_auc_var": 0.0002440515182211331,
+       "cons_mppe_mean": 10.151943859720065,
+       "delta_vs_D": -0.08048464908194963,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.5806 < D 0.6611 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.6620388833799999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep05_zx_k3fix_88000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3636640335028408,
+        0.36377287747328174,
+        0.3613057024528402,
+        0.38945230128475006,
+        0.3687196439552572
+       ],
+       "cons_auc_mean": 0.36938291173379395,
+       "cons_auc_var": 0.00010652793669739735,
+       "cons_mppe_mean": 6.417084931070468,
+       "delta_vs_D": -0.291734517808047,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3694 < D 0.6611 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.7803215353999999,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep05_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep05_raw_final44922",
+      "ep05_zx_k3fix_18000",
+      "ep05_zx_k3fix_26000",
+      "ep05_zx_k3fix_88000"
+     ],
+     "default": {
+      "job": "ep05_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.11136949643528385,
+       0.12063948188631199,
+       0.08268384749003914,
+       0.09637629535418685,
+       0.1261040307271498
+      ],
+      "cons_auc_mean": 0.10743463037859433,
+      "cons_auc_var": 0.00025465716214160747,
+      "cons_mppe_mean": 12.046160205109278,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.25463609172,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep05_zx_k3fix_18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.361332396277475,
+        0.38484597658380515,
+        0.36404485215672305,
+        0.3649010657372329,
+        0.3658699455843681
+       ],
+       "cons_auc_mean": 0.36819884726792085,
+       "cons_auc_var": 7.15659770247252e-05,
+       "cons_mppe_mean": 10.415113146138447,
+       "delta_vs_D": 0.2607642168893265,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.60896061816,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep05_zx_k3fix_26000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.2550670843336445,
+        0.26720225370089395,
+        0.2752594408569719,
+        0.28969958177717997,
+        0.25048426998396495
+       ],
+       "cons_auc_mean": 0.26754252613053103,
+       "cons_auc_var": 0.00019944448478791837,
+       "cons_mppe_mean": 12.975850756228771,
+       "delta_vs_D": 0.1601078957519367,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.6620388833799999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep05_zx_k3fix_88000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.33865176795690743,
+        0.31548997512009547,
+        0.33348203003934795,
+        0.3623647009926675,
+        0.3336074665130189
+       ],
+       "cons_auc_mean": 0.3367191881244075,
+       "cons_auc_var": 0.00022645373674439487,
+       "cons_mppe_mean": 10.562999347053381,
+       "delta_vs_D": 0.22928455774581316,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.7803215353999999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep05_zx_k3fix_88000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep05_zx_k3fix_88000 (cons_mean_AUC 0.3367 >= D 0.1074 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep05_zx_k3fix_88000",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep05_zx_k3fix_88000",
+   "pick_A": "ep05_raw_final44922",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 1,
+   "reason_B": "replaced by ep05_zx_k3fix_88000 (cons_mean_AUC 0.3367 >= D 0.1074 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 6,
+   "object": "monitor",
+   "default": "ep06_k3fix_final28420",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep06_k3fix_final28420",
+      "ep06_k3fix_t2wbest28000",
+      "ep06_raw_final33894"
+     ],
+     "default": {
+      "job": "ep06_k3fix_final28420",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8143391104753179,
+       0.8722518949691392,
+       0.903422562952841,
+       0.8467253509311752,
+       0.8487397860969469
+      ],
+      "cons_auc_mean": 0.8570957410850839,
+      "cons_auc_var": 0.000876275972346419,
+      "cons_mppe_mean": 13.023854845539153,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.9212912087799999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep06_k3fix_t2wbest28000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.2845219491382647,
+        0.25216266222924777,
+        0.2857092787943947,
+        0.2357935280084334,
+        0.23741163588829903
+       ],
+       "cons_auc_mean": 0.2591198108117279,
+       "cons_auc_var": 0.0004832061366971875,
+       "cons_mppe_mean": 8.560715264794364,
+       "delta_vs_D": -0.597975930273356,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2591 < D 0.8571 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9218635531,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep06_raw_final33894",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.25803820014968765,
+        0.18813660032570273,
+        0.2207855186658691,
+        0.2797512471726594,
+        0.22227566898749895
+       ],
+       "cons_auc_mean": 0.23379744706028358,
+       "cons_auc_var": 0.00101726808602568,
+       "cons_mppe_mean": 6.999003916725956,
+       "delta_vs_D": -0.6232982940248003,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2338 < D 0.8571 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7453525641000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep06_k3fix_final28420",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep06_k3fix_final28420",
+      "ep06_k3fix_t2wbest28000",
+      "ep06_raw_final33894"
+     ],
+     "default": {
+      "job": "ep06_k3fix_final28420",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.5764547965351026,
+       0.5507520439816112,
+       0.569648928953182,
+       0.5746430900841579,
+       0.5625472824441303
+      ],
+      "cons_auc_mean": 0.5668092283996368,
+      "cons_auc_var": 8.769352550881385e-05,
+      "cons_mppe_mean": 6.847107824007708,
+      "cons_sp_mean": 0.0,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.9212912087799999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep06_k3fix_t2wbest28000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7673515383812326,
+        0.7473193436040445,
+        0.7175808016951728,
+        0.7736805682947568,
+        0.7328333063864778
+       ],
+       "cons_auc_mean": 0.7477531116723368,
+       "cons_auc_var": 0.00043789767404690393,
+       "cons_mppe_mean": 4.588813556251238,
+       "delta_vs_D": 0.18094388327270006,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9218635531,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep06_raw_final33894",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7717505282847935,
+        0.8096992623539441,
+        0.7998612320760741,
+        0.8636006465779436,
+        0.8130759899228079
+       ],
+       "cons_auc_mean": 0.8115975318431126,
+       "cons_auc_var": 0.00088712752645388,
+       "cons_mppe_mean": 13.262023091289958,
+       "delta_vs_D": 0.2447883034434758,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7453525641000001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep06_raw_final33894",
+     "pick_input": "raw",
+     "reason": "replaced by ep06_raw_final33894 (cons_mean_AUC 0.8116 >= D 0.5668 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep06_raw_final33894",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep06_raw_final33894",
+   "pick_A": "ep06_k3fix_final28420",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "replaced by ep06_raw_final33894 (cons_mean_AUC 0.8116 >= D 0.5668 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 7,
+   "object": "iron",
+   "default": "ep07_k3fix_final18529",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep07_k3fix_final18529",
+      "ep07_k3fix_t2wbest14000",
+      "ep07_raw_final44922"
+     ],
+     "default": {
+      "job": "ep07_k3fix_final18529",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8407921060402839,
+       0.8498024339454695,
+       0.8287572097389209,
+       0.8196892431663297,
+       0.8439027066102801
+      ],
+      "cons_auc_mean": 0.8365887399002568,
+      "cons_auc_var": 0.00011853799215817413,
+      "cons_mppe_mean": 7.300592178884294,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.97852957592,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep07_k3fix_t2wbest14000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.21875494692752764,
+        0.20204114723496513,
+        0.24564367739503845,
+        0.2720359078312371,
+        0.23495197860131087
+       ],
+       "cons_auc_mean": 0.2346855315980158,
+       "cons_auc_var": 0.0005669283832927464,
+       "cons_mppe_mean": 7.316734028665938,
+       "delta_vs_D": -0.6019032083022411,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2347 < D 0.8366 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9757672991199999,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep07_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.21127043149597627,
+        0.21140881589116478,
+        0.20209948034050773,
+        0.15879608851336005,
+        0.16402323384287704
+       ],
+       "cons_auc_mean": 0.18951961001677717,
+       "cons_auc_var": 0.0005408977355530295,
+       "cons_mppe_mean": 9.93937567869591,
+       "delta_vs_D": -0.6470691298834796,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1895 < D 0.8366 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9019112723399999,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 1.0
+      }
+     ],
+     "pick": "ep07_k3fix_final18529",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep07_k3fix_final18529",
+      "ep07_k3fix_t2wbest14000",
+      "ep07_raw_final44922"
+     ],
+     "default": {
+      "job": "ep07_k3fix_final18529",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.23224320369531382,
+       0.2766284254821188,
+       0.24459922137011036,
+       0.25582857648335366,
+       0.2440301953870425
+      ],
+      "cons_auc_mean": 0.2506659244835879,
+      "cons_auc_var": 0.0002241877724643854,
+      "cons_mppe_mean": 10.544609915465553,
+      "cons_sp_mean": 0.0,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.97852957592,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep07_k3fix_t2wbest14000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6554765105870574,
+        0.6789443585084667,
+        0.7001284198110107,
+        0.6799420916124974,
+        0.6907115667246324
+       ],
+       "cons_auc_mean": 0.6810405894487329,
+       "cons_auc_var": 0.00022339921582143377,
+       "cons_mppe_mean": 6.841311248791682,
+       "delta_vs_D": 0.43037466496514504,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9757672991199999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep07_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.20723707848894563,
+        0.17355999442273584,
+        0.1894153403860251,
+        0.19821721745669543,
+        0.17598922367998548
+       ],
+       "cons_auc_mean": 0.1888837708868775,
+       "cons_auc_var": 0.00016506543274679008,
+       "cons_mppe_mean": 9.388794839681612,
+       "delta_vs_D": -0.06178215359671038,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1889 < D 0.2507 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9019112723399999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep07_k3fix_t2wbest14000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep07_k3fix_t2wbest14000 (cons_mean_AUC 0.6810 >= D 0.2507 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep07_k3fix_t2wbest14000",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep07_k3fix_t2wbest14000",
+   "pick_A": "ep07_k3fix_final18529",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 4,
+   "reason_B": "replaced by ep07_k3fix_t2wbest14000 (cons_mean_AUC 0.6810 >= D 0.2507 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 8,
+   "object": "skinny_wood_chair",
+   "default": "ep08_k3easy_final17496",
+   "default_input": "k3",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep08_k3easy_final17496",
+      "ep08_raw_final20597"
+     ],
+     "default": {
+      "job": "ep08_k3easy_final17496",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.443299689999412,
+       0.47841939254169646,
+       0.46547089207977305,
+       0.47865781064588575,
+       0.5000569147092853
+      ],
+      "cons_auc_mean": 0.47318093999521055,
+      "cons_auc_var": 0.0003464178908414698,
+      "cons_mppe_mean": 13.531312581693323,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.9259180790999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep08_raw_final20597",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.659631076791627,
+        0.6560337574656426,
+        0.645289255007203,
+        0.6647414602478253,
+        0.6475297304143988
+       ],
+       "cons_auc_mean": 0.6546450559853394,
+       "cons_auc_var": 5.337702884733054e-05,
+       "cons_mppe_mean": 14.806287983444212,
+       "delta_vs_D": 0.18146411599012885,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.41913841806,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep08_raw_final20597",
+     "pick_input": "raw",
+     "reason": "replaced by ep08_raw_final20597 (cons_mean_AUC 0.6546 >= D 0.4732 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep08_k3easy_final17496",
+      "ep08_raw_final20597"
+     ],
+     "default": {
+      "job": "ep08_k3easy_final17496",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.5481790238275605,
+       0.5904296631430755,
+       0.6036724416286551,
+       0.6137778986275882,
+       0.5771392404953753
+      ],
+      "cons_auc_mean": 0.5866396535444509,
+      "cons_auc_var": 0.000522088455038861,
+      "cons_mppe_mean": 10.18141438620572,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.9259180790999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep08_raw_final20597",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.224733723353262,
+        0.21830359477332223,
+        0.22709698408086476,
+        0.20052936502679095,
+        0.22443766731634027
+       ],
+       "cons_auc_mean": 0.21902026691011606,
+       "cons_auc_var": 9.393044867115277e-05,
+       "cons_mppe_mean": 10.112720673469628,
+       "delta_vs_D": -0.36761938663433485,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2190 < D 0.5866 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.41913841806,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep08_k3easy_final17496",
+     "pick_input": "k3",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 2
+    }
+   },
+   "pick": "ep08_k3easy_final17496",
+   "pick_input": "k3",
+   "binding_variant": "B",
+   "pick_B": "ep08_k3easy_final17496",
+   "pick_A": "ep08_raw_final20597",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 2,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep08_raw_final20597 (cons_mean_AUC 0.6546 >= D 0.4732 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 9,
+   "object": "big_red_bowl",
+   "default": "ep09_t2fixB_designated54449",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep09_k3fix_final39449",
+      "ep09_raw_final39328",
+      "ep09_t2fixB_designated54449"
+     ],
+     "default": {
+      "job": "ep09_t2fixB_designated54449",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.19738392918617573,
+       0.14071850660110347,
+       0.18898332999349735,
+       0.2049156888674453,
+       0.22615834175295696
+      ],
+      "cons_auc_mean": 0.19163195928023574,
+      "cons_auc_var": 0.0008001617234012773,
+      "cons_mppe_mean": 10.778171595259328,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.6837212643599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep09_k3fix_final39449",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.4945111543107529,
+        0.4448497287271492,
+        0.48464202383804955,
+        0.4271315094066306,
+        0.46614085838335484
+       ],
+       "cons_auc_mean": 0.4634550549331874,
+       "cons_auc_var": 0.0006172281245901377,
+       "cons_mppe_mean": 13.891547371276394,
+       "delta_vs_D": 0.27182309565295165,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "k3fix_final",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.58103448276,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep09_raw_final39328",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.36901000757505864,
+        0.40844962888502323,
+        0.43203993904377574,
+        0.37797737804499354,
+        0.3730828143416518
+       ],
+       "cons_auc_mean": 0.3921119535781006,
+       "cons_auc_var": 0.0005913515864980651,
+       "cons_mppe_mean": 8.006470001230596,
+       "delta_vs_D": 0.20047999429786484,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7619109195199999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep09_k3fix_final39449",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep09_k3fix_final39449 (cons_mean_AUC 0.4635 >= D 0.1916 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "G"
+     ],
+     "pool": [
+      "ep09_k3fix_final39449",
+      "ep09_raw_final39328",
+      "ep09_t2fixB_designated54449"
+     ],
+     "default": {
+      "job": "ep09_t2fixB_designated54449",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.1903572783136963,
+       0.2324326516341045,
+       0.24081731830284467,
+       0.23786841447536314,
+       0.24556933261202907
+      ],
+      "cons_auc_mean": 0.22940899906760753,
+      "cons_auc_var": 0.000399409441153071,
+      "cons_mppe_mean": 11.71724053725892,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.6837212643599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep09_k3fix_final39449",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.15416523550871344,
+        0.12574454530488885,
+        0.15704591612384577,
+        0.1508415463031254,
+        0.15543740163694147
+       ],
+       "cons_auc_mean": 0.14864692897550297,
+       "cons_auc_var": 0.00013528814681779152,
+       "cons_mppe_mean": 12.36366838995544,
+       "delta_vs_D": -0.08076207009210457,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1486 < D 0.2294 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "k3fix_final",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.58103448276,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep09_raw_final39328",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7130491711123698,
+        0.7083051322035566,
+        0.7026613943958643,
+        0.7040588535709659,
+        0.6775093111409086
+       ],
+       "cons_auc_mean": 0.701116772484733,
+       "cons_auc_var": 0.0001524817163045024,
+       "cons_mppe_mean": 5.0965885459912155,
+       "delta_vs_D": 0.4717077734171255,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7619109195199999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep09_raw_final39328",
+     "pick_input": "raw",
+     "reason": "replaced by ep09_raw_final39328 (cons_mean_AUC 0.7011 >= D 0.2294 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 3
+    }
+   },
+   "pick": "ep09_raw_final39328",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep09_raw_final39328",
+   "pick_A": "ep09_k3fix_final39449",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 3,
+   "reason_B": "replaced by ep09_raw_final39328 (cons_mean_AUC 0.7011 >= D 0.2294 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep09_k3fix_final39449 (cons_mean_AUC 0.4635 >= D 0.1916 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 10,
+   "object": "white_desk",
+   "default": "ep10_k3fix_final25319",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep10_k3fix_final25319",
+      "ep10_k3fix_t2wbest18000",
+      "ep10_raw_final34267"
+     ],
+     "default": {
+      "job": "ep10_k3fix_final25319",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.5595814899621958,
+       0.6051785678913308,
+       0.6036548666634016,
+       0.5833566221579336,
+       0.5638266068785985
+      ],
+      "cons_auc_mean": 0.5831196307106922,
+      "cons_auc_var": 0.0003669227257201275,
+      "cons_mppe_mean": 10.668190003555571,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.61536523932,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep10_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6170364738785591,
+        0.6188629674072708,
+        0.6363339377462182,
+        0.6523997087368723,
+        0.6439726299541885
+       ],
+       "cons_auc_mean": 0.6337211435446217,
+       "cons_auc_var": 0.00019199041295615138,
+       "cons_mppe_mean": 6.548909121316879,
+       "delta_vs_D": 0.05060151283392955,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.6232210327599998,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep10_raw_final34267",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8191253017779245,
+        0.7960915536845458,
+        0.8221490058163262,
+        0.8067100371746077,
+        0.8007714151802686
+       ],
+       "cons_auc_mean": 0.8089694627267345,
+       "cons_auc_var": 0.00010299899031653733,
+       "cons_mppe_mean": 7.142369257393031,
+       "delta_vs_D": 0.22584983201604236,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.24785894205999998,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep10_raw_final34267",
+     "pick_input": "raw",
+     "reason": "replaced by ep10_raw_final34267 (cons_mean_AUC 0.8090 >= D 0.5831 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 4
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep10_k3fix_final25319",
+      "ep10_k3fix_t2wbest18000",
+      "ep10_raw_final34267"
+     ],
+     "default": {
+      "job": "ep10_k3fix_final25319",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.552852633751646,
+       0.5410059267558538,
+       0.5408437506133769,
+       0.546516017836075,
+       0.5576696895812712
+      ],
+      "cons_auc_mean": 0.5477776037076445,
+      "cons_auc_var": 4.382696385247277e-05,
+      "cons_mppe_mean": 9.106901128797011,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.61536523932,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep10_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.5539019372797174,
+        0.5289679782468252,
+        0.5075399770239395,
+        0.4962121815738227,
+        0.5695676596421955
+       ],
+       "cons_auc_mean": 0.5312379467533,
+       "cons_auc_var": 0.0007552748218897312,
+       "cons_mppe_mean": 8.846333869095016,
+       "delta_vs_D": -0.01653965695434445,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.5312 < D 0.5478 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.6232210327599998,
+       "cons_sp_mean": 0.0,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep10_raw_final34267",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.26916105779024885,
+        0.2238609026676663,
+        0.273878479282147,
+        0.2543081910128867,
+        0.26886107632930345
+       ],
+       "cons_auc_mean": 0.25801394141645045,
+       "cons_auc_var": 0.0003347529485580443,
+       "cons_mppe_mean": 7.096042675946654,
+       "delta_vs_D": -0.28976366229119405,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2580 < D 0.5478 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.24785894205999998,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep10_k3fix_final25319",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep10_k3fix_final25319",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep10_k3fix_final25319",
+   "pick_A": "ep10_raw_final34267",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep10_raw_final34267 (cons_mean_AUC 0.8090 >= D 0.5831 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 11,
+   "object": "light_blue_book",
+   "default": "ep11_k3fix_final29175",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep11_k3fix_final29175",
+      "ep11_k3fix_t2wbest28000",
+      "ep11_raw_final28925"
+     ],
+     "default": {
+      "job": "ep11_k3fix_final29175",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.3122800985623733,
+       0.29833410420218265,
+       0.3135776272785479,
+       0.30410306205881216,
+       0.29896859328731984
+      ],
+      "cons_auc_mean": 0.30545269707784717,
+      "cons_auc_var": 4.143347659551331e-05,
+      "cons_mppe_mean": 7.4628198911985875,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.88174250834,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep11_k3fix_t2wbest28000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8461652241180971,
+        0.8382810863681371,
+        0.8704918820379066,
+        0.8039837108968317,
+        0.8626814443513156
+       ],
+       "cons_auc_mean": 0.8443206695544576,
+       "cons_auc_var": 0.0005377999188689036,
+       "cons_mppe_mean": 9.326186301376797,
+       "delta_vs_D": 0.5388679724766104,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.87146226414,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep11_raw_final28925",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7079691675216299,
+        0.7036094385772668,
+        0.7065250626348213,
+        0.6969676752722862,
+        0.7131182351081434
+       ],
+       "cons_auc_mean": 0.7056379158228294,
+       "cons_auc_var": 2.829294633989547e-05,
+       "cons_mppe_mean": 12.266962645502327,
+       "delta_vs_D": 0.40018521874498225,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8706576026399999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep11_k3fix_t2wbest28000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep11_k3fix_t2wbest28000 (cons_mean_AUC 0.8443 >= D 0.3055 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep11_k3fix_final29175",
+      "ep11_k3fix_t2wbest28000",
+      "ep11_raw_final28925"
+     ],
+     "default": {
+      "job": "ep11_k3fix_final29175",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.520761034842949,
+       0.5346284953381356,
+       0.5040682271500433,
+       0.5199952731551417,
+       0.5096628874536524
+      ],
+      "cons_auc_mean": 0.5178231835879845,
+      "cons_auc_var": 0.00011031134114269448,
+      "cons_mppe_mean": 14.957090597162775,
+      "cons_sp_mean": 0.2,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.88174250834,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep11_k3fix_t2wbest28000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.5061330832984923,
+        0.5192260800647404,
+        0.4864714605740909,
+        0.5151066995689303,
+        0.5294419434448598
+       ],
+       "cons_auc_mean": 0.5112758533902227,
+       "cons_auc_var": 0.00020991886033753693,
+       "cons_mppe_mean": 8.752013909320597,
+       "delta_vs_D": -0.006547330197761769,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.5113 < D 0.5178 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.87146226414,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep11_raw_final28925",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.4237219376395205,
+        0.3867877903779016,
+        0.3942775480997782,
+        0.40424810025345953,
+        0.37023238309803386
+       ],
+       "cons_auc_mean": 0.3958535518937387,
+       "cons_auc_var": 0.000317646295303599,
+       "cons_mppe_mean": 9.14971565751165,
+       "delta_vs_D": -0.1219696316942458,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3959 < D 0.5178 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8706576026399999,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep11_k3fix_final29175",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep11_k3fix_final29175",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep11_k3fix_final29175",
+   "pick_A": "ep11_k3fix_t2wbest28000",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep11_k3fix_t2wbest28000 (cons_mean_AUC 0.8443 >= D 0.3055 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 12,
+   "object": "black_platform",
+   "default": "ep12_k3fix_final23178",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep12_k3fix_final23178",
+      "ep12_k3fix_t2wbest20000",
+      "ep12_raw_final37575"
+     ],
+     "default": {
+      "job": "ep12_k3fix_final23178",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.19497619259631377,
+       0.16369767789677062,
+       0.17195110571867184,
+       0.18906650767343355,
+       0.1920232561861577
+      ],
+      "cons_auc_mean": 0.1823429480142695,
+      "cons_auc_var": 0.0001508299947027768,
+      "cons_mppe_mean": 11.55165135067798,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.7196071428599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep12_k3fix_t2wbest20000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6450553313184171,
+        0.6464254289071031,
+        0.6506870994794757,
+        0.6409793932578538,
+        0.6444824256477263
+       ],
+       "cons_auc_mean": 0.6455259357221153,
+       "cons_auc_var": 9.885625895918846e-06,
+       "cons_mppe_mean": 9.144903263157635,
+       "delta_vs_D": 0.4631829877078457,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7206964285999999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep12_raw_final37575",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.08729145379016275,
+        0.10621451245804656,
+        0.12717166505680244,
+        0.11403814926109011,
+        0.1399086404828117
+       ],
+       "cons_auc_mean": 0.11492488420978271,
+       "cons_auc_var": 0.0003228870140607398,
+       "cons_mppe_mean": 12.279915659912238,
+       "delta_vs_D": -0.0674180638044868,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1149 < D 0.1823 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.33951785712,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep12_k3fix_t2wbest20000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep12_k3fix_t2wbest20000 (cons_mean_AUC 0.6455 >= D 0.1823 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep12_k3fix_final23178",
+      "ep12_k3fix_t2wbest20000",
+      "ep12_raw_final37575"
+     ],
+     "default": {
+      "job": "ep12_k3fix_final23178",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.7110047851638904,
+       0.71646011947431,
+       0.6704088585614835,
+       0.7071447478076202,
+       0.6904727347889248
+      ],
+      "cons_auc_mean": 0.6990982491592458,
+      "cons_auc_var": 0.00028108538239777684,
+      "cons_mppe_mean": 9.915149271550803,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.7196071428599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep12_k3fix_t2wbest20000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.13380664197335157,
+        0.08373361438880704,
+        0.10775097941845443,
+        0.10291902316883983,
+        0.14713795786937833
+       ],
+       "cons_auc_mean": 0.11506964336376624,
+       "cons_auc_var": 0.0005125198074223393,
+       "cons_mppe_mean": 9.90931319384221,
+       "delta_vs_D": -0.5840286057954795,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1151 < D 0.6991 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7206964285999999,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep12_raw_final37575",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.2841977490605485,
+        0.22839786933535047,
+        0.3092691806660425,
+        0.28974141022577654,
+        0.2614638223157637
+       ],
+       "cons_auc_mean": 0.2746140063206963,
+       "cons_auc_var": 0.0007661052479858565,
+       "cons_mppe_mean": 10.98102501073071,
+       "delta_vs_D": -0.42448424283854946,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2746 < D 0.6991 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.33951785712,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep12_k3fix_final23178",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep12_k3fix_final23178",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep12_k3fix_final23178",
+   "pick_A": "ep12_k3fix_t2wbest20000",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep12_k3fix_t2wbest20000 (cons_mean_AUC 0.6455 >= D 0.1823 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 13,
+   "object": "snack_box",
+   "default": "ep13_k3fix_final39254",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep13_k3fix_final39254",
+      "ep13_raw_final44922"
+     ],
+     "default": {
+      "job": "ep13_k3fix_final39254",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8262284508914337,
+       0.8391970465434825,
+       0.8269954872130855,
+       0.849624795063956,
+       0.8685244393126146
+      ],
+      "cons_auc_mean": 0.8421140438049145,
+      "cons_auc_var": 0.00024867041280094186,
+      "cons_mppe_mean": 10.634980101077813,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.84055043382,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep13_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.5036515168078555,
+        0.4598091543361044,
+        0.46165712548296,
+        0.4944084961373357,
+        0.4814834172564502
+       ],
+       "cons_auc_mean": 0.4802019420041412,
+       "cons_auc_var": 0.00030262538526291293,
+       "cons_mppe_mean": 9.113982087577122,
+       "delta_vs_D": -0.3619121018007733,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4802 < D 0.8421 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5851816703000001,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep13_k3fix_final39254",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep13_k3fix_final39254",
+      "ep13_raw_final44922"
+     ],
+     "default": {
+      "job": "ep13_k3fix_final39254",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.265354694125183,
+       0.23531963500820996,
+       0.24097231718510614,
+       0.25738265549760686,
+       0.26997802573020624
+      ],
+      "cons_auc_mean": 0.2538014655092624,
+      "cons_auc_var": 0.00018282964383180018,
+      "cons_mppe_mean": 10.984800039930118,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.84055043382,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep13_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6233986061978206,
+        0.6084985135125519,
+        0.6353853323368087,
+        0.6042529815576697,
+        0.6251101251657145
+       ],
+       "cons_auc_mean": 0.6193291117541131,
+       "cons_auc_var": 0.00013047493609257612,
+       "cons_mppe_mean": 10.974768333294389,
+       "delta_vs_D": 0.3655276462448507,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5851816703000001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep13_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep13_raw_final44922 (cons_mean_AUC 0.6193 >= D 0.2538 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep13_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep13_raw_final44922",
+   "pick_A": "ep13_k3fix_final39254",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 1,
+   "reason_B": "replaced by ep13_raw_final44922 (cons_mean_AUC 0.6193 >= D 0.2538 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 14,
+   "object": "round_table",
+   "default": "ep14_k3fix_final44922",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep14_k3fix_final44922",
+      "ep14_k3fix_t2wbest36000",
+      "ep14_raw_final44922"
+     ],
+     "default": {
+      "job": "ep14_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.45174933237435005,
+       0.43432774646858,
+       0.46782233318988103,
+       0.40083360809261903,
+       0.44126800208114136
+      ],
+      "cons_auc_mean": 0.4392002044413143,
+      "cons_auc_var": 0.0004953438430276563,
+      "cons_mppe_mean": 9.492579176156497,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.5568856999,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep14_k3fix_t2wbest36000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.6828932036737986,
+        0.6821946644946616,
+        0.7158394994345578,
+        0.7403128331694624,
+        0.6923852046416352
+       ],
+       "cons_auc_mean": 0.7027250810828232,
+       "cons_auc_var": 0.0005013082974600079,
+       "cons_mppe_mean": 12.380201266731557,
+       "delta_vs_D": 0.26352487664150887,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5648413897600001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep14_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.8666236427403656,
+        0.8414133194265574,
+        0.9075856774338988,
+        0.8910613319858639,
+        0.8885741436508746
+       ],
+       "cons_auc_mean": 0.879051623047512,
+       "cons_auc_var": 0.0005240400722257319,
+       "cons_mppe_mean": 12.498705086641298,
+       "delta_vs_D": 0.43985141860619775,
+       "qualifies": false,
+       "why_not": [
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.20589123869999998,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep14_k3fix_final44922",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep14_k3fix_final44922",
+      "ep14_k3fix_t2wbest36000",
+      "ep14_raw_final44922"
+     ],
+     "default": {
+      "job": "ep14_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6603625182870821,
+       0.6016530098944123,
+       0.6626567132101344,
+       0.6584507092118793,
+       0.6630608583498767
+      ],
+      "cons_auc_mean": 0.649236761790677,
+      "cons_auc_var": 0.0005688186942003866,
+      "cons_mppe_mean": 8.21042336483913,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.5568856999,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep14_k3fix_t2wbest36000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.47096675174890135,
+        0.4406093513699831,
+        0.4696738719787099,
+        0.44384887837820697,
+        0.4615182094342647
+       ],
+       "cons_auc_mean": 0.45732341258201326,
+       "cons_auc_var": 0.00016343875715457817,
+       "cons_mppe_mean": 6.589939246854266,
+       "delta_vs_D": -0.19191334920866376,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4573 < D 0.6492 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5648413897600001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      },
+      {
+       "job": "ep14_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.22988832834972062,
+        0.18827455217935912,
+        0.20065212598679094,
+        0.20353110996693752,
+        0.19278548402972925
+       ],
+       "cons_auc_mean": 0.20302632010250746,
+       "cons_auc_var": 0.00020998969558152508,
+       "cons_mppe_mean": 9.248662317690341,
+       "delta_vs_D": -0.4462104416881696,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2030 < D 0.6492 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.20589123869999998,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep14_k3fix_final44922",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep14_k3fix_final44922",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep14_k3fix_final44922",
+   "pick_A": "ep14_k3fix_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 15,
+   "object": "wet_floor_sign",
+   "default": "ep15_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep15_raw_final44922"
+     ],
+     "default": {
+      "job": "ep15_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.25504557102552616,
+       0.2450252676624069,
+       0.2108474620442424,
+       0.23767657503136586,
+       0.2319911651595494
+      ],
+      "cons_auc_mean": 0.23611720818461818,
+      "cons_auc_var": 0.00021913047390067575,
+      "cons_mppe_mean": 11.419207960459524,
+      "cons_sp_mean": 0.2,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.6995804195599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep15_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep15_raw_final44922"
+     ],
+     "default": {
+      "job": "ep15_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8125586251764013,
+       0.8041745683838553,
+       0.8191136472989824,
+       0.814535331590447,
+       0.8197312037713109
+      ],
+      "cons_auc_mean": 0.8140226752441994,
+      "cons_auc_var": 3.157935245411046e-05,
+      "cons_mppe_mean": 14.00292887544261,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.6995804195599999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep15_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep15_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep15_raw_final44922",
+   "pick_A": "ep15_raw_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 16,
+   "object": "spray_bottle",
+   "default": "ep16_k3fix_final32063",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep16_k3fix_final32063",
+      "ep16_k3fix_t2wbest32000",
+      "ep16_raw_final31268"
+     ],
+     "default": {
+      "job": "ep16_k3fix_final32063",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6949408448526345,
+       0.7022561585265762,
+       0.6910303604755462,
+       0.6821702685471236,
+       0.6799765475268833
+      ],
+      "cons_auc_mean": 0.6900748359857527,
+      "cons_auc_var": 6.748666087542251e-05,
+      "cons_mppe_mean": 14.26310585539423,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.76698113208,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep16_k3fix_t2wbest32000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.2900037076931346,
+        0.31124476387453626,
+        0.2809605363208816,
+        0.2479855913721862,
+        0.24975380412983428
+       ],
+       "cons_auc_mean": 0.27598968067811464,
+       "cons_auc_var": 0.000587314697259314,
+       "cons_mppe_mean": 13.641829241550687,
+       "delta_vs_D": -0.41408515530763806,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2760 < D 0.6901 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7630503144799999,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep16_raw_final31268",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6357525532927649,
+        0.6240870939826725,
+        0.6334665616857846,
+        0.6278949345470893,
+        0.6484009294517739
+       ],
+       "cons_auc_mean": 0.6339204145920171,
+       "cons_auc_var": 6.924972585217882e-05,
+       "cons_mppe_mean": 14.214773162849923,
+       "delta_vs_D": -0.05615442139373561,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.6339 < D 0.6901 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9051624738000001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep16_k3fix_final32063",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 3
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep16_k3fix_final32063",
+      "ep16_k3fix_t2wbest32000",
+      "ep16_raw_final31268"
+     ],
+     "default": {
+      "job": "ep16_k3fix_final32063",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8176365960600366,
+       0.7791485277741977,
+       0.8107222511417064,
+       0.8056380790432874,
+       0.7523740589233421
+      ],
+      "cons_auc_mean": 0.7931039025885142,
+      "cons_auc_var": 0.0005846074970612513,
+      "cons_mppe_mean": 9.768539675314972,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.76698113208,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep16_k3fix_t2wbest32000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8406744450392721,
+        0.7998199501477903,
+        0.840454245619981,
+        0.8208107857269206,
+        0.8254411615822286
+       ],
+       "cons_auc_mean": 0.8254401176232384,
+       "cons_auc_var": 0.0002270664935375229,
+       "cons_mppe_mean": 10.381148677565255,
+       "delta_vs_D": 0.03233621503472428,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.7630503144799999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep16_raw_final31268",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6615956799195999,
+        0.6807578369443632,
+        0.6995206572776316,
+        0.6891969612062327,
+        0.6967621618052051
+       ],
+       "cons_auc_mean": 0.6855666594306065,
+       "cons_auc_var": 0.00018619301054756737,
+       "cons_mppe_mean": 13.409529958624859,
+       "delta_vs_D": -0.10753724315790769,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.6856 < D 0.7931 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9051624738000001,
+       "cons_sp_mean": 1.0,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep16_k3fix_t2wbest32000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep16_k3fix_t2wbest32000 (cons_mean_AUC 0.8254 >= D 0.7931 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep16_k3fix_t2wbest32000",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep16_k3fix_t2wbest32000",
+   "pick_A": "ep16_k3fix_final32063",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "replaced by ep16_k3fix_t2wbest32000 (cons_mean_AUC 0.8254 >= D 0.7931 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 17,
+   "object": "traffic_cone",
+   "default": "ep17_k3fix_final29845",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep17_k3fix_final29845",
+      "ep17_raw_final31807"
+     ],
+     "default": {
+      "job": "ep17_k3fix_final29845",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.4776379888839769,
+       0.4491217574981372,
+       0.4900707218080703,
+       0.45259682375418325,
+       0.4556116963020004
+      ],
+      "cons_auc_mean": 0.4650077976492736,
+      "cons_auc_var": 0.00025647143265022677,
+      "cons_mppe_mean": 4.5052421595753565,
+      "cons_sp_mean": 0.2,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.75426136364,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep17_raw_final31807",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.9002111127968363,
+        0.8477252738269532,
+        0.9051655847501989,
+        0.8779449578827366,
+        0.8969291746015421
+       ],
+       "cons_auc_mean": 0.8855952207716534,
+       "cons_auc_var": 0.00044354827184531063,
+       "cons_mppe_mean": 6.769613087022232,
+       "delta_vs_D": 0.42058742312237984,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5615909090800001,
+       "cons_sp_mean": 0.0,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep17_raw_final31807",
+     "pick_input": "raw",
+     "reason": "replaced by ep17_raw_final31807 (cons_mean_AUC 0.8856 >= D 0.4650 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 4
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep17_k3fix_final29845",
+      "ep17_raw_final31807"
+     ],
+     "default": {
+      "job": "ep17_k3fix_final29845",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.20508056918956685,
+       0.20499005329154502,
+       0.23625508166665127,
+       0.22515381491333594,
+       0.23748748576764692
+      ],
+      "cons_auc_mean": 0.22179340096574923,
+      "cons_auc_var": 0.00020568162548045789,
+      "cons_mppe_mean": 7.430079378028114,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.75426136364,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep17_raw_final31807",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.40296428845362786,
+        0.43635469750806416,
+        0.4149802838463903,
+        0.4339381117848895,
+        0.47154250090209043
+       ],
+       "cons_auc_mean": 0.43195597649901246,
+       "cons_auc_var": 0.0005438125275759332,
+       "cons_mppe_mean": 9.470161801756324,
+       "delta_vs_D": 0.21016257553326323,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.5615909090800001,
+       "cons_sp_mean": 1.0,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep17_raw_final31807",
+     "pick_input": "raw",
+     "reason": "replaced by ep17_raw_final31807 (cons_mean_AUC 0.4320 >= D 0.2218 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep17_raw_final31807",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep17_raw_final31807",
+   "pick_A": "ep17_raw_final31807",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 4,
+   "reason_B": "replaced by ep17_raw_final31807 (cons_mean_AUC 0.4320 >= D 0.2218 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep17_raw_final31807 (cons_mean_AUC 0.8856 >= D 0.4650 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 18,
+   "object": "blue_trash_can",
+   "default": "ep18_k3fix_final18911",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep18_k3fix_final18911",
+      "ep18_k3fix_t2wbest18000",
+      "ep18_raw_final44922"
+     ],
+     "default": {
+      "job": "ep18_k3fix_final18911",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6061884334335425,
+       0.605006412565804,
+       0.6322659832112749,
+       0.6337784711786297,
+       0.6283416478936252
+      ],
+      "cons_auc_mean": 0.6211161896565753,
+      "cons_auc_var": 0.00016384426803203408,
+      "cons_mppe_mean": 14.996265181643375,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.92972027972,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep18_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.5323812560336174,
+        0.5385569741738339,
+        0.5874739634841176,
+        0.5159176692910237,
+        0.5770606394254809
+       ],
+       "cons_auc_mean": 0.5502781004816146,
+       "cons_auc_var": 0.0007478315383005561,
+       "cons_mppe_mean": 8.146900100408082,
+       "delta_vs_D": -0.0708380891749607,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.5503 < D 0.6211 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.93393065268,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep18_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7353266996361464,
+        0.7171893673943042,
+        0.7456203334946682,
+        0.7638154807747175,
+        0.7275273088019009
+       ],
+       "cons_auc_mean": 0.7378958380203474,
+       "cons_auc_var": 0.0002548721013650237,
+       "cons_mppe_mean": 7.179906209249735,
+       "delta_vs_D": 0.11677964836377208,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.07207167832,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep18_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep18_raw_final44922 (cons_mean_AUC 0.7379 >= D 0.6211 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep18_k3fix_final18911",
+      "ep18_k3fix_t2wbest18000",
+      "ep18_raw_final44922"
+     ],
+     "default": {
+      "job": "ep18_k3fix_final18911",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.46013431160577256,
+       0.4538580861061905,
+       0.4685585946996196,
+       0.4260714893214987,
+       0.49853449342323886
+      ],
+      "cons_auc_mean": 0.461431395031264,
+      "cons_auc_var": 0.0005473594501375903,
+      "cons_mppe_mean": 9.992951900352125,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.92972027972,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep18_k3fix_t2wbest18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.31985102968024665,
+        0.3317043234794463,
+        0.30737434809165315,
+        0.3417760151568954,
+        0.33103413793505315
+       ],
+       "cons_auc_mean": 0.3263479708686589,
+       "cons_auc_var": 0.0001381767663429664,
+       "cons_mppe_mean": 14.854124230566995,
+       "delta_vs_D": -0.1350834241626051,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3263 < D 0.4614 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.93393065268,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep18_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7594033244963451,
+        0.7108036959546784,
+        0.7361845566637697,
+        0.7118422857337977,
+        0.7348660303077091
+       ],
+       "cons_auc_mean": 0.73061997863126,
+       "cons_auc_var": 0.00032455225847553387,
+       "cons_mppe_mean": 12.24980447836688,
+       "delta_vs_D": 0.26918858359999603,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.07207167832,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep18_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep18_raw_final44922 (cons_mean_AUC 0.7306 >= D 0.4614 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep18_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep18_raw_final44922",
+   "pick_A": "ep18_raw_final44922",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 5,
+   "reason_B": "replaced by ep18_raw_final44922 (cons_mean_AUC 0.7306 >= D 0.4614 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep18_raw_final44922 (cons_mean_AUC 0.7379 >= D 0.6211 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 19,
+   "object": "cane",
+   "default": "ep19_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep19_raw_final44922"
+     ],
+     "default": {
+      "job": "ep19_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.32001893822514693,
+       0.3094950039004668,
+       0.30211287661364383,
+       0.3228421658212945,
+       0.2925416448972366
+      ],
+      "cons_auc_mean": 0.30940212589155774,
+      "cons_auc_var": 0.00012615379563190825,
+      "cons_mppe_mean": 6.814271551795292,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.16588600452,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep19_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "pool": [
+      "ep19_raw_final44922",
+      "ep19_zx_g2_18000",
+      "ep19_zx_g2_20000",
+      "ep19_zx_g2_92000",
+      "ep19_zx_g2hard_52000"
+     ],
+     "default": {
+      "job": "ep19_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8802562310014447,
+       0.8497013786475014,
+       0.9082027970606628,
+       0.8869931572350231,
+       0.8651147536224606
+      ],
+      "cons_auc_mean": 0.8780536635134186,
+      "cons_auc_var": 0.00039300071029438566,
+      "cons_mppe_mean": 10.412331216364203,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.0,
+      "own_auc_mean": 0.16588600452,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep19_zx_g2_18000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.7941278977400217,
+        0.7855467731466114,
+        0.7894367416374509,
+        0.8135788135742613,
+        0.7530607565755547
+       ],
+       "cons_auc_mean": 0.78715019653478,
+       "cons_auc_var": 0.00038340985690621875,
+       "cons_mppe_mean": 6.230995211172748,
+       "delta_vs_D": -0.0909034669786386,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.7872 < D 0.8781 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.13213882618,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep19_zx_g2_20000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.30438310530575186,
+        0.26124312699030466,
+        0.28131574148318667,
+        0.29885697064377004,
+        0.29371158140470593
+       ],
+       "cons_auc_mean": 0.2879021051655438,
+       "cons_auc_var": 0.000235892752269022,
+       "cons_mppe_mean": 8.61924655292099,
+       "delta_vs_D": -0.5901515583478748,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2879 < D 0.8781 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.13306997744,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep19_zx_g2_92000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.43005523654890987,
+        0.3906429769289598,
+        0.430842391349844,
+        0.39724423261802677,
+        0.41082824307114363
+       ],
+       "cons_auc_mean": 0.41192261610337677,
+       "cons_auc_var": 0.0002712450914137311,
+       "cons_mppe_mean": 10.128751306107578,
+       "delta_vs_D": -0.46613104741004185,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4119 < D 0.8781 + 0.01"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.5323363431000001,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep19_zx_g2hard_52000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.8104565759858624,
+        0.8395880618462445,
+        0.8263910082482255,
+        0.8220821990728997,
+        0.8410560483086266
+       ],
+       "cons_auc_mean": 0.8279147786923717,
+       "cons_auc_var": 0.000130017641968619,
+       "cons_mppe_mean": 8.634028967850782,
+       "delta_vs_D": -0.05013888482104689,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.8279 < D 0.8781 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.13256207678000004,
+       "cons_sp_mean": 0.0,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep19_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep19_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep19_raw_final44922",
+   "pick_A": "ep19_raw_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 1,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 20,
+   "object": "rice_cooker",
+   "default": "ep20_k3easy_final18450",
+   "default_input": "k3",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep20_k3easy_final18450",
+      "ep20_raw_final19034"
+     ],
+     "default": {
+      "job": "ep20_k3easy_final18450",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6737149370713847,
+       0.6852552408673349,
+       0.6304787422146866,
+       0.6506591275434616,
+       0.6740964711097884
+      ],
+      "cons_auc_mean": 0.6628409037613313,
+      "cons_auc_var": 0.0003886080152917527,
+      "cons_mppe_mean": 13.312983248000972,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.90888336346,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep20_raw_final19034",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.1849514555861442,
+        0.14693326405246715,
+        0.1614485345378226,
+        0.18262468343854749,
+        0.19691496418906052
+       ],
+       "cons_auc_mean": 0.17457458036080836,
+       "cons_auc_var": 0.00032158237896058714,
+       "cons_mppe_mean": 9.90936766022574,
+       "delta_vs_D": -0.48826632340052295,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1746 < D 0.6628 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8597423146400001,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep20_k3easy_final18450",
+     "pick_input": "k3",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep20_k3easy_final18450",
+      "ep20_raw_final19034"
+     ],
+     "default": {
+      "job": "ep20_k3easy_final18450",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.18990086139595508,
+       0.22035280727661766,
+       0.25809559768320645,
+       0.22813947180840416,
+       0.2216181552296076
+      ],
+      "cons_auc_mean": 0.2236213786787582,
+      "cons_auc_var": 0.00047213093810255123,
+      "cons_mppe_mean": 12.845625479349565,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.90888336346,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep20_raw_final19034",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.10921241788579193,
+        0.11262766825889718,
+        0.1306347023167722,
+        0.1507697279747474,
+        0.10919924929906226
+       ],
+       "cons_auc_mean": 0.12248875314705418,
+       "cons_auc_var": 0.00026325660214938245,
+       "cons_mppe_mean": 9.47029497128828,
+       "delta_vs_D": -0.10113262553170402,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1225 < D 0.2236 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.8597423146400001,
+       "cons_sp_mean": 0.0,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep20_k3easy_final18450",
+     "pick_input": "k3",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep20_k3easy_final18450",
+   "pick_input": "k3",
+   "binding_variant": "B",
+   "pick_B": "ep20_k3easy_final18450",
+   "pick_A": "ep20_k3easy_final18450",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 21,
+   "object": "tall_bar_stool",
+   "default": "ep21_k3fix_final44922",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep21_k3fix_final44922",
+      "ep21_raw_final44922"
+     ],
+     "default": {
+      "job": "ep21_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.782143962163748,
+       0.7386775524544759,
+       0.7265850148371082,
+       0.760652852342246,
+       0.7102705017118557
+      ],
+      "cons_auc_mean": 0.7436659767018867,
+      "cons_auc_var": 0.0006402021387464409,
+      "cons_mppe_mean": 13.972066879446894,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.54692109144,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep21_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8409191137189069,
+        0.8761310093830741,
+        0.8700680654703601,
+        0.887571007107886,
+        0.8816131202708581
+       ],
+       "cons_auc_mean": 0.871260463190217,
+       "cons_auc_var": 0.0002637905743597598,
+       "cons_mppe_mean": 9.480635041643618,
+       "delta_vs_D": 0.12759448648833027,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.20556784662,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep21_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep21_raw_final44922 (cons_mean_AUC 0.8713 >= D 0.7437 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 3
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "G"
+     ],
+     "pool": [
+      "ep21_k3fix_final44922",
+      "ep21_raw_final44922"
+     ],
+     "default": {
+      "job": "ep21_k3fix_final44922",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6339303304618081,
+       0.6398135822514583,
+       0.629144462135792,
+       0.636317290922661,
+       0.6473410300676461
+      ],
+      "cons_auc_mean": 0.6373093391678731,
+      "cons_auc_var": 3.719462644715391e-05,
+      "cons_mppe_mean": 12.814289647127875,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.54692109144,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep21_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3696998698813202,
+        0.3509632787923736,
+        0.3336578495869667,
+        0.35090035021682586,
+        0.3137596752869497
+       ],
+       "cons_auc_mean": 0.3437962047528872,
+       "cons_auc_var": 0.00035556300959495085,
+       "cons_mppe_mean": 14.108943052216171,
+       "delta_vs_D": -0.29351313441498594,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3438 < D 0.6373 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.20556784662,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep21_k3fix_final44922",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep21_k3fix_final44922",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep21_k3fix_final44922",
+   "pick_A": "ep21_raw_final44922",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep21_raw_final44922 (cons_mean_AUC 0.8713 >= D 0.7437 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 22,
+   "object": "step_ladder",
+   "default": "ep22_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep22_raw_final44922"
+     ],
+     "default": {
+      "job": "ep22_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.2944703779080171,
+       0.24324072768106142,
+       0.27919731990111313,
+       0.29174930449046066,
+       0.3099875107814964
+      ],
+      "cons_auc_mean": 0.2837290481524298,
+      "cons_auc_var": 0.0005058096383648171,
+      "cons_mppe_mean": 11.942428234475422,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.47771210014000004,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep22_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 3
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep22_raw_final44922"
+     ],
+     "default": {
+      "job": "ep22_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.7383392508885321,
+       0.7863032079095837,
+       0.781001527858813,
+       0.7562989052980621,
+       0.7634408152036161
+      ],
+      "cons_auc_mean": 0.7650767414317213,
+      "cons_auc_var": 0.0002997563528489219,
+      "cons_mppe_mean": 8.362949933901287,
+      "cons_sp_mean": 0.2,
+      "cons_mp_mean": 1.0,
+      "own_auc_mean": 0.47771210014000004,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep22_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    }
+   },
+   "pick": "ep22_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep22_raw_final44922",
+   "pick_A": "ep22_raw_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 5,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 23,
+   "object": "toy_stroller",
+   "default": "ep23_k3easy_final19162",
+   "default_input": "k3",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep23_k3easy_final19162",
+      "ep23_raw_final20023"
+     ],
+     "default": {
+      "job": "ep23_k3easy_final19162",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.4209574311879542,
+       0.3771536954173536,
+       0.4046659748859712,
+       0.3997999853443443,
+       0.37821256127713654
+      ],
+      "cons_auc_mean": 0.39615792962255203,
+      "cons_auc_var": 0.0002767727689512177,
+      "cons_mppe_mean": 11.784879588246593,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.952589852,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep23_raw_final20023",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.7135188721265022,
+        0.7170081371027051,
+        0.747265411210634,
+        0.7029696113952943,
+        0.7046067537484828
+       ],
+       "cons_auc_mean": 0.7170737571167237,
+       "cons_auc_var": 0.00025570611794426256,
+       "cons_mppe_mean": 11.454327368760536,
+       "delta_vs_D": 0.3209158274941717,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.81428382664,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep23_raw_final20023",
+     "pick_input": "raw",
+     "reason": "replaced by ep23_raw_final20023 (cons_mean_AUC 0.7171 >= D 0.3962 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep23_k3easy_final19162",
+      "ep23_raw_final20023"
+     ],
+     "default": {
+      "job": "ep23_k3easy_final19162",
+      "input": "k3",
+      "n_scored": 5,
+      "cons_auc": [
+       0.3878977079314248,
+       0.4238791666168778,
+       0.44057048816188354,
+       0.3921674963388507,
+       0.43854749492895806
+      ],
+      "cons_auc_mean": 0.416612470795599,
+      "cons_auc_var": 0.0005060062261100125,
+      "cons_mppe_mean": 6.197041057449329,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.952589852,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep23_raw_final20023",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.579871579734186,
+        0.5812297613503642,
+        0.5673226916511372,
+        0.5379539070566117,
+        0.5600527749669232
+       ],
+       "cons_auc_mean": 0.5652861429518445,
+       "cons_auc_var": 0.00024910414477442757,
+       "cons_mppe_mean": 10.954044880260422,
+       "delta_vs_D": 0.14867367215624555,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.81428382664,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep23_raw_final20023",
+     "pick_input": "raw",
+     "reason": "replaced by ep23_raw_final20023 (cons_mean_AUC 0.5653 >= D 0.4166 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 3
+    }
+   },
+   "pick": "ep23_raw_final20023",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep23_raw_final20023",
+   "pick_A": "ep23_raw_final20023",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 3,
+   "reason_B": "replaced by ep23_raw_final20023 (cons_mean_AUC 0.5653 >= D 0.4166 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep23_raw_final20023 (cons_mean_AUC 0.7171 >= D 0.3962 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 24,
+   "object": "watering_can",
+   "default": "ep24_k3fix_final20636",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep24_k3fix_final20636",
+      "ep24_raw_final44922"
+     ],
+     "default": {
+      "job": "ep24_k3fix_final20636",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.7554648183431654,
+       0.7371802094992098,
+       0.708104912846605,
+       0.7754407029033082,
+       0.737306947132822
+      ],
+      "cons_auc_mean": 0.742699518145022,
+      "cons_auc_var": 0.000498253474865514,
+      "cons_mppe_mean": 5.038704588981186,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.94832887702,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep24_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.40233155464719406,
+        0.3993946648451934,
+        0.4231845945897011,
+        0.3890819638164175,
+        0.3900790983701691
+       ],
+       "cons_auc_mean": 0.40081437525373503,
+       "cons_auc_var": 0.00015152795439932242,
+       "cons_mppe_mean": 7.746441830991335,
+       "delta_vs_D": -0.34188514289128696,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4008 < D 0.7427 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9121657753999999,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep24_k3fix_final20636",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep24_k3fix_final20636",
+      "ep24_raw_final44922"
+     ],
+     "default": {
+      "job": "ep24_k3fix_final20636",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.8654872320359429,
+       0.8848278629031847,
+       0.8874638496655767,
+       0.864335765797656,
+       0.8613945458912189
+      ],
+      "cons_auc_mean": 0.8727018512587159,
+      "cons_auc_var": 0.0001229708053022286,
+      "cons_mppe_mean": 11.639109749391682,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.94832887702,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep24_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.33812104202958687,
+        0.3172235695357097,
+        0.322596210265072,
+        0.345142229773553,
+        0.32532030586081634
+       ],
+       "cons_auc_mean": 0.32968067149294755,
+       "cons_auc_var": 0.00010693628155369821,
+       "cons_mppe_mean": 13.608183920556609,
+       "delta_vs_D": -0.5430211797657684,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3297 < D 0.8727 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9121657753999999,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep24_k3fix_final20636",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep24_k3fix_final20636",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep24_k3fix_final20636",
+   "pick_A": "ep24_k3fix_final20636",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 1,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 25,
+   "object": "cyan_water_bottle",
+   "default": "ep25_k3fix_final42819",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep25_k3fix_final42819",
+      "ep25_raw_final44922"
+     ],
+     "default": {
+      "job": "ep25_k3fix_final42819",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.2918646675154262,
+       0.31473390454190164,
+       0.30452820367507233,
+       0.28313911623360694,
+       0.297067164897143
+      ],
+      "cons_auc_mean": 0.29826661137263005,
+      "cons_auc_var": 0.00011632878973285186,
+      "cons_mppe_mean": 9.730936639850645,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.344470314326,
+      "floor_count": 2,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep25_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8623790995133702,
+        0.8518361537609845,
+        0.8169927594874546,
+        0.8622960377001893,
+        0.884373449392258
+       ],
+       "cons_auc_mean": 0.8555754999708514,
+       "cons_auc_var": 0.0004846774116541398,
+       "cons_mppe_mean": 7.933084687239036,
+       "delta_vs_D": 0.5573088885982214,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.68645227008,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep25_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep25_raw_final44922 (cons_mean_AUC 0.8556 >= D 0.2983 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep25_k3fix_final42819",
+      "ep25_raw_final44922"
+     ],
+     "default": {
+      "job": "ep25_k3fix_final42819",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6646561104464566,
+       0.6453379534549578,
+       0.6961876312995778,
+       0.6573720390757415,
+       0.6753194370269863
+      ],
+      "cons_auc_mean": 0.667774634260744,
+      "cons_auc_var": 0.0002971132544908654,
+      "cons_mppe_mean": 6.663247269052578,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.344470314326,
+      "floor_count": 2,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep25_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.13671839402685385,
+        0.08256732911050292,
+        0.14241959796532683,
+        0.10668174136472228,
+        0.11533365535029132
+       ],
+       "cons_auc_mean": 0.11674414356353943,
+       "cons_auc_var": 0.0004658991402954475,
+       "cons_mppe_mean": 9.307254927722772,
+       "delta_vs_D": -0.5510304906972046,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1167 < D 0.6678 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.68645227008,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      }
+     ],
+     "pick": "ep25_k3fix_final42819",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 1
+    }
+   },
+   "pick": "ep25_k3fix_final42819",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep25_k3fix_final42819",
+   "pick_A": "ep25_raw_final44922",
+   "changed_B": false,
+   "changed_A": true,
+   "closest_run_B": 1,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "replaced by ep25_raw_final44922 (cons_mean_AUC 0.8556 >= D 0.2983 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 26,
+   "object": "skateboard",
+   "default": "ep26_raw_final34948",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep26_k3ca_final25298",
+      "ep26_raw_final34948",
+      "ep26_zx_k3fix_16000",
+      "ep26_zx_k3fix_20000",
+      "ep26_zx_k3fix_92000"
+     ],
+     "default": {
+      "job": "ep26_raw_final34948",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.33342624910845065,
+       0.3302313265055162,
+       0.294030255366471,
+       0.30613138020938047,
+       0.3013478093781048
+      ],
+      "cons_auc_mean": 0.3130334041135846,
+      "cons_auc_var": 0.0002513894764369079,
+      "cons_mppe_mean": 8.37966395774099,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.8,
+      "own_auc_mean": 0.26991778772,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep26_k3ca_final25298",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.55999994984983,
+        0.5815038029799485,
+        0.6043117726989925,
+        0.6013446566284352,
+        0.5922578793549537
+       ],
+       "cons_auc_mean": 0.587883612302432,
+       "cons_auc_var": 0.00025768379587408184,
+       "cons_mppe_mean": 7.221473809072291,
+       "delta_vs_D": 0.2748502081888474,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3ca",
+       "family": "k3ca_final",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.8050074738600002,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep26_zx_k3fix_16000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.716596862113935,
+        0.7056814502564626,
+        0.7320919415461649,
+        0.7392640546432815,
+        0.7243008986146042
+       ],
+       "cons_auc_mean": 0.7235870414348897,
+       "cons_auc_var": 0.00013761689269999177,
+       "cons_mppe_mean": 10.4455215887553,
+       "delta_vs_D": 0.4105536373213051,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.8999439461999998,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep26_zx_k3fix_20000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.9244353375735582,
+        0.8518084369424127,
+        0.8638365575799632,
+        0.8546794956792171,
+        0.8580296814937478
+       ],
+       "cons_auc_mean": 0.8705579018537797,
+       "cons_auc_var": 0.0007417154142165041,
+       "cons_mppe_mean": 11.586701550649547,
+       "delta_vs_D": 0.5575244977401951,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.9015134529400001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep26_zx_k3fix_92000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.3646652512684937,
+        0.3119499959127952,
+        0.3683270717355514,
+        0.35798787512719443,
+        0.35435478783738084
+       ],
+       "cons_auc_mean": 0.35145699637628314,
+       "cons_auc_var": 0.00041418201963162914,
+       "cons_mppe_mean": 9.957286986259124,
+       "delta_vs_D": 0.038423592262698536,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.9048766816,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep26_zx_k3fix_20000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep26_zx_k3fix_20000 (cons_mean_AUC 0.8706 >= D 0.3130 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 3
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep26_k3ca_final25298",
+      "ep26_raw_final34948",
+      "ep26_zx_k3fix_16000",
+      "ep26_zx_k3fix_20000",
+      "ep26_zx_k3fix_92000"
+     ],
+     "default": {
+      "job": "ep26_raw_final34948",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.4292789442420356,
+       0.4232346849071166,
+       0.4195734329855687,
+       0.39034769469256914,
+       0.4437932725366461
+      ],
+      "cons_auc_mean": 0.4212456058727872,
+      "cons_auc_var": 0.0003068730620419067,
+      "cons_mppe_mean": 9.684300651421268,
+      "cons_sp_mean": 0.8,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.26991778772,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep26_k3ca_final25298",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.4288614029568215,
+        0.4126610072050555,
+        0.444700283339079,
+        0.42722430524062266,
+        0.384082333722194
+       ],
+       "cons_auc_mean": 0.41950586649275456,
+       "cons_auc_var": 0.0004167075544153624,
+       "cons_mppe_mean": 17.34250153926432,
+       "delta_vs_D": -0.0017397393800326344,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4195 < D 0.4212 + 0.01"
+       ],
+       "input": "k3ca",
+       "family": "k3ca_final",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.8050074738600002,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep26_zx_k3fix_16000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.16303562533191956,
+        0.11795438766186785,
+        0.1328534630790189,
+        0.15654257146602246,
+        0.10242985965786
+       ],
+       "cons_auc_mean": 0.13456318143933774,
+       "cons_auc_var": 0.0005210198366974947,
+       "cons_mppe_mean": 8.123085764467262,
+       "delta_vs_D": -0.2866824244334495,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1346 < D 0.4212 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.8999439461999998,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep26_zx_k3fix_20000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.41177035665628164,
+        0.40427215427928,
+        0.4303761745174395,
+        0.41327618708846797,
+        0.431781928097321
+       ],
+       "cons_auc_mean": 0.41829536012775803,
+       "cons_auc_var": 0.00011845033249709616,
+       "cons_mppe_mean": 9.14845855051303,
+       "delta_vs_D": -0.0029502457450291675,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4183 < D 0.4212 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.9015134529400001,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      },
+      {
+       "job": "ep26_zx_k3fix_92000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.840552387730507,
+        0.868785445215504,
+        0.8796953066084944,
+        0.86397558591244,
+        0.9021632028029305
+       ],
+       "cons_auc_mean": 0.8710343856539751,
+       "cons_auc_var": 0.00040561027863334626,
+       "cons_mppe_mean": 8.644051021934036,
+       "delta_vs_D": 0.44978877978118786,
+       "qualifies": true,
+       "why_not": [],
+       "input": "k3fix",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.9048766816,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep26_zx_k3fix_92000",
+     "pick_input": "k3fix",
+     "reason": "replaced by ep26_zx_k3fix_92000 (cons_mean_AUC 0.8710 >= D 0.4212 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 2
+    }
+   },
+   "pick": "ep26_zx_k3fix_92000",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep26_zx_k3fix_92000",
+   "pick_A": "ep26_zx_k3fix_20000",
+   "changed_B": true,
+   "changed_A": true,
+   "closest_run_B": 2,
+   "reason_B": "replaced by ep26_zx_k3fix_92000 (cons_mean_AUC 0.8710 >= D 0.4212 + 0.01; floor 5/5)",
+   "reason_A": "replaced by ep26_zx_k3fix_20000 (cons_mean_AUC 0.8706 >= D 0.3130 + 0.01; floor 5/5)"
+  },
+  {
+   "episode": 27,
+   "object": "woven_basket",
+   "default": "ep27_k3fix_final20863",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep27_k3fix_final20863",
+      "ep27_raw_final44922"
+     ],
+     "default": {
+      "job": "ep27_k3fix_final20863",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.5143712453788607,
+       0.5186548939806456,
+       0.5413908337642587,
+       0.5296769522943485,
+       0.5032486723033699
+      ],
+      "cons_auc_mean": 0.5214685195442967,
+      "cons_auc_var": 0.0001709055189931054,
+      "cons_mppe_mean": 11.31139738890256,
+      "cons_sp_mean": 0.2,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.9753761061999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep27_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.180272100221189,
+        0.13878005020115902,
+        0.1429844152774031,
+        0.1735577698634,
+        0.13719134391993476
+       ],
+       "cons_auc_mean": 0.15455713589661718,
+       "cons_auc_var": 0.00034133970158065655,
+       "cons_mppe_mean": 13.369130403881176,
+       "delta_vs_D": -0.36691138364767956,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1546 < D 0.5215 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9045796460200002,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep27_k3fix_final20863",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 2
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep27_k3fix_final20863",
+      "ep27_raw_final44922"
+     ],
+     "default": {
+      "job": "ep27_k3fix_final20863",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.4246309025017942,
+       0.4116119787271853,
+       0.428101638962333,
+       0.39687841151916586,
+       0.37690704153769566
+      ],
+      "cons_auc_mean": 0.40762599464963484,
+      "cons_auc_var": 0.0003566943187173808,
+      "cons_mppe_mean": 13.39514729598145,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.6,
+      "own_auc_mean": 0.9753761061999999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep27_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.40836532277302845,
+        0.4283536297909847,
+        0.4136300760339159,
+        0.4045753457241991,
+        0.4092315299236258
+       ],
+       "cons_auc_mean": 0.41283118084915077,
+       "cons_auc_var": 6.85289686840333e-05,
+       "cons_mppe_mean": 9.910358241394574,
+       "delta_vs_D": 0.005205186199515932,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.4128 < D 0.4076 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.9045796460200002,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep27_k3fix_final20863",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 2
+    }
+   },
+   "pick": "ep27_k3fix_final20863",
+   "pick_input": "k3fix",
+   "binding_variant": "B",
+   "pick_B": "ep27_k3fix_final20863",
+   "pick_A": "ep27_k3fix_final20863",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 2,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 28,
+   "object": "squeegee",
+   "default": "ep28_raw_final44922",
+   "default_input": "raw",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C"
+     ],
+     "pool": [
+      "ep28_raw_final44922"
+     ],
+     "default": {
+      "job": "ep28_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.17519994034267755,
+       0.13788212954510468,
+       0.20327018508002817,
+       0.21472211377091244,
+       0.18383801665079466
+      ],
+      "cons_auc_mean": 0.1829824770779035,
+      "cons_auc_var": 0.0007028673613917659,
+      "cons_mppe_mean": 12.105554828564753,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.032236842104,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [],
+     "pick": "ep28_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 5
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F",
+      "C",
+      "G"
+     ],
+     "pool": [
+      "ep28_raw_final44922",
+      "ep28_zx_g2_100000",
+      "ep28_zx_g2_16000",
+      "ep28_zx_g2_22000"
+     ],
+     "default": {
+      "job": "ep28_raw_final44922",
+      "input": "raw",
+      "n_scored": 5,
+      "cons_auc": [
+       0.6173563784661201,
+       0.6174136001572473,
+       0.6611776271704292,
+       0.6264033491541391,
+       0.6078302585050385
+      ],
+      "cons_auc_mean": 0.6260362426905949,
+      "cons_auc_var": 0.00034323990753861095,
+      "cons_mppe_mean": 9.051894319989566,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 1.0,
+      "own_auc_mean": 0.032236842104,
+      "floor_count": 0,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep28_zx_g2_100000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 4,
+       "cons_auc": [
+        0.1910391027158123,
+        0.2309658396646202,
+        0.21271886721449534,
+        0.22582755361174828,
+        0.23499277895760828
+       ],
+       "cons_auc_mean": 0.2191088284328569,
+       "cons_auc_var": 0.00025335419477093204,
+       "cons_mppe_mean": 13.173670798526464,
+       "delta_vs_D": -0.406927414257738,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.2191 < D 0.6260 + 0.01"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "a1",
+       "provisional": false,
+       "own_auc_mean": 0.47837803642,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep28_zx_g2_16000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.3715057352782615,
+        0.3577910979281716,
+        0.37732494452574117,
+        0.38226463250649784,
+        0.36859677864745033
+       ],
+       "cons_auc_mean": 0.3714966377772245,
+       "cons_auc_var": 6.923399166710002e-05,
+       "cons_mppe_mean": 13.281576959853775,
+       "delta_vs_D": -0.25453960491337035,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3715 < D 0.6260 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "t2_best5",
+       "provisional": true,
+       "own_auc_mean": 0.16448633604000001,
+       "cons_sp_mean": 0.8,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep28_zx_g2_22000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 0,
+       "cons_auc": [
+        0.09339720871464209,
+        0.13632125426537872,
+        0.08294294850251559,
+        0.11133227909842797,
+        0.1141131484853217
+       ],
+       "cons_auc_mean": 0.10762136781325722,
+       "cons_auc_var": 0.0003381897285929532,
+       "cons_mppe_mean": 7.9328366926831535,
+       "delta_vs_D": -0.5184148748773376,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.1076 < D 0.6260 + 0.01",
+        "stability floor 0/5 own-input runs with SP-SR = MP-SR = 1 (< 4)"
+       ],
+       "input": "g2",
+       "family": "zuxing",
+       "source": "new",
+       "provisional": true,
+       "own_auc_mean": 0.35134109310600004,
+       "cons_sp_mean": 0.4,
+       "cons_mp_mean": 0.2
+      }
+     ],
+     "pick": "ep28_raw_final44922",
+     "pick_input": "raw",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    }
+   },
+   "pick": "ep28_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep28_raw_final44922",
+   "pick_A": "ep28_raw_final44922",
+   "changed_B": false,
+   "changed_A": false,
+   "closest_run_B": 4,
+   "reason_B": "D kept (no qualifying challenger)",
+   "reason_A": "D kept (no qualifying challenger)"
+  },
+  {
+   "episode": 29,
+   "object": "rolling_luggage",
+   "default": "ep29_k3fix_final17358",
+   "default_input": "k3fix",
+   "default_source": "t2_best5 SELECTED (snapshot)",
+   "t2best5_flags": [],
+   "flags": [],
+   "variants": {
+    "A": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep29_k3fix_final17358",
+      "ep29_k3fix_t2wbest16000",
+      "ep29_raw_final44922"
+     ],
+     "default": {
+      "job": "ep29_k3fix_final17358",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.9048211221393441,
+       0.8491702479547922,
+       0.8775457382557017,
+       0.8923290973117401,
+       0.9117263827400501
+      ],
+      "cons_auc_mean": 0.8871185176803257,
+      "cons_auc_var": 0.0004955577297199437,
+      "cons_mppe_mean": 10.466100762118824,
+      "cons_sp_mean": 0.6,
+      "cons_mp_mean": 0.4,
+      "own_auc_mean": 0.9267933618799999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep29_k3fix_t2wbest16000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.6164694765377156,
+        0.6372502400185881,
+        0.609345532847761,
+        0.5983401837230957,
+        0.630508845088945
+       ],
+       "cons_auc_mean": 0.618382855643221,
+       "cons_auc_var": 0.00019801214676283194,
+       "cons_mppe_mean": 6.778715824125827,
+       "delta_vs_D": -0.26873566203710464,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.6184 < D 0.8871 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.92732869378,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.6
+      },
+      {
+       "job": "ep29_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.355421337210213,
+        0.371067827988491,
+        0.409754873328955,
+        0.39299327264006895,
+        0.35872053148745436
+       ],
+       "cons_auc_mean": 0.3775915685310364,
+       "cons_auc_var": 0.0004323770103143035,
+       "cons_mppe_mean": 9.335489729523934,
+       "delta_vs_D": -0.5095269491492893,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3776 < D 0.8871 + 0.01"
+       ],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.12398286938,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.4
+      }
+     ],
+     "pick": "ep29_k3fix_final17358",
+     "pick_input": "k3fix",
+     "reason": "D kept (no qualifying challenger)",
+     "flags": [],
+     "pick_closest_run": 4
+    },
+    "B": {
+     "reference_tracks": [
+      "R",
+      "F"
+     ],
+     "pool": [
+      "ep29_k3fix_final17358",
+      "ep29_k3fix_t2wbest16000",
+      "ep29_raw_final44922"
+     ],
+     "default": {
+      "job": "ep29_k3fix_final17358",
+      "input": "k3fix",
+      "n_scored": 5,
+      "cons_auc": [
+       0.458986482369767,
+       0.45035746546039584,
+       0.4276754543466353,
+       0.4293261790213259,
+       0.4188029860370147
+      ],
+      "cons_auc_mean": 0.43702971344702773,
+      "cons_auc_var": 0.0002277577746601151,
+      "cons_mppe_mean": 10.10531672549045,
+      "cons_sp_mean": 0.4,
+      "cons_mp_mean": 0.2,
+      "own_auc_mean": 0.9267933618799999,
+      "floor_count": 5,
+      "n_own_ok": 5
+     },
+     "challengers": [
+      {
+       "job": "ep29_k3fix_t2wbest16000",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.2928456314539725,
+        0.30703689595455874,
+        0.3042517094180596,
+        0.31856211307696947,
+        0.34223386119796967
+       ],
+       "cons_auc_mean": 0.312986042220306,
+       "cons_auc_var": 0.0002807689075554016,
+       "cons_mppe_mean": 7.169522154823805,
+       "delta_vs_D": -0.12404367122672172,
+       "qualifies": false,
+       "why_not": [
+        "cons_mean_AUC 0.3130 < D 0.4370 + 0.01"
+       ],
+       "input": "k3fix",
+       "family": "t2watch_best",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.92732869378,
+       "cons_sp_mean": 0.2,
+       "cons_mp_mean": 0.4
+      },
+      {
+       "job": "ep29_raw_final44922",
+       "n_scored": 5,
+       "n_own_ok": 5,
+       "floor_count": 5,
+       "cons_auc": [
+        0.8705801954716534,
+        0.8800146525044037,
+        0.881632412476937,
+        0.8880690428412688,
+        0.8780196100712326
+       ],
+       "cons_auc_mean": 0.8796631826730991,
+       "cons_auc_var": 3.197237392573874e-05,
+       "cons_mppe_mean": 7.72446000945258,
+       "delta_vs_D": 0.44263346922607133,
+       "qualifies": true,
+       "why_not": [],
+       "input": "raw",
+       "family": "raw",
+       "source": "t2_best5",
+       "provisional": false,
+       "own_auc_mean": 0.12398286938,
+       "cons_sp_mean": 0.6,
+       "cons_mp_mean": 0.8
+      }
+     ],
+     "pick": "ep29_raw_final44922",
+     "pick_input": "raw",
+     "reason": "replaced by ep29_raw_final44922 (cons_mean_AUC 0.8797 >= D 0.4370 + 0.01; floor 5/5)",
+     "flags": [],
+     "pick_closest_run": 2
+    }
+   },
+   "pick": "ep29_raw_final44922",
+   "pick_input": "raw",
+   "binding_variant": "B",
+   "pick_B": "ep29_raw_final44922",
+   "pick_A": "ep29_k3fix_final17358",
+   "changed_B": true,
+   "changed_A": false,
+   "closest_run_B": 2,
+   "reason_B": "replaced by ep29_raw_final44922 (cons_mean_AUC 0.8797 >= D 0.4370 + 0.01; floor 5/5)",
+   "reason_A": "D kept (no qualifying challenger)"
+  }
+ ]
+}

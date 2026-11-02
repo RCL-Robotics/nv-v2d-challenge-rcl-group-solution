@@ -1,0 +1,62 @@
+{
+ "checked_at": "2026-10-26 17:47:05",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3ca/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "d3a4a2498480e715"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "c0749211ce6d40ec"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "8572ed3bf973b08a"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "d3a4a2498480e715"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "8572ed3bf973b08a"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "5367fdef34ef90d3"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "7d05b4ab00818a6f"
+   ],
+   "missing": []
+  },
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "0885d534a2fd2869"
+   ],
+   "missing": []
+  }
+ }
+}

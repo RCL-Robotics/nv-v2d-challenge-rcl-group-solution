@@ -1,0 +1,11 @@
+{
+ "n": 30,
+ "max_fit_resid_m": 1.449288210132719e-07,
+ "max_packer_resid_vs_k3_m": 1.6055480323129606e-07,
+ "max_packer_resid_vs_k3_rad": 1.5769906706002898e-07,
+ "n_rejected_vs_released_noisy": 30,
+ "mean_ref_change_cm": 1.3776934584962235,
+ "mean_ref_change_deg": 20.373756859588905,
+ "invisible_frames": 1,
+ "checkpoints": 30
+}

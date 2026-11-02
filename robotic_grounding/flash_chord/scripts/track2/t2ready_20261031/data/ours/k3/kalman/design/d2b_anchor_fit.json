@@ -1,0 +1,18 @@
+{
+ "tilt": {
+  "sigma_model_deg_per_axis": 3.0,
+  "t_sat_frames": 375.0,
+  "outlier_eps": 0.05,
+  "loglik": -395.67166894381285,
+  "implied_sat_std_per_axis_deg": 14.919883003523267,
+  "n": 115
+ },
+ "height": {
+  "mu_cm": -0.2999999999999985,
+  "sigma_model_cm": 0.3500000000000001,
+  "t_sat_frames": 275.0,
+  "outlier_eps": 0.0,
+  "loglik": -101.43833347716227,
+  "n": 68
+ }
+}

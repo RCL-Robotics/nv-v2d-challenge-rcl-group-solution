@@ -1,0 +1,22 @@
+{
+ "program": "/root/autodl-tmp/haoran.zhang/code/fc_r2/scripts/train_rl.py",
+ "args": [
+  "experiment=g1_recon_body_coord_rsi_r2",
+  "task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet'",
+  "reset.seed=42",
+  "output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier2/ep24",
+  "training.max_iterations=45000",
+  "logging.mode=online",
+  "logging.entity=juicer_test",
+  "logging.project=v2d-track2-tier2",
+  "logging.experiment=C3r2_tier2",
+  "logging.run_name=ep24_watering_can",
+  "logging.upload_checkpoints=false",
+  "scene.support=false"
+ ],
+ "git": {
+  "commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b"
+ },
+ "startedAt": "2026-10-17T12:56:03.483658Z",
+ "python": "CPython 3.11.17"
+}

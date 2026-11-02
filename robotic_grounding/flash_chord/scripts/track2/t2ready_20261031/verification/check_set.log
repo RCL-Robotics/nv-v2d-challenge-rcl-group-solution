@@ -1,0 +1,19 @@
+{
+ "summary": {
+  "episodes": 30,
+  "stages": 32,
+  "stages_composing": 32,
+  "stages_with_saved_hydra_record": 25,
+  "B_ok": 25,
+  "pinned_stages": 30,
+  "pinned_D_ok": 30,
+  "pinned_relocated": 6,
+  "pinned_E_ok": 30,
+  "new_keys_union": [],
+  "files_read": true,
+  "hash_checked": true
+ },
+ "failures": [],
+ "notes": []
+}
+ALL OK

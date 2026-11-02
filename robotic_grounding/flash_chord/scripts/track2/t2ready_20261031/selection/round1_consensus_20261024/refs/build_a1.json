@@ -1,0 +1,15 @@
+{
+ "written_at": "2026-10-26 18:18:46",
+ "ran": "t2cons_consensus.cmd_refs (pinned, unchanged) via scripts/t2cons_a1_consensus.py refs",
+ "a1_script_sha256": "5dd430ec78f32cdff7921cfdcc5eca2b9de2a925cf29f6c41b141c7d0a580658",
+ "consensus_script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "pins_a1c_sha256": "b740e43730fa24db0724e1ab42b1f1dc171bcbf95fa5a915c618c04b63894830",
+ "amendments_sha256": "f648226a95a061eeefcfd5138cb01823db8a060fe121a0f4968ffa163dc4229f",
+ "rebound": [
+  "require_pins -> amended pin chain (AMENDMENTS A1.4)"
+ ],
+ "build_json_sha256": "9646de2daf02301dd2efbc72a7507c539b1100c3ec0fe39adade169195d18dd3",
+ "build_ok": true,
+ "rc": 0,
+ "binding_variant": "B"
+}

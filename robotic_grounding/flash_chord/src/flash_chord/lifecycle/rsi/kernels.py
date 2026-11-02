@@ -32,6 +32,19 @@ def rsi_bin_of(frame: int, bin_frames: int, num_bins: int) -> int:
     return b
 
 
+@wp.func
+def help_at_frame(frame: int, top: wp.array(dtype=wp.float32), bin_frames: int, num_bins: int) -> float:
+    """Success-mode help top at a reference frame: linear between bin centres, the end bins' tops beyond them."""
+    x = (float(frame) + 0.5) / float(bin_frames) - 0.5
+    if x <= 0.0:
+        return top[0]
+    b = int(wp.floor(x))
+    if b >= num_bins - 1:
+        return top[num_bins - 1]
+    w = x - float(b)
+    return top[b] + w * (top[b + 1] - top[b])
+
+
 @wp.kernel
 def sample_rsi_reset(
     reset_mask: wp.array(dtype=wp.int32),
@@ -60,6 +73,9 @@ def sample_rsi_reset(
     write_count: wp.array(dtype=wp.int32),
     force_bin: wp.array(dtype=wp.int32),
     force_slot: wp.array(dtype=wp.int32),
+    frame_help: int,
+    bin_frames: int,
+    start_shift: int,
     reset_count: wp.array(dtype=wp.int32),
     reset_frame: wp.array(dtype=wp.int32),
     finger_scale: wp.array(dtype=wp.float32),
@@ -79,12 +95,24 @@ def sample_rsi_reset(
     served: wp.array(dtype=wp.int32),
     start_stats: wp.array(dtype=wp.int32),
     drop_total: wp.array(dtype=wp.int32),
+    help_factor: wp.array(dtype=wp.float32),
+    visit_bin: wp.array(dtype=wp.int32),
 ) -> None:
     """Draw an RSI start (anchor / start bin / frame / keyframe) and its help for every selected world.
 
     CH curriculum.py:455-483 (start bins, anchors, per-lane help in [top/band, top]) and keyframes.py:137-155
     (``to_end`` sampling: only slots whose stored help tag is <= the bin's current top, and only once a bin has
     ``min_fill`` of them). Replaces stock ``sample_recon_body_reset`` (reset.py:643-709).
+
+    The lane's band factor ``U[1/band, 1]`` is kept in ``help_factor`` and its start bin in ``visit_bin`` (the
+    pass-through bookkeeping of ``rsi_transition``). With ``frame_help`` (success mode) the lane's help is the factor
+    times the help top at its current frame (``help_at_frame``), refreshed every step by ``update_frame_help``;
+    otherwise it is the factor times its start bin's top for the whole episode, as before.
+
+    ``start_shift`` (dev, the rolling start's ``run_in_steps``) moves a reference start that many frames earlier
+    (never below frame 1, so it keeps its hold): the clock then reaches the sampled frame as the hold ends, where the
+    palm and object terminations start to count. Frame-0 and keyframe starts are not moved; the start bin stays the
+    sampled one.
     """
     world = wp.tid()
     if reset_mask[world] == 0:
@@ -151,6 +179,9 @@ def sample_rsi_reset(
             frame = bank_frame[b * capacity + slot]
             wp.atomic_add(served, b, 1)
 
+    if start_shift > 0 and slot < 0 and frame > 0:
+        frame = wp.max(frame - start_shift, 1)
+
     immediate = int(0)  # noqa: UP018
     if frame == 0 or slot >= 0:
         immediate = 1
@@ -171,7 +202,12 @@ def sample_rsi_reset(
             reference_joint_q_offset[base + q_id] = offset
 
     bin_top = top[b]
-    drawn_help = bin_top * (inv_band + u_help * (1.0 - inv_band))
+    factor = inv_band + u_help * (1.0 - inv_band)
+    drawn_help = float(bin_top * factor)  # Warp requires explicitly typed mutable locals.
+    if frame_help != 0:
+        drawn_help = factor * help_at_frame(frame, top, bin_frames, num_bins)
+    help_factor[world] = factor
+    visit_bin[world] = b
     reset_frame[world] = frame
     finger_scale[world] = 1.0
     start_bin[world] = b
@@ -256,6 +292,7 @@ def advance_rsi_reset(
     terminated: wp.array(dtype=wp.int32),
     truncated: wp.array(dtype=wp.int32),
     freeze_steps: int,
+    clock_start: int,
     offset_decay_steps: int,
     voc_decay_steps: int,
     reset_voc_scale: float,
@@ -268,7 +305,11 @@ def advance_rsi_reset(
     timestep: wp.array(dtype=wp.int32),
     episode_step: wp.array(dtype=wp.int32),
 ) -> None:
-    """Stock ``advance_recon_body_reset`` (reset.py:736-779) with the lane's help in place of the global scale."""
+    """Stock ``advance_recon_body_reset`` (reset.py:736-779) with the lane's help in place of the global scale.
+
+    The reference clock runs once ``age > clock_start``; the stock release is ``clock_start == freeze_steps``, and a
+    smaller value (``freeze_steps - run_in_steps``) starts the clock inside the hold.
+    """
     world = wp.tid()
     if terminated[world] != 0 or truncated[world] != 0:
         return
@@ -294,7 +335,7 @@ def advance_rsi_reset(
         progress = float(age - decay_start) / float(voc_decay_steps)
         applied_voc_scale[world] = reset_voc_scale + progress * (target - reset_voc_scale)
 
-    if age > freeze_steps:
+    if age > clock_start:
         timestep[world] += 1
 
 
@@ -309,6 +350,28 @@ def sync_rsi_voc(
     world = wp.tid()
     if steps_since_reset[world] >= freeze_steps:
         applied_voc_scale[world] = lane_help[world]
+
+
+@wp.kernel
+def update_frame_help(
+    terminated: wp.array(dtype=wp.int32),
+    truncated: wp.array(dtype=wp.int32),
+    active: wp.array(dtype=wp.int32),
+    timestep: wp.array(dtype=wp.int32),
+    help_factor: wp.array(dtype=wp.float32),
+    top: wp.array(dtype=wp.float32),
+    bin_frames: int,
+    num_bins: int,
+    lane_help: wp.array(dtype=wp.float32),
+) -> None:
+    """Success mode, before ``advance_rsi_reset``: a scored lane's help follows the help top at its current frame.
+
+    Done lanes (about to reset) and explicit-reset lanes (``active == 0``: stock semantics, help = curriculum scale)
+    keep their help."""
+    world = wp.tid()
+    if terminated[world] != 0 or truncated[world] != 0 or active[world] == 0:
+        return
+    lane_help[world] = help_factor[world] * help_at_frame(timestep[world], top, bin_frames, num_bins)
 
 
 @wp.kernel
@@ -356,6 +419,7 @@ def rsi_transition(
     num_bins: int,
     capacity: int,
     seed: int,
+    pass_grace: int,
     active: wp.array(dtype=wp.int32),
     clean: wp.array(dtype=wp.int32),
     start_bin: wp.array(dtype=wp.int32),
@@ -378,16 +442,50 @@ def rsi_transition(
     write_count: wp.array(dtype=wp.int32),
     commit_total: wp.array(dtype=wp.int32),
     drop_total: wp.array(dtype=wp.int32),
+    visit_bin: wp.array(dtype=wp.int32),
+    pass_iter: wp.array(dtype=wp.int32),
+    pass_fail_iter: wp.array(dtype=wp.int32),
 ) -> None:
     """Per-step lane bookkeeping after physics/termination/advance and before any auto-reset.
 
-    Order (CH base_env.py:723-731 + keyframes.py:64-123 with ``to_end``): task score, pending resolution
-    (commit only on reaching the clip end with a good window), start-bin outcome, then capture.
+    Order (CH base_env.py:723-731 + keyframes.py:64-123 with ``to_end``): pass-through outcome, task score, pending
+    resolution (commit only on reaching the clip end with a good window), start-bin outcome, then capture.
+
+    Pass-through outcome (success-mode help; BeyondMimic attribution): a scored lane counts a pass in every bin it
+    leaves, and on its last step a fail in the bin where it terminated or a pass in the bin where it was truncated
+    (clip end). Bins are the start bins of ``rsi_bin_of``; frames past the last start bin belong to it.
+    With ``pass_grace > 0`` (dev) a reference start (``clean == 0``: held, object on full VOC, palm/object
+    terminations masked) counts no outcome on a transition whose termination check saw an episode step <=
+    ``pass_grace``: a bin the clock crosses in the hold (the rolling start runs it) could not have failed there.
+    Its bin is still followed, and it counts from its first transition after the hold. Frame-0 and keyframe starts
+    (``clean == 1``) have no hold and count from their first step.
     """
     world = wp.tid()
     is_terminated = terminated[world] != 0
     is_truncated = truncated[world] != 0
     done = is_terminated or is_truncated
+
+    if active[world] != 0:
+        # Episode step this transition's termination saw (``freeze_masked = episode_step <= reset_freeze_steps`` in
+        # lifecycle/termination.py): advance already counted a live world's step; a done world was not advanced.
+        checked_step = int(episode_step[world])
+        if not done:
+            checked_step = checked_step - 1
+        # Only a held reference start (clean == 0) is in a hold: frame-0 and keyframe starts act from their first step.
+        credited = pass_grace <= 0 or clean[world] != 0 or checked_step > pass_grace
+        current = rsi_bin_of(timestep[world], bin_frames, num_bins)
+        visited = int(visit_bin[world])  # Warp requires explicitly typed mutable locals.
+        if current > visited:
+            if credited:
+                for k in range(visited, current):
+                    wp.atomic_add(pass_iter, k, 1)
+            visited = current
+            visit_bin[world] = current
+        if done and credited:
+            if is_terminated and not is_truncated:
+                wp.atomic_add(pass_fail_iter, visited, 1)
+            else:
+                wp.atomic_add(pass_iter, visited, 1)
 
     score = wp.exp(-task_pos_scale * object_position_error[world]) * wp.exp(-object_orientation_error[world])
     cum = cum_score[world] + score

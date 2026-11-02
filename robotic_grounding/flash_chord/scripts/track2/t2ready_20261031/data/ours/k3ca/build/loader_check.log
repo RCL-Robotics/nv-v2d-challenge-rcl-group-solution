@@ -1,0 +1,51 @@
+ep00 k3ca:ok/T=778 tier2_control:ok/T=778 diff vs K3fix pos 0.020213782787322998 quat 0.14413330990259457
+ep01 k3ca:ok/T=747 tier2_control:ok/T=747 diff vs K3fix pos 0.0 quat 0.0
+ep02 k3ca:ok/T=980 tier2_control:ok/T=980 diff vs K3fix pos 0.0 quat 0.0
+ep03 k3ca:ok/T=781 tier2_control:ok/T=781 diff vs K3fix pos 0.0 quat 0.0
+ep04 k3ca:ok/T=803 tier2_control:ok/T=803 diff vs K3fix pos 0.0 quat 0.0
+ep05 k3ca:ok/T=1003 tier2_control:ok/T=1003 diff vs K3fix pos 0.010455965995788574 quat 0.17461365741404694
+ep06 k3ca:ok/T=546 tier2_control:ok/T=546 diff vs K3fix pos 0.0 quat 0.0
+ep07 k3ca:ok/T=896 tier2_control:ok/T=896 diff vs K3fix pos 0.0 quat 0.0
+ep08 k3ca:ok/T=708 tier2_control:ok/T=708 diff vs K3fix pos 0.0 quat 0.0
+ep09 k3ca:ok/T=870 tier2_control:ok/T=870 diff vs K3fix pos 0.0 quat 0.0
+ep10 k3ca:ok/T=794 tier2_control:ok/T=794 diff vs K3fix pos 0.0 quat 0.0
+ep11 k3ca:ok/T=901 tier2_control:ok/T=901 diff vs K3fix pos 0.0 quat 0.0
+ep12 k3ca:ok/T=700 tier2_control:ok/T=700 diff vs K3fix pos 0.0 quat 0.0
+ep13 k3ca:ok/T=922 tier2_control:ok/T=922 diff vs K3fix pos 0.0 quat 0.0
+ep14 k3ca:ok/T=993 tier2_control:ok/T=993 diff vs K3fix pos 0.0 quat 0.0
+ep15 k3ca:ok/T=715 tier2_control:ok/T=715 diff vs K3fix pos 0.018231511116027832 quat 0.10432991516324916
+ep16 k3ca:ok/T=477 tier2_control:ok/T=477 diff vs K3fix pos 0.0 quat 0.0
+ep17 k3ca:ok/T=440 tier2_control:ok/T=440 diff vs K3fix pos 0.0 quat 0.0
+ep18 k3ca:ok/T=858 tier2_control:ok/T=858 diff vs K3fix pos 0.0 quat 0.0
+ep19 k3ca:ok/T=886 tier2_control:ok/T=886 diff vs K3fix pos 0.007268160581588745 quat 0.10618042106001069
+ep20 k3ca:ok/T=553 tier2_control:ok/T=553 diff vs K3fix pos 0.0 quat 0.0
+ep21 k3ca:ok/T=678 tier2_control:ok/T=678 diff vs K3fix pos 0.0 quat 0.0
+ep22 k3ca:ok/T=719 tier2_control:ok/T=719 diff vs K3fix pos 0.012227498227730393 quat 0.09060444810399935
+ep23 k3ca:ok/T=946 tier2_control:ok/T=946 diff vs K3fix pos 0.0 quat 0.0
+ep24 k3ca:ok/T=748 tier2_control:ok/T=748 diff vs K3fix pos 0.0 quat 0.0
+ep25 k3ca:ok/T=859 tier2_control:ok/T=859 diff vs K3fix pos 0.0 quat 0.0
+ep26 k3ca:ok/T=669 tier2_control:ok/T=669 diff vs K3fix pos 0.010704617947340012 quat 0.13837504846623727
+ep27 k3ca:ok/T=565 tier2_control:ok/T=565 diff vs K3fix pos 0.0 quat 0.0
+ep28 k3ca:ok/T=988 tier2_control:ok/T=988 diff vs K3fix pos 0.007569551467895508 quat 0.18762080573712508
+ep29 k3ca:ok/T=467 tier2_control:ok/T=467 diff vs K3fix pos 0.0 quat 0.0
+{
+ "k3ca": {
+  "n_ok": 30,
+  "total_frames": 22990
+ },
+ "tier2_control": {
+  "n_ok": 30,
+  "total_frames": 22990
+ },
+ "same_num_frames": true,
+ "k3ca_episodes": [
+  0,
+  5,
+  15,
+  19,
+  22,
+  26,
+  28
+ ],
+ "all_ok": true
+}

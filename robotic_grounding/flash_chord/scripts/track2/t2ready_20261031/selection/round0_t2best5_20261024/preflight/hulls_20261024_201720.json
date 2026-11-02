@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-10-24 20:17:20",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "6c7584c98b6a755d"
+   ],
+   "missing": []
+  }
+ }
+}

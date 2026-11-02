@@ -1,0 +1,1739 @@
+{
+ "what": "training-commit evidence for Zuxing Lu's remote RTX 5090 checkpoints of the Tier-2 set R6-CLOSEST",
+ "made_at": "2026-11-02 02:11:03",
+ "tree_HEAD": "a94614a443ef8e9c6a62094ae604f2b1c70358ee",
+ "source_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts",
+ "copies_table": "COPIES_t2final.tsv",
+ "placeholders": {
+  "<ME>": "/root/autodl-tmp/haoran.zhang",
+  "<ZX>": "/root/autodl-tmp/zuxing.lu",
+  "<ZX5090>": "/mnt/gfs/home/zuxinglu/workspace"
+ },
+ "checkpoints": [
+  {
+   "episode": 0,
+   "job": "ep00_zxb_k3fix_60000",
+   "iteration": 60000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep00",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-24-tier2-runin-k3fix/ep00/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-06-04_14-16-23_tall_bar_stool_tip_up_04 support=false gpu=4 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-24-tier2-runin-k3fix/ep00",
+      "episode": "00",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin",
+      "data_root": "human_motion_data_tier2_k3fix",
+      "sequence": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+      "support": "false",
+      "commit": "82837c8",
+      "checkpoints": "89500,90000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep00_zxb_k3fix_60000/s1",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-24-tier2-runin-k3fix/ep00",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_90000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 8847360000,
+      "finished_at": "2026-10-24T07:08:17-07:00",
+      "help_zero_iterations": 77818,
+      "help_zero_since": 12182,
+      "iteration": 90000,
+      "max_iterations": 90000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_90000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 75427.8
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_89500.safetensors",
+       "iteration": 89500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_90000.safetensors",
+       "iteration": 90000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304,
+     "checkpoint": {
+      "iteration": 60000,
+      "environment_steps": 5898240000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       0,
+       90000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": false,
+      "note": "model_60000.safetensors is not kept in his copy (kept: model_89500.safetensors, model_90000.safetensors); its sha256 is pinned by his bundle SHA256SUMS line and our as-trained copy"
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r3_20261028/zuxing_copies_r3/5090_best_2026-10-24/runin_k3fix_ep00_official/model_60000.safetensors",
+   "as_trained_sha256": "434cefc4936c6dd4e8aa1a428e07d827f1ce78ebcfdbe7dcb185c6d85c9bbdd1",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "434cefc4936c6dd4e8aa1a428e07d827f1ce78ebcfdbe7dcb185c6d85c9bbdd1  ./runin_k3fix_ep00_official/model_60000.safetensors",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r3_20261028/relocated_r3/5090_best_2026-10-24/runin_k3fix_ep00_official/model_60000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+     "b": "<ME>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet"
+    }
+   ]
+  },
+  {
+   "episode": 16,
+   "job": "ep16_zxb_g2_34000",
+   "iteration": 34000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-28-tier2-runin-a5/ep16",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-28-tier2-runin-a5/ep16/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_g2-2026-10-24 seq=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02 support=true gpu=5 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-28-tier2-runin-a5/ep16",
+      "episode": "16",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin",
+      "data_root": "human_motion_data_tier2_g2-2026-10-24",
+      "sequence": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+      "support": "true",
+      "commit": "82837c8",
+      "checkpoints": "10000,20000,30000,40000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000,160000,170000,179500,180000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep16_zxb_g2_34000/s1",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-28-tier2-runin-a5/ep16",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_180000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 17694720000,
+      "finished_at": "2026-10-29T14:20:06-07:00",
+      "help_zero_iterations": 158260,
+      "help_zero_since": 21740,
+      "iteration": 180000,
+      "max_iterations": 180000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_180000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 134364.9
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_10000.safetensors",
+       "iteration": 10000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_20000.safetensors",
+       "iteration": 20000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_30000.safetensors",
+       "iteration": 30000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_40000.safetensors",
+       "iteration": 40000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_50000.safetensors",
+       "iteration": 50000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_60000.safetensors",
+       "iteration": 60000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_70000.safetensors",
+       "iteration": 70000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_80000.safetensors",
+       "iteration": 80000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_90000.safetensors",
+       "iteration": 90000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_100000.safetensors",
+       "iteration": 100000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_110000.safetensors",
+       "iteration": 110000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_120000.safetensors",
+       "iteration": 120000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_130000.safetensors",
+       "iteration": 130000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_140000.safetensors",
+       "iteration": 140000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_150000.safetensors",
+       "iteration": 150000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_160000.safetensors",
+       "iteration": 160000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_170000.safetensors",
+       "iteration": 170000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_179500.safetensors",
+       "iteration": 179500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_180000.safetensors",
+       "iteration": 180000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304,
+     "checkpoint": {
+      "iteration": 34000,
+      "environment_steps": 3342336000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       0,
+       180000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": false,
+      "note": "model_34000.safetensors is not kept in his copy (kept: model_10000.safetensors, model_20000.safetensors, model_30000.safetensors, model_40000.safetensors, model_50000.safetensors, model_60000.safetensors, model_70000.safetensors, model_80000.safetensors, model_90000.safetensors, model_100000.safetensors, model_110000.safetensors, model_120000.safetensors, model_130000.safetensors, model_140000.safetensors, model_150000.safetensors, model_160000.safetensors, model_170000.safetensors, model_179500.safetensors, model_180000.safetensors); its sha256 is pinned by his bundle SHA256SUMS line and our as-trained copy"
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/zuxing_copies_r5/retest_best_2026-10-29/retest_g2_ep16_34000/model_34000.safetensors",
+   "as_trained_sha256": "99e3e297f2b21dc96cb36ffa707108f76882648a6d7439547fb143f19a18099d",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "99e3e297f2b21dc96cb36ffa707108f76882648a6d7439547fb143f19a18099d  ./retest_g2_ep16_34000/model_34000.safetensors (SHA256SUMS.5090.zuxing)",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/relocated_r5/retest_best_2026-10-29/retest_g2_ep16_34000/model_34000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+     "b": "<ZX>/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet"
+    }
+   ]
+  },
+  {
+   "episode": 19,
+   "job": "ep19_zxb_g2hard_248000",
+   "iteration": 248000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": false,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-25-tier2-runin-hard-g2/ep19",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-25-tier2-runin-hard-g2/ep19/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin_hard root=human_motion_data_tier2_g2-2026-10-24 seq=2026-05-19_10-19-48_cane_swing_05 support=false gpu=6 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-25-tier2-runin-hard-g2/ep19",
+      "episode": "19",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin_hard",
+      "data_root": "human_motion_data_tier2_g2-2026-10-24",
+      "sequence": "2026-05-19_10-19-48_cane_swing_05",
+      "support": "false",
+      "commit": "82837c8",
+      "checkpoints": "179500,180000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": null,
+     "output_dir": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/ep19",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_180000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 17694720000,
+      "finished_at": "2026-10-26T17:41:38-07:00",
+      "help_zero_iterations": 140938,
+      "help_zero_since": 39062,
+      "iteration": 180000,
+      "max_iterations": 180000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_180000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 147659.3
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_179500.safetensors",
+       "iteration": 179500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": null,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_180000.safetensors",
+       "iteration": 180000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": null,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304
+    },
+    {
+     "stage": 2,
+     "trained_the_checkpoint": false,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-25-tier2-runin-hard-g2/cont/ep19",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-25-tier2-runin-hard-g2/cont/ep19/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin_hard root=human_motion_data_tier2_g2-2026-10-24 seq=2026-05-19_10-19-48_cane_swing_05 support=false gpu=6 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-25-tier2-runin-hard-g2/cont/ep19",
+      "episode": "19",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin_hard",
+      "data_root": "human_motion_data_tier2_g2-2026-10-24",
+      "sequence": "2026-05-19_10-19-48_cane_swing_05",
+      "support": "false",
+      "commit": "82837c8",
+      "checkpoints": "223500,224000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep19_zxb_g2hard_248000/s2",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19",
+     "manifest_matches_overrides": true,
+     "final_json": null,
+     "kept_checkpoints": [
+      {
+       "file": "model_223500.safetensors",
+       "iteration": 223500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": null,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_224000.safetensors",
+       "iteration": 224000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": null,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304
+    },
+    {
+     "stage": 3,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-25-tier2-runin-hard-g2/cont2/ep19",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-25-tier2-runin-hard-g2/cont2/ep19/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin_hard root=human_motion_data_tier2_g2-2026-10-24 seq=2026-05-19_10-19-48_cane_swing_05 support=false gpu=2 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-25-tier2-runin-hard-g2/cont2/ep19",
+      "episode": "19",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin_hard",
+      "data_root": "human_motion_data_tier2_g2-2026-10-24",
+      "sequence": "2026-05-19_10-19-48_cane_swing_05",
+      "support": "false",
+      "commit": "82837c8",
+      "checkpoints": "230000,240000,250000,260000,270000,280000,290000,300000,310000,320000,330000,340000,350000,359500,360000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep19_zxb_g2hard_248000/s3",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont2/ep19",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_360000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 35389440000,
+      "finished_at": "2026-10-30T16:03:20-07:00",
+      "help_zero_iterations": 320938,
+      "help_zero_since": 39062,
+      "iteration": 360000,
+      "max_iterations": 360000,
+      "reason": "max_iterations",
+      "resumed_from": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19/model_224000.safetensors",
+      "rsi_state": "rsi_360000.safetensors",
+      "start_iteration": 224000,
+      "wall_seconds": 229181.5
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_230000.safetensors",
+       "iteration": 230000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_240000.safetensors",
+       "iteration": 240000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_250000.safetensors",
+       "iteration": 250000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_260000.safetensors",
+       "iteration": 260000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_270000.safetensors",
+       "iteration": 270000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_280000.safetensors",
+       "iteration": 280000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_290000.safetensors",
+       "iteration": 290000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_300000.safetensors",
+       "iteration": 300000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_310000.safetensors",
+       "iteration": 310000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_320000.safetensors",
+       "iteration": 320000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_330000.safetensors",
+       "iteration": 330000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_340000.safetensors",
+       "iteration": 340000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_350000.safetensors",
+       "iteration": 350000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_359500.safetensors",
+       "iteration": 359500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_360000.safetensors",
+       "iteration": 360000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304,
+     "checkpoint": {
+      "iteration": 248000,
+      "environment_steps": 24379392000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       224000,
+       360000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": false,
+      "note": "model_248000.safetensors is not kept in his copy (kept: model_230000.safetensors, model_240000.safetensors, model_250000.safetensors, model_260000.safetensors, model_270000.safetensors, model_280000.safetensors, model_290000.safetensors, model_300000.safetensors, model_310000.safetensors, model_320000.safetensors, model_330000.safetensors, model_340000.safetensors, model_350000.safetensors, model_359500.safetensors, model_360000.safetensors); its sha256 is pinned by his bundle SHA256SUMS line and our as-trained copy"
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/zuxing_copies_r5/retest_best_2026-10-29/retest_hardg2_ep19_248000/model_248000.safetensors",
+   "as_trained_sha256": "84ffe3e68e575ba926385561fe28ae5026f1f1ed41c3413771f61c98c14f2aac",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "84ffe3e68e575ba926385561fe28ae5026f1f1ed41c3413771f61c98c14f2aac  ./retest_hardg2_ep19_248000/model_248000.safetensors (SHA256SUMS.5090.zuxing)",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/relocated_r5/retest_best_2026-10-29/retest_hardg2_ep19_248000/model_248000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet",
+     "b": "<ZX>/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet"
+    }
+   ]
+  },
+  {
+   "episode": 20,
+   "job": "ep20_zxb_k3fix_30000",
+   "iteration": 30000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-28-tier2-5090-fill/ep20",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-28-tier2-5090-fill/ep20/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-06-08_16-57-34_rice_cooker_clockwise_04 support=true gpu=7 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-28-tier2-5090-fill/ep20",
+      "episode": "20",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin",
+      "data_root": "human_motion_data_tier2_k3fix",
+      "sequence": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+      "support": "true",
+      "commit": "82837c8",
+      "checkpoints": "10000,20000,30000,40000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000,160000,170000,179500,180000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep20_zxb_k3fix_30000/s1",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-28-tier2-5090-fill/ep20",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_180000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 8847360000,
+      "finished_at": "2026-10-29T10:52:04-07:00",
+      "help_zero_iterations": 166129,
+      "help_zero_since": 13871,
+      "iteration": 180000,
+      "max_iterations": 180000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_180000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 113047.3
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_10000.safetensors",
+       "iteration": 10000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_20000.safetensors",
+       "iteration": 20000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_30000.safetensors",
+       "iteration": 30000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_40000.safetensors",
+       "iteration": 40000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_50000.safetensors",
+       "iteration": 50000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_60000.safetensors",
+       "iteration": 60000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_70000.safetensors",
+       "iteration": 70000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_80000.safetensors",
+       "iteration": 80000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_90000.safetensors",
+       "iteration": 90000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_100000.safetensors",
+       "iteration": 100000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_110000.safetensors",
+       "iteration": 110000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_120000.safetensors",
+       "iteration": 120000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_130000.safetensors",
+       "iteration": 130000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_140000.safetensors",
+       "iteration": 140000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_150000.safetensors",
+       "iteration": 150000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_160000.safetensors",
+       "iteration": 160000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_170000.safetensors",
+       "iteration": 170000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_179500.safetensors",
+       "iteration": 179500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      },
+      {
+       "file": "model_180000.safetensors",
+       "iteration": 180000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 49152.0
+      }
+     ],
+     "environment_steps_per_iteration": 49152,
+     "checkpoint": {
+      "iteration": 30000,
+      "environment_steps": 1474560000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       0,
+       180000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": true,
+      "exact_file_sha256_equals_pin": true,
+      "exact_file_in_his_SHA256SUMS": true
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/zuxing_copies_r5/retest_best_2026-10-29/retest_k3fix_ep20_30000/model_30000.safetensors",
+   "as_trained_sha256": "c10003d2e2d555dd11edd4aebd38f18b0a604c51770b7f1ae8161c727d8d4e25",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "c10003d2e2d555dd11edd4aebd38f18b0a604c51770b7f1ae8161c727d8d4e25  ./retest_k3fix_ep20_30000/model_30000.safetensors (SHA256SUMS.5090.zuxing)",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/relocated_r5/retest_best_2026-10-29/retest_k3fix_ep20_30000/model_30000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet",
+     "b": "<ME>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet"
+    }
+   ]
+  },
+  {
+   "episode": 22,
+   "job": "ep22_zxb_k3fix_78000",
+   "iteration": 78000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-24-tier2-runin-k3fix/ep22",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-24-tier2-runin-k3fix/ep22/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-05-22_16-52-36_step_ladder_drag_03 support=false gpu=5 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-24-tier2-runin-k3fix/ep22",
+      "episode": "22",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin",
+      "data_root": "human_motion_data_tier2_k3fix",
+      "sequence": "2026-05-22_16-52-36_step_ladder_drag_03",
+      "support": "false",
+      "commit": "82837c8",
+      "checkpoints": "89500,90000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep22_zxb_k3fix_78000/s1",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-24-tier2-runin-k3fix/ep22",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_90000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 8847360000,
+      "finished_at": "2026-10-24T07:44:52-07:00",
+      "help_zero_iterations": 76548,
+      "help_zero_since": 13452,
+      "iteration": 90000,
+      "max_iterations": 90000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_90000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 77502.1
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_89500.safetensors",
+       "iteration": 89500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_90000.safetensors",
+       "iteration": 90000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304,
+     "checkpoint": {
+      "iteration": 78000,
+      "environment_steps": 7667712000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       0,
+       90000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": false,
+      "note": "model_78000.safetensors is not kept in his copy (kept: model_89500.safetensors, model_90000.safetensors); its sha256 is pinned by his bundle SHA256SUMS line and our as-trained copy"
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r3_20261028/zuxing_copies_r3/5090_best_2026-10-24/runin_k3fix_ep22_best/model_78000.safetensors",
+   "as_trained_sha256": "1976315ea227df0b073e710724ddf20d4337d1bf4c80836cc89086be5df89e8a",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "1976315ea227df0b073e710724ddf20d4337d1bf4c80836cc89086be5df89e8a  ./runin_k3fix_ep22_best/model_78000.safetensors",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r3_20261028/relocated_r3/5090_best_2026-10-24/runin_k3fix_ep22_best/model_78000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet",
+     "b": "<ME>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet"
+    }
+   ]
+  },
+  {
+   "episode": 25,
+   "job": "ep25_zxb_k3fix_48000",
+   "iteration": 48000,
+   "stages": [
+    {
+     "stage": 1,
+     "trained_the_checkpoint": true,
+     "run_in_copy": "<ZX>/runs/2026-11-01-round7-5090-ckpts/2026-10-28-tier2-runin-a5/ep25",
+     "train_log": "records/zuxing_runs/round7_5090_copy/2026-10-28-tier2-runin-a5/ep25/train.log",
+     "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-03-20_11-59-57_cyan_water_bottle_rotate_01 support=true gpu=3 commit=82837c8",
+     "train_log_commit": {
+      "short": "82837c8",
+      "full": "82837c8569c2461f263c28fce406c1b517f40d93",
+      "ancestor_of_HEAD": true,
+      "hydra_configs_equal_HEAD": true,
+      "src_files_differing_vs_HEAD": [
+       "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+       "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+      ]
+     },
+     "worktrees_named_in_log": [
+      "dev.zuxing.hard_start"
+     ],
+     "hydra_runtime_cwd": "<ZX5090>/worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord",
+     "manifest_row": {
+      "run": "2026-10-28-tier2-runin-a5/ep25",
+      "episode": "25",
+      "status": "ended",
+      "experiment": "g1_recon_body_coord_rsi_r2_runin",
+      "data_root": "human_motion_data_tier2_k3fix",
+      "sequence": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+      "support": "true",
+      "commit": "82837c8",
+      "checkpoints": "10000,20000,30000,40000,50000,60000,70000,80000,90000,100000,110000,120000,130000,140000,150000,160000,170000,179500,180000"
+     },
+     "manifest_commit": "82837c8",
+     "commit_ok": true,
+     "overrides_equal_set_items": true,
+     "committed_record": "records/hydra/ep25_zxb_k3fix_48000/s1",
+     "committed_record_bytes_equal_run": {
+      "config.yaml": true,
+      "overrides.yaml": true,
+      "hydra.yaml": true
+     },
+     "output_dir": "<ZX5090>/runs/2026-10-28-tier2-runin-a5/ep25",
+     "manifest_matches_overrides": true,
+     "final_json": {
+      "checkpoint": "model_180000.safetensors",
+      "early_stop_help_zero_tail": 0,
+      "environment_steps": 17694720000,
+      "finished_at": "2026-10-29T16:00:25-07:00",
+      "help_zero_iterations": 140938,
+      "help_zero_since": 39062,
+      "iteration": 180000,
+      "max_iterations": 180000,
+      "reason": "max_iterations",
+      "resumed_from": null,
+      "rsi_state": "rsi_180000.safetensors",
+      "start_iteration": 0,
+      "wall_seconds": 140537.8
+     },
+     "kept_checkpoints": [
+      {
+       "file": "model_10000.safetensors",
+       "iteration": 10000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_20000.safetensors",
+       "iteration": 20000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_30000.safetensors",
+       "iteration": 30000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_40000.safetensors",
+       "iteration": 40000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_50000.safetensors",
+       "iteration": 50000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_60000.safetensors",
+       "iteration": 60000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_70000.safetensors",
+       "iteration": 70000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_80000.safetensors",
+       "iteration": 80000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_90000.safetensors",
+       "iteration": 90000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_100000.safetensors",
+       "iteration": 100000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_110000.safetensors",
+       "iteration": 110000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_120000.safetensors",
+       "iteration": 120000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_130000.safetensors",
+       "iteration": 130000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_140000.safetensors",
+       "iteration": 140000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_150000.safetensors",
+       "iteration": 150000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_160000.safetensors",
+       "iteration": 160000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_170000.safetensors",
+       "iteration": 170000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_179500.safetensors",
+       "iteration": 179500,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      },
+      {
+       "file": "model_180000.safetensors",
+       "iteration": 180000,
+       "sha256_equals_his_SHA256SUMS": true,
+       "integrity": true,
+       "stored_config_equals_saved_config": true,
+       "stored_config_equals_checkpoint_config": true,
+       "other_metadata_equal": true,
+       "environment_steps_per_iteration": 98304.0
+      }
+     ],
+     "environment_steps_per_iteration": 98304,
+     "checkpoint": {
+      "iteration": 48000,
+      "environment_steps": 4718592000,
+      "environment_steps_equal_iteration_times_run_rate": true,
+      "iteration_in_run_range": true,
+      "run_range": [
+       0,
+       180000
+      ],
+      "stored_config_equals_saved_config": true,
+      "stored_output_dir_is_this_run": true,
+      "exact_file_in_copy": false,
+      "note": "model_48000.safetensors is not kept in his copy (kept: model_10000.safetensors, model_20000.safetensors, model_30000.safetensors, model_40000.safetensors, model_50000.safetensors, model_60000.safetensors, model_70000.safetensors, model_80000.safetensors, model_90000.safetensors, model_100000.safetensors, model_110000.safetensors, model_120000.safetensors, model_130000.safetensors, model_140000.safetensors, model_150000.safetensors, model_160000.safetensors, model_170000.safetensors, model_179500.safetensors, model_180000.safetensors); its sha256 is pinned by his bundle SHA256SUMS line and our as-trained copy"
+     }
+    }
+   ],
+   "as_trained_copy": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/zuxing_copies_r5/retest_best_2026-10-29/retest_k3fix_ep25_48000/model_48000.safetensors",
+   "as_trained_sha256": "688411974df0fe4420df6d1aa431193c35321db7e5a76bd14bc16a85d56f550f",
+   "as_trained_sha256_equals_pin": true,
+   "pin_from_his_bundle_sums": "688411974df0fe4420df6d1aa431193c35321db7e5a76bd14bc16a85d56f550f  ./retest_k3fix_ep25_48000/model_48000.safetensors (SHA256SUMS.5090.zuxing)",
+   "evaluated_source_checkpoint": "<ME>/fc_runs/submissions/t2_consensus_r5_20261029/relocated_r5/retest_best_2026-10-29/retest_k3fix_ep25_48000/model_48000.safetensors",
+   "evaluated_source_sha256_equals_pin": true,
+   "relocated_tensor_bytes_equal_as_trained": true,
+   "relocated_metadata_keys_differing": [
+    "user.resolved_config_json"
+   ],
+   "relocated_config_diff": [
+    {
+     "key": "task.parquet",
+     "a": "<ZX5090>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet",
+     "b": "<ME>/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet"
+    }
+   ]
+  }
+ ],
+ "pro6000": [
+  {
+   "episode": 4,
+   "job": "ep04_zxg2_421500",
+   "train_log": "records/zuxing_runs/pro6000_logs/2026-10-24-tier2-runin-g2/ep04.log",
+   "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=<ZX>/data/human_motion_data_tier2_g2-2026-10-24 seq=2026-04-24_11-40-52_baseball_bat_rotate_05 support=false cpus=70,71,174,175 gpu=7 commit=bc3b1bd",
+   "train_log_commit": {
+    "short": "bc3b1bd",
+    "full": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+    "ancestor_of_HEAD": true,
+    "hydra_configs_equal_HEAD": false,
+    "src_files_differing_vs_HEAD": [
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_helpfix_hard.yaml",
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_runin_hard.yaml",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/bins.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/kernels.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi_reset.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+    ]
+   },
+   "set_items_commit": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+   "his_run_checkpoint": "<ZX>/runs/2026-10-24-tier2-runin-g2/ep04/model_421500.safetensors",
+   "his_run_checkpoint_exists": true,
+   "his_run_checkpoint_sha256_equals_set_checkpoint": true,
+   "ok": true
+  },
+  {
+   "episode": 28,
+   "job": "ep28_zx_g2_102000",
+   "train_log": "records/zuxing_runs/pro6000_logs/2026-10-24-tier2-runin-g2/ep28.log",
+   "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=<ZX>/data/human_motion_data_tier2_g2-2026-10-24 seq=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_ support=true cpus=80,81,184,185 gpu=7 commit=bc3b1bd",
+   "train_log_commit": {
+    "short": "bc3b1bd",
+    "full": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+    "ancestor_of_HEAD": true,
+    "hydra_configs_equal_HEAD": false,
+    "src_files_differing_vs_HEAD": [
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_helpfix_hard.yaml",
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_runin_hard.yaml",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/bins.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/kernels.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi_reset.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+    ]
+   },
+   "set_items_commit": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+   "his_run_checkpoint": "<ZX>/runs/2026-10-24-tier2-runin-g2/ep28/model_102000.safetensors",
+   "his_run_checkpoint_exists": true,
+   "his_run_checkpoint_sha256_equals_set_checkpoint": true,
+   "ok": true
+  },
+  {
+   "episode": 5,
+   "job": "ep05_zx_k3fix_88000",
+   "train_log": "records/zuxing_runs/pro6000_logs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05.log",
+   "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-03-18_19-36-56_g1_box_rotate_01 support=false cpus=48-51,152-155 gpu=0 commit=bc3b1bd",
+   "train_log_commit": {
+    "short": "bc3b1bd",
+    "full": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+    "ancestor_of_HEAD": true,
+    "hydra_configs_equal_HEAD": false,
+    "src_files_differing_vs_HEAD": [
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_helpfix_hard.yaml",
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_runin_hard.yaml",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/bins.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/kernels.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi_reset.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+    ]
+   },
+   "set_items_commit": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+   "his_run_checkpoint": "<ZX>/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep05/model_88000.safetensors",
+   "his_run_checkpoint_exists": true,
+   "his_run_checkpoint_sha256_equals_set_checkpoint": true,
+   "ok": true
+  },
+  {
+   "episode": 26,
+   "job": "ep26_zx_k3fix_92000",
+   "train_log": "records/zuxing_runs/pro6000_logs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26.log",
+   "train_log_first_line": "train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_k3fix seq=2026-06-05_16-05-08_skateboard_rotate_ground_10 support=false cpus=78,79,84,85,182,183,188,189 gpu=2 commit=bc3b1bd",
+   "train_log_commit": {
+    "short": "bc3b1bd",
+    "full": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+    "ancestor_of_HEAD": true,
+    "hydra_configs_equal_HEAD": false,
+    "src_files_differing_vs_HEAD": [
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_helpfix_hard.yaml",
+     "A\trobotic_grounding/flash_chord/src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2_runin_hard.yaml",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/bins.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi/kernels.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/lifecycle/rsi_reset.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/objectives/recon_body.py",
+     "M\trobotic_grounding/flash_chord/src/flash_chord/training/ppo/coordinate/export.py"
+    ]
+   },
+   "set_items_commit": "bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e",
+   "his_run_checkpoint": "<ZX>/runs/2026-10-24-tier2-runin-k3fix-ep05-ep26/ep26/model_92000.safetensors",
+   "his_run_checkpoint_exists": true,
+   "his_run_checkpoint_sha256_equals_set_checkpoint": true,
+   "ok": true
+  }
+ ],
+ "robolab": {
+  "robolab_or_ws031_checkpoints_in_earlier_rounds": [
+   {
+    "record": "<ME>/fc_runs/submissions/t2_consensus_r2_20261027/RELOCATION_R2.json",
+    "job": "ep23_zxc_g2_8000",
+    "original_sha256": "9727408b5054393a3ed3b42a12a96a307cc8a02102a0184af19afd0a9914f6e7",
+    "relocated_sha256": "3e42a40d31f47efcb1c885da3a99b2af974f639ff68294bf43ab790fc99273bc",
+    "source": "9727408b5054393a3ed3b42a12a96a307cc8a02102a0184af19afd0a9914f6e7  ./runin_g2_ep23_best/model_8000.safetensors <ME>/fc_runs/submissions/t2_consensus_r2_20261027/zuxing_copies_r2/robolab_best_2026-10-27/runin_g2_ep23_best/model_8000.safetensors"
+   },
+   {
+    "record": "<ME>/fc_runs/submissions/t2_consensus_r2_20261027/RELOCATION_R2.json",
+    "job": "ep10_zxc_g2_12000",
+    "original_sha256": "2ad0e203961ea3f18b31735e8bb64eb3da01d7e2b4f3fd6f6bd5df3afcac1341",
+    "relocated_sha256": "d4866a5310f9b880490a3d36ffe15b275dc418f7aa0a526e78129b8e760f8f0e",
+    "source": "2ad0e203961ea3f18b31735e8bb64eb3da01d7e2b4f3fd6f6bd5df3afcac1341  ./runin_g2_ep10_best/model_12000.safetensors <ME>/fc_runs/submissions/t2_consensus_r2_20261027/zuxing_copies_r2/robolab_best_2026-10-27/runin_g2_ep10_best/model_12000.safetensors"
+   },
+   {
+    "record": "<ME>/fc_runs/submissions/t2_consensus_r4_20261028/RELOCATION_R4.json",
+    "job": "ep05_zxr_g2_24000",
+    "original_sha256": "8cee11a7999162b300652893810f8e886338540da0e4653134e410d51fc7b8dd",
+    "relocated_sha256": "2e22d205a1a0ae25af0191f5712fde1e4ae2998cdabfe70e9844dda2c60e2758",
+    "source": "8cee11a7999162b300652893810f8e886338540da0e4653134e410d51fc7b8dd  ./retest_g2_ep05_24000/model_24000.safetensors (SHA256SUMS.robolab.zuxing) <ME>/fc_runs/submissions/t2_consensus_r4_20261028/zuxing_copies_r4/retest_best_2026-10-28/retest_g2_ep05_24000/model_24000.safetensors"
+   },
+   {
+    "record": "<ME>/fc_runs/submissions/t2_consensus_r4_20261028/RELOCATION_R4.json",
+    "job": "ep13_zxr_g2_156000",
+    "original_sha256": "dc46ad36e6b7fad301d7976a9b303cad409934b90cac61cbbfe4eff001cb1d8a",
+    "relocated_sha256": "40b62c76906d8c1da562e09c6d9200b991edc0cc1adf6b1b1d10b37e0587ea0c",
+    "source": "dc46ad36e6b7fad301d7976a9b303cad409934b90cac61cbbfe4eff001cb1d8a  ./retest_g2_ep13_156000/model_156000.safetensors (SHA256SUMS.robolab.zuxing) <ME>/fc_runs/submissions/t2_consensus_r4_20261028/zuxing_copies_r4/retest_best_2026-10-28/retest_g2_ep13_156000/model_156000.safetensors"
+   },
+   {
+    "record": "<ME>/fc_runs/submissions/t2_consensus_r4_20261028/RELOCATION_R4.json",
+    "job": "ep23_zxr_g2_92000",
+    "original_sha256": "e5707f14f79200644c2836101b8e87bfd37ff46a4cabeabb6595e11753d800c0",
+    "relocated_sha256": "b275196e0762a7400235c686747ad5b32abb28270b48419dcbe9ac24bd784a08",
+    "source": "e5707f14f79200644c2836101b8e87bfd37ff46a4cabeabb6595e11753d800c0  ./retest_g2_ep23_92000/model_92000.safetensors (SHA256SUMS.ws031.zuxing) <ME>/fc_runs/submissions/t2_consensus_r4_20261028/zuxing_copies_r4/robolab_best_2026-10-28/retest_g2_ep23_92000/model_92000.safetensors"
+   }
+  ],
+  "in_set": [],
+  "set_items_mentions_robolab_or_ws031": 0,
+  "machines_in_set": [
+   "Zuxing's remote RTX 5090 machine",
+   "pro6000 (this server)"
+  ],
+  "ok": true
+ },
+ "failures": [],
+ "ep19_chain": {
+  "s1_final": {
+   "checkpoint": "model_180000.safetensors",
+   "iteration": 180000,
+   "reason": "max_iterations"
+  },
+  "s2_resumes_from_s1_final": true,
+  "s3_resumes_from_s2_224000": true,
+  "s3_final_json_resumed_from": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19/model_224000.safetensors",
+  "s3_start_iteration": 224000,
+  "s3_final_json_resumed_from_equals_override": true,
+  "s2_last_kept_checkpoint": "model_224000.safetensors",
+  "s2_last_progress_line": "training progress: 21,941,452,800/35,389,440,000 environment steps (62.0%); 108,281 env steps/s; elapsed 10:53:40; ETA 34:29:55",
+  "s2_log_tail": [
+   "    self._file.flush()",
+   "OSError: [Errno 28] No space left on device",
+   "Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace."
+  ],
+  "s2_model_224000_integrity": {
+   "bytes": 24993720,
+   "expected_bytes": 24993720,
+   "ok": true
+  },
+  "config_diff_s1_final_vs_set_checkpoint": [
+   {
+    "key": "output_dir",
+    "a": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/ep19",
+    "b": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont2/ep19"
+   },
+   {
+    "key": "training.checkpoint",
+    "a": null,
+    "b": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19/model_224000.safetensors"
+   },
+   {
+    "key": "training.max_iterations",
+    "a": 180000,
+    "b": 360000
+   },
+   {
+    "key": "training.resume",
+    "a": false,
+    "b": true
+   }
+  ],
+  "config_diff_s2_224000_vs_set_checkpoint": [
+   {
+    "key": "output_dir",
+    "a": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19",
+    "b": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont2/ep19"
+   },
+   {
+    "key": "training.checkpoint",
+    "a": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/ep19/model_180000.safetensors",
+    "b": "<ZX5090>/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19/model_224000.safetensors"
+   }
+  ],
+  "checkpoint_248000_in_s3_range": true,
+  "diffs_only_in_resume_keys": true,
+  "ok": true
+ },
+ "commits_seen_in_5090_logs": {
+  "82837c8": [
+   "ep00_zxb_k3fix_60000/s1",
+   "ep16_zxb_g2_34000/s1",
+   "ep19_zxb_g2hard_248000/s1",
+   "ep19_zxb_g2hard_248000/s2",
+   "ep19_zxb_g2hard_248000/s3",
+   "ep20_zxb_k3fix_30000/s1",
+   "ep22_zxb_k3fix_78000/s1",
+   "ep25_zxb_k3fix_48000/s1"
+  ]
+ },
+ "ok": true
+}

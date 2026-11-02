@@ -1,0 +1,201 @@
+{
+ "written_at": "2026-10-25 00:08:47",
+ "script_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "prereg": "3.5.2",
+ "pass": false,
+ "thresholds": {
+  "max_abs_d_auc": 0.02,
+  "max_abs_d_mppe": 0.5,
+  "min_sp_equal_frac": 0.95,
+  "min_mp_equal_frac": 0.95
+ },
+ "n_runs": 400,
+ "n_scored": 400,
+ "n_problem_runs": 0,
+ "problems": [],
+ "max_abs_d_auc": 0.04119318179090903,
+ "max_abs_d_mppe": 0.0010870057235619068,
+ "sp_equal_frac": 1.0,
+ "mp_equal_frac": 1.0,
+ "mean_d_auc": 0.00046765906133743783,
+ "mean_abs_d_auc": 0.003011371065627548,
+ "max_conv_pos_residual_m": 1.6694943694356962e-07,
+ "max_conv_ang_residual_rad": 1.632340423778195e-07,
+ "sp_mismatch_runs": [],
+ "mp_mismatch_runs": [],
+ "worst_auc_runs": [
+  {
+   "job": "ep17_raw_final31807",
+   "run": 1,
+   "d_auc": -0.04119318179090903,
+   "d_mppe": -2.550510020959962e-07
+  },
+  {
+   "job": "ep17_raw_final31807",
+   "run": 5,
+   "d_auc": -0.03735795457272739,
+   "d_mppe": 1.3367626161553403e-07
+  },
+  {
+   "job": "ep17_raw_final31807",
+   "run": 2,
+   "d_auc": -0.03607954544545444,
+   "d_mppe": -2.062995596574524e-08
+  },
+  {
+   "job": "ep17_raw_final31807",
+   "run": 4,
+   "d_auc": -0.033522727263636365,
+   "d_mppe": -2.7975458616325e-07
+  },
+  {
+   "job": "ep17_raw_final31807",
+   "run": 3,
+   "d_auc": -0.03181818178181817,
+   "d_mppe": -3.086600295354458e-07
+  }
+ ],
+ "by_input": {
+  "g2": {
+   "n": 35,
+   "max_abs_d_auc": 0.004744433194331987,
+   "max_abs_d_mppe": 1.5113177482817264e-06
+  },
+  "k3": {
+   "n": 15,
+   "max_abs_d_auc": 0.0014692585652802403,
+   "max_abs_d_mppe": 3.2410442840635767e-07
+  },
+  "k3fix": {
+   "n": 190,
+   "max_abs_d_auc": 0.015198863590909162,
+   "max_abs_d_mppe": 0.0010870057235619068
+  },
+  "raw": {
+   "n": 160,
+   "max_abs_d_auc": 0.04119318179090903,
+   "max_abs_d_mppe": 0.0009591692948773822
+  }
+ },
+ "vertex_meshes": {
+  "baseball_bat": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/baseball_bat/baseball_bat.glb",
+   "sha256": "5aa2294d698eb370d0d1435963e42022cc1064faa355b547e492ffe893e51cd7"
+  },
+  "big_black_box": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/big_black_box/big_black_box.glb",
+   "sha256": "e6d434d16811524b8b3725e32c9ba2781bb878c47962f2e6a25b22e0cc2e4427"
+  },
+  "big_red_bowl": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/big_red_bowl/big_red_bowl.glb",
+   "sha256": "473b0466c0a05c3f2e586e793c4dc81f4c1281534d1402809f32e94e7e6e915d"
+  },
+  "black_platform": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/black_platform/black_platform.glb",
+   "sha256": "5c27db3c4896bbc494c3d68721b97cf130b15e4fd4e6110e2f2a6e92beecea4a"
+  },
+  "blue_easter_basket": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/blue_easter_basket/blue_easter_basket.glb",
+   "sha256": "802e074320c9b516bf2b66d26630584a74124e30dc2f479e05de1fb9c16344c4"
+  },
+  "blue_trash_can": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/blue_trash_can/blue_trash_can.glb",
+   "sha256": "14c18e9bd96383ebeb5c3d786f013c7fcb43d55cecef609de0f73a1c8a269f5b"
+  },
+  "cane": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/cane/cane.glb",
+   "sha256": "33a74ed590f246417efd58260ec1083966195c669a4ee02a9eb6b8a5b9c3e737"
+  },
+  "contigo_coffee_mug": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/contigo_coffee_mug/contigo_coffee_mug.glb",
+   "sha256": "6ac9976cc09e5dfb8b068672d91a00fafa73a774035e96cad4faa7e50aec283f"
+  },
+  "cyan_water_bottle": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/cyan_water_bottle/cyan_water_bottle.glb",
+   "sha256": "ebc656d5de2c6fb0075acd136503ac936b6c821fbfe05b21286efbc9af7225d6"
+  },
+  "iron": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/iron/iron.glb",
+   "sha256": "714f94b07baaa29ec5bb35ed3ae9dc3ff32a651ea763db45e5efe59af0dc9e83"
+  },
+  "light_blue_book": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/light_blue_book/light_blue_book.glb",
+   "sha256": "4c797e20fe013f3376efb41d140e4663ee5b2bd00e55708575f536343503d0b7"
+  },
+  "monitor": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/monitor/monitor.glb",
+   "sha256": "e961a7da1bcecc1087c6aa3be2241c8ac166e37d7b30ff3e9fa5bdd3859bf4b6"
+  },
+  "rice_cooker": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/rice_cooker/rice_cooker.glb",
+   "sha256": "969ef0080979446b5713d6f3c5c450658998844d7db699c01366d93ed11b6d21"
+  },
+  "rolling_luggage": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/rolling_luggage/rolling_luggage.glb",
+   "sha256": "cd4c9c2b4d80e47bb5228461d39bec195f5ed0395942b2ebd0d4585eac341b67"
+  },
+  "round_table": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/round_table/round_table.glb",
+   "sha256": "e53b35a958f513728d52db9303a86ee23bdb4fe796d25f5b1560d3df9e402546"
+  },
+  "skateboard": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/skateboard/skateboard.glb",
+   "sha256": "4b011286643070adeac57d1846d89614bbae2636d63ac286e35c48b8478adde6"
+  },
+  "skinny_wood_chair": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/skinny_wood_chair/skinny_wood_chair.glb",
+   "sha256": "7982ef074fe2e8b2bbab813ccb4cc848c05571e7c3adef42458b73449481d35a"
+  },
+  "snack_box": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/snack_box/snack_box.glb",
+   "sha256": "6a3c61c171534be9226a383db02a00b4d951569a7b228c60fc0a2f56e06cd441"
+  },
+  "spray_bottle": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/spray_bottle/spray_bottle.glb",
+   "sha256": "e5063cd7014d97475b1fed361e6c2383579ab7d3e48e589f1c43d0040f61f372"
+  },
+  "squeegee": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/squeegee/squeegee.glb",
+   "sha256": "aa3e2fad95d7201aab1e76b0e2321ad34d593e42a6fa8996031e4b4d5f690cc2"
+  },
+  "step_ladder": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/step_ladder/step_ladder.glb",
+   "sha256": "047a78a75436d9ae5e773074a9b4f2508bd35823a7067149f166f04a33341ee1"
+  },
+  "tall_bar_stool": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/tall_bar_stool/tall_bar_stool.glb",
+   "sha256": "cc214961423d674d55239077043e670c0696bf9113e225e11c1c2623c7ed26ad"
+  },
+  "toy_stroller": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/toy_stroller/toy_stroller.glb",
+   "sha256": "a9c278ea07d4dac5157210c4e67819fcfaf3254a6afc801c988a3e66b83b9636"
+  },
+  "traffic_cone": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/traffic_cone/traffic_cone.glb",
+   "sha256": "2acace9fcb3e53afcb6665db7b4717710e5cfc3a17c0ed5196a36df5ec340a16"
+  },
+  "vacuum": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/vacuum/vacuum.glb",
+   "sha256": "fc017067c2783cd29cf7536988d7f662c7c1fbd49e6b1336a3f32fbdd47cebee"
+  },
+  "watering_can": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/watering_can/watering_can.glb",
+   "sha256": "6289b834daf9ac457729cccb550b83eb5da1bc165a78bb970a9e651ab9ce94c2"
+  },
+  "wet_floor_sign": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/wet_floor_sign/wet_floor_sign.glb",
+   "sha256": "7a762ca67b09823ce9476441cd3a2396a7fc135d2dcb74533067952360dac1f5"
+  },
+  "white_desk": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/white_desk/white_desk.glb",
+   "sha256": "20bc239794adf00df9089347eef7bb72c9540ab03379d1fb3762c9d156a4fefd"
+  },
+  "woven_basket": {
+   "file": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/mesh/woven_basket/woven_basket.glb",
+   "sha256": "1725abaac462412da58bc35c772aa0c6ae6449c5471c220811cb895243ce6822"
+  }
+ },
+ "integrity_kit_stock_unchanged": true,
+ "integrity_diff": [],
+ "note": "own-input check only (each run vs its OWN training input); no consensus reference exists or is read"
+}

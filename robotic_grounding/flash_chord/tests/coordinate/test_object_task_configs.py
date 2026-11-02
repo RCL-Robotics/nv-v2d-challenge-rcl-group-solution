@@ -26,6 +26,8 @@ RECON_BODY_EXPERIMENTS = (
 )
 C3 = "g1_recon_body_coord_rsi"
 OBJECT_TASK_KEYS = ("object_task_weight", "object_task_position_beta", "object_task_rotation_beta")
+#: The post-release options of object_task (tests/objectives/test_recon_body_object_task_release.py).
+OBJECT_TASK_RELEASE_KEYS = ("object_task_position_only_after_release", "no_drop_weight", "no_drop_margin_m")
 OBJTASK_GROUPS = ("objective=recon_body_objtask", "curriculum=recon_body_rsi_objtask")
 #: ReconBodyObjectiveConfig fields of the official runtime (video_to_data 8c778f9 objectives/recon_body.py).
 STOCK_RECON_BODY_OBJECTIVE_FIELDS = (
@@ -167,12 +169,16 @@ def test_mismatched_curriculum_and_objective_fail_name_validation():
 
 def test_dev_objective_fields_are_the_stock_fields_plus_the_export_dev_keys():
     import flash_chord.training.ppo.coordinate.export as e2
-    from flash_chord.objectives.recon_body import RECON_BODY_OBJECT_TASK_TERM_NAME, ReconBodyObjectiveConfig
+    from flash_chord.objectives.recon_body import (
+        RECON_BODY_OBJECT_NO_DROP_TERM_NAME,
+        RECON_BODY_OBJECT_TASK_TERM_NAME,
+        ReconBodyObjectiveConfig,
+    )
 
     fields = tuple(field.name for field in dataclasses.fields(ReconBodyObjectiveConfig))
     assert fields == STOCK_RECON_BODY_OBJECTIVE_FIELDS + tuple(e2.DEV_OBJECTIVE_KEYS)
-    assert e2.DEV_OBJECTIVE_KEYS == OBJECT_TASK_KEYS
-    assert e2.DEV_OBJECTIVE_TERMS == (RECON_BODY_OBJECT_TASK_TERM_NAME,)
+    assert e2.DEV_OBJECTIVE_KEYS == OBJECT_TASK_KEYS + OBJECT_TASK_RELEASE_KEYS
+    assert e2.DEV_OBJECTIVE_TERMS == (RECON_BODY_OBJECT_TASK_TERM_NAME, RECON_BODY_OBJECT_NO_DROP_TERM_NAME)
 
 
 def test_export_strips_the_object_task_term_for_the_stock_runtime():

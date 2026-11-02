@@ -1,0 +1,10 @@
+{
+ "written_at": "2026-10-26 18:18:45",
+ "script_sha256": "5dd430ec78f32cdff7921cfdcc5eca2b9de2a925cf29f6c41b141c7d0a580658",
+ "synthetic": true,
+ "pass": true,
+ "problems": [],
+ "n_episodes": 30,
+ "n_changed_B_synthetic": 12,
+ "note": "random seeded values in place of consensus scores; checks only that the select code runs end to end and that its picks equal an independent re-derivation of the PREREG 5 rule; no score was read or computed; not a selection"
+}

@@ -1,0 +1,45 @@
+selection 2026-10-24 23:23:57 (own-input only; VERDICT 2026-10-24 23:13:53 sha 2dd3905a20a9)
+ep00 CHOSEN ep00_raw_final41043 [5/5 ok] -> SELECTED ep00_raw_final41043 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep00_raw_final41043
+ep01 CHOSEN ep01_k3fix_final44922 [5/5 ok] -> SELECTED ep01_k3fix_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep01_k3fix_final44922
+     challenger ep01_k3fix_t2wbest18000 settled=True n_ok=5 mean AUC 0.1444 qualifies=False ['mean AUC < CHOSEN + 0.01']
+     challenger ep01_t2fixL_p62000 settled=False n_ok=5 mean AUC 0.1435 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep02 CHOSEN ep02_k3fix_final34093 [5/5 ok] -> SELECTED ep02_k3fix_final34093 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep02_k3fix_final34093
+     challenger ep02_k3fix_t2wbest34000 settled=True n_ok=5 mean AUC 0.9371 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep03 CHOSEN ep03_k3fix_final27068 [5/5 ok] -> SELECTED ep03_k3fix_final27068 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep03_k3fix_final27068
+     challenger ep03_k3fix_t2wbest24000 settled=True n_ok=5 mean AUC 0.9840 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep04 CHOSEN ep04_raw_final44922 [5/5 ok] -> SELECTED ep04_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep04_raw_final44922; flags ['PENDING']
+ep05 CHOSEN ep05_raw_final44922 [5/5 ok] -> SELECTED ep05_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep05_raw_final44922
+ep06 CHOSEN ep06_k3fix_final28420 [5/5 ok] -> SELECTED ep06_k3fix_final28420 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep06_k3fix_final28420
+     challenger ep06_k3fix_t2wbest28000 settled=True n_ok=5 mean AUC 0.9219 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep07 CHOSEN ep07_k3fix_final18529 [5/5 ok] -> SELECTED ep07_k3fix_final18529 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep07_k3fix_final18529
+     challenger ep07_k3fix_t2wbest14000 settled=True n_ok=5 mean AUC 0.9758 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep08 CHOSEN ep08_k3easy_final17496 [5/5 ok] -> SELECTED ep08_k3easy_final17496 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep08_k3easy_final17496
+ep09 CHOSEN ep09_k3fix_final39449 [5/5 ok] -> SELECTED ep09_t2fixB_designated54449 (replaced by ep09_t2fixB_designated54449 (mean AUC 0.6837 >= 0.5810 + 0.01, SP/MP not lower)); SELECTED+P ep09_t2fixB_designated54449
+     challenger ep09_t2fixB_designated54449 settled=True n_ok=5 mean AUC 0.6837 qualifies=True []
+ep10 CHOSEN ep10_k3fix_final25319 [5/5 ok] -> SELECTED ep10_k3fix_final25319 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep10_k3fix_final25319
+     challenger ep10_k3fix_t2wbest18000 settled=True n_ok=5 mean AUC 0.6232 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep11 CHOSEN ep11_k3fix_final29175 [5/5 ok] -> SELECTED ep11_k3fix_final29175 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep11_k3fix_final29175
+     challenger ep11_k3fix_t2wbest28000 settled=True n_ok=5 mean AUC 0.8715 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep12 CHOSEN ep12_k3fix_final23178 [5/5 ok] -> SELECTED ep12_k3fix_final23178 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep12_k3fix_final23178
+     challenger ep12_k3fix_t2wbest20000 settled=True n_ok=5 mean AUC 0.7207 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep13 CHOSEN ep13_k3fix_final39254 [5/5 ok] -> SELECTED ep13_k3fix_final39254 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep13_k3fix_final39254
+ep14 CHOSEN ep14_k3fix_final44922 [5/5 ok] -> SELECTED ep14_k3fix_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep14_k3fix_final44922
+     challenger ep14_k3fix_t2wbest36000 settled=True n_ok=5 mean AUC 0.5648 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep15 CHOSEN ep15_raw_final44922 [5/5 ok] -> SELECTED ep15_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep15_raw_final44922
+ep16 CHOSEN ep16_k3fix_final32063 [5/5 ok] -> SELECTED ep16_k3fix_final32063 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep16_k3fix_final32063
+     challenger ep16_k3fix_t2wbest32000 settled=True n_ok=5 mean AUC 0.7631 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep17 CHOSEN ep17_k3fix_final29845 [5/5 ok] -> SELECTED ep17_k3fix_final29845 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep17_k3fix_final29845
+ep18 CHOSEN ep18_k3fix_final18911 [5/5 ok] -> SELECTED ep18_k3fix_final18911 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep18_k3fix_final18911
+     challenger ep18_k3fix_t2wbest18000 settled=True n_ok=5 mean AUC 0.9339 qualifies=False ['mean AUC < CHOSEN + 0.01']
+ep19 CHOSEN ep19_raw_final44922 [5/5 ok] -> SELECTED ep19_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep19_raw_final44922
+ep20 CHOSEN ep20_k3easy_final18450 [5/5 ok] -> SELECTED ep20_k3easy_final18450 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep20_k3easy_final18450
+ep21 CHOSEN ep21_k3fix_final44922 [5/5 ok] -> SELECTED ep21_k3fix_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep21_k3fix_final44922
+ep22 CHOSEN ep22_raw_final44922 [5/5 ok] -> SELECTED ep22_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep22_raw_final44922
+ep23 CHOSEN ep23_k3easy_final19162 [5/5 ok] -> SELECTED ep23_k3easy_final19162 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep23_k3easy_final19162
+ep24 CHOSEN ep24_k3fix_final20636 [5/5 ok] -> SELECTED ep24_k3fix_final20636 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep24_k3fix_final20636
+ep25 CHOSEN ep25_k3fix_final42819 [5/5 ok] -> SELECTED ep25_k3fix_final42819 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep25_k3fix_final42819
+ep26 CHOSEN ep26_raw_final34948 [5/5 ok] -> SELECTED ep26_raw_final34948 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep26_raw_final34948
+ep27 CHOSEN ep27_k3fix_final20863 [5/5 ok] -> SELECTED ep27_k3fix_final20863 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep27_k3fix_final20863
+ep28 CHOSEN ep28_raw_final44922 [5/5 ok] -> SELECTED ep28_raw_final44922 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep28_raw_final44922
+ep29 CHOSEN ep29_k3fix_final17358 [5/5 ok] -> SELECTED ep29_k3fix_final17358 (CHOSEN kept (no qualifying challenger)); SELECTED+P ep29_k3fix_final17358
+     challenger ep29_k3fix_t2wbest16000 settled=True n_ok=5 mean AUC 0.9273 qualifies=False ['mean AUC < CHOSEN + 0.01']

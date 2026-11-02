@@ -1,0 +1,122 @@
+{
+ "written_at": "2026-11-02 06:39:14",
+ "script_sha256": "d9aabf1d879bc1a80b9e1a19904654ba3f5c29b4bd2678195a3587869fa139d3",
+ "consensus_sha256": "e1b943b10fd1db13ab6f78e5bde7b3c6e6c48f7daeee6230c32c463d14ac41b4",
+ "gate_sha256": "a29c997b7271e9299db109e97af5210f528484719210bb58685523b0ae0eb16b",
+ "note": "OWN-INPUT re-score of the dry-run rollouts only (PREREG_R7 3.6 / 5.1); plumbing evidence, decides nothing; no consensus reference",
+ "runs": [
+  {
+   "dir": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_final_20261102_063807",
+   "phase": "final",
+   "job": "ep01_zxg2_120000",
+   "episode": 1,
+   "input": "g2",
+   "input_reference": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2",
+   "input_reference_file": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000001.npz",
+   "rollout": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_final_20261102_063807/ep01_zxg2_120000/run1/try1/results/episode_000001.parquet",
+   "rollout_sha256": "348c2f57208fe41b6dd3271030ca6fbeaaddffca6adb7b44eb087f803881a7b2",
+   "export_sha256": "7bcf2d3e0a13cb7477debd4bc8c97d73c964d7cc9c4f1ef2a53ca454d8e5e931",
+   "evaluator_own_input": {
+    "auc": 0.20791499330655958,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 41.838114990117745
+   },
+   "rescored_own_input_seed0": {
+    "auc": 0.2074966532797858,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 41.838115874728295
+   },
+   "auc_seeds_0_9": [
+    0.2074966532797858,
+    0.20682730923694778,
+    0.2074966532797858,
+    0.20657630522088352,
+    0.20707831325301204,
+    0.20707831325301204,
+    0.20707831325301207,
+    0.20724564926372158,
+    0.2064926372155288,
+    0.20766398929049532
+   ],
+   "band": [
+    0.1864926372155288,
+    0.2276639892904953
+   ],
+   "conversion": {
+    "rows": 747,
+    "rollout_rows": 747,
+    "conv_pos_residual_m": 9.157392721186697e-08,
+    "conv_ang_residual_rad": 1.264405455326821e-07,
+    "converted": true,
+    "eval_code_recorded": true
+   },
+   "checks": {
+    "auc_in_band": true,
+    "abs_d_mppe_le_0.5": true,
+    "sp_equal": true,
+    "mp_equal": true,
+    "seed0_reproduces_metrics_vs": true
+   },
+   "pass": true
+  },
+  {
+   "dir": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628",
+   "phase": "screen",
+   "job": "ep00_z5k3fix_89500",
+   "episode": 0,
+   "input": "k3fix",
+   "input_reference": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix",
+   "input_reference_file": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000000.npz",
+   "rollout": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/dryrun/eval_screen_20261102_063628/ep00_z5k3fix_89500/run1/try1/results/episode_000000.parquet",
+   "rollout_sha256": "fd584c0459189babcf7ab5cfbc5e1b4f54a54fe87cf227e0af513645da7fd9e5",
+   "export_sha256": "97f8323f8917a55ade419148eaeb91cbe8dfc14cbf93f8d98ac90b1f85229e13",
+   "evaluator_own_input": {
+    "auc": 0.9524421593830334,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6230882734927282
+   },
+   "rescored_own_input_seed0": {
+    "auc": 0.9524421593830334,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 0.6230879733930809
+   },
+   "auc_seeds_0_9": [
+    0.9524421593830334,
+    0.9522814910025708,
+    0.9534061696658098,
+    0.9546915167095116,
+    0.9517191516709511,
+    0.9522011568123393,
+    0.9508354755784062,
+    0.9542898457583547,
+    0.9516388174807198,
+    0.9533258354755785
+   ],
+   "band": [
+    0.9308354755784062,
+    0.9746915167095116
+   ],
+   "conversion": {
+    "rows": 778,
+    "rollout_rows": 778,
+    "conv_pos_residual_m": 7.61959817679269e-08,
+    "conv_ang_residual_rad": 9.424321830774485e-08,
+    "converted": true,
+    "eval_code_recorded": true
+   },
+   "checks": {
+    "auc_in_band": true,
+    "abs_d_mppe_le_0.5": true,
+    "sp_equal": true,
+    "mp_equal": true,
+    "seed0_reproduces_metrics_vs": true
+   },
+   "pass": true
+  }
+ ],
+ "pass": true
+}

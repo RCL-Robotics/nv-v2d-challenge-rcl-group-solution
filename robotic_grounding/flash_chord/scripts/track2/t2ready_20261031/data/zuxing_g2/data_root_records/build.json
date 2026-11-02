@@ -1,0 +1,19 @@
+{
+ "8": {
+  "fit_resid_m": 6.60083342088723e-08,
+  "fit_resid_rad": 9.178337852099902e-08,
+  "change_vs_raw_mean_cm": 2.6225157413707834,
+  "change_vs_raw_max_cm": 3.7480650429676854,
+  "change_vs_raw_mean_deg": 21.60388079724599,
+  "change_vs_raw_max_deg": 31.464178763485137,
+  "vs_frame_refs_g2": "accepted",
+  "packer_resid_m": 5.073861629155291e-08,
+  "packer_resid_rad": 7.300048299977715e-08,
+  "vs_released_raw": "REJECTED",
+  "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+  "g2_pose_sha256": "996d0bcd146efb3148a416f9fc13edc688be65ca4e71fb9b99deb6a2309c83a1",
+  "parquet_sha256": "ef0f5ca59aeb23358662e32fcdc0bf1fd7399c8f1197e3295c2fc7af16680215",
+  "frame_ref_sha256": "38ed53ffeae5ef7469067af72af2c5b932db492d48596841369745113b24b86c",
+  "ok": true
+ }
+}

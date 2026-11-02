@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-11-02 06:38:18",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "5367fdef34ef90d3"
+   ],
+   "missing": []
+  }
+ }
+}
