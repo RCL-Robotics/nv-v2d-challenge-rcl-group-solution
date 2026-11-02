@@ -204,7 +204,8 @@ The scripts are left as they ran, so that they rebuild the released files exactl
 ## 6. Re-run check (2026-11-02)
 
 `check_steps.sh` re-runs single steps from a clean checkout (`git archive fe36ba4 hoi_estimation`; the code is that of
-81a3f6b), with `V2D_ROOT` pointing to a root that holds **only the files listed in section 0** (symlinks to the NAS
+81a3f6b; repeated on ced2a6f, which removed the built-in paths, with the same results for P1, DB, build_release,
+export_inputs, solve.py, frame-0, opus, combined and support fit), with `V2D_ROOT` pointing to a root that holds **only the files listed in section 0** (symlinks to the NAS
 originals, which were bound read-only, so no released file could be written). Each step reads the released upstream
 files and writes under a new name; the full log is `$V2D_ROOT/repro_out/check_results.txt`.
 
