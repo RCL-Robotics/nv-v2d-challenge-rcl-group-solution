@@ -4,14 +4,27 @@ This folder is the code and record behind our Track 2, Tier 3 submission file ("
 policies are G1 + Dex3 policies trained with FlashCHORD on our team's own video reconstruction, one policy per
 episode, 30 episodes.
 
-It is one commit on top of `41403d3` (branch `dev.haoran.c3r2`). The commit adds this folder and a pointer file at the
-repo root, `TIER3_SUBMISSION.md`. **It leaves the trainer untouched:**
-- `robotic_grounding/flash_chord/src` is byte-identical to `41403d3`'s;
+**History of this record:**
+1. **`232e6b2`** (branch `dev.haoran.t3ready_20261102`): one commit on top of `41403d3` (branch `dev.haoran.c3r2`). It
+   adds this folder and a pointer file at the repo root, `TIER3_SUBMISSION.md`.
+2. **Merge `ab0d24c`** (2026-11-02). It merges Han Zhou's branch `dev.hanzhou.hoi_estimation` (head `48c217a`), which
+   adds his reconstruction code under `hoi_estimation/` at the repo root.
+   - The two sides change disjoint paths, so there were no conflicts.
+   - The merged tree is `232e6b2`'s tree plus Han's `hoi_estimation/` subtree, unchanged.
+3. **The child of that merge** (branch `dev.haoran.t3final_20261102`) updates this README, `TIER3_SUBMISSION.md` and
+   `han_zhou_reconstruction/README.md`, adds `verification/merge_t3final/`, and refreshes `SHA256SUMS`.
+
+The submission file is unchanged. Only its `code_commit_url` points at the new commit.
+
+**The trainer is untouched:**
+- `robotic_grounding/flash_chord/src` is byte-identical to `41403d3`'s (tree `b8000f82`), both before and after the
+  merge;
 - every code file of `robotic_grounding/flash_chord` is byte-identical to the FlashCHORD tree that trained and exported
   every policy (fc_r2 @ `61fa5d3`);
 - `robotic_grounding/scripts/retarget/soma_to_g1.py` is the retarget that made every training input.
 
-See `verification/code_identity.txt`.
+See `verification/code_identity.txt` (for `232e6b2`) and `verification/merge_t3final/code_identity.txt` (for the
+merge).
 
 Contents:
 1. The file
@@ -19,7 +32,7 @@ Contents:
 3. Reproduce
 4. Folder layout
 5. Verification
-6. What is still missing
+6. Han's reconstruction code: where it is, and what is still missing
 7. Disclosures
 8. Grey areas for the organisers
 9. Kit and runtime
@@ -63,12 +76,16 @@ Tier-3 training input (`evaluation/t3_f0_final/pack/FINAL_r/choices.md`). They a
 
 ## 2. How each episode was produced
 
-**Input: Han Zhou's frame-0 release** (`han_zhou_reconstruction/`). Han is on our team. The release builds on:
-- **s1:** human, camera and object reconstructed from the monocular exo video. The human and camera are kept unchanged
-  in every later release.
-- **opus_v2:** each episode's object track re-estimated by a Claude Code (Opus) agent.
-- **frame-0 correction** (`opus_v2_frame0_f3_c2_shift`), which uses the true first-frame object pose.
-- **Supports:** video-fit furniture for the 14 episodes where the object is placed on a table, desk, chair or stool.
+**Input: Han Zhou's frame-0 release.** Han is on our team. The release documents are in `han_zhou_reconstruction/`; his
+code is in `hoi_estimation/` at the repo root (section 6). The release builds on:
+- **s1:** human, camera and object reconstructed from the monocular exo video (`hoi_estimation/hoi_extraction/`). The
+  human and camera are kept unchanged in every later release.
+- **opus_v2:** each episode's object track re-estimated by a Claude Code (Opus) agent (`hoi_estimation/agent/`, runs in
+  `hoi_estimation/agent_records/`).
+- **frame-0 correction** (`opus_v2_frame0_f3_c2_shift`), which uses the true first-frame object pose
+  (`hoi_estimation/tier2_refine/t3_frame0.py`).
+- **Supports:** video-fit furniture for the 14 episodes where the object is placed on a table, desk, chair or stool
+  (`hoi_estimation/support/`).
 
 **Data prep** (`data_prep/`, README_tier3.md):
 - byte copies of the inputs into a write-once data root;
@@ -150,6 +167,9 @@ The drivers name absolute paths under the training server's work root, `/root/au
 B=robotic_grounding/flash_chord/scripts/track2/t3ready_20261102
 python3 $B/tools/restore_layout_t3.py --me /root/autodl-tmp/haoran.zhang   # files back at their run paths (--rewrite for another root)
 
+# A. reconstruction (Han Zhou): hoi_estimation/README.md, in order: hoi_extraction/ (s1) -> agent/ (opus_v2)
+#    -> tier2_refine/t3_frame0.py (frame-0 correction) -> support/ (supports, combined release); see section 6
+
 # B. data: Han's release -> data root, retarget, supports, mitigation   (data_prep/README_tier3.md, steps 0 and A-G)
 
 # training, export, evaluation of every episode, exactly as recorded:
@@ -184,7 +204,8 @@ the bytes.
 | `SOURCES.tsv` | every copied file: its path here, its original path on the training server (`<ME>`, `<HAN>`), sha256, bytes |
 | `SHA256SUMS` | sha256 of every file in this folder |
 | `data_prep/` | part B: Han's release → training inputs (scripts, pins, records, `README_tier3.md`) |
-| `han_zhou_reconstruction/` | part C: Han Zhou's reconstruction code and documents as available on the server, `COPIES_t3ready.tsv`, and the **MISSING** list |
+| `han_zhou_reconstruction/` | part C: Han Zhou's release documents and the s1 code he shipped with s1, copied from the server (`COPIES_t3ready.tsv`), and the map from each formerly missing piece to its place in `hoi_estimation/` |
+| `../../../../../hoi_estimation/` (repo root) | Han Zhou's full reconstruction code and agent run records, merged from `dev.hanzhou.hoi_estimation` (`48c217a`) |
 | `evaluation/f0/` | PREREG_f0 (+ sha256), the f0 VERDICT (own-input and training statistics), the 30 f0 post records |
 | `evaluation/t3_f0_final/` | the 5x evaluation and selection driver and kit helper, PREREG.md (+ sha256), AMENDMENT_1/2 (+ sha256), item / selection / run records, `own_input_runs.csv`, `selection.csv`, `status.md`; `pack/FINAL_r/` (`build.json`, `choices.*`, `file.json`, `expect.json`, `validate.*`, `pack_status.json`, `FILES.sha256`, `inputs/`, `results/*.json`); `pack/FINAL/` records |
 | `evaluation/f0_retry/` | PREREG_retry (v2; v1 under `r3fix/v1/`), PREREG_v3 (+ sha256 files), `RETRY_FILES*.sha256`, RETRY_GO / NOGO / templates, `t3retry.py`, `t3retry_v3.py`, `launch*.sh`, `v3fix/` and `r3fix/` (code and tests), `recipes/` + `recipes.sha256`, `cfgcheck/`, `dryrun/`, the 14 post records, `VERDICT_retry.json`, `SUBMISSION_CHOICE.json`, `t3final_r_build.py` |
@@ -198,7 +219,9 @@ not committed: the placeholder CSV and the packer log, which also holds the pack
 **Never committed:** files whose name marks clean-reference or ground-truth material (`*LOCAL_NOT_FOR_UPLOAD*`,
 `*clean*`, `VERDICT_clean*`, `summary_LOCAL*`, `report_LOCAL*`, `s4a_*`, `s4b_*`, `clean_stat*`, `*GT*`, `gt_eval*`).
 
-## 5. Verification (CPU only, before the commit)
+## 5. Verification (CPU only)
+
+**For `232e6b2`, before that commit:**
 
 - **`verification/check_set_report.json`** (`tools/check_set_t3.py --files --hash`): **ALL OK**.
   - 41 / 41 training stages (30 f0 + 11 retry) compose with this tree's Hydra configs. The result equals each run's
@@ -224,17 +247,73 @@ not committed: the placeholder CSV and the packer log, which also holds the pack
 - **Repack (after the commit; not in it):** `t3final_r_build.py repack` with this commit's URL, the uploader's offline
   validation for `track_2_tier3`, and pose columns equal to `82fef2c7…`.
 
-## 6. What is still missing
+**After the merge with Han's branch (`verification/merge_t3final/`, run on the merge commit `ab0d24c`):**
+- **`check_set.log` / `check_set_report.json`:** `check_set_t3.py --files --hash` gives **ALL OK** again: 41 / 41 stages
+  compose, B 41, D 41, R 11, E 30, and 30 rollouts name the evaluated file.
+  - It was run on the committed tree: the merge commit's `src/flash_chord/configs` and this folder, written out from
+    git objects.
+  - 41 checkpoint and 30 evaluated-file sha256 pins match.
+  - The README child commit changes none of the files the check reads.
+- **`code_identity.txt`:**
+  - item 1: `src` equals `41403d3`;
+  - item 2: the only paths changed outside this folder and `TIER3_SUBMISSION.md` are the 1,336 files under
+    `hoi_estimation/`, all from Han's commit;
+  - items 3 to 6: unchanged from `232e6b2`.
+- **`hygiene_scan.json`:** the same scan over this folder after the README update, plus the scan of the files this update
+  adds or changes. It also reports on Han's `hoi_estimation/`, which is report-only and merged unchanged.
+- **`agent_run_map.json`:** for each of the 30 episodes, the agent run that produced its opus_v2 track, and the local
+  modules its `solve.py` imports (section 6).
 
-`han_zhou_reconstruction/README.md` lists, under MISSING, the parts of Han's reconstruction that exist only on his
-machine:
-- the s1 SOMA-X human reconstruction and world-alignment pipeline;
-- the opus agent harness, prompt and input packing, plus the per-episode helper modules that 19 of the 30 `solve.py`
-  import;
-- the frame-0 correction code (`f3_c2_shift`);
-- the support fit code (GroundingDINO + SAM2 + silhouette IoU) and its contact shift.
+## 6. Han's reconstruction code: where it is, and what is still missing
 
-They are needed for rule 2.9.a and must be added by a later commit.
+`232e6b2` listed four pieces of Han's reconstruction as MISSING. Han's branch `dev.hanzhou.hoi_estimation`, merged here
+under `hoi_estimation/`, supplies the code of all four. `han_zhou_reconstruction/README.md` maps each piece to files,
+with what each file does.
+
+| formerly missing | now in `hoi_estimation/` |
+|---|---|
+| **1. s1 pipeline** | `hoi_extraction/`: |
+| | • CARI4D run per video (GroundingDINO → SAM2 → MoGe-2 → SAM-3D-Body → FoundationPose → CoCoNet): `cluster/run_episode.sh`, `cluster/gen_prompt_one.py`, `cluster/episodes.tsv`; batch drivers `scripts/run_local.sh` and `slurm/run_all.sh` |
+| | • container and environment: `singularity/v2d_cari4d.def` and `v2d_gdino.def`, `slurm/build_*.sh`, and the one patched CARI4D file `patches/run_foundationpose_mhr_export.py` |
+| | • the M1 prompt re-run (`M1_prompt_v2`): `cluster/gen_prompt_v2.py` |
+| | • the P1 step (`P1_temporal`): `scripts/postproc_temporal.py`, and the other post-processing steps in `scripts/` |
+| | • the first-frame alignment that writes `logs/pnp_forE1.json`: `scripts/firstframe_align.py` + `scripts/firstframe_pnp.py`; `E1` is `exp_fp_mode.sh E1_every_frame` |
+| | • the `/workspace/v2d_cari4d/lib/cari4d` library is this repo's `reconstruction/modules/v2d_cari4d/lib/cari4d`, copied into the image by `v2d_cari4d.def` |
+| **2. opus_v2 agent harness** | `agent/`: |
+| | • prompt `AGENT_TASK_temporal_v2.md` (the same blob as the task file of all 30 release runs) |
+| | • sandbox launcher `run_claude.sh` + `allowlist_proxy.py`, batch `run_batch_CL.sh` |
+| | • input packing `export_inputs.py` |
+| | • output → release `build_release_opus.py` |
+| | • the per-episode helper modules: `agent_records/<run>/outputs/`, beside each `solve.py`. The run of each episode was identified by blob identity: `CL2_ep000`–`010`, `CL2b_ep011`–`021`, `CL2c_ep022`–`029`. Every local import of the 30 `solve.py` resolves there |
+| **3. frame-0 correction** | `tier2_refine/t3_frame0.py`, with arguments `opus <out> 3 2 shift` (= `opus_f3_c2_shift`); `support/build_release_combined.py` publishes it as `opus_v2_frame0_f3_c2_shift` |
+| **4. support fit and contact shift** | `support/`: `background` → `anchor` → `detect` (GroundingDINO) → `segment` (SAM2) → `fit` (nvdiffrast silhouette IoU) → `contact` → `package` (`T_world_mesh_contact`), then `build_release_combined.py` |
+
+**Still missing:**
+1. **The extraction of `ref_human_f0/<ep>.npz` and `ref_poses/<ep>.npz`.**
+   - These are the frame-0 reference human and the reference object poses, from which `t3_frame0.py` takes frame 0.
+   - The scripts that read them are present; no script that writes them is.
+2. **Exact command lines for most runs.**
+   - The scripts are present, and many name their variants in usage lines: `build_release.py`'s usage line names the s1
+     variant, and `t3_frame0.py`'s names its arguments.
+   - But no driver or log records the exact command lines and flags of:
+     - the s1 post-processing chain (`pnp_forE1`, `M1_prompt_v2`, `JC2s1_shared_f820_pp`, `DB_JC2s1_shared_f820_pp`);
+     - the frame-0 run;
+     - the per-episode support-fit settings (the `fit.py` environment switches).
+3. **The revision of `reconstruction/modules` that the CARI4D image was built from.** It is not recorded. We assume
+   it is this repo's.
+4. **Non-code inputs, not suitable for Git.** These are on Han's storage:
+   - the weights (SAM2, GroundingDINO, CARI4D, SAM-3D-Body);
+   - the built images;
+   - the intermediate outputs;
+   - each agent's packed input arrays and delivered `object_poses_world.npz`. The run manifests record the inputs'
+     sha256.
+
+**Corrections to the `232e6b2` MISSING list (found by its verifier):**
+- `postproc_joint_camera.py`, `postproc_joint_camera_K.py` and `build_release.py` were already committed in
+  `han_zhou_reconstruction/tier3_s1_20261020/code/`.
+- So the JC1 / JC2 joint-camera steps (camera, principal point), the depth blend and the MHR → SOMA-X `PoseInversion`
+  conversion were never missing.
+- All five files in that folder are the same blobs as in Han's `hoi_extraction/scripts/`.
 
 ## 7. Disclosures
 
@@ -286,8 +365,11 @@ These are summaries. The full texts are in the cited files.
    transform, fitted to the **frame-0 reference human**, and also estimates the camera principal point from it.
    - Han's s1 README says the organisers allow the frame-0 reference human for the coordinate frame. The
      principal-point use is not yet confirmed.
-   - 10 of the 30 opus agent reports also mention the frame-0 reference human, for example as a floor-height or scale
-     cue: ep00 01 07 09 15 20 22 23 24 29.
+   - At least 12 of the 30 opus agent reports also mention the frame-0 reference human, for example as a floor-height
+     or scale cue: ep00 01 07 08 09 10 15 20 22 23 24 29. (`232e6b2` said 10; ep08 and ep10 were missed.)
+   - The agents received it as an input. `hoi_estimation/agent/export_inputs.py` writes `frame0_reference_human.npz`
+     (frame-0 vertices only) into every agent's inputs, and each run manifest lists that file.
+   - The s1 camera fit (`postproc_joint_camera_K.py`, JC2) also uses it to fit the focal length and principal point.
 3. **Video-fit supports.** For the 14 placement episodes, Han fits the scanned furniture mesh to the video with
    GroundingDINO + SAM2 + a silhouette-IoU fit. The task text names the furniture. A vertical contact shift (−5 to
    +2 cm) makes his track rest on it. On top, we apply four GT-free placement rules (PREREG_f0 "Supports").
@@ -297,15 +379,31 @@ These are summaries. The full texts are in the cited files.
 4. **LLM-agent reconstruction and its reproducibility.** The opus_v2 object tracks were produced per episode by a Claude
    Code (Opus) agent in a sandbox, starting from s1.
    - The agents' `solve.py`, `TOOLS.md` and `REPORT.md` are committed.
-   - The harness, prompt, packed inputs and 19 episodes' helper modules are not yet committed (section 6).
+   - Since the merge, so are the harness, the prompt, the input-packing code, every run's transcript, event stream and
+     manifest, and the helper modules (`hoi_estimation/agent/`, `hoi_estimation/agent_records/`).
+   - The packed input arrays are not committed (section 6).
    - Re-running an agent would not reproduce the same `solve.py`. Re-running the committed `solve.py` with its inputs
-     and helpers is the reproducible path.
-5. **Also stated:**
+     and helpers is the reproducible path; `hoi_estimation/diagnostics/repro.sh` does that with no network.
+   - The release runs used `net=open` (`run_claude.sh`): every host except huggingface.co / hf.co, through a logging
+     proxy. The proxy logs are not in the branch.
+5. **Choices informed by Han's GT diagnostics** (stated in his code and README; no GT enters any output beyond the
+   frame-0 object pose and the frame-0 human):
+   - the frame-0 refinement variant (`opus_f3_c2_shift`) is his best variant by his GT evaluation;
+   - snapping the object track onto the support was rejected in favour of shifting the support
+     (`T_world_mesh_contact`) after a GT diagnostic (`support/package.py`);
+   - `t3_frame0.py` reads the reference object poses, writes each trajectory from frame 0 only, and then scores it
+     against the reference in the same run (`diag_scores.json`).
+
+   Our pipeline made no choice among his variants. It used his frame-0 release as given (PREREG_f0).
+6. **Also stated:**
    - the human is s1's, unchanged while the object moved; the mitigation is by training config only (palm threshold
      0.25 for 8 episodes);
    - the frame references are ours, built from Han's f0 track;
    - the scene files (ground plane, mesh) are the released ones;
-   - Han's GT-based README quality tables were read but chose nothing.
+   - Han's GT-based README quality tables were read but chose nothing;
+   - `hoi_estimation/` is Han's branch merged unchanged. It contains GT-based evaluation scripts and tables
+     (`diagnostics/`, `eval_official.py`, `eval_object_pose.py`, his README). They are committed as they are, for
+     completeness. Nothing of ours reads them, and this README quotes none of their numbers.
 
 ## 9. Kit and runtime (unchanged, pinned)
 

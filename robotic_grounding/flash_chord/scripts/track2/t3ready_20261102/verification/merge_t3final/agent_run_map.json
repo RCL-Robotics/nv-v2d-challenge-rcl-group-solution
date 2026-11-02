@@ -1,0 +1,681 @@
+{
+ "episodes": {
+  "0": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "decord",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoilib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep000/outputs/",
+   "run": "CL2_ep000",
+   "sequence": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04"
+  },
+  "1": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "sam2",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "fit",
+    "lib",
+    "traj"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep001/outputs/",
+   "run": "CL2_ep001",
+   "sequence": "2026-05-18_17-06-21_vacuum_left_lean_02"
+  },
+  "10": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep010/outputs/",
+   "run": "CL2_ep010",
+   "sequence": "2026-05-01_11-36-40_white_desk_lower_to_ground_10"
+  },
+  "11": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep011/outputs/",
+   "run": "CL2b_ep011",
+   "sequence": "2026-04-24_13-56-58_light_blue_book_pick_place_09"
+  },
+  "12": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep012/outputs/",
+   "run": "CL2b_ep012",
+   "sequence": "2026-04-25_17-20-04_black_platform_turn_05"
+  },
+  "13": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "hydra",
+    "numpy",
+    "nvdiffrast",
+    "omegaconf",
+    "sam2",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep013/outputs/",
+   "run": "CL2b_ep013",
+   "sequence": "2026-06-09_10-19-09_snack_box_desk_through_06"
+  },
+  "14": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "common",
+    "rectify"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep014/outputs/",
+   "run": "CL2b_ep014",
+   "sequence": "2026-05-28_14-44-09_round_table_flip_08"
+  },
+  "15": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "common",
+    "evidence",
+    "trajectory"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep015/outputs/",
+   "run": "CL2b_ep015",
+   "sequence": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08"
+  },
+  "16": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep016/outputs/",
+   "run": "CL2b_ep016",
+   "sequence": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02"
+  },
+  "17": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep017/outputs/",
+   "run": "CL2b_ep017",
+   "sequence": "2026-05-01_17-04-55_traffic_cone_ground_table_02"
+  },
+  "18": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep018/outputs/",
+   "run": "CL2b_ep018",
+   "sequence": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08"
+  },
+  "19": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "common",
+    "decode",
+    "fit",
+    "photo"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep019/outputs/",
+   "run": "CL2b_ep019",
+   "sequence": "2026-05-19_10-19-48_cane_swing_05"
+  },
+  "2": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoilib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep002/outputs/",
+   "run": "CL2_ep002",
+   "sequence": "2026-06-02_10-04-42_blue_easter_basket_place_10"
+  },
+  "20": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib",
+    "traj_opt"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep020/outputs/",
+   "run": "CL2b_ep020",
+   "sequence": "2026-06-08_16-57-34_rice_cooker_clockwise_04"
+  },
+  "21": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "common",
+    "fit",
+    "stages"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2b_ep021/outputs/",
+   "run": "CL2b_ep021",
+   "sequence": "2026-04-29_11-53-57_tall_bar_stool_pull_08"
+  },
+  "22": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "render_utils",
+    "silfit",
+    "traj_utils"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep022/outputs/",
+   "run": "CL2c_ep022",
+   "sequence": "2026-05-22_16-52-36_step_ladder_drag_03"
+  },
+  "23": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep023/outputs/",
+   "run": "CL2c_ep023",
+   "sequence": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04"
+  },
+  "24": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep024/outputs/",
+   "run": "CL2c_ep024",
+   "sequence": "2026-05-29_15-43-20_watering_can_pour_right_02"
+  },
+  "25": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep025/outputs/",
+   "run": "CL2c_ep025",
+   "sequence": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01"
+  },
+  "26": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep026/outputs/",
+   "run": "CL2c_ep026",
+   "sequence": "2026-06-05_16-05-08_skateboard_rotate_ground_10"
+  },
+  "27": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoilib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep027/outputs/",
+   "run": "CL2c_ep027",
+   "sequence": "2026-05-01_11-15-05_woven_basket_ground_desk_10"
+  },
+  "28": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep028/outputs/",
+   "run": "CL2c_ep028",
+   "sequence": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_"
+  },
+  "29": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "roma",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2c_ep029/outputs/",
+   "run": "CL2c_ep029",
+   "sequence": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06"
+  },
+  "3": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "lib"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep003/outputs/",
+   "run": "CL2_ep003",
+   "sequence": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05"
+  },
+  "4": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "bat_lib",
+    "fitter",
+    "stages",
+    "validate"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep004/outputs/",
+   "run": "CL2_ep004",
+   "sequence": "2026-04-24_11-40-52_baseball_bat_rotate_05"
+  },
+  "5": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_lib",
+    "traj_opt"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep005/outputs/",
+   "run": "CL2_ep005",
+   "sequence": "2026-03-18_19-36-56_g1_box_rotate_01"
+  },
+  "6": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [
+    "hoi_fit"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep006/outputs/",
+   "run": "CL2_ep006",
+   "sequence": "2026-06-01_11-26-44_monitor_rotate_05"
+  },
+  "7": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "scipy",
+    "torch",
+    "trimesh",
+    "v2d.sam2.lib.sam2_utils"
+   ],
+   "local_modules": [
+    "common",
+    "constrained",
+    "fitcore",
+    "hyp",
+    "prep",
+    "stages"
+   ],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep007/outputs/",
+   "run": "CL2_ep007",
+   "sequence": "2026-05-29_15-20-43_iron_round_table_02"
+  },
+  "8": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "roma",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep008/outputs/",
+   "run": "CL2_ep008",
+   "sequence": "2026-06-05_15-08-08_skinny_wood_chair_push_10"
+  },
+  "9": {
+   "blob_identical_to_record": {
+    "REPORT.md": true,
+    "TOOLS.md": true,
+    "solve.py": true
+   },
+   "external_imports": [
+    "cv2",
+    "h5py",
+    "numpy",
+    "nvdiffrast",
+    "open3d",
+    "torch",
+    "trimesh"
+   ],
+   "local_modules": [],
+   "record_dir": "hoi_estimation/agent_records/CL2_ep009/outputs/",
+   "run": "CL2_ep009",
+   "sequence": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03"
+  }
+ },
+ "han_commit": "48c217a101a9daa8b64326d3e7f1a077532b032f",
+ "merge_commit": "ab0d24c5bb3909bcfa0ee2223f5c2e6b84064d4a",
+ "what": "for each episode: the agent run whose outputs/{solve.py,REPORT.md,TOOLS.md} equal (git blob) this bundle's han_zhou_reconstruction/tier3_frame0_supports_20261024/agent_run/<sequence>/ files, the local modules that solve.py imports (closure, all present in the same outputs/ folder) and its other imports"
+}
