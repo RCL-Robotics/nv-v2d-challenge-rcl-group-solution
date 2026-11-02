@@ -60,8 +60,8 @@ def floor_height(E, work, use_aligned, frames=12, rng=np.random.default_rng(0)):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episodes", type=int, nargs="+")
-    ap.add_argument("--v2d", default="/mnt/nas/Group/hanzhou/v2d")
-    ap.add_argument("--out", default="/mnt/nas/Group/hanzhou/v2d/logs/ground_scales.json")
+    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--out", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/logs/ground_scales.json")
     args = ap.parse_args()
     ds = f"{args.v2d}/dataset/track_2/tier_1_multiview_caption"
     meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}

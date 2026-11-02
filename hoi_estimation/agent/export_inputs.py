@@ -23,10 +23,10 @@ import torch
 import trimesh
 
 sys.path.insert(0, "/workspace/v2d_cari4d/lib/cari4d")
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_official import bundle_path  # noqa: E402
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 DS = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 FLIP = np.diag([1.0, -1.0, -1.0])
 

@@ -21,7 +21,7 @@ import torch
 import trimesh
 
 sys.path.insert(0, "/workspace/v2d_cari4d/lib/cari4d")
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 
 
 def main():

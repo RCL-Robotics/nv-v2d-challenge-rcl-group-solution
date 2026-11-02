@@ -7,6 +7,7 @@ which means "post-processing P1 on E2 outputs; plain CARI4D where E2 was not run
 choice based on the reference is made. Reads the CSVs written by compare_experiments.py
 (stage CoCoNet) plus logs/eval_after_fix.csv for the baseline.
 """
+import os
 import argparse
 import glob
 
@@ -16,7 +17,7 @@ import pandas as pd
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pipeline", nargs="+", required=True)
-    ap.add_argument("--logs", default="/mnt/nas/Group/hanzhou/v2d/logs")
+    ap.add_argument("--logs", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/logs")
     ap.add_argument("--metric", default="AUC")
     args = ap.parse_args()
     frames = []

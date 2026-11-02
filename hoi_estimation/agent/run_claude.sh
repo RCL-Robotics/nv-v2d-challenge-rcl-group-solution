@@ -13,7 +13,7 @@
 set -euo pipefail
 WS=$1; MODEL=${2:-claude-opus-5-5}; TMIN=${3:-90}; NET=${4:-open}; PIPELINE=${5:-}; TASK_FILE=${6:-}; EFFORT=${7:-high}
 A=$HOME/.local/apptainer/usr/bin/apptainer
-V2D=/mnt/nas/Group/hanzhou/v2d
+V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
 SIF=$V2D/images/v2d_cari4d.sif
 CL=$(readlink -f $HOME/.local/bin/claude)
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -24,8 +24,8 @@ TOKF=$HOME/.config/v2d/claude_oauth_token  # long-lived token from `claude setup
 [ -z "${CLAUDE_CODE_OAUTH_TOKEN:-}" ] && [ -s $TOKF ] && CLAUDE_CODE_OAUTH_TOKEN=$(tr -d ' \n' < $TOKF)
 if [ -z "${CLAUDE_CODE_OAUTH_TOKEN:-}" ]; then
   CLAUDE_CODE_OAUTH_TOKEN=$(python3 - "$TMIN" <<'PY'
-import json, sys, time
-d = json.load(open("/home/hanzhou/.claude/.credentials.json"))["claudeAiOauth"]
+import json, os, sys, time
+d = json.load(open(os.path.expanduser("~/.claude/.credentials.json")))["claudeAiOauth"]
 left = d["expiresAt"] / 1000 - time.time()
 if left < (float(sys.argv[1]) + 10) * 60:
     sys.exit(f"access token expires in {left/60:.0f} min < run time; use `claude setup-token` and export CLAUDE_CODE_OAUTH_TOKEN")
@@ -33,7 +33,7 @@ print(d["accessToken"])
 PY
 )
 fi
-BINDS=(-B $WS:/work -B $CL:/opt/claude/claude:ro -B /home/hanzhou/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
+BINDS=(-B $WS:/work -B $CL:/opt/claude/claude:ro -B $HOME/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
 [ -n "$PIPELINE" ] && BINDS+=(-B $PIPELINE:/pipeline:ro)
 { echo "date_utc: $(date -u +%FT%TZ)"; echo "claude: $($CL --version)"; echo "model: $MODEL effort=$EFFORT net=$NET"
   echo "sif: $SIF $(stat -c %s $SIF) bytes"; echo "binds: ${BINDS[*]}"; echo "task_sha256: $(sha256sum $WS/AGENT_TASK.md | cut -c1-64)"

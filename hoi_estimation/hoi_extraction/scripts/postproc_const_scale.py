@@ -17,7 +17,7 @@ import numpy as np
 import torch
 import trimesh
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 
 
 def main():

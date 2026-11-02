@@ -63,9 +63,9 @@ def robust_offset(R_ours, R_ref, thresh=20.0, iters=400, rng=np.random.default_r
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episodes", type=int, nargs="+")
-    ap.add_argument("--v2d", default="/mnt/nas/Group/hanzhou/v2d")
-    ap.add_argument("--local-run", default="/home/hanzhou/Projects/v2d/run")
-    ap.add_argument("--out", default="/mnt/nas/Group/hanzhou/v2d/diagnosis")
+    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--local-run", default=os.path.expanduser("~/Projects/v2d/run"))
+    ap.add_argument("--out", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/diagnosis")
     args = ap.parse_args()
     ds = f"{args.v2d}/dataset/track_2/tier_1_multiview_caption"
     meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}

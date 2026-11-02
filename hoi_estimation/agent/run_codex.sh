@@ -13,7 +13,7 @@
 set -euo pipefail
 WS=$1; EFFORT=${2:-high}; TMIN=${3:-90}; NET=${4:-api}; PIPELINE=${5:-}; TASK_FILE=${6:-${TASK_FILE:-}}
 A=$HOME/.local/apptainer/usr/bin/apptainer
-V2D=/mnt/nas/Group/hanzhou/v2d
+V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
 SIF=$V2D/images/v2d_cari4d.sif
 PK=$(dirname "$(dirname "$(readlink -f $HOME/.local/bin/codex)")")
 HERE=$(cd "$(dirname "$0")" && pwd)
@@ -42,7 +42,7 @@ u = urlparse(pv["base_url"])
 print(c["model"], f"{u.hostname}:{u.port or 443}")
 PY
 )
-BINDS=(-B $WS:/work -B $PK:/opt/codex:ro -B /home/hanzhou/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
+BINDS=(-B $WS:/work -B $PK:/opt/codex:ro -B $HOME/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
 [ -n "$PIPELINE" ] && BINDS+=(-B $PIPELINE:/pipeline:ro)
 { echo "date_utc: $(date -u +%FT%TZ)"; echo "codex: $($PK/bin/codex --version)"; echo "model: $MODEL api=$API_HOST effort=$EFFORT net=$NET"
   echo "sif: $SIF $(stat -c %s $SIF) bytes"; echo "binds: ${BINDS[*]}"; echo "task_sha256: $(sha256sum $WS/AGENT_TASK.md | cut -c1-64)"

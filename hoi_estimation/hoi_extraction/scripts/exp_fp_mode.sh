@@ -6,8 +6,8 @@
 #   e.g. exp_fp_mode.sh E1_every_frame "--register-every-frame" 3 13 15
 set -uo pipefail
 EXP=$1; FP_FLAGS=$2; shift 2
-V2D=/mnt/nas/Group/hanzhou/v2d
-RUN=/home/hanzhou/Projects/v2d/run
+V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
+RUN=$HOME/Projects/v2d/run
 SIF=$V2D/images/v2d_cari4d.sif
 APPTAINER=$HOME/.local/apptainer/usr/bin/apptainer
 W=$V2D/weights

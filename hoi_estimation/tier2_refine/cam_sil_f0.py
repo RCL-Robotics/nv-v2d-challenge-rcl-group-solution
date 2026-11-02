@@ -9,12 +9,13 @@ ignores the sim3 scale, so only R and the camera centre t are optimised. No GT b
 Output json has the same keys as the joint camera (s kept), plus iou/dt before and after.
 mode "r" optimises the rotation only (camera centre kept from the joint fit), "rt" both.
 Usage: cam_sil_f0.py <cam_joint.json> <out.json> [eps|all] [mode=r]"""
+import os
 import json, sys, numpy as np, torch, h5py, trimesh, cv2
 import nvdiffrast.torch as dr
 import soma
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
-V = "/mnt/nas/Group/hanzhou/v2d"; T2DS = f"{V}/dataset/track_2/tier_2_synthetic_noise"; FLIP = np.diag([1.0, -1.0, -1.0])
+V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); T2DS = f"{V}/dataset/track_2/tier_2_synthetic_noise"; FLIP = np.diag([1.0, -1.0, -1.0])
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{T2DS}/meta/episodes_metadata.jsonl"))}
 cams = json.load(open(sys.argv[1])); OUT = sys.argv[2]
 eps = list(map(int, sys.argv[3].split(","))) if len(sys.argv) > 3 and sys.argv[3] != "all" else range(30)

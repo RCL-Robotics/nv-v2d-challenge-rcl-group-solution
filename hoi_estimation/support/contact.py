@@ -16,7 +16,7 @@ GT = "--gt" in sys.argv  # diagnostic: measure the gap of the reference (GT) obj
 res = {}
 for i in (map(int, args[0].split(",")) if args else SUPPORT):
     d = f"{OUT}/ep{i:03d}"; s = json.load(open(f"{d}/support.json")); g = np.array(s["ground_plane"]); n = g[:3] / np.linalg.norm(g[:3]); g0 = g[3] / np.linalg.norm(g[:3])
-    sup = trimesh.load(s["mesh"], force="scene", process=False).to_geometry(); sup.apply_transform(np.array(s["T_world_mesh"]))
+    sup = trimesh.load(f"{MESH}/{s['support']}/{s['support']}.glb", force="scene", process=False).to_geometry(); sup.apply_transform(np.array(s["T_world_mesh"]))
     m = json.load(open(f"{inp(i)}/episode.json"))
     obj = trimesh.load(f"{inp(i)}/object_mesh.glb", force="scene", process=False).to_geometry()
     np.random.seed(0); P = np.asarray(obj.sample(400))

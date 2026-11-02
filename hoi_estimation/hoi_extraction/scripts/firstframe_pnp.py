@@ -26,7 +26,7 @@ from scipy.spatial import cKDTree
 
 sys.path.insert(0, "/workspace/v2d_cari4d/lib/cari4d")
 FLIP = np.diag([1.0, -1.0, -1.0])
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 
 
 def main():

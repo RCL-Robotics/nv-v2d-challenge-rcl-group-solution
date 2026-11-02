@@ -6,10 +6,11 @@ Joint similarity fit  x_world = s R x_cam + t  over
   * object: our camera-frame object position (Opus trajectory, mesh origin) <-> Tier 2 object position on every visible
     frame, trimmed; weight 1 per frame.
 Usage: cam_joint.py <cam_human.json> <out.json>"""
+import os
 import json, sys, numpy as np, torch
 from scipy.spatial import cKDTree
 import soma
-V = "/mnt/nas/Group/hanzhou/v2d"; FLIP = np.diag([1.0, -1.0, -1.0]); NP = 1500; TRIM = 0.8
+V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); FLIP = np.diag([1.0, -1.0, -1.0]); NP = 1500; TRIM = 0.8
 REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
 eps_meta = {e["episode_index"]: e for e in json.load(open(f"{V}/release/tier3_s1_20261020/episodes.json"))}
 def opus(i): return f"{V}/agent_runs/{'CL2' if i <= 10 else 'CL2b' if i <= 21 else 'CL2c'}_ep{i:03d}/outputs/object_poses_world.npz"

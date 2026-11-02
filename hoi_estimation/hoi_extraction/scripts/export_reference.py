@@ -15,7 +15,7 @@ Who reads what:
   - GT diagnostics only (never feed a pipeline output): ref_poses, all frames -> eval_official.py, eval_object_pose.py,
     agent/score_runs.py, the diagnostic half of t3_frame0.py, support/score_snap.py, support/contact.py --gt.
 
-Usage: export_reference.py [--dataset <tier_1_multiview_caption dir>] [--out <dir holding ref_poses/ ref_human_f0/>]
+Usage: export_reference.py [--dataset <tier_1_multiview_caption dir>] --out <dir that will hold ref_poses/ ref_human_f0/>
 """
 import argparse
 import glob
@@ -24,13 +24,13 @@ import os
 import numpy as np
 import pandas as pd
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", default=f"{V2D}/dataset/track_2/tier_1_multiview_caption")
-    ap.add_argument("--out", default=V2D)
+    ap.add_argument("--out", required=True, help="no default, so the files on the NAS are never overwritten by accident")
     args = ap.parse_args()
     files = sorted(glob.glob(f"{args.dataset}/data/chunk-000/episode_*.parquet"))
     os.makedirs(f"{args.out}/ref_poses", exist_ok=True)

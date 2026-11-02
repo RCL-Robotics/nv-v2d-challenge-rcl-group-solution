@@ -18,12 +18,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 
 import cv2
 import h5py
 import numpy as np
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 
 
 def pipeline_dir(src, ep):

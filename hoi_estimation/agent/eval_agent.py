@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Score an agent's T_world_mesh (F,4,4) with the official object-pose protocol (same as eval_official.py). Runs OUTSIDE the agent sandbox."""
+import os
 import argparse, json, sys
 import numpy as np, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"; DS = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); DS = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 ap = argparse.ArgumentParser(); ap.add_argument("episode", type=int); ap.add_argument("poses", help="npz with T_world_mesh"); ap.add_argument("--key", default="T_world_mesh"); ap.add_argument("--seeds", type=int, default=5)
 a = ap.parse_args()
 ep = f"episode_{a.episode:06d}"

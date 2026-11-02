@@ -5,7 +5,7 @@
 # Usage: make_videos.sh            (one pass)
 #        make_videos.sh --watch    (repeat every 10 min until the local run + retry finish)
 set -uo pipefail
-V2D=/mnt/nas/Group/hanzhou/v2d
+V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
 OUT=$V2D/videos
 FONT=/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf
 mkdir -p "$OUT"

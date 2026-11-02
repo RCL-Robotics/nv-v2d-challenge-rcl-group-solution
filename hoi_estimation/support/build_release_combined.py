@@ -6,9 +6,11 @@ Human, camera, ground plane unchanged. Usage: build_release_combined.py <out_dir
 import json, os, shutil, sys
 import numpy as np
 from scipy.spatial.transform import Rotation as Rot
-V = "/mnt/nas/Group/hanzhou/v2d"; SRC = f"{V}/release/tier3_opus_20261021"; SUP = f"{V}/release/tier3_supports_20261024"
+V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); SRC = f"{V}/release/tier3_opus_20261021"; SUP = f"{V}/release/tier3_supports_20261024"
 TRAJ = f"{V}/experiments/t3_frame0/opus_f3_c2_shift"; out = sys.argv[1]
-eps = json.load(open(f"{SRC}/episodes.json")); diag = json.load(open(f"{TRAJ}/diag_scores.json"))
+eps = json.load(open(f"{SRC}/episodes.json"))
+# diag_scores.json is written only by the GT diagnostic half of t3_frame0.py; it is printed, never used
+diag = json.load(open(f"{TRAJ}/diag_scores.json")) if os.path.isfile(f"{TRAJ}/diag_scores.json") else {}
 shutil.copytree(SRC, out)
 for e in eps:
     i, sid = e["episode_index"], e["sequence_id"]; od = f"{out}/reconstructed_data/{sid}"
@@ -22,7 +24,7 @@ for e in eps:
         sd = f"{out}/supports/{sid}"; os.makedirs(sd)
         for f in ("support.json", "support_mesh.glb", "support_world.obj", "fit_overlay.jpg"): shutil.copy(f"{SUP}/episode_{i:06d}/{f}", sd)
         e["support"] = f"supports/{sid}"
-    print(i, e["object"], f"diag AUC {diag[str(i)]['auc']:.3f}", "support" if "support" in e else "", flush=True)
+    print(i, e["object"], f"diag AUC {diag[str(i)]['auc']:.3f}" if str(i) in diag else "", "support" if "support" in e else "", flush=True)
 json.dump(eps, open(f"{out}/episodes.json", "w"), indent=1)
 for e in eps: json.dump({k: v for k, v in e.items() if k != "support"} | ({"support": "../../" + e["support"]} if "support" in e else {}), open(f"{out}/reconstructed_data/{e['sequence_id']}/episode.json", "w"), indent=1)
 for f in ("fit_overview.jpg", "contact_report.json", "index.json"): shutil.copy(f"{SUP}/{f}", f"{out}/supports/{f}")

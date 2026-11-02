@@ -4,7 +4,7 @@ the same metric code as eval_object_pose.py: raw (as the leaderboard scores it) 
 import json, numpy as np, pandas as pd, trimesh, sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from eval_object_pose import quat_wxyz_to_R, metrics, align_and_score
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}
 rows = []

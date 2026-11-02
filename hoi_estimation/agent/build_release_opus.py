@@ -5,7 +5,7 @@ Usage: build_release_opus.py <out_dir>"""
 import json, os, shutil, sys
 import numpy as np
 from scipy.spatial.transform import Rotation as Rot
-V = "/mnt/nas/Group/hanzhou/v2d"; S1 = f"{V}/release/tier3_s1_20261020"; out = sys.argv[1]
+V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); S1 = f"{V}/release/tier3_s1_20261020"; out = sys.argv[1]
 eps = json.load(open(f"{S1}/episodes.json"))
 os.makedirs(f"{out}/reconstructed_data", exist_ok=True)
 for f in ("episodes.json", "frame_references"):

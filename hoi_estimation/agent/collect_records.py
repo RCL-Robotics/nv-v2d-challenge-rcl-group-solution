@@ -9,7 +9,7 @@
 Inputs (dataset copies) and scratch are not copied. Hidden directories (e.g. .codex_home, which holds credentials)
 are never read. Usage: collect_records.py <out_dir>"""
 import gzip, json, os, re, shutil, sys
-SRC = "/mnt/nas/Group/hanzhou/v2d/agent_runs"; OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
+SRC = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/agent_runs"; OUT = sys.argv[1]; os.makedirs(OUT, exist_ok=True)
 TXT = {".md", ".py", ".json", ".txt", ".log", ".sh", ".csv", ".yaml", ".tsv"}; IMG = {".jpg", ".png"}
 SERIES = {"A1": "Codex GPT 修正轨迹，第一版任务", "A2": "Codex GPT 修正轨迹", "A3": "Codex GPT 修正轨迹，开放网络",
           "A4": "Codex GPT 时序修正（temporal 任务）", "C1": "Codex DeepSeek 估计相机", "CL1": "Claude Opus 完整轨迹，第一批",

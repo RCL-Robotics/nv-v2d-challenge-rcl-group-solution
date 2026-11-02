@@ -19,7 +19,7 @@ contact = json.load(open(f"{OUT}/contact_report.json")); index = {}
 for i in SUPPORT:
     d = f"{OUT}/ep{i:03d}"; o = f"{DST}/episode_{i:06d}"; os.makedirs(o, exist_ok=True); s = json.load(open(f"{d}/support.json"))
     g = np.array(s["ground_plane"]); n = g[:3] / np.linalg.norm(g[:3]); g0 = g[3] / np.linalg.norm(g[:3])
-    mesh = trimesh.load(s["mesh"], force="scene", process=False).to_geometry(); T = np.array(s["T_world_mesh"])
+    mesh = trimesh.load(f"{MESH}/{s['support']}/{s['support']}.glb", force="scene", process=False).to_geometry(); T = np.array(s["T_world_mesh"])
     W = np.asarray(mesh.vertices) @ T[:3, :3].T + T[:3, 3]; h = W @ n + g0
     # load-bearing level (table top / seat, not a backrest): the highest 2-cm band whose horizontal convex-hull area is
     # at least 60% of the largest band area above 30 cm

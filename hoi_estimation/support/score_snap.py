@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Diagnostic (uses GT): ADD AUC 1-9 cm of our best Tier 3 trajectory before and after the support snap."""
+import os
 import json, sys, numpy as np, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 from common import *
 DS = f"{V}/dataset/track_2/tier_1_multiview_caption"; TRAJ = f"{V}/experiments/t3_frame0/opus_f3_c2_shift"

@@ -12,7 +12,7 @@ import sys
 import numpy as np
 import torch
 
-VDA = "/home/hanzhou/Projects/v2d/third_party_vda"
+VDA = os.path.expanduser("~/Projects/v2d/third_party_vda")
 sys.path.insert(0, VDA)
 from utils.dc_utils import read_video_frames  # noqa: E402
 from video_depth_anything.video_depth import VideoDepthAnything  # noqa: E402

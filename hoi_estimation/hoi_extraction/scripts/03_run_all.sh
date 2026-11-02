@@ -2,7 +2,7 @@
 # Run HOI extraction for all 30 Track-2 episodes, sequentially (single GPU).
 set -uo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOGDIR=${V2D_LOGS:-/mnt/nas/Group/hanzhou/v2d/logs}
+LOGDIR=${V2D_LOGS:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/logs}
 mkdir -p "$LOGDIR"
 for i in $(seq 0 29); do
   EP=$(printf "%06d" "$i")

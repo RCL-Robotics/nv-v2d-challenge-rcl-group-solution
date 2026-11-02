@@ -3,9 +3,9 @@
 # Heavy per-episode I/O goes to local disk; finished (PASS) episodes are moved to NAS.
 # Usage: run_local.sh "<gpu ids, e.g. 0 1>" [episode idx ...]   (default: all in episodes.tsv)
 set -uo pipefail
-export V2D_ROOT=/mnt/nas/Group/hanzhou/v2d
-export WORK_ROOT=/home/hanzhou/Projects/v2d/run/work
-export OUT_ROOT=/home/hanzhou/Projects/v2d/run/out
+export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
+export WORK_ROOT=$HOME/Projects/v2d/run/work
+export OUT_ROOT=$HOME/Projects/v2d/run/out
 export SIF_EXEC=$HOME/.local/apptainer/usr/bin/apptainer
 NAS_OUT=$V2D_ROOT/outputs/cari4d
 LOGS=$V2D_ROOT/logs

@@ -6,10 +6,11 @@ scale); correspondences are nearest neighbours within the same frame (the two me
 Initialisation: similarity fit of per-frame body centroids, plus the same rotated 180 deg about the body-up axis; the
 lower trimmed residual wins. Runs in the v2d_cari4d image (GPU for the SOMA decoder).
 Usage: cam_from_human.py <out.json> [eps]"""
+import os
 import json, sys, numpy as np, torch
 from scipy.spatial import cKDTree
 import soma
-V = "/mnt/nas/Group/hanzhou/v2d"; FLIP = np.diag([1.0, -1.0, -1.0]); NF = 40; NP = 1500; TRIM = 0.8
+V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); FLIP = np.diag([1.0, -1.0, -1.0]); NF = 40; NP = 1500; TRIM = 0.8
 REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
 eps_meta = {e["episode_index"]: e for e in json.load(open(f"{V}/release/tier3_s1_20261020/episodes.json"))}
 

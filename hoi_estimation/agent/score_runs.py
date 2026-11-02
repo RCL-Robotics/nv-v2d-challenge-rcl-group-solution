@@ -10,6 +10,7 @@ Variants per episode (all in mesh-file frame, world):
 Also writes <ws>/outputs/combined_rot_ray.npz and combined_rot.npz for later use.
 Usage: score_runs.py <ws> [<ws> ...]
 """
+import os
 import json
 import re
 import sys
@@ -17,10 +18,10 @@ import sys
 import numpy as np
 import trimesh
 
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R  # noqa: E402
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
 t2 = {int(l.split(",")[0]): float(l.split(",")[10]) for l in open(f"{V2D}/logs/officialDB1.csv").read().splitlines()[1:]}
 
 for ws in sys.argv[1:]:
