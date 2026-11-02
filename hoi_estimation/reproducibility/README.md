@@ -22,11 +22,13 @@ they only wrote CSVs that no step reads.
 ## 0. Getting the data, and running outside the lab NAS
 
 ### Where the files are
-All data, images and weights live under one root, `/mnt/nas/Group/hanzhou/v2d/` on the lab NAS (not reachable from
-outside). A copy with the same layout is on the team's training server:
+All data, images and weights live under one root (`$V2D_ROOT` below; on the workstation the lab NAS folder
+`/mnt/nas/Group/hanzhou/v2d/`, not reachable from outside). A copy with the same layout is on the team's training server:
 
-`/root/autodl-tmp/han.zhou/tier3/repro/v2d/` (checked file by file against the NAS: `MANIFEST.sha256` in that
-directory, one line per file).
+`/root/autodl-tmp/han.zhou/tier3/repro/v2d/`.
+
+`environment/data_manifest.sha256.gz` lists the sha256 of every file below, computed on the NAS (61370 files;
+paths relative to the root). Check a copy with `cd $V2D_ROOT && zcat <repo>/hoi_estimation/reproducibility/environment/data_manifest.sha256.gz | sha256sum -c --quiet`.
 
 | path under the root | content | size |
 |---|---|---|
@@ -54,17 +56,30 @@ from P1 on read from `outputs/cari4d/` only `inference/coconet.pth`, `work/` and
 re-run them; the agents additionally see the whole episode folder at `/pipeline`.
 
 ### Running from another location
-- **Data root:** every pipeline script reads `$V2D_ROOT` (default `/mnt/nas/Group/hanzhou/v2d`). Set
-  `export V2D_ROOT=<copy>/v2d` and bind it into the images (`-B $V2D_ROOT`); for the image calls also export
-  `APPTAINERENV_V2D_ROOT=$V2D_ROOT` when `--cleanenv`/`--containall` is used. Paths under `/home/hanzhou` became
-  `$HOME/...` or paths relative to the checkout.
-- **Not parameterised:** the GT-only scripts in `../diagnostics/`. To run them, create the symlink
-  `/mnt/nas/Group/hanzhou/v2d → $V2D_ROOT`.
+- **No built-in paths.** Every script, including the GT-only ones in `../diagnostics/`, takes its locations from
+  environment variables or arguments and stops if a required one is unset; code locations are resolved relative to
+  the checkout.
+
+  | variable | meaning | needed by |
+  |---|---|---|
+  | `V2D_ROOT` (required) | the data root | every step |
+  | `APPTAINER` | apptainer binary (default `apptainer` on `PATH`) | shell wrappers |
+  | `V2D_RUN` | local scratch root of the per-episode CARI4D runs | `run_local.sh`, `exp_*.sh`, `diagnose_episode.py` |
+  | `HOST_PY` | host python for the three host-python steps (default `python3`) | `check_steps.sh`, runbooks |
+  | `V2D_SUPPORT_OUT` | support intermediates (default `$V2D_ROOT/support`) | `support/` |
+  | `V2D_VDA`, `V2D_DEPTHPRO_CKPT` | Video-Depth-Anything checkout, DepthPro checkpoint | `vda_depth.py`, `estimate_focal.py` (exploratory, not in the chain) |
+  | `CLAUDE_BIN`, `CODEX_BIN`, `T2_PY` | agent CLIs (default: found on `PATH`), python for `extract_t2_human.py` | `agent/run_*.sh`, `tier2_refine/run_all.sh` |
+
+  Bind the root into the images (`-B $V2D_ROOT`). For image calls with `--cleanenv`/`--containall`, also export
+  `APPTAINERENV_V2D_ROOT=$V2D_ROOT`. The runbooks write the workstation paths as `$N` (= `$V2D_ROOT`), `$REPO`
+  (= `<checkout>/hoi_estimation`), `$A` and `$V2D_RUN`. The files under `release_files/` and `../agent_records/`
+  are verbatim copies of released or agent-written files and keep the paths they were written with.
 - **Absolute paths inside data files:** the `bundle` fields of the `logs/*.json` files and the `mesh` field of
   `support/ep*/support.json` hold NAS paths. They are informational only: the scripts locate bundles by variant name
   (`eval_official.bundle_path`) and the support meshes by class (`support/contact.py`, `package.py`). The six
-  `experiments/M1/episode_*/coconet.pth` symlinks are relative on the server copy
-  (`../../M1_prompt_v2/out/<ep>/inference/coconet.pth`); on the NAS they are absolute.
+  `experiments/M1/episode_*/coconet.pth` are absolute symlinks to the NAS (also in the server copy, where they are
+  therefore broken). In a copy, recreate them with
+  `cd $V2D_ROOT/experiments/M1 && for e in 3 6 12 14 16 21; do d=$(printf episode_%06d $e); ln -sfn ../../M1_prompt_v2/out/$d/inference/coconet.pth $d/coconet.pth; done`.
 - **GPU:** the images are built for sm_80–sm_90 (`TORCH_CUDA_ARCH_LIST="8.0 8.6 8.9 9.0"` for nvdiffrast, pytorch3d,
   kaolin, FoundationPose; torch 2.5.1+cu124). The original runs used RTX 6000 Ada (sm_89). The image does **not** run
   its GPU code on Blackwell (sm_120) GPUs such as the RTX PRO 6000 of the training server; use an Ampere, Ada or
@@ -152,13 +167,27 @@ were followed only by a refit of episode 1. To reproduce exactly:
 | GroundingDINO image | `images/v2d_gdino.sif` | 7.7 GB | `0b21b6f64d975c0b5deb9f021a6ff42d18626fd92ba1cce141a9fe9e26239c8c` |
 | weights | `weights/{cari4d, foundationpose, grounding_dino, hf_home, sam2, sam3d_body}` | 9.0 GB | per file in `environment/weights.sha256` (493 files) |
 
-- **Weights source:** fetched on 2026-10-04 from Hugging Face (`weights_download.log` in the root records the
-  destinations of `cari4d`, `sam3d_body/checkpoints/sam-3d-body-dinov3`, MoGe-2 `Ruicheng/moge-2-vitl-normal`
-  snapshot `b135031b…` under `hf_home/`, and `sam2`); `grounding_dino` and `foundationpose` were staged as the
-  repo's downloaders lay them out. The exact download commands were not recorded. To fetch them anew use the repo's
-  downloaders, `python -m v2d.<module>.docker.run_download_weights --output_dir <weights>/<module>`; CARI4D and
-  SAM-3D-Body are gated (`HF_TOKEN`). `environment/weights.sha256` pins the content either way. CARI4D checkpoint:
-  run `2026-08-25-09-35-57`, `step200000.pth`, sha256 `78ff5cb8…5ba3` (as in its `manifest.json`).
+- **Weights source.** Every checkpoint the chain loads, with its download link. "sha256 = HF" means the sha256 that
+  Hugging Face lists for the file at that revision equals ours (`environment/weights.sha256`). For the gated repos
+  the hub does not show hashes without access; their revision is the one pinned in
+  `reconstruction/modules/v2d_cari4d/lib/download_weights.py` (which also pins the CARI4D checkpoint sha256).
+
+  | file under `weights/` | used by | link | check |
+  |---|---|---|---|
+  | `cari4d/2026-08-25-09-35-57/{step200000.pth, resolved_config.yaml, manifest.json}` | CARI4D CoCoNet (stage 6) | [nvidia/cari4d_commercial @ 1f7287ac](https://huggingface.co/nvidia/cari4d_commercial/tree/1f7287ac6fd5f72c30ce2222fb345a3e7d779fc9/2026-08-25-09-35-57) (gated) | sha256 `78ff5cb8…5ba3` = pinned in the downloader |
+  | `sam3d_body/checkpoints/sam-3d-body-dinov3/{model.ckpt, assets/mhr_model.pt}` | SAM-3D-Body / MHR human (stage 3; SOMA/MHR decode in FF2, JC2s1, build_release, export_inputs) | [facebook/sam-3d-body-dinov3 @ 11aaa346](https://huggingface.co/facebook/sam-3d-body-dinov3/tree/11aaa346c7204874a1cbafe3d39a979080b2c55a) (gated) | revision pinned in the downloader |
+  | `hf_home/hub/models--Ruicheng--moge-2-vitl-normal/` (`model.pt`) | MoGe-2 depth (stage 2) | [Ruicheng/moge-2-vitl-normal @ b135031b](https://huggingface.co/Ruicheng/moge-2-vitl-normal/tree/b135031bae30b5ac2ae141a0e68717795ce38340) | sha256 = HF |
+  | `sam2/{sam2.1_hiera_large.pt, model.safetensors}` | SAM 2.1 masks (stage 1) | [facebook/sam2.1-hiera-large](https://huggingface.co/facebook/sam2.1-hiera-large) | sha256 = HF (both files) |
+  | `grounding_dino/groundingdino_swint_ogc.pth` | GroundingDINO prompts (stage 0, M1) | official: [GitHub release v0.1.0-alpha](https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth); HF: [ShilongLiu/GroundingDINO](https://huggingface.co/ShilongLiu/GroundingDINO/blob/main/groundingdino_swint_ogc.pth) | sha256 = HF |
+  | (inside `v2d_gdino.sif`) `bert-base-uncased` | GroundingDINO text encoder, cached at image build | [google-bert/bert-base-uncased @ 86b5e093](https://huggingface.co/google-bert/bert-base-uncased/tree/86b5e0934494bd15c9632b12f734a8a67f723594) | revision of the snapshot in the image |
+  | `foundationpose/nvlabs_pytorch/2023-10-28-18-33-37/model_best.pth` (refiner), `…/2024-01-11-20-02-45/model_best.pth` (scorer) | FoundationPose (stage 5) | official: NVlabs Google Drive folders [refiner](https://drive.google.com/drive/folders/1BEQLZH69UO5EOfah-K9bfI3JyP9Hf7wC), [scorer](https://drive.google.com/drive/folders/12Te_3TELLes5cim1d7F7EBTwUSe7iRBj) (as in `v2d_foundation_pose/lib/download_weights.py`); no official HF repo. Third-party HF mirror with the same files: [gpue/foundationpose-weights](https://huggingface.co/gpue/foundationpose-weights) | mirror sha256 = ours (both files) |
+  | `sam3d_body/torch_home/hub/checkpoints/dinov2_vit{s,b}14_pretrain.pth` | DINOv2 backbones loaded through `torch.hub` by SAM-3D-Body | official: `https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth`, `…/dinov2_vitb14/dinov2_vitb14_pretrain.pth`; no official HF repo with these files. Third-party HF mirrors: [hdtech/dinov2_vits14_pretrain](https://huggingface.co/hdtech/dinov2_vits14_pretrain), [hdtech/dinov2_vitb14_pretrain](https://huggingface.co/hdtech/dinov2_vitb14_pretrain) | mirror sha256 = ours; also pinned in the downloader |
+
+  The torch.hub code checkouts next to them (`facebookresearch_dinov2_main`, `facebookresearch_dinov3_main`) are
+  pinned in the downloader as GitHub revisions (`dinov2` `7764ea0f`, `dinov3` `6876159a`). The CARI4D image holds
+  no model weights. Downloaded on 2026-10-04 (`weights_download.log` in the root). To fetch everything anew:
+  `python -m v2d.<module>.docker.run_download_weights --output_dir <weights>/<module>` from `reconstruction/`
+  (`HF_TOKEN` with access to the two gated repos), then compare with `environment/weights.sha256`.
 - **Rebuilding the images instead:** `apptainer build v2d_cari4d.sif environment/v2d_cari4d.sif.def` from
   `reconstruction/` at `33129dd` (the def copies `modules/...` relative to it). The pip versions resolved at build
   time may differ; compare with `environment/pip_freeze_*.txt`.
@@ -211,8 +240,9 @@ diagnostics: the released object trajectory (`object_poses_world.npz`) is the un
 the host trimesh 4.11.1 the sampling is deterministic, but it gives a third set of points. The code is left as it was
 when the release was made.
 
-Server data copy: every file listed in section 0 was copied to the server (60978 files and 10 symlinks;
-`MANIFEST.sha256` was computed on the NAS and is placed next to the copy for `sha256sum -c`).
+Server data copy: every file listed in section 0 was copied to the server (the transfer finished without errors).
+It has not yet been checked against `environment/data_manifest.sha256.gz` on the server; the two images were
+(sha256 as in section 4).
 
 Summary: every CPU step except the contact sampling is byte-identical (and the three re-run on the server are too). The GPU
 steps that optimise the object or the support (solve.py, support fit) are bit-identical on the same GPU model; the GPU

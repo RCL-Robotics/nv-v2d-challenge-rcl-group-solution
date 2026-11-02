@@ -1,8 +1,8 @@
 # Diagnostic (uses GT): camera-frame depth and rotation of s1 / Opus vs GT seen from each method's oracle camera, ep10.
-import sys, json, numpy as np
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+import os, sys, json, numpy as np
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import umeyama, quat_wxyz_to_R, MPPE_OFFSETS
-V="/mnt/nas/Group/hanzhou/v2d"; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
+V=os.environ["V2D_ROOT"]; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
 i=int(sys.argv[1]); m={d["episode_index"]:d for d in map(json.loads,open(f"{DS}/meta/episodes_metadata.jsonl"))}[i]
 W=np.array(json.load(open(f"{REL}/{m['sequence_id']}/camera.json"))["T_world_cam"]); Wi=np.linalg.inv(W)
 ref=np.load(f"{V}/ref_poses/episode_{i:06d}.npz")["pose_xyz_wxyz"].astype(float); ok=np.linalg.norm(ref[:,3:],axis=1)>0.5

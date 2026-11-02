@@ -15,7 +15,7 @@ import cv2
 import numpy as np
 import torch
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 VIDEOS = f"{V2D}/dataset/track_2/tier_1_multiview_caption/videos/chunk-000/observation.images.exo_camera"
 
 
@@ -36,7 +36,7 @@ def main():
     ap.add_argument("--episodes", type=int, nargs="+", default=list(range(30)))
     ap.add_argument("--frames", type=int, default=12)
     ap.add_argument("--out", default=f"{V2D}/logs/focal_estimates.json")
-    ap.add_argument("--depthpro-ckpt", default=os.path.expanduser("~/Projects/v2d/third_party_vda/checkpoints/depth_pro.pt"))
+    ap.add_argument("--depthpro-ckpt", default=os.environ.get("V2D_DEPTHPRO_CKPT"), required="V2D_DEPTHPRO_CKPT" not in os.environ)
     args = ap.parse_args()
     dev = torch.device("cuda")
     from geocalib import GeoCalib

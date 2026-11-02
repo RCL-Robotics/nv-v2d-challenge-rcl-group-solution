@@ -1,10 +1,10 @@
 # Visualisation only (uses GT): per method, fit the oracle rigid extrinsic (one per episode, as in oracle_cmp.py), put the
 # GT into that method's camera and overlay GT (green outline) and the estimate (shaded) on the video.
 import sys, json, numpy as np, cv2, trimesh, subprocess, os
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts"); sys.path.insert(0, "/home/hanzhou/Projects/v2d/agent")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts")); sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "agent"))
 from eval_object_pose import umeyama, metrics, quat_wxyz_to_R, MPPE_OFFSETS
 from render_compare import draw
-V2 = "/mnt/nas/Group/hanzhou/v2d"; DS = f"{V2}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V2}/release/tier3_s1_20261020/reconstructed_data"
+V2 = os.environ["V2D_ROOT"]; DS = f"{V2}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V2}/release/tier3_s1_20261020/reconstructed_data"
 idx, out = int(sys.argv[1]), sys.argv[2]; runs = [a.split("=", 1) for a in sys.argv[3:]]  # label=npz ("s1" = release)
 m = {d["episode_index"]: d for d in map(json.loads, open(f"{DS}/meta/episodes_metadata.jsonl"))}[idx]
 cam = json.load(open(f"{REL}/{m['sequence_id']}/camera.json")); K = np.array(cam["K"]); W = np.array(cam["T_world_cam"]); Wi = np.linalg.inv(W)

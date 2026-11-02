@@ -53,7 +53,7 @@ def runs(mask, min_len, fill=5):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episodes", type=int, nargs="+")
-    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--v2d", default=os.environ["V2D_ROOT"])
     ap.add_argument("--src-exp", default="P1_temporal")
     ap.add_argument("--fp-exp", default="E2_reregister", help="experiment holding fp.pkl (silhouette IoU for anchors)")
     ap.add_argument("--out-exp", default="H1_hand")

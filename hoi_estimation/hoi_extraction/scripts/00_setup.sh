@@ -2,8 +2,8 @@
 # One-time setup: build docker images and download public weights (SAM2, Grounding DINO).
 # CARI4D weights are downloaded automatically on first inference run (gated HF repos).
 set -euo pipefail
-RECON=${V2D_RECON:-$HOME/Projects/v2d/nv-v2d-challenge-codebase/reconstruction}
-WEIGHTS=${V2D_WEIGHTS:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/weights}
+RECON=${V2D_RECON:-$(cd "$(dirname "$0")/../../.." && pwd)/reconstruction}
+WEIGHTS=${V2D_WEIGHTS:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/weights}
 cd "$RECON" && source .venv/bin/activate
 
 python -m v2d.sam2.docker.build

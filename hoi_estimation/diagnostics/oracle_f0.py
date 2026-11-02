@@ -1,9 +1,9 @@
 # Diagnostic only (uses GT): upper bound from an ideal camera extrinsic. One rigid (or similarity = rigid + depth
 # scale) world transform per episode, fitted to the GT over the whole episode, applied on top of each trajectory.
-import sys, json, numpy as np, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+import os, sys, json, numpy as np, trimesh
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, align_and_score, quat_wxyz_to_R
-V = "/mnt/nas/Group/hanzhou/v2d"; DS = f"{V}/dataset/track_2/tier_1_multiview_caption"
+V = os.environ["V2D_ROOT"]; DS = f"{V}/dataset/track_2/tier_1_multiview_caption"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{DS}/meta/episodes_metadata.jsonl"))}
 def opus(i): return f"{V}/agent_runs/{'CL2' if i <= 10 else 'CL2b' if i <= 21 else 'CL2c'}_ep{i:03d}/outputs/object_poses_world.npz"
 src = {"opus_v2": opus, "frame0_best": lambda i: f"{V}/experiments/t3_frame0/opus_f3_c2_shift/episode_{i:06d}.npz"}

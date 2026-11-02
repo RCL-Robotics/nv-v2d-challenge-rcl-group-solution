@@ -6,7 +6,7 @@ import glob, json, os, sys
 import numpy as np, torch, trimesh
 sys.path.insert(0, os.path.dirname(__file__))
 from diagnose_episode import ang, q2R, robust_offset
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
+V2D = os.environ["V2D_ROOT"]; ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}
 for idx in map(int, sys.argv[1:]):
     ep = f"episode_{idx:06d}"

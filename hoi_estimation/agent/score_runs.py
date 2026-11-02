@@ -21,7 +21,7 @@ import trimesh
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R  # noqa: E402
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 t2 = {int(l.split(",")[0]): float(l.split(",")[10]) for l in open(f"{V2D}/logs/officialDB1.csv").read().splitlines()[1:]}
 
 for ws in sys.argv[1:]:

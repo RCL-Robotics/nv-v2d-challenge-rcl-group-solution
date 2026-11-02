@@ -1,8 +1,8 @@
 # Diagnostic only (uses GT): raw / oracle-rigid / oracle-sim3 AUC for s1 vs agent outputs (camera-frame part kept, one transform fitted per episode).
 import sys, json, os, numpy as np, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, align_and_score, quat_wxyz_to_R
-V = "/mnt/nas/Group/hanzhou/v2d"; DS = f"{V}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
+V = os.environ["V2D_ROOT"]; DS = f"{V}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{DS}/meta/episodes_metadata.jsonl"))}
 def agent(ws):
     p = f"{V}/agent_runs/{ws}/outputs/object_poses_world.npz"

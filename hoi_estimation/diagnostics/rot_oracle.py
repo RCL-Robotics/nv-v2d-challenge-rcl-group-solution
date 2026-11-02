@@ -1,10 +1,10 @@
 # Diagnostic (uses GT): rotation error of our camera-frame rotations after the best constant camera rotation (oracle),
 # vs camera rotation from positions only (Tier 2 object translations, Umeyama sim3), vs Tier 2.
-import json, sys, numpy as np
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+import os, json, sys, numpy as np
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R, umeyama
 from scipy.spatial.transform import Rotation as Rot
-V="/mnt/nas/Group/hanzhou/v2d"; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
+V=os.environ["V2D_ROOT"]; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
 meta={d["episode_index"]:d for d in map(json.loads,open(f"{DS}/meta/episodes_metadata.jsonl"))}
 def opus(i): return f"{V}/agent_runs/{'CL2' if i<=10 else 'CL2b' if i<=21 else 'CL2c'}_ep{i:03d}/outputs/object_poses_world.npz"
 def proj(M): u,_,vt=np.linalg.svd(M); return u@np.diag([1,1,np.linalg.det(u@vt)])@vt

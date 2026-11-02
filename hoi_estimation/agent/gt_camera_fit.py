@@ -6,7 +6,7 @@ import sys, json, numpy as np, torch, h5py, trimesh, cv2
 import nvdiffrast.torch as dr
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
-V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); idx = int(sys.argv[1]); out = sys.argv[2]
+V = os.environ["V2D_ROOT"]; idx = int(sys.argv[1]); out = sys.argv[2]
 inp = f"{V}/agent_runs/T1_ds_ep{idx:03d}/inputs"
 cam = json.load(open(f"{inp}/camera.json")); K0 = np.array(cam["K"]); W0 = np.array(cam["T_world_cam"]); Hh, Ww = cam["height"], cam["width"]
 g = trimesh.load(f"{inp}/object_mesh.glb", force="scene", process=False).to_geometry()

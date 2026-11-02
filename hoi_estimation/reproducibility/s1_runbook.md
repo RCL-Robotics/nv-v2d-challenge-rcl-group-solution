@@ -13,8 +13,8 @@ actually consumed.
   - NAS file mtimes are given in UTC as well, already converted from local Asia/Dubai (UTC+4).
   - The NAS clock runs about 5 minutes behind the workstation. A file can therefore appear a few minutes before the
     command that wrote it.
-- **Script versions:** every script named here is byte-identical between `~/Projects/v2d/hoi_extraction/` and
-  `gh_hoi_estimation/hoi_estimation/hoi_extraction/` (checked with `cmp`, 2026-11-02). Edits made *after* a step ran
+- **Script versions:** every script named here is byte-identical between the workstation copy and
+  `hoi_estimation/hoi_extraction/` of the repo (checked with `cmp`, 2026-11-02). Edits made *after* a step ran
   are listed under that step.
 - **Scoring is not part of the chain.** Commands also ran `eval_official.py` / `compare_experiments.py`, which score
   against GT. Those scoring calls are omitted below: they only wrote CSVs under `logs/`, and no step reads them.
@@ -22,21 +22,20 @@ actually consumed.
 ## Common definitions
 Run the blocks below in **bash** (zsh does not word-split unquoted variables such as `$B`).
 ```bash
-export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}   # data root (README section 0); originally the NAS path
-N=$V2D_ROOT
-H=$HOME/Projects/v2d/hoi_extraction          # = hoi_estimation/hoi_extraction in the repo (any checkout works)
-S=$H/scripts
-A=$HOME/.local/apptainer/usr/bin/apptainer
-# the original binds were -B $N:$N -B $HOME/Projects/v2d; $(dirname $H) is the folder that holds the checkout
+N=${V2D_ROOT:?set V2D_ROOT to the data root (README section 0)}
+REPO=<checkout>/hoi_estimation                  # any checkout of this branch
+H=$REPO/hoi_extraction; S=$H/scripts
+A=${APPTAINER:-apptainer}
+V2D_RUN=<local scratch>                         # per-episode run root of run_local.sh (steps 1-2 only)
 # "light" container: CPU-only scripts
-RUN()  { $A exec -B $N:$N -B $(dirname $H) $N/images/v2d_cari4d.sif python "$@"; }
+RUN()  { $A exec -B $N:$N -B $REPO $N/images/v2d_cari4d.sif python "$@"; }
 # "GPU" container with the SOMA / MHR / SAM-3D-Body libraries on PYTHONPATH
-RUNC() { CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $(dirname $H) $N/images/v2d_cari4d.sif bash -c \
+RUNC() { CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $REPO $N/images/v2d_cari4d.sif bash -c \
   "export PYTHONPATH=/workspace/v2d_cari4d/lib/cari4d:/workspace/v2d_sam3d_body/lib:\$PYTHONPATH LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:\$LD_LIBRARY_PATH; $*"; }
-PY=$HOME/Projects/KalmanHOI/.venv/bin/python   # host venv: python 3.12.13, numpy 2.5.2, torch 2.10.0+cu128, scipy 1.17.0
+PY=${HOST_PY:-python3}   # host venv: python 3.12.13, numpy 2.5.2, torch 2.10.0+cu128, scipy 1.17.0
 ```
-The commands below are the original ones. Where they spell out `/mnt/nas/Group/hanzhou/v2d` or
-`/home/hanzhou/Projects/v2d`, substitute `$N` and the checkout; `reproducibility/check_steps.sh` has ready-to-run
+The commands below are the original ones, with the workstation paths written as these variables
+(on the workstation: `N=/mnt/nas/Group/hanzhou/v2d`, `REPO=/home/hanzhou/Projects/v2d`, `V2D_RUN=/home/hanzhou/Projects/v2d/run`, `A=~/.local/apptainer/usr/bin/apptainer`); `reproducibility/check_steps.sh` has ready-to-run
 single-episode versions of steps 3, 8, 9 and 10.
 
 **GPU numbering.** The original runs used either GPU 0 or GPU 1 of the workstation (RTX 6000 Ada). The GPU index does
@@ -87,7 +86,7 @@ The baseline was run in several batches, plus a separate run for episode 0.
   `run_episode.sh` and on another GPU the prompt and masks need not be bit-identical.
 
 **Episodes 1–29.** They ran locally with `scripts/run_local.sh "<gpus>" <eps…>`. It calls
-`$N/code/pipeline/run_episode.sh <i>` with `WORK_ROOT=~/Projects/v2d/run/work` and `OUT_ROOT=~/Projects/v2d/run/out`,
+`$N/code/pipeline/run_episode.sh <i>` with `WORK_ROOT=$V2D_RUN/work` and `OUT_ROOT=$V2D_RUN/out`,
 and moves each PASS episode to `$N/outputs/cari4d/`. Stage markers make a rerun skip finished stages. The batches were:
 
 | UTC start | command | episodes that finished OK (from the logs) |
@@ -104,20 +103,20 @@ and moves each PASS episode to `$N/outputs/cari4d/`. Stage markers make a rerun 
   (`out/.stages/01_depth … 05_object_pose.json`), and stage 6 (CoCoNet, `run_mhr_wild_inference.py`) failed twice, in
   the normal and in the `--postopt_batch_size 384` branch, with `ValueError: mesh geometry projects entirely outside
   the image` (`logs/episode_000025.local.log`). `run_local.sh` moves only PASS episodes to the NAS, so the outputs
-  stayed in `~/Projects/v2d/run/out/episode_000025` and `~/Projects/v2d/run/work/episode_000025`.
+  stayed in `$V2D_RUN/out/episode_000025` and `$V2D_RUN/work/episode_000025`.
 - E2 ran episode 25 on these local files (10-07T19:42Z, step 2): `exp_fp_mode.sh` uses `$RUN/out/<ep>` when it
   exists.
 - 10-08T08:07:55Z: moved to the NAS (after a first attempt at 08:06 that copied both into one folder, which was
   removed):
   ```bash
-  R=$HOME/Projects/v2d/run; F=$N/outputs/cari4d_failed
+  R=$V2D_RUN; F=$N/outputs/cari4d_failed
   rsync -a $R/out/episode_000025/ $F/episode_000025_out/ && rsync -a $R/work/episode_000025/ $F/episode_000025_work/
   # verified: same relative paths and sizes (find -printf '%P %s'), then the local copies were deleted
   ```
 - Readers: `postproc_temporal.py` (masks, fallback to `cari4d_failed/<ep>_work`), `firstframe_pnp.py`
   (`<ep>_out/depth/moge2/intrinsics.pkl`), `agent/export_inputs.py` (`<ep>_work/masks_k0.h5`),
   `hoi_extraction/scripts/camera_floor.py`, and the agent of episode 25 (`<ep>_out` bound at `/pipeline`).
-- The stage inputs in `<ep>_out/export/` hold absolute paths of the workstation (`/home/hanzhou/Projects/v2d/run/out/...`).
+- The stage inputs in `<ep>_out/export/` hold absolute paths of the workstation (`$V2D_RUN/out/...`).
   Only the GPU stages 5–6 (E2) follow them; `exp_fp_mode.sh` re-creates that path as a symlink when it is missing.
 - To regenerate: `run_episode.sh 25` with `WORK_ROOT`/`OUT_ROOT` set as in `run_local.sh`; it stops in stage 6 the
   same way and leaves stages 0–5 behind.
@@ -160,7 +159,7 @@ CUDA_VISIBLE_DEVICES=1 V2D_FP_REREGISTER=1 setsid nohup bash $S/exp_fp_mode.sh E
   - 10-15T18:45Z: optional `SRC_ROOT`, after all E2 runs.
   - Neither edit changes the FoundationPose or CoCoNet arguments.
 - **Episode 25:** its baseline never produced `inference/`. E2 ran on the stage 0–5 outputs kept locally in
-  `~/Projects/v2d/run/out/episode_000025` (`[E2_reregister] episode_000025 start 2026-10-07 19:42:39` in
+  `$V2D_RUN/out/episode_000025` (`[E2_reregister] episode_000025 start 2026-10-07 19:42:39` in
   `logs/exp_E2_reregister_rest.log`). These are the files moved unchanged to `outputs/cari4d_failed/episode_000025_out`
   on 10-08 (step 1).
 
@@ -169,8 +168,8 @@ CUDA_VISIBLE_DEVICES=1 V2D_FP_REREGISTER=1 setsid nohup bash $S/exp_fp_mode.sh E
 The run at 10-15T08:03:38Z, in bash:
 ```bash
 bash -c '
-N=/mnt/nas/Group/hanzhou/v2d; EPS="1 2 3 4 6 7 8 9 11 12 13 14 15 16 17 18 19 25 27 28"   # N=$V2D_ROOT elsewhere
-run() { $HOME/.local/apptainer/usr/bin/apptainer exec -B $N:$N -B /home/hanzhou/Projects/v2d $N/images/v2d_cari4d.sif python /home/hanzhou/Projects/v2d/hoi_extraction/scripts/"$@"; }
+EPS="1 2 3 4 6 7 8 9 11 12 13 14 15 16 17 18 19 25 27 28"
+run() { $A exec -B $N:$N -B $REPO $N/images/v2d_cari4d.sif python $REPO/hoi_extraction/scripts/"$@"; }
 run postproc_temporal.py $EPS --out-exp P1_temporal'
 ```
 - Defaults: `--src-exp E2_reregister`, static hold on.
@@ -229,7 +228,7 @@ The run script is `$X/run.sh`, written at 10-15T08:42Z. Its content, verbatim:
 ```bash
 #!/usr/bin/env bash
 # Re-run episodes with prompts from gen_prompt_v2.py (prompts.json pre-placed in WORK) + E2 re-registration.
-export V2D_ROOT=/mnt/nas/Group/hanzhou/v2d SIF_EXEC=$HOME/.local/apptainer/usr/bin/apptainer
+export V2D_ROOT=$N SIF_EXEC=$A
 export WORK_ROOT=$V2D_ROOT/experiments/M1_prompt_v2/work OUT_ROOT=$V2D_ROOT/experiments/M1_prompt_v2/out
 export V2D_FP_REREGISTER=1
 for i in "$@"; do
@@ -345,7 +344,7 @@ RUNC python $S/postproc_feet_floor.py $(seq 0 29) --use-sim --ref-foot-height --
 - the working directory was `$S`.
 ```bash
 cd $S
-CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $HOME/Projects/v2d $N/images/v2d_cari4d.sif \
+CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $REPO $N/images/v2d_cari4d.sif \
   python postproc_joint_camera_K.py $(seq 0 29) --out-exp JC2s1_shared_f820_pp --sig-logf 1e-4 --sig-pp 0.01 --K-prior 820 758.1 560.5
 $PY postproc_depth_blend.py $(seq 0 29) --src JC2s1_shared_f820_pp --out-exp DB_JC2s1_shared_f820_pp
 ```
@@ -377,7 +376,7 @@ $PY postproc_depth_blend.py $(seq 0 29) --src JC2s1_shared_f820_pp --out-exp DB_
 `build_release.py` was last edited at 10-20T07:30:25Z. The release was built at 10-20T07:32:32Z:
 ```bash
 cd $S
-CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $HOME/Projects/v2d $N/images/v2d_cari4d.sif python build_release.py $N/release/tier3_s1_20261020
+CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $REPO $N/images/v2d_cari4d.sif python build_release.py $N/release/tier3_s1_20261020
 # defaults: --variant DB_JC2s1_shared_f820_pp --camera JC2s1_shared_f820_pp --episodes 0..29
 ```
 - Evidence: the `reconstructed_data/*/poses.npy` files have mtimes 10-20T07:29–07:39Z.
@@ -392,11 +391,11 @@ cp $S/build_release.py $S/postproc_joint_camera_K.py $S/postproc_joint_camera.py
 The loop that wrote `frame_references`, verbatim. The `ref_poses` and metrics lines only check the release against
 the official CSV (GT). The saved files depend only on `object_pose_xyz_wxyz.npy`.
 ```python
-import json,numpy as np,csv,trimesh,sys
+import os,json,numpy as np,csv,trimesh,sys
 from scipy.spatial.transform import Rotation as Rot
 sys.path.insert(0,".")
 from eval_object_pose import metrics, quat_wxyz_to_R
-N="/mnt/nas/Group/hanzhou/v2d"; R=f"{N}/release/tier3_s1_20261020"; DS=f"{N}/dataset/track_2/tier_1_multiview_caption"
+N=os.environ["V2D_ROOT"]; R=f"{N}/release/tier3_s1_20261020"; DS=f"{N}/dataset/track_2/tier_1_multiview_caption"
 off={int(r["ep"]):r for r in csv.DictReader(open(f"{N}/logs/officialDB_JC2s1_shared_f820_pp.csv"))}
 idx=json.load(open(f"{R}/episodes.json")); bad=0
 for d in idx:

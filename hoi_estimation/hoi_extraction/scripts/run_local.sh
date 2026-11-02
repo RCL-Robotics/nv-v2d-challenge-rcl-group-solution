@@ -3,10 +3,11 @@
 # Heavy per-episode I/O goes to local disk; finished (PASS) episodes are moved to NAS.
 # Usage: run_local.sh "<gpu ids, e.g. 0 1>" [episode idx ...]   (default: all in episodes.tsv)
 set -uo pipefail
-export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
-export WORK_ROOT=$HOME/Projects/v2d/run/work
-export OUT_ROOT=$HOME/Projects/v2d/run/out
-export SIF_EXEC=$HOME/.local/apptainer/usr/bin/apptainer
+export V2D_ROOT=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
+export V2D_RUN=${V2D_RUN:?set V2D_RUN to a local scratch directory for the per-episode runs}
+export WORK_ROOT=$V2D_RUN/work
+export OUT_ROOT=$V2D_RUN/out
+export SIF_EXEC=${APPTAINER:-apptainer}
 NAS_OUT=$V2D_ROOT/outputs/cari4d
 LOGS=$V2D_ROOT/logs
 read -ra GPUS <<< "$1"; shift

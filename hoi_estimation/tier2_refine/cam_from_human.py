@@ -10,7 +10,7 @@ import os
 import json, sys, numpy as np, torch
 from scipy.spatial import cKDTree
 import soma
-V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); FLIP = np.diag([1.0, -1.0, -1.0]); NF = 40; NP = 1500; TRIM = 0.8
+V = os.environ["V2D_ROOT"]; FLIP = np.diag([1.0, -1.0, -1.0]); NF = 40; NP = 1500; TRIM = 0.8
 REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
 eps_meta = {e["episode_index"]: e for e in json.load(open(f"{V}/release/tier3_s1_20261020/episodes.json"))}
 

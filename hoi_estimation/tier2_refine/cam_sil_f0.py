@@ -15,7 +15,7 @@ import nvdiffrast.torch as dr
 import soma
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
-V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); T2DS = f"{V}/dataset/track_2/tier_2_synthetic_noise"; FLIP = np.diag([1.0, -1.0, -1.0])
+V = os.environ["V2D_ROOT"]; T2DS = f"{V}/dataset/track_2/tier_2_synthetic_noise"; FLIP = np.diag([1.0, -1.0, -1.0])
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{T2DS}/meta/episodes_metadata.jsonl"))}
 cams = json.load(open(sys.argv[1])); OUT = sys.argv[2]
 eps = list(map(int, sys.argv[3].split(","))) if len(sys.argv) > 3 and sys.argv[3] != "all" else range(30)

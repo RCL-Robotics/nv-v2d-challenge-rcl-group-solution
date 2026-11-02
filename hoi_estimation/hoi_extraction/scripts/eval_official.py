@@ -26,7 +26,7 @@ import trimesh
 sys.path.insert(0, os.path.dirname(__file__))
 from eval_object_pose import metrics, quat_wxyz_to_R  # noqa: E402
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def bundle_path(variant, ep):

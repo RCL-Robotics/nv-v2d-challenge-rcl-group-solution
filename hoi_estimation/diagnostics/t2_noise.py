@@ -1,9 +1,9 @@
 # Diagnostic (uses GT): structure of the Tier 2 object noise (rotation / translation error, autocorrelation).
-import numpy as np, sys
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+import os, numpy as np, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
 from scipy.spatial.transform import Rotation as Rot
-V="/mnt/nas/Group/hanzhou/v2d"
+V=os.environ["V2D_ROOT"]
 def ac(x,l): x=x-x.mean(0); return float((x[:-l]*x[l:]).sum()/(x*x).sum())
 for i in range(0,30,3):
     r=np.load(f"{V}/ref_poses/episode_{i:06d}.npz")["pose_xyz_wxyz"].astype(float); t=np.load(f"{V}/tier2_poses/episode_{i:06d}.npz")["pose_xyz_wxyz"].astype(float)

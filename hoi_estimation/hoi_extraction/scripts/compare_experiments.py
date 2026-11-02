@@ -40,7 +40,7 @@ def load_variant(path_fp, path_coco, path_refined=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("experiments", nargs="+", help="experiment names under <v2d>/experiments")
-    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--v2d", default=os.environ["V2D_ROOT"])
     ap.add_argument("--out-csv", default=None)
     args = ap.parse_args()
     ds = f"{args.v2d}/dataset/track_2/tier_1_multiview_caption"

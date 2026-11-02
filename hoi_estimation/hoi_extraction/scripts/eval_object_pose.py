@@ -74,9 +74,9 @@ def align_and_score(T_cam, R_r, t_r, verts, mode, depth_scale=1.0):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--outputs", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/outputs/cari4d")
-    ap.add_argument("--dataset", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/dataset/track_2/tier_1_multiview_caption")
-    ap.add_argument("--ref-poses", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/ref_poses")
+    ap.add_argument("--outputs", default=os.environ["V2D_ROOT"] + "/outputs/cari4d")
+    ap.add_argument("--dataset", default=os.environ["V2D_ROOT"] + "/dataset/track_2/tier_1_multiview_caption")
+    ap.add_argument("--ref-poses", default=os.environ["V2D_ROOT"] + "/ref_poses")
     ap.add_argument("--ground-scales", default=None, help="json {episode_index: aligned-depth correction factor}")
     ap.add_argument("--out-csv", default=None)
     args = ap.parse_args()

@@ -4,7 +4,7 @@ import sys, json, numpy as np, cv2, trimesh, subprocess, os
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts")); sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "agent"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 from render_compare import draw
-V2 = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); DS = f"{V2}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V2}/release/tier3_s1_20261020/reconstructed_data"
+V2 = os.environ["V2D_ROOT"]; DS = f"{V2}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V2}/release/tier3_s1_20261020/reconstructed_data"
 idx, camf, out = int(sys.argv[1]), sys.argv[2], sys.argv[3]; runs = [a.split("=", 1) for a in sys.argv[4:]]
 m = {d["episode_index"]: d for d in map(json.loads, open(f"{DS}/meta/episodes_metadata.jsonl"))}[idx]
 cam = json.load(open(camf)); K = np.array(cam["K"]); Wi = np.linalg.inv(np.array(cam["T_world_cam"]))

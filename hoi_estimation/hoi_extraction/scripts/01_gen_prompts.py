@@ -18,10 +18,10 @@ import tempfile
 from pathlib import Path
 
 DATASET = Path(os.environ.get(
-    "V2D_DATASET", os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/dataset/track_2/tier_1_multiview_caption"))
-WORK = Path(os.environ.get("V2D_WORK", os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/work"))
+    "V2D_DATASET", os.environ["V2D_ROOT"] + "/dataset/track_2/tier_1_multiview_caption"))
+WORK = Path(os.environ.get("V2D_WORK", os.environ["V2D_ROOT"] + "/work"))
 GDINO_WEIGHTS = Path(os.environ.get(
-    "V2D_GDINO_WEIGHTS", os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/weights/grounding_dino"))
+    "V2D_GDINO_WEIGHTS", os.environ["V2D_ROOT"] + "/weights/grounding_dino"))
 FRAME_INDEX = int(os.environ.get("V2D_PROMPT_FRAME", "0"))
 BOX_THRESHOLD = float(os.environ.get("V2D_BOX_THRESHOLD", "0.3"))
 

@@ -2,11 +2,11 @@
 Compliant estimate uses only our trajectory + released plane + first-frame alignment W; GT is printed for diagnosis only."""
 import json, os, sys
 import numpy as np, torch, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 from eval_official import bundle_path
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"
+V2D = os.environ["V2D_ROOT"]
 ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}
 al = json.load(open(f"{V2D}/logs/pnp_forE1.json"))

@@ -1,8 +1,8 @@
-import sys, json, numpy as np, torch, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+import os, sys, json, numpy as np, torch, trimesh
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_official import bundle_path
 from scipy.spatial.transform import Rotation as Rot
-V2D = "/mnt/nas/Group/hanzhou/v2d"; DS = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
+V2D = os.environ["V2D_ROOT"]; DS = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 REL = f"{V2D}/release/tier3_s1_20261020/reconstructed_data"
 O = f"{V2D}/agent_runs/vis/ag3"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{DS}/meta/episodes_metadata.jsonl"))}

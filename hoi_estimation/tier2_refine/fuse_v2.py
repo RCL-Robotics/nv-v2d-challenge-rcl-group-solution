@@ -14,7 +14,7 @@ import json, os, sys, numpy as np, trimesh
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 from scipy.spatial.transform import Rotation as Rot
-V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); DS = f"{V}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
+V = os.environ["V2D_ROOT"]; DS = f"{V}/dataset/track_2/tier_1_multiview_caption"; REL = f"{V}/release/tier3_s1_20261020/reconstructed_data"
 T2DS = f"{V}/dataset/track_2/tier_2_synthetic_noise"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{T2DS}/meta/episodes_metadata.jsonl"))}
 cams = json.load(open(sys.argv[1])); OUT = sys.argv[2]; a = sys.argv[3:]

@@ -7,7 +7,7 @@ set -uo pipefail
 PFX=${PFX:-CL1}; TASK=${TASK:-AGENT_TASK_temporal.md}  # workspace prefix and task file, from the environment
 P=$1; shift
 HERE=$(cd "$(dirname "$0")" && pwd)
-V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
 
 active() {
   local n=0 w

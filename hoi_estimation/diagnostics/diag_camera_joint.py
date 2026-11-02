@@ -14,14 +14,14 @@ import numpy as np, torch, trimesh
 from scipy.optimize import least_squares
 from scipy.spatial import cKDTree
 from scipy.spatial.transform import Rotation as Rot
-sys.path.insert(0, "/workspace/v2d_cari4d/lib/cari4d"); sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, "/workspace/v2d_cari4d/lib/cari4d"); sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, quat_wxyz_to_R
 from eval_official import bundle_path
 from lib_mhr.mhr_layer import MHRLayer
 from tools.render_mhr_wild_inference import _params
 import soma
 
-V2D = "/mnt/nas/Group/hanzhou/v2d"; ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
+V2D = os.environ["V2D_ROOT"]; ds = f"{V2D}/dataset/track_2/tier_1_multiview_caption"
 meta = {d["episode_index"]: d for d in map(json.loads, open(f"{ds}/meta/episodes_metadata.jsonl"))}
 al = json.load(open(f"{V2D}/logs/pnp_forE1.json")); ff = json.load(open(f"{V2D}/experiments/FF2_feet_ref/feet_floor.json"))
 dev = torch.device("cuda")

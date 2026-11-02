@@ -4,9 +4,10 @@ These commands were reconstructed from the Claude Code session transcripts (`~/.
 
 - **NAS clock:** NAS mtimes are local time (UTC+4). The NAS clock also runs about 5–6 min behind the transcript clock. Evidence: the `t3_frame0` command was sent at 10:09:10Z, and its output directory has the mtime 14:03:53 local.
 - **Paths:**
-  - `N=/mnt/nas/Group/hanzhou/v2d`
-  - `P=/home/hanzhou/Projects/v2d` (the git copy is `hoi_estimation/` in the branch)
-  - `A=$HOME/.local/apptainer/usr/bin/apptainer`
+  - `N=$V2D_ROOT` (data root, README section 0)
+  - `REPO=<checkout>/hoi_estimation`
+  - `A=${APPTAINER:-apptainer}`
+  - (on the workstation: `N=/mnt/nas/Group/hanzhou/v2d`, `REPO=/home/hanzhou/Projects/v2d`, `V2D_RUN=/home/hanzhou/Projects/v2d/run`, `A=~/.local/apptainer/usr/bin/apptainer`)
   - `SIF=$N/images/v2d_cari4d.sif`
 
 ## A. Agent inputs, the opus_v2 agent runs, and the opus release
@@ -16,12 +17,12 @@ These commands were reconstructed from the Claude Code session transcripts (`~/.
 **Answer: the release camera came from explicit CLI flags.** No default was edited and no environment variable was used.
 
 ```bash
-N=/mnt/nas/Group/hanzhou/v2d; A=~/.local/apptainer/usr/bin/apptainer
+N=${V2D_ROOT:?}; A=${APPTAINER:-apptainer}
 # 2026-10-20T11:54:26Z: episodes 14 3 28 13 19 25
 # 2026-10-20T13:40:46Z: the other 24 episodes
 for n in $(seq 0 29); do e=$(printf %03d $n)
-  CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B /home/hanzhou/Projects/v2d $N/images/v2d_cari4d.sif \
-    python3 ~/Projects/v2d/agent/export_inputs.py $n --ws $N/agent_runs/T1_ds_ep$e \
+  CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $REPO $N/images/v2d_cari4d.sif \
+    python3 $REPO/agent/export_inputs.py $n --ws $N/agent_runs/T1_ds_ep$e \
       --variant DB_JC2s1_shared_f820_pp --align $N/logs/JC2s1_shared_f820_pp_align.json --camera JC2s1_shared_f820_pp
 done
 ```
@@ -37,10 +38,10 @@ The `.preexported` marker was added at about 13:35Z.
 - **Export times:** the `reconstruction.npz` mtimes are 15:49–15:56 local for 6 episodes and 17:35–18:02 local for 24 episodes. These match the two commands.
 - **Inputs used by the runs:** compared the sha256 of every input file in all 30 release manifests (`agent_runs/CL2*/logs/run_manifest.txt`) with `T1_ds_ep<eee>/inputs`. All 30 episodes match exactly. The CL2* runs copied the T1_ds inputs (`cp -r`), as `run_batch_CL.sh` does.
 
-### A2. Agent batches: `agent/run_batch_CL.sh` (P = 3 parallel, run from `$P/agent`)
+### A2. Agent batches: `agent/run_batch_CL.sh` (P = 3 parallel, run from `$REPO/agent`)
 
 ```bash
-cd /home/hanzhou/Projects/v2d/agent
+cd $REPO/agent
 PFX=CL2  TASK=AGENT_TASK_temporal_v2.md nohup bash run_batch_CL.sh 3 $(seq 0 29)  >> $N/agent_runs/CL2_batch.log  2>&1 &  # 2026-10-21T05:04:38Z
 PFX=CL2b TASK=AGENT_TASK_temporal_v2.md nohup bash run_batch_CL.sh 3 $(seq 11 29) >> $N/agent_runs/CL2b_batch.log 2>&1 &  # 2026-10-21T09:57:13Z
 PFX=CL2c TASK=AGENT_TASK_temporal_v2.md nohup bash run_batch_CL.sh 3 $(seq 22 29) >> $N/agent_runs/CL2c_batch.log 2>&1 &  # 2026-10-21T14:56:52Z
@@ -81,7 +82,7 @@ Start time (UTC) and wall time of each run, from the manifests:
 ### A3. Opus release (`tier3_opus_20261021`)
 
 ```bash
-python3 /home/hanzhou/Projects/v2d/agent/build_release_opus.py /mnt/nas/Group/hanzhou/v2d/release/tier3_opus_20261021   # 2026-10-21T18:44:11Z (host python)
+python3 $REPO/agent/build_release_opus.py $N/release/tier3_opus_20261021   # 2026-10-21T18:44:11Z (host python)
 ```
 
 The script mtime is 10-21 22:44 local, just before the call, and the script is git-identical. The episode → run mapping (CL2 0–10, CL2b 11–21, CL2c 22–29) is hard-coded in the script.
@@ -93,8 +94,8 @@ The script mtime is 10-21 22:44 local, just before the call, and the script is g
 The `flip=3` mode was added and run in the same command, at 2026-10-23T10:09:10Z. That command looped over `"opus 2 0 shift" "opus 3 2 shift" "s1 3 2 shift"`. The release line is:
 
 ```bash
-cd /mnt/nas/Group/hanzhou/v2d && ~/.local/apptainer/usr/bin/apptainer exec -B /mnt/nas/Group/hanzhou/v2d -B /home/hanzhou/Projects/v2d \
-  images/v2d_cari4d.sif python /home/hanzhou/Projects/v2d/tier2_refine/t3_frame0.py opus experiments/t3_frame0/opus_f3_c2_shift 3 2 shift
+cd $N && $A exec -B $N -B $REPO \
+  images/v2d_cari4d.sif python $REPO/tier2_refine/t3_frame0.py opus experiments/t3_frame0/opus_f3_c2_shift 3 2 shift
 ```
 
 - **Output:** `$N/experiments/t3_frame0/opus_f3_c2_shift/episode_<6d>.npz` (key `T_world_mesh`) and `diag_scores.json`. The directory mtime is 10-23 14:03 local.
@@ -105,7 +106,7 @@ cd /mnt/nas/Group/hanzhou/v2d && ~/.local/apptainer/usr/bin/apptainer exec -B /m
 ### B2. Combined release `tier3_frame0_supports_20261024`
 
 ```bash
-cd /home/hanzhou/Projects/v2d/support && python3 build_release_combined.py /mnt/nas/Group/hanzhou/v2d/release/tier3_frame0_supports_20261024   # 2026-10-24T06:49:55Z (host python)
+cd $REPO/support && python3 build_release_combined.py $N/release/tier3_frame0_supports_20261024   # 2026-10-24T06:49:55Z (host python)
 ```
 
 - **Defaults applied:**
@@ -125,15 +126,15 @@ cd /home/hanzhou/Projects/v2d/support && python3 build_release_combined.py /mnt/
 
 ## C. Support fit (`support/`, 14 episodes)
 
-The episodes are 1, 2, 3, 6, 7, 9, 11, 13, 16, 17, 20, 25, 27 and 28. The default list is `SUPPORT` in `common.py`, and every step accepts an optional comma-separated episode list. All steps run with `--pwd $P/support`, so the scripts are found relative to that directory.
+The episodes are 1, 2, 3, 6, 7, 9, 11, 13, 16, 17, 20, 25, 27 and 28. The default list is `SUPPORT` in `common.py`, and every step accepts an optional comma-separated episode list. All steps run with `--pwd $REPO/support`, so the scripts are found relative to that directory.
 
 The run order below follows the last command for each output that ended in the release.
 
 ```bash
-cd /mnt/nas/Group/hanzhou/v2d
-B="-B /mnt/nas/Group/hanzhou/v2d -B /home/hanzhou/Projects/v2d --pwd /home/hanzhou/Projects/v2d/support"
+cd $N
+B="-B $N -B $REPO --pwd $REPO/support"
 export APPTAINERENV_CUDA_VISIBLE_DEVICES=0
-A=~/.local/apptainer/usr/bin/apptainer
+A=${APPTAINER:-apptainer}
 $A exec $B images/v2d_cari4d.sif python background.py                    # 2026-10-23T19:02:49Z, all 14 (median background, occupancy)
 $A exec $B images/v2d_cari4d.sif python anchor.py                        # 2026-10-23T19:18:29Z
 $A exec --nv $B images/v2d_gdino.sif  python detect.py                   # 2026-10-23T19:18:29Z  (GroundingDINO image)
@@ -142,11 +143,11 @@ $A exec --nv $B images/v2d_cari4d.sif bash -c "python segment.py"        # 2026-
 $A exec --nv $B images/v2d_cari4d.sif bash -c "python fit.py && python overlay.py && python sheet.py"   # 2026-10-23T20:28:26Z: eps 2..28 final
 $A exec --nv $B images/v2d_cari4d.sif bash -c "python fit.py 1 && python overlay.py 1"                  # 2026-10-23T21:04:50Z: ep 1 final
 $A exec $B images/v2d_cari4d.sif bash -c "python contact.py --snap > /dev/null && python contact.py --gt > /dev/null && python score_snap.py"  # 21:09:47Z (--gt and score_snap are GT diagnostics only)
-$A exec $B images/v2d_cari4d.sif python package.py /mnt/nas/Group/hanzhou/v2d/release/tier3_supports_20261024   # 2026-10-23T21:13:44Z
+$A exec $B images/v2d_cari4d.sif python package.py $N/release/tier3_supports_20261024   # 2026-10-23T21:13:44Z
 # 2026-10-23T21:14:32Z, host shell: the three files package.py does not write
-R=/mnt/nas/Group/hanzhou/v2d/release/tier3_supports_20261024
-cp /mnt/nas/Group/hanzhou/v2d/support/vis/sheet_fits.jpg $R/fit_overview.jpg
-cp /mnt/nas/Group/hanzhou/v2d/support/contact_report.json $R/
+R=$N/release/tier3_supports_20261024
+cp $N/support/vis/sheet_fits.jpg $R/fit_overview.jpg
+cp $N/support/contact_report.json $R/
 cat > $R/README.md <<'EOF' ... EOF        # hand-written; text in reproducibility/release_files/tier3_supports_20261024_README.md
 ```
 
@@ -160,8 +161,8 @@ cat > $R/README.md <<'EOF' ... EOF        # hand-written; text in reproducibilit
 ### Reproducing the support release (copy-paste, bash)
 
 ```bash
-export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}; N=$V2D_ROOT
-REPO=<checkout>/hoi_estimation; A=apptainer                       # originally ~/.local/apptainer/usr/bin/apptainer
+N=${V2D_ROOT:?set V2D_ROOT to the data root (README section 0)}
+REPO=<checkout>/hoi_estimation; A=${APPTAINER:-apptainer}
 B=(-B $N -B $REPO --pwd $REPO/support); export APPTAINERENV_CUDA_VISIBLE_DEVICES=0 APPTAINERENV_V2D_ROOT=$N
 # optional: export APPTAINERENV_V2D_SUPPORT_OUT=<copy of $N/support> to leave $N/support untouched
 $A exec "${B[@]}" $N/images/v2d_cari4d.sif python background.py

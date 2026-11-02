@@ -24,7 +24,7 @@ import cv2
 import h5py
 import numpy as np
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def pipeline_dir(src, ep):

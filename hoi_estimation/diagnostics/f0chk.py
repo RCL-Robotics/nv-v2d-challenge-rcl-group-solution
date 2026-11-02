@@ -1,5 +1,5 @@
-import numpy as np,sys
-sys.path.insert(0,'/home/hanzhou/Projects/v2d/hoi_extraction/scripts')
+import os, numpy as np,sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
 for i in range(30):
   r=np.load(f'ref_poses/episode_{i:06d}.npz')['pose_xyz_wxyz'].astype(float); t=np.load(f'tier2_poses/episode_{i:06d}.npz')['pose_xyz_wxyz'].astype(float)

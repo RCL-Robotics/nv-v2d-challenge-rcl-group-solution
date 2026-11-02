@@ -22,7 +22,7 @@ import trimesh
 sys.path.insert(0, os.path.dirname(__file__))
 from eval_official import bundle_path  # noqa: E402
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def main():

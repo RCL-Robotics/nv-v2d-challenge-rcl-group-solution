@@ -81,7 +81,7 @@ def _icp_from(src, dst, with_scale, R, t, iters, trim):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--bundles", nargs="+", required=True, help="episode=path/to/coconet.pth")
-    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--v2d", default=os.environ["V2D_ROOT"])
     ap.add_argument("--out", required=True)
     ap.add_argument("--wide", action="store_true", help="search all yaw starts without the rotation prior")
     ap.add_argument("--ground-scales", default=None, help="ground_scales.json: scale our camera-frame human by scale_aligned before fitting")

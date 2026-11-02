@@ -1,6 +1,6 @@
-import json,numpy as np,torch,sys,glob
+import os, json,numpy as np,torch,sys,glob
 import soma
-N="/mnt/nas/Group/hanzhou/v2d"; FLIP=np.diag([1.,-1,-1])
+N=os.environ["V2D_ROOT"]; FLIP=np.diag([1.,-1,-1])
 od=glob.glob(f"{N}/release/tier3_s1_test/reconstructed_data/*")[0]
 z=np.load(f"{od}/soma_params.npz",allow_pickle=True); print({k:z[k].shape for k in z.files})
 sl=soma.SOMALayer(identity_model_type="mhr",device="cuda")

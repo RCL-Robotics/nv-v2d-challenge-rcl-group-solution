@@ -17,7 +17,7 @@ import pandas as pd
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--pipeline", nargs="+", required=True)
-    ap.add_argument("--logs", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d") + "/logs")
+    ap.add_argument("--logs", default=os.environ["V2D_ROOT"] + "/logs")
     ap.add_argument("--metric", default="AUC")
     args = ap.parse_args()
     frames = []

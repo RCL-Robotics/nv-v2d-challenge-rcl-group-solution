@@ -5,12 +5,12 @@ set -euo pipefail
 
 EP=$(printf "%06d" "$1")
 
-DATASET=${V2D_DATASET:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/dataset/track_2/tier_1_multiview_caption}
-WORK=${V2D_WORK:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/work}/episode_${EP}
-OUT=${V2D_OUT:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/outputs/cari4d}
-SAM2_WEIGHTS=${V2D_SAM2_WEIGHTS:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/weights/sam2}
-CARI4D_WEIGHTS=${V2D_CARI4D_WEIGHTS:-${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}/weights/cari4d}
-RECON=${V2D_RECON:-$HOME/Projects/v2d/nv-v2d-challenge-codebase/reconstruction}
+DATASET=${V2D_DATASET:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/dataset/track_2/tier_1_multiview_caption}
+WORK=${V2D_WORK:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/work}/episode_${EP}
+OUT=${V2D_OUT:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/outputs/cari4d}
+SAM2_WEIGHTS=${V2D_SAM2_WEIGHTS:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/weights/sam2}
+CARI4D_WEIGHTS=${V2D_CARI4D_WEIGHTS:-${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}/weights/cari4d}
+RECON=${V2D_RECON:-$(cd "$(dirname "$0")/../../.." && pwd)/reconstruction}
 
 cd "$RECON"
 source .venv/bin/activate

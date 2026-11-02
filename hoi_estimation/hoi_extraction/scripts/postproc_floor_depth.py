@@ -24,7 +24,7 @@ import trimesh
 sys.path.insert(0, os.path.dirname(__file__))
 from postproc_temporal import mask_stats, static_frames  # noqa: E402
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def main():

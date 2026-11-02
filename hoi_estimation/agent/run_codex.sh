@@ -12,10 +12,10 @@
 # Usage: run_codex.sh <workspace> [effort] [timeout_min] [net: open|api] [pipeline_dir] [task_file]
 set -euo pipefail
 WS=$1; EFFORT=${2:-high}; TMIN=${3:-90}; NET=${4:-api}; PIPELINE=${5:-}; TASK_FILE=${6:-${TASK_FILE:-}}
-A=$HOME/.local/apptainer/usr/bin/apptainer
-V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
+A=${APPTAINER:-apptainer}
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
 SIF=$V2D/images/v2d_cari4d.sif
-PK=$(dirname "$(dirname "$(readlink -f $HOME/.local/bin/codex)")")
+PK=$(dirname "$(dirname "$(readlink -f "${CODEX_BIN:-$(command -v codex)}")")")
 HERE=$(cd "$(dirname "$0")" && pwd)
 mkdir -p $WS/outputs $WS/scratch $WS/logs $WS/.codex_home $WS/.net
 cp ${TASK_FILE:-$HERE/AGENT_TASK.md} $WS/AGENT_TASK.md
@@ -42,7 +42,7 @@ u = urlparse(pv["base_url"])
 print(c["model"], f"{u.hostname}:{u.port or 443}")
 PY
 )
-BINDS=(-B $WS:/work -B $PK:/opt/codex:ro -B $HOME/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
+BINDS=(-B $WS:/work -B $PK:/opt/codex:ro -B $(cd "$HERE/../.." && pwd):/code:ro -B $V2D/weights:/weights:ro)
 [ -n "$PIPELINE" ] && BINDS+=(-B $PIPELINE:/pipeline:ro)
 { echo "date_utc: $(date -u +%FT%TZ)"; echo "codex: $($PK/bin/codex --version)"; echo "model: $MODEL api=$API_HOST effort=$EFFORT net=$NET"
   echo "sif: $SIF $(stat -c %s $SIF) bytes"; echo "binds: ${BINDS[*]}"; echo "task_sha256: $(sha256sum $WS/AGENT_TASK.md | cut -c1-64)"

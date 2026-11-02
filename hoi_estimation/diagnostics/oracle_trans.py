@@ -1,8 +1,8 @@
 # Diagnostic (uses GT): oracle with a TRANSLATION-only world shift (camera rotation kept) and the rigid oracle's camera change.
 import sys, os, json, numpy as np, trimesh
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import metrics, umeyama, quat_wxyz_to_R, MPPE_OFFSETS
-V="/mnt/nas/Group/hanzhou/v2d"; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
+V=os.environ["V2D_ROOT"]; DS=f"{V}/dataset/track_2/tier_1_multiview_caption"; REL=f"{V}/release/tier3_s1_20261020/reconstructed_data"
 PFX=os.environ.get('PFX','CL1')
 meta={d["episode_index"]:d for d in map(json.loads,open(f"{DS}/meta/episodes_metadata.jsonl"))}
 for i in map(int, sys.argv[1].split(",")):

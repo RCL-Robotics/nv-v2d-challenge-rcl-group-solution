@@ -1,11 +1,11 @@
 # Visualisation/diagnostic only (uses GT poses): fit the exo camera (T_world_cam + focal) so that the GT object mesh
 # projects onto the SAM2 object masks over many frames (pixels under the person mask ignored) and the frame-0 GT human
 # vertices fall inside the person mask. The dataset ships no camera calibration; this camera is only for rendering GT.
-import sys, json, numpy as np, torch, h5py, trimesh, cv2
+import os, sys, json, numpy as np, torch, h5py, trimesh, cv2
 import nvdiffrast.torch as dr
-sys.path.insert(0, "/home/hanzhou/Projects/v2d/hoi_extraction/scripts")
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
-V = "/mnt/nas/Group/hanzhou/v2d"; idx = int(sys.argv[1]); out = sys.argv[2]
+V = os.environ["V2D_ROOT"]; idx = int(sys.argv[1]); out = sys.argv[2]
 inp = f"{V}/agent_runs/T1_ds_ep{idx:03d}/inputs"
 cam = json.load(open(f"{inp}/camera.json")); K0 = np.array(cam["K"]); W0 = np.array(cam["T_world_cam"]); Hh, Ww = cam["height"], cam["width"]
 g = trimesh.load(f"{inp}/object_mesh.glb", force="scene", process=False).to_geometry()

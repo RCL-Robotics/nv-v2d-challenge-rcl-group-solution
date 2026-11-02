@@ -12,10 +12,10 @@
 # Usage: run_claude.sh <workspace> [model] [timeout_min] [net: open|api] [pipeline_dir] [task_file] [effort]
 set -euo pipefail
 WS=$1; MODEL=${2:-claude-opus-5-5}; TMIN=${3:-90}; NET=${4:-open}; PIPELINE=${5:-}; TASK_FILE=${6:-}; EFFORT=${7:-high}
-A=$HOME/.local/apptainer/usr/bin/apptainer
-V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
+A=${APPTAINER:-apptainer}
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
 SIF=$V2D/images/v2d_cari4d.sif
-CL=$(readlink -f $HOME/.local/bin/claude)
+CL=$(readlink -f "${CLAUDE_BIN:-$(command -v claude)}")
 HERE=$(cd "$(dirname "$0")" && pwd)
 mkdir -p $WS/outputs $WS/scratch $WS/logs $WS/.net
 cp ${TASK_FILE:-$HERE/AGENT_TASK.md} $WS/AGENT_TASK.md
@@ -33,7 +33,7 @@ print(d["accessToken"])
 PY
 )
 fi
-BINDS=(-B $WS:/work -B $CL:/opt/claude/claude:ro -B $HOME/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B $V2D/weights:/weights:ro)
+BINDS=(-B $WS:/work -B $CL:/opt/claude/claude:ro -B $(cd "$HERE/../.." && pwd):/code:ro -B $V2D/weights:/weights:ro)
 [ -n "$PIPELINE" ] && BINDS+=(-B $PIPELINE:/pipeline:ro)
 { echo "date_utc: $(date -u +%FT%TZ)"; echo "claude: $($CL --version)"; echo "model: $MODEL effort=$EFFORT net=$NET"
   echo "sif: $SIF $(stat -c %s $SIF) bytes"; echo "binds: ${BINDS[*]}"; echo "task_sha256: $(sha256sum $WS/AGENT_TASK.md | cut -c1-64)"

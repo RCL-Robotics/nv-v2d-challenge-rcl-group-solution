@@ -91,7 +91,7 @@ def stabilise(T, cen, area, window=15, outlier_deg=30.0, outlier_m=0.10, min_sta
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("episodes", type=int, nargs="+")
-    ap.add_argument("--v2d", default=os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"))
+    ap.add_argument("--v2d", default=os.environ["V2D_ROOT"])
     ap.add_argument("--src-exp", default="E2_reregister")
     ap.add_argument("--out-exp", default="P1_temporal")
     ap.add_argument("--no-static-hold", action="store_true")

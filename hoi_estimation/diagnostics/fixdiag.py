@@ -1,8 +1,8 @@
 # diagnostic (GT): compare the frame-0 camera fix of v3 with the oracle constant camera correction
-import numpy as np, sys
-sys.path.insert(0,'/home/hanzhou/Projects/v2d/hoi_extraction/scripts')
+import os, numpy as np, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "hoi_extraction", "scripts"))
 from eval_object_pose import quat_wxyz_to_R
-V='/mnt/nas/Group/hanzhou/v2d'; E=f'{V}/experiments/tier2_refine'
+V=os.environ["V2D_ROOT"]; E=f'{V}/experiments/tier2_refine'
 def proj(M): u,_,vt=np.linalg.svd(M); d=np.sign(np.linalg.det(u@vt)); u[:,-1]*=d; return u@vt
 def ang(A,B): return np.degrees(np.arccos(np.clip((np.trace(A.T@B)-1)/2,-1,1)))
 for i in range(30):

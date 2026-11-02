@@ -24,7 +24,7 @@ import os
 import numpy as np
 import pandas as pd
 
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def main():

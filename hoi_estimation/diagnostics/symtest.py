@@ -1,7 +1,7 @@
-import json,numpy as np,trimesh
+import os, json,numpy as np,trimesh
 from scipy.spatial import cKDTree
 from scipy.spatial.transform import Rotation as Rot
-T2DS='/mnt/nas/Group/hanzhou/v2d/dataset/track_2/tier_2_synthetic_noise'
+T2DS=os.environ["V2D_ROOT"] + '/dataset/track_2/tier_2_synthetic_noise'
 meta={d["episode_index"]:d for d in map(json.loads,open(f"{T2DS}/meta/episodes_metadata.jsonl"))}
 for i in range(30):
     m=trimesh.load(f"{T2DS}/{meta[i]['mesh']}",force="scene",process=False).to_geometry()

@@ -6,10 +6,10 @@
 #   e.g. exp_fp_mode.sh E1_every_frame "--register-every-frame" 3 13 15
 set -uo pipefail
 EXP=$1; FP_FLAGS=$2; shift 2
-V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
-RUN=$HOME/Projects/v2d/run
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
+RUN=${V2D_RUN:?set V2D_RUN to the local run root of run_local.sh}
 SIF=$V2D/images/v2d_cari4d.sif
-APPTAINER=$HOME/.local/apptainer/usr/bin/apptainer
+APPTAINER=${APPTAINER:-apptainer}
 W=$V2D/weights
 CFG=$(ls $W/cari4d/*/resolved_config.yaml); CKPT=$(ls $W/cari4d/*/step200000.pth)
 SRC=/workspace/v2d_cari4d/lib/cari4d

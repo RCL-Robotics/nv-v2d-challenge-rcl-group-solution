@@ -22,7 +22,7 @@ import torch
 import trimesh
 
 sys.path.insert(0, "/workspace/v2d_foundation_pose/lib/FoundationPose")
-V2D = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d")
+V2D = os.environ["V2D_ROOT"]
 
 
 def main():

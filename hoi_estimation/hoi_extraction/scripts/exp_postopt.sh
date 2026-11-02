@@ -5,10 +5,10 @@
 #   e.g. exp_postopt.sh E2_reregister S2_sym_rot "--symmetric-object --optimize-object-rotation" 17 12 8
 set -uo pipefail
 SRC_EXP=$1; OUT_EXP=$2; FLAGS=$3; shift 3
-V2D=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}
-RUN=$HOME/Projects/v2d/run
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root (reproducibility/README.md)}
+RUN=${V2D_RUN:?set V2D_RUN to the local run root of run_local.sh}
 SIF=$V2D/images/v2d_cari4d.sif
-APPTAINER=$HOME/.local/apptainer/usr/bin/apptainer
+APPTAINER=${APPTAINER:-apptainer}
 W=$V2D/weights
 SRC=/workspace/v2d_cari4d/lib/cari4d
 m=$V2D/code/reconstruction/modules

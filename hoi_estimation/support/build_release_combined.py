@@ -6,7 +6,7 @@ Human, camera, ground plane unchanged. Usage: build_release_combined.py <out_dir
 import json, os, shutil, sys
 import numpy as np
 from scipy.spatial.transform import Rotation as Rot
-V = os.environ.get("V2D_ROOT", "/mnt/nas/Group/hanzhou/v2d"); SRC = f"{V}/release/tier3_opus_20261021"; SUP = f"{V}/release/tier3_supports_20261024"
+V = os.environ["V2D_ROOT"]; SRC = f"{V}/release/tier3_opus_20261021"; SUP = f"{V}/release/tier3_supports_20261024"
 TRAJ = f"{V}/experiments/t3_frame0/opus_f3_c2_shift"; out = sys.argv[1]
 eps = json.load(open(f"{SRC}/episodes.json"))
 # diag_scores.json is written only by the GT diagnostic half of t3_frame0.py; it is printed, never used
