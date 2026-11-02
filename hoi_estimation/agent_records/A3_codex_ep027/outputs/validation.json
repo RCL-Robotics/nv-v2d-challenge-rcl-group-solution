@@ -1,0 +1,9 @@
+{
+  "all_checks_passed": true,
+  "bit_identical_repeated_pose_arrays": true,
+  "bit_identical_repeated_alignment_arrays": true,
+  "actual_camera_range_error_m": 1.3322676295501878e-15,
+  "inherited_max_rotation_orthogonality_error": 5.947540398842932e-06,
+  "inherited_max_rotation_determinant_error": 4.071893401680349e-06,
+  "unchanged_frames": 414
+}

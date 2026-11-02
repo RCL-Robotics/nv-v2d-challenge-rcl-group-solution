@@ -1,0 +1,23 @@
+loaded 922 frames in 14s
+phases: [[0, 129, 'static'], [130, 311, 'moving'], [312, 384, 'static'], [385, 482, 'moving'], [483, 699, 'static'], [700, 816, 'moving'], [817, 921, 'static']]
+/work/outputs/solve.py:164: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at ../torch/csrc/utils/tensor_numpy.cpp:206.)
+  t = torch.as_tensor(t if torch.is_tensor(t) else np.asarray(t), dtype=torch.float32, device=dev)
+static 0-129: frames [0, 10, 20, 31] loss [0.623 0.099 0.524] rot vs baseline 1.5 deg  (27s)
+static 312-384: frames [335, 340, 346, 359] loss [0.892 0.098 0.794] rot vs baseline 179.2 deg  (40s)
+static 483-699: frames [485, 502, 520, 538] loss [0.7   0.095 0.605] rot vs baseline 179.7 deg  (54s)
+static 817-921: frames [835, 843, 851, 860] loss [0.64  0.107 0.534] rot vs baseline 105.2 deg  (68s)
+moving 130-311: repaired masks 37, path ffff00fff0ffffffffffffffff000000ff0ffffffffff0000ffff000ffffffffffffffffffffffffffffffbbbbbbbbbbbbbbbbbbbbbbbbbbbfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (251s)
+moving 385-482: repaired masks 22, path 33b33ffbff3b33333bfbbfbbbbffff3f33bffbfff33b3fbffbbfffb3bbbbffff333333bbb3b333ff3fff333bb33bbbbfbf (333s)
+moving 700-816: repaired masks 16, path 33f3fff3fff33ff3fffff3f333333333333333333333333333333333333333333fffbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb (466s)
+static 0-129: depth factor 1.0018; z - z_base mean -3.6 cm median 0.0 cm
+moving 130-311: depth factor 1.0360; z - z_base mean -1.0 cm median -1.7 cm
+static 312-384: depth factor 1.0405; z - z_base mean 1.0 cm median 0.0 cm
+moving 385-482: depth factor 1.0257; z - z_base mean 0.8 cm median 0.4 cm
+static 483-699: depth factor 1.0562; z - z_base mean 0.5 cm median 0.0 cm
+moving 700-816: depth factor 1.0405; z - z_base mean 1.7 cm median 1.6 cm
+static 817-921: depth factor 1.0526; z - z_base mean 2.6 cm median 0.0 cm
+done in 466s
+
+real	7m49.744s
+user	11m26.432s
+sys	0m24.379s

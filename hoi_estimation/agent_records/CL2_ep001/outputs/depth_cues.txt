@@ -1,0 +1,8 @@
+true-human sole level (plane distance, 0.1 pct): -0.0 cm
+floor cue baseline static_start: lowest point -2.1 cm -> depth shift -3.9 cm
+floor cue baseline static_end: lowest point -1.5 cm -> depth shift -2.9 cm
+floor cue ours static_start: lowest point -5.6 cm -> depth shift -10.4 cm
+floor cue ours static_end: lowest point -4.6 cm -> depth shift -9.0 cm
+silhouette-size cue: scale 0.903 -> -29.6 cm (uncorrected); with 3-5 % mask bloat measured on the true frame-0 human: -21.3 .. -15.7 cm
+hand cue (right hand, 30% frames closest to the handle top): hand-handle depth diff median -3.3 cm, MAD 6.4 cm, 3D dist median 20.9 cm
+hand cue (left hand, 30% frames closest to the handle top): hand-handle depth diff median -3.1 cm, MAD 2.2 cm, 3D dist median 5.7 cm

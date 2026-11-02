@@ -1,0 +1,188 @@
+{
+ "P1 rest on sole (static)": {
+  "frames": [
+   0,
+   156
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.03965388254397317,
+   "rot_speed_p95": 18.598088394291683,
+   "trans_speed_cm_per_frame_med": 0.08368235864701017,
+   "lowest_point_above_table_cm_med": 23.86658314051132,
+   "hand_to_handle_cm_med_touching": 47.1304010004645
+  },
+  "result": {
+   "mask_IoU_mean": 0.8105857807856339,
+   "mask_IoU_p10": 0.7868286967277527,
+   "colour_resid_median": 0.579401046037674,
+   "rot_speed_deg_per_frame_med": 0.0,
+   "rot_speed_p95": 0.0,
+   "trans_speed_cm_per_frame_med": 0.0,
+   "lowest_point_above_table_cm_med": 0.0,
+   "hand_to_handle_cm_med_touching": 3.33768552434242
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -19.588335429848875,
+   "median": -20.05437135024415
+  },
+  "image_offset_result_vs_baseline_px_med": 95.9630536023405
+ },
+ "P2 slid on table": {
+  "frames": [
+   156,
+   660
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.015585785256058207,
+   "rot_speed_p95": 47.25627652982671,
+   "trans_speed_cm_per_frame_med": 0.8123807280168128,
+   "lowest_point_above_table_cm_med": 39.96795049947261,
+   "hand_to_handle_cm_med_touching": 51.38874861427014
+  },
+  "result": {
+   "mask_IoU_mean": 0.85377769929076,
+   "mask_IoU_p10": 0.8359315991401672,
+   "colour_resid_median": 0.5034795105457306,
+   "rot_speed_deg_per_frame_med": 0.0840468398077651,
+   "rot_speed_p95": 0.2931775320881751,
+   "trans_speed_cm_per_frame_med": 0.327049813488723,
+   "lowest_point_above_table_cm_med": -3.881809063077668e-06,
+   "hand_to_handle_cm_med_touching": 3.922079174906343
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -25.022321833073253,
+   "median": -24.926706434503743
+  },
+  "image_offset_result_vs_baseline_px_med": 129.88796802170938
+ },
+ "P3 stand-up transition": {
+  "frames": [
+   660,
+   780
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.023981386708390513,
+   "rot_speed_p95": 39.084163322724876,
+   "trans_speed_cm_per_frame_med": 2.053249553718426,
+   "lowest_point_above_table_cm_med": 38.292853772183506,
+   "hand_to_handle_cm_med_touching": 46.438614237767
+  },
+  "result": {
+   "mask_IoU_mean": 0.8580495039621989,
+   "mask_IoU_p10": 0.8342131555080414,
+   "colour_resid_median": 0.5760916769504547,
+   "rot_speed_deg_per_frame_med": 0.9883501798198195,
+   "rot_speed_p95": 2.076847973975195,
+   "trans_speed_cm_per_frame_med": 0.2896432513188809,
+   "lowest_point_above_table_cm_med": 1.2197158783796125,
+   "hand_to_handle_cm_med_touching": 6.932557379030545
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -23.03648359894891,
+   "median": -22.66323012349649
+  },
+  "image_offset_result_vs_baseline_px_med": 98.28072715848191
+ },
+ "P4 standing, held": {
+  "frames": [
+   780,
+   794
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.023852465303994482,
+   "rot_speed_p95": 4.711863652931464,
+   "trans_speed_cm_per_frame_med": 0.032928410421296524,
+   "lowest_point_above_table_cm_med": 30.518484128070416,
+   "hand_to_handle_cm_med_touching": 69.78851193116395
+  },
+  "result": {
+   "mask_IoU_mean": 0.8269531641687665,
+   "mask_IoU_p10": 0.8193179905414582,
+   "colour_resid_median": 0.5607657432556152,
+   "rot_speed_deg_per_frame_med": 0.2042710115589046,
+   "rot_speed_p95": 0.866242113665503,
+   "trans_speed_cm_per_frame_med": 0.02735563214499318,
+   "lowest_point_above_table_cm_med": 0.6608158245201778,
+   "hand_to_handle_cm_med_touching": 4.570793069360336
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -48.06482728670438,
+   "median": -52.70420370273281
+  },
+  "image_offset_result_vs_baseline_px_med": 84.09492700283249
+ },
+ "P5 standing (static)": {
+  "frames": [
+   794,
+   896
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.02266891156940258,
+   "rot_speed_p95": 0.023852465303994482,
+   "trans_speed_cm_per_frame_med": 0.053852931777820245,
+   "lowest_point_above_table_cm_med": 30.057925572818828,
+   "hand_to_handle_cm_med_touching": 66.84386527465624
+  },
+  "result": {
+   "mask_IoU_mean": 0.8277105689048767,
+   "mask_IoU_p10": 0.8193979859352112,
+   "colour_resid_median": 0.6070079803466797,
+   "rot_speed_deg_per_frame_med": 0.03007413758754064,
+   "rot_speed_p95": 0.03007413758754064,
+   "trans_speed_cm_per_frame_med": 0.0,
+   "lowest_point_above_table_cm_med": 0.6603659563493958,
+   "hand_to_handle_cm_med_touching": 49.62891470594616
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -71.26466707901548,
+   "median": -86.85196219062598
+  },
+  "image_offset_result_vs_baseline_px_med": 79.16138791452826
+ },
+ "all": {
+  "frames": [
+   0,
+   896
+  ],
+  "baseline": {
+   "mask_IoU_mean": 0.0,
+   "mask_IoU_p10": 0.0,
+   "colour_resid_median": 0.0,
+   "rot_speed_deg_per_frame_med": 0.023852465303994482,
+   "rot_speed_p95": 31.79341743491221,
+   "trans_speed_cm_per_frame_med": 0.1580249476033467,
+   "lowest_point_above_table_cm_med": 32.97092792664826,
+   "hand_to_handle_cm_med_touching": 50.07969785003715
+  },
+  "result": {
+   "mask_IoU_mean": 0.8434431975973504,
+   "mask_IoU_p10": 0.8057045340538025,
+   "colour_resid_median": 0.5595444142818451,
+   "rot_speed_deg_per_frame_med": 0.054754172649332314,
+   "rot_speed_p95": 1.1955122411556156,
+   "trans_speed_cm_per_frame_med": 0.20258246932524485,
+   "lowest_point_above_table_cm_med": -1.0317172449703094e-06,
+   "hand_to_handle_cm_med_touching": 4.451783412112027
+  },
+  "depth_diff_result_minus_baseline_cm": {
+   "mean": -29.43450020856323,
+   "median": -23.89530435763325
+  },
+  "image_offset_result_vs_baseline_px_med": 113.46482602350544
+ }
+}

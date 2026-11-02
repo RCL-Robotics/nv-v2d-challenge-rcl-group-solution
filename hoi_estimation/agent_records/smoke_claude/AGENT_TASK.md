@@ -1,0 +1,1 @@
+Smoke test. Run `nvidia-smi -L` and `python -c "import torch;print(torch.cuda.is_available())"` and `curl -sI https://pypi.org | head -1`, then write the three outputs to /work/outputs/smoke.txt. Then stop.

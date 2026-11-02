@@ -1,0 +1,19 @@
+loaded 1003 frames  10.8s
+phases: [('static', 0, 158), ('moving', 159, 345), ('static', 346, 365), ('moving', 366, 421), ('static', 422, 448), ('moving', 449, 582), ('static', 583, 713), ('moving', 714, 937), ('static', 938, 1002)]
+crops/edges ready 26.5s
+  it 0 data 19.2256 (edge 0.0000) smooth 25.5831
+  it 25 data 11.1327 (edge 0.0000) smooth 0.8885
+  it 50 data 9.5224 (edge 0.0000) smooth 0.2366
+  it 75 data 8.7161 (edge 0.0000) smooth 0.1520
+  it 100 data 8.2890 (edge 0.0000) smooth 0.1290
+  it 125 data 8.0793 (edge 0.0000) smooth 0.1195
+  it 149 data 7.9760 (edge 0.0000) smooth 0.1144
+stage 1 done 118.9s
+  it 0 data 26.7873 (edge 18.8133) smooth 0.1142
+  it 25 data 25.4979 (edge 17.1098) smooth 0.1362
+  it 50 data 24.9690 (edge 17.0137) smooth 0.0981
+  it 75 data 24.7035 (edge 16.8983) smooth 0.0895
+  it 99 data 24.6174 (edge 16.8787) smooth 0.0877
+stage 2 done 167.4s
+depth cues (cm, + = farther): {'floor_cm': -10.831471635044913, 'hand_cm': 1.3877787807814457e-14} silhouette: 5.38 applied: 0.0
+saved /work/outputs/object_poses_world.npz  total 185.2s

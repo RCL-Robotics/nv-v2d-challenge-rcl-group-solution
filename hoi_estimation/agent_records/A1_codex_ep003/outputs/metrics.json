@@ -1,0 +1,18 @@
+{
+  "frames": 781,
+  "mean_visible_IoU_before": 0.4799071120792253,
+  "mean_visible_IoU_after": 0.9336293005454861,
+  "median_visible_IoU_before": 0.49234917759895325,
+  "median_visible_IoU_after": 0.9386569857597351,
+  "runtime_seconds": 385.28554701805115,
+  "joint_table_fit_used": true,
+  "bottom_normal_mesh": [
+    -0.03642493293297648,
+    -0.03567387248796705,
+    0.9986994538311016
+  ],
+  "camera_depth_min_max": [
+    2.1900905182996775,
+    2.5256204311220465
+  ]
+}

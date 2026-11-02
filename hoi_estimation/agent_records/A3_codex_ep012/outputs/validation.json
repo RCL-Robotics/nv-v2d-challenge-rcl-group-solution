@@ -1,0 +1,13 @@
+{
+  "frames": 700,
+  "changed_frames": 566,
+  "silhouette_before": 0.1525418108834855,
+  "silhouette_after": 0.12176799421519592,
+  "edge_pixels_before": 1.4228618276119231,
+  "edge_pixels_after": 1.1343469744069237,
+  "max_rotation_degrees": 3.1807944322103823,
+  "max_image_shift_pixels": 7.255328929460431,
+  "max_translation_change_metres": 0.032562414316177304,
+  "max_camera_distance_change_metres": 1.7763568394002505e-15,
+  "runtime_seconds": 206.3319153819466
+}

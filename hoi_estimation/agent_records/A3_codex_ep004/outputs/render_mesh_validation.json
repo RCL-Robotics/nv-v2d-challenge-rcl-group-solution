@@ -1,0 +1,6 @@
+{
+  "sample_vertices": 9564,
+  "mean_distance_metres": 0.00010394289711257443,
+  "p99_distance_metres": 0.00038812976650660886,
+  "max_distance_metres": 0.0007578033255413175
+}

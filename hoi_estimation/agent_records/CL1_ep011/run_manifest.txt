@@ -1,0 +1,16 @@
+date_utc: 2026-10-20T21:10:59Z
+claude: 2.1.303 (Claude Code)
+model: claude-opus-5-5 effort=high net=open
+sif: /mnt/nas/Group/hanzhou/v2d/images/v2d_cari4d.sif 16860184576 bytes
+binds: -B /mnt/nas/Group/hanzhou/v2d/agent_runs/CL1_ep011:/work -B /home/hanzhou/.local/share/claude/versions/2.1.303:/opt/claude/claude:ro -B /home/hanzhou/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B /mnt/nas/Group/hanzhou/v2d/weights:/weights:ro -B /mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000011:/pipeline:ro
+task_sha256: ed1b646f904146c1d2901e69c6c66646f6d940bf18f332777f03f95517c92df6
+45f7d8c8d17cc21190f7a0cdd3b90a98c330420689d6a19915acf56bf4e46960  ./camera.json
+ee19e46c20c013dcb9b14898d966f1ca417181f8515e2381dded25333ddde474  ./episode.json
+27f695d586d79e2213a2ff3b3bd077b4f4b5b5a64774492137e4e5151a55c35b  ./frame0_reference_human.npz
+7dccbbd3948706dae8686200433928d6905ecc972033ef6bb76c0140a19b3c4a  ./ground_plane.json
+aac4a8275b47dee05e8d50db808fcecf98eb7a427335483ba7efbb85943b58d7  ./masks.h5
+4c797e20fe013f3376efb41d140e4663ee5b2bd00e55708575f536343503d0b7  ./object_mesh.glb
+235c2dc3ea2fc9d0d752732976b422af54bda63eec57ed575e16c495b026b0a8  ./reconstruction.npz
+e8bfd869e8768f25d509bc8730dcc32a1b2acf84a7316414f524a4436c07754c  ./task.txt
+a457df19380aaab0349c47eff62c1c705b31c14845f6e147071ecf61025ae7a3  ./video.mp4
+wall_s: 2967

@@ -1,0 +1,8 @@
+{
+  "elapsed_seconds": 439.2241053581238,
+  "seed": 0,
+  "candidate_stride": 4,
+  "candidate_azimuths": 12,
+  "candidate_iterations": 55,
+  "refinement_iterations": 55
+}

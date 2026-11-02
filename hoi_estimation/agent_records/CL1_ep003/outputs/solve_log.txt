@@ -1,0 +1,83 @@
+loaded 781 frames in 41.8s
+rest level row 672.0; rest phases [(0, 132), (210, 272), (344, 408), (475, 532), (599, 643), (685, 780)]; lift phases [(133, 209), (273, 343), (409, 474), (533, 598), (644, 684)]
+baseline median rest depth 2.708 (per phase: 2.595, 2.719, 2.727, 2.735, 2.732, 2.700)
+  rest 0-132: phi=-105 (ncc-only best -105, hand nan from 1 frames) ncc=0.554 score margin to next mode=2.21
+  rest 210-272: phi=-120 (ncc-only best 35, hand -122 from 58 frames) ncc=0.526 score margin to next mode=2.43
+  rest 344-408: phi=-125 (ncc-only best -125, hand -113 from 50 frames) ncc=0.514 score margin to next mode=2.94
+  rest 475-532: phi=-110 (ncc-only best -110, hand -109 from 54 frames) ncc=0.517 score margin to next mode=2.23
+  rest 599-643: phi=-100 (ncc-only best -100, hand -115 from 44 frames) ncc=0.481 score margin to next mode=2.68
+  rest 685-780: phi=-115 (ncc-only best -115, hand -113 from 24 frames) ncc=0.536 score margin to next mode=3.79
+table height above floor 0.7523 m (per-phase at z_med: [0.7525, 0.7523, 0.7523, 0.756, 0.7494, 0.7513])
+  rest 0-132: phi -105 uv [855.7  638.61] depth 2.709 (baseline 2.595) iou 0.740
+  rest 210-272: phi -120 uv [856.87 638.65] depth 2.708 (baseline 2.719) iou 0.801
+  rest 344-408: phi -125 uv [856.85 638.65] depth 2.708 (baseline 2.727) iou 0.800
+  rest 475-532: phi -110 uv [854.13 637.58] depth 2.730 (baseline 2.735) iou 0.793
+  rest 599-643: phi -100 uv [863.53 639.44] depth 2.691 (baseline 2.732) iou 0.803
+  rest 685-780: phi -115 uv [859.88 638.92] depth 2.702 (baseline 2.700) iou 0.754
+  rest 344-408 -> 344-402 (static-pose IoU below 0.814 at the boundary)
+final rest phases [(0, 132), (210, 272), (344, 402), (475, 532), (599, 643), (685, 780)]; lift phases [(133, 209), (273, 343), (403, 474), (533, 598), (644, 684)]
+  lift 133-209: hand-propagated end vs set-down pose: rot 9.6 deg, trans 6.5 cm
+    cand hand        : mean score 0.932  mean dev from hand-prop 6.1 deg
+    cand hand_mirror : mean score 0.868  mean dev from hand-prop 43.2 deg
+    cand base        : mean score 1.000  mean dev from hand-prop 25.5 deg
+    cand base_mirror : mean score 0.994  mean dev from hand-prop 29.7 deg
+    viterbi choice counts: hand=7, hand_mirror=7, base=39, base_mirror=24
+    it 0 sil 0.0165 prior 0.0003 smooth 0.0305
+    it 100 sil 0.0418 prior 0.0003 smooth 0.0010
+    it 200 sil 0.0703 prior 0.0004 smooth 0.0011
+    it 299 sil 0.1018 prior 0.0005 smooth 0.0013
+  lift 273-343: hand-propagated end vs set-down pose: rot 9.9 deg, trans 3.1 cm
+    cand hand        : mean score 0.994  mean dev from hand-prop 8.7 deg
+    cand hand_mirror : mean score 0.871  mean dev from hand-prop 45.0 deg
+    cand base        : mean score 0.928  mean dev from hand-prop 29.5 deg
+    cand base_mirror : mean score 0.877  mean dev from hand-prop 42.2 deg
+    viterbi choice counts: hand=35, hand_mirror=0, base=36, base_mirror=0
+    it 0 sil 0.0175 prior 0.0005 smooth 0.0408
+    it 100 sil 0.0403 prior 0.0004 smooth 0.0012
+    it 200 sil 0.0655 prior 0.0005 smooth 0.0013
+    it 299 sil 0.0953 prior 0.0005 smooth 0.0016
+  lift 403-474: hand-propagated end vs set-down pose: rot 10.5 deg, trans 7.8 cm
+    cand hand        : mean score 0.972  mean dev from hand-prop 7.9 deg
+    cand hand_mirror : mean score 0.866  mean dev from hand-prop 52.6 deg
+    cand base        : mean score 0.952  mean dev from hand-prop 27.0 deg
+    cand base_mirror : mean score 0.885  mean dev from hand-prop 43.5 deg
+    viterbi choice counts: hand=35, hand_mirror=0, base=36, base_mirror=1
+    it 0 sil 0.0242 prior 0.0003 smooth 0.0379
+    it 100 sil 0.0548 prior 0.0002 smooth 0.0014
+    it 200 sil 0.0879 prior 0.0003 smooth 0.0016
+    it 299 sil 0.1212 prior 0.0003 smooth 0.0020
+  lift 533-598: hand-propagated end vs set-down pose: rot 8.0 deg, trans 0.4 cm
+    cand hand        : mean score 0.984  mean dev from hand-prop 5.5 deg
+    cand hand_mirror : mean score 0.911  mean dev from hand-prop 48.9 deg
+    cand base        : mean score 1.019  mean dev from hand-prop 22.3 deg
+    cand base_mirror : mean score 0.923  mean dev from hand-prop 42.5 deg
+    viterbi choice counts: hand=3, hand_mirror=10, base=53, base_mirror=0
+    it 0 sil 0.0181 prior 0.0003 smooth 0.0286
+    it 100 sil 0.0414 prior 0.0003 smooth 0.0017
+    it 200 sil 0.0686 prior 0.0004 smooth 0.0019
+    it 299 sil 0.0971 prior 0.0004 smooth 0.0022
+  lift 644-684: hand-propagated end vs set-down pose: rot 20.5 deg, trans 4.0 cm
+    cand hand        : mean score 1.069  mean dev from hand-prop 5.2 deg
+    cand hand_mirror : mean score 1.003  mean dev from hand-prop 22.9 deg
+    cand base        : mean score 0.982  mean dev from hand-prop 27.0 deg
+    cand base_mirror : mean score 1.008  mean dev from hand-prop 17.0 deg
+    viterbi choice counts: hand=39, hand_mirror=2, base=0, base_mirror=0
+    it 0 sil 0.0161 prior 0.0004 smooth 0.0088
+    it 100 sil 0.0401 prior 0.0001 smooth 0.0012
+    it 200 sil 0.0708 prior 0.0001 smooth 0.0015
+    it 299 sil 0.1060 prior 0.0001 smooth 0.0018
+saved /work/outputs/object_poses_world.npz  total time 301.1s
+phase | IoU_body base/ours | IoU_full base/ours | NCC base/ours | median frame-to-frame rot (deg) base/ours
+  rest 0-132 | 0.708 / 0.822 | 0.702 / 0.760 | 0.427 / 0.480 | 3.2 / 0.0
+rest 210-272 | 0.721 / 0.851 | 0.651 / 0.819 | 0.226 / 0.401 | 5.5 / 0.0
+rest 344-402 | 0.690 / 0.866 | 0.627 / 0.817 | 0.219 / 0.427 | 5.5 / 0.0
+rest 475-532 | 0.704 / 0.831 | 0.636 / 0.795 | 0.155 / 0.472 | 5.6 / 0.0
+rest 599-643 | 0.667 / 0.844 | 0.604 / 0.830 | 0.146 / 0.494 | 6.4 / 0.0
+rest 685-780 | 0.748 / 0.850 | 0.677 / 0.768 | 0.283 / 0.527 | 4.6 / 0.0
+lift 133-209 | 0.769 / 0.859 | 0.745 / 0.839 | 0.243 / 0.380 | 6.6 / 1.8
+lift 273-343 | 0.544 / 0.862 | 0.547 / 0.837 | 0.091 / 0.374 | 10.7 / 2.2
+lift 403-474 | 0.658 / 0.837 | 0.614 / 0.817 | 0.130 / 0.345 | 7.7 / 2.5
+lift 533-598 | 0.688 / 0.861 | 0.659 / 0.847 | 0.140 / 0.341 | 8.2 / 3.3
+lift 644-684 | 0.531 / 0.857 | 0.497 / 0.846 | 0.041 / 0.408 | 14.0 / 1.5
+ALL          | 0.686 / 0.847 | 0.646 / 0.809 | 0.220 / 0.428
+max GPU memory 1.49 GB; total 302.4s

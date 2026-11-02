@@ -1,0 +1,29 @@
+{
+ "yaw_posterior_mass_in_mode_per_phase": {
+  "S1_table_static": 0.9999924081735448,
+  "C1_carry": 0.9990714187548819,
+  "S2_floor_static": 0.9989543273646454,
+  "C2_carry_handover": 0.9765587860463032,
+  "S3_floor_static_occluded": 0.847776947682375
+ },
+ "occluded_carry_hand": 42,
+ "occluded_hand_offset_before_cm": [
+  9.4,
+  5.4,
+  8.4
+ ],
+ "occluded_hand_offset_after_cm": [
+  16.5,
+  20.3,
+  28.3
+ ],
+ "depth_rescale_per_phase": {
+  "S1_table_static": 0.9977513031055589,
+  "C1_carry": 0.9980490077576354,
+  "S2_floor_static": 0.9993564808360047,
+  "C2_carry_handover": 1.0027866876455822,
+  "S3_floor_static_occluded": 0.9975919806763153
+ },
+ "runtime_s": 78.58868408203125,
+ "torch_max_mem_GB": 2.143529472
+}

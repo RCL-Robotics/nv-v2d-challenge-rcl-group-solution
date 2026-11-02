@@ -1,0 +1,22 @@
+[   65.5s] masks loaded
+[   70.0s] static A: hypothesis flip=None pooled IoU 0.8531
+[   73.2s] static A: hypothesis flip=0 pooled IoU 0.8548
+[   76.6s] static A: hypothesis flip=1 pooled IoU 0.3850
+[   79.7s] static A: hypothesis flip=2 pooled IoU 0.3731
+[   82.6s] static B: hypothesis flip=None pooled IoU 0.9433
+[   85.3s] static B: hypothesis flip=0 pooled IoU 0.9213
+[   88.2s] static B: hypothesis flip=1 pooled IoU 0.3029
+[   90.9s] static B: hypothesis flip=2 pooled IoU 0.2955
+[  154.3s] moving phase: per-frame silhouette fit done
+[  154.3s] static A: rotation to tracked boundary pose: flip=0: 178.0deg, flip=None: 2.5deg, flip=1: 164.5deg, flip=2: 165.5deg
+[  154.3s] static A: chose flip=None (IoU margin best-2nd 0.0017)
+[  157.4s] static A: depth cues eps silhouette 0, floor +0.0150 (h(0)=0.024, h0=0.014), moge +0.0121 -> fused +0.0027 (+0.7 cm)
+[  157.4s] static B: rotation to tracked boundary pose: flip=None: 0.4deg, flip=0: 179.6deg, flip=1: 177.3deg, flip=2: 178.4deg
+[  157.4s] static B: chose flip=None (IoU margin best-2nd 0.0221)
+[  160.3s] static B: depth cues eps silhouette 0, floor +0.0210 (h(0)=0.036, h0=0.014), moge -0.0267 -> fused +0.0009 (+0.3 cm)
+[  285.8s] moving phase: joint fit done; peak GPU mem 3.52 GB
+[  285.8s] wrote /work/outputs/object_poses_world.npz  shape (794, 4, 4)
+
+real	4m48.505s
+user	4m58.923s
+sys	2m18.853s

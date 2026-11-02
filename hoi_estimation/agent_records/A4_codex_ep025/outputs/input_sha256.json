@@ -1,0 +1,11 @@
+{
+  "video.mp4": "7b8717e26cff7519102af958496263ec058f4a39dd505c537231f4045c52f02d",
+  "object_mesh.glb": "ebc656d5de2c6fb0075acd136503ac936b6c821fbfe05b21286efbc9af7225d6",
+  "ground_plane.json": "ae70886b882558cba4b9dc2be7884a02e7df41edded8e1dcf67fadd84f21ae94",
+  "task.txt": "1a4e94199dd97a57419a043533a9393b14d1dbfdf7fc630fc4d5d254a5e08e1b",
+  "episode.json": "dd8502a3c652ed40144b48a9d59f0079953c7855f1be75aff7cab9554c458427",
+  "camera.json": "a7ef95c92539be3421295f5179c9098f45d3c045f4dcaadd36bab3417b90db67",
+  "reconstruction.npz": "451c3a877dfab25f03fb347aeaaf0ef87505cdcb0439aeb6ebbeae0a96575441",
+  "frame0_reference_human.npz": "00ae2a5963f1ac1cf26515fb9612d3e5e29e98b81ae804bacc52deaf56b85996",
+  "masks.h5": "b76f368f724246f9c70c15958753411033f69395f9542d2c82107bea1e83bc4a"
+}

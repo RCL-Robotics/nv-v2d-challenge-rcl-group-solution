@@ -1,0 +1,12 @@
+[1] observations ...
+    done 35s
+[2] phases: static A [0,133), moving [133,598), static B [598,748)
+    static A: sil-depth 2.718  floor-depth 2.952  baseline-depth 2.959  -> 2.955  rot change vs baseline mean 4.6 deg
+    static B: sil-depth 2.740  floor-depth 2.973  baseline-depth 3.002  -> 2.987  rot change vs baseline mean 1.7 deg
+    silhouette->world depth factor kappa = 1.089
+[3] trajectory fit ...
+wrote /work/outputs/object_poses_world.npz  total 102s
+
+real	1m45.120s
+user	1m46.795s
+sys	0m14.809s

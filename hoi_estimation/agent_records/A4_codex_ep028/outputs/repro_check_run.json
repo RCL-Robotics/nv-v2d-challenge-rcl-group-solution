@@ -1,0 +1,12 @@
+{
+  "frames": 988,
+  "dtype": "float64",
+  "changed_frames": 887,
+  "unchanged_frames": 101,
+  "max_camera_distance_error_m": 8.881784197001252e-16,
+  "max_rotation_orthogonality_error": 2.5803827397030688e-06,
+  "runtime_seconds": 358.26060485839844,
+  "cpu_fit_seconds": 190.2769639492035,
+  "seed": 0,
+  "device": "NVIDIA RTX 6000 Ada Generation"
+}

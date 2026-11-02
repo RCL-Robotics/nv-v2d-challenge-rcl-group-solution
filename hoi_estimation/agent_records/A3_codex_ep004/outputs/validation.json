@@ -1,0 +1,14 @@
+{
+  "frames": 803,
+  "changed_frames": 289,
+  "unchanged_frames": 514,
+  "dtype": "float64",
+  "baseline_mean_visible_silhouette_error": 0.5149086117744446,
+  "output_mean_visible_silhouette_error": 0.3005309998989105,
+  "baseline_error_on_changed": 0.7728422284126282,
+  "output_error_on_changed": 0.17718391120433807,
+  "max_camera_distance_change_metres": 8.881784197001252e-16,
+  "mask_preparation_seconds": 63.01209730305709,
+  "gpu_fit_wall_seconds": 213.1347206729697,
+  "total_seconds": 311.6837877279613
+}

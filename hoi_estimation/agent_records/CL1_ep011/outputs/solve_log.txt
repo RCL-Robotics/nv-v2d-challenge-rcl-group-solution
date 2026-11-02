@@ -1,0 +1,15 @@
+[92s] decoded 901 frames
+rest phases [(0, 77, 0.894), (215, 294, -0.005), (405, 465, 0.888), (658, 747, 0.015)]
+table-top height (baseline rest-on-table poses) 0.891 m
+[129s] shift-corrected frames: 165
+[156s] segment 78-214 optimised
+[177s] segment 295-404 optimised
+[210s] segment 466-657 optimised
+[227s] segment 748-900 optimised
+baseline: mean IoU 0.793  mean texture score 0.202
+result: mean IoU 0.838  mean texture score 0.252
+wrote /work/outputs/object_poses_world.npz  (901 frames)  total 230s
+
+real	3m51.947s
+user	3m38.983s
+sys	0m59.734s

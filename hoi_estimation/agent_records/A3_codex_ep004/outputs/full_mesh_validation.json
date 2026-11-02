@@ -1,0 +1,13 @@
+{
+  "changed_frames": 289,
+  "full_mesh_vertices": 296472,
+  "full_mesh_triangles": 98866,
+  "resolution": 256,
+  "baseline_visible_error": 0.7813675999641418,
+  "output_visible_error": 0.18884263932704926,
+  "fraction_changed_frames_improved": 1.0,
+  "unchanged_frames_bitwise_equal": true,
+  "max_corrected_rotation_orthogonality_error": 9.992007221626409e-16,
+  "max_camera_distance_change_metres": 8.881784197001252e-16,
+  "elapsed_seconds": 20.841888534952886
+}

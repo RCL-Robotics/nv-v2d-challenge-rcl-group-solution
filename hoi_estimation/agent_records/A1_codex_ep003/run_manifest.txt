@@ -1,0 +1,15 @@
+date_utc: 2026-10-18T18:57:26Z
+codex: codex-cli 0.153.4
+model: gpt-6-astra effort=high
+sif: /mnt/nas/Group/hanzhou/v2d/images/v2d_cari4d.sif 16860184576 bytes
+task_sha256: b750ba77960e515219e80a1ed8f75de3aff7d4cbb9ed4ceffc7593d5ff0754f1
+f122d1b9d207625824ed5d99dc9efa3606458ef24a9c6c1938801ea41df9b08b  ./camera.json
+bea511655e061d86d84e414f707f568da90f9a7fe00a4deb0d1f538ddcd9d591  ./episode.json
+f3d854000a159ecd8d20f31ac0d04bad2d371ce3ab221727732f50c0d4552f9d  ./frame0_reference_human.npz
+edee94f6e18f17bca636511710ff0d6e4a7f912683b44f32ab64828c421e3fc6  ./ground_plane.json
+0a2ff8b8cbcfb88a91cb26262d5cf795a366abc8ce8df8c3c9a08c2bebe7c79a  ./masks.h5
+6ac9976cc09e5dfb8b068672d91a00fafa73a774035e96cad4faa7e50aec283f  ./object_mesh.glb
+d84907b112e323a196c75f210cda7402b2fc3669309ac8d9da0b70a840811ed1  ./reconstruction.npz
+71f3f2dccf4c012b9fcaf6f37690422bc028c91a9ca02641e05a1d4e4c77baee  ./task.txt
+cfe6394ad7586502687a62d7e17d5b5a5a19b3cb093019a2555a14c078d5d130  ./video.mp4
+wall_s: 3102

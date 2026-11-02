@@ -1,0 +1,66 @@
+{
+ "static_phases": [
+  [
+   0,
+   112
+  ],
+  [
+   768,
+   885
+  ]
+ ],
+ "depth_cues": [
+  {
+   "phase": [
+    0,
+    112
+   ],
+   "kind": "static",
+   "z_base_median": 2.732695052665834,
+   "z_ours_median": 2.674853801727295,
+   "cue_silhouette_shift_cm": -5.784125093853909,
+   "cue_floor_contact_shift_cm": -4.696746914791827,
+   "applied_shift_cm": -5.240436004322868
+  },
+  {
+   "phase": [
+    113,
+    767
+   ],
+   "kind": "moving",
+   "z_base_median": 2.865126281617592,
+   "z_ours_median": 2.8764315662932622,
+   "cue_silhouette_shift_cm": 1.1305284675670269,
+   "cue_hand_contact_shift_cm": 2.1202978872999267,
+   "applied_shift_cm": 1.6254131774334768
+  },
+  {
+   "phase": [
+    768,
+    885
+   ],
+   "kind": "static",
+   "z_base_median": 3.611822609643396,
+   "z_ours_median": 3.6233432292938232,
+   "cue_silhouette_shift_cm": 1.1520619650427388,
+   "cue_floor_contact_shift_cm": 1.798350743383903,
+   "applied_shift_cm": 1.475206354213321
+  }
+ ],
+ "static_fit": [
+  {
+   "phase": [
+    0,
+    112
+   ],
+   "margin": 0.01658295840024948
+  },
+  {
+   "phase": [
+    768,
+    885
+   ],
+   "margin": 0.07288825884461403
+  }
+ ]
+}

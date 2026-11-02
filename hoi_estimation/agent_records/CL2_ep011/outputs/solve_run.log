@@ -1,0 +1,12 @@
+reading video / masks
+static runs [(0, 73), (226, 290), (405, 462), (675, 743)]
+crops done 172.4s
+it 0 sil 266.379 rot 1.151 uv 0.049 accR 43.9306 accU 24083.92  (176s)
+it 50 sil 72.075 rot 9.971 uv 4.990 accR 7.7563 accU 325.33  (181s)
+it 100 sil 60.778 rot 13.713 uv 5.426 accR 2.7769 accU 111.00  (186s)
+it 150 sil 59.599 rot 15.310 uv 5.493 accR 1.3990 accU 94.13  (191s)
+it 200 sil 59.079 rot 16.116 uv 5.512 accR 0.8998 accU 91.24  (194s)
+it 250 sil 58.689 rot 16.525 uv 5.532 accR 0.6853 accU 94.02  (198s)
+it 300 sil 58.528 rot 16.723 uv 5.543 accR 0.5871 accU 91.62  (201s)
+it 350 sil 58.446 rot 16.819 uv 5.550 accR 0.5436 accU 90.56  (204s)
+it 399 sil 58.400 rot 16.862 uv 5.555 accR 0.5242 accU 90.84  (207s)

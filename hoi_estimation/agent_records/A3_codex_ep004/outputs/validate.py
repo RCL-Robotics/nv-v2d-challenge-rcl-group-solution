@@ -1,0 +1,17 @@
+"""Independent high-resolution check using the full, unmodified input mesh."""
+import os
+os.environ['OPENBLAS_NUM_THREADS']='1'
+os.environ.setdefault('TORCH_EXTENSIONS_DIR','/work/tools/torch_extensions')
+import json,time
+from pathlib import Path
+import cv2,h5py,numpy as np,torch,trimesh,nvdiffrast.torch as dr
+
+root=Path('/work');start=time.perf_counter();torch.set_num_threads(4);cv2.setNumThreads(1)
+cam=json.loads((root/'inputs/camera.json').read_text());K=np.array(cam['K']);W=np.array(cam['T_world_cam']);base_world=np.load(root/'inputs/reconstruction.npz')['T_world_mesh'];out_world=np.load(root/'outputs/object_poses_world.npz')['T_world_mesh'];base=np.linalg.inv(W)@base_world;out=np.linalg.inv(W)@out_world;diag=np.load(root/'outputs/selection_diagnostics.npz');changed=diag['changed'];frames=np.flatnonzero(changed);crops=np.load(root/'outputs/fit_diagnostics.npz')['crops'];m=trimesh.load(root/'inputs/object_mesh.glb',force='scene',process=False).to_geometry();v=torch.tensor(np.asarray(m.vertices),device='cuda',dtype=torch.float32);tri=torch.tensor(np.asarray(m.faces).astype('int32'),device='cuda');context=dr.RasterizeCudaContext();losses=[]
+with h5py.File(root/'inputs/masks.h5') as h,torch.no_grad():
+ for lo in range(0,len(frames),8):
+  ids=frames[lo:lo+8];poses=np.concatenate((base[ids],out[ids]));cp=np.tile(crops[ids],(2,1));targs=[];occs=[]
+  for f in ids:
+   xy=crops[f,:2];L=crops[f,2];A=np.array([[256/L,0,-xy[0]*256/L],[0,256/L,-xy[1]*256/L]]);targs.append(cv2.warpAffine(h['object'][f].astype('float32'),A,(256,256),flags=cv2.INTER_AREA));p=cv2.dilate(h['person'][f].astype('uint8'),np.ones((5,5),'uint8'));occs.append(cv2.warpAffine(p.astype('float32'),A,(256,256),flags=cv2.INTER_NEAREST))
+  p=v[None]@torch.tensor(poses[:,:3,:3].transpose(0,2,1),dtype=torch.float32,device='cuda')+torch.tensor(poses[:,:3,3],dtype=torch.float32,device='cuda')[:,None];c=torch.tensor(cp,dtype=torch.float32,device='cuda');x=2*K[0,0]/c[:,2:3]*p[:,:,0]+(2*(K[0,2]-c[:,0])/c[:,2]-1)[:,None]*p[:,:,2];y=2*K[1,1]/c[:,2:3]*p[:,:,1]+(2*(K[1,2]-c[:,1])/c[:,2]-1)[:,None]*p[:,:,2];clip=torch.stack((x,y,1.0002*p[:,:,2]-.020002,p[:,:,2]),-1).contiguous();rast,_=dr.rasterize(context,clip,tri,resolution=[256,256]);coverage=(rast[:,:,:,3]>0).float();tar=torch.tensor(np.tile(targs,(2,1,1)),device='cuda');occ=torch.tensor(np.tile(occs,(2,1,1)),device='cuda');err=((tar*(1-coverage)).sum((1,2))+(coverage*(1-tar)*(1-occ)).sum((1,2)))/(tar.sum((1,2))+1);losses.append(err.cpu().numpy().reshape(2,-1).T)
+losses=np.concatenate(losses);r=out_world[:,:3,:3];corr=r[changed];record=dict(changed_frames=int(changed.sum()),full_mesh_vertices=len(m.vertices),full_mesh_triangles=len(m.faces),resolution=256,baseline_visible_error=float(losses[:,0].mean()),output_visible_error=float(losses[:,1].mean()),fraction_changed_frames_improved=float((losses[:,1]<losses[:,0]).mean()),unchanged_frames_bitwise_equal=bool(np.array_equal(out_world[~changed],base_world[~changed])),max_corrected_rotation_orthogonality_error=float(np.abs(corr@corr.transpose(0,2,1)-np.eye(3)).max()),max_camera_distance_change_metres=float(np.abs(np.linalg.norm(out[:,:3,3],axis=1)-np.linalg.norm(base[:,:3,3],axis=1)).max()),elapsed_seconds=time.perf_counter()-start);(root/'outputs/full_mesh_validation.json').write_text(json.dumps(record,indent=2)+'\n');np.savez(root/'outputs/full_mesh_validation.npz',frames=frames,losses=losses);print(json.dumps(record,indent=2))

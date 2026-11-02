@@ -1,0 +1,7 @@
+{
+  "exact_array_equality": true,
+  "max_absolute_difference": 0.0,
+  "pose_array_sha256": "36591bcc20047ef6c1a805d19a8324f201188f7240a933fb07d8863bace63001",
+  "first_run_seconds": 203.9852676409064,
+  "second_run_seconds": 203.73339731502347
+}
