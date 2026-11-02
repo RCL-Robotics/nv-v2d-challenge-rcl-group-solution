@@ -115,6 +115,13 @@ cd /home/hanzhou/Projects/v2d/support && python3 build_release_combined.py /mnt/
   - `SUP=release/tier3_supports_20261024`
 - **Version:** the git copy has these defaults hard-coded. The local copy only made them overridable with `TRAJ`/`VARIANT`/`AGENT_PFX` (2026-10-27), which were not used for this release.
 - **Release mtimes:** `episodes.json` 10-24 10:43 local. `reconstructed_data/` and `agent_run/` date from the 10-21 opus build.
+- **Inputs:** `$TRAJ/diag_scores.json` is optional (it is written only by the GT half of `t3_frame0.py`
+  and was only printed). From `SUP` the script copies `episode_*/{support.json, support_mesh.glb, support_world.obj,
+  fit_overlay.jpg}`, `fit_overview.jpg`, `contact_report.json`, `index.json` and `README.md` (as
+  `supports/README_supports.md`); see C for where they come from.
+- `README.md` of this release and of `tier3_opus_20261021` were written by hand afterwards (heredoc, 10-24T06:50:25Z
+  and 10-21T18:44:44Z); the texts are in `release_files/`. The build scripts first copy the README of their source release.
+- **`frame_references/`** of both releases are copies of the s1 files (README section 5).
 
 ## C. Support fit (`support/`, 14 episodes)
 
@@ -136,7 +143,42 @@ $A exec --nv $B images/v2d_cari4d.sif bash -c "python fit.py && python overlay.p
 $A exec --nv $B images/v2d_cari4d.sif bash -c "python fit.py 1 && python overlay.py 1"                  # 2026-10-23T21:04:50Z: ep 1 final
 $A exec $B images/v2d_cari4d.sif bash -c "python contact.py --snap > /dev/null && python contact.py --gt > /dev/null && python score_snap.py"  # 21:09:47Z (--gt and score_snap are GT diagnostics only)
 $A exec $B images/v2d_cari4d.sif python package.py /mnt/nas/Group/hanzhou/v2d/release/tier3_supports_20261024   # 2026-10-23T21:13:44Z
+# 2026-10-23T21:14:32Z, host shell: the three files package.py does not write
+R=/mnt/nas/Group/hanzhou/v2d/release/tier3_supports_20261024
+cp /mnt/nas/Group/hanzhou/v2d/support/vis/sheet_fits.jpg $R/fit_overview.jpg
+cp /mnt/nas/Group/hanzhou/v2d/support/contact_report.json $R/
+cat > $R/README.md <<'EOF' ... EOF        # hand-written; text in reproducibility/release_files/tier3_supports_20261024_README.md
 ```
+
+- **`fit_overview.jpg`** is `support/vis/sheet_fits.jpg` from `sheet.py` in the 20:28Z run (checked with `cmp`). That
+  sheet was not redrawn after the ep 1 refit, so its ep 1 tile shows the 20:28Z fit; the per-episode
+  `fit_overlay.jpg` of ep 1 (`vis/ep001_fit.jpg`, from `overlay.py 1`) shows the final fit.
+- **`contact_report.json`** is `support/contact_report.json` from `contact.py --snap` (checked with `cmp`).
+  `contact.py --gt` writes `contact_report_gt_diag.json` instead and does not touch it.
+- **`index.json`** and the `episode_*` folders are written by `package.py`.
+
+### Reproducing the support release (copy-paste, bash)
+
+```bash
+export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}; N=$V2D_ROOT
+REPO=<checkout>/hoi_estimation; A=apptainer                       # originally ~/.local/apptainer/usr/bin/apptainer
+B=(-B $N -B $REPO --pwd $REPO/support); export APPTAINERENV_CUDA_VISIBLE_DEVICES=0 APPTAINERENV_V2D_ROOT=$N
+# optional: export APPTAINERENV_V2D_SUPPORT_OUT=<copy of $N/support> to leave $N/support untouched
+$A exec "${B[@]}" $N/images/v2d_cari4d.sif python background.py
+$A exec "${B[@]}" $N/images/v2d_cari4d.sif python anchor.py
+$A exec --nv "${B[@]}" $N/images/v2d_gdino.sif python detect.py
+$A exec --nv "${B[@]}" $N/images/v2d_cari4d.sif python segment.py
+# all 14 with the 20:28Z fit (13 final), overlays and the sheet; then ep 1 with the current fit.py
+$A exec --nv "${B[@]}" $N/images/v2d_cari4d.sif bash -c "python fit_20261023T2028Z.py && python overlay.py && python sheet.py"
+$A exec --nv "${B[@]}" $N/images/v2d_cari4d.sif bash -c "python fit.py 1 && python overlay.py 1"
+$A exec "${B[@]}" $N/images/v2d_cari4d.sif python contact.py --snap > /dev/null
+R=<out>/tier3_supports_20261024
+$A exec "${B[@]}" $N/images/v2d_cari4d.sif python package.py $R
+cp $N/support/vis/sheet_fits.jpg $R/fit_overview.jpg; cp $N/support/contact_report.json $R/
+cp $REPO/reproducibility/release_files/tier3_supports_20261024_README.md $R/README.md
+```
+To re-run only the fits on the released intermediates (no GroundingDINO / SAM2): the two `fit` lines, with an episode
+list, e.g. `python fit_20261023T2028Z.py 2,28` and `python fit.py 1` (`check_steps.sh fit` does this on a copy).
 
 ### Per-episode fit settings
 
@@ -179,9 +221,11 @@ $A exec $B images/v2d_cari4d.sif python package.py /mnt/nas/Group/hanzhou/v2d/re
    - The current `fit.py` (mtime 10-24 01:04 local, git-identical) has the edit. Re-running it on episodes 2–28 can give somewhat different poses.
    - To reproduce exactly: run `support/fit_20261023T2028Z.py` for episodes 2–28 (current `fit.py` with the 21:00Z and 21:04Z edits reverted) and the current `fit.py` for episode 1, or use the released `support.json` files.
    - The `sed` that changed `iou=iou_fit if … else iou_f` to `iou=iou_f` ran at 2026-10-23T19:14Z, before every fit run; it touches only the reported number.
-2. **Not re-run:** the support pipeline needs a GPU (nvdiffrast, SAM2, GroundingDINO). Only B1 was re-run (on CPU) and confirmed bit-exact.
+2. **Re-run 2026-11-02 (README section 6):** the fits of episodes 2 and 28 (`fit_20261023T2028Z.py`) and 1 (`fit.py`),
+   `contact.py --snap` + `package.py`, B1 and B2. `background`/`anchor`/`detect`/`segment` (GroundingDINO, SAM2) were
+   not re-run.
 3. **Earlier support steps:** `background.py`/`anchor.py`/`detect.py`/`segment.py` for episodes 2 and 3 were also run earlier, at 19:14–19:15Z. The final run at 19:18Z covered all 14 episodes with default arguments and overwrote them.
-4. **Contact step:** the plain `contact.py 2,3,…,28` (20:25Z) was superseded by `contact.py --snap` at 21:09Z. That run wrote `support/contact_report.json` (mtime 01:04 local) and `object_poses_world_snapped.npz`. `package.py` copies the contact report (release copy at 01:08 local).
+4. **Contact step:** the plain `contact.py 2,3,…,28` (20:25Z) was superseded by `contact.py --snap` at 21:09Z. That run wrote `support/contact_report.json` (mtime 01:04 local) and `object_poses_world_snapped.npz`. `package.py` reads the contact report (for `T_world_mesh_contact`); the release copy (01:08 local) was made by the `cp` at 21:14:32Z.
 5. **`package.py`:** it was edited just before its last run, at 21:13Z (the `hm` fix with `sed`). The current file (mtime 01:13 local) is that version and is git-identical.
 6. **Local copies that differ from git:**
    - `agent/run_batch_CL.sh`: `TMIN`/`EFFORT` env vars, same defaults;

@@ -20,18 +20,24 @@ actually consumed.
   against GT. Those scoring calls are omitted below: they only wrote CSVs under `logs/`, and no step reads them.
 
 ## Common definitions
+Run the blocks below in **bash** (zsh does not word-split unquoted variables such as `$B`).
 ```bash
-N=/mnt/nas/Group/hanzhou/v2d
-H=$HOME/Projects/v2d/hoi_extraction          # = hoi_estimation/hoi_extraction in the repo
+export V2D_ROOT=${V2D_ROOT:-/mnt/nas/Group/hanzhou/v2d}   # data root (README section 0); originally the NAS path
+N=$V2D_ROOT
+H=$HOME/Projects/v2d/hoi_extraction          # = hoi_estimation/hoi_extraction in the repo (any checkout works)
 S=$H/scripts
 A=$HOME/.local/apptainer/usr/bin/apptainer
+# the original binds were -B $N:$N -B $HOME/Projects/v2d; $(dirname $H) is the folder that holds the checkout
 # "light" container: CPU-only scripts
-RUN()  { $A exec -B $N:$N -B $HOME/Projects/v2d $N/images/v2d_cari4d.sif python "$@"; }
+RUN()  { $A exec -B $N:$N -B $(dirname $H) $N/images/v2d_cari4d.sif python "$@"; }
 # "GPU" container with the SOMA / MHR / SAM-3D-Body libraries on PYTHONPATH
-RUNC() { CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $HOME/Projects/v2d $N/images/v2d_cari4d.sif bash -c \
+RUNC() { CUDA_VISIBLE_DEVICES=0 $A exec --nv -B $N:$N -B $(dirname $H) $N/images/v2d_cari4d.sif bash -c \
   "export PYTHONPATH=/workspace/v2d_cari4d/lib/cari4d:/workspace/v2d_sam3d_body/lib:\$PYTHONPATH LD_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:\$LD_LIBRARY_PATH; $*"; }
 PY=$HOME/Projects/KalmanHOI/.venv/bin/python   # host venv: python 3.12.13, numpy 2.5.2, torch 2.10.0+cu128, scipy 1.17.0
 ```
+The commands below are the original ones. Where they spell out `/mnt/nas/Group/hanzhou/v2d` or
+`/home/hanzhou/Projects/v2d`, substitute `$N` and the checkout; `reproducibility/check_steps.sh` has ready-to-run
+single-episode versions of steps 3, 8, 9 and 10.
 
 **GPU numbering.** The original runs used either GPU 0 or GPU 1 of the workstation (RTX 6000 Ada). The GPU index does
 not change the results.
@@ -56,7 +62,7 @@ The current copies are identical to the repo files `cluster/run_episode.sh`, `cl
 
 The baseline was run in several batches, plus a separate run for episode 0.
 
-**Episode 0.** It ran on the CIAI cluster:
+**Episode 0.** It ran on the CIAI cluster (`/l/users/han.zhou/v2d` is the CIAI copy of the data root):
 - Job: `sbatch /l/users/han.zhou/v2d/build/slurm/smoke_ep0.sh` (repo: `slurm/smoke_ep0.sh`), last submitted at
   10-04T19:35Z.
 - Output: `coconet.pth`, mtime 10-04T19:28Z (NAS clock).
@@ -67,7 +73,18 @@ The baseline was run in several batches, plus a separate run for episode 0.
   rsync -a ciai-via-local:/l/users/han.zhou/v2d/outputs/cari4d/episode_000000/foundationpose/ $N/outputs/cari4d/episode_000000/foundationpose/
   rsync -a ciai-via-local:/l/users/han.zhou/v2d/outputs/cari4d/episode_000000/depth/moge2/ $N/outputs/cari4d/episode_000000/depth/moge2/
   ```
-  The transcript line is truncated at this point. The copy also wrote `work/` items such as masks.
+  The full command (10-15T10:10:10Z) ran these rsyncs in sequence and then two more:
+  ```bash
+  rsync -a ciai-via-local:/l/users/han.zhou/v2d/outputs/cari4d/episode_000000/export ciai-via-local:/l/users/han.zhou/v2d/outputs/cari4d/episode_000000/mhr_init $N/outputs/cari4d/episode_000000/
+  rsync -a "ciai-via-local:/l/users/han.zhou/v2d/work/episode_000000/" $N/outputs/cari4d/episode_000000/work/
+  ```
+- **`outputs/cari4d/episode_000000/work/`** is therefore the CIAI pipeline's work directory of episode 0, copied with
+  its mtimes (10-04, CIAI clock): `episode_000000.0.color.mp4` (the input video as staged by `run_episode.sh`),
+  `prompts.json` (GroundingDINO prompt, stage 0), `masks/` and `masks_k0.h5` (SAM2 masks, stage 0). It plays the role
+  that `run_local.sh` gives `work/` for episodes 1–29 (there the `*.0.color.mp4` copy is excluded). Later steps read
+  `work/masks/1/` (`postproc_temporal.py`) and `work/masks_k0.h5` (`agent/export_inputs.py`).
+- To regenerate it, run `run_episode.sh 0` (stage 0 writes `$WORK_ROOT/episode_000000/`); with the current
+  `run_episode.sh` and on another GPU the prompt and masks need not be bit-identical.
 
 **Episodes 1–29.** They ran locally with `scripts/run_local.sh "<gpus>" <eps…>`. It calls
 `$N/code/pipeline/run_episode.sh <i>` with `WORK_ROOT=~/Projects/v2d/run/work` and `OUT_ROOT=~/Projects/v2d/run/out`,
@@ -81,6 +98,29 @@ and moves each PASS episode to `$N/outputs/cari4d/`. Stage markers make a rerun 
 
 - The first batch was killed partway (10-05T17:09Z), and the GPU-1-only retry pass was queued behind it.
 - **Episode 25 has no baseline output.** Every later step uses its E2 bundle (step 2) instead.
+
+**Episode 25 → `outputs/cari4d_failed/episode_000025_{out,work}`.**
+- In the third batch (10-06T10:06Z, `run_local_fix_1006_1406.log`), stages 0–5 of episode 25 finished
+  (`out/.stages/01_depth … 05_object_pose.json`), and stage 6 (CoCoNet, `run_mhr_wild_inference.py`) failed twice, in
+  the normal and in the `--postopt_batch_size 384` branch, with `ValueError: mesh geometry projects entirely outside
+  the image` (`logs/episode_000025.local.log`). `run_local.sh` moves only PASS episodes to the NAS, so the outputs
+  stayed in `~/Projects/v2d/run/out/episode_000025` and `~/Projects/v2d/run/work/episode_000025`.
+- E2 ran episode 25 on these local files (10-07T19:42Z, step 2): `exp_fp_mode.sh` uses `$RUN/out/<ep>` when it
+  exists.
+- 10-08T08:07:55Z: moved to the NAS (after a first attempt at 08:06 that copied both into one folder, which was
+  removed):
+  ```bash
+  R=$HOME/Projects/v2d/run; F=$N/outputs/cari4d_failed
+  rsync -a $R/out/episode_000025/ $F/episode_000025_out/ && rsync -a $R/work/episode_000025/ $F/episode_000025_work/
+  # verified: same relative paths and sizes (find -printf '%P %s'), then the local copies were deleted
+  ```
+- Readers: `postproc_temporal.py` (masks, fallback to `cari4d_failed/<ep>_work`), `firstframe_pnp.py`
+  (`<ep>_out/depth/moge2/intrinsics.pkl`), `agent/export_inputs.py` (`<ep>_work/masks_k0.h5`),
+  `hoi_extraction/scripts/camera_floor.py`, and the agent of episode 25 (`<ep>_out` bound at `/pipeline`).
+- The stage inputs in `<ep>_out/export/` hold absolute paths of the workstation (`/home/hanzhou/Projects/v2d/run/out/...`).
+  Only the GPU stages 5–6 (E2) follow them; `exp_fp_mode.sh` re-creates that path as a symlink when it is missing.
+- To regenerate: `run_episode.sh 25` with `WORK_ROOT`/`OUT_ROOT` set as in `run_local.sh`; it stops in stage 6 the
+  same way and leaves stages 0–5 behind.
 
 **Caveats: the batches ran different versions of `run_episode.sh`.**
 - **10-05T12:10Z edit:** added the bind of the NaN-centroid FoundationPose patch.
@@ -119,15 +159,17 @@ CUDA_VISIBLE_DEVICES=1 V2D_FP_REREGISTER=1 setsid nohup bash $S/exp_fp_mode.sh E
     episode-3 rerun.
   - 10-15T18:45Z: optional `SRC_ROOT`, after all E2 runs.
   - Neither edit changes the FoundationPose or CoCoNet arguments.
-- **Episode 25:** its baseline never produced `inference/`, but the stage inputs were available, so E2 could run it.
-  Uncertain: which stage inputs these were. Probably the kept local files.
+- **Episode 25:** its baseline never produced `inference/`. E2 ran on the stage 0–5 outputs kept locally in
+  `~/Projects/v2d/run/out/episode_000025` (`[E2_reregister] episode_000025 start 2026-10-07 19:42:39` in
+  `logs/exp_E2_reregister_rest.log`). These are the files moved unchanged to `outputs/cari4d_failed/episode_000025_out`
+  on 10-08 (step 1).
 
 ## 3. P1_temporal → `$N/experiments/P1_temporal/<ep>/coconet.pth`
 
 The run at 10-15T08:03:38Z, in bash:
 ```bash
 bash -c '
-N=/mnt/nas/Group/hanzhou/v2d; EPS="1 2 3 4 6 7 8 9 11 12 13 14 15 16 17 18 19 25 27 28"
+N=/mnt/nas/Group/hanzhou/v2d; EPS="1 2 3 4 6 7 8 9 11 12 13 14 15 16 17 18 19 25 27 28"   # N=$V2D_ROOT elsewhere
 run() { $HOME/.local/apptainer/usr/bin/apptainer exec -B $N:$N -B /home/hanzhou/Projects/v2d $N/images/v2d_cari4d.sif python /home/hanzhou/Projects/v2d/hoi_extraction/scripts/"$@"; }
 run postproc_temporal.py $EPS --out-exp P1_temporal'
 ```
@@ -278,10 +320,11 @@ json.dump(b,open('$N/logs/pnp_forE1.json','w'))"
 
 `postproc_feet_floor.py` was patched at 10-15T18:18:00Z and ran at 10-15T18:18:11Z:
 ```bash
-RUNC python $S/postproc_feet_floor.py \$(seq 0 29) --use-sim --ref-foot-height --align default=$N/logs/pnp_merged.json --out-exp FF2_feet_ref
+RUNC python $S/postproc_feet_floor.py $(seq 0 29) --use-sim --ref-foot-height --align default=$N/logs/pnp_merged.json --out-exp FF2_feet_ref
 ```
 - Default `--src` order: `M1 P1_temporal E2_reregister baseline`. The first variant with a bundle is used.
-- In the original command, `\$(seq 0 29)` was expanded inside the container's bash.
+- In the original command the episode list was written `\$(seq 0 29)` inside the double-quoted `bash -c` string, so
+  the container's bash expanded it; with `RUNC` as defined above, `$(seq 0 29)` expands on the host. Same arguments.
 - Evidence: the outputs have mtimes 10-15T18:12–18:18Z, and `feet_floor.json` 18:18Z (NAS clock).
 - **Source per episode, from `feet_floor.json`:**
 
@@ -393,7 +436,8 @@ check code.
 1. **Episode 0** used an older `run_episode.sh` on CIAI. The exact CIAI container and module copy are not checked here.
 2. **Retry branch:** to reproduce episodes 2, 5, 7, 11, 13, 19, 23 and 28 exactly, use the current `run_episode.sh`.
    Their contact refinement ran windowed, with batch size 384.
-3. **Episode 25's E2 inputs:** the stage inputs E2 used for episode 25 (no baseline PASS) are not traced.
+3. **Episode 25's E2 inputs:** the local stage 0–5 outputs of the failed baseline run, later moved unchanged to
+   `outputs/cari4d_failed/episode_000025_out` (step 1).
 4. **CARI4D determinism:** CARI4D, FoundationPose and the GroundingDINO prompts run on GPU and are not guaranteed to be
    bit-reproducible. The steps from step 3 onwards are deterministic given the same bundles. The SOMA decoding in
    `firstframe_align` uses the GPU, so expect float-level differences.
