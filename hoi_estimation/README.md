@@ -17,6 +17,8 @@ This directory contains the full workflow for reconstructing human-object intera
 
 **Tools, resource usage, automation and keys to effectiveness:** `AGENTIC_WORKFLOW.md`.
 
+**Reproduction procedure and measured reproduction error:** `REPRODUCTION_REPORT.md` (re-run 2026-11-03: 0.541 vs. 0.552).
+
 **Reproducibility:** `reproducibility/README.md` gives the exact commands and parameters of every step, the export of the frame-0 reference data, the `reconstruction/modules` revision inside the CARI4D image, the locations and checksums of the data, weights and images (NAS, and a copy on the training server; available on request), how to run from another data root (`V2D_ROOT`), and a re-run check of single steps against the released files (`reproducibility/check_steps.sh`).
 
 ## Results

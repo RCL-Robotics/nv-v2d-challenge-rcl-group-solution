@@ -13,7 +13,8 @@ shift`). Metric: official ADD-AUC (1–9 cm), mean over the 30 Tier 3 episodes; 
 | 5 | frame-0 anchoring of the Opus trajectories | **AUC 0.552** (printed as `MEAN auc`) | `tier3_runbook.md` B1 |
 | 6 | combined release: step 5 + support surfaces (does not change the trajectories) | release | `tier3_runbook.md` B2, C |
 
-Environment, data layout, weights (with download links) and images: `reproducibility/README.md`.
+Environment, data layout, weights (with download links) and images: `reproducibility/README.md`. Reproduction
+procedure and the measured error of every step: `REPRODUCTION_REPORT.md`.
 
 ## Step 3: the agent runs
 
