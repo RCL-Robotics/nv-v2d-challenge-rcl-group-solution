@@ -15,6 +15,8 @@ This directory contains the full workflow for reconstructing human-object intera
 
 **Reproducing the Tier 3 result 0.552:** `REPRODUCE_TIER3_0552.md` (the chain, and the 30 agent runs with their conversations, scripts and outputs).
 
+**Tools, resource usage, automation and keys to effectiveness:** `AGENTIC_WORKFLOW.md`.
+
 **Reproducibility:** `reproducibility/README.md` gives the exact commands and parameters of every step, the export of the frame-0 reference data, the `reconstruction/modules` revision inside the CARI4D image, the locations and checksums of the data, weights and images (NAS, and a copy on the training server; available on request), how to run from another data root (`V2D_ROOT`), and a re-run check of single steps against the released files (`reproducibility/check_steps.sh`).
 
 ## Results

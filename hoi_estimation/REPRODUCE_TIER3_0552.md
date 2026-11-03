@@ -45,17 +45,28 @@ There are two ways to redo step 3:
    for e in $(seq 0 29); do bash agent/rerun_solve.sh $e <out_dir>; done
    ```
 
-   The script prints the difference to the released trajectory. Re-runs on the same inputs (sha256 equal to the
-   run manifest) and the same GPU model (RTX 6000 Ada), 2026-11-03:
+   The script prints the difference to the released trajectory. Re-run of all 30 episodes on 2026-11-03: same
+   inputs (sha256 equal to the run manifests), same GPU model (RTX 6000 Ada), one episode after the other on one
+   GPU, 65–286 s per episode, 1.42 GPU-hours in total. The re-run trajectories then went through step 5 unchanged
+   (`t3_frame0.py opus 3 2 shift`):
 
-   | episode | vs released trajectory | AUC after step 5, released → re-run |
+   | | released | re-run |
    |---|---|---|
-   | 2 | bit-identical | unchanged |
-   | 7 | max 0.47 cm, rotation-matrix entries ≤ 0.10 | 0.777 → 0.785 |
-   | 25 | max 9.6 cm; one more symmetry switch in step 5 | 0.452 → 0.337 |
+   | **mean ADD-AUC over 30 episodes** | **0.552** | **0.541** |
+   | trajectories bit-identical to the released ones | | 6 of 30 (ep 2, 9, 16, 19, 26, 28) |
+   | max translation difference < 2 cm | | 23 of 30 (bit-identical ones included) |
+   | episodes whose AUC changed by more than 0.05 | | 3 of 30: ep 1 0.484 → 0.385, ep 18 0.559 → 0.469, ep 22 0.838 → 0.702 |
 
-   Mean over 30 with these two replaced: 0.552 → 0.548. Several solvers are not deterministic on the GPU (SAM2 mask
-   propagation, rendering-based optimisation), so single episodes can move by about ±0.1 AUC.
+   Per episode, AUC after step 5, released → re-run:
+   0: 0.906 → 0.903, 1: 0.484 → 0.385, 2: 0.155 → 0.155, 3: 0.660 → 0.655, 4: 0.139 → 0.139, 5: 0.465 → 0.472,
+   6: 0.527 → 0.527, 7: 0.777 → 0.774, 8: 0.900 → 0.903, 9: 0.202 → 0.202, 10: 0.632 → 0.632, 11: 0.383 → 0.387,
+   12: 0.562 → 0.562, 13: 0.395 → 0.393, 14: 0.551 → 0.558, 15: 0.630 → 0.631, 16: 0.680 → 0.680, 17: 0.319 → 0.317,
+   18: 0.559 → 0.469, 19: 0.335 → 0.335, 20: 0.967 → 0.967, 21: 0.693 → 0.688, 22: 0.838 → 0.702, 23: 0.461 → 0.462,
+   24: 0.511 → 0.515, 25: 0.452 → 0.456, 26: 0.961 → 0.961, 27: 0.360 → 0.360, 28: 0.120 → 0.120, 29: 0.921 → 0.918.
+
+   Several solvers are not deterministic on the GPU (SAM2 mask propagation, rendering-based optimisation), so the
+   result varies from run to run. In an earlier single-episode re-run of the same day, ep 7 gave 0.785 and ep 25
+   0.337. Expect the mean to stay within about ±0.01–0.02, and single episodes to move by up to about ±0.15.
 2. **Re-run the agents.** `agent/run_batch_CL.sh` with `PFX=<prefix> TASK=AGENT_TASK_temporal_v2.md` (exact calls in
    `tier3_runbook.md` A2). An agent run is not deterministic: a new run writes its own `solve.py` and the score varies
    from run to run. The transcripts show what the agents did and why.
