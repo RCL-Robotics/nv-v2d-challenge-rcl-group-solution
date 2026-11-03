@@ -19,8 +19,9 @@ Metric: official ADD-AUC (1–9 cm), mean over the 30 Tier 3 episodes. GT is use
 | the 30 agent solvers (`solve.py`, no LLM), then frame-0 anchoring | **mean ADD-AUC 0.541 vs. 0.552 released**; 27 of 30 episodes within ±0.05 |
 | support surfaces (fit, package) | fitted support poses bit-identical; contact diagnostics vary (unseeded sampling) |
 
-These steps were **not** re-run end to end, and their released outputs were used as the starting point (see
-"Not re-run" below):
+In the 30-episode re-run, these steps were **not** re-run, and their released outputs were used as the starting
+point (see "Not re-run" below). Section 6 runs all of them, the LLM agents included, from the official dataset on
+2 episodes with the driver `reproducibility/run_all_tier3.sh`:
 - the CARI4D baseline (about 33 GPU-hours);
 - the FoundationPose re-registration (E2), the re-prompted episodes (M1), and the first-frame ICP and PnP;
 - the LLM agent runs themselves.
@@ -160,3 +161,73 @@ The re-run outputs are on the lab workstation NAS, not in this repository:
 - `v2d_repro/root/repro_out/check_results.txt`: the `check_steps.sh` log.
 
 The scripts that produced them are in this repository: `agent/rerun_solve.sh` and `reproducibility/check_steps.sh`.
+
+## 6. End-to-end test of the driver `reproducibility/run_all_tier3.sh` (2026-11-03)
+
+`run_all_tier3.sh` runs the whole chain from the official dataset to the combined release in a new, empty data root:
+setup → CARI4D baseline → E2 → P1 → M1 → first-frame ICP/PnP → FF2 → JC2s1 → DB → s1 release → agent inputs →
+Claude Code agents → Opus release → frame-0 anchoring → supports → combined release. It uses the parameters of the
+submission. Usage and requirements are in its header and in `reproducibility/README.md` 7.
+
+**Test set-up.**
+- Machine: a second workstation that had not run the pipeline before (RTX 6000 Ada, GPU 0 only).
+- Code: an export of this branch.
+- Inputs: the dataset, weights and the two images, read-only.
+- Episodes: 2 and 5. Episode 2 takes the E2 → P1 path and has a support surface; episode 5 takes the baseline path.
+- Agents: `AGENTS=llm`, i.e. new Claude Code runs: CLI 2.1.303, `claude-opus-5-5`, effort high, 90 min, task
+  `AGENT_TASK_temporal_v2.md`, 2 in parallel.
+
+**Run time.** 3 h 46 min wall clock in total, about 3.8 GPU-hours.
+
+| stage | wall clock |
+|---|---|
+| CARI4D baseline, 2 episodes | 113 min |
+| E2 re-registration, episode 2 | 26 min |
+| P1 … agent-input export | 6 min |
+| agents | 66 min |
+| Opus release and frame-0 anchoring | 10 s |
+| supports and combined release | 5 min |
+
+**Agent usage.**
+
+| | episode 2 | episode 5 |
+|---|---|---|
+| turns | 149 | 94 |
+| wall clock | 66 min | 58 min |
+| tokens | 0.32M cache write, 25.7M cache read, 0.16M output | 0.21M cache write, 9.8M cache read, 0.12M output |
+| list price | $11.0 | $6.0 |
+
+Both agents delivered a trajectory.
+
+**Result vs. the submission.**
+
+| | episode 2 | episode 5 |
+|---|---|---|
+| frame-0 anchored ADD-AUC: end-to-end / submitted | 0.139 / 0.154 | 0.467 / 0.464 |
+| s1 object pose vs. submitted: median Δt | 1.4 cm | 0.5 cm |
+| s1 object pose vs. submitted: median Δrot | 37° | 0.4° |
+| agent trajectory vs. submitted: median Δt | 1.6 cm | 1.1 cm |
+| agent trajectory vs. submitted: median Δrot | 118° | 1.5° |
+| support (round table): IoU / top height / yaw | 0.622 / 0.786 m / 194.0° (submitted 0.610 / 0.786 m / 193.4°) | — |
+
+- **Why episode 2's rotations differ.** The object of episode 2 is a near-symmetric basket. Its large rotation
+  differences most likely come from that symmetry: frame-0 anchoring corrects the flips, and the AUC after it is
+  close. This explanation was not checked separately.
+- **Human (SOMA) translations** differ by 0.1–0.2 cm median.
+- **What to expect from a full run.** The GPU stages and the agents are not deterministic (section 4). A full
+  30-episode run therefore gives per-episode numbers close to, not equal to, the submitted ones. Compare the spread in
+  3.2: mean 0.541 vs. 0.552 with the agent solvers alone.
+
+**Not covered by this test.**
+- The M1 re-prompting path, used by episodes 3, 6, 12, 14, 16 and 21. It runs the same `run_episode.sh` with the v2
+  prompts and was not run here, because episode 3 alone takes about 4.6 GPU-hours.
+- `AGENTS=replay`, which re-runs the solvers delivered by the agents. These solvers were run on all 30 episodes
+  in 3.2.
+
+**Fixes the test found** (now in the driver and scripts):
+- 13 weight files were readable only by their owner. `setup` now checks that the dataset, weights and images are
+  readable.
+- `run_episode.sh` had a hard-coded default data root. It now requires `V2D_ROOT`.
+- `t3_frame0.py` and `support/common.py` now take `V2D_EPISODES` to run a subset of episodes.
+- `support/overlay.py` now creates `vis/`, and `support/sheet.py` now lays out any number of episodes. With 14
+  episodes the layout is still 4×4, as before.

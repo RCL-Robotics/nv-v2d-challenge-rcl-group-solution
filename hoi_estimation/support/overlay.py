@@ -3,6 +3,7 @@
 chosen detection box (yellow). Writes OUT/vis/epXXX_fit.jpg."""
 import json, sys, numpy as np, cv2, trimesh
 from common import *
+os.makedirs(f"{OUT}/vis", exist_ok=True)
 for i in (map(int, sys.argv[1].split(",")) if len(sys.argv) > 1 else SUPPORT):
     d = f"{OUT}/ep{i:03d}"; im = cv2.imread(f"{d}/background.png"); s = json.load(open(f"{d}/support.json"))
     cam = json.load(open(f"{inp(i)}/camera.json")); K = np.array(cam["K"]); Wi = np.linalg.inv(np.array(cam["T_world_cam"]))
