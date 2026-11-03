@@ -1,0 +1,23 @@
+r8_select CHECK phase F8 2026-11-03 15:24:12: no metric is computed
+chain: PREREG_R8.md bb912c57180dde82 == PREREG_R8.sha256 == hard-coded
+chain: PREREG_R8_PINS.md caf113a5608270c7: 67 pins, 0 changed; pins this script 735149acfd54eb5d
+chain: LOCK_R8.sha256: 16 lines, 0 changed
+chain: PREREG_R7.md 749649a79ca5616b == PREREG_R7.sha256 == hard-coded; 77 section-11 pins / commits hold
+chain: PREREG_R7_PINS.md 8378c5a418c9b1ec == its sha file == hard-coded; 11 pins hold
+chain: DRYRUN_R7.sha256: 17 lines hold
+chain: LOCK_R7.sha256: 28 lines hold
+chain: SNAPSHOT_R7.sha256: 525 lines hold
+chain: TRACKS_R7.sha256: 131 lines hold
+chain: RELOCATION_R7.sha256: 130 lines hold
+chain: pool / incumbents / references == pinned; 9 round-6 records == pinned
+chain: round-1 chain (pinned t2cons_consensus.check_pins): 0 fatal
+chain: phase F: heartbeat state done, exports {'ok': 49, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 490, 'failed': 0, 'pending': 0, 'no_export': 0}; no driver / driver.pid: True
+chain: kit + stock trees == integrity/baseline.json (ef9b5035): True
+chain: SELECTION_S7.sha256 106fe7beb468c348 holds; lists final_r7.json: True
+chain: scripts/t2cons_r7_consensus.py sha256 e7545dfa7fdff0681123d77e2dde3f65ed6a22ead8d4d12057d9b61af9e2708a
+chain: round 7 chain: 0 fatal; SELECTION_R7.sha256 24 lines checked
+chain: phase F8: heartbeat state done, exports {'ok': 1, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 10, 'failed': 0, 'pending': 0, 'no_export': 0}; deadline stop recorded: False
+chain: kit + stock trees == integrity/baseline.json: True
+phase F8 jobs 1; export ok 1; complete (10 ok runs) 1; ok runs 10; non-ok rows 0
+wrote inputs_r8/ROLLOUTS_F8.sha256: 10 rollout parquets, sha256 1bc9b5cf14417b61e2c368229835a95db96bd97b3a62a6e8aef43ec7f9f97b0c
+check: OK

@@ -1,0 +1,13 @@
+{
+ "checked_at": "2026-11-03 15:20:56",
+ "exit": 0,
+ "parquets": {
+  "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet": {
+   "ok": true,
+   "keys": [
+    "cd8660560ac5876b"
+   ],
+   "missing": []
+  }
+ }
+}

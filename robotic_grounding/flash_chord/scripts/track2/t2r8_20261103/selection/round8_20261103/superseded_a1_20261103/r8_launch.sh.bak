@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# r8_launch.sh: start the round-8 orchestrator r8_driver.py (PREREG_R8.md section 7) in its own session, or report that it
+# already runs. The orchestrator sleeps until T_c = 2026-11-03 12:00:00 CST, freezes the pool, runs phase S / phase F on
+# GPUs 6 and 7 (plain, one evaluation per GPU, only while no other compute process is listed there) and writes
+# SELECTION_R8. It never commits, pushes, packs, uploads or signals anything.
+#   bash r8_launch.sh            start (safe to call again: a running orchestrator is reported, not duplicated; refused
+#                                while an r8_eval.py evaluation driver of an earlier orchestrator still runs)
+# Status: conda_envs/flashchord/bin/python -I -B r8_driver.py status   (or R8_DRIVER_HEARTBEAT.json, r8_driver.log)
+# Stop:   touch STOP in the round-8 folder (running evaluations finish; nothing further is selected).
+set -euo pipefail
+ME=/root/autodl-tmp/haoran.zhang
+ROOT=$ME/fc_runs/submissions/t2_consensus_r8_20261103
+PY=$ME/conda_envs/flashchord/bin/python
+export TZ=Asia/Shanghai PYTHONDONTWRITEBYTECODE=1
+unset PYTHONPATH PYTHONHOME PYTHONSTARTUP CUDA_MPS_PIPE_DIRECTORY CUDA_MPS_LOG_DIRECTORY CUDA_MPS_ACTIVE_THREAD_PERCENTAGE CUDA_VISIBLE_DEVICES
+cd "$ROOT"
+RUNNING=$(pgrep -af "r8_driver.py run" | head -1 || true)
+if [ -n "$RUNNING" ]; then
+  echo "r8_driver.py already runs: $RUNNING"
+  exit 0
+fi
+EVALS=$(pgrep -af "r8_eval.py run" | grep -v -e "--dry-run" | head -3 || true)
+if [ -n "$EVALS" ]; then
+  echo "an r8_eval.py evaluation driver still runs (PREREG_R8 7.6): $EVALS" >&2
+  echo "wait until it has ended (eval_r8_heartbeat_*.json no longer 'running'), then run this launcher again" >&2
+  exit 1
+fi
+if [ -e "$ROOT/STOP" ]; then
+  echo "$ROOT/STOP exists: remove it first, then relaunch" >&2
+  exit 1
+fi
+setsid nohup "$PY" -I -B "$ROOT/r8_driver.py" run >> "$ROOT/r8_driver_stdout.log" 2>&1 < /dev/null &
+PID=$!
+disown "$PID" || true
+echo "started r8_driver.py (pid $PID): log $ROOT/r8_driver.log, heartbeat $ROOT/R8_DRIVER_HEARTBEAT.json, stop: touch $ROOT/STOP"

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_360000.safetensors",
+  "early_stop_help_zero_tail": 0,
+  "environment_steps": 35389440000,
+  "finished_at": "2026-10-30T16:03:20-07:00",
+  "help_zero_iterations": 320938,
+  "help_zero_since": 39062,
+  "iteration": 360000,
+  "max_iterations": 360000,
+  "reason": "max_iterations",
+  "resumed_from": "/mnt/gfs/home/zuxinglu/workspace/runs/2026-10-25-tier2-runin-hard-g2/cont/ep19/model_224000.safetensors",
+  "rsi_state": "rsi_360000.safetensors",
+  "start_iteration": 224000,
+  "wall_seconds": 229181.5
+}

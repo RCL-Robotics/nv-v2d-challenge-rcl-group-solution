@@ -1,0 +1,25 @@
+### host ws032 (WS000032), 2026-11-02 19:28:12 +0800
+### training-log first lines
+2026-10-26-tier2-runin-g2-ws/ep05 | logs/2026-10-26-tier2-runin-g2-ws/ep05.log | /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+2026-10-26-tier2-runin-g2-ws/ep05 | logs/2026-10-26-tier2-runin-g2-ws/ep05_cont.log | /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+2026-10-26-tier2-runin-g2-ws/cont/ep05 | logs/2026-10-26-tier2-runin-g2-ws/ep05.log | /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+2026-10-26-tier2-runin-g2-ws/cont/ep05 | logs/2026-10-26-tier2-runin-g2-ws/ep05_cont.log | /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+2026-10-26-tier2-runin-g2-ws/ep11 | logs/2026-10-26-tier2-runin-g2-ws/ep11.log | /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+### task.parquet sha256 (as the files are now)
+2026-10-26-tier2-runin-g2-ws/ep05 | 429b0634e729caf11a95e119483dca00b3d33c0b6bd5fcb01928c85b8dca4e30 | /home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet
+2026-10-26-tier2-runin-g2-ws/cont/ep05 | 429b0634e729caf11a95e119483dca00b3d33c0b6bd5fcb01928c85b8dca4e30 | /home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet
+2026-10-26-tier2-runin-g2-ws/ep11 | 725c3c01d15b5e60798f37e9f30f11f21a9776ccf9fd3d11bf3f9c9680b37ca1 | /home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet
+### worktree worktrees/dev.zuxing.hard_start
+.git -> /home/zuxinglu/workspace/nv-v2d-challenge-codebase/.git/worktrees/dev.zuxing.hard_start
+## no git binary on this host: HEAD evidence from files
+HEAD: ref: refs/heads/dev.zuxing.hard_start
+refs/heads/dev.zuxing.hard_start (worktree gitdir): 
+refs/heads/dev.zuxing.hard_start (common dir /home/zuxinglu/workspace/nv-v2d-challenge-codebase/.git/worktrees/dev.zuxing.hard_start/../..): 82837c8569c2461f263c28fce406c1b517f40d93
+82837c8569c2461f263c28fce406c1b517f40d93 refs/remotes/origin/dev.zuxing.hard_start
+## reflog /home/zuxinglu/workspace/nv-v2d-challenge-codebase/.git/worktrees/dev.zuxing.hard_start/logs/HEAD (last 10)
+0000000000000000000000000000000000000000 82837c8569c2461f263c28fce406c1b517f40d93 Zuxing Lu Zuxing.Lu@mbzuai.ac.ae <zuxinglu@WS000031.(none)> 1793016344 +0400
+82837c8569c2461f263c28fce406c1b517f40d93 82837c8569c2461f263c28fce406c1b517f40d93 Zuxing Lu Zuxing.Lu@mbzuai.ac.ae <zuxinglu@WS000031.(none)> 1793016348 +0400	reset: moving to HEAD
+-rw-rw-r-- 1 zuxinglu zuxinglu     38 2026-10-26 16:05:44.761027822 +0400 /home/zuxinglu/workspace/nv-v2d-challenge-codebase/.git/worktrees/dev.zuxing.hard_start/HEAD
+-rw-rw-r-- 1 zuxinglu zuxinglu 654204 2026-10-26 16:25:11.974763483 +0400 /home/zuxinglu/workspace/nv-v2d-challenge-codebase/.git/worktrees/dev.zuxing.hard_start/index
+### sha256 of every file under worktrees/dev.zuxing.hard_start/robotic_grounding/flash_chord (no caches)
+924 files -> tmp/r8_tree_ws032.sha256

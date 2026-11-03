@@ -1,0 +1,227 @@
+ok   30 incumbents = round-7 S7
+| ep | incumbent (input) | m_P_frozen | bar_S | new / reused / barred | eligible / qualifying | best: cons_S (floor) | **finalist** |
+|---|---|---:|---:|---|---|---|---|
+| 00 | ep00_z5k3fix_90000 (k3fix) | 0.7191 | 0.7291 | 1 / 0 / 0 | 1 / 1 | ep00_mock0: 0.7514 (3/3) | **ep00_mock0** |
+| 01 | ep01_k3fix_final44922 (k3fix) | 0.1713 | 0.1813 | 3 / 0 / 0 | 3 / 0 | ep01_mock2: 0.1517 (3/3) | **-** |
+| 02 | ep02_k3fix_final34093 (k3fix) | 0.8681 | 0.8781 | 1 / 0 / 1 | 2 / 0 | ep02_z5q_180000: 0.8949 (3/3) | **-** |
+| 03 | ep03_k3fix_final27068 (k3fix) | 0.9215 | 0.9315 | 2 / 0 / 0 | 2 / 1 | ep03_mock0: 0.9540 (3/3) | **ep03_mock0** |
+| 04 | ep04_zxg2_450000 (g2) | 0.4294 | 0.4394 | 2 / 0 / 0 | 2 / 0 | ep04_mock1: 0.4086 (3/3) | **-** |
+| 05 | ep05_zx_k3fix_88000 (k3fix) | 0.5782 | 0.5882 | 2 / 0 / 0 | 2 / 0 | ep05_mock0: 0.5588 (3/3) | **-** |
+| 06 | ep06_k3fix_final28420 (k3fix) | 0.7973 | 0.8073 | 1 / 0 / 0 | 1 / 1 | ep06_mock0: 0.8288 (3/3) | **ep06_mock0** |
+| 07 | ep07_k3fix_final18529 (k3fix) | 0.9205 | 0.9305 | 2 / 0 / 0 | 2 / 0 | ep07_mock1: 0.9000 (3/3) | **-** |
+| 08 | ep08_k3easy_final17496 (k3) | 0.5964 | 0.6064 | 2 / 0 / 0 | 2 / 0 | ep08_mock1: 0.5766 (3/3) | **-** |
+| 09 | ep09_raw_final39328 (raw) | 0.7605 | 0.7705 | 1 / 1 / 0 | 2 / 1 | ep09_mock0: 0.7917 (3/3) | **ep09_mock0** |
+| 10 | ep10_raw_final34267 (raw) | 0.4125 | 0.4225 | 0 / 0 / 0 | 0 / 0 |  | **not evaluated** |
+| 11 | ep11_raw_24000 (raw) | 0.8073 | 0.8173 | 0 / 0 / 0 | 0 / 0 |  | **not evaluated** |
+| 12 | ep12_k3fix_final23178 (k3fix) | 0.5439 | 0.5539 | 0 / 0 / 0 | 0 / 0 |  | **not evaluated** |
+| 13 | ep13_k3fix_final39254 (k3fix) | 0.6655 | 0.6755 | 3 / 0 / 0 | 3 / 0 | ep13_mock2: 0.6450 (3/3) | **-** |
+| 14 | ep14_k3fix_final44922 (k3fix) | 0.3306 | 0.3406 | 2 / 0 / 0 | 2 / 0 | ep14_mock1: 0.3109 (3/3) | **-** |
+| 15 | ep15_raw_final44922 (raw) | 0.7299 | 0.7399 | 2 / 0 / 0 | 2 / 1 | ep15_mock0: 0.7607 (3/3) | **ep15_mock0** |
+| 16 | ep16_z5a5_120000 (g2) | 0.9513 | 0.9613 | 3 / 0 / 0 | 3 / 0 | ep16_mock0: 0.9320 (3/3) | **-** |
+| 17 | ep17_z5r2_61500 (k3fix) | 0.6594 | 0.6694 | 1 / 0 / 0 | 1 / 0 | ep17_mock0: 0.6376 (3/3) | **-** |
+| 18 | ep18_k3fix_final18911 (k3fix) | 0.4191 | 0.4291 | 1 / 0 / 0 | 1 / 1 | ep18_mock0: 0.4504 (3/3) | **ep18_mock0** |
+| 19 | ep19_z5g2hardc2_360000 (g2) | 0.5811 | 0.5911 | 3 / 0 / 0 | 3 / 0 | ep19_mock1: 0.5616 (3/3) | **-** |
+| 20 | ep20_z5fill_90000 (k3fix) | 0.8725 | 0.8825 | 3 / 0 / 0 | 3 / 0 | ep20_mock1: 0.8542 (3/3) | **-** |
+| 21 | ep21_z5fillc_282500 (g2) | 0.4945 | 0.5045 | 1 / 0 / 0 | 0 / 0 | ep21_mock0: 0.5256 (0/3) | **-** |
+| 22 | ep22_z5k3fix_89500 (k3fix) | 0.7579 | 0.7679 | 3 / 0 / 1 | 4 / 0 | ep22_z5k3fix_90000: 0.7566 (3/3) | **-** |
+| 23 | ep23_raw_final20023 (raw) | 0.9029 | 0.9129 | 3 / 0 / 0 | 3 / 0 | ep23_mock2: 0.8810 (3/3) | **-** |
+| 24 | ep24_z5q_150000 (g2) | 0.9057 | 0.9157 | 2 / 0 / 0 | 2 / 1 | ep24_mock0: 0.9362 (3/3) | **ep24_mock0** |
+| 25 | ep25_z5a5c_280500 (k3fix) | 0.8780 | 0.8880 | 1 / 0 / 0 | 1 / 0 | ep25_mock0: 0.8582 (3/3) | **-** |
+| 26 | ep26_zx_k3fix_92000 (k3fix) | 0.7315 | 0.7415 | 2 / 0 / 0 | 2 / 0 | ep26_mock1: 0.7136 (3/3) | **-** |
+| 27 | ep27_k3fix_final20863 (k3fix) | 0.8979 | 0.9079 | 2 / 0 / 0 | 2 / 1 | ep27_mock0: 0.9272 (3/3) | **ep27_mock0** |
+| 28 | ep28_z5q_180000 (g2) | 0.1501 | 0.1601 | 3 / 0 / 0 | 3 / 0 | ep28_mock1: 0.1311 (3/3) | **-** |
+| 29 | ep29_k3fix_final17358 (k3fix) | 0.5057 | 0.5157 | 3 / 0 / 0 | 3 / 0 | ep29_mock0: 0.4874 (3/3) | **-** |
+
+SELECTION_S8.sha256 written 2026-11-02 21:45:20 (frozen): ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ok   select S rc 0
+ok   episodes 10, 11, 12 (no candidate) are not evaluated and have no finalist
+ok   barred candidates are never finalists
+ok   every finalist clears m_P_frozen + 0.01 and is S-eligible
+ok   the real reuse7 job is a round-8 candidate of ep09 with its round-7 phase-S record
+ok   SELECTION_S8.sha256 written last
+finalists: [(0, 'ep00_mock0', 0.7514, 0.7291), (3, 'ep03_mock0', 0.954, 0.9315), (6, 'ep06_mock0', 0.8288, 0.8073), (9, 'ep09_mock0', 0.7917, 0.7705), (15, 'ep15_mock0', 0.7607, 0.7399), (18, 'ep18_mock0', 0.4504, 0.4291), (24, 'ep24_mock0', 0.9362, 0.9157), (27, 'ep27_mock0', 0.9272, 0.9079)]
+# t2_consensus_r8_20261103: round-8 decision (PREREG_R8 5.5 / 5.6)
+
+Generated 2026-11-02 21:45:20 CST by `r8_select.py` (ffffffffffffffff...). Selection uses only own-input and consensus-B scores. Incumbent = the round-7 pick (its round-7 phase-F runs, never re-run).
+
+Replaced round-7 picks: 06, 09, 15, 18, 24, 27. R8-CLOSEST trial: 1.
+
+| ep | round-7 pick (input) | m_P_frozen | m_P_fresh (r7 F) | bar | finalist | m_F | floor | **pick** |
+|---|---|---:|---:|---:|---|---:|---:|---|
+| 00 | ep00_z5k3fix_90000 (k3fix) | 0.7191 | 0.7191 | 0.7291 | ep00_mock0 | 0.7491 | 7 | **ep00_z5k3fix_90000** (round-7 pick kept) |
+| 01 | ep01_k3fix_final44922 (k3fix) | 0.1713 | 0.1686 | 0.1813 | - |  |  | **ep01_k3fix_final44922** (round-7 pick kept) |
+| 02 | ep02_k3fix_final34093 (k3fix) | 0.8681 | 0.8727 | 0.8827 | - |  |  | **ep02_k3fix_final34093** (round-7 pick kept) |
+| 03 | ep03_k3fix_final27068 (k3fix) | 0.9215 | 0.9071 | 0.9315 | ep03_mock0 | 0.9265 | 10 | **ep03_k3fix_final27068** (round-7 pick kept) |
+| 04 | ep04_zxg2_450000 (g2) | 0.4294 | 0.4294 | 0.4394 | - |  |  | **ep04_zxg2_450000** (round-7 pick kept) |
+| 05 | ep05_zx_k3fix_88000 (k3fix) | 0.5782 | 0.5797 | 0.5897 | - |  |  | **ep05_zx_k3fix_88000** (round-7 pick kept) |
+| 06 | ep06_k3fix_final28420 (k3fix) | 0.7973 | 0.7990 | 0.8090 | ep06_mock0 | 0.8290 | 10 | **ep06_mock0** (replaced) |
+| 07 | ep07_k3fix_final18529 (k3fix) | 0.9205 | 0.8941 | 0.9305 | - |  |  | **ep07_k3fix_final18529** (round-7 pick kept) |
+| 08 | ep08_k3easy_final17496 (k3) | 0.5964 | 0.5959 | 0.6064 | - |  |  | **ep08_k3easy_final17496** (round-7 pick kept) |
+| 09 | ep09_raw_final39328 (raw) | 0.7605 | 0.7785 | 0.7885 | ep09_mock0 | 0.8085 | 10 | **ep09_mock0** (replaced) |
+| 10 | ep10_raw_final34267 (raw) | 0.4125 | 0.4107 | 0.4225 | not evaluated |  |  | **ep10_raw_final34267** (round-7 pick kept) |
+| 11 | ep11_raw_24000 (raw) | 0.8073 | 0.8026 | 0.8173 | not evaluated |  |  | **ep11_raw_24000** (round-7 pick kept) |
+| 12 | ep12_k3fix_final23178 (k3fix) | 0.5439 | 0.5437 | 0.5539 | not evaluated |  |  | **ep12_k3fix_final23178** (round-7 pick kept) |
+| 13 | ep13_k3fix_final39254 (k3fix) | 0.6655 | 0.6660 | 0.6760 | - |  |  | **ep13_k3fix_final39254** (round-7 pick kept) |
+| 14 | ep14_k3fix_final44922 (k3fix) | 0.3306 | 0.3358 | 0.3458 | - |  |  | **ep14_k3fix_final44922** (round-7 pick kept) |
+| 15 | ep15_raw_final44922 (raw) | 0.7299 | 0.7344 | 0.7444 | ep15_mock0 | 0.7644 | 10 | **ep15_mock0** (replaced) |
+| 16 | ep16_z5a5_120000 (g2) | 0.9513 | 0.9513 | 0.9613 | - |  |  | **ep16_z5a5_120000** (round-7 pick kept) |
+| 17 | ep17_z5r2_61500 (k3fix) | 0.6594 | 0.6594 | 0.6694 | - |  |  | **ep17_z5r2_61500** (round-7 pick kept) |
+| 18 | ep18_k3fix_final18911 (k3fix) | 0.4191 | 0.4211 | 0.4311 | ep18_mock0 | 0.4511 | 10 | **ep18_mock0** (replaced) |
+| 19 | ep19_z5g2hardc2_360000 (g2) | 0.5811 | 0.5811 | 0.5911 | - |  |  | **ep19_z5g2hardc2_360000** (round-7 pick kept) |
+| 20 | ep20_z5fill_90000 (k3fix) | 0.8725 | 0.8725 | 0.8825 | - |  |  | **ep20_z5fill_90000** (round-7 pick kept) |
+| 21 | ep21_z5fillc_282500 (g2) | 0.4945 | 0.4945 | 0.5045 | - |  |  | **ep21_z5fillc_282500** (round-7 pick kept) |
+| 22 | ep22_z5k3fix_89500 (k3fix) | 0.7579 | 0.7579 | 0.7679 | - |  |  | **ep22_z5k3fix_89500** (round-7 pick kept) |
+| 23 | ep23_raw_final20023 (raw) | 0.9029 | 0.9034 | 0.9134 | - |  |  | **ep23_raw_final20023** (round-7 pick kept) |
+| 24 | ep24_z5q_150000 (g2) | 0.9057 | 0.9057 | 0.9157 | ep24_mock0 | 0.9357 | 10 | **ep24_mock0** (replaced) |
+| 25 | ep25_z5a5c_280500 (k3fix) | 0.8780 | 0.8780 | 0.8880 | - |  |  | **ep25_z5a5c_280500** (round-7 pick kept) |
+| 26 | ep26_zx_k3fix_92000 (k3fix) | 0.7315 | 0.7316 | 0.7416 | - |  |  | **ep26_zx_k3fix_92000** (round-7 pick kept) |
+| 27 | ep27_k3fix_final20863 (k3fix) | 0.8979 | 0.9054 | 0.9154 | ep27_mock0 | 0.9354 | 10 | **ep27_mock0** (replaced) |
+| 28 | ep28_z5q_180000 (g2) | 0.1501 | 0.1501 | 0.1601 | - |  |  | **ep28_z5q_180000** (round-7 pick kept) |
+| 29 | ep29_k3fix_final17358 (k3fix) | 0.5057 | 0.5044 | 0.5157 | - |  |  | **ep29_k3fix_final17358** (round-7 pick kept) |
+
+| trial | complete | own AUC | own SP-SR | own MP-SR | own MPPE | cons-B AUC |
+|---:|---|---:|---:|---:|---:|---:|
+| 1 | True | 0.7368 | 0.933 | 0.933 | 3.127 | 0.6727 |
+| 2 | True | 0.7371 | 0.933 | 0.933 | 3.788 | 0.6729 |
+| 3 | True | 0.7371 | 0.933 | 0.933 | 3.625 | 0.6731 |
+| 4 | True | 0.7324 | 0.933 | 0.900 | 3.272 | 0.6675 |
+| 5 | True | 0.7242 | 0.867 | 0.867 | 4.559 | 0.6623 |
+| 6 | True | 0.7378 | 0.933 | 0.933 | 3.217 | 0.6732 |
+| 7 | True | 0.7385 | 0.933 | 0.933 | 3.092 | 0.6728 |
+| 8 | True | 0.7394 | 0.933 | 0.933 | 2.935 | 0.6716 |
+| 9 | True | 0.7394 | 0.933 | 0.933 | 3.179 | 0.6721 |
+| 10 | True | 0.7392 | 0.933 | 0.933 | 4.129 | 0.6729 |
+
+R8-CLOSEST = trial 1 of S8 (closest-to-mean; never a best-of). No file is packed by this script.
+
+SELECTION_R8.sha256 written 2026-11-02 21:45:20 (frozen): ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ok   select F rc 0
+ok   replaced = finalists with 10 good runs and m_F >= bar (ep00 deadline-stopped and ep03 below the bar are not)
+ok   a kept episode's S8 job is its round-7 pick with round-7 runs
+ok   R8-CLOSEST exists and its file has 30 episodes
+ok   SELECTION_R8.sha256 written
+replaced: ['06', '09', '15', '18', '24', '27'] R8-CLOSEST trial 1
+  mock
+# t2_consensus_r8_20261103: round-8 decision (PREREG_R8 5.5 / 5.6)
+
+Generated 2026-11-02 21:45:20 CST by `r8_select.py` (ffffffffffffffff...). Selection uses only own-input and consensus-B scores. Incumbent = the round-7 pick (its round-7 phase-F runs, never re-run).
+
+Replaced round-7 picks: none. R8-CLOSEST trial: 2.
+
+| ep | round-7 pick (input) | m_P_frozen | m_P_fresh (r7 F) | bar | finalist | m_F | floor | **pick** |
+|---|---|---:|---:|---:|---|---:|---:|---|
+| 00 | ep00_z5k3fix_90000 (k3fix) | 0.7191 | 0.7191 | 0.7291 | - |  |  | **ep00_z5k3fix_90000** (round-7 pick kept) |
+| 01 | ep01_k3fix_final44922 (k3fix) | 0.1713 | 0.1686 | 0.1813 | - |  |  | **ep01_k3fix_final44922** (round-7 pick kept) |
+| 02 | ep02_k3fix_final34093 (k3fix) | 0.8681 | 0.8727 | 0.8827 | - |  |  | **ep02_k3fix_final34093** (round-7 pick kept) |
+| 03 | ep03_k3fix_final27068 (k3fix) | 0.9215 | 0.9071 | 0.9315 | - |  |  | **ep03_k3fix_final27068** (round-7 pick kept) |
+| 04 | ep04_zxg2_450000 (g2) | 0.4294 | 0.4294 | 0.4394 | - |  |  | **ep04_zxg2_450000** (round-7 pick kept) |
+| 05 | ep05_zx_k3fix_88000 (k3fix) | 0.5782 | 0.5797 | 0.5897 | - |  |  | **ep05_zx_k3fix_88000** (round-7 pick kept) |
+| 06 | ep06_k3fix_final28420 (k3fix) | 0.7973 | 0.7990 | 0.8090 | - |  |  | **ep06_k3fix_final28420** (round-7 pick kept) |
+| 07 | ep07_k3fix_final18529 (k3fix) | 0.9205 | 0.8941 | 0.9305 | - |  |  | **ep07_k3fix_final18529** (round-7 pick kept) |
+| 08 | ep08_k3easy_final17496 (k3) | 0.5964 | 0.5959 | 0.6064 | - |  |  | **ep08_k3easy_final17496** (round-7 pick kept) |
+| 09 | ep09_raw_final39328 (raw) | 0.7605 | 0.7785 | 0.7885 | - |  |  | **ep09_raw_final39328** (round-7 pick kept) |
+| 10 | ep10_raw_final34267 (raw) | 0.4125 | 0.4107 | 0.4225 | not evaluated |  |  | **ep10_raw_final34267** (round-7 pick kept) |
+| 11 | ep11_raw_24000 (raw) | 0.8073 | 0.8026 | 0.8173 | not evaluated |  |  | **ep11_raw_24000** (round-7 pick kept) |
+| 12 | ep12_k3fix_final23178 (k3fix) | 0.5439 | 0.5437 | 0.5539 | not evaluated |  |  | **ep12_k3fix_final23178** (round-7 pick kept) |
+| 13 | ep13_k3fix_final39254 (k3fix) | 0.6655 | 0.6660 | 0.6760 | - |  |  | **ep13_k3fix_final39254** (round-7 pick kept) |
+| 14 | ep14_k3fix_final44922 (k3fix) | 0.3306 | 0.3358 | 0.3458 | - |  |  | **ep14_k3fix_final44922** (round-7 pick kept) |
+| 15 | ep15_raw_final44922 (raw) | 0.7299 | 0.7344 | 0.7444 | - |  |  | **ep15_raw_final44922** (round-7 pick kept) |
+| 16 | ep16_z5a5_120000 (g2) | 0.9513 | 0.9513 | 0.9613 | - |  |  | **ep16_z5a5_120000** (round-7 pick kept) |
+| 17 | ep17_z5r2_61500 (k3fix) | 0.6594 | 0.6594 | 0.6694 | - |  |  | **ep17_z5r2_61500** (round-7 pick kept) |
+| 18 | ep18_k3fix_final18911 (k3fix) | 0.4191 | 0.4211 | 0.4311 | - |  |  | **ep18_k3fix_final18911** (round-7 pick kept) |
+| 19 | ep19_z5g2hardc2_360000 (g2) | 0.5811 | 0.5811 | 0.5911 | - |  |  | **ep19_z5g2hardc2_360000** (round-7 pick kept) |
+| 20 | ep20_z5fill_90000 (k3fix) | 0.8725 | 0.8725 | 0.8825 | - |  |  | **ep20_z5fill_90000** (round-7 pick kept) |
+| 21 | ep21_z5fillc_282500 (g2) | 0.4945 | 0.4945 | 0.5045 | - |  |  | **ep21_z5fillc_282500** (round-7 pick kept) |
+| 22 | ep22_z5k3fix_89500 (k3fix) | 0.7579 | 0.7579 | 0.7679 | - |  |  | **ep22_z5k3fix_89500** (round-7 pick kept) |
+| 23 | ep23_raw_final20023 (raw) | 0.9029 | 0.9034 | 0.9134 | - |  |  | **ep23_raw_final20023** (round-7 pick kept) |
+| 24 | ep24_z5q_150000 (g2) | 0.9057 | 0.9057 | 0.9157 | - |  |  | **ep24_z5q_150000** (round-7 pick kept) |
+| 25 | ep25_z5a5c_280500 (k3fix) | 0.8780 | 0.8780 | 0.8880 | - |  |  | **ep25_z5a5c_280500** (round-7 pick kept) |
+| 26 | ep26_zx_k3fix_92000 (k3fix) | 0.7315 | 0.7316 | 0.7416 | - |  |  | **ep26_zx_k3fix_92000** (round-7 pick kept) |
+| 27 | ep27_k3fix_final20863 (k3fix) | 0.8979 | 0.9054 | 0.9154 | - |  |  | **ep27_k3fix_final20863** (round-7 pick kept) |
+| 28 | ep28_z5q_180000 (g2) | 0.1501 | 0.1501 | 0.1601 | - |  |  | **ep28_z5q_180000** (round-7 pick kept) |
+| 29 | ep29_k3fix_final17358 (k3fix) | 0.5057 | 0.5044 | 0.5157 | - |  |  | **ep29_k3fix_final17358** (round-7 pick kept) |
+
+| trial | complete | own AUC | own SP-SR | own MP-SR | own MPPE | cons-B AUC |
+|---:|---|---:|---:|---:|---:|---:|
+| 1 | True | 0.7939 | 0.933 | 0.933 | 2.911 | 0.6669 |
+| 2 | True | 0.7933 | 0.933 | 0.933 | 3.575 | 0.6670 |
+| 3 | True | 0.7934 | 0.933 | 0.933 | 3.410 | 0.6676 |
+| 4 | True | 0.7884 | 0.933 | 0.900 | 3.059 | 0.6622 |
+| 5 | True | 0.7796 | 0.867 | 0.867 | 4.344 | 0.6565 |
+| 6 | True | 0.7937 | 0.933 | 0.933 | 2.997 | 0.6666 |
+| 7 | True | 0.7936 | 0.933 | 0.933 | 2.880 | 0.6663 |
+| 8 | True | 0.7947 | 0.933 | 0.933 | 2.718 | 0.6657 |
+| 9 | True | 0.7945 | 0.933 | 0.933 | 2.965 | 0.6662 |
+| 10 | True | 0.7934 | 0.933 | 0.933 | 3.916 | 0.6662 |
+
+R8-CLOSEST = trial 2 of S8 (closest-to-mean; never a best-of). No file is packed by this script.
+
+SELECTION_R8.sha256 written 2026-11-02 21:45:20 (frozen): ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ok   select F without finalists: rc 0, no replacement, S8 == S7, closest trial == round 7's trial 2 (real round-7 runs)
+  mock
+# t2_consensus_r8_20261103: round-8 decision (PREREG_R8 5.5 / 5.6)
+
+Generated 2026-11-02 21:45:20 CST by `r8_select.py` (ffffffffffffffff...). Selection uses only own-input and consensus-B scores. Incumbent = the round-7 pick (its round-7 phase-F runs, never re-run).
+
+**Kept round-7 picks everywhere: mock: phase S not complete by its cut-off**
+
+| ep | round-7 pick (input) | m_P_frozen | m_P_fresh (r7 F) | bar | finalist | m_F | floor | **pick** |
+|---|---|---:|---:|---:|---|---:|---:|---|
+| 00 | ep00_z5k3fix_90000 (k3fix) | 0.7191 | 0.7191 | 0.7291 | not evaluated |  |  | **ep00_z5k3fix_90000** (round-7 pick kept) |
+| 01 | ep01_k3fix_final44922 (k3fix) | 0.1713 | 0.1686 | 0.1813 | not evaluated |  |  | **ep01_k3fix_final44922** (round-7 pick kept) |
+| 02 | ep02_k3fix_final34093 (k3fix) | 0.8681 | 0.8727 | 0.8827 | not evaluated |  |  | **ep02_k3fix_final34093** (round-7 pick kept) |
+| 03 | ep03_k3fix_final27068 (k3fix) | 0.9215 | 0.9071 | 0.9315 | not evaluated |  |  | **ep03_k3fix_final27068** (round-7 pick kept) |
+| 04 | ep04_zxg2_450000 (g2) | 0.4294 | 0.4294 | 0.4394 | not evaluated |  |  | **ep04_zxg2_450000** (round-7 pick kept) |
+| 05 | ep05_zx_k3fix_88000 (k3fix) | 0.5782 | 0.5797 | 0.5897 | not evaluated |  |  | **ep05_zx_k3fix_88000** (round-7 pick kept) |
+| 06 | ep06_k3fix_final28420 (k3fix) | 0.7973 | 0.7990 | 0.8090 | not evaluated |  |  | **ep06_k3fix_final28420** (round-7 pick kept) |
+| 07 | ep07_k3fix_final18529 (k3fix) | 0.9205 | 0.8941 | 0.9305 | not evaluated |  |  | **ep07_k3fix_final18529** (round-7 pick kept) |
+| 08 | ep08_k3easy_final17496 (k3) | 0.5964 | 0.5959 | 0.6064 | not evaluated |  |  | **ep08_k3easy_final17496** (round-7 pick kept) |
+| 09 | ep09_raw_final39328 (raw) | 0.7605 | 0.7785 | 0.7885 | not evaluated |  |  | **ep09_raw_final39328** (round-7 pick kept) |
+| 10 | ep10_raw_final34267 (raw) | 0.4125 | 0.4107 | 0.4225 | not evaluated |  |  | **ep10_raw_final34267** (round-7 pick kept) |
+| 11 | ep11_raw_24000 (raw) | 0.8073 | 0.8026 | 0.8173 | not evaluated |  |  | **ep11_raw_24000** (round-7 pick kept) |
+| 12 | ep12_k3fix_final23178 (k3fix) | 0.5439 | 0.5437 | 0.5539 | not evaluated |  |  | **ep12_k3fix_final23178** (round-7 pick kept) |
+| 13 | ep13_k3fix_final39254 (k3fix) | 0.6655 | 0.6660 | 0.6760 | not evaluated |  |  | **ep13_k3fix_final39254** (round-7 pick kept) |
+| 14 | ep14_k3fix_final44922 (k3fix) | 0.3306 | 0.3358 | 0.3458 | not evaluated |  |  | **ep14_k3fix_final44922** (round-7 pick kept) |
+| 15 | ep15_raw_final44922 (raw) | 0.7299 | 0.7344 | 0.7444 | not evaluated |  |  | **ep15_raw_final44922** (round-7 pick kept) |
+| 16 | ep16_z5a5_120000 (g2) | 0.9513 | 0.9513 | 0.9613 | not evaluated |  |  | **ep16_z5a5_120000** (round-7 pick kept) |
+| 17 | ep17_z5r2_61500 (k3fix) | 0.6594 | 0.6594 | 0.6694 | not evaluated |  |  | **ep17_z5r2_61500** (round-7 pick kept) |
+| 18 | ep18_k3fix_final18911 (k3fix) | 0.4191 | 0.4211 | 0.4311 | not evaluated |  |  | **ep18_k3fix_final18911** (round-7 pick kept) |
+| 19 | ep19_z5g2hardc2_360000 (g2) | 0.5811 | 0.5811 | 0.5911 | not evaluated |  |  | **ep19_z5g2hardc2_360000** (round-7 pick kept) |
+| 20 | ep20_z5fill_90000 (k3fix) | 0.8725 | 0.8725 | 0.8825 | not evaluated |  |  | **ep20_z5fill_90000** (round-7 pick kept) |
+| 21 | ep21_z5fillc_282500 (g2) | 0.4945 | 0.4945 | 0.5045 | not evaluated |  |  | **ep21_z5fillc_282500** (round-7 pick kept) |
+| 22 | ep22_z5k3fix_89500 (k3fix) | 0.7579 | 0.7579 | 0.7679 | not evaluated |  |  | **ep22_z5k3fix_89500** (round-7 pick kept) |
+| 23 | ep23_raw_final20023 (raw) | 0.9029 | 0.9034 | 0.9134 | not evaluated |  |  | **ep23_raw_final20023** (round-7 pick kept) |
+| 24 | ep24_z5q_150000 (g2) | 0.9057 | 0.9057 | 0.9157 | not evaluated |  |  | **ep24_z5q_150000** (round-7 pick kept) |
+| 25 | ep25_z5a5c_280500 (k3fix) | 0.8780 | 0.8780 | 0.8880 | not evaluated |  |  | **ep25_z5a5c_280500** (round-7 pick kept) |
+| 26 | ep26_zx_k3fix_92000 (k3fix) | 0.7315 | 0.7316 | 0.7416 | not evaluated |  |  | **ep26_zx_k3fix_92000** (round-7 pick kept) |
+| 27 | ep27_k3fix_final20863 (k3fix) | 0.8979 | 0.9054 | 0.9154 | not evaluated |  |  | **ep27_k3fix_final20863** (round-7 pick kept) |
+| 28 | ep28_z5q_180000 (g2) | 0.1501 | 0.1501 | 0.1601 | not evaluated |  |  | **ep28_z5q_180000** (round-7 pick kept) |
+| 29 | ep29_k3fix_final17358 (k3fix) | 0.5057 | 0.5044 | 0.5157 | not evaluated |  |  | **ep29_k3fix_final17358** (round-7 pick kept) |
+
+| trial | complete | own AUC | own SP-SR | own MP-SR | own MPPE | cons-B AUC |
+|---:|---|---:|---:|---:|---:|---:|
+| 1 | True | 0.7939 | 0.933 | 0.933 | 2.911 | 0.6669 |
+| 2 | True | 0.7933 | 0.933 | 0.933 | 3.575 | 0.6670 |
+| 3 | True | 0.7934 | 0.933 | 0.933 | 3.410 | 0.6676 |
+| 4 | True | 0.7884 | 0.933 | 0.900 | 3.059 | 0.6622 |
+| 5 | True | 0.7796 | 0.867 | 0.867 | 4.344 | 0.6565 |
+| 6 | True | 0.7937 | 0.933 | 0.933 | 2.997 | 0.6666 |
+| 7 | True | 0.7936 | 0.933 | 0.933 | 2.880 | 0.6663 |
+| 8 | True | 0.7947 | 0.933 | 0.933 | 2.718 | 0.6657 |
+| 9 | True | 0.7945 | 0.933 | 0.933 | 2.965 | 0.6662 |
+| 10 | True | 0.7934 | 0.933 | 0.933 | 3.916 | 0.6662 |
+
+R8-CLOSEST = trial 2 of S8 (closest-to-mean; never a best-of). No file is packed by this script.
+
+SELECTION_R8.sha256 written 2026-11-02 21:45:20 (frozen): ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+ok   keep-r7: rc 0, no replacement, S8 == S7, closest trial == round 7's trial 2 (real round-7 runs)
+  mock
+FATAL:
+  an r8_eval driver is running: ['pid 1: python -I -B r8_eval.py run --phase screen (mock)'] 
+ok   keep-r7 refused while an r8_eval.py run process is alive (nothing written)
+  mock
+FATAL:
+  an r8_eval driver is running: [] driver.pid 1 (mock)
+ok   keep-r7 refused while driver.pid names a live r8_eval.py (nothing written)
+ok   no live r8_eval.py on this host now; a missing / stale driver.pid does not count
+mock: 17/17 checks ok; files that would have been written: []

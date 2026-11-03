@@ -1,0 +1,32 @@
+[2026-11-02 21:50:26] r8_driver.py start pid 877263 (sha256 1d626bed15b8e2fe)
+[2026-11-03 12:00:00] step freeze: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py freeze
+[2026-11-03 12:01:00] step freeze: exit 0
+[2026-11-03 12:01:00] step pool verify: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py verify
+[2026-11-03 12:01:30] step pool verify: exit 0
+[2026-11-03 12:01:30] phase screen: r8_eval.py started (pid 778886)
+[2026-11-03 13:40:00] phase screen: r8_eval.py exit 0, heartbeat state stopped (STOP file)
+[2026-11-03 13:40:00] STOP file (not a deadline): driver ends after phase S evaluations; nothing selected
+[2026-11-03 13:44:11] r8_driver.py start pid 998762 (sha256 3072efe2d8c57947)
+[2026-11-03 13:44:11] step pool verify: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py verify
+[2026-11-03 13:44:41] step pool verify: exit 0
+[2026-11-03 13:44:41] phase screen: r8_eval.py started (pid 998909)
+[2026-11-03 15:17:12] phase screen: r8_eval.py exit 0, heartbeat state done
+[2026-11-03 15:17:12] step phase S check --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py check --phase S
+[2026-11-03 15:17:42] step phase S check --phase S: exit 0
+[2026-11-03 15:17:42] step phase S gate --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py gate --phase S
+[2026-11-03 15:19:42] step phase S gate --phase S: exit 0
+[2026-11-03 15:19:42] step phase S score --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py score --phase S
+[2026-11-03 15:20:12] step phase S score --phase S: exit 0
+[2026-11-03 15:20:12] step phase S select --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py select --phase S
+[2026-11-03 15:20:42] step phase S select --phase S: exit 0
+[2026-11-03 15:20:42] phase final: r8_eval.py started (pid 417442)
+[2026-11-03 15:24:12] phase final: r8_eval.py exit 0, heartbeat state done
+[2026-11-03 15:24:12] step phase F check --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py check --phase F
+[2026-11-03 15:24:42] step phase F check --phase F: exit 0
+[2026-11-03 15:24:42] step phase F gate --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py gate --phase F
+[2026-11-03 15:25:12] step phase F gate --phase F: exit 0
+[2026-11-03 15:25:12] step phase F score --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py score --phase F
+[2026-11-03 15:25:42] step phase F score --phase F: exit 0
+[2026-11-03 15:25:42] step phase F select --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_select.py select --phase F
+[2026-11-03 15:26:12] step phase F select --phase F: exit 0
+[2026-11-03 15:26:12] round 8 final: SELECTION_R8.sha256 e48cc8780a537f464ad72d8ef48577cfabe938decae8b435ede43b3176a4d11e

@@ -1,0 +1,1 @@
+train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_g2-2026-10-24 seq=2026-03-20_11-59-57_cyan_water_bottle_rotate_01 support=true gpu=0 commit=82837c8

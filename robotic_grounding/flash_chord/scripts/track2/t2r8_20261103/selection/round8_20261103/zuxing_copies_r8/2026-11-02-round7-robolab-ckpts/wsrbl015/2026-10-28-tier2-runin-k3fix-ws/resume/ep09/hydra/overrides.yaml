@@ -1,0 +1,11 @@
+- experiment=g1_recon_body_coord_rsi_r2_runin
+- task.parquet='/home/zuxinglu/workspace/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet'
+- scene.support=true
+- reset.seed=42
+- output_dir=/home/zuxinglu/workspace/runs/2026-10-28-tier2-runin-k3fix-ws/resume/ep09
+- logging.mode=disabled
+- +logging.local_jsonl=true
+- training.early_stop_help_zero_tail=0
+- training.resume=true
+- training.checkpoint=/home/zuxinglu/workspace/runs/2026-10-28-tier2-runin-k3fix-ws/ep09/model_101000.safetensors
+- training.max_iterations=180000

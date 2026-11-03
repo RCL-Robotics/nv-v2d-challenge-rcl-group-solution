@@ -1,0 +1,172 @@
+{
+ "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2r8_pack_20261103/pack_r8_placeholder/r8_closest/packed_placeholder.csv",
+ "csv_sha256": "8952e574e0094968c880550b23d7bc6c8e07a4b7ea551d83f45fdf151e479e8b",
+ "problems": [],
+ "uploader_validate_submission": "pass",
+ "rows": 22989,
+ "sample_rows": 22989,
+ "uniform_columns": {
+  "eval_script_sha256": [
+   "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+  ],
+  "eval_code_sha256": [
+   "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+  ],
+  "packer_script_sha256": [
+   "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+  ],
+  "uploader_script_sha256": [
+   "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+  ],
+  "code_commit_url": [
+   "https://github.com/local-placeholder/not-uploaded/commit/0000000000000000000000000000000000000000"
+  ]
+ },
+ "per_episode_checkpoints": {
+  "e000000": [
+   "b320e5367474c328ca9af2defc00a71d580866ab21a8d89ecae11787634992d7"
+  ],
+  "e000001": [
+   "a15d9e85b0458c8de2daeae826d26e48fcfa465f72c2b99480b0c2f711faa382"
+  ],
+  "e000002": [
+   "3f1ae6373cfb88772bd88f69abbcd4c5e2968cf6c5e1dd8c0206d3593a9aedc6"
+  ],
+  "e000003": [
+   "e042571ca8a01236598826c001a8618e32272dfb2bea9011a94b60a8cb4d5adb"
+  ],
+  "e000004": [
+   "067b24c2d34db93451c96a4e82fb6bf976d24a13dbbd74f00b435a5875ecb287"
+  ],
+  "e000005": [
+   "248dd05779f67e58165d6b5c77e54c75dbf7b7deb63fa4906770fe02781f9155"
+  ],
+  "e000006": [
+   "84bd485806402cb21465b73efd4a84f0449cc00bc8e76eb7bd28bb73c69e848a"
+  ],
+  "e000007": [
+   "b02cb8f6597f3b548b85f7be8f0c8a764e436d440566feaaf92102038c318bbf"
+  ],
+  "e000008": [
+   "17d421a1938181f0aa75b28dcbbbab9f4987d7dbd68304736e41dcbd73d31bd7"
+  ],
+  "e000009": [
+   "c73692c5b01ed77e927f23776cce655241ee92ae7f40b9cea65ab9a07441fb9b"
+  ],
+  "e000010": [
+   "2490e879451fe43d48528a98fee16b2765062c0a0d6d8fff4462f4d06eeb4f42"
+  ],
+  "e000011": [
+   "00cf20569e0c1c7566a840ff4cc3c4ba7f9b6741e80a96a38e390b541fdfd80d"
+  ],
+  "e000012": [
+   "b455bb4dc1707de7e5a72a1d2de104d71e6a17318aea7652da9e983558b76605"
+  ],
+  "e000013": [
+   "22a4b2bd54fb3dd081eb671f3a06c427447486ee8ae79168d43817e27b4fd4e7"
+  ],
+  "e000014": [
+   "3c4740ef7bd4f60c49e8b9618ccf8ad788c36e34247407be979ef4e3dd39f453"
+  ],
+  "e000015": [
+   "d4bbb317cb71ebe6078b0b4cb089a778069b1efd12c9573033454c4d93bcdfe6"
+  ],
+  "e000016": [
+   "112fbb872352efadb77a179e2170612cbdb68a7355645c59a633bc16522e9ffc"
+  ],
+  "e000017": [
+   "ca7391e4b5de013f3432873e40d38688e74c37c6b6bbbb1d4c03026f01cb7eae"
+  ],
+  "e000018": [
+   "de312489bafbc36a719240f5ef8d9b6d7b2907ae051e886ce1081f0763f7d592"
+  ],
+  "e000019": [
+   "31e024c287dc79d62968627be92ab93d36309ded8b239b1379251691718d8edf"
+  ],
+  "e000020": [
+   "fa681355a473c4d41a6e77b65355e3f152190487bee3e924c51aadb6eb396a4a"
+  ],
+  "e000021": [
+   "b57bc13f7dd727d8af0e32b777a25b3b1f7377bfc60c48471e2377516f457673"
+  ],
+  "e000022": [
+   "04bae1a2c3acc944fe38266b846a287365a003f1bd32972cb3b87998b051242f"
+  ],
+  "e000023": [
+   "961b538e4679015e29a9de09205896d279e7838fa0148a86f8292a0c1d3e5c3f"
+  ],
+  "e000024": [
+   "d4bd2fe8dddd651af8538a54a8f529c552fce0ff03c0ec9e23ff85ec1e59b577"
+  ],
+  "e000025": [
+   "0a2911f2f2302b2fe2777749ef620f8a50b7ed434b9627e80d2b54a3a9af46ca"
+  ],
+  "e000026": [
+   "25c600cb20fbd44804b00369b12366a0267166bfe3e138a0044f5b2c3913feb7"
+  ],
+  "e000027": [
+   "e560ebffd9545b1104dfeb9bea87d48aca74bdbee325b022b24e6556b0016dc8"
+  ],
+  "e000028": [
+   "570c5c84a917c87fd338d6b9ca0a5809e015960ad1f8e83afe23c11e17471012"
+  ],
+  "e000029": [
+   "8c984002495d5a75606f0a014525f3411ab1d40952204a6a685e2835f2983d32"
+  ]
+ },
+ "pose_columns_sha256": "07dd4f20b0f327a0591f10c5a5b74c3fee2d4d1d0031fd38782668af39e92200",
+ "pose_columns": [
+  "row_id",
+  "pos_x",
+  "pos_y",
+  "pos_z",
+  "quat_x",
+  "quat_y",
+  "quat_z",
+  "quat_w"
+ ],
+ "file": "r8_closest",
+ "at": "2026-11-03 18:11:17",
+ "checkpoint_one_per_episode_and_equal_chosen_export": true,
+ "distinct_checkpoints": 30,
+ "r7_file_readonly_check": {
+  "file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/submission_r7/T2_R7_closest_trial02_6bb0214.csv",
+  "sha256": "b06c5cccb02d9a5aa61827f31371094ae02c918762e94c60feea0b691885609d",
+  "episodes_same_checkpoint_as_r7_file": [
+   "00",
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29"
+  ],
+  "episodes_different_checkpoint": [
+   "13"
+  ],
+  "different_equals_changed_vs_round7": true
+ },
+ "ok": true
+}

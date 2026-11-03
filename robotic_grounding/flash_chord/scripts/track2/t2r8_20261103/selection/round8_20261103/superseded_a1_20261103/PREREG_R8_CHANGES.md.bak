@@ -1,0 +1,58 @@
+# t2_consensus_r8_20261103: PREREG_R8_CHANGES (changes before T_c and before any round-8 evaluation)
+
+**When.** 2026-11-02, from about 21:25 to 21:50 CST. This is before T_c = 2026-11-03 12:00:00 CST and before any
+round-8 export, evaluation, score or selection. The orchestrator had not been launched, and no `POOL_R8.*` existed.
+
+**Why.** An independent review of the first locked build found problems in crash-recovery paths and in what the frozen
+records would copy from Zuxing's files. This revision applies its fixes. Every change either leaves the selection rule
+unchanged, or brings the code and the text back to what PREREG_R8 already stated or what round 7 did.
+
+**First build (superseded, kept read-only in `superseded_build1/`):**
+- `PREREG_R8.md` 3293d704f8d12c7f3d7a5c1b12330a96407dd467732bdc8f461c5aeadb1974b7
+- `PREREG_R8_PINS.md` af4523be3998d2e51a8d5b3d8f2a79bff335659482f9d53393b718197607917a
+- `LOCK_R8.sha256` 39537deecbcb6db742d0acf401f4e871b2c5055070bb391e757594c7dca7c5a2
+- `DRYRUN_R8.md` 25bfb7b122d644f79b731b5fe2d0b62236ebb7967a7ff51c2e60a886975d6398
+
+Its trial pool folders were deleted (plumbing only, never used by a decision). The document in force is the
+`PREREG_R8.md` whose sha256 the round-8 scripts hard-code; `LOCK_R8.sha256` lists it.
+
+## 1. Changes to the text of PREREG_R8.md
+
+| section | change | kind |
+|---|---|---|
+| When | records this revision and `superseded_build1/` | record |
+| Basis, 2.6 (2) | the watcher header must hold the 8 asserted columns and no column outside the watcher's 18-column own-input header, else the freeze stops (before: the 8 columns had to be present; other columns were not checked) | stricter check, fail-safe |
+| Standing rules, 2.6 (2), 2.8 | record copies of Zuxing's text files hold only what round 8 uses: MANIFEST.txt keeps its run / source / copied / status / train log / task.parquet / parquet sha256 / models / files lines; checksum files keep the lines of model, rsi, final.json, training-log, MANIFEST.txt and hydra files; the watcher record copy keeps the 8 asserted columns; any text line that round 7's token guard refuses is left out; a training-log line it refuses keeps only its commit. Full-source sha256 before / after stay in `COPIES_r8.tsv`. Checkpoints are always byte copies | records only; nothing that the selection reads changes |
+| C1, 2.6 (5) | on a 5090-hosted run, the watcher's last ok-evaluated iteration counts off the 10,000 grid only when it is also the run's last counted iteration L. C1 already stated that D2 "has the same restriction" (grid + the run's last iteration); the code did not enforce it when a 5090 watcher stopped before the end of its run. At the development dry run of 21:39 this changes no pick (6 of the 20 5090 watcher rows have last ok != L; none of their picks is off the grid) | correction: code brought to the stated C1 |
+| C6, 7.1 | the scorer's gate / score steps answer "already done" when their verified output exists, so a relaunch resumes (7.1 already said every step is resumable) | correction: code brought to 7.1 |
+| 7.4 | a pin / preflight / integrity failure of the evaluation driver halts (before: it was retried 6 times and phase S then ended as keep-r7, unlike what 7.4 said); after 6 failed restarts phase F halts (before: it wrote `DEADLINE_F.json`, which the scorer's check would refuse, so it halted anyway at the next step); a phase-F deadline passed while no evaluation driver runs halts at the scorer's check | correction: code and text aligned; every such path leaves the R7 file in force |
+| 7.6 (new) | one evaluation driver at a time: the orchestrator never starts `r8_eval.py` while one is alive (read from /proc, nothing signalled) and never counts that wait as a restart; keep-r7 and the scorer refuse while one is alive; a stale `driver.pid` of an ended process does not count; `r8_launch.sh` refuses to start while one is alive | fixes a relaunch that could end round 8 as keep-r7 while evaluations still ran |
+| 8 | budget from the development dry run of 21:39 (89 new screen candidates in 24 episodes) | record |
+| 9.2 | what the reviser saw | disclosure |
+| 10 | this file is part of B4 and of `LOCK_R8.sha256` | record |
+
+Unchanged: T_c, the universe and eligibility, R1-R5, D1-D5, C2-C5, the incumbents and bars, the evaluation protocol,
+GPUs 6/7 only while no other compute process is listed, the phase-S and phase-F rules, the closest-to-mean trial, the
+phase-S cut-off (2026-11-04 08:00 CST) and the phase-F deadline (2026-11-04 12:00 CST).
+
+## 2. Changes to the scripts
+
+- `r8_pool.py`: `zguard` applies round 7's token guard to every path in Zuxing's folder before its allowlist (for a
+  watcher file, to its `eval_<ep>` directory, because round 7's list names that file); exact watcher-header check;
+  record excerpts (`copy_meta`, `watcher_excerpt`); the 5090 condition of 2.6 (5); `WATCHER_R8.tsv` gains the columns
+  `pruned_host` and `last_ok_counts_off_grid`.
+- `r8_driver.py`: `live_evals` (/proc only), no second `r8_eval.py`, waits not counted as restarts, liveness instead of
+  `driver.pid` existence at a deadline, `halted` on a pin / preflight / integrity failure, phase F halts after 6 failed
+  restarts.
+- `r8_select.py`: `driver_running` counts only live `r8_eval.py run` processes (not a plan-only `--dry-run`),
+  `pidfile_live` replaces the `driver.pid` existence test, keep-r7 refuses while an evaluation driver is alive, gate /
+  score "already done" when their verified output exists.
+- `r8_launch.sh`: refuses while an `r8_eval.py run` process is alive.
+- `r8_eval.py`: only its hard-coded PREREG_R8 sha256.
+- `dryrun/r8_mock_select.py`: three added checks (keep-r7 refused while an evaluation driver is alive; no live one
+  now).
+
+Off-server simulations of the orchestrator (stubbed processes, clock and /proc: earlier evaluation driver still running,
+stale `driver.pid` at a deadline, preflight failure, pinned-file mismatch, repeated crash, `halted` heartbeat, deadline
+during a run, crash then success) and of gate / score resumption gave the intended result in every case. Steps B2-B4
+were then re-run with the final scripts (`DRYRUN_R8.md`).

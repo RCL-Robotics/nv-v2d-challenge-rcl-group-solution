@@ -1,0 +1,73 @@
+
+===== [2026-11-03 12:00:00] /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py freeze
+[2026-11-03 12:00:00] r8_pool FREEZE at T_c = 2026-11-03 12:00:00 CST (started 2026-11-03 12:00:00); script sha256 bebeb0132cf45c5320aae060bc50e1d4f1d46e9895f0cdac46cc0797ba0d4628
+[2026-11-03 12:00:00] scan at T_c 2026-11-03 12:00:00 CST: 171 directories, 128 eligible runs (59 ours, 69 Zuxing's); new 10, trained further 6, unchanged 112
+[2026-11-03 12:00:00] candidates before roles: 98 files (64 mechanical, 40 watcher best)
+[2026-11-03 12:00:11] pool: 98 files: screen 89, reuse7 5, barred7 3, incumbent 1, duplicate 0, refused 0
+[2026-11-03 12:00:11] resolved in 12 s
+[2026-11-03 12:00:18] relocated ep03_z5g2rest_90000: ok 412d61028d8e
+[2026-11-03 12:00:18] relocated ep03_z5g2rest_110000: ok 7e22bc7d423b
+[2026-11-03 12:00:18] relocated ep03_z5g2rest_120000: ok 393efff26480
+[2026-11-03 12:00:18] relocated ep03_z5g2rest_150000: ok 36d4132adc5a
+[2026-11-03 12:00:19] relocated ep03_z5g2rest_180000: ok 05b5e92b624d
+[2026-11-03 12:00:19] relocated ep05_w32g2c_182000: ok 0d43d24f0c0b
+[2026-11-03 12:00:19] relocated ep05_w32g2c_240000: ok 83566fff6c84
+[2026-11-03 12:00:20] relocated ep05_w32g2c_300000: ok fb088abb47ac
+[2026-11-03 12:00:20] relocated ep05_w32g2c_360000: ok ee00914acf2d
+[2026-11-03 12:00:20] relocated ep06_z5q_80000: ok 904c5c8719db
+[2026-11-03 12:00:20] relocated ep07_z5g2rest_90000: ok 83b0834d5c93
+[2026-11-03 12:00:21] relocated ep07_z5g2rest_120000: ok ae37657fcacb
+[2026-11-03 12:00:21] relocated ep07_z5g2rest_150000: ok f7b15e309ec5
+[2026-11-03 12:00:21] relocated ep07_z5g2rest_180000: ok 4835430222a0
+[2026-11-03 12:00:21] relocated ep08_z5q_100000: ok ff22954cee4a
+[2026-11-03 12:00:22] relocated ep09_rb15k3fix_52000: ok 2334562c3411
+[2026-11-03 12:00:22] relocated ep09_rb15k3fix_68000: ok e5fdb279bdda
+[2026-11-03 12:00:22] relocated ep09_rb15k3fix_84000: ok 5fe392ae5b16
+[2026-11-03 12:00:23] relocated ep09_rb15k3fix_100000: ok 80b898d92d35
+[2026-11-03 12:00:23] relocated ep09_rb15k3fix_101000: ok d71aa1ae7750
+[2026-11-03 12:00:23] relocated ep09_rb15k3fixr_102000: ok 3798d18110ea
+[2026-11-03 12:00:23] relocated ep09_rb15k3fixr_120000: ok 122b7b0160bc
+[2026-11-03 12:00:24] relocated ep09_rb15k3fixr_150000: ok e0c7c66e6781
+[2026-11-03 12:00:24] relocated ep09_rb15k3fixr_180000: ok e221ab4c5c9b
+[2026-11-03 12:00:24] relocated ep13_rb15g2_90000: ok 8957d6786239
+[2026-11-03 12:00:25] relocated ep13_rb15g2_120000: ok c2efea221069
+[2026-11-03 12:00:25] relocated ep13_rb15g2_140000: ok f2733494f274
+[2026-11-03 12:00:25] relocated ep13_rb15g2_150000: ok e7f9019f6a33
+[2026-11-03 12:00:25] relocated ep13_rb15g2_180000: ok d9f1dff48459
+[2026-11-03 12:00:26] relocated ep13_w312runinws_90000: ok 08544a72d1dd
+[2026-11-03 12:00:26] relocated ep13_w312runinws_110000: ok c48f016820d1
+[2026-11-03 12:00:26] relocated ep13_w312runinws_120000: ok 7a5d657f98dd
+[2026-11-03 12:00:27] relocated ep13_w312runinws_150000: ok 545c87efacee
+[2026-11-03 12:00:27] relocated ep13_w312runinws_180000: ok c5a83a14e186
+[2026-11-03 12:00:27] relocated ep14_z5a5c_250000: ok 141d5e92943c
+[2026-11-03 12:00:27] relocated ep15_z5r2_90000: ok e6dda1e9619a
+[2026-11-03 12:00:28] relocated ep15_z5r2_120000: ok a82210b697c4
+[2026-11-03 12:00:28] relocated ep15_z5r2_150000: ok e87a523d2237
+[2026-11-03 12:00:28] relocated ep15_z5r2_170000: ok a0176bfc857a
+[2026-11-03 12:00:28] relocated ep15_z5r2_180000: ok d7884279b9bd
+[2026-11-03 12:00:29] relocated ep16_z5a5_140000: ok d5834ba75be9
+[2026-11-03 12:00:29] relocated ep17_z5g2rest_90000: ok b5e400626c6a
+[2026-11-03 12:00:29] relocated ep17_z5g2rest_120000: ok acc6ea227b35
+[2026-11-03 12:00:29] relocated ep17_z5g2rest_150000: ok 9ca9dba15b6b
+[2026-11-03 12:00:30] relocated ep17_z5g2rest_180000: ok b2e3aa4fd82a
+[2026-11-03 12:00:30] relocated ep19_z5g2hardc2_340000: ok 88c047c88aa0
+[2026-11-03 12:00:30] relocated ep20_z5fill_110000: ok 3f0001f38cfb
+[2026-11-03 12:00:31] relocated ep21_z5fillc_280000: ok 4e992ef5ab69
+[2026-11-03 12:00:31] relocated ep23_w31g2_90000: ok 9eef345d0dd7
+[2026-11-03 12:00:31] relocated ep23_w31g2_120000: ok 93a5408ff595
+[2026-11-03 12:00:31] relocated ep23_w31g2_150000: ok b7a07048633a
+[2026-11-03 12:00:32] relocated ep23_w31g2_180000: ok e319c09a5ffc
+[2026-11-03 12:00:32] relocated ep24_z5fill_170000: ok 64ea869c4eeb
+[2026-11-03 12:00:32] relocated ep24_z5q_80000: ok 755e170e88cd
+[2026-11-03 12:00:32] relocated ep25_w31g2_90000: ok fd1c4d627755
+[2026-11-03 12:00:33] relocated ep25_w31g2_120000: ok 11fb08b95e3d
+[2026-11-03 12:00:33] relocated ep25_w31g2_136000: ok 394c79baa9da
+[2026-11-03 12:00:33] relocated ep25_w31g2_150000: ok 8b0105fe4310
+[2026-11-03 12:00:34] relocated ep25_w31g2_180000: ok 8b486fea3abe
+[2026-11-03 12:00:37] frozen: 98 pool rows, 496 copies, 59 relocations (0 failed); POOL_R8.sha256 44d16f9988257a93053582b7d5654bb8645ea7964fbd90ca40e3713d8dab645f
+
+===== [2026-11-03 12:01:00] /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py verify
+59 relocation rows verified, 0 with problems; POOL_R8.sha256 lines changed: 0
+
+===== [2026-11-03 13:44:11] /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/r8_pool.py verify
+59 relocation rows verified, 0 with problems; POOL_R8.sha256 lines changed: 0

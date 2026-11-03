@@ -1,0 +1,8 @@
+run            2026-10-26-tier2-runin-g2-ws/cont/ep05
+source         ws032:/home/zuxinglu/workspace/runs/2026-10-26-tier2-runin-g2-ws/cont/ep05 (robolab), via the 5090 staging copy /mnt/gfs/home/zuxinglu/workspace/tmp/to_pro6000/robolab_round7_2026-11-02/ws032/2026-10-26-tier2-runin-g2-ws/cont/ep05 (checked against tmp/to_pro6000/robolab_round7_2026-11-02/SHA256SUMS.ws032)
+copied         2026-11-02 20:18:10 +0800
+status         finished (final.json)
+train log      ws032:/home/zuxinglu/workspace/logs/2026-10-26-tier2-runin-g2-ws/ep05_cont.log -> train.log; first line: /home/zuxinglu/workspace/tmp/train_t2.sh: line 19: git: command not found
+task.parquet   /home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet
+parquet sha256 429b0634e729caf11a95e119483dca00b3d33c0b6bd5fcb01928c85b8dca4e30 (computed on ws032 2026-11-02; robolab data folders are rsync copies of ws031's)
+models         90: 182000 184000 186000 188000 190000 192000 194000 196000 198000 200000 202000 204000 206000 208000 210000 212000 214000 216000 218000 220000 222000 224000 226000 228000 230000 232000 234000 236000 238000 240000 242000 244000 246000 248000 250000 252000 254000 256000 258000 260000 262000 264000 266000 268000 270000 272000 274000 276000 278000 280000 282000 284000 286000 288000 290000 292000 294000 296000 298000 300000 302000 304000 306000 308000 310000 312000 314000 316000 318000 320000 322000 324000 326000 328000 330000 332000 334000 336000 338000 340000 342000 344000 346000 348000 350000 352000 354000 356000 358000 360000 

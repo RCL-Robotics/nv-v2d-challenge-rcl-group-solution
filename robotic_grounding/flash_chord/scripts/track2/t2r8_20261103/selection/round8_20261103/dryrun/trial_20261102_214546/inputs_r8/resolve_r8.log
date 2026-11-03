@@ -1,0 +1,7 @@
+[2026-11-02 21:45:46] r8_pool TRIAL (plumbing only, snapshot NOW 2026-11-02 21:45:46): 3 screen rows frozen into /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/dryrun/trial_20261102_214546
+[2026-11-02 21:45:47] scan at T_c 2026-11-02 21:45:46 CST: 171 directories, 128 eligible runs (59 ours, 69 Zuxing's); new 10, trained further 6, unchanged 112
+[2026-11-02 21:45:47] candidates before roles: 98 files (64 mechanical, 40 watcher best)
+[2026-11-02 21:45:58] pool: 98 files: screen 89, reuse7 5, barred7 3, incumbent 1, duplicate 0, refused 0
+[2026-11-02 21:45:58] resolved in 11 s
+[2026-11-02 21:45:59] relocated ep03_z5g2rest_90000: ok 412d61028d8e
+[2026-11-02 21:45:59] relocated ep05_w32g2c_182000: ok 0d43d24f0c0b

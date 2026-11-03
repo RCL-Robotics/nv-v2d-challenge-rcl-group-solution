@@ -1,0 +1,6 @@
+[2026-11-02 21:45:35] r8_pool DRY RUN: snapshot NOW (2026-11-02 21:45:35 CST) instead of T_c; nothing is copied, relocated or frozen
+[2026-11-02 21:45:36] scan at T_c 2026-11-02 21:45:35 CST: 171 directories, 128 eligible runs (59 ours, 69 Zuxing's); new 10, trained further 6, unchanged 112
+[2026-11-02 21:45:36] candidates before roles: 98 files (64 mechanical, 40 watcher best)
+[2026-11-02 21:45:46] pool: 98 files: screen 89, reuse7 5, barred7 3, incumbent 1, duplicate 0, refused 0
+[2026-11-02 21:45:46] resolved in 11 s
+written: dryrun/pool_dryrun_20261102_214535.json / .md
