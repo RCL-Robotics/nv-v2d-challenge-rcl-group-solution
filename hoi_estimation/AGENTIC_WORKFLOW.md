@@ -62,6 +62,45 @@ Tool calls of the agents: 2,397 Bash, 509 Read, 164 Write, 6 Edit, 1 sub-agent (
 Other agents that were tried and not used in the result are listed in `agent_records/INDEX.md`: Codex with
 `gpt-6-astra` (16 runs) and Codex with `deepseek-flash` (33 runs).
 
+### Agent versions, models and prompts
+
+**Per-episode agents of the result (all 30 runs, from each `agent_records/<run>/run_manifest.txt`):**
+
+| item | value |
+|---|---|
+| agent harness | Claude Code CLI **2.1.303**, headless (`claude -p`) |
+| model | **`claude-opus-5-5`**, first-party Anthropic API, 1M context |
+| reasoning effort | `high` (env `CLAUDE_CODE_EFFORT_LEVEL=high`) |
+| CLI flags | `-p --model claude-opus-5-5 --dangerously-skip-permissions --output-format stream-json --verbose` (permissions are skipped because the sandbox is the boundary) |
+| kick-off prompt (the only user message) | `Read /work/AGENT_TASK.md and complete the task described there. Work autonomously until the required outputs exist.` |
+| task prompt | `agent/AGENT_TASK_temporal_v2.md` (134 lines), copied to `/work/AGENT_TASK.md`; sha256 `5d5091be818abc88b4513b225931c3f47ccc2a8cedb94b5d4692de619aa5b7a8`, identical in all 30 manifests and in `agent_records/<run>/AGENT_TASK.md` |
+| system prompt and tools | Claude Code's built-in system prompt and tools; no custom system prompt, no `CLAUDE.md`, no MCP servers, no plugins. The built-in bundled skills were available, but none was invoked: the 30 runs used only Bash, Read, Write, Edit and one Explore sub-agent (`events.jsonl.gz`, init event) |
+| time limit | 90 min (`timeout 90m`) |
+| sandbox | apptainer `--containall --network none`, image `v2d_cari4d.sif`. Read-write: `/work` (inputs, outputs, scratch). Read-only: `/code` (CARI4D code), `/weights`, `/pipeline` (this episode's pipeline outputs) |
+| network | only through the logging proxy (`agent/allowlist_proxy.py`), everything except `huggingface.co` / `hf.co`; HF hub offline |
+| other env | auto-updater, telemetry and non-essential traffic off; `BASH_MAX_TIMEOUT_MS=3600000` |
+| launcher | `agent/run_claude.sh <ws> claude-opus-5-5 90 open <pipeline_dir> AGENT_TASK_temporal_v2.md high`, called by `agent/run_batch_CL.sh` (3 at a time) |
+
+**Other task prompts** (in `agent/`; not used for the result):
+- `AGENT_TASK.md`: the first trajectory task;
+- `AGENT_TASK_temporal.md`: v1 of the temporal task;
+- `AGENT_TASK_depth.md` and `AGENT_TASK_camera.md`: depth and camera variants.
+
+Each run's own copy is in `agent_records/<run>/AGENT_TASK.md`.
+
+**Other agents tried** (not in the result; `agent_records/INDEX.md`):
+- Codex CLI 0.153.4 with `gpt-6-astra`, 16 runs;
+- Codex CLI 0.153.4 with `deepseek-flash` through `api.deepseek.com`, 33 runs.
+
+Both used effort high (a smoke test used low) and the same sandbox (`agent/run_codex.sh`).
+
+**Orchestrator:**
+- interactive Claude Code CLI 2.1.282, later 2.1.301;
+- model `claude-opus-5-5`, default settings.
+
+Its "prompts" are the human researcher's messages, about 170 in all. Its own outputs are the code and the task
+prompts in this repository.
+
 ## 2. Resource usage
 
 ### Per-episode agents, the 30 runs in the result (CL2/CL2b/CL2c, 2026-10-21)
