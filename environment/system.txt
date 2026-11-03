@@ -1,0 +1,66 @@
+# Machine of the training, export and evaluation runs (corl2026_pro6000), captured 2026-11-04 05:45 CST
+## GPU
+index, name, memory.total [MiB], driver_version, compute_cap
+0, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+1, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+2, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+3, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+4, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+5, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+6, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+7, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0
+| NVIDIA-SMI 580.82.09 Driver Version: 580.82.09 CUDA Version: 13.0 |
+## OS
+Ubuntu 22.04.5 LTS
+kernel 5.15.0-78-generic x86_64
+ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35
+## CPU / memory
+Model name: Intel(R) Xeon(R) Platinum 8470Q
+Thread(s) per core: 2
+Core(s) per socket: 52
+Socket(s): 2
+NUMA node(s): 2
+NUMA node0 CPU(s): 0-51,104-155
+NUMA node1 CPU(s): 52-103,156-207
+               total        used        free      shared  buff/cache   available
+Mem:            1007          73         267           4         666         923
+## Tools
+git version 2.34.1
+git-lfs/3.8.0 (GitHub; linux amd64; go 1.26.6)
+uv 0.13.0 (x86_64-unknown-linux-gnu)
+conda 24.4.0
+## Python
+flashchord: Python 3.11.17
+v2d: Python 3.11.17
+v2dkit: Python 3.11.17
+## CUDA libraries used by the flashchord env (pip wheels; no system CUDA toolkit is used)
+jax==0.10.2
+jax-cuda13-pjrt==0.10.2
+jax-cuda13-plugin==0.10.2
+jaxlib==0.10.2
+mujoco==3.8.1
+mujoco-warp==3.8.1
+newton==1.2.0
+nvidia-cublas==13.6.0.2
+nvidia-cuda-cccl==13.3.3.4.1
+nvidia-cuda-crt==13.3.73
+nvidia-cuda-cupti==13.3.75
+nvidia-cuda-nvcc==13.3.73
+nvidia-cuda-nvrtc==13.3.33
+nvidia-cuda-runtime==13.3.29
+nvidia-cudnn-cu13==9.24.0.43
+nvidia-cufft==12.3.0.29
+nvidia-cusolver==12.2.6.9
+nvidia-cusparse==12.8.2.51
+nvidia-nccl-cu13==2.30.7
+nvidia-nvjitlink==13.3.33
+nvidia-nvshmem-cu13==3.7.1
+nvidia-nvvm==13.3.73
+onnxruntime-gpu==1.28.0
+warp-lang==1.14.0
+## CUDA libraries of the v2d env
+isaacsim==5.1.0.0
+nvidia-cuda-runtime-cu12==12.8.57
+torch==2.7.0+cu128
+torchaudio==2.7.0
+torchvision==0.22.0+cu128
