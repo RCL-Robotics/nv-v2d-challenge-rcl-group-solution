@@ -1,0 +1,26 @@
+[2026-11-04 02:11:14] r9_driver.py start pid 918988 (sha256 1664c3223db6390f)
+[2026-11-04 02:11:14] step freeze: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_pool.py freeze
+[2026-11-04 02:11:44] step freeze: exit 0
+[2026-11-04 02:11:44] step pool verify: /root/autodl-tmp/haoran.zhang/conda_envs/flashchord/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_pool.py verify
+[2026-11-04 02:12:14] step pool verify: exit 0
+[2026-11-04 02:12:14] phase screen: r9_eval.py started (pid 926372)
+[2026-11-04 02:24:44] phase screen: r9_eval.py exit 0, heartbeat state done
+[2026-11-04 02:24:44] step phase S check --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py check --phase S
+[2026-11-04 02:25:14] step phase S check --phase S: exit 0
+[2026-11-04 02:25:14] step phase S gate --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py gate --phase S
+[2026-11-04 02:26:14] step phase S gate --phase S: exit 0
+[2026-11-04 02:26:14] step phase S score --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py score --phase S
+[2026-11-04 02:26:44] step phase S score --phase S: exit 0
+[2026-11-04 02:26:44] step phase S select --phase S: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py select --phase S
+[2026-11-04 02:27:14] step phase S select --phase S: exit 0
+[2026-11-04 02:27:14] phase final: r9_eval.py started (pid 56355)
+[2026-11-04 02:31:14] phase final: r9_eval.py exit 0, heartbeat state done
+[2026-11-04 02:31:14] step phase F check --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py check --phase F
+[2026-11-04 02:31:44] step phase F check --phase F: exit 0
+[2026-11-04 02:31:44] step phase F gate --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py gate --phase F
+[2026-11-04 02:32:14] step phase F gate --phase F: exit 0
+[2026-11-04 02:32:14] step phase F score --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py score --phase F
+[2026-11-04 02:32:44] step phase F score --phase F: exit 0
+[2026-11-04 02:32:44] step phase F select --phase F: /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/r9_select.py select --phase F
+[2026-11-04 02:33:14] step phase F select --phase F: exit 0
+[2026-11-04 02:33:14] round 9 final: SELECTION_R9.sha256 47e5a8d7d1f00e11d8dca0609d0b02375d173d3dc714c38646998f64cdbf1dbb

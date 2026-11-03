@@ -1,0 +1,33 @@
+{
+ "updated_at": "2026-11-04 02:24:18",
+ "updated_epoch": 1793730258.0623305,
+ "pid": 926372,
+ "state": "done",
+ "phase": "screen",
+ "jobs": 34,
+ "jobs_refused": 0,
+ "runs_per_job": 3,
+ "exports": {
+  "ok": 34,
+  "refused": 0,
+  "failed": 0,
+  "pending": 0
+ },
+ "evals": {
+  "ok": 102,
+  "failed": 0,
+  "pending": 0,
+  "no_export": 0
+ },
+ "exports_only": false,
+ "running": [],
+ "external_evals_counted": [],
+ "resting": {
+  "2": 10
+ },
+ "mean_eval_seconds": 34.57058823529412,
+ "eta_hours": 0.0,
+ "halted": null,
+ "stop_file": false,
+ "runs_base": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/runs_s"
+}

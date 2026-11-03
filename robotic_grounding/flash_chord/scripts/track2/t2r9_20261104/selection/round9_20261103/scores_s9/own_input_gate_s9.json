@@ -1,0 +1,42 @@
+{
+ "written_at": "2026-11-04 02:25:53",
+ "phase": "S9",
+ "script_sha256": "1bb9c8ba784de1a0372f70d60fd5108e49d23a49111ccfc948dc1594eeba2096",
+ "r8_select_sha256": "735149acfd54eb5db39a776b4775303e16283ca274f34e71215581a94ca2508e",
+ "prereg_r9_sha256": "13c3b2a61e39cc761633283ae42bf94683df8d1ffd701d1076e3d61212a4c2a0",
+ "rule": "PREREG_R9 5.1 = PREREG_R7 5.1: a run is flagged iff the evaluator AUC is outside [min_s AUC_s - 0.02, max_s AUC_s + 0.02] (s = 0..9), |dMPPE| > 0.5 cm, SP-SR or MP-SR differs from the evaluator, or it is a problem run. Phase S: a candidate with a flagged run is validation_failed. Phase F: a flagged finalist run disqualifies the finalist. A kit / stock-runtime change fails the gate.",
+ "thresholds": {
+  "auc_band_around_seed_range": 0.02,
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "max_abs_d_mppe": 0.5,
+  "min_sp_equal_frac": 0.95,
+  "min_mp_equal_frac": 0.95
+ },
+ "pass": true,
+ "validation_failed_jobs": [],
+ "flagged_jobs": [],
+ "flagged_run_keys": [],
+ "n_jobs": 34,
+ "n_runs": 102,
+ "n_scored": 102,
+ "n_flagged_runs": 0,
+ "flagged_runs": [],
+ "max_excess_outside_range": 0.006693324061196049,
+ "max_abs_d_mppe": 0.0009325876611308015,
+ "kit_stock_unchanged": true,
+ "integrity_diff": [],
+ "rollouts_list_sha256": "715b7513de65bfd47f1ee91bdea392ae9d4d75aefa645bef4c66d4806257a012",
+ "csv_sha256": "0fd87cd91e5f07ec0f48f14d9abe336d2dea27badf8e42e9a23f589860edcde2",
+ "note": "own-input check only (each run vs its OWN input track); nothing is selected"
+}

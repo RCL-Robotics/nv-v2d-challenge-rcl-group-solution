@@ -1,0 +1,7 @@
+[2026-11-03 22:27:36] r9_pool DRY RUN: snapshot NOW (2026-11-03 22:27:36 CST) as T_c9; nothing is copied, relocated or frozen
+[2026-11-03 22:27:36] scan at T_c9 2026-11-03 22:27:36 CST: 171 directories, 128 eligible runs; new 0, trained further 4, unchanged 124 (vs round 8's 2026-11-03 12:00:00 CST)
+[2026-11-03 22:27:37] report files at T_c9: 48 files, 48 eligible; final at T_c9: 35 yes, 13 no
+[2026-11-03 22:27:37] candidates before roles: 64 files (48 report files, 16 mechanical picks)
+[2026-11-03 22:27:46] pool: 64 files: screen 34, reuse8 10, reuse7 13, barred 3, incumbent 4, duplicate 0, refused 0
+[2026-11-03 22:27:46] resolved in 10 s
+written: dryrun/pool_dryrun_20261103_222736.json / .md

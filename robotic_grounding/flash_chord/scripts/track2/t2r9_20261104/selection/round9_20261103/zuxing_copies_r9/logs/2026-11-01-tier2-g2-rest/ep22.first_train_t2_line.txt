@@ -1,0 +1,1 @@
+train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24 seq=2026-05-22_16-52-36_step_ladder_drag_03 support=false cpus=78,79,182,183 gpu=5 commit=bc3b1bd

@@ -1,0 +1,11 @@
+- experiment=g1_recon_body_coord_rsi_r2_runin
+- task.parquet='/mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_k3fix/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet'
+- scene.support=true
+- reset.seed=42
+- output_dir=/mnt/gfs/home/zuxinglu/workspace/runs/2026-10-28-tier2-runin-a5/cont/ep25
+- logging.mode=disabled
+- +logging.local_jsonl=true
+- training.resume=true
+- training.checkpoint=/mnt/gfs/home/zuxinglu/workspace/runs/2026-10-28-tier2-runin-a5/ep25/model_180000.safetensors
+- training.max_iterations=360000
+- training.early_stop_help_zero_tail=0

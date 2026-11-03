@@ -1,0 +1,20 @@
+[2026-11-04 02:11:14] r9_pool FREEZE: T_c9 = 2026-11-04 02:11:14 CST (the freeze start); script sha256 519c6fd692d3a9a8d6780d185db3d23a8a882697e877ccfa312ccb53c73b4cf3
+[2026-11-04 02:11:14] scan at T_c9 2026-11-04 02:11:14 CST: 171 directories, 128 eligible runs; new 0, trained further 4, unchanged 124 (vs round 8's 2026-11-03 12:00:00 CST)
+[2026-11-04 02:11:16] report files at T_c9: 48 files, 48 eligible; final at T_c9: 35 yes, 13 no
+[2026-11-04 02:11:16] candidates before roles: 64 files (48 report files, 16 mechanical picks)
+[2026-11-04 02:11:24] pool: 64 files: screen 34, reuse8 10, reuse7 13, barred 3, incumbent 4, duplicate 0, refused 0
+[2026-11-04 02:11:24] resolved in 10 s
+[2026-11-04 02:11:27] relocated ep00_zxrepg2_180000: ok fe10ce8b34af
+[2026-11-04 02:11:27] relocated ep02_zxrepg2_180000: ok a4c0e0670f21
+[2026-11-04 02:11:28] relocated ep10_zxrepg2_145500: ok 94c59d2d2743
+[2026-11-04 02:11:28] relocated ep11_zxrepg2_180000: ok c0902ff7e0f1
+[2026-11-04 02:11:28] relocated ep11_zxrepk3fix_59500: ok 22c7bee398e0
+[2026-11-04 02:11:28] relocated ep12_zxrepg2_180000: ok f99358ed0d6d
+[2026-11-04 02:11:29] relocated ep14_zxrepg2_134000: ok 3dc4e3c832d8
+[2026-11-04 02:11:29] relocated ep14_zxrepk3fix_276000: ok 4f7ee7722726
+[2026-11-04 02:11:29] relocated ep17_zxrepk3fix_74500: ok 1da2d7f36049
+[2026-11-04 02:11:29] relocated ep18_zxrepg2_180000: ok 276ec433d69a
+[2026-11-04 02:11:30] relocated ep21_zxrepg2_360000: ok 77f0189332b0
+[2026-11-04 02:11:30] relocated ep21_zxrepk3fix_80500: ok 829a91e2485a
+[2026-11-04 02:11:30] relocated ep25_zxrepk3fix_297000: ok 8e3667b10500
+[2026-11-04 02:11:30] relocated ep27_zxrepk3fix_62500: ok 222f8a0afae6

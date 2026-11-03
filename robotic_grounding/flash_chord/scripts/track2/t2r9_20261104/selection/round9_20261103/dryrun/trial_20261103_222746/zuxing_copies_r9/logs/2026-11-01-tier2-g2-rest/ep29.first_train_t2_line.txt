@@ -1,0 +1,1 @@
+train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24 seq=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06 support=false cpus=92,93,196,197 gpu=7 commit=bc3b1bd

@@ -1,0 +1,9 @@
+run            2026-11-01-tier2-g2-rest/ep07
+source         5090:/mnt/gfs/home/zuxinglu/workspace/runs/2026-11-01-tier2-g2-rest/ep07
+copied         2026-11-02 19:27:25 +0800
+status         finished (final.json)
+train log      /mnt/gfs/home/zuxinglu/workspace/logs/2026-11-01-tier2-g2-rest/ep07.log -> train.log; first line: train_t2: exp=g1_recon_body_coord_rsi_r2_runin root=human_motion_data_tier2_g2-2026-10-24 seq=2026-05-29_15-20-43_iron_round_table_02 support=true gpu=7 commit=82837c8
+task.parquet   /mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet
+parquet sha256 c239ec6185da28af0f1edb80b7319a614419a3bd942b01410f904138f36067b4 (file as it is now on 5090)
+models         26: 10000 14000 20000 30000 40000 50000 60000 70000 80000 90000 100000 110000 120000 130000 140000 150000 160000 170000 176500 177000 177500 178000 178500 179000 179500 180000 
+files          32 listed in SHA256SUMS (paths relative to this folder)

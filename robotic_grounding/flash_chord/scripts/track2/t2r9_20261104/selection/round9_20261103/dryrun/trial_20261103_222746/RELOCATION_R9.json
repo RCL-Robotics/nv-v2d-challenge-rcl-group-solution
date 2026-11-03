@@ -1,0 +1,179 @@
+{
+ "written_at": "2026-11-03 22:27:58",
+ "relocate_code": "/root/autodl-tmp/haoran.zhang/scripts/t2cons_r5_relocate.py",
+ "relocate_code_sha256": "09a6cb8e8a3f8e835c4b10caa37f6ad46b780374480e856cca7efbe479938bdb",
+ "rows": [
+  {
+   "job": "ep00_zxrepg2_180000",
+   "episode": 0,
+   "iteration": 180000,
+   "input": "g2",
+   "original_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/zuxing_copies_r9/reports/tier2-G2/ep00-tier2-G2.safetensors",
+   "original_sha256": "528281923b9993ea696e8ab4eda048cd1d0e3f4bd0a7b89a571e5d3c6d3d7b53",
+   "sha256sums_line": null,
+   "relocated_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/relocated_r9/reports/tier2-G2/ep00-tier2-G2.safetensors",
+   "relocated_sha256": "fe10ce8b34afa7c56d219e7675ec48bf6de1b52f534a1018b927a059ee8c93f5",
+   "fields_rewritten": "task.parquet,reference.parquet",
+   "old_parquet_path": "/mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+   "new_parquet_path": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet",
+   "parquet_sha256_new_path": "4847f30511c4c83d1c2c80075302f1149b3a0c8c94ad066d2473a5c6901934bf",
+   "n_tensors": 114,
+   "tensors_identical": true,
+   "safe_open_identical": true,
+   "data_block_sha256": "966465e53e4beb14d5eeee42c2b76bd522071299ff0486d676039a68e734578a",
+   "other_metadata_identical": true,
+   "config_diff_paths": [
+    "reference.parquet",
+    "task.parquet"
+   ],
+   "header_len_old": 31480,
+   "header_len_new": 31472,
+   "problems": "",
+   "status": "ok",
+   "written_at": "2026-11-03 22:27:57",
+   "verify": {
+    "ok": true,
+    "n_tensors": 114,
+    "tensors_identical": true,
+    "safe_open_identical": true,
+    "data_block_sha256": "966465e53e4beb14d5eeee42c2b76bd522071299ff0486d676039a68e734578a",
+    "other_metadata_identical": true,
+    "config_diff_paths": [
+     "reference.parquet",
+     "task.parquet"
+    ],
+    "header_len_old": 31480,
+    "header_len_new": 31472
+   }
+  },
+  {
+   "job": "ep02_zxrepg2_180000",
+   "episode": 2,
+   "iteration": 180000,
+   "input": "g2",
+   "original_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/zuxing_copies_r9/reports/tier2-G2/ep02-tier2-G2.safetensors",
+   "original_sha256": "938a5cfd64c184a21db607c614b3342dc779ffffe52b6153f6497bb861d86844",
+   "sha256sums_line": null,
+   "relocated_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/relocated_r9/reports/tier2-G2/ep02-tier2-G2.safetensors",
+   "relocated_sha256": "a4c0e0670f211b8ee80ff13c9646d07acca555684d8bed679bd6be88ddce302d",
+   "fields_rewritten": "task.parquet,reference.parquet",
+   "old_parquet_path": "/mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "new_parquet_path": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet",
+   "parquet_sha256_new_path": "4fa0ac6a25fae7c4537804df66ef6728bc3c7d2ae6697067fd5c219a6eb83d1f",
+   "n_tensors": 114,
+   "tensors_identical": true,
+   "safe_open_identical": true,
+   "data_block_sha256": "4023a6a32d13ffc11f1641b7fdf526f31f1787990caab5056afe7433516287af",
+   "other_metadata_identical": true,
+   "config_diff_paths": [
+    "reference.parquet",
+    "task.parquet"
+   ],
+   "header_len_old": 31488,
+   "header_len_new": 31480,
+   "problems": "",
+   "status": "ok",
+   "written_at": "2026-11-03 22:27:58",
+   "verify": {
+    "ok": true,
+    "n_tensors": 114,
+    "tensors_identical": true,
+    "safe_open_identical": true,
+    "data_block_sha256": "4023a6a32d13ffc11f1641b7fdf526f31f1787990caab5056afe7433516287af",
+    "other_metadata_identical": true,
+    "config_diff_paths": [
+     "reference.parquet",
+     "task.parquet"
+    ],
+    "header_len_old": 31488,
+    "header_len_new": 31480
+   }
+  },
+  {
+   "job": "ep10_zxrepg2_145500",
+   "episode": 10,
+   "iteration": 145500,
+   "input": "g2",
+   "original_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/zuxing_copies_r9/reports/tier2-G2/ep10-tier2-G2.safetensors",
+   "original_sha256": "c7e987b0e40f78b01c5f17773c1b734e78c7edd9cb7bcf29c08af31ef9a63ee9",
+   "sha256sums_line": null,
+   "relocated_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/relocated_r9/reports/tier2-G2/ep10-tier2-G2.safetensors",
+   "relocated_sha256": "94c59d2d274331f4180a999e5f7376d14831aaa732c9bdcb3c38ff1f4afa59a1",
+   "fields_rewritten": "task.parquet,reference.parquet",
+   "old_parquet_path": "/mnt/gfs/home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "new_parquet_path": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet",
+   "parquet_sha256_new_path": "892ec426f1a332b188d62bca9ed9484a0488189bb626d1a3691983b30e65caa8",
+   "n_tensors": 114,
+   "tensors_identical": true,
+   "safe_open_identical": true,
+   "data_block_sha256": "bc741cebe29555af6eded667ec8323883148118ecc4c7ca62d58f951e0eb788f",
+   "other_metadata_identical": true,
+   "config_diff_paths": [
+    "reference.parquet",
+    "task.parquet"
+   ],
+   "header_len_old": 31496,
+   "header_len_new": 31488,
+   "problems": "",
+   "status": "ok",
+   "written_at": "2026-11-03 22:27:58",
+   "verify": {
+    "ok": true,
+    "n_tensors": 114,
+    "tensors_identical": true,
+    "safe_open_identical": true,
+    "data_block_sha256": "bc741cebe29555af6eded667ec8323883148118ecc4c7ca62d58f951e0eb788f",
+    "other_metadata_identical": true,
+    "config_diff_paths": [
+     "reference.parquet",
+     "task.parquet"
+    ],
+    "header_len_old": 31496,
+    "header_len_new": 31488
+   }
+  },
+  {
+   "job": "ep11_zxrepg2_180000",
+   "episode": 11,
+   "iteration": 180000,
+   "input": "g2",
+   "original_copy": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/zuxing_copies_r9/reports/tier2-G2/ep11-tier2-G2.safetensors",
+   "original_sha256": "09a658b4e58b06f69d7dd38a73bd0db47f70458b39edc2132c857902b34d6699",
+   "sha256sums_line": null,
+   "relocated_file": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r9_20261103/dryrun/trial_20261103_222746/relocated_r9/reports/tier2-G2/ep11-tier2-G2.safetensors",
+   "relocated_sha256": "c0902ff7e0f1f680bb10844d27338e5e76de9bd173652ba48439f5677c3ffc48",
+   "fields_rewritten": "task.parquet,reference.parquet",
+   "old_parquet_path": "/home/zuxinglu/workspace/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "new_parquet_path": "/root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet",
+   "parquet_sha256_new_path": "28110da2b686fca420bc82e72478f5c221419dceb122dac456765de0f464b803",
+   "n_tensors": 114,
+   "tensors_identical": true,
+   "safe_open_identical": true,
+   "data_block_sha256": "7353f00b5c34f19fe9b917cf2a651c63d004376aa205abfd4e1f95fad4684c25",
+   "other_metadata_identical": true,
+   "config_diff_paths": [
+    "reference.parquet",
+    "task.parquet"
+   ],
+   "header_len_old": 31472,
+   "header_len_new": 31480,
+   "problems": "",
+   "status": "ok",
+   "written_at": "2026-11-03 22:27:58",
+   "verify": {
+    "ok": true,
+    "n_tensors": 114,
+    "tensors_identical": true,
+    "safe_open_identical": true,
+    "data_block_sha256": "7353f00b5c34f19fe9b917cf2a651c63d004376aa205abfd4e1f95fad4684c25",
+    "other_metadata_identical": true,
+    "config_diff_paths": [
+     "reference.parquet",
+     "task.parquet"
+    ],
+    "header_len_old": 31472,
+    "header_len_new": 31480
+   }
+  }
+ ]
+}

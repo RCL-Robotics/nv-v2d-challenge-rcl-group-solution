@@ -1,0 +1,66 @@
+t2cons_r9_pack.py check at 2026-11-04 02:44:24 (dry; nothing written except this file)
+script sha256 d249531b42414e16e6681612aa15d95b3d30b6618744d104643d4ab3ace7c9e0
+
+GATE
+  PREREG_R9.md 13c3b2a61e39cc76 == PREREG_R9.sha256 == hard-coded
+  PREREG_R9_PINS.md ce5e0137a3ab3985: 84 pins, 0 changed; pins this script 1bb9c8ba784de1a0
+  LOCK_R9.sha256: 14 lines, 0 changed
+  PREREG_R8.md bb912c57180dde82 == PREREG_R8.sha256 == hard-coded
+  PREREG_R8_PINS.md caf113a5608270c7: 67 pins, 0 changed; pins this script 735149acfd54eb5d
+  LOCK_R8.sha256: 16 lines, 0 changed
+  PREREG_R7.md 749649a79ca5616b == PREREG_R7.sha256 == hard-coded; 77 section-11 pins / commits hold
+  PREREG_R7_PINS.md 8378c5a418c9b1ec == its sha file == hard-coded; 11 pins hold
+  DRYRUN_R7.sha256: 17 lines hold
+  LOCK_R7.sha256: 28 lines hold
+  SNAPSHOT_R7.sha256: 525 lines hold
+  TRACKS_R7.sha256: 131 lines hold
+  RELOCATION_R7.sha256: 130 lines hold
+  pool / incumbents / references == pinned; 9 round-6 records == pinned
+  round-1 chain (pinned t2cons_consensus.check_pins): 0 fatal
+  phase F: heartbeat state done, exports {'ok': 49, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 490, 'failed': 0, 'pending': 0, 'no_export': 0}; no driver / driver.pid: True
+  kit + stock trees == integrity/baseline.json (ef9b5035): True
+  SELECTION_S7.sha256 106fe7beb468c348 holds; lists final_r7.json: True
+  scripts/t2cons_r7_consensus.py sha256 e7545dfa7fdff0681123d77e2dde3f65ed6a22ead8d4d12057d9b61af9e2708a
+  round 7 chain: 0 fatal; SELECTION_R7.sha256 24 lines checked
+  phase F8: heartbeat state done, exports {'ok': 1, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 10, 'failed': 0, 'pending': 0, 'no_export': 0}; deadline stop recorded: False
+  kit + stock trees == integrity/baseline.json: True
+  round 8 chain: 0 fatal; SELECTION_R8.sha256 22 lines checked
+  phase F9: heartbeat state done, exports {'ok': 3, 'refused': 0, 'failed': 0, 'pending': 0}, evals {'ok': 30, 'failed': 0, 'pending': 0, 'no_export': 0}; deadline stop recorded: False
+  kit + stock trees == integrity/baseline.json: True
+  SELECTION_R9.sha256 (47e5a8d7d1f00e11...): 22 entries verify; lists SELECTION_R9.json True
+  SELECTION_R9.json written by r9_select.py 1bb9c8ba; replaced ['10', '17', '21']; R9-CLOSEST trial 3
+  kit pins (9) hold; KIT_MANIFEST: 52 files, 0 mismatched
+
+FILE r9_closest (episode: job [input, role, run source] run/try)
+  ep00: ep00_z5k3fix_90000 [k3fix, finalist, round 7 phase F] run 3 try 1  rollout 76d21a9ba71b  export b320e5367474  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000000.npz
+  ep01: ep01_k3fix_final44922 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 5c05ef7fd9ce  export a15d9e85b045  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000001.npz
+  ep02: ep02_k3fix_final34093 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout a3a6a1dd5c3b  export 3f1ae6373cfb  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000002.npz
+  ep03: ep03_k3fix_final27068 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 9bfc35be309f  export e042571ca8a0  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000003.npz
+  ep04: ep04_zxg2_450000 [g2, finalist, round 7 phase F] run 3 try 1  rollout b32e65461007  export 067b24c2d34d  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000004.npz
+  ep05: ep05_zx_k3fix_88000 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 3a85e0da56b0  export 248dd05779f6  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000005.npz
+  ep06: ep06_k3fix_final28420 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 4546374bb77e  export 84bd48580640  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000006.npz
+  ep07: ep07_k3fix_final18529 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 11020f2c5c4a  export b02cb8f6597f  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000007.npz
+  ep08: ep08_k3easy_final17496 [k3, incumbent, round 7 phase F] run 3 try 1  rollout ad20019ba64e  export 17d421a19381  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/kalman/eval/frame_refs_k3/episode_000008.npz
+  ep09: ep09_raw_final39328 [raw, incumbent, round 7 phase F] run 3 try 1  rollout 19dcd300a081  export c73692c5b01e  frame ref written_from_released_tier2 /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000009.parquet
+  ep10: ep10_zxrepg2_145500 [g2, finalist, round 9 phase F] run 3 try 1  rollout 731001dc40a0  export 541b4ab87f7a  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000010.npz
+  ep11: ep11_raw_24000 [raw, incumbent, round 7 phase F] run 3 try 1  rollout fb9df65a4ef6  export 00cf20569e0c  frame ref written_from_released_tier2 /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000011.parquet
+  ep12: ep12_k3fix_final23178 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 9e9bd72aade4  export b455bb4dc170  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000012.npz
+  ep13: ep13_w312runinws_90000 [g2, finalist, round 8 phase F] run 3 try 1  rollout 48d29738c96d  export 22a4b2bd54fb  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000013.npz
+  ep14: ep14_k3fix_final44922 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 4f7f1df98b18  export 3c4740ef7bd4  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000014.npz
+  ep15: ep15_raw_final44922 [raw, incumbent, round 7 phase F] run 3 try 1  rollout f385c3b1add9  export d4bbb317cb71  frame ref written_from_released_tier2 /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000015.parquet
+  ep16: ep16_z5a5_120000 [g2, finalist, round 7 phase F] run 3 try 1  rollout f925765c071f  export 112fbb872352  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000016.npz
+  ep17: ep17_zxrepk3fix_74500 [k3fix, finalist, round 9 phase F] run 3 try 1  rollout 273d6614404a  export 81b571369f36  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000017.npz
+  ep18: ep18_k3fix_final18911 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout e915fa8b3db7  export de312489bafb  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000018.npz
+  ep19: ep19_z5g2hardc2_360000 [g2, finalist, round 7 phase F] run 3 try 1  rollout cb60107411db  export 31e024c287dc  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000019.npz
+  ep20: ep20_z5fill_90000 [k3fix, finalist, round 7 phase F] run 3 try 1  rollout 31fcc1d8d896  export fa681355a473  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000020.npz
+  ep21: ep21_zxrepk3fix_80500 [k3fix, finalist, round 9 phase F] run 3 try 1  rollout d87e335a787c  export b40da890f85a  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000021.npz
+  ep22: ep22_z5k3fix_89500 [k3fix, finalist, round 7 phase F] run 3 try 1  rollout e6f2787a1ab4  export 04bae1a2c3ac  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000022.npz
+  ep23: ep23_raw_final20023 [raw, incumbent, round 7 phase F] run 3 try 1  rollout 24fd6a2df221  export 961b538e4679  frame ref written_from_released_tier2 /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_2_synthetic_noise/data/chunk-000/episode_000023.parquet
+  ep24: ep24_z5q_150000 [g2, finalist, round 7 phase F] run 3 try 1  rollout 0e74a390606e  export d4bd2fe8dddd  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000024.npz
+  ep25: ep25_z5a5c_280500 [k3fix, finalist, round 7 phase F] run 3 try 1  rollout d3c9dda76616  export 0a2911f2f230  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000025.npz
+  ep26: ep26_zx_k3fix_92000 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 279879bff52e  export 25c600cb20fb  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000026.npz
+  ep27: ep27_k3fix_final20863 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 4bd2fb45b344  export e560ebffd954  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000027.npz
+  ep28: ep28_z5q_180000 [g2, finalist, round 7 phase F] run 3 try 1  rollout af2b414ca3e3  export 570c5c84a917  frame ref byte_copy /root/autodl-tmp/zuxing.lu/data/human_motion_data_tier2_g2-2026-10-24/frame_refs_g2/episode_000028.npz
+  ep29: ep29_k3fix_final17358 [k3fix, incumbent, round 7 phase F] run 3 try 1  rollout 42a230709777  export 8c984002495d  frame ref byte_copy /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/frame_refs_k3fix/episode_000029.npz
+
+PROBLEMS: none

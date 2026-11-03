@@ -1,0 +1,15 @@
+{
+  "checkpoint": "model_180000.safetensors",
+  "early_stop_help_zero_tail": 0,
+  "environment_steps": 17694720000,
+  "finished_at": "2026-10-31T06:34:32-07:00",
+  "help_zero_iterations": 145058,
+  "help_zero_since": 34942,
+  "iteration": 180000,
+  "max_iterations": 180000,
+  "reason": "max_iterations",
+  "resumed_from": "/home/zuxinglu/workspace/runs/2026-10-28-tier2-runin-k3fix-ws/ep09/model_101000.safetensors",
+  "rsi_state": "rsi_180000.safetensors",
+  "start_iteration": 101000,
+  "wall_seconds": 68056.3
+}

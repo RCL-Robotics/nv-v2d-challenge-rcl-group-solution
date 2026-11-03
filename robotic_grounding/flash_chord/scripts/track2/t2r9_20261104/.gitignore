@@ -1,0 +1,6 @@
+# Keep this record complete: robotic_grounding/flash_chord/.gitignore and the root .gitignore ignore *.log, build/,
+# out/ and wandb/, which here hold run and build records.
+!*.log
+!build/
+!out/
+!wandb/

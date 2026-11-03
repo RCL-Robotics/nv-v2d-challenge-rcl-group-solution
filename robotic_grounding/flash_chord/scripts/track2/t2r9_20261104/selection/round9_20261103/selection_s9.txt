@@ -1,0 +1,81 @@
+selection_s9 2026-11-04 02:27:11 CST (PREREG_R9 5.3 / 5.4; own-input gate + consensus-B vs round 1's frozen refs/B; finalists 3)
+ep00 P ep00_z5k3fix_90000 [k3fix] m_P_frozen 0.719120 (bar_S 0.729120); 1 new + 0 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep00_zxrepg2_180000 [g2] cons_S 0.637907 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep01 P ep01_k3fix_final44922 [k3fix] m_P_frozen 0.171319 (bar_S 0.181319); 0 new + 2 reused + 0 barred candidates, 0 eligible, 0 qualifying -> finalist none
+      ep01_zxg2_180000 [g2] cons_S 0.184321 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+      ep01_k3str_22500 [k3] cons_S 0.126088 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+ep02 P ep02_k3fix_final34093 [k3fix] m_P_frozen 0.868138 (bar_S 0.878138); 1 new + 0 reused + 1 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep02_z5q_180000 [k3fix] cons_S 0.894919 floor 3/3 eligible=True qualifies=False ["reused round-6 finalist with the phase-F verdict 'no replacement' against the same incumbent (PREREG_R7 5.4): not a finalist again"]
+      ep02_zxrepg2_180000 [g2] cons_S 0.833737 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep03 P ep03_k3fix_final27068 [k3fix] m_P_frozen 0.921527 (bar_S 0.931527); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep03_z5g2rest_180000 [g2] cons_S 0.858275 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep04 P ep04_zxg2_450000 [g2] m_P_frozen 0.429436 (bar_S 0.439436); 0 new + 1 reused + 0 barred candidates, 0 eligible, 0 qualifying -> finalist none
+      ep04_z5hfhc_180000 [k3fix] cons_S 0.123858 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+ep05 P ep05_zx_k3fix_88000 [k3fix] m_P_frozen 0.578153 (bar_S 0.588153); 0 new + 2 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep05_zxk3fix_180000 [k3fix] cons_S 0.583333 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep05_w32g2c_360000 [g2] cons_S 0.353544 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep06 P ep06_k3fix_final28420 [k3fix] m_P_frozen 0.797276 (bar_S 0.807276); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep06_z5q_180000 [g2] cons_S 0.790560 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep07 P ep07_k3fix_final18529 [k3fix] m_P_frozen 0.920452 (bar_S 0.930452); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep07_z5g2rest_180000 [g2] cons_S 0.802897 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep08 P ep08_k3easy_final17496 [k3] m_P_frozen 0.596363 (bar_S 0.606363); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep08_z5q_180000 [g2] cons_S 0.594839 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep09 P ep09_raw_final39328 [raw] m_P_frozen 0.760460 (bar_S 0.770460); 0 new + 2 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep09_rb15k3fixr_180000 [k3fix] cons_S 0.751173 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep09_z5g2_180000 [g2] cons_S 0.580172 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep10 P ep10_raw_final34267 [raw] m_P_frozen 0.412469 (bar_S 0.422469); 1 new + 0 reused + 0 barred candidates, 1 eligible, 1 qualifying -> finalist ep10_zxrepg2_145500
+      ep10_zxrepg2_145500 [g2] cons_S 0.445713 floor 3/3 eligible=True qualifies=True []
+ep11 P ep11_raw_24000 [raw] m_P_frozen 0.807319 (bar_S 0.817319); 2 new + 0 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep11_zxrepk3fix_59500 [k3fix] cons_S 0.789120 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep11_zxrepg2_180000 [g2] cons_S 0.693889 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep12 P ep12_k3fix_final23178 [k3fix] m_P_frozen 0.543911 (bar_S 0.553911); 1 new + 0 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep12_zxrepg2_180000 [g2] cons_S 0.549881 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep13 P ep13_w312runinws_90000 [g2] m_P_frozen 0.700230 (bar_S 0.710230); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep13_w312runinws_180000 [g2] cons_S 0.619170 floor 2/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep14 P ep14_k3fix_final44922 [k3fix] m_P_frozen 0.330614 (bar_S 0.340614); 2 new + 0 reused + 0 barred candidates, 0 eligible, 0 qualifying -> finalist none
+      ep14_zxrepk3fix_276000 [k3fix] cons_S 0.325046 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+      ep14_zxrepg2_134000 [g2] cons_S 0.269889 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+ep15 P ep15_raw_final44922 [raw] m_P_frozen 0.729895 (bar_S 0.739895); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep15_z5r2_180000 [g2] cons_S 0.640297 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep16 P ep16_z5a5_120000 [g2] m_P_frozen 0.951297 (bar_S 0.961297); no round-9 candidate: keeps its round-8 pick
+ep17 P ep17_z5r2_61500 [k3fix] m_P_frozen 0.659403 (bar_S 0.669403); 1 new + 1 reused + 0 barred candidates, 2 eligible, 1 qualifying -> finalist ep17_zxrepk3fix_74500
+      ep17_zxrepk3fix_74500 [k3fix] cons_S 0.671544 floor 3/3 eligible=True qualifies=True []
+      ep17_z5g2rest_180000 [g2] cons_S 0.631723 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep18 P ep18_k3fix_final18911 [k3fix] m_P_frozen 0.419129 (bar_S 0.429129); 1 new + 0 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep18_zxrepg2_180000 [g2] cons_S 0.369367 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep19 P ep19_z5g2hardc2_360000 [g2] m_P_frozen 0.581095 (bar_S 0.591095); no round-9 candidate: keeps its round-8 pick
+ep20 P ep20_z5fill_90000 [k3fix] m_P_frozen 0.872502 (bar_S 0.882502); 5 new + 1 reused + 0 barred candidates, 6 eligible, 0 qualifying -> finalist none
+      ep20_zxg2rest_140500 [g2] cons_S 0.865469 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep20_z5fill_180000 [k3fix] cons_S 0.863736 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep20_zxrepg2_139000 [g2] cons_S 0.863510 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep21 P ep21_z5fillc_282500 [g2] m_P_frozen 0.494543 (bar_S 0.504543); 2 new + 0 reused + 0 barred candidates, 2 eligible, 1 qualifying -> finalist ep21_zxrepk3fix_80500
+      ep21_zxrepk3fix_80500 [k3fix] cons_S 0.553712 floor 3/3 eligible=True qualifies=True []
+      ep21_zxrepg2_360000 [g2] cons_S 0.482731 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep22 P ep22_z5k3fix_89500 [k3fix] m_P_frozen 0.757867 (bar_S 0.767867); 5 new + 0 reused + 1 barred candidates, 6 eligible, 0 qualifying -> finalist none
+      ep22_z5k3fix_90000 [k3fix] cons_S 0.756577 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01', "reused round-6 finalist with the phase-F verdict 'no replacement' against the same incumbent (PREREG_R7 5.4): not a finalist again"]
+      ep22_zxg2rest_113500 [g2] cons_S 0.387401 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep22_zxrepg2_134500 [g2] cons_S 0.385141 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep23 P ep23_raw_final20023 [raw] m_P_frozen 0.902867 (bar_S 0.912867); 0 new + 2 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep23_k3easy_19162 [k3] cons_S 0.890944 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep23_w31g2_180000 [g2] cons_S 0.692169 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep24 P ep24_z5q_150000 [g2] m_P_frozen 0.905657 (bar_S 0.915657); 0 new + 2 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep24_z5q_180000 [g2] cons_S 0.901153 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep24_z5fill_180000 [k3fix] cons_S 0.890625 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep25 P ep25_z5a5c_280500 [k3fix] m_P_frozen 0.878012 (bar_S 0.888012); 1 new + 1 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep25_zxrepk3fix_297000 [k3fix] cons_S 0.873399 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep25_w31g2_180000 [g2] cons_S 0.644742 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep26 P ep26_zx_k3fix_92000 [k3fix] m_P_frozen 0.731484 (bar_S 0.741484); 0 new + 2 reused + 0 barred candidates, 2 eligible, 0 qualifying -> finalist none
+      ep26_zxk3fix_180000 [k3fix] cons_S 0.730475 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep26_zxg2rest_180000 [g2] cons_S 0.729354 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep27 P ep27_k3fix_final20863 [k3fix] m_P_frozen 0.897854 (bar_S 0.907854); 6 new + 0 reused + 0 barred candidates, 6 eligible, 0 qualifying -> finalist none
+      ep27_zxrepk3fix_62500 [k3fix] cons_S 0.893879 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep27_zxrepg2_116000 [g2] cons_S 0.860066 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+      ep27_zxg2rest_59000 [g2] cons_S 0.858923 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep28 P ep28_z5q_180000 [g2] m_P_frozen 0.150076 (bar_S 0.160076); 0 new + 1 reused + 0 barred candidates, 1 eligible, 0 qualifying -> finalist none
+      ep28_zxg2_180000 [g2] cons_S 0.140604 floor 3/3 eligible=True qualifies=False ['cons_S < m_P_frozen + 0.01']
+ep29 P ep29_k3fix_final17358 [k3fix] m_P_frozen 0.505675 (bar_S 0.515675); 5 new + 0 reused + 0 barred candidates, 0 eligible, 0 qualifying -> finalist none
+      ep29_zxrepg2_131000 [g2] cons_S 0.314374 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+      ep29_zxg2rest_111000 [g2] cons_S 0.309333 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+      ep29_zxg2rest_66500 [g2] cons_S 0.298760 floor 0/3 eligible=False qualifies=False ['floor 0/3 < 2']
+
+finalists: 10:ep10_zxrepg2_145500 (0.4457 vs bar_S 0.4225), 17:ep17_zxrepk3fix_74500 (0.6715 vs bar_S 0.6694), 21:ep21_zxrepk3fix_80500 (0.5537 vs bar_S 0.5045)

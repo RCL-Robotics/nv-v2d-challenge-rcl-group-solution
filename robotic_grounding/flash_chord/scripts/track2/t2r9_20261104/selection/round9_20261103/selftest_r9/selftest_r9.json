@@ -1,0 +1,89 @@
+{
+ "written_at": "2026-11-03 22:27:05",
+ "script_sha256": "1bb9c8ba784de1a0372f70d60fd5108e49d23a49111ccfc948dc1594eeba2096",
+ "r8_select_sha256": "735149acfd54eb5db39a776b4775303e16283ca274f34e71215581a94ca2508e",
+ "pass": true,
+ "tests": [
+  {
+   "test": "round-8 scorer pinned, round-7 scorer through it, constants: margin 0.01, phase-F floor 8/10, >= 8 fresh runs",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "select S: barred c (0.80) never finalist; d fails floor 1/3; b (0.70) is the finalist",
+   "ok": true,
+   "detail": "('b', [{'job': 'a', 'export_ok': True, 'n_own_ok': 3, 'own_runs': [1, 2, 3], 'flagged': False, 'floor_count': 3, 'cons_runs': [1, 2, 3], 'cons_auc': [0.62, 0.62, 0.62], 'cons_mean': 0.62, 'cons_var': 0.0, 'cons_mppe_mean': 1.0, 'eligible': True, 'three_ok_unflagged': True, 'why_not': [], 'm_P_frozen': 0.6, 'bar': 0.61, 'delta_vs_m_P': 0.020000000000000018, 'barred': False, 'qualifies': True}, {'jo"
+  },
+  {
+   "test": "select S: highest qualifying wins",
+   "ok": true,
+   "detail": "b"
+  },
+  {
+   "test": "select S: cons_S 0.70 < 0.695 + 0.01 -> no finalist",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "test": "select S: exact floats as round 7: finalist iff the float64 3-run mean >= m_P_frozen + 0.01",
+   "ok": true,
+   "detail": "(None, '0.6999999999999998', '0.7')"
+  },
+  {
+   "test": "select S: flagged / failed export never finalists",
+   "ok": true,
+   "detail": "None"
+  },
+  {
+   "test": "decide F: bar = max(m_P_frozen 0.49, recorded m_P_fresh 0.50) + 0.01 = 0.51; m_F 0.515 replaces",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.49, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': True, 'why_not': [], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.5149999999999999, 'delta_vs_bar': 0.004999999999999893}"
+  },
+  {
+   "test": "decide F: m_P_frozen 0.52 dominates -> bar 0.53; m_F 0.525 does not replace",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.52, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.53, 'finalist': 'f', 'changed': False, 'why_not': ['(c) m_F < max(m_P_frozen, m_P_fresh) + 0.01'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 10, 'm_F': 0.5250000000000001, 'delta_vs_bar': -0.004999999999999893}"
+  },
+  {
+   "test": "decide F: deadline (8 of 10 runs) -> not replaced ((a) fails)",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.4, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(a) 8 of 10 ok, non-flagged phase-F runs'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8], 'floor_count': 8, 'm_F': 0.6, 'delta_vs_bar': 0.08999999999999997}"
+  },
+  {
+   "test": "decide F: own-input SP=MP=1 in 7/10 -> not replaced ((b))",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.4, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(b) own-input SP-SR = MP-SR = 1 in 7 < 8 runs'], 'finalist_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 7, 'm_F': 0.5999999999999999, 'delta_vs_bar': 0.08999999999999986}"
+  },
+  {
+   "test": "decide F: a flagged run -> not replaced ((a))",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.4, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': 'f', 'changed': False, 'why_not': ['(a) 9 of 10 ok, non-flagged phase-F runs'], 'finalist_good_runs': [1, 2, 4, 5, 6, 7, 8, 9, 10], 'floor_count': 9, 'm_F': 0.6, 'delta_vs_bar': 0.08999999999999997}"
+  },
+  {
+   "test": "decide F: no finalist -> round-8 pick kept",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.4, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.5, 'm_P_fresh_infinite': False, 'bar': 0.51, 'finalist': None, 'changed': False, 'why_not': ['no finalist (5.4)']}"
+  },
+  {
+   "test": "round-8 replacement as incumbent: m_P_frozen = mean of its recorded runs -> bar = that mean + 0.01",
+   "ok": true,
+   "detail": "{'m_P_frozen': 0.7044999999999999, 'incumbent_good_runs': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'm_P_fresh': 0.7044999999999999, 'm_P_fresh_infinite': False, 'bar': 0.7144999999999999, 'finalist': None, 'changed': False, 'why_not': ['no finalist (5.4)']}"
+  },
+  {
+   "test": "would_pass: the round-9 test on recorded runs (10 good, floor 8, mean >= bar)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "test": "closest trial on a round-7 / round-8 / round-9 composite: closest-to-mean own-input AUC, ties lower t",
+   "ok": true,
+   "detail": "(5, 5)"
+  },
+  {
+   "test": "closest trial: a trial missing for one episode is not complete",
+   "ok": true,
+   "detail": "(6, 5)"
+  }
+ ],
+ "problems": []
+}

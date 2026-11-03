@@ -1,0 +1,441 @@
+[2026-11-04 02:12:14] r9_eval.py (PREREG_R9) start phase screen: --gpus 0,1,2,3,4,5,6,7; exclusive (3, 5, 6, 7) (no listed process), shared (0, 1, 2, 4) (only our ablation jobs listed); lanes {0: 2, 1: 4}, cores ('48-51,152-155', '96-103,200-207')
+[2026-11-04 02:12:14] lane locks gpu0: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu0.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu0.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/evallock/gpu0.lock
+[2026-11-04 02:12:14] lane locks gpu1: 11 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu1.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu1.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu1.lock
+[2026-11-04 02:12:14] lane locks gpu2: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu2.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu2.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu2.lock
+[2026-11-04 02:12:14] lane locks gpu3: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/train/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3easy/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu3.lock
+[2026-11-04 02:12:14] lane locks gpu4: 3 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu4.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu4.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu4.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/evallock/gpu4.lock
+[2026-11-04 02:12:14] lane locks gpu5: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu5.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu5.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu5.lock
+[2026-11-04 02:12:14] lane locks gpu6: 15 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu6.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu6.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3easy/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/report_5trials_20261101/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/evallock/gpu6.lock
+[2026-11-04 02:12:14] lane locks gpu7: 14 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu7.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu7.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/report_5trials_20261101/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/evallock/gpu7.lock
+[2026-11-04 02:12:14] integrity baseline: byte copy of round-1 /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_20261024/integrity/baseline.json (kit + stock trees unchanged since round 1)
+[2026-11-04 02:12:21] preflight: PREREG_R9.md 13c3b2a61e39cc76 (sha file 13c3b2a61e39cc76, hard-coded 13c3b2a61e39cc76)
+[2026-11-04 02:12:21] preflight: PREREG_R9_PINS.md ce5e0137a3ab3985: 84 pins, 0 changed; pins this script 274b657a8554442d
+[2026-11-04 02:12:21] preflight: LOCK_R9.sha256: 14 lines, 0 changed
+[2026-11-04 02:12:21] preflight: POOL_R9.sha256: 250 files, 0 changed
+[2026-11-04 02:12:21] preflight: RELOCATION_R9.sha256: 16 files, 0 changed
+[2026-11-04 02:12:21] preflight: TRACKS_R9.sha256: 101 files, 0 changed
+[2026-11-04 02:12:21] preflight: round 7 chain (its check_pins): 0 fatal, 31 lines verified
+[2026-11-04 02:12:21] preflight: evaluator: kit evaluate_policy.py == stock == 160d24f5fbeb
+[2026-11-04 02:12:21] preflight: fc_r2: code/fc_r2 @ 61fa5d3; HEAD 61fa5d3; eval_all.py 657295921e82; exporter 34e3d7f3a7dc
+[2026-11-04 02:12:21] preflight: b39b69b: code/nv-v2d_runin @ b39b69b (exporter accepted for speedup-trained checkpoints in t1best5); HEAD b39b69b; eval_all.py 657295921e82; exporter 04367c56564d
+[2026-11-04 02:12:21] preflight: stock runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9 HEAD 8c778f905cb3 (want 8c778f905cb3)
+[2026-11-04 02:12:21] preflight: shared eval lock files (never created by us): ['gpu0.lock', 'gpu1.lock', 'gpu2.lock', 'gpu4.lock', 'gpu5.lock', 'gpu6.lock', 'gpu7.lock']
+[2026-11-04 02:12:21] building manifest_s9.json (PREREG_R9 3.3; phase screen)
+[2026-11-04 02:12:24] phase S job list from POOL_R9.json: 34 new screen jobs x 3 runs (PREREG_R9 3.3)
+[2026-11-04 02:12:24] hull preflight: 18 parquets with cache_keys_t2.py (read-only, CPU)
+[2026-11-04 02:13:00]   ep00_zxrepg2_180000: screen g2 4847f305 ckpt fe10ce8b tree b39b69b: ok
+[2026-11-04 02:13:00]   ep02_zxrepg2_180000: screen g2 4fa0ac6a ckpt a4c0e067 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep10_zxrepg2_145500: screen g2 892ec426 ckpt 94c59d2d tree b39b69b: ok
+[2026-11-04 02:13:00]   ep11_zxrepg2_180000: screen g2 28110da2 ckpt c0902ff7 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep11_zxrepk3fix_59500: screen k3fix 81424556 ckpt 22c7bee3 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep12_zxrepg2_180000: screen g2 1ca074c0 ckpt f99358ed tree b39b69b: ok
+[2026-11-04 02:13:00]   ep14_zxrepg2_134000: screen g2 1367e766 ckpt 3dc4e3c8 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep14_zxrepk3fix_276000: screen k3fix 98ec1c57 ckpt 4f7ee772 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep17_zxrepk3fix_74500: screen k3fix 25c13883 ckpt 1da2d7f3 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep18_zxrepg2_180000: screen g2 9bdb802b ckpt 276ec433 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep20_zxg2rest_117000: screen g2 d2454482 ckpt e88274e3 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep20_zxg2rest_140500: screen g2 d2454482 ckpt 3a1b34d4 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep20_zxg2rest_70500: screen g2 d2454482 ckpt 2d7f5a54 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep20_zxg2rest_93500: screen g2 d2454482 ckpt 32fd8de8 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep20_zxrepg2_139000: screen g2 d2454482 ckpt 426717f8 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep21_zxrepg2_360000: screen g2 7e83080a ckpt 77f01893 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep21_zxrepk3fix_80500: screen k3fix 57ae96f3 ckpt 829a91e2 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep22_zxg2rest_113500: screen g2 0974cfbe ckpt 2b07bf32 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep22_zxg2rest_136000: screen g2 0974cfbe ckpt d87b14dd tree b39b69b: ok
+[2026-11-04 02:13:00]   ep22_zxg2rest_68000: screen g2 0974cfbe ckpt 8861680c tree b39b69b: ok
+[2026-11-04 02:13:00]   ep22_zxg2rest_90500: screen g2 0974cfbe ckpt 74dd79f2 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep22_zxrepg2_134500: screen g2 0974cfbe ckpt b40928c0 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep25_zxrepk3fix_297000: screen k3fix 273a87f5 ckpt 8e3667b1 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxg2rest_117500: screen g2 811ff883 ckpt d4da98c5 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxg2rest_59000: screen g2 811ff883 ckpt db2ea102 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxg2rest_78500: screen g2 811ff883 ckpt 8bad31d2 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxg2rest_98000: screen g2 811ff883 ckpt f0fe3555 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxrepg2_116000: screen g2 811ff883 ckpt 354abf60 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep27_zxrepk3fix_62500: screen k3fix 28fe6aee ckpt 222f8a0a tree b39b69b: ok
+[2026-11-04 02:13:00]   ep29_zxg2rest_111000: screen g2 8d63513e ckpt 86720914 tree b39b69b: ok
+[2026-11-04 02:13:00]   ep29_zxg2rest_133000: screen g2 8d63513e ckpt 25eb4bad tree b39b69b: ok
+[2026-11-04 02:13:00]   ep29_zxg2rest_66500: screen g2 8d63513e ckpt b5e04c6c tree b39b69b: ok
+[2026-11-04 02:13:00]   ep29_zxg2rest_88500: screen g2 8d63513e ckpt 404550ec tree b39b69b: ok
+[2026-11-04 02:13:00]   ep29_zxrepg2_131000: screen g2 8d63513e ckpt 68061502 tree b39b69b: ok
+[2026-11-04 02:13:00] start pid 926372: 34 jobs x 3 runs; gpus [0, 1, 2, 3, 4, 5, 6, 7], max parallel 6, lane max 2; metrics {'auc': 'add_auc', 'sp_sr': 'spider_sr_uncentered', 'mp_sr': 'maniptrans_sr', 'mppe': 'mean_per_point_error_cm'} (kit v2dlb/report_schema.py); never signals
+[2026-11-04 02:13:00] start export ep00_zxrepg2_180000 try 1 (pid 926882)
+[2026-11-04 02:13:00] start export ep02_zxrepg2_180000 try 1 (pid 926883)
+[2026-11-04 02:13:30] ep00_zxrepg2_180000: export ok (try 1, tolerance 0.0001): sha256 7adec9945bead1dc max_rel_diff 4.86e-05
+[2026-11-04 02:13:30] ep02_zxrepg2_180000: export ok (try 1, tolerance 0.0001): sha256 8a37be7a81993787 max_rel_diff 6.10e-05
+[2026-11-04 02:13:30] start export ep10_zxrepg2_145500 try 1 (pid 935141)
+[2026-11-04 02:13:30] start export ep11_zxrepg2_180000 try 1 (pid 935142)
+[2026-11-04 02:13:30] start eval ep00_zxrepg2_180000 run 1 try 1 on gpu 3 (pid 935149)
+[2026-11-04 02:13:30] start eval ep02_zxrepg2_180000 run 1 try 1 on gpu 4 (pid 935150)
+[2026-11-04 02:13:30] start eval ep00_zxrepg2_180000 run 2 try 1 on gpu 5 (pid 935151)
+[2026-11-04 02:13:30] start eval ep02_zxrepg2_180000 run 2 try 1 on gpu 6 (pid 935152)
+[2026-11-04 02:13:30] start eval ep00_zxrepg2_180000 run 3 try 1 on gpu 2 (pid 935167)
+[2026-11-04 02:13:30] start eval ep02_zxrepg2_180000 run 3 try 1 on gpu 0 (pid 935170)
+[2026-11-04 02:14:00] ep10_zxrepg2_145500: export ok (try 1, tolerance 0.0001): sha256 541b4ab87f7a2ad0 max_rel_diff 4.96e-05
+[2026-11-04 02:14:00] ep11_zxrepg2_180000: export ok (try 1, tolerance 0.0001): sha256 5d9298917060cc2a max_rel_diff 5.53e-05
+[2026-11-04 02:14:01] ep00_zxrepg2_180000 run 1 (try 1, gpu 3, 30 s): own-input AUC 0.8282 SP-SR 1.000 MP-SR 1.000 MPPE 1.44 cm
+[2026-11-04 02:14:01] ep02_zxrepg2_180000 run 1 (try 1, gpu 4, 30 s): own-input AUC 0.9751 SP-SR 1.000 MP-SR 1.000 MPPE 0.61 cm
+[2026-11-04 02:14:01] ep00_zxrepg2_180000 run 2 (try 1, gpu 5, 30 s): own-input AUC 0.8274 SP-SR 1.000 MP-SR 1.000 MPPE 1.42 cm
+[2026-11-04 02:14:01] ep02_zxrepg2_180000 run 2 (try 1, gpu 6, 31 s): own-input AUC 0.9688 SP-SR 1.000 MP-SR 1.000 MPPE 0.61 cm
+[2026-11-04 02:14:01] start export ep11_zxrepk3fix_59500 try 1 (pid 939263)
+[2026-11-04 02:14:01] start export ep12_zxrepg2_180000 try 1 (pid 939264)
+[2026-11-04 02:14:01] start eval ep10_zxrepg2_145500 run 1 try 1 on gpu 7 (pid 939271)
+[2026-11-04 02:14:01] 6 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 NUMA0 lane has 2 evals of ours / counted; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 9 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 resting 10 s after our last eval (cooldown); gpu6 resting 10 s after our last eval (cooldown); gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:14:11] start eval ep11_zxrepg2_180000 run 1 try 1 on gpu 3 (pid 939677)
+[2026-11-04 02:14:11] start eval ep10_zxrepg2_145500 run 2 try 1 on gpu 4 (pid 939678)
+[2026-11-04 02:14:11] start eval ep11_zxrepg2_180000 run 2 try 1 on gpu 5 (pid 939679)
+[2026-11-04 02:14:21] ep00_zxrepg2_180000 run 3 (try 1, gpu 2, 51 s): own-input AUC 0.8349 SP-SR 1.000 MP-SR 1.000 MPPE 1.43 cm
+[2026-11-04 02:14:22] ep02_zxrepg2_180000 run 3 (try 1, gpu 0, 51 s): own-input AUC 0.9696 SP-SR 1.000 MP-SR 1.000 MPPE 0.61 cm
+[2026-11-04 02:14:22] start eval ep10_zxrepg2_145500 run 3 try 1 on gpu 1 (pid 940494)
+[2026-11-04 02:14:22] 2 eval(s) ready, waiting: no usable GPU: gpu0 resting 9 s after our last eval (cooldown); gpu1 one of our (or a counted external) evals runs there; gpu2 resting 9 s after our last eval (cooldown); gpu3 one of our (or a counted external) evals runs there; gpu4 one of our (or a counted external) evals runs there; gpu5 one of our (or a counted external) evals runs there; gpu6 NUMA1 lane has 4 evals of ours / counted; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:14:32] ep11_zxrepk3fix_59500: export ok (try 1, tolerance 0.0001): sha256 d7968a8674fa7fc9 max_rel_diff 5.34e-05
+[2026-11-04 02:14:32] ep12_zxrepg2_180000: export ok (try 1, tolerance 0.0001): sha256 1df8c09897e9ee67 max_rel_diff 3.48e-05
+[2026-11-04 02:14:32] ep10_zxrepg2_145500 run 1 (try 1, gpu 7, 31 s): own-input AUC 0.6741 SP-SR 1.000 MP-SR 1.000 MPPE 1.47 cm
+[2026-11-04 02:14:32] start export ep14_zxrepg2_134000 try 1 (pid 942217)
+[2026-11-04 02:14:32] start export ep14_zxrepk3fix_276000 try 1 (pid 942218)
+[2026-11-04 02:14:33] start eval ep11_zxrepk3fix_59500 run 1 try 1 on gpu 6 (pid 942474)
+[2026-11-04 02:14:33] start eval ep12_zxrepg2_180000 run 1 try 1 on gpu 2 (pid 942475)
+[2026-11-04 02:14:43] ep11_zxrepg2_180000 run 1 (try 1, gpu 3, 31 s): own-input AUC 0.9616 SP-SR 1.000 MP-SR 1.000 MPPE 0.66 cm
+[2026-11-04 02:14:43] ep10_zxrepg2_145500 run 2 (try 1, gpu 4, 31 s): own-input AUC 0.7023 SP-SR 1.000 MP-SR 1.000 MPPE 1.47 cm
+[2026-11-04 02:14:43] ep11_zxrepg2_180000 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.9616 SP-SR 1.000 MP-SR 1.000 MPPE 0.65 cm
+[2026-11-04 02:14:43] start eval ep11_zxrepk3fix_59500 run 2 try 1 on gpu 7 (pid 943468)
+[2026-11-04 02:14:43] 5 eval(s) ready, waiting: no usable GPU: gpu0 NUMA0 lane has 2 evals of ours / counted; gpu1 one of our (or a counted external) evals runs there; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 9 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 resting 10 s after our last eval (cooldown); gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:14:53] start eval ep12_zxrepg2_180000 run 2 try 1 on gpu 3 (pid 944734)
+[2026-11-04 02:14:53] start eval ep11_zxrepg2_180000 run 3 try 1 on gpu 4 (pid 944735)
+[2026-11-04 02:15:04] ep14_zxrepg2_134000: export ok (try 1, tolerance 0.0001): sha256 621c2fc3ae1296e0 max_rel_diff 4.01e-05
+[2026-11-04 02:15:04] ep14_zxrepk3fix_276000: export ok (try 1, tolerance 0.0001): sha256 8e217766b17fbc4d max_rel_diff 7.63e-05
+[2026-11-04 02:15:04] ep11_zxrepk3fix_59500 run 1 (try 1, gpu 6, 31 s): own-input AUC 0.8793 SP-SR 1.000 MP-SR 1.000 MPPE 1.45 cm
+[2026-11-04 02:15:04] start export ep17_zxrepk3fix_74500 try 1 (pid 945477)
+[2026-11-04 02:15:04] start export ep18_zxrepg2_180000 try 1 (pid 945478)
+[2026-11-04 02:15:04] start eval ep14_zxrepg2_134000 run 1 try 1 on gpu 5 (pid 945502)
+[2026-11-04 02:15:14] ep10_zxrepg2_145500 run 3 (try 1, gpu 1, 52 s): own-input AUC 0.6977 SP-SR 1.000 MP-SR 1.000 MPPE 1.46 cm
+[2026-11-04 02:15:14] ep12_zxrepg2_180000 run 1 (try 1, gpu 2, 41 s): own-input AUC 0.8691 SP-SR 1.000 MP-SR 1.000 MPPE 1.31 cm
+[2026-11-04 02:15:14] ep11_zxrepk3fix_59500 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.8801 SP-SR 1.000 MP-SR 1.000 MPPE 1.48 cm
+[2026-11-04 02:15:14] start eval ep14_zxrepk3fix_276000 run 1 try 1 on gpu 0 (pid 946809)
+[2026-11-04 02:15:14] start eval ep14_zxrepg2_134000 run 2 try 1 on gpu 6 (pid 946810)
+[2026-11-04 02:15:14] 7 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 resting 9 s after our last eval (cooldown); gpu2 resting 10 s after our last eval (cooldown); gpu3 one of our (or a counted external) evals runs there; gpu4 one of our (or a counted external) evals runs there; gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 resting 10 s after our last eval (cooldown)
+[2026-11-04 02:15:25] ep12_zxrepg2_180000 run 2 (try 1, gpu 3, 31 s): own-input AUC 0.8677 SP-SR 1.000 MP-SR 1.000 MPPE 1.32 cm
+[2026-11-04 02:15:25] ep11_zxrepg2_180000 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.9630 SP-SR 1.000 MP-SR 1.000 MPPE 0.64 cm
+[2026-11-04 02:15:25] start eval ep14_zxrepk3fix_276000 run 2 try 1 on gpu 1 (pid 949032)
+[2026-11-04 02:15:25] start eval ep11_zxrepk3fix_59500 run 3 try 1 on gpu 7 (pid 949059)
+[2026-11-04 02:15:25] 5 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 one of our (or a counted external) evals runs there; gpu2 NUMA0 lane has 2 evals of ours / counted; gpu3 resting 9 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:15:35] ep17_zxrepk3fix_74500: export ok (try 1, tolerance 0.0001): sha256 81b571369f36f392 max_rel_diff 3.81e-05
+[2026-11-04 02:15:35] ep18_zxrepg2_180000: export ok (try 1, tolerance 0.0001): sha256 7ff9bd6cc7109606 max_rel_diff 3.05e-05
+[2026-11-04 02:15:35] ep14_zxrepg2_134000 run 1 (try 1, gpu 5, 31 s): own-input AUC 0.5639 SP-SR 0.000 MP-SR 0.000 MPPE 21.18 cm
+[2026-11-04 02:15:35] start export ep20_zxg2rest_117000 try 1 (pid 952978)
+[2026-11-04 02:15:35] start export ep20_zxg2rest_140500 try 1 (pid 952979)
+[2026-11-04 02:15:35] start eval ep17_zxrepk3fix_74500 run 1 try 1 on gpu 3 (pid 952986)
+[2026-11-04 02:15:35] start eval ep18_zxrepg2_180000 run 1 try 1 on gpu 4 (pid 952987)
+[2026-11-04 02:15:46] ep14_zxrepg2_134000 run 2 (try 1, gpu 6, 31 s): own-input AUC 0.5745 SP-SR 0.000 MP-SR 0.000 MPPE 19.49 cm
+[2026-11-04 02:15:46] start eval ep17_zxrepk3fix_74500 run 2 try 1 on gpu 5 (pid 954408)
+[2026-11-04 02:15:56] ep11_zxrepk3fix_59500 run 3 (try 1, gpu 7, 31 s): own-input AUC 0.8804 SP-SR 1.000 MP-SR 1.000 MPPE 1.40 cm
+[2026-11-04 02:15:56] start eval ep18_zxrepg2_180000 run 2 try 1 on gpu 6 (pid 955791)
+[2026-11-04 02:16:06] ep14_zxrepk3fix_276000 run 1 (try 1, gpu 0, 52 s): own-input AUC 0.5282 SP-SR 0.000 MP-SR 0.000 MPPE 8.11 cm
+[2026-11-04 02:16:06] ep20_zxg2rest_117000: export ok (try 1, tolerance 0.0001): sha256 83a241e74d8c63fb max_rel_diff 2.67e-05
+[2026-11-04 02:16:06] ep20_zxg2rest_140500: export ok (try 1, tolerance 0.0001): sha256 c2b09ecb561fe5d9 max_rel_diff 3.91e-05
+[2026-11-04 02:16:06] ep17_zxrepk3fix_74500 run 1 (try 1, gpu 3, 31 s): own-input AUC 0.7915 SP-SR 1.000 MP-SR 1.000 MPPE 1.78 cm
+[2026-11-04 02:16:07] ep18_zxrepg2_180000 run 1 (try 1, gpu 4, 31 s): own-input AUC 0.8153 SP-SR 1.000 MP-SR 1.000 MPPE 2.02 cm
+[2026-11-04 02:16:07] start export ep20_zxg2rest_70500 try 1 (pid 956479)
+[2026-11-04 02:16:07] start export ep20_zxg2rest_93500 try 1 (pid 956480)
+[2026-11-04 02:16:07] start eval ep20_zxg2rest_117000 run 1 try 1 on gpu 2 (pid 956487)
+[2026-11-04 02:16:07] start eval ep20_zxg2rest_140500 run 1 try 1 on gpu 7 (pid 956488)
+[2026-11-04 02:16:07] 11 eval(s) ready, waiting: no usable GPU: gpu0 resting 9 s after our last eval (cooldown); gpu1 one of our (or a counted external) evals runs there; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 10 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:16:17] ep14_zxrepk3fix_276000 run 2 (try 1, gpu 1, 52 s): own-input AUC 0.5332 SP-SR 0.000 MP-SR 0.000 MPPE 41.01 cm
+[2026-11-04 02:16:17] ep17_zxrepk3fix_74500 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.7810 SP-SR 1.000 MP-SR 1.000 MPPE 1.83 cm
+[2026-11-04 02:16:17] start eval ep20_zxg2rest_117000 run 2 try 1 on gpu 0 (pid 957443)
+[2026-11-04 02:16:17] start eval ep20_zxg2rest_140500 run 2 try 1 on gpu 3 (pid 957444)
+[2026-11-04 02:16:17] start eval ep12_zxrepg2_180000 run 3 try 1 on gpu 4 (pid 957445)
+[2026-11-04 02:16:27] ep18_zxrepg2_180000 run 2 (try 1, gpu 6, 31 s): own-input AUC 0.8009 SP-SR 1.000 MP-SR 1.000 MPPE 2.02 cm
+[2026-11-04 02:16:28] start eval ep14_zxrepg2_134000 run 3 try 1 on gpu 5 (pid 958863)
+[2026-11-04 02:16:38] ep20_zxg2rest_70500: export ok (try 1, tolerance 0.0001): sha256 6c018e4f05ff7a7e max_rel_diff 3.81e-05
+[2026-11-04 02:16:38] ep20_zxg2rest_93500: export ok (try 1, tolerance 0.0001): sha256 c4e9dec4283ae9de max_rel_diff 2.34e-05
+[2026-11-04 02:16:38] ep20_zxg2rest_140500 run 1 (try 1, gpu 7, 31 s): own-input AUC 0.9580 SP-SR 1.000 MP-SR 1.000 MPPE 0.74 cm
+[2026-11-04 02:16:38] start export ep20_zxrepg2_139000 try 1 (pid 960903)
+[2026-11-04 02:16:38] start export ep21_zxrepg2_360000 try 1 (pid 960904)
+[2026-11-04 02:16:38] start eval ep20_zxg2rest_70500 run 1 try 1 on gpu 6 (pid 960922)
+[2026-11-04 02:16:48] ep20_zxg2rest_117000 run 1 (try 1, gpu 2, 41 s): own-input AUC 0.9585 SP-SR 1.000 MP-SR 1.000 MPPE 0.76 cm
+[2026-11-04 02:16:48] ep20_zxg2rest_140500 run 2 (try 1, gpu 3, 31 s): own-input AUC 0.9594 SP-SR 1.000 MP-SR 1.000 MPPE 0.80 cm
+[2026-11-04 02:16:48] ep12_zxrepg2_180000 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.8712 SP-SR 1.000 MP-SR 1.000 MPPE 1.30 cm
+[2026-11-04 02:16:49] start eval ep20_zxg2rest_93500 run 1 try 1 on gpu 1 (pid 961812)
+[2026-11-04 02:16:49] start eval ep20_zxg2rest_70500 run 2 try 1 on gpu 7 (pid 961813)
+[2026-11-04 02:16:49] 10 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 one of our (or a counted external) evals runs there; gpu2 resting 9 s after our last eval (cooldown); gpu3 resting 10 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:16:59] ep20_zxg2rest_117000 run 2 (try 1, gpu 0, 41 s): own-input AUC 0.9452 SP-SR 1.000 MP-SR 1.000 MPPE 0.97 cm
+[2026-11-04 02:16:59] ep14_zxrepg2_134000 run 3 (try 1, gpu 5, 31 s): own-input AUC 0.5695 SP-SR 0.000 MP-SR 0.000 MPPE 38.18 cm
+[2026-11-04 02:16:59] start eval ep20_zxg2rest_93500 run 2 try 1 on gpu 2 (pid 962651)
+[2026-11-04 02:16:59] start eval ep14_zxrepk3fix_276000 run 3 try 1 on gpu 3 (pid 962681)
+[2026-11-04 02:16:59] start eval ep17_zxrepk3fix_74500 run 3 try 1 on gpu 4 (pid 962682)
+[2026-11-04 02:17:10] ep20_zxrepg2_139000: export ok (try 1, tolerance 0.0001): sha256 2b168d36e6070cbe max_rel_diff 4.20e-05
+[2026-11-04 02:17:10] ep21_zxrepg2_360000: export ok (try 1, tolerance 0.0001): sha256 86ff4313ef1fb7cf max_rel_diff 7.44e-05
+[2026-11-04 02:17:10] ep20_zxg2rest_70500 run 1 (try 1, gpu 6, 32 s): own-input AUC 0.9450 SP-SR 1.000 MP-SR 1.000 MPPE 0.83 cm
+[2026-11-04 02:17:10] start export ep21_zxrepk3fix_80500 try 1 (pid 963935)
+[2026-11-04 02:17:10] start export ep22_zxg2rest_113500 try 1 (pid 963936)
+[2026-11-04 02:17:10] start eval ep20_zxrepg2_139000 run 1 try 1 on gpu 5 (pid 963943)
+[2026-11-04 02:17:20] ep20_zxg2rest_70500 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.9539 SP-SR 1.000 MP-SR 1.000 MPPE 0.74 cm
+[2026-11-04 02:17:20] start eval ep21_zxrepg2_360000 run 1 try 1 on gpu 6 (pid 965878)
+[2026-11-04 02:17:30] ep20_zxg2rest_93500 run 1 (try 1, gpu 1, 42 s): own-input AUC 0.9508 SP-SR 1.000 MP-SR 1.000 MPPE 0.79 cm
+[2026-11-04 02:17:30] ep14_zxrepk3fix_276000 run 3 (try 1, gpu 3, 31 s): own-input AUC 0.5345 SP-SR 1.000 MP-SR 0.000 MPPE 9.41 cm
+[2026-11-04 02:17:31] ep17_zxrepk3fix_74500 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.7932 SP-SR 1.000 MP-SR 1.000 MPPE 1.78 cm
+[2026-11-04 02:17:31] start eval ep20_zxrepg2_139000 run 2 try 1 on gpu 0 (pid 970572)
+[2026-11-04 02:17:31] start eval ep21_zxrepg2_360000 run 2 try 1 on gpu 7 (pid 970573)
+[2026-11-04 02:17:31] 9 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 resting 9 s after our last eval (cooldown); gpu2 one of our (or a counted external) evals runs there; gpu3 resting 10 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:17:41] ep20_zxg2rest_93500 run 2 (try 1, gpu 2, 42 s): own-input AUC 0.9420 SP-SR 1.000 MP-SR 1.000 MPPE 0.86 cm
+[2026-11-04 02:17:41] ep21_zxrepk3fix_80500: export ok (try 1, tolerance 0.0001): sha256 b40da890f85a3c00 max_rel_diff 4.63e-05
+[2026-11-04 02:17:41] ep22_zxg2rest_113500: export ok (try 1, tolerance 0.0001): sha256 1ef7cc1d0a7f4e75 max_rel_diff 3.24e-05
+[2026-11-04 02:17:41] ep20_zxrepg2_139000 run 1 (try 1, gpu 5, 31 s): own-input AUC 0.9567 SP-SR 1.000 MP-SR 1.000 MPPE 0.87 cm
+[2026-11-04 02:17:41] start export ep22_zxg2rest_136000 try 1 (pid 971301)
+[2026-11-04 02:17:41] start export ep22_zxg2rest_68000 try 1 (pid 971302)
+[2026-11-04 02:17:41] start eval ep21_zxrepk3fix_80500 run 1 try 1 on gpu 1 (pid 971310)
+[2026-11-04 02:17:41] start eval ep22_zxg2rest_113500 run 1 try 1 on gpu 3 (pid 971311)
+[2026-11-04 02:17:41] start eval ep21_zxrepk3fix_80500 run 2 try 1 on gpu 4 (pid 971312)
+[2026-11-04 02:17:51] ep21_zxrepg2_360000 run 1 (try 1, gpu 6, 31 s): own-input AUC 0.6194 SP-SR 1.000 MP-SR 1.000 MPPE 1.83 cm
+[2026-11-04 02:17:52] start eval ep22_zxg2rest_113500 run 2 try 1 on gpu 5 (pid 972774)
+[2026-11-04 02:18:02] ep21_zxrepg2_360000 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.6243 SP-SR 1.000 MP-SR 1.000 MPPE 1.83 cm
+[2026-11-04 02:18:02] start eval ep18_zxrepg2_180000 run 3 try 1 on gpu 6 (pid 974485)
+[2026-11-04 02:18:12] ep20_zxrepg2_139000 run 2 (try 1, gpu 0, 41 s): own-input AUC 0.9594 SP-SR 1.000 MP-SR 1.000 MPPE 0.78 cm
+[2026-11-04 02:18:12] ep22_zxg2rest_136000: export ok (try 1, tolerance 0.0001): sha256 c327aa8e76b4245c max_rel_diff 4.77e-05
+[2026-11-04 02:18:12] ep22_zxg2rest_68000: export ok (try 1, tolerance 0.0001): sha256 6caa8aada3ec0a63 max_rel_diff 2.47e-05
+[2026-11-04 02:18:12] ep22_zxg2rest_113500 run 1 (try 1, gpu 3, 31 s): own-input AUC 0.6245 SP-SR 1.000 MP-SR 1.000 MPPE 1.97 cm
+[2026-11-04 02:18:12] ep21_zxrepk3fix_80500 run 2 (try 1, gpu 4, 31 s): own-input AUC 0.6564 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:18:12] start export ep22_zxg2rest_90500 try 1 (pid 975238)
+[2026-11-04 02:18:12] start export ep22_zxrepg2_134500 try 1 (pid 975239)
+[2026-11-04 02:18:13] start eval ep22_zxg2rest_136000 run 1 try 1 on gpu 2 (pid 975246)
+[2026-11-04 02:18:13] start eval ep22_zxg2rest_68000 run 1 try 1 on gpu 7 (pid 975247)
+[2026-11-04 02:18:23] ep22_zxg2rest_113500 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.6456 SP-SR 1.000 MP-SR 1.000 MPPE 1.93 cm
+[2026-11-04 02:18:23] start eval ep22_zxg2rest_136000 run 2 try 1 on gpu 3 (pid 976175)
+[2026-11-04 02:18:23] start eval ep22_zxg2rest_68000 run 2 try 1 on gpu 4 (pid 976176)
+[2026-11-04 02:18:33] ep21_zxrepk3fix_80500 run 1 (try 1, gpu 1, 52 s): own-input AUC 0.6502 SP-SR 1.000 MP-SR 1.000 MPPE 1.94 cm
+[2026-11-04 02:18:33] ep18_zxrepg2_180000 run 3 (try 1, gpu 6, 31 s): own-input AUC 0.8006 SP-SR 1.000 MP-SR 1.000 MPPE 2.04 cm
+[2026-11-04 02:18:34] start eval ep20_zxg2rest_117000 run 3 try 1 on gpu 0 (pid 977472)
+[2026-11-04 02:18:34] start eval ep20_zxg2rest_140500 run 3 try 1 on gpu 5 (pid 977473)
+[2026-11-04 02:18:44] ep22_zxg2rest_90500: export ok (try 1, tolerance 0.0001): sha256 b4a0f2a2f4e2b6d6 max_rel_diff 3.72e-05
+[2026-11-04 02:18:44] ep22_zxrepg2_134500: export ok (try 1, tolerance 0.0001): sha256 cced6fde2a3d69b7 max_rel_diff 4.10e-05
+[2026-11-04 02:18:44] ep22_zxg2rest_68000 run 1 (try 1, gpu 7, 31 s): own-input AUC 0.6349 SP-SR 1.000 MP-SR 1.000 MPPE 1.93 cm
+[2026-11-04 02:18:44] start export ep25_zxrepk3fix_297000 try 1 (pid 979320)
+[2026-11-04 02:18:44] start export ep27_zxg2rest_117500 try 1 (pid 979321)
+[2026-11-04 02:18:44] start eval ep22_zxg2rest_90500 run 1 try 1 on gpu 6 (pid 979328)
+[2026-11-04 02:18:54] ep22_zxg2rest_136000 run 1 (try 1, gpu 2, 42 s): own-input AUC 0.6428 SP-SR 1.000 MP-SR 1.000 MPPE 1.90 cm
+[2026-11-04 02:18:54] ep22_zxg2rest_136000 run 2 (try 1, gpu 3, 31 s): own-input AUC 0.6454 SP-SR 1.000 MP-SR 1.000 MPPE 1.89 cm
+[2026-11-04 02:18:54] ep22_zxg2rest_68000 run 2 (try 1, gpu 4, 31 s): own-input AUC 0.6313 SP-SR 1.000 MP-SR 1.000 MPPE 1.91 cm
+[2026-11-04 02:18:55] start eval ep22_zxrepg2_134500 run 1 try 1 on gpu 1 (pid 980661)
+[2026-11-04 02:18:55] start eval ep22_zxg2rest_90500 run 2 try 1 on gpu 7 (pid 980665)
+[2026-11-04 02:19:05] ep20_zxg2rest_140500 run 3 (try 1, gpu 5, 31 s): own-input AUC 0.9592 SP-SR 1.000 MP-SR 1.000 MPPE 0.76 cm
+[2026-11-04 02:19:05] start eval ep22_zxrepg2_134500 run 2 try 1 on gpu 3 (pid 981493)
+[2026-11-04 02:19:05] start eval ep20_zxg2rest_70500 run 3 try 1 on gpu 4 (pid 981494)
+[2026-11-04 02:19:15] ep20_zxg2rest_117000 run 3 (try 1, gpu 0, 41 s): own-input AUC 0.9532 SP-SR 1.000 MP-SR 1.000 MPPE 0.82 cm
+[2026-11-04 02:19:15] ep25_zxrepk3fix_297000: export refused at 0.0001 (['exporter refused: [\'DEV restore: max_rel_diff 1.144e-04 > 1.0e-04\', "stock runtime: {\'max_abs_diff\': 0.000274658203125, \'max_rel_diff\': 0.00011444091796875, \'max_abs_action\': 1146.34033203125, \'finite\': True} log_std_equal=True"]']): one fallback export at 0.0002
+[2026-11-04 02:19:15] ep27_zxg2rest_117500: export ok (try 1, tolerance 0.0001): sha256 98aa9a63bd176f18 max_rel_diff 5.15e-05
+[2026-11-04 02:19:15] ep22_zxg2rest_90500 run 1 (try 1, gpu 6, 31 s): own-input AUC 0.6393 SP-SR 1.000 MP-SR 1.000 MPPE 1.93 cm
+[2026-11-04 02:19:15] start export ep25_zxrepk3fix_297000 try 2 (pid 982748)
+[2026-11-04 02:19:15] start export ep27_zxg2rest_59000 try 1 (pid 982749)
+[2026-11-04 02:19:16] start eval ep27_zxg2rest_117500 run 1 try 1 on gpu 2 (pid 982824)
+[2026-11-04 02:19:16] start eval ep27_zxg2rest_117500 run 2 try 1 on gpu 5 (pid 982825)
+[2026-11-04 02:19:26] ep22_zxg2rest_90500 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.6348 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:19:26] start eval ep20_zxg2rest_93500 run 3 try 1 on gpu 6 (pid 984158)
+[2026-11-04 02:19:36] ep22_zxrepg2_134500 run 1 (try 1, gpu 1, 41 s): own-input AUC 0.6492 SP-SR 1.000 MP-SR 1.000 MPPE 1.89 cm
+[2026-11-04 02:19:36] ep22_zxrepg2_134500 run 2 (try 1, gpu 3, 31 s): own-input AUC 0.6408 SP-SR 1.000 MP-SR 1.000 MPPE 1.90 cm
+[2026-11-04 02:19:36] ep20_zxg2rest_70500 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.9459 SP-SR 1.000 MP-SR 1.000 MPPE 0.81 cm
+[2026-11-04 02:19:36] start eval ep20_zxrepg2_139000 run 3 try 1 on gpu 0 (pid 991223)
+[2026-11-04 02:19:36] start eval ep21_zxrepg2_360000 run 3 try 1 on gpu 7 (pid 991224)
+[2026-11-04 02:19:47] ep25_zxrepk3fix_297000: export ok (try 2, tolerance 0.0002 FALLBACK): sha256 e273cf7144700416 max_rel_diff 1.14e-04
+[2026-11-04 02:19:47] ep27_zxg2rest_59000: export ok (try 1, tolerance 0.0001): sha256 02f9ab2b746bf683 max_rel_diff 3.91e-05
+[2026-11-04 02:19:47] ep27_zxg2rest_117500 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.9718 SP-SR 1.000 MP-SR 1.000 MPPE 0.56 cm
+[2026-11-04 02:19:47] start export ep27_zxg2rest_78500 try 1 (pid 992017)
+[2026-11-04 02:19:47] start export ep27_zxg2rest_98000 try 1 (pid 992018)
+[2026-11-04 02:19:47] start eval ep25_zxrepk3fix_297000 run 1 try 1 on gpu 3 (pid 992033)
+[2026-11-04 02:19:47] start eval ep27_zxg2rest_59000 run 1 try 1 on gpu 4 (pid 992034)
+[2026-11-04 02:19:57] ep27_zxg2rest_117500 run 1 (try 1, gpu 2, 41 s): own-input AUC 0.9718 SP-SR 1.000 MP-SR 1.000 MPPE 0.55 cm
+[2026-11-04 02:19:57] ep20_zxg2rest_93500 run 3 (try 1, gpu 6, 31 s): own-input AUC 0.9502 SP-SR 1.000 MP-SR 1.000 MPPE 0.76 cm
+[2026-11-04 02:19:57] start eval ep25_zxrepk3fix_297000 run 2 try 1 on gpu 1 (pid 993413)
+[2026-11-04 02:19:57] start eval ep27_zxg2rest_59000 run 2 try 1 on gpu 5 (pid 993414)
+[2026-11-04 02:20:07] ep21_zxrepg2_360000 run 3 (try 1, gpu 7, 31 s): own-input AUC 0.6222 SP-SR 1.000 MP-SR 1.000 MPPE 1.83 cm
+[2026-11-04 02:20:08] start eval ep21_zxrepk3fix_80500 run 3 try 1 on gpu 6 (pid 994807)
+[2026-11-04 02:20:18] ep20_zxrepg2_139000 run 3 (try 1, gpu 0, 41 s): own-input AUC 0.9578 SP-SR 1.000 MP-SR 1.000 MPPE 0.85 cm
+[2026-11-04 02:20:18] ep27_zxg2rest_78500: export ok (try 1, tolerance 0.0001): sha256 0af52bffad516bdb max_rel_diff 4.20e-05
+[2026-11-04 02:20:18] ep27_zxg2rest_98000: export ok (try 1, tolerance 0.0001): sha256 8bc168019b1b2baf max_rel_diff 4.57e-05
+[2026-11-04 02:20:18] ep25_zxrepk3fix_297000 run 1 (try 1, gpu 3, 31 s): own-input AUC 0.9145 SP-SR 1.000 MP-SR 1.000 MPPE 1.00 cm
+[2026-11-04 02:20:18] ep27_zxg2rest_59000 run 1 (try 1, gpu 4, 31 s): own-input AUC 0.9727 SP-SR 1.000 MP-SR 1.000 MPPE 0.57 cm
+[2026-11-04 02:20:18] start export ep27_zxrepg2_116000 try 1 (pid 995969)
+[2026-11-04 02:20:18] start export ep27_zxrepk3fix_62500 try 1 (pid 995970)
+[2026-11-04 02:20:18] start eval ep27_zxg2rest_78500 run 1 try 1 on gpu 2 (pid 995979)
+[2026-11-04 02:20:18] start eval ep27_zxg2rest_98000 run 1 try 1 on gpu 7 (pid 995980)
+[2026-11-04 02:20:28] ep27_zxg2rest_59000 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.9719 SP-SR 1.000 MP-SR 1.000 MPPE 0.57 cm
+[2026-11-04 02:20:29] start eval ep27_zxg2rest_78500 run 2 try 1 on gpu 3 (pid 996806)
+[2026-11-04 02:20:29] start eval ep27_zxg2rest_98000 run 2 try 1 on gpu 4 (pid 996807)
+[2026-11-04 02:20:39] ep21_zxrepk3fix_80500 run 3 (try 1, gpu 6, 31 s): own-input AUC 0.6597 SP-SR 1.000 MP-SR 1.000 MPPE 1.89 cm
+[2026-11-04 02:20:39] start eval ep22_zxg2rest_113500 run 3 try 1 on gpu 5 (pid 998183)
+[2026-11-04 02:20:49] ep25_zxrepk3fix_297000 run 2 (try 1, gpu 1, 52 s): own-input AUC 0.9060 SP-SR 1.000 MP-SR 1.000 MPPE 1.09 cm
+[2026-11-04 02:20:49] ep27_zxrepg2_116000: export ok (try 1, tolerance 0.0001): sha256 ebbcc3658f67cb96 max_rel_diff 4.58e-05
+[2026-11-04 02:20:49] ep27_zxrepk3fix_62500: export ok (try 1, tolerance 0.0001): sha256 95346572db329196 max_rel_diff 2.00e-05
+[2026-11-04 02:20:49] ep27_zxg2rest_98000 run 1 (try 1, gpu 7, 31 s): own-input AUC 0.9728 SP-SR 1.000 MP-SR 1.000 MPPE 0.56 cm
+[2026-11-04 02:20:49] start export ep29_zxg2rest_111000 try 1 (pid 999727)
+[2026-11-04 02:20:49] start export ep29_zxg2rest_133000 try 1 (pid 999728)
+[2026-11-04 02:20:50] start eval ep27_zxrepg2_116000 run 1 try 1 on gpu 0 (pid 999747)
+[2026-11-04 02:20:50] start eval ep27_zxrepk3fix_62500 run 1 try 1 on gpu 6 (pid 999748)
+[2026-11-04 02:21:00] ep27_zxg2rest_78500 run 1 (try 1, gpu 2, 41 s): own-input AUC 0.9708 SP-SR 1.000 MP-SR 1.000 MPPE 0.60 cm
+[2026-11-04 02:21:00] ep27_zxg2rest_78500 run 2 (try 1, gpu 3, 31 s): own-input AUC 0.9725 SP-SR 1.000 MP-SR 1.000 MPPE 0.57 cm
+[2026-11-04 02:21:00] ep27_zxg2rest_98000 run 2 (try 1, gpu 4, 31 s): own-input AUC 0.9730 SP-SR 1.000 MP-SR 1.000 MPPE 0.54 cm
+[2026-11-04 02:21:00] start eval ep27_zxrepg2_116000 run 2 try 1 on gpu 1 (pid 1588)
+[2026-11-04 02:21:00] start eval ep27_zxrepk3fix_62500 run 2 try 1 on gpu 7 (pid 1589)
+[2026-11-04 02:21:10] ep22_zxg2rest_113500 run 3 (try 1, gpu 5, 31 s): own-input AUC 0.6439 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:21:11] start eval ep22_zxg2rest_136000 run 3 try 1 on gpu 3 (pid 3155)
+[2026-11-04 02:21:11] start eval ep22_zxg2rest_68000 run 3 try 1 on gpu 4 (pid 3156)
+[2026-11-04 02:21:21] ep29_zxg2rest_111000: export ok (try 1, tolerance 0.0001): sha256 fc46d214394b2450 max_rel_diff 4.86e-05
+[2026-11-04 02:21:21] ep29_zxg2rest_133000: export ok (try 1, tolerance 0.0001): sha256 fe33759720fefe3c max_rel_diff 4.77e-05
+[2026-11-04 02:21:21] ep27_zxrepk3fix_62500 run 1 (try 1, gpu 6, 31 s): own-input AUC 0.9781 SP-SR 1.000 MP-SR 1.000 MPPE 0.65 cm
+[2026-11-04 02:21:21] start export ep29_zxg2rest_66500 try 1 (pid 4672)
+[2026-11-04 02:21:21] start export ep29_zxg2rest_88500 try 1 (pid 4674)
+[2026-11-04 02:21:21] start eval ep29_zxg2rest_111000 run 1 try 1 on gpu 5 (pid 4713)
+[2026-11-04 02:21:31] ep27_zxrepg2_116000 run 1 (try 1, gpu 0, 41 s): own-input AUC 0.9731 SP-SR 1.000 MP-SR 1.000 MPPE 0.54 cm
+[2026-11-04 02:21:31] ep27_zxrepk3fix_62500 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.9761 SP-SR 1.000 MP-SR 1.000 MPPE 0.66 cm
+[2026-11-04 02:21:31] start eval ep29_zxg2rest_133000 run 1 try 1 on gpu 2 (pid 6023)
+[2026-11-04 02:21:31] start eval ep29_zxg2rest_111000 run 2 try 1 on gpu 6 (pid 6024)
+[2026-11-04 02:21:42] ep27_zxrepg2_116000 run 2 (try 1, gpu 1, 41 s): own-input AUC 0.9725 SP-SR 1.000 MP-SR 1.000 MPPE 0.58 cm
+[2026-11-04 02:21:42] ep22_zxg2rest_136000 run 3 (try 1, gpu 3, 31 s): own-input AUC 0.6289 SP-SR 1.000 MP-SR 1.000 MPPE 1.90 cm
+[2026-11-04 02:21:42] ep22_zxg2rest_68000 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.6194 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:21:42] start eval ep29_zxg2rest_133000 run 2 try 1 on gpu 0 (pid 9143)
+[2026-11-04 02:21:42] start eval ep22_zxg2rest_90500 run 3 try 1 on gpu 7 (pid 9144)
+[2026-11-04 02:21:52] ep29_zxg2rest_66500: export ok (try 1, tolerance 0.0001): sha256 a7be1f5905416fb9 max_rel_diff 6.10e-05
+[2026-11-04 02:21:52] ep29_zxg2rest_88500: export ok (try 1, tolerance 0.0001): sha256 777a7cdab34a5515 max_rel_diff 6.71e-05
+[2026-11-04 02:21:52] ep29_zxg2rest_111000 run 1 (try 1, gpu 5, 31 s): own-input AUC 0.5542 SP-SR 1.000 MP-SR 0.000 MPPE 3.50 cm
+[2026-11-04 02:21:52] start export ep29_zxrepg2_131000 try 1 (pid 10447)
+[2026-11-04 02:21:53] start eval ep29_zxg2rest_66500 run 1 try 1 on gpu 3 (pid 10479)
+[2026-11-04 02:21:53] start eval ep29_zxg2rest_88500 run 1 try 1 on gpu 4 (pid 10480)
+[2026-11-04 02:22:03] ep29_zxg2rest_111000 run 2 (try 1, gpu 6, 31 s): own-input AUC 0.5658 SP-SR 1.000 MP-SR 0.000 MPPE 3.38 cm
+[2026-11-04 02:22:03] start eval ep29_zxg2rest_66500 run 2 try 1 on gpu 5 (pid 12036)
+[2026-11-04 02:22:13] ep29_zxg2rest_133000 run 1 (try 1, gpu 2, 42 s): own-input AUC 0.5446 SP-SR 1.000 MP-SR 0.000 MPPE 3.54 cm
+[2026-11-04 02:22:13] ep22_zxg2rest_90500 run 3 (try 1, gpu 7, 31 s): own-input AUC 0.6362 SP-SR 1.000 MP-SR 1.000 MPPE 1.91 cm
+[2026-11-04 02:22:13] start eval ep29_zxg2rest_88500 run 2 try 1 on gpu 1 (pid 13364)
+[2026-11-04 02:22:13] start eval ep22_zxrepg2_134500 run 3 try 1 on gpu 6 (pid 13365)
+[2026-11-04 02:22:23] ep29_zxg2rest_133000 run 2 (try 1, gpu 0, 41 s): own-input AUC 0.5415 SP-SR 1.000 MP-SR 0.000 MPPE 3.71 cm
+[2026-11-04 02:22:23] ep29_zxrepg2_131000: export ok (try 1, tolerance 0.0001): sha256 a9c4df935bf26f12 max_rel_diff 6.48e-05
+[2026-11-04 02:22:24] ep29_zxg2rest_66500 run 1 (try 1, gpu 3, 31 s): own-input AUC 0.4956 SP-SR 1.000 MP-SR 0.000 MPPE 7.78 cm
+[2026-11-04 02:22:24] ep29_zxg2rest_88500 run 1 (try 1, gpu 4, 31 s): own-input AUC 0.5035 SP-SR 1.000 MP-SR 0.000 MPPE 3.93 cm
+[2026-11-04 02:22:24] start eval ep29_zxrepg2_131000 run 1 try 1 on gpu 2 (pid 14199)
+[2026-11-04 02:22:24] start eval ep29_zxrepg2_131000 run 2 try 1 on gpu 7 (pid 14268)
+[2026-11-04 02:22:34] ep29_zxg2rest_66500 run 2 (try 1, gpu 5, 31 s): own-input AUC 0.5221 SP-SR 1.000 MP-SR 0.000 MPPE 3.68 cm
+[2026-11-04 02:22:34] start eval ep25_zxrepk3fix_297000 run 3 try 1 on gpu 3 (pid 15401)
+[2026-11-04 02:22:34] start eval ep27_zxg2rest_117500 run 3 try 1 on gpu 4 (pid 15403)
+[2026-11-04 02:22:44] ep22_zxrepg2_134500 run 3 (try 1, gpu 6, 31 s): own-input AUC 0.6444 SP-SR 1.000 MP-SR 1.000 MPPE 1.91 cm
+[2026-11-04 02:22:45] start eval ep27_zxg2rest_59000 run 3 try 1 on gpu 5 (pid 16779)
+[2026-11-04 02:22:55] ep29_zxg2rest_88500 run 2 (try 1, gpu 1, 41 s): own-input AUC 0.5505 SP-SR 1.000 MP-SR 0.000 MPPE 3.42 cm
+[2026-11-04 02:22:55] ep29_zxrepg2_131000 run 2 (try 1, gpu 7, 31 s): own-input AUC 0.5497 SP-SR 1.000 MP-SR 0.000 MPPE 3.45 cm
+[2026-11-04 02:22:55] start eval ep27_zxg2rest_78500 run 3 try 1 on gpu 0 (pid 19318)
+[2026-11-04 02:22:55] start eval ep27_zxg2rest_98000 run 3 try 1 on gpu 6 (pid 19319)
+[2026-11-04 02:23:05] ep29_zxrepg2_131000 run 1 (try 1, gpu 2, 41 s): own-input AUC 0.5533 SP-SR 1.000 MP-SR 0.000 MPPE 3.40 cm
+[2026-11-04 02:23:05] ep25_zxrepk3fix_297000 run 3 (try 1, gpu 3, 31 s): own-input AUC 0.9177 SP-SR 1.000 MP-SR 1.000 MPPE 1.01 cm
+[2026-11-04 02:23:05] ep27_zxg2rest_117500 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.9725 SP-SR 1.000 MP-SR 1.000 MPPE 0.55 cm
+[2026-11-04 02:23:06] start eval ep27_zxrepg2_116000 run 3 try 1 on gpu 1 (pid 20228)
+[2026-11-04 02:23:06] start eval ep27_zxrepk3fix_62500 run 3 try 1 on gpu 7 (pid 20283)
+[2026-11-04 02:23:16] ep27_zxg2rest_59000 run 3 (try 1, gpu 5, 31 s): own-input AUC 0.9712 SP-SR 1.000 MP-SR 1.000 MPPE 0.61 cm
+[2026-11-04 02:23:16] start eval ep29_zxg2rest_111000 run 3 try 1 on gpu 3 (pid 21955)
+[2026-11-04 02:23:16] start eval ep29_zxg2rest_133000 run 3 try 1 on gpu 4 (pid 21956)
+[2026-11-04 02:23:26] ep27_zxg2rest_98000 run 3 (try 1, gpu 6, 31 s): own-input AUC 0.9721 SP-SR 1.000 MP-SR 1.000 MPPE 0.55 cm
+[2026-11-04 02:23:26] start eval ep29_zxg2rest_66500 run 3 try 1 on gpu 5 (pid 23456)
+[2026-11-04 02:23:36] ep27_zxg2rest_78500 run 3 (try 1, gpu 0, 41 s): own-input AUC 0.9715 SP-SR 1.000 MP-SR 1.000 MPPE 0.58 cm
+[2026-11-04 02:23:37] ep27_zxrepk3fix_62500 run 3 (try 1, gpu 7, 31 s): own-input AUC 0.9816 SP-SR 1.000 MP-SR 1.000 MPPE 0.64 cm
+[2026-11-04 02:23:37] start eval ep29_zxg2rest_88500 run 3 try 1 on gpu 2 (pid 25057)
+[2026-11-04 02:23:37] start eval ep29_zxrepg2_131000 run 3 try 1 on gpu 6 (pid 25092)
+[2026-11-04 02:23:47] ep27_zxrepg2_116000 run 3 (try 1, gpu 1, 41 s): own-input AUC 0.9717 SP-SR 1.000 MP-SR 1.000 MPPE 0.60 cm
+[2026-11-04 02:23:47] ep29_zxg2rest_111000 run 3 (try 1, gpu 3, 31 s): own-input AUC 0.4937 SP-SR 1.000 MP-SR 0.000 MPPE 6.86 cm
+[2026-11-04 02:23:47] ep29_zxg2rest_133000 run 3 (try 1, gpu 4, 31 s): own-input AUC 0.5472 SP-SR 1.000 MP-SR 0.000 MPPE 3.62 cm
+[2026-11-04 02:23:57] ep29_zxg2rest_66500 run 3 (try 1, gpu 5, 31 s): own-input AUC 0.5336 SP-SR 1.000 MP-SR 0.000 MPPE 3.53 cm
+[2026-11-04 02:24:07] ep29_zxrepg2_131000 run 3 (try 1, gpu 6, 30 s): own-input AUC 0.5452 SP-SR 1.000 MP-SR 0.000 MPPE 3.52 cm
+[2026-11-04 02:24:17] ep29_zxg2rest_88500 run 3 (try 1, gpu 2, 40 s): own-input AUC 0.5407 SP-SR 1.000 MP-SR 0.000 MPPE 3.46 cm
+[2026-11-04 02:24:18] every export and evaluation is final
+[2026-11-04 02:24:18] kit and stock runtime unchanged (file list, sizes, mtimes)
+[2026-11-04 02:24:18] driver end: {'phase': 'screen', 'jobs': 34, 'jobs_refused': 0, 'runs_per_job': 3, 'exports': {'ok': 34, 'refused': 0, 'failed': 0, 'pending': 0}, 'evals': {'ok': 102, 'failed': 0, 'pending': 0, 'no_export': 0}, 'exports_only': False}
+[2026-11-04 02:27:14] r9_eval.py (PREREG_R9) start phase final: --gpus 0,1,2,3,4,5,6,7; exclusive (3, 5, 6, 7) (no listed process), shared (0, 1, 2, 4) (only our ablation jobs listed); lanes {0: 2, 1: 4}, cores ('48-51,152-155', '96-103,200-207')
+[2026-11-04 02:27:14] lane locks gpu0: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu0.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu0.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu0.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu0.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/evallock/gpu0.lock
+[2026-11-04 02:27:14] lane locks gpu1: 11 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu1.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu1.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu1.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu1.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu1.lock
+[2026-11-04 02:27:14] lane locks gpu2: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu2.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu2.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu2.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu2.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu2.lock
+[2026-11-04 02:27:14] lane locks gpu3: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3ca/train/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3easy/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu3.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu3.lock
+[2026-11-04 02:27:14] lane locks gpu4: 3 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu4.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu4.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu4.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu4.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r8_20261103/evallock/gpu4.lock
+[2026-11-04 02:27:14] lane locks gpu5: 13 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu5.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu5.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu5.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu5.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu5.lock
+[2026-11-04 02:27:14] lane locks gpu6: 15 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu6.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu6.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu6.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/opus_easy/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3easy/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r5_20261029/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/report_5trials_20261101/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu6.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/evallock/gpu6.lock
+[2026-11-04 02:27:14] lane locks gpu7: 14 shared lock file(s): /root/autodl-tmp/haoran.zhang/fc_runs/queue_runin/evallock/gpu7.lock (= /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix2/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix3/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix4/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1fix5/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t2fix/evallock/gpu7.lock, /root/autodl-tmp/haoran.zhang/fc_runs/queue_t1improve/evallock/gpu7.lock); /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3fix_pilot/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier2/k3full/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r2_20261027/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r3_20261028/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/confirm/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r4_20261028/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r6_20261031/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/report_5trials_20261101/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/evallock/gpu7.lock; /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t2_consensus_r7_20261102/evallock/gpu7.lock
+[2026-11-04 02:27:21] preflight: PREREG_R9.md 13c3b2a61e39cc76 (sha file 13c3b2a61e39cc76, hard-coded 13c3b2a61e39cc76)
+[2026-11-04 02:27:21] preflight: PREREG_R9_PINS.md ce5e0137a3ab3985: 84 pins, 0 changed; pins this script 274b657a8554442d
+[2026-11-04 02:27:21] preflight: LOCK_R9.sha256: 14 lines, 0 changed
+[2026-11-04 02:27:21] preflight: POOL_R9.sha256: 250 files, 0 changed
+[2026-11-04 02:27:21] preflight: RELOCATION_R9.sha256: 16 files, 0 changed
+[2026-11-04 02:27:21] preflight: TRACKS_R9.sha256: 101 files, 0 changed
+[2026-11-04 02:27:21] preflight: round 7 chain (its check_pins): 0 fatal, 31 lines verified
+[2026-11-04 02:27:21] preflight: evaluator: kit evaluate_policy.py == stock == 160d24f5fbeb
+[2026-11-04 02:27:21] preflight: fc_r2: code/fc_r2 @ 61fa5d3; HEAD 61fa5d3; eval_all.py 657295921e82; exporter 34e3d7f3a7dc
+[2026-11-04 02:27:21] preflight: b39b69b: code/nv-v2d_runin @ b39b69b (exporter accepted for speedup-trained checkpoints in t1best5); HEAD b39b69b; eval_all.py 657295921e82; exporter 04367c56564d
+[2026-11-04 02:27:21] preflight: stock runtime /root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9 HEAD 8c778f905cb3 (want 8c778f905cb3)
+[2026-11-04 02:27:21] preflight: shared eval lock files (never created by us): ['gpu0.lock', 'gpu1.lock', 'gpu2.lock', 'gpu4.lock', 'gpu5.lock', 'gpu6.lock', 'gpu7.lock']
+[2026-11-04 02:27:21] building manifest_f9.json (PREREG_R9 3.4; phase final)
+[2026-11-04 02:27:22] phase F job list: 3 finalists x 10 runs (PREREG_R9 3.4; incumbents are not re-run)
+[2026-11-04 02:27:22] hull preflight: 3 parquets with cache_keys_t2.py (read-only, CPU)
+[2026-11-04 02:27:31]   ep10_zxrepg2_145500: finalist g2 892ec426 ckpt 94c59d2d tree b39b69b: ok
+[2026-11-04 02:27:31]   ep17_zxrepk3fix_74500: finalist k3fix 25c13883 ckpt 1da2d7f3 tree b39b69b: ok
+[2026-11-04 02:27:31]   ep21_zxrepk3fix_80500: finalist k3fix 57ae96f3 ckpt 829a91e2 tree b39b69b: ok
+[2026-11-04 02:27:31] start pid 56355: 3 jobs x 10 runs; gpus [0, 1, 2, 3, 4, 5, 6, 7], max parallel 6, lane max 2; metrics {'auc': 'add_auc', 'sp_sr': 'spider_sr_uncentered', 'mp_sr': 'maniptrans_sr', 'mppe': 'mean_per_point_error_cm'} (kit v2dlb/report_schema.py); never signals
+[2026-11-04 02:27:31] start eval ep10_zxrepg2_145500 run 1 try 1 on gpu 3 (pid 56731)
+[2026-11-04 02:27:31] start eval ep17_zxrepk3fix_74500 run 1 try 1 on gpu 4 (pid 56732)
+[2026-11-04 02:27:31] start eval ep21_zxrepk3fix_80500 run 1 try 1 on gpu 5 (pid 56733)
+[2026-11-04 02:27:31] start eval ep10_zxrepg2_145500 run 2 try 1 on gpu 6 (pid 56735)
+[2026-11-04 02:27:31] start eval ep17_zxrepk3fix_74500 run 2 try 1 on gpu 2 (pid 56746)
+[2026-11-04 02:27:31] start eval ep21_zxrepk3fix_80500 run 2 try 1 on gpu 0 (pid 56751)
+[2026-11-04 02:28:01] ep10_zxrepg2_145500 run 1 (try 1, gpu 3, 30 s): own-input AUC 0.6980 SP-SR 1.000 MP-SR 1.000 MPPE 1.49 cm
+[2026-11-04 02:28:01] ep17_zxrepk3fix_74500 run 1 (try 1, gpu 4, 30 s): own-input AUC 0.7940 SP-SR 1.000 MP-SR 1.000 MPPE 1.77 cm
+[2026-11-04 02:28:01] ep21_zxrepk3fix_80500 run 1 (try 1, gpu 5, 30 s): own-input AUC 0.6487 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:28:01] ep10_zxrepg2_145500 run 2 (try 1, gpu 6, 30 s): own-input AUC 0.6980 SP-SR 1.000 MP-SR 1.000 MPPE 1.44 cm
+[2026-11-04 02:28:02] start eval ep10_zxrepg2_145500 run 3 try 1 on gpu 7 (pid 61049)
+[2026-11-04 02:28:02] 24 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 NUMA0 lane has 2 evals of ours / counted; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 9 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 resting 10 s after our last eval (cooldown); gpu6 resting 10 s after our last eval (cooldown); gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:28:12] ep17_zxrepk3fix_74500 run 2 (try 1, gpu 2, 41 s): own-input AUC 0.7831 SP-SR 1.000 MP-SR 1.000 MPPE 1.81 cm
+[2026-11-04 02:28:12] ep21_zxrepk3fix_80500 run 2 (try 1, gpu 0, 41 s): own-input AUC 0.6601 SP-SR 1.000 MP-SR 1.000 MPPE 1.87 cm
+[2026-11-04 02:28:12] start eval ep17_zxrepk3fix_74500 run 3 try 1 on gpu 1 (pid 61563)
+[2026-11-04 02:28:12] start eval ep21_zxrepk3fix_80500 run 3 try 1 on gpu 3 (pid 61564)
+[2026-11-04 02:28:12] start eval ep10_zxrepg2_145500 run 4 try 1 on gpu 4 (pid 61565)
+[2026-11-04 02:28:12] start eval ep17_zxrepk3fix_74500 run 4 try 1 on gpu 5 (pid 61566)
+[2026-11-04 02:28:12] 23 eval(s) ready, waiting: no usable GPU: gpu0 resting 10 s after our last eval (cooldown); gpu1 one of our (or a counted external) evals runs there; gpu2 resting 9 s after our last eval (cooldown); gpu3 one of our (or a counted external) evals runs there; gpu4 one of our (or a counted external) evals runs there; gpu5 one of our (or a counted external) evals runs there; gpu6 NUMA1 lane has 4 evals of ours / counted; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:28:22] start eval ep21_zxrepk3fix_80500 run 4 try 1 on gpu 2 (pid 62399)
+[2026-11-04 02:28:32] ep10_zxrepg2_145500 run 3 (try 1, gpu 7, 31 s): own-input AUC 0.6742 SP-SR 1.000 MP-SR 1.000 MPPE 1.45 cm
+[2026-11-04 02:28:33] start eval ep10_zxrepg2_145500 run 5 try 1 on gpu 6 (pid 64443)
+[2026-11-04 02:28:43] ep21_zxrepk3fix_80500 run 3 (try 1, gpu 3, 31 s): own-input AUC 0.6482 SP-SR 1.000 MP-SR 1.000 MPPE 1.91 cm
+[2026-11-04 02:28:43] ep10_zxrepg2_145500 run 4 (try 1, gpu 4, 31 s): own-input AUC 0.7006 SP-SR 1.000 MP-SR 1.000 MPPE 1.45 cm
+[2026-11-04 02:28:43] ep17_zxrepk3fix_74500 run 4 (try 1, gpu 5, 31 s): own-input AUC 0.7810 SP-SR 1.000 MP-SR 1.000 MPPE 1.89 cm
+[2026-11-04 02:28:43] start eval ep17_zxrepk3fix_74500 run 5 try 1 on gpu 7 (pid 65342)
+[2026-11-04 02:28:43] 17 eval(s) ready, waiting: no usable GPU: gpu0 NUMA0 lane has 2 evals of ours / counted; gpu1 one of our (or a counted external) evals runs there; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 9 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 resting 10 s after our last eval (cooldown); gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:28:53] ep17_zxrepk3fix_74500 run 3 (try 1, gpu 1, 41 s): own-input AUC 0.7847 SP-SR 1.000 MP-SR 1.000 MPPE 1.89 cm
+[2026-11-04 02:28:54] start eval ep21_zxrepk3fix_80500 run 5 try 1 on gpu 0 (pid 66404)
+[2026-11-04 02:28:54] start eval ep10_zxrepg2_145500 run 6 try 1 on gpu 3 (pid 66405)
+[2026-11-04 02:28:54] start eval ep17_zxrepk3fix_74500 run 6 try 1 on gpu 4 (pid 66406)
+[2026-11-04 02:29:04] ep21_zxrepk3fix_80500 run 4 (try 1, gpu 2, 41 s): own-input AUC 0.6468 SP-SR 1.000 MP-SR 1.000 MPPE 1.88 cm
+[2026-11-04 02:29:04] ep10_zxrepg2_145500 run 5 (try 1, gpu 6, 31 s): own-input AUC 0.6988 SP-SR 1.000 MP-SR 1.000 MPPE 1.45 cm
+[2026-11-04 02:29:04] start eval ep21_zxrepk3fix_80500 run 6 try 1 on gpu 5 (pid 67407)
+[2026-11-04 02:29:04] start eval ep10_zxrepg2_145500 run 7 try 1 on gpu 1 (pid 67408)
+[2026-11-04 02:29:14] ep17_zxrepk3fix_74500 run 5 (try 1, gpu 7, 31 s): own-input AUC 0.7956 SP-SR 1.000 MP-SR 1.000 MPPE 1.74 cm
+[2026-11-04 02:29:14] start eval ep17_zxrepk3fix_74500 run 7 try 1 on gpu 6 (pid 69177)
+[2026-11-04 02:29:24] ep10_zxrepg2_145500 run 6 (try 1, gpu 3, 31 s): own-input AUC 0.6967 SP-SR 1.000 MP-SR 1.000 MPPE 1.49 cm
+[2026-11-04 02:29:24] ep17_zxrepk3fix_74500 run 6 (try 1, gpu 4, 31 s): own-input AUC 0.7852 SP-SR 1.000 MP-SR 1.000 MPPE 1.83 cm
+[2026-11-04 02:29:25] start eval ep21_zxrepk3fix_80500 run 7 try 1 on gpu 7 (pid 70422)
+[2026-11-04 02:29:25] 10 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 one of our (or a counted external) evals runs there; gpu2 NUMA0 lane has 2 evals of ours / counted; gpu3 resting 10 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:29:35] ep21_zxrepk3fix_80500 run 5 (try 1, gpu 0, 41 s): own-input AUC 0.6506 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:29:35] ep21_zxrepk3fix_80500 run 6 (try 1, gpu 5, 31 s): own-input AUC 0.6531 SP-SR 1.000 MP-SR 1.000 MPPE 1.94 cm
+[2026-11-04 02:29:35] start eval ep10_zxrepg2_145500 run 8 try 1 on gpu 2 (pid 71109)
+[2026-11-04 02:29:35] start eval ep17_zxrepk3fix_74500 run 8 try 1 on gpu 3 (pid 71110)
+[2026-11-04 02:29:35] start eval ep21_zxrepk3fix_80500 run 8 try 1 on gpu 4 (pid 71111)
+[2026-11-04 02:29:45] ep17_zxrepk3fix_74500 run 7 (try 1, gpu 6, 31 s): own-input AUC 0.7922 SP-SR 1.000 MP-SR 1.000 MPPE 1.78 cm
+[2026-11-04 02:29:46] start eval ep10_zxrepg2_145500 run 9 try 1 on gpu 5 (pid 75898)
+[2026-11-04 02:29:56] ep10_zxrepg2_145500 run 7 (try 1, gpu 1, 52 s): own-input AUC 0.6983 SP-SR 1.000 MP-SR 1.000 MPPE 1.46 cm
+[2026-11-04 02:29:56] ep21_zxrepk3fix_80500 run 7 (try 1, gpu 7, 31 s): own-input AUC 0.6504 SP-SR 1.000 MP-SR 1.000 MPPE 1.88 cm
+[2026-11-04 02:29:56] start eval ep17_zxrepk3fix_74500 run 9 try 1 on gpu 0 (pid 78758)
+[2026-11-04 02:29:56] start eval ep21_zxrepk3fix_80500 run 9 try 1 on gpu 6 (pid 78764)
+[2026-11-04 02:30:06] ep17_zxrepk3fix_74500 run 8 (try 1, gpu 3, 31 s): own-input AUC 0.7869 SP-SR 1.000 MP-SR 1.000 MPPE 1.81 cm
+[2026-11-04 02:30:06] ep21_zxrepk3fix_80500 run 8 (try 1, gpu 4, 31 s): own-input AUC 0.6488 SP-SR 1.000 MP-SR 1.000 MPPE 1.94 cm
+[2026-11-04 02:30:06] start eval ep10_zxrepg2_145500 run 10 try 1 on gpu 7 (pid 81788)
+[2026-11-04 02:30:06] 3 eval(s) ready, waiting: no usable GPU: gpu0 one of our (or a counted external) evals runs there; gpu1 NUMA0 lane has 2 evals of ours / counted; gpu2 one of our (or a counted external) evals runs there; gpu3 resting 10 s after our last eval (cooldown); gpu4 resting 10 s after our last eval (cooldown); gpu5 one of our (or a counted external) evals runs there; gpu6 one of our (or a counted external) evals runs there; gpu7 one of our (or a counted external) evals runs there
+[2026-11-04 02:30:16] ep10_zxrepg2_145500 run 8 (try 1, gpu 2, 41 s): own-input AUC 0.6713 SP-SR 1.000 MP-SR 1.000 MPPE 1.52 cm
+[2026-11-04 02:30:17] ep10_zxrepg2_145500 run 9 (try 1, gpu 5, 31 s): own-input AUC 0.7001 SP-SR 1.000 MP-SR 1.000 MPPE 1.46 cm
+[2026-11-04 02:30:17] start eval ep17_zxrepk3fix_74500 run 10 try 1 on gpu 1 (pid 83080)
+[2026-11-04 02:30:17] start eval ep21_zxrepk3fix_80500 run 10 try 1 on gpu 3 (pid 83081)
+[2026-11-04 02:30:27] ep17_zxrepk3fix_74500 run 9 (try 1, gpu 0, 31 s): own-input AUC 0.7875 SP-SR 1.000 MP-SR 1.000 MPPE 1.82 cm
+[2026-11-04 02:30:27] ep21_zxrepk3fix_80500 run 9 (try 1, gpu 6, 31 s): own-input AUC 0.6491 SP-SR 1.000 MP-SR 1.000 MPPE 1.92 cm
+[2026-11-04 02:30:37] ep10_zxrepg2_145500 run 10 (try 1, gpu 7, 31 s): own-input AUC 0.7013 SP-SR 1.000 MP-SR 1.000 MPPE 1.50 cm
+[2026-11-04 02:30:47] ep21_zxrepk3fix_80500 run 10 (try 1, gpu 3, 30 s): own-input AUC 0.6421 SP-SR 1.000 MP-SR 1.000 MPPE 1.91 cm
+[2026-11-04 02:30:57] ep17_zxrepk3fix_74500 run 10 (try 1, gpu 1, 40 s): own-input AUC 0.7918 SP-SR 1.000 MP-SR 1.000 MPPE 1.81 cm
+[2026-11-04 02:30:57] every export and evaluation is final
+[2026-11-04 02:30:57] kit and stock runtime unchanged (file list, sizes, mtimes)
+[2026-11-04 02:30:57] driver end: {'phase': 'final', 'jobs': 3, 'jobs_refused': 0, 'runs_per_job': 10, 'exports': {'ok': 3, 'refused': 0, 'failed': 0, 'pending': 0}, 'evals': {'ok': 30, 'failed': 0, 'pending': 0, 'no_export': 0}, 'exports_only': False}
