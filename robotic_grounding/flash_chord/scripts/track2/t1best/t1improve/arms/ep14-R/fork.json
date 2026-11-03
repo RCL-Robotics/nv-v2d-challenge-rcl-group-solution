@@ -1,0 +1,66 @@
+{
+ "arm": "ep14-R",
+ "episode": 14,
+ "item": "ep14",
+ "tree": "b39b69b",
+ "code": "/root/autodl-tmp/haoran.zhang/code/nv-v2d_runin/robotic_grounding/flash_chord",
+ "src": "T1fix/B/ep14",
+ "source_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14",
+ "fork": 81000,
+ "max_iterations": 96000,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "scene_support": false,
+ "reset_seed": 42,
+ "inherited_overrides": [
+  "objective.object_task_rotation_beta=2.6"
+ ],
+ "added_overrides": [
+  "termination.palm_position_threshold=1.2",
+  "termination.palm_orientation_threshold=3.2",
+  "termination.pelvis_position_threshold=1.2"
+ ],
+ "overrides": [
+  "objective.object_task_rotation_beta=2.6",
+  "termination.palm_position_threshold=1.2",
+  "termination.palm_orientation_threshold=3.2",
+  "termination.pelvis_position_threshold=1.2"
+ ],
+ "fork_pair": {
+  "model": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14/model_81000.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/fork/model_81000.safetensors",
+   "sha256": "6c16cf94e78fffcc45c7c3717da704f0a99b80b1f96d57612db70cba1887a8ae",
+   "size": 24993192,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "rsi": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14/rsi_81000.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/fork/rsi_81000.safetensors",
+   "sha256": "83323fa9f4818f6c2dfd44876f1ae2b6d9f3df742c14ae32e9592323df51a4f5",
+   "size": 4673020,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "source_config": {
+  "hydra/.hydra/config.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14/hydra/.hydra/config.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/source/hydra/.hydra/config.yaml",
+   "sha256": "1303589055be652b4a00de15da294a3c5513bc55d9b63c1c68bd1283cf36d2bb",
+   "size": 8199,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "hydra/.hydra/overrides.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep14/hydra/.hydra/overrides.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/source/hydra/.hydra/overrides.yaml",
+   "sha256": "ab24efde436fc26f3126094519d27dbe14eb8589e1dcd38c66aa01f4c6c6b1cd",
+   "size": 612,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "hull_cache": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep14-R/fc_cache",
+ "hull_object_key": "6c7584c98b6a755d",
+ "hull_files": 29,
+ "hull_before": "stock (T1fix/stage2/fc_cache)",
+ "prepared_at": "2026-10-27 17:52:55",
+ "launched": true
+}

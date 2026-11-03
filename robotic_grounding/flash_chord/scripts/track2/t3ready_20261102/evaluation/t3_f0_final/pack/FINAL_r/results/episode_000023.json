@@ -1,0 +1,71 @@
+{
+  "checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep23/retry/r5_tol0.0001_try1/export/ep23/model_90000.safetensors",
+  "checkpoint_sha256": "0ef63abfb8bc439f08a8fe4d86f8206448baf3a70602b63931815477f3d94cd0",
+  "environment_steps": 8847360000,
+  "metrics": {
+    "add_auc": 0.9781976744186046,
+    "add_auc_per_body": [
+      0.9781976744186046
+    ],
+    "add_std_m": 0.0049600917754745255,
+    "add_std_per_body_m": [
+      0.0049600917754745255
+    ],
+    "chord_sr": 1.0,
+    "gated_causes": [
+      "wrist",
+      "object"
+    ],
+    "maniptrans_sr": 1.0,
+    "mean_add_m": 0.008850859727662379,
+    "mean_per_point_error_cm": 0.6175695274778948,
+    "mppe_cm": 0.617569527477895,
+    "object_body_names": [
+      "object"
+    ],
+    "object_orientation_error_deg": 2.5630092913081888,
+    "object_orientation_error_per_body_rad": [
+      0.04473295089253438
+    ],
+    "object_orientation_error_rad": 0.04473295089253438,
+    "object_orientation_error_std_deg": 0.0,
+    "object_orientation_error_std_rad": 0.0,
+    "object_position_error_m": 0.0058458185845740645,
+    "object_position_error_per_body_m": [
+      0.0058458185845740645
+    ],
+    "object_position_error_std_m": 0.0,
+    "position_mean_centered": false,
+    "relative_position_error_cm": 0.0,
+    "spider_position_error_centered_m": 0.0056927829567295874,
+    "spider_sr_uncentered": 1.0,
+    "step_count": 946,
+    "termination_cause_fraction": {
+      "object": 0.0,
+      "wrist": 0.0
+    },
+    "world_count": 1
+  },
+  "motion_end_frame": -1,
+  "motion_start_frame": 0,
+  "non_finite_worlds": [],
+  "object_orientation_threshold_rad": 1.5,
+  "object_position_threshold_m": 0.1,
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet",
+  "reference_tracking": {
+    "failure_cause_fraction": {
+      "object": 0.0,
+      "palm": 0.0,
+      "pelvis": 0.0
+    },
+    "reference_end_fraction": 1.0,
+    "success_rate": 1.0
+  },
+  "reset_mode": "explicit",
+  "settling_steps": 0,
+  "sim_control_fps": 50.0,
+  "sim_physics_fps": 200.0,
+  "start_frame": 0,
+  "step_count": 946,
+  "world_count": 1
+}

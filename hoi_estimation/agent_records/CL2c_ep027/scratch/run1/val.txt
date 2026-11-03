@@ -1,0 +1,21 @@
+phases: floor [0,149) carried [149,450) desk [450,565)
+
+| phase | frames | traj | mask IoU (mean / p10) | held-out photo corr | median dR/frame (deg) | #jumps >15deg | median dT/frame (cm) | rot spread (deg) | dz vs base mean / median (cm) |
+|---|---|---|---|---|---|---|---|---|---|
+| floor-static | 149 | baseline | 0.785 / 0.765 | 0.937 | 0.10 | 0 | 0.11 | 0.1 | +0.0 / +0.0 |
+| floor-static | 149 | result | 0.856 / 0.847 | 0.960 | 0.00 | 0 | 0.00 | 0.0 | +0.5 / +0.0 |
+| carried | 301 | baseline | 0.645 / 0.394 | 0.546 | 3.59 | 16 | 1.54 | 87.4 | +0.0 / +0.0 |
+| carried | 301 | result | 0.791 / 0.712 | 0.650 | 0.99 | 0 | 1.00 | 44.1 | -0.4 / -0.4 |
+| desk-static | 115 | baseline | 0.853 / 0.840 | 0.842 | 0.00 | 0 | 0.04 | 0.0 | +0.0 / +0.0 |
+| desk-static | 115 | result | 0.863 / 0.850 | 0.821 | 0.00 | 0 | 0.00 | 0.0 | +0.3 / +0.0 |
+| all | 565 | baseline | 0.724 / 0.482 | 0.712 | 1.19 | 16 | 0.66 | 124.9 | +0.0 / +0.0 |
+| all | 565 | result | 0.823 / 0.760 | 0.768 | 0.23 | 0 | 0.24 | 22.3 | -0.0 / -0.3 |
+
+physical cues (result):
+  floor phase: lowest mesh point above floor plane: median 0.8 cm (baseline 2.0 cm)
+  desk phase: lowest point above floor plane: median 88.7 cm
+  hand keypoints to object surface (frames with contact prob>0.5): median 6.1 cm (baseline 6.2 cm)
+  cue floor-contact: lowest point 0.8 cm above plane -> depth shift +2.2 cm (plane fit tolerance: feet are 3.7 cm above it)
+  cue silhouette-size (floor): depth shift -29.9 cm (IoU 0.907)
+  cue silhouette-size (desk): depth shift -13.0 cm (IoU 0.910)
+  cue hand-contact: median (hand depth - object surface depth at the hand pixel) -10.4 cm

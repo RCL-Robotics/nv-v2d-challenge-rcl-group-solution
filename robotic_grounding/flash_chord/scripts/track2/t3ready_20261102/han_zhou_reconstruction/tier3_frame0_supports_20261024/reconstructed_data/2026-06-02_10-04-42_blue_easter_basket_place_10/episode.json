@@ -1,0 +1,15 @@
+{
+ "episode_index": 2,
+ "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+ "object": "blue_easter_basket",
+ "task": "Walk over to the blue basket on the round table and pick up the blue basket using your right hand and place the basket in a different area within the bounding area. Then pick up the basket and handover to the left hand and place the blue basket in a different area within the bounding area.",
+ "frames": 980,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.4593958258628845,
+  "median": 0.2779477834701538,
+  "max": 8.89970588684082
+ },
+ "support": "../../supports/2026-06-02_10-04-42_blue_easter_basket_place_10"
+}

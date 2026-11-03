@@ -1,0 +1,3 @@
+$ nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -I -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/t3final_kit.py validate --csv /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/packed_LOCAL_NOT_FOR_UPLOAD.csv --track track_2_tier3 --out /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/validate.json --expect /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/pack/FINAL/expect.json
+validate: uploader pass; rows 22989; episodes 30; problems 0; ok True
+

@@ -1,0 +1,14 @@
+ep01 tall_bar_stool     boxes  31 flags: ['REST_GAP run [658, 747] median sdf 2.7 cm', 'SETTLE run [658, 747] dp 2.328 cm rot 4.882 deg; human-object 78.36 cm']
+ep02 round_table        boxes  18 flags: ['PATH object deeper than 1 cm in a box on 8 frames [[125, 132]] (min -1.5 cm; a 3 cm slab allows at most 1.5)']
+ep03 round_table        boxes  18 flags: ['PATH object deeper than 1 cm in a box on 48 frames [[527, 530], [604, 644], [686, 688]] (min -1.5 cm; a 3 cm slab allows at most 1.5)']
+ep06 round_table        boxes  18 flags: ['SETTLE anchor run not stable', 'SETTLE run [0, 168] dp 2.055 cm rot 4.184 deg; human-object 17.02 cm']
+ep07 round_table        boxes  18 flags: ['FOOTPRINT run [387, 397] cover 0.769']
+ep09 skinny_wood_chair  boxes  11 flags: none
+ep11 white_desk         boxes  28 flags: ['FOOTPRINT run [406, 467] cover 0.44', 'PATH object deeper than 1 cm in a box on 8 frames [[468, 475]] (min -1.4 cm; a 3 cm slab allows at most 1.5)', 'settle (human hand within 3 cm: held, not a free rest) run [406, 467] dp 89.016 cm rot 150.984 deg; human-object 0.05 cm']
+ep13 white_desk         boxes  29 flags: ['PATH object deeper than 1 cm in a box on 155 frames [[131, 155], [205, 205], [769, 779], [804, 921]] (min -1.5 cm; a 3 cm slab allows at most 1.5)', "G1 41 frames [[558, 592], [594, 594], [630, 631], [634, 636]] worst 4.99 cm (['g1/left_elbow_link'])"]
+ep16 white_desk         boxes  29 flags: ["G1 29 frames [[295, 321], [323, 323], [325, 325]] worst 4.99 cm (['g1/right_elbow_link'])"]
+ep17 round_table        boxes  18 flags: ['SETTLE anchor run not stable', 'SETTLE run [336, 440] dp 1.135 cm rot 5.238 deg; human-object 37.35 cm']
+ep20 round_table        boxes  18 flags: none
+ep25 round_table        boxes  18 flags: ['PATH object deeper than 1 cm in a box on 4 frames [[773, 776]] (min -1.5 cm; a 3 cm slab allows at most 1.5)', 'SETTLE run [778, 859] dp 20.75 cm rot 95.855 deg; human-object 51.85 cm', 'SETTLE mesh != parquet mesh']
+ep27 white_desk         boxes  30 flags: ['SETTLE mesh != parquet mesh']
+ep28 tall_bar_stool     boxes  24 flags: ['SETTLE mesh != parquet mesh']

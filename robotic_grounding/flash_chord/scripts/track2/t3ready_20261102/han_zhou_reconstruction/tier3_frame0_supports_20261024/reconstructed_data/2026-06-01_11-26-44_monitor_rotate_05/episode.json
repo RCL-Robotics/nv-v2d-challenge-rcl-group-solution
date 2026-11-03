@@ -1,0 +1,15 @@
+{
+ "episode_index": 6,
+ "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+ "object": "monitor",
+ "task": "Walk over to the monitor on the round table. Using only the base of the monitor, rotate and reposition the monitor around the surface of the table without touching or moving the screen itself. When finished, leave the monitor resting on top of the table.",
+ "frames": 546,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.34344756603240967,
+  "median": 0.21430782973766327,
+  "max": 3.0311906337738037
+ },
+ "support": "../../supports/2026-06-01_11-26-44_monitor_rotate_05"
+}

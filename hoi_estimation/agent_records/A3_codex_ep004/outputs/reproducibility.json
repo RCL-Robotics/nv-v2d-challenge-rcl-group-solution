@@ -1,0 +1,12 @@
+{
+  "poses_bitwise_equal": true,
+  "maximum_pose_element_difference": 0.0,
+  "all_fitted_candidates_bitwise_equal": true,
+  "all_candidate_losses_bitwise_equal": true,
+  "selection_decisions_identical": true,
+  "first_output_sha256": "1d7359752b06920a534b96c4aab83ae49483295b7ba810df984e37ff9df73049",
+  "second_output_sha256": "1d7359752b06920a534b96c4aab83ae49483295b7ba810df984e37ff9df73049",
+  "solver_sha256": "8a79864c9e00859cd0ed0b3fa23f731e4a352fbcceddab9bfc100cef897bbefc",
+  "first_run_seconds": 311.6837877279613,
+  "second_run_seconds": 308.8401658020448
+}

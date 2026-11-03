@@ -1,0 +1,50 @@
+{
+ "ep": 2,
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-06-02_10-04-42_blue_easter_basket_place_10_support.usda",
+ "mesh": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0/frames/ep02_obj/textured_mesh.obj",
+ "mesh_equal_parquet_mesh": true,
+ "sim": {
+  "fps": 50.0,
+  "substeps": 4,
+  "solver": "newton",
+  "integrator": "implicitfast",
+  "cone": "pyramidal",
+  "njmax": 1024,
+  "nconmax": 512,
+  "impratio": 1.0,
+  "iterations": 100,
+  "ls_iterations": 50,
+  "use_mujoco_contacts": true
+ },
+ "pass_rule": "10 s: final |dp|<=2cm, final rot<=5deg, max |dp|<=3cm",
+ "tests": [
+  {
+   "run": [
+    0,
+    125
+   ],
+   "frame": 62,
+   "anchor": true,
+   "with_support": {
+    "final_dp_cm": 0.085,
+    "max_dp_cm": 0.086,
+    "final_rot_deg": 0.731,
+    "max_rot_deg": 0.733,
+    "final_z_change_cm": -0.016,
+    "ok": true
+   },
+   "hulls": 79,
+   "no_support_control": {
+    "final_dp_cm": 77.989,
+    "max_dp_cm": 80.539,
+    "final_rot_deg": 0.742,
+    "max_rot_deg": 0.761,
+    "final_z_change_cm": -77.989,
+    "ok": false
+   }
+  }
+ ],
+ "all_ok": true,
+ "anchor_ok": true,
+ "anchor_control_moves": true
+}

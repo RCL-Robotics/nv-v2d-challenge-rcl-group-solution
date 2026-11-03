@@ -1,0 +1,59 @@
+{
+ "written": "2026-10-31 00:42:21",
+ "recipe_sha256": "31bd3f80257f154b36c242a7b7116725606c3697fa866ebe619371e90a5bfb8c",
+ "ok": true,
+ "checks": {
+  "diff_keys_allowed": true,
+  "parquet_same": true,
+  "scene_support_same": true,
+  "seed_same": true,
+  "experiment_same": true,
+  "object_threshold": true,
+  "palm_threshold": true,
+  "start_update": true,
+  "deadline_unchanged": true,
+  "resume": true,
+  "max_iterations": true,
+  "early_stop_off": true,
+  "help_zero_before_cap": true
+ },
+ "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep11/hydra/.hydra/config.yaml",
+ "diff": {
+  "logging.experiment": [
+   "C3r2_tier3_f0",
+   "C3r2_tier3_f0_retry"
+  ],
+  "logging.run_name": [
+   "ep11_light_blue_book",
+   "ep11_light_blue_book_retry"
+  ],
+  "output_dir": [
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep11",
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep11"
+  ],
+  "reset.start_update": [
+   0,
+   44922
+  ],
+  "termination.palm_position_threshold": [
+   0.15,
+   0.25
+  ],
+  "training.checkpoint": [
+   null,
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep11/model_44922.safetensors"
+  ],
+  "training.early_stop_help_zero_tail": [
+   5860,
+   0
+  ],
+  "training.max_iterations": [
+   45000,
+   90000
+  ],
+  "training.resume": [
+   false,
+   true
+  ]
+ }
+}

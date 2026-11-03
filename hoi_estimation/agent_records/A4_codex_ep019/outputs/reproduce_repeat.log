@@ -1,0 +1,10 @@
+Using input-verified fitted and rendered hypotheses /work/tools/cane_validated_hypotheses.npz
+selected baseline frames 0
+rotation step percentiles [ 2.93393118  7.9898777  12.06933332 28.49428579 56.59324353]
+large steps [396 501 535 541 542 558 563 617 632 638 656 738 743 803]
+render cost baseline 21.01390340669667 selected 1.6837929248248649
+median cost baseline/selected 11.476339783467218 1.0691313406797511
+Exact baseline fallback frames: 147
+Saved /work/outputs/object_poses_world.npz shape (886, 4, 4) dtype float64
+Max camera-distance change (m): 1.3322676295501878e-15
+Total solve seconds: 2.986

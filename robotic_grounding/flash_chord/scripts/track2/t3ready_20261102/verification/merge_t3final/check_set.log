@@ -1,0 +1,21 @@
+{
+ "summary": {
+  "episodes": 30,
+  "f0_items": 19,
+  "retry_items": 11,
+  "stages": 41,
+  "stages_composing": 41,
+  "B_ok": 41,
+  "D_ok": 41,
+  "R_ok": 11,
+  "evaluated_policies": 30,
+  "E_ok": 30,
+  "rollouts_name_evaluated_file": 30,
+  "new_keys_union": [],
+  "files_read": true,
+  "hash_checked": true
+ },
+ "failures": [],
+ "notes": []
+}
+ALL OK

@@ -1,0 +1,54 @@
+{
+ "episode": 13,
+ "object": "snack_box",
+ "computed_at": "2026-10-31 00:18:21",
+ "script_sha256": "cfdd3072779b727e59555a13546ee4f1bb23436bcd9d7d686b2181b36dc7f638",
+ "f0_final": {
+  "iteration": 44922,
+  "reason": "help_zero_tail",
+  "help_zero_since": 39062,
+  "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep13/model_44922.safetensors",
+  "model_sha256": "3e478bb5c5e5f6fc123235633a1a488ff2cf6b55379621dcfbed88ffe74262f8",
+  "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep13/rsi_44922.safetensors",
+  "rsi_sha256": "269a913afdbab2136425307f971aad27f74c58fdb164fae4ece94a1220b8fe1c",
+  "wall_seconds": 110547.9,
+  "iterations_per_s": 0.4064
+ },
+ "scene_support": true,
+ "mitigated_f0": false,
+ "barrier": {
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+  "parquet_sha256": "baf8825a131b0bad7573a694ad4a516877015e539686adfa2d1303f356d2cec5",
+  "mesh": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/object/textured_mesh.obj",
+  "mesh_sha256": "6a4bbaaf1121c592a4b721278fca2d99576bf1deb3227c559f4c9e981a626157",
+  "frames": 922,
+  "floor_depth_max_m": 0.2114,
+  "floor_depth_max_frame": 311,
+  "frames_depth_gt_barrier": 46,
+  "jump_max_m": 0.0506,
+  "jump_max_frame": 768,
+  "B_m": 0.2114
+ },
+ "palm": {
+  "last_iteration": 44922,
+  "rows": 501,
+  "palm_share_last5k": 0.1238,
+  "object_share_last5k_report_only": 0.6998
+ },
+ "termination_overrides": [
+  "termination.object_position_threshold=0.25",
+  "termination.palm_position_threshold=0.25"
+ ],
+ "rule_trace": [
+  "T-obj: B = 21.1 cm > 8 cm (floor depth 21.1 cm at frame 311, max one-frame jump 5.1 cm at frame 768) -> termination.object_position_threshold=0.25",
+  "T-palm: f0 palm-termination share over the last 5000 iterations 0.1238 > 0.1 -> termination.palm_position_threshold=0.25"
+ ],
+ "base": [
+  "training.resume=true",
+  "training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep13/model_44922.safetensors",
+  "training.max_iterations=90000",
+  "training.early_stop_help_zero_tail=0",
+  "reset.start_update=44922"
+ ],
+ "projected_hours": 30.8
+}

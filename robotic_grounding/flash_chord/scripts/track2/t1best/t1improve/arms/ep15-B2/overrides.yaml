@@ -1,0 +1,12 @@
+- experiment=g1_recon_body_coord_rsi_r2
+- task.parquet='/root/autodl-tmp/haoran.zhang/data/human_motion_data/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet'
+- scene.support=false
+- reset.seed=42
+- output_dir=/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/runs/ep15
+- logging.mode=disabled
+- +logging.local_jsonl=true
+- training.early_stop_help_zero_tail=0
+- training.max_iterations=46000
+- training.resume=true
+- training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep15-B2/fork/model_20974.safetensors
+- objective.object_task_rotation_beta=2.0

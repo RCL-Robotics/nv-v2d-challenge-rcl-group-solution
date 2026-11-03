@@ -1,0 +1,14 @@
+{
+ "episode_index": 24,
+ "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+ "object": "watering_can",
+ "task": "Walk over to the watering can on the ground and kneel next to the watering can and tip it forward as if pouring using right hand.",
+ "frames": 748,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.47997671365737915,
+  "median": 0.23555202782154083,
+  "max": 10.010907173156738
+ }
+}

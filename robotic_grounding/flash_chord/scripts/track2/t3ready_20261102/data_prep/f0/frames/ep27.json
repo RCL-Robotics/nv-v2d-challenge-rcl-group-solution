@@ -1,0 +1,28 @@
+{
+ "ep": 27,
+ "seq": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+ "frames": 565,
+ "n_mesh_v": 293827,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.003859732092793118,
+ "verts": true,
+ "plane_normal": [
+  0.005573688554631343,
+  0.012178829383455186,
+  0.99991030103242
+ ],
+ "plane_offset": 0.9718102090658249,
+ "M_vs_object_chain_max_err": [
+  6.938893903907228e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "7d49502a89a8639df431179921d043588fdfaca0196b0198cfe162193a6ebd48",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "d1c5e25b9e9d3a6d916db4e61fe90b345b101914b0cd24f148cf305cf47d8942",
+  "soma_params.npz": "7ddea70713a62214c880dd8b13951e6c48ec9bc8ad6262ebfb5ea11bedb30537",
+  "ground_plane.json": "14377eadb8889d353c6db760ffbbd843823e37c9d5cebf8fecff3588f4751c28",
+  "reconstructed_mesh/output_aligned.glb": "1725abaac462412da58bc35c772aa0c6ae6449c5471c220811cb895243ce6822"
+ },
+ "seconds": 14.1
+}

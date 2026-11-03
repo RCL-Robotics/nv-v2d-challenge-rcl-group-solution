@@ -1,0 +1,4 @@
+Reading additional input from stdin...
+2026-10-19T06:22:44.482963Z ERROR codex_core::util: OutputTextDelta without active item
+2026-10-19T06:26:51.364137Z ERROR codex_core::util: OutputTextDelta without active item
+2026-10-19T06:30:41.987027Z ERROR codex_core::util: OutputTextDelta without active item

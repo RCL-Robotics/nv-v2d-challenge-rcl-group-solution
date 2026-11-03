@@ -1,0 +1,28 @@
+| phase (frames) | trajectory | IoU dil3 | IoU p10 | IoU raw | accel t cm/f^2 | accel R deg/f^2 | lowest pt h cm (med / std) | tilt deg | hand-obj cm | dz vs base mean / med cm |
+|---|---|---|---|---|---|---|---|---|---|---|
+| static_start (0-134) | baseline | 0.735 | 0.657 | 0.571 | 1.34 | 0.82 | -0.7 / 1.2 | 2.6 | 0.3 | 0.0 / 0.0 |
+| static_start (0-134) | final | 0.862 | 0.843 | 0.666 | 0.00 | 0.00 | -0.0 / 0.0 | 0.0 | 0.4 | -2.4 / -3.5 |
+| push_away (135-339) | baseline | 0.727 | 0.678 | 0.616 | 1.39 | 0.96 | 1.5 / 1.1 | 2.6 | 0.3 | 0.0 / 0.0 |
+| push_away (135-339) | final | 0.874 | 0.844 | 0.707 | 0.02 | 0.03 | -0.0 / 0.0 | 0.0 | 0.3 | 2.3 / 2.8 |
+| turn_occluded (340-459) | baseline | 0.762 | 0.679 | 0.628 | 2.41 | 2.88 | -1.5 / 1.5 | 2.7 | 4.3 | 0.0 / 0.0 |
+| turn_occluded (340-459) | final | 0.858 | 0.803 | 0.643 | 0.04 | 0.12 | -0.0 / 0.0 | 0.0 | 0.9 | -4.8 / -3.4 |
+| return_back_forth (460-879) | baseline | 0.803 | 0.759 | 0.605 | 1.47 | 1.27 | 1.6 / 1.4 | 2.8 | 0.3 | 0.0 / 0.0 |
+| return_back_forth (460-879) | final | 0.881 | 0.854 | 0.630 | 0.06 | 0.06 | -0.0 / 0.0 | 0.0 | 0.3 | 0.9 / 0.5 |
+| static_end (880-945) | baseline | 0.889 | 0.864 | 0.665 | 1.01 | 0.88 | -1.2 / 1.1 | 1.1 | 1.3 | 0.0 / 0.0 |
+| static_end (880-945) | final | 0.917 | 0.908 | 0.682 | 0.00 | 0.00 | -0.0 / 0.0 | 0.0 | 2.2 | -3.6 / -4.7 |
+| ALL (0-945) | baseline | 0.778 | 0.693 | 0.610 | 1.44 | 1.16 | 1.0 / 1.8 | 2.6 | 0.3 | 0.0 / 0.0 |
+| ALL (0-945) | final | 0.877 | 0.845 | 0.657 | 0.03 | 0.04 | -0.0 / 0.0 | 0.0 | 0.3 | -0.3 / -0.0 |
+
+Depth cues for 'final' (median camera z 3.089 m; static-phase lowest point -0.1 cm above the released plane):
+  untouched object rests on released floor plane (h=0): scale 0.9996 -> depth shift -0.1 cm at the median depth
+  floor height from true frame-0 human soles (h=1.7 cm): scale 0.9873 -> depth shift -3.9 cm at the median depth
+  hand contact in the turn phase (human not attached to the baseline object there): median hand-object distance by scale: 0.970:0.2cm, 0.975:0.3cm, 0.980:0.3cm, 0.985:0.3cm, 0.990:0.3cm, 0.995:0.5cm, 1.000:0.9cm, 1.005:1.8cm, 1.010:3.3cm, 1.015:4.8cm, 1.020:6.4cm, 1.025:7.9cm, 1.030:9.5cm
+  -> contact (<1 cm) for scales 0.970..1.000, i.e. depth shift -9.3..+0.0 cm
+
+Held-out (odd frames predicted from even-frame registrations only), IoU dil3:
+  static_start       held-out 0.850  baseline 0.735  frames where held-out better: 100%
+  push_away          held-out 0.864  baseline 0.727  frames where held-out better: 100%
+  turn_occluded      held-out 0.853  baseline 0.760  frames where held-out better: 98%
+  return_back_forth  held-out 0.875  baseline 0.803  frames where held-out better: 100%
+  static_end         held-out 0.911  baseline 0.889  frames where held-out better: 100%
+  ALL                held-out 0.869  baseline 0.777  frames where held-out better: 100%

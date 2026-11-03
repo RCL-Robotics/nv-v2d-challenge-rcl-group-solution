@@ -1,0 +1,253 @@
+{
+  "mesh_extents_m": [
+    0.22039078176021576,
+    0.2172277495265007,
+    0.23257140070199966
+  ],
+  "sampled_depth": [
+    {
+      "frame": 0,
+      "raw_surface_m": 2.853,
+      "aligned_surface_m": 3.181,
+      "baseline_rendered_surface_m": 2.995556862548758,
+      "refined_rendered_surface_m": 3.0170464765561116,
+      "aligned_minus_baseline_m": 0.18557211904142323,
+      "aligned_minus_refined_m": 0.16391541052128256
+    },
+    {
+      "frame": 25,
+      "raw_surface_m": 2.832,
+      "aligned_surface_m": 3.097,
+      "baseline_rendered_surface_m": 2.9771302816483973,
+      "refined_rendered_surface_m": 3.017015429343208,
+      "aligned_minus_baseline_m": 0.12038542007957798,
+      "aligned_minus_refined_m": 0.08030172260202506
+    },
+    {
+      "frame": 50,
+      "raw_surface_m": 2.786,
+      "aligned_surface_m": 3.045,
+      "baseline_rendered_surface_m": 3.0008082180858366,
+      "refined_rendered_surface_m": 3.0169776077871466,
+      "aligned_minus_baseline_m": 0.04465050675302229,
+      "aligned_minus_refined_m": 0.028202821032013325
+    },
+    {
+      "frame": 75,
+      "raw_surface_m": 2.787,
+      "aligned_surface_m": 3.05,
+      "baseline_rendered_surface_m": 3.054442383158162,
+      "refined_rendered_surface_m": 3.0166384666285424,
+      "aligned_minus_baseline_m": -0.0036986056689500835,
+      "aligned_minus_refined_m": 0.03412728740542126
+    },
+    {
+      "frame": 100,
+      "raw_surface_m": 2.757,
+      "aligned_surface_m": 2.965,
+      "baseline_rendered_surface_m": 3.068892356036712,
+      "refined_rendered_surface_m": 3.016608248459652,
+      "aligned_minus_baseline_m": -0.10382419310800528,
+      "aligned_minus_refined_m": -0.051327221848673776
+    },
+    {
+      "frame": 125,
+      "raw_surface_m": 2.743,
+      "aligned_surface_m": 2.989,
+      "baseline_rendered_surface_m": 3.0768110352363602,
+      "refined_rendered_surface_m": 3.0168529255416296,
+      "aligned_minus_baseline_m": -0.08747066898410982,
+      "aligned_minus_refined_m": -0.027964526014811586
+    },
+    {
+      "frame": 150,
+      "raw_surface_m": 2.735,
+      "aligned_surface_m": 2.993,
+      "baseline_rendered_surface_m": 3.072099507475044,
+      "refined_rendered_surface_m": 3.0402050708756803,
+      "aligned_minus_baseline_m": -0.07923003791937755,
+      "aligned_minus_refined_m": -0.04672991724181119
+    },
+    {
+      "frame": 175,
+      "raw_surface_m": 2.716,
+      "aligned_surface_m": 2.978,
+      "baseline_rendered_surface_m": 3.055458409030387,
+      "refined_rendered_surface_m": 3.0409645212016727,
+      "aligned_minus_baseline_m": -0.07662850799036325,
+      "aligned_minus_refined_m": -0.06196421346521941
+    },
+    {
+      "frame": 200,
+      "raw_surface_m": 2.717,
+      "aligned_surface_m": 2.965,
+      "baseline_rendered_surface_m": 3.056833833165215,
+      "refined_rendered_surface_m": 3.0409022028463797,
+      "aligned_minus_baseline_m": -0.09152096417547773,
+      "aligned_minus_refined_m": -0.07515113064712664
+    },
+    {
+      "frame": 225,
+      "raw_surface_m": 2.707,
+      "aligned_surface_m": 2.958,
+      "baseline_rendered_surface_m": 3.054505688079119,
+      "refined_rendered_surface_m": 3.041874422240472,
+      "aligned_minus_baseline_m": -0.0982318642486375,
+      "aligned_minus_refined_m": -0.08518333451461091
+    },
+    {
+      "frame": 250,
+      "raw_surface_m": 2.723,
+      "aligned_surface_m": 3.095,
+      "baseline_rendered_surface_m": 3.13669517001078,
+      "refined_rendered_surface_m": 3.0552176765842134,
+      "aligned_minus_baseline_m": -0.04551148943745975,
+      "aligned_minus_refined_m": 0.03653214579857722
+    },
+    {
+      "frame": 275,
+      "raw_surface_m": 2.738,
+      "aligned_surface_m": 3.018,
+      "baseline_rendered_surface_m": 3.035485111510694,
+      "refined_rendered_surface_m": 3.0503710753252022,
+      "aligned_minus_baseline_m": -0.018927590575127606,
+      "aligned_minus_refined_m": -0.03403397465302849
+    },
+    {
+      "frame": 300,
+      "raw_surface_m": 2.726,
+      "aligned_surface_m": 3.021,
+      "baseline_rendered_surface_m": 3.0460810711984303,
+      "refined_rendered_surface_m": 3.05538823713691,
+      "aligned_minus_baseline_m": -0.025368481486307548,
+      "aligned_minus_refined_m": -0.03664457932589871
+    },
+    {
+      "frame": 325,
+      "raw_surface_m": 2.733,
+      "aligned_surface_m": 2.994,
+      "baseline_rendered_surface_m": 3.0169181081903935,
+      "refined_rendered_surface_m": 3.057254919955959,
+      "aligned_minus_baseline_m": -0.02295561487828368,
+      "aligned_minus_refined_m": -0.06277383780364154
+    },
+    {
+      "frame": 350,
+      "raw_surface_m": 2.805,
+      "aligned_surface_m": 3.083,
+      "baseline_rendered_surface_m": 3.105851226923159,
+      "refined_rendered_surface_m": 3.05793221277948,
+      "aligned_minus_baseline_m": -0.025969525614053746,
+      "aligned_minus_refined_m": 0.024744511209079167
+    },
+    {
+      "frame": 375,
+      "raw_surface_m": 2.747,
+      "aligned_surface_m": 2.997,
+      "baseline_rendered_surface_m": 3.092295201000524,
+      "refined_rendered_surface_m": 3.077685687662142,
+      "aligned_minus_baseline_m": -0.09283863652168756,
+      "aligned_minus_refined_m": -0.0757667119745653
+    },
+    {
+      "frame": 400,
+      "raw_surface_m": 2.792,
+      "aligned_surface_m": 3.021,
+      "baseline_rendered_surface_m": 3.089363646073426,
+      "refined_rendered_surface_m": 3.0810919281592084,
+      "aligned_minus_baseline_m": -0.06924218169258833,
+      "aligned_minus_refined_m": -0.06110340675319126
+    },
+    {
+      "frame": 425,
+      "raw_surface_m": 2.799,
+      "aligned_surface_m": 3.021,
+      "baseline_rendered_surface_m": 3.1208474996483955,
+      "refined_rendered_surface_m": 3.0894362423819945,
+      "aligned_minus_baseline_m": -0.09853577048501405,
+      "aligned_minus_refined_m": -0.06734649747851518
+    },
+    {
+      "frame": 450,
+      "raw_surface_m": 2.808,
+      "aligned_surface_m": 3.119,
+      "baseline_rendered_surface_m": 3.0638565398152418,
+      "refined_rendered_surface_m": 3.065069401150085,
+      "aligned_minus_baseline_m": 0.056261740287221196,
+      "aligned_minus_refined_m": 0.05412747819220365
+    },
+    {
+      "frame": 475,
+      "raw_surface_m": 2.87,
+      "aligned_surface_m": 3.221,
+      "baseline_rendered_surface_m": 3.0634345380935897,
+      "refined_rendered_surface_m": 3.0625101840102573,
+      "aligned_minus_baseline_m": 0.15835113794655542,
+      "aligned_minus_refined_m": 0.16003323760092547
+    },
+    {
+      "frame": 500,
+      "raw_surface_m": 2.807,
+      "aligned_surface_m": 3.15,
+      "baseline_rendered_surface_m": 3.0073458592600244,
+      "refined_rendered_surface_m": 3.0626177093064464,
+      "aligned_minus_baseline_m": 0.1431785017693099,
+      "aligned_minus_refined_m": 0.08929660874984369
+    },
+    {
+      "frame": 525,
+      "raw_surface_m": 2.784,
+      "aligned_surface_m": 3.297,
+      "baseline_rendered_surface_m": 2.9852589436843013,
+      "refined_rendered_surface_m": 3.06334622376817,
+      "aligned_minus_baseline_m": 0.31220853966030515,
+      "aligned_minus_refined_m": 0.23690274110493847
+    },
+    {
+      "frame": 550,
+      "raw_surface_m": 2.857,
+      "aligned_surface_m": 3.248,
+      "baseline_rendered_surface_m": 2.9892259600849487,
+      "refined_rendered_surface_m": 3.0621477281242147,
+      "aligned_minus_baseline_m": 0.25875608390148686,
+      "aligned_minus_refined_m": 0.18656618441811657
+    },
+    {
+      "frame": 552,
+      "raw_surface_m": 2.86,
+      "aligned_surface_m": 3.259,
+      "baseline_rendered_surface_m": 2.981487421621849,
+      "refined_rendered_surface_m": 3.0624765163139775,
+      "aligned_minus_baseline_m": 0.27695848587875016,
+      "aligned_minus_refined_m": 0.19757074850493628
+    }
+  ],
+  "reference_human_projected_bbox_xyxy": [
+    446.05589830809663,
+    385.2869754176783,
+    616.6346233204664,
+    895.0573806264883
+  ],
+  "person_mask_bbox_xyxy": [
+    442,
+    374,
+    615,
+    910
+  ],
+  "aligned_minus_baseline_m": {
+    "median": -0.024162048182295615,
+    "range": [
+      -0.10382419310800528,
+      0.31220853966030515
+    ],
+    "std": 0.1292584024389193
+  },
+  "aligned_minus_refined_m": {
+    "median": -0.0016100074028662092,
+    "range": [
+      -0.08518333451461091,
+      0.23690274110493847
+    ],
+    "std": 0.09814504560009234
+  }
+}

@@ -1,0 +1,280 @@
+{
+ "written": "2026-11-01 19:36:12",
+ "note": "per episode: f0 final (PREREG_f0) unless PREREG_retry's acceptance rule replaced it; own-input evidence only",
+ "episodes": {
+  "00": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "01": {
+   "use": "prereg_f0",
+   "why": "KEEP_F0: retry both 0/5 AUC 0.1864 SP 0 MP 0 vs f0 final both 0/5 AUC 0.1974 SP 0 MP 0"
+  },
+  "02": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep02/model_90000.safetensors",
+   "sha256": "815ee744d6b039299b907ab59e15b86c70d623e5b34d820495624ce8a422ad0e",
+   "why": "REPLACE (ii): AUC 0.3254 >= 0.1803 + 0.01, SP 1>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r5_tol0.0001_try1",
+    "auc": 0.32385204081632657,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r5_tol0.0001_try1/results/episode_000002.json",
+    "results_json_sha256": "37da1bd9f3796fcf13126007ffb41962be90c7f672d88fa79bacb50b983a08fc",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r5_tol0.0001_try1/results/episode_000002.parquet",
+    "results_parquet_sha256": "c6bc4c7be8f1a5aa0480349bdba39e158e52d7a71107d0dfe224496d6ba575a0",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep02/retry/r5_tol0.0001_try1/export/ep02/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "4f4150cb162f79fdb7422350f88c4b6a95b9836a818ac8dd9e9bf844f8a1252a"
+   }
+  },
+  "03": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "04": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep04/model_90000.safetensors",
+   "sha256": "06fd37982dd4b3601830fc498373f99983ad9713c661067ae57a3da5cf69d475",
+   "why": "REPLACE (ii): AUC 0.1840 >= 0.1707 + 0.01, SP 0>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 2,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r2_tol0.0001_try1",
+    "auc": 0.18415317559153177,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r2_tol0.0001_try1/results/episode_000004.json",
+    "results_json_sha256": "d131cb9bb8b9f2e44974ac7e632f5451c28e05a89c4ec04045ccb3874947b778",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r2_tol0.0001_try1/results/episode_000004.parquet",
+    "results_parquet_sha256": "0b6471e3ceaa0c8005fd0fcb0161e7b3377b4a0d4fcbc1c1aa338b8326c259a0",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep04/retry/r2_tol0.0001_try1/export/ep04/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "57de1961e89a039cc5e6198524395a1aa91232bed04a1d6653df397edadb3345"
+   }
+  },
+  "05": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05/model_90000.safetensors",
+   "sha256": "c6a7e80a6d450f05a53d023f7a79be1781a35c8e5c8c10fc68a9ff6ea23da48b",
+   "why": "REPLACE (i): retry SP=MP=1 in 5/5 vs f0 final 0/5",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r5_tol0.0001_try1",
+    "auc": 0.5547731804586241,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r5_tol0.0001_try1/results/episode_000005.json",
+    "results_json_sha256": "209017eece277b67bcec26a7b244352060650351a807c7718895024e6f82ec41",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r5_tol0.0001_try1/results/episode_000005.parquet",
+    "results_parquet_sha256": "28be6283a50ceff59bcd01e83dd9f3ec8a550a5d9221d6ed6e89d9c5da51ce3b",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep05/retry/r5_tol0.0001_try1/export/ep05/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "c7140312a8ae9abb3c670e70a70a8b9d5bd08ffd47f22da9971a9435eb6da033"
+   }
+  },
+  "06": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "07": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "08": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "09": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "10": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "11": {
+   "use": "prereg_f0",
+   "why": "KEEP_F0: retry both 0/5 AUC 0.1032 SP 0 MP 0 vs f0 final both 0/5 AUC 0.1007 SP 0 MP 0"
+  },
+  "12": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "13": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep13/model_90000.safetensors",
+   "sha256": "0bf83bedc12347fb9209f99b5d712b862dc1c60ca9898621cbd97c49e6f3252e",
+   "why": "REPLACE (ii): AUC 0.2099 >= 0.1951 + 0.01, SP 0>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 2,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1",
+    "auc": 0.2099376355748373,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1/results/episode_000013.json",
+    "results_json_sha256": "d00dfd9ae5db32975264c6acc03bd32969dd3ed26517323d6da2eeb282e2d060",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1/results/episode_000013.parquet",
+    "results_parquet_sha256": "0cef23adc925c4ffb9ae8ff83961fbd929771a7952281a3e30a85db17f0dfe9a",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1/export/ep13/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "f09bd6a74a235be0f5a7b36023edab491d289b79311861394eb48053bb116534"
+   }
+  },
+  "14": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep14/model_90000.safetensors",
+   "sha256": "64b4bb46c091d553831c88ae0c52254827a7f5558a4c509f1a6992cf46bb75b3",
+   "why": "REPLACE (ii): AUC 0.5883 >= 0.5455 + 0.01, SP 5>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 2,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep14/retry/r2_tol0.0001_try1",
+    "auc": 0.5889350453172205,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep14/retry/r2_tol0.0001_try1/results/episode_000014.json",
+    "results_json_sha256": "30b469880ae6d1425042ff3a42093d87b511c8d7de70304640eddcfed68bc4f5",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep14/retry/r2_tol0.0001_try1/results/episode_000014.parquet",
+    "results_parquet_sha256": "f52cf54dfdf44da279878b138aa3f0336f79b0936f648b5d4d5dc475ad5fbaee",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep14/retry/r2_tol0.0001_try1/export/ep14/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "4257541865903d9c17d4fdca97defacdf0229c2ea47c54bca590d34a87a4531c"
+   }
+  },
+  "15": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "16": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep16/model_90000.safetensors",
+   "sha256": "373e0f53da7bc5f503129423339ab4b73a49808b0259689cb7341f81dbbac1e9",
+   "why": "REPLACE (ii): AUC 0.5964 >= 0.3439 + 0.01, SP 0>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep16/retry/r5_tol0.0001_try1",
+    "auc": 0.5928983228511531,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep16/retry/r5_tol0.0001_try1/results/episode_000016.json",
+    "results_json_sha256": "8578c2896c9e50799fb233981d38130d03b1d48ea56c578ac30e5574646c742b",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep16/retry/r5_tol0.0001_try1/results/episode_000016.parquet",
+    "results_parquet_sha256": "bc0819e8cf475f36c2083259275661840ec46d1cad9b43c50baab8ea822ff639",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep16/retry/r5_tol0.0001_try1/export/ep16/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "171a7e45dab5efcdb877471e671a309e12c7e6567899159f57fe903724faf1b2"
+   }
+  },
+  "17": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep17/model_90000.safetensors",
+   "sha256": "27f7c8d9d3ecfc570ce5398717e3f9a332815c7bef7148e73a1e8ec4937b7ed4",
+   "why": "REPLACE (i): retry SP=MP=1 in 5/5 vs f0 final 0/5",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 1,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep17/retry/r1_tol0.0001_try1",
+    "auc": 0.9431818181818181,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep17/retry/r1_tol0.0001_try1/results/episode_000017.json",
+    "results_json_sha256": "8368dccc82669283639285c7c845dd68e996aa132a24d55c047dca73d10d3ece",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep17/retry/r1_tol0.0001_try1/results/episode_000017.parquet",
+    "results_parquet_sha256": "0ae2606a874f07a2e3de5d3732a412b75da8bda4c8a2c92778b63b31211ff712",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep17/retry/r1_tol0.0001_try1/export/ep17/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "96bed6e145ff3548efb047cd3b73aa82e15d4e37b13f8e211f22e22bf1128eb6"
+   }
+  },
+  "18": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "19": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep19/model_90000.safetensors",
+   "sha256": "ba1da824885f8e249b9dfc1b3198ea09eb12f9638c09e4b79fae84fc291be56b",
+   "why": "REPLACE (ii): AUC 0.1568 >= 0.1304 + 0.01, SP 0>=0, MP 0>=0",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 1,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep19/retry/r1_tol0.0001_try1",
+    "auc": 0.15681433408577877,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep19/retry/r1_tol0.0001_try1/results/episode_000019.json",
+    "results_json_sha256": "7662fbf6a63975c653afcfebb42f1c3f03727dfb38b8b2132203c5595a6725df",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep19/retry/r1_tol0.0001_try1/results/episode_000019.parquet",
+    "results_parquet_sha256": "2556fd8b9f3f22ddb9d545888b99921e18411c96aee78deace53386c3e24eb58",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep19/retry/r1_tol0.0001_try1/export/ep19/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "8ccdb5612c2c5652f84dbb84dc50c35cab4febb54916de27070b964cf030fff4"
+   }
+  },
+  "20": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "21": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep21/model_90000.safetensors",
+   "sha256": "4a2afc6e880efde698832b82aa868d3dfeb36571ef93a24697a630d381b0e9f2",
+   "why": "REPLACE (i): retry SP=MP=1 in 5/5 vs f0 final 0/5",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep21/retry/r5_tol0.0001_try1",
+    "auc": 0.5059918879056047,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep21/retry/r5_tol0.0001_try1/results/episode_000021.json",
+    "results_json_sha256": "67abdbf0b29cec5d2276c4f34f4e7db5cf7e86ec07e1178aa6e10018e4d08ec5",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep21/retry/r5_tol0.0001_try1/results/episode_000021.parquet",
+    "results_parquet_sha256": "8d75520b85221d1052c5160a159e8bcc002b0f8bfd65e9ebbc74b9bde916b858",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep21/retry/r5_tol0.0001_try1/export/ep21/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "507126b56179d30cd744244e827f9d214a70f941a401b501a87f593ec74691a4"
+   }
+  },
+  "22": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "23": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep23/model_90000.safetensors",
+   "sha256": "02f069d063b76a994b5f3d316464a117198186d4d0270ee37221608acf5ba993",
+   "why": "REPLACE (i): retry SP=MP=1 in 5/5 vs f0 final 0/5",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep23/retry/r5_tol0.0001_try1",
+    "auc": 0.9781976744186046,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep23/retry/r5_tol0.0001_try1/results/episode_000023.json",
+    "results_json_sha256": "f71107ce8bab9b9dcbb60ced983c00ce096a2285779cde2fa2bff7158f9d2b15",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep23/retry/r5_tol0.0001_try1/results/episode_000023.parquet",
+    "results_parquet_sha256": "fa598f39716f9fa050c8895e5f4cb2946d203b60c90d7a5a11f0e44c6fa72369",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep23/retry/r5_tol0.0001_try1/export/ep23/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "0ef63abfb8bc439f08a8fe4d86f8206448baf3a70602b63931815477f3d94cd0"
+   }
+  },
+  "24": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "25": {
+   "use": "retry_final",
+   "checkpoint": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep25/model_90000.safetensors",
+   "sha256": "e22d06e92e588a91b13af13616102084448ae500461993cd5fb5c02f6ee37d3c",
+   "why": "REPLACE (i): retry SP=MP=1 in 5/5 vs f0 final 0/5",
+   "chosen_run": {
+    "rule": "AMENDMENT_1 (b): closest to the mean own-input ADD-AUC of the ok retry runs (exact rational arithmetic); ties -> lower run index",
+    "run": 5,
+    "dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep25/retry/r5_tol0.0001_try1",
+    "auc": 0.583454598370198,
+    "results_json": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep25/retry/r5_tol0.0001_try1/results/episode_000025.json",
+    "results_json_sha256": "114f134cdc623ae97ce9084e5d96775fea2172c361debd244a2c5b051a46398e",
+    "results_parquet": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep25/retry/r5_tol0.0001_try1/results/episode_000025.parquet",
+    "results_parquet_sha256": "a23a1b95188e728327944be92276d106e52a5178db55551b89dde247e3efec13",
+    "evaluated_checkpoint": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep25/retry/r5_tol0.0001_try1/export/ep25/model_90000.safetensors",
+    "evaluated_checkpoint_sha256": "b0276722518e9f34043d242e5dcbdb759423cd8e7cf8c976eb58ec89fe9564f0"
+   }
+  },
+  "26": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "27": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  },
+  "28": {
+   "use": "prereg_f0",
+   "why": "KEEP_F0: retry both 0/5 AUC 0.1394 SP 0 MP 0 vs f0 final both 0/5 AUC 0.1403 SP 0 MP 0"
+  },
+  "29": {
+   "use": "prereg_f0",
+   "why": "PREREG_f0 submission rule (f0 final; opus_v2 only if f0 has no evaluated checkpoint)"
+  }
+ }
+}

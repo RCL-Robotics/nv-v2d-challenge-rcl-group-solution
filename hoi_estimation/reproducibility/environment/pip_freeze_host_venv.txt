@@ -1,0 +1,13 @@
+# Host python used for postproc_depth_blend.py, build_release_opus.py and build_release_combined.py (re-run bit-identically with it, 2026-11-02).
+# python 3.12.13; only the packages these scripts import (and their numeric deps):
+filelock==3.32.3
+fsspec==2026.7.0
+Jinja2==3.1.6
+networkx==3.6.1
+numpy==2.5.2
+scipy==1.17.0
+setuptools==81.0.0
+sympy==1.14.0
+torch==2.10.0+cu128
+trimesh==4.11.1
+typing_extensions==4.12.2

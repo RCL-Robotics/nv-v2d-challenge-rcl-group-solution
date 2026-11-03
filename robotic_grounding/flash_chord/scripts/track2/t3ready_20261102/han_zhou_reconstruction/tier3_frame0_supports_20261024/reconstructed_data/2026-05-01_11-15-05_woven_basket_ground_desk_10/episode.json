@@ -1,0 +1,15 @@
+{
+ "episode_index": 27,
+ "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+ "object": "woven_basket",
+ "task": "Walk to the woven basket from the ground, pick up the basket with your both hands and place the basket on the white desk.",
+ "frames": 565,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.3430980443954468,
+  "median": 0.1800677329301834,
+  "max": 9.180832862854004
+ },
+ "support": "../../supports/2026-05-01_11-15-05_woven_basket_ground_desk_10"
+}

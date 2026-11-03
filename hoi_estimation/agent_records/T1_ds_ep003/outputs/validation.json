@@ -1,0 +1,173 @@
+{
+  "phases": [
+    {
+      "phase": "rest0",
+      "start": 0,
+      "end": 130,
+      "iou_result": 0.8481678165303494,
+      "iou_baseline": 0.7157532586941704,
+      "corr_result": 0.1739518748332936,
+      "corr_baseline": 0.25360637827673904,
+      "rot_step_p95_result": 1.973455294769804e-15,
+      "rot_step_p95_baseline": 8.427718764454553
+    },
+    {
+      "phase": "rest1",
+      "start": 215,
+      "end": 270,
+      "iou_result": 0.8036858157841625,
+      "iou_baseline": 0.6239279389248964,
+      "corr_result": 0.3381760076686104,
+      "corr_baseline": 0.09672288358696178,
+      "rot_step_p95_result": 8.493430308084729e-15,
+      "rot_step_p95_baseline": 13.742902815032513
+    },
+    {
+      "phase": "rest2",
+      "start": 350,
+      "end": 405,
+      "iou_result": 0.8146203373740298,
+      "iou_baseline": 0.6277906754299382,
+      "corr_result": 0.227794235727913,
+      "corr_baseline": 0.08742693650227501,
+      "rot_step_p95_result": 1.3126633288104969e-14,
+      "rot_step_p95_baseline": 16.203927421157438
+    },
+    {
+      "phase": "rest3",
+      "start": 480,
+      "end": 530,
+      "iou_result": 0.814399969633566,
+      "iou_baseline": 0.6197405131398473,
+      "corr_result": 0.18312063796600386,
+      "corr_baseline": 0.08839713364322911,
+      "rot_step_p95_result": 2.264891044459575e-15,
+      "rot_step_p95_baseline": 12.380397339648958
+    },
+    {
+      "phase": "rest4",
+      "start": 602,
+      "end": 640,
+      "iou_result": 0.8286375305319758,
+      "iou_baseline": 0.6007917530681749,
+      "corr_result": 0.19820006771211973,
+      "corr_baseline": 0.018023047160607937,
+      "rot_step_p95_result": 4.837582092046981e-15,
+      "rot_step_p95_baseline": 14.982867312085927
+    },
+    {
+      "phase": "rest5",
+      "start": 692,
+      "end": 780,
+      "iou_result": 0.8234734805899572,
+      "iou_baseline": 0.6704919608920563,
+      "corr_result": 0.21878439019526286,
+      "corr_baseline": 0.13243798683328975,
+      "rot_step_p95_result": 1.1470870945093316e-13,
+      "rot_step_p95_baseline": 12.221809932892658
+    },
+    {
+      "phase": "motion0",
+      "start": 131,
+      "end": 214,
+      "iou_result": 0.66567301754585,
+      "iou_baseline": 0.5869923450455338,
+      "corr_result": 0.2151020275595287,
+      "corr_baseline": 0.1803622260043086,
+      "rot_step_p95_result": 12.609213051899896,
+      "rot_step_p95_baseline": 26.172659905618495
+    },
+    {
+      "phase": "motion1",
+      "start": 271,
+      "end": 349,
+      "iou_result": 0.7049102017667107,
+      "iou_baseline": 0.5008866914391202,
+      "corr_result": 0.1743608181752073,
+      "corr_baseline": 0.14402241831190432,
+      "rot_step_p95_result": 21.734705941042737,
+      "rot_step_p95_baseline": 61.557491730798006
+    },
+    {
+      "phase": "motion2",
+      "start": 406,
+      "end": 479,
+      "iou_result": 0.724934457586351,
+      "iou_baseline": 0.5745570019176305,
+      "corr_result": 0.12542106858734595,
+      "corr_baseline": 0.10075048377078581,
+      "rot_step_p95_result": 9.401262774848071,
+      "rot_step_p95_baseline": 77.8222556404819
+    },
+    {
+      "phase": "motion3",
+      "start": 531,
+      "end": 601,
+      "iou_result": 0.7663362402570498,
+      "iou_baseline": 0.6244227766009404,
+      "corr_result": 0.04093506221401999,
+      "corr_baseline": -0.021505386885838272,
+      "rot_step_p95_result": 11.031677003656085,
+      "rot_step_p95_baseline": 79.33219270255333
+    },
+    {
+      "phase": "motion4",
+      "start": 641,
+      "end": 691,
+      "iou_result": 0.7668985787786624,
+      "iou_baseline": 0.5046796508943553,
+      "corr_result": 0.19224993869218668,
+      "corr_baseline": 0.04396169129629598,
+      "rot_step_p95_result": 12.743424715007286,
+      "rot_step_p95_baseline": 91.38355042303385
+    }
+  ],
+  "overall": {
+    "iou_result_overall": 0.7780369018023988,
+    "iou_baseline_overall": 0.6146461606090781,
+    "rot_step_p95_result": 11.3441737110264,
+    "rot_step_p95_baseline": 31.857384764473288,
+    "rest_phase_fit": [
+      [
+        0,
+        0.832094652828985,
+        6.0,
+        "B"
+      ],
+      [
+        1,
+        0.7865187407333722,
+        0.0,
+        "B"
+      ],
+      [
+        2,
+        0.7967010953265399,
+        0.0,
+        "B"
+      ],
+      [
+        3,
+        0.8161980731710902,
+        0.0,
+        "B"
+      ],
+      [
+        4,
+        0.81818014929241,
+        0.0,
+        "B"
+      ],
+      [
+        5,
+        0.823435233895018,
+        -10.0,
+        "B"
+      ]
+    ],
+    "motion_initial_iou_mean": 0.5257086753845215,
+    "motion_refined_iou_mean": 0.7252350449562073,
+    "validation_seconds": 13.463044881820679
+  },
+  "runtime_seconds": 387.39230370521545
+}

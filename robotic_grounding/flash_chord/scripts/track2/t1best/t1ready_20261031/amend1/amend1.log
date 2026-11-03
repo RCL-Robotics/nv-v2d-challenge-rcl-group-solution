@@ -1,0 +1,2 @@
+[2026-10-28 18:02:08] select all7 (n 20, incomplete []): mean AUC 0.93113 sd 0.00333; SP mode 1.0 MP mode 1.0; 14 candidates; closest t05 AUC 0.93097 MPPE 0.9301; best (report only) t08 AUC 0.93280
+[2026-10-28 18:03:01] files SUBMITTABLE_W3H_closest_to_mean: t05 T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv sha 53cfe9bfa5a2; rescore equal True; validate True; problems []

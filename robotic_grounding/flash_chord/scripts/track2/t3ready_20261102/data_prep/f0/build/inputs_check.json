@@ -1,0 +1,1811 @@
+{
+ "written": "2026-10-24 17:53:17",
+ "source": "/root/autodl-tmp/han.zhou/tier3/release/tier3_frame0_supports_20261024",
+ "root": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0",
+ "checks": {
+  "episodes_json_0_29": {
+   "ok": true,
+   "detail": "30 entries"
+  },
+  "numbering_equal_opus_manifest": {
+   "ok": true,
+   "detail": "30/30 index, sequence, object, frames, task equal"
+  },
+  "object_variant": {
+   "ok": true,
+   "detail": [
+    "opus_v2_frame0_f3_c2_shift"
+   ]
+  },
+  "support_episodes": {
+   "ok": true,
+   "detail": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    9,
+    11,
+    13,
+    16,
+    17,
+    20,
+    25,
+    27,
+    28
+   ]
+  },
+  "ep00_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep00_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep00_arrays": {
+   "ok": true,
+   "detail": "T=778 shapes True finite True orth 1.8e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep00_floor_only_file": {
+   "ok": true,
+   "detail": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda geometry False"
+  },
+  "ep01_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep01_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep01_arrays": {
+   "ok": true,
+   "detail": "T=747 shapes True finite True orth 3.0e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep02_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep02_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep02_arrays": {
+   "ok": true,
+   "detail": "T=980 shapes True finite True orth 1.6e-15 last-row 0e+00 xyz_wxyz 2.4e-07 m 2.5e-06 deg"
+  },
+  "ep03_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep03_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep03_arrays": {
+   "ok": true,
+   "detail": "T=781 shapes True finite True orth 2.3e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 5.2e-06 deg"
+  },
+  "ep04_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep04_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep04_arrays": {
+   "ok": true,
+   "detail": "T=803 shapes True finite True orth 5.3e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep04_floor_only_file": {
+   "ok": true,
+   "detail": "2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda geometry False"
+  },
+  "ep05_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep05_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep05_arrays": {
+   "ok": true,
+   "detail": "T=1003 shapes True finite True orth 1.6e-05 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep05_floor_only_file": {
+   "ok": true,
+   "detail": "2026-03-18_19-36-56_g1_box_rotate_01_support.usda geometry False"
+  },
+  "ep06_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep06_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep06_arrays": {
+   "ok": true,
+   "detail": "T=546 shapes True finite True orth 1.8e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep07_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep07_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep07_arrays": {
+   "ok": true,
+   "detail": "T=896 shapes True finite True orth 4.5e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 5.1e-06 deg"
+  },
+  "ep08_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep08_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep08_arrays": {
+   "ok": true,
+   "detail": "T=708 shapes True finite True orth 9.3e-08 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep08_floor_only_file": {
+   "ok": true,
+   "detail": "2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda geometry False"
+  },
+  "ep09_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep09_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep09_arrays": {
+   "ok": true,
+   "detail": "T=870 shapes True finite True orth 1.6e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep10_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep10_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep10_arrays": {
+   "ok": true,
+   "detail": "T=794 shapes True finite True orth 2.2e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep10_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda geometry False"
+  },
+  "ep11_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep11_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep11_arrays": {
+   "ok": true,
+   "detail": "T=901 shapes True finite True orth 5.5e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep12_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep12_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep12_arrays": {
+   "ok": true,
+   "detail": "T=700 shapes True finite True orth 1.6e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.0e-06 deg"
+  },
+  "ep12_floor_only_file": {
+   "ok": true,
+   "detail": "2026-04-25_17-20-04_black_platform_turn_05_support.usda geometry False"
+  },
+  "ep13_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep13_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep13_arrays": {
+   "ok": true,
+   "detail": "T=922 shapes True finite True orth 4.8e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.4e-06 deg"
+  },
+  "ep14_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep14_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep14_arrays": {
+   "ok": true,
+   "detail": "T=993 shapes True finite True orth 2.0e-05 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep14_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-28_14-44-09_round_table_flip_08_support.usda geometry False"
+  },
+  "ep15_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep15_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep15_arrays": {
+   "ok": true,
+   "detail": "T=715 shapes True finite True orth 4.0e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep15_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda geometry False"
+  },
+  "ep16_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep16_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep16_arrays": {
+   "ok": true,
+   "detail": "T=477 shapes True finite True orth 4.4e-15 last-row 0e+00 xyz_wxyz 2.4e-07 m 5.0e-06 deg"
+  },
+  "ep17_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep17_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep17_arrays": {
+   "ok": true,
+   "detail": "T=440 shapes True finite True orth 4.3e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.6e-06 deg"
+  },
+  "ep18_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep18_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep18_arrays": {
+   "ok": true,
+   "detail": "T=858 shapes True finite True orth 2.1e-05 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep18_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda geometry False"
+  },
+  "ep19_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep19_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep19_arrays": {
+   "ok": true,
+   "detail": "T=886 shapes True finite True orth 2.7e-06 last-row 0e+00 xyz_wxyz 2.2e-07 m 5.5e-06 deg"
+  },
+  "ep19_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-19_10-19-48_cane_swing_05_support.usda geometry False"
+  },
+  "ep20_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep20_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep20_arrays": {
+   "ok": true,
+   "detail": "T=553 shapes True finite True orth 3.9e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep21_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep21_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep21_arrays": {
+   "ok": true,
+   "detail": "T=678 shapes True finite True orth 1.4e-05 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.3e-06 deg"
+  },
+  "ep21_floor_only_file": {
+   "ok": true,
+   "detail": "2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda geometry False"
+  },
+  "ep22_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep22_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep22_arrays": {
+   "ok": true,
+   "detail": "T=719 shapes True finite True orth 1.3e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep22_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-22_16-52-36_step_ladder_drag_03_support.usda geometry False"
+  },
+  "ep23_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep23_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep23_arrays": {
+   "ok": true,
+   "detail": "T=946 shapes True finite True orth 1.6e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 5.4e-06 deg"
+  },
+  "ep23_floor_only_file": {
+   "ok": true,
+   "detail": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda geometry False"
+  },
+  "ep24_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep24_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep24_arrays": {
+   "ok": true,
+   "detail": "T=748 shapes True finite True orth 2.4e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.7e-06 deg"
+  },
+  "ep24_floor_only_file": {
+   "ok": true,
+   "detail": "2026-05-29_15-43-20_watering_can_pour_right_02_support.usda geometry False"
+  },
+  "ep25_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep25_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep25_arrays": {
+   "ok": true,
+   "detail": "T=859 shapes True finite True orth 4.9e-06 last-row 0e+00 xyz_wxyz 1.2e-07 m 5.4e-06 deg"
+  },
+  "ep26_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep26_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep26_arrays": {
+   "ok": true,
+   "detail": "T=669 shapes True finite True orth 1.9e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.0e-06 deg"
+  },
+  "ep26_floor_only_file": {
+   "ok": true,
+   "detail": "2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda geometry False"
+  },
+  "ep27_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep27_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep27_arrays": {
+   "ok": true,
+   "detail": "T=565 shapes True finite True orth 1.9e-15 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.5e-06 deg"
+  },
+  "ep28_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep28_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant', 'support']"
+  },
+  "ep28_arrays": {
+   "ok": true,
+   "detail": "T=988 shapes True finite True orth 2.7e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep29_unchanged_inputs": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "ground_plane.json": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "ep29_episode_json_diff": {
+   "ok": true,
+   "detail": "differs from opus in ['object_variant']"
+  },
+  "ep29_arrays": {
+   "ok": true,
+   "detail": "T=467 shapes True finite True orth 2.7e-07 last-row 0e+00 xyz_wxyz 1.2e-07 m 4.8e-06 deg"
+  },
+  "ep29_floor_only_file": {
+   "ok": true,
+   "detail": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda geometry False"
+  },
+  "release_frame_refs_unchanged": {
+   "ok": true,
+   "detail": "release frame_references/ byte-identical to the opus release (s1 track; not used)"
+  },
+  "tracks_changed": {
+   "ok": true,
+   "detail": "30/30 tracks differ from opus_v2"
+  }
+ },
+ "episodes": {
+  "00": {
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "object": "tall_bar_stool",
+   "frames": 778,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "125140af4eb75696beb0e71b775a590960a29772a6c1a29a54facf09e0a37581",
+    "episode.json": "843f472c1545160369979f923fd7b5a9e2e3be3aa23e041fecedfffe3afcbe58",
+    "ground_plane.json": "b0d527d5e2a57a98f845f20ac639b0bb918f448edf3186d89d147b6a38655dd4",
+    "object_pose_xyz_wxyz.npy": "d60b68188d5145f1ff2e938977b1d9cab0351069c631c7584bec89d5e83b09c9",
+    "poses.npy": "8db93c45a1bfa7f7f756bf364ef29293b5f88ef5e6752f08e382f144b9f22a84",
+    "soma_params.npz": "b0c38e9395b8ac26088f9e810b07870c37f37851f8ba0004aff6d9d8ee77e64c",
+    "reconstructed_mesh/output_aligned.glb": "cc214961423d674d55239077043e670c0696bf9113e225e11c1c2623c7ed26ad"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     5.23,
+     5.23
+    ],
+    "rot_change_deg_median_max": [
+     2.62,
+     2.62
+    ],
+    "frame0_pos_change_cm": 5.23,
+    "frame0_rot_change_deg": 2.62,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "01": {
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "object": "vacuum",
+   "frames": 747,
+   "support_dir": "supports/2026-05-18_17-06-21_vacuum_left_lean_02",
+   "sha256": {
+    "camera.json": "e558ad5b2edf47ca0157120672e1fd54b544af3d9d0f6e3ac0aed9e19ddee6ef",
+    "episode.json": "a90b805242dc1fbe2289ab16af94f480112072b811d5d920c35ac6cf20566d08",
+    "ground_plane.json": "d19ecbb803d769063fe296f8075e895d1c8830496f8095e01531c5a9bf13f4c2",
+    "object_pose_xyz_wxyz.npy": "5c916224e8203eacfd57379fb25a6f48ebfa00fc9848f34f05df968a4d5fd0e4",
+    "poses.npy": "35e1124e6c784fd37e36b611783484df3a45e453dd9873daacfd8532fcf5e3d9",
+    "soma_params.npz": "507236442f32d44fa43088eadaf42d8b44f442a5832a4c19f3a8f0dfc26ee401",
+    "reconstructed_mesh/output_aligned.glb": "fc017067c2783cd29cf7536988d7f662c7c1fbd49e6b1336a3f32fbdd47cebee"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     6.88,
+     6.88
+    ],
+    "rot_change_deg_median_max": [
+     7.83,
+     7.83
+    ],
+    "frame0_pos_change_cm": 6.88,
+    "frame0_rot_change_deg": 7.83,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "02": {
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "object": "blue_easter_basket",
+   "frames": 980,
+   "support_dir": "supports/2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "sha256": {
+    "camera.json": "a715f1a7f116c91cd71f87cd770cabd94a356c4245c4475de0fbe6a5f1d5e5ff",
+    "episode.json": "ac8da3e702bc9cd1b9a377fe0fcf32046dc8de5b7f175be1fc6c010a21403695",
+    "ground_plane.json": "2b4ea9ce46bb055739f2943a9f8261b3a355b8ca9b07999d569291227e835165",
+    "object_pose_xyz_wxyz.npy": "cdd729efaf6c394fcb3720c0576656a0a92f5a7934ae842d37b6f399b5d367ed",
+    "poses.npy": "1796c7fda2bb2dbb9a1d2631b4edcca2e62f741355d35c8ee5e577ffda04af19",
+    "soma_params.npz": "3609b06c7a514d4f4fe37e36a2e48dab78e8223c95428d757337a88585547d58",
+    "reconstructed_mesh/output_aligned.glb": "802e074320c9b516bf2b66d26630584a74124e30dc2f479e05de1fb9c16344c4"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     11.01,
+     11.01
+    ],
+    "rot_change_deg_median_max": [
+     57.43,
+     57.43
+    ],
+    "frame0_pos_change_cm": 11.01,
+    "frame0_rot_change_deg": 57.43,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "03": {
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "object": "contigo_coffee_mug",
+   "frames": 781,
+   "support_dir": "supports/2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "sha256": {
+    "camera.json": "6a6476183abdb743acaf7e75302880a7e336f26c70a53118309c1d1a3b111a68",
+    "episode.json": "e410d026bb99e3833c1bb2a72d90def4a86903765e35c53584d7ea620c5632f8",
+    "ground_plane.json": "edee94f6e18f17bca636511710ff0d6e4a7f912683b44f32ab64828c421e3fc6",
+    "object_pose_xyz_wxyz.npy": "f7f4e4efaad31338de732b20fb44ac18271a2ccadf6a567fabcb6f898446e54a",
+    "poses.npy": "1462d5b00470b173fde2f3f870f6d570f8fc45e2ddd53a827ec83cac00f113ae",
+    "soma_params.npz": "dad583ec667c28d10a1e55d19902152bd6765fe89e46276c147ca8c408cf3d1d",
+    "reconstructed_mesh/output_aligned.glb": "6ac9976cc09e5dfb8b068672d91a00fafa73a774035e96cad4faa7e50aec283f"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     13.85,
+     13.85
+    ],
+    "rot_change_deg_median_max": [
+     12.92,
+     12.92
+    ],
+    "frame0_pos_change_cm": 13.85,
+    "frame0_rot_change_deg": 12.92,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "04": {
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "object": "baseball_bat",
+   "frames": 803,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "fa116b146feecacf3982f7b743cdfc064f530664e3b070dd2c2a481b9b56aa26",
+    "episode.json": "783cb62bacb48e63b968723e4312a54d16ac1ba2ddad08f3be1eb728b8a391d4",
+    "ground_plane.json": "90a0a9e68820ab7f79790cfc921dd6ac6dc5959c475d8924efd8ccae68d47e4c",
+    "object_pose_xyz_wxyz.npy": "8dfbcce363c86fe8efdc5da6b6e6f69ccb7aeb02e1c3fc310afb844086b0801b",
+    "poses.npy": "fd22df03e6bc4c6d29cabf41d056c348a19d6de263d5d8d049f90a3a6d270208",
+    "soma_params.npz": "d6e44115f578524b2a92a252672a8c1fb8afecf0fd0cb9dc77d3a5760646cf53",
+    "reconstructed_mesh/output_aligned.glb": "5aa2294d698eb370d0d1435963e42022cc1064faa355b547e492ffe893e51cd7"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     5.86,
+     5.86
+    ],
+    "rot_change_deg_median_max": [
+     175.0,
+     180.0
+    ],
+    "frame0_pos_change_cm": 5.86,
+    "frame0_rot_change_deg": 167.56,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "05": {
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "object": "big_black_box",
+   "frames": 1003,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "1266a5049aeb48c7ad42a119f6a3b41ffddc7371cbf5970bccb3ce457e21679c",
+    "episode.json": "994dec2434ab1bae80ca85617cbeb91133e89d160400dd3e33f5d2b50a977df9",
+    "ground_plane.json": "4d0e30bd89205874ecabeaf1b402aa12df861b1888b18b7a8aa9a224d4222207",
+    "object_pose_xyz_wxyz.npy": "aeffaf1bd65aef0bc426ab0c5c5f4c95c74e7b757eb00570a1b43418781e1d1b",
+    "poses.npy": "774b9611b026a80c90258668079d03fd4362de35da29d8c5ff28cc60a986423a",
+    "soma_params.npz": "ad8d2ae59fbfa6df18432627cc463ad6a3f41541fda6d01458cb461599dea280",
+    "reconstructed_mesh/output_aligned.glb": "e6d434d16811524b8b3725e32c9ba2781bb878c47962f2e6a25b22e0cc2e4427"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     3.4,
+     3.4
+    ],
+    "rot_change_deg_median_max": [
+     1.57,
+     1.57
+    ],
+    "frame0_pos_change_cm": 3.4,
+    "frame0_rot_change_deg": 1.57,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "06": {
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "object": "monitor",
+   "frames": 546,
+   "support_dir": "supports/2026-06-01_11-26-44_monitor_rotate_05",
+   "sha256": {
+    "camera.json": "e4e3d2a390d65ed97576d59190c6a8c9d4f877804b9cde347a806f1774a41fe1",
+    "episode.json": "050dfe4a0ef1ee1e6431989c049a9b5eb6409d0f608725a0fb1400ffebedaddb",
+    "ground_plane.json": "a1d3fdd69410fb64e2a271c99f4f0b7cbe6ed01558ec8bf47fcec6f7ea980def",
+    "object_pose_xyz_wxyz.npy": "513c0e8bc87f3b39db2e62e4bb3f588838169eeb09bce7b16d560d7a669e09a8",
+    "poses.npy": "333c6f0b141edac29da9c46eba6ba3709a5355104c9c82a466b5b006adab18d0",
+    "soma_params.npz": "959927d2d5e792220d10a7264f1a1d462f29b6e8a7b33133aa0453d80f99da7f",
+    "reconstructed_mesh/output_aligned.glb": "e961a7da1bcecc1087c6aa3be2241c8ac166e37d7b30ff3e9fa5bdd3859bf4b6"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     7.89,
+     7.89
+    ],
+    "rot_change_deg_median_max": [
+     4.95,
+     4.95
+    ],
+    "frame0_pos_change_cm": 7.89,
+    "frame0_rot_change_deg": 4.95,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "07": {
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "object": "iron",
+   "frames": 896,
+   "support_dir": "supports/2026-05-29_15-20-43_iron_round_table_02",
+   "sha256": {
+    "camera.json": "581e1fed19840b3093358d8faa8036521bef2b0d4d5e2a6c3780262c179f8ab3",
+    "episode.json": "a5ed2d55db7095fcfaa179315e3c2bd290a55e886ca91717ec4a238a519a5dba",
+    "ground_plane.json": "7c49ce58caac4f7b4ae82826a9b43485f84afafd15742ec9e828a1c9ef27a0d4",
+    "object_pose_xyz_wxyz.npy": "8b5d745115c6a871922180fb6524b5686992537ddbbdc3fff2c2bd5536b5d965",
+    "poses.npy": "218053e1efc0def5b1038fa561e385ae8fbb06b564624309a192dbcab29210af",
+    "soma_params.npz": "7d64329e1c74140803d91d867018b514fdc0b9c77677f4980239b4c3595e68e1",
+    "reconstructed_mesh/output_aligned.glb": "714f94b07baaa29ec5bb35ed3ae9dc3ff32a651ea763db45e5efe59af0dc9e83"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     4.05,
+     4.05
+    ],
+    "rot_change_deg_median_max": [
+     5.3,
+     5.3
+    ],
+    "frame0_pos_change_cm": 4.05,
+    "frame0_rot_change_deg": 5.3,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "08": {
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "object": "skinny_wood_chair",
+   "frames": 708,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "1ad7dd73a10fbe47977badde368966fe3db62a197ec5154b632d732a52f18bd9",
+    "episode.json": "87839c102a5e9926417e454bae2313eae28df7eee485d22e8346937731bf2c02",
+    "ground_plane.json": "33e86866ebc96590fcaa3dd2346af1885a2c1c61e9683ffe491e5b105bb72a9e",
+    "object_pose_xyz_wxyz.npy": "322dac16bb6dd2985bc63161a479370608518ba52a73866f0e38e2742ea1bd86",
+    "poses.npy": "2296a9b36d843ded62c71ef1757702efacf29a036a0897419b78db18fc04875d",
+    "soma_params.npz": "4f7f1c43908948d9d763c7f62a9629cdc8f1ecfc91c96d06bb2d7718884f0018",
+    "reconstructed_mesh/output_aligned.glb": "7982ef074fe2e8b2bbab813ccb4cc848c05571e7c3adef42458b73449481d35a"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     1.52,
+     1.52
+    ],
+    "rot_change_deg_median_max": [
+     1.68,
+     1.68
+    ],
+    "frame0_pos_change_cm": 1.52,
+    "frame0_rot_change_deg": 1.68,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "09": {
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "object": "big_red_bowl",
+   "frames": 870,
+   "support_dir": "supports/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "sha256": {
+    "camera.json": "e797f4a149a4772653c61702db64f1d7a2c7110290889e803402ffc7a8efd8fd",
+    "episode.json": "962a715a6b222990c785abed3c296c322f5025310950836fb31a62ae488568ed",
+    "ground_plane.json": "47bf9516d299dc2a6b7190f74bfd46058d11d611587e2995abc6d05c11f84282",
+    "object_pose_xyz_wxyz.npy": "32be21a853bd9f6555a49559b88a523dd5b856f0267bdf716f3a683237855c11",
+    "poses.npy": "9552e877e3bf69de5e6192619201ec05b8f0ec1900230e385c9752e833a71d19",
+    "soma_params.npz": "a7877fbf16a971b63a93c70cac9a181305536d5b496d6137277aaf9e77a2caf8",
+    "reconstructed_mesh/output_aligned.glb": "473b0466c0a05c3f2e586e793c4dc81f4c1281534d1402809f32e94e7e6e915d"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     7.26,
+     7.26
+    ],
+    "rot_change_deg_median_max": [
+     127.72,
+     127.72
+    ],
+    "frame0_pos_change_cm": 7.26,
+    "frame0_rot_change_deg": 127.72,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "10": {
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "object": "white_desk",
+   "frames": 794,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "d43963a855f4723e1ebd84e51bc2f0aaf201d01511d8a8598290bd98ff461617",
+    "episode.json": "a7843c4991dba3756323ea105c809ed66ad197feab283612d5e75e1976843582",
+    "ground_plane.json": "dabe43e74a47b01d94c7b34096d402a7fb4e03a6d0da417231d6d45c9a069926",
+    "object_pose_xyz_wxyz.npy": "c772a369c6169d8319a4836e3c300ec88115aec61136b93e418bf8126e636340",
+    "poses.npy": "b3e40c78a84ea8f971d498006bb2cb61c565987480e50e5a9fbe079f300f8e10",
+    "soma_params.npz": "d2b93102ed70716c6175b93257eb1d1cac409799b3399b99967aed716831d1a8",
+    "reconstructed_mesh/output_aligned.glb": "20bc239794adf00df9089347eef7bb72c9540ab03379d1fb3762c9d156a4fefd"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     3.11,
+     3.11
+    ],
+    "rot_change_deg_median_max": [
+     4.29,
+     4.29
+    ],
+    "frame0_pos_change_cm": 3.11,
+    "frame0_rot_change_deg": 4.29,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "11": {
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "object": "light_blue_book",
+   "frames": 901,
+   "support_dir": "supports/2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "sha256": {
+    "camera.json": "6f6752706cce996b1c519531ad1b66bc9e34423fe2cd61e305c870f937afff50",
+    "episode.json": "3cb217150841bc18646a0b66e4ae2432551583c1954a98e324c1640c17aebb23",
+    "ground_plane.json": "7dccbbd3948706dae8686200433928d6905ecc972033ef6bb76c0140a19b3c4a",
+    "object_pose_xyz_wxyz.npy": "61377b3d5579c88e62695ee1953eaa863a0c2570d81efb18289a4e04c035ad07",
+    "poses.npy": "d0817756ef60d7c71b24c146f8f97dfe582592c3c141b67afc7da25215e628cd",
+    "soma_params.npz": "e3a66b036bd4df575ff0554136072540048cd747743e6c7b90bdace0429b9b8e",
+    "reconstructed_mesh/output_aligned.glb": "4c797e20fe013f3376efb41d140e4663ee5b2bd00e55708575f536343503d0b7"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     2.56,
+     2.56
+    ],
+    "rot_change_deg_median_max": [
+     3.17,
+     3.17
+    ],
+    "frame0_pos_change_cm": 2.56,
+    "frame0_rot_change_deg": 3.17,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "12": {
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "object": "black_platform",
+   "frames": 700,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "93b749ad1d5bbb6961da9d4c9da7170cb4bda894e5fbbc4cefcffcc577df9487",
+    "episode.json": "ec1260fc021f13a6d8a575daf800cf601861041b349ee66bfe0367e28bdcdf21",
+    "ground_plane.json": "50eba8f29dd2f1ea30657dfcb7aad72956b0b7770c1570a58cf444a8bc0edc1e",
+    "object_pose_xyz_wxyz.npy": "4174f8cd6d9716f90009165ba399640f9d0e09763e5e6f9c3d45fed2e75af4f4",
+    "poses.npy": "593ab416dbb9c18074450d6dea326d8545353541f3e0707c56c6f89704f804b7",
+    "soma_params.npz": "d0f51383d37f6f16d3d699ea59278cddfc629db295a170edf004dcaeef18ce67",
+    "reconstructed_mesh/output_aligned.glb": "5c27db3c4896bbc494c3d68721b97cf130b15e4fd4e6110e2f2a6e92beecea4a"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     6.81,
+     6.81
+    ],
+    "rot_change_deg_median_max": [
+     179.55,
+     179.98
+    ],
+    "frame0_pos_change_cm": 6.81,
+    "frame0_rot_change_deg": 179.56,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "13": {
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "object": "snack_box",
+   "frames": 922,
+   "support_dir": "supports/2026-06-09_10-19-09_snack_box_desk_through_06",
+   "sha256": {
+    "camera.json": "185c7d5973d7083030723e7cb696b0559f2ae55742ed804657bf344a6dca9a66",
+    "episode.json": "099bd0a85645c888807e0ff1ffa03ca884334c5a3062a8d4720611e541790b5c",
+    "ground_plane.json": "a81074aec2ce6f52c5e3002195c43dca4501cc7f6202e2e35586502fb822198f",
+    "object_pose_xyz_wxyz.npy": "6c895fa388e69abc87eccc3525c68b02abe69b26d8836cf51918ca0e51372623",
+    "poses.npy": "5ffba2ad2b997aacf128fc0b72aee85a54ee1eb906642ab2a9ffa76a4c0c146f",
+    "soma_params.npz": "1981b6e2c86b835d5a499be7fa2eb60cc8956b804663b4248602f5024a589b27",
+    "reconstructed_mesh/output_aligned.glb": "6a3c61c171534be9226a383db02a00b4d951569a7b228c60fc0a2f56e06cd441"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     5.35,
+     5.35
+    ],
+    "rot_change_deg_median_max": [
+     2.22,
+     2.22
+    ],
+    "frame0_pos_change_cm": 5.35,
+    "frame0_rot_change_deg": 2.22,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "14": {
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "object": "round_table",
+   "frames": 993,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "c75b3d39b6a7c2687446af92a65f633ae6db1c72a8860a95b9305e84c181c18c",
+    "episode.json": "b2a8b9d80f9c436e7b40970bd0bf0e6e2937a550ffec532c8161ef47d91c22b3",
+    "ground_plane.json": "26869d9aafe1b9e945e8b006058da3628e0421dac05452bff005d0c9b289757a",
+    "object_pose_xyz_wxyz.npy": "3b48a3c357af69904c416adc31669b92c9680bb283630b4f1086d9b5283bee64",
+    "poses.npy": "13056a5c3845f18bce84ed05a6b0d2ab26fda9ab6dc5316711d4ac5506591b6e",
+    "soma_params.npz": "2e758eb5a392fd2f9c371c6beece54f05a7bec0f3374439246eb447ba2da6262",
+    "reconstructed_mesh/output_aligned.glb": "e53b35a958f513728d52db9303a86ee23bdb4fe796d25f5b1560d3df9e402546"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     3.1,
+     3.1
+    ],
+    "rot_change_deg_median_max": [
+     75.79,
+     75.79
+    ],
+    "frame0_pos_change_cm": 3.1,
+    "frame0_rot_change_deg": 75.79,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "15": {
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "object": "wet_floor_sign",
+   "frames": 715,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "a76b7e45f61f72315eb8423b1675271df627c8fa4dc45a3f73359acfd98f297c",
+    "episode.json": "1344d593cbfa9aeff88012eae608ad60b74208f99cb174d4f5c449d1316e20a1",
+    "ground_plane.json": "2eb28c6af4ea9f597e48e47db8d2f87ddcca9730c7d4825ed43d89d4be93390c",
+    "object_pose_xyz_wxyz.npy": "c4d21ba3fd14d149ea01702da3dc2120e77f3222f5f354230ff9383728f4236e",
+    "poses.npy": "b0a0c3138a67d3b2c8037fbed5ced3c382ff034f8fc3fddd0a7453f94fe90a3c",
+    "soma_params.npz": "74b9f5a0e3355175407875cfe83e27f861371459762f919bc493c825484d26e1",
+    "reconstructed_mesh/output_aligned.glb": "7a762ca67b09823ce9476441cd3a2396a7fc135d2dcb74533067952360dac1f5"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     2.91,
+     2.91
+    ],
+    "rot_change_deg_median_max": [
+     175.22,
+     176.05
+    ],
+    "frame0_pos_change_cm": 2.91,
+    "frame0_rot_change_deg": 175.22,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "16": {
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "object": "spray_bottle",
+   "frames": 477,
+   "support_dir": "supports/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "sha256": {
+    "camera.json": "1b8ab0c65ff0a2742f68e107099687ec010085dc0f03e74b063e49211dad9285",
+    "episode.json": "6943c5a9b41bcfce5a2a2bac0f16c1dd9261f12507c97e10863a2fd352bd0e3c",
+    "ground_plane.json": "c2aa033a12ed0081c8b8d06bcb83be766ca0bfd650db4bc713aa9d71055eba5f",
+    "object_pose_xyz_wxyz.npy": "a7c517512cd5109585d5aeb08053a7db2bebf43ccee71284d48b3309bf1358e1",
+    "poses.npy": "f8933898c4e26609a929722ca0b7c080d4baab48dec8f2c888432702855db5e4",
+    "soma_params.npz": "ff7277e804a4cbb2550762c58800698b04e90cc350e37d64b382e980c8466cfb",
+    "reconstructed_mesh/output_aligned.glb": "e5063cd7014d97475b1fed361e6c2383579ab7d3e48e589f1c43d0040f61f372"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     9.8,
+     9.8
+    ],
+    "rot_change_deg_median_max": [
+     2.39,
+     2.39
+    ],
+    "frame0_pos_change_cm": 9.8,
+    "frame0_rot_change_deg": 2.39,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "17": {
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "object": "traffic_cone",
+   "frames": 440,
+   "support_dir": "supports/2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "sha256": {
+    "camera.json": "aef11700f64f2a9ce82bea096604b1b0170bb640d8fb0a83e66780f67ca0a03e",
+    "episode.json": "57552723a0bc687621d5286de7b25013781006b22abc3d8bcc557f25ec40a475",
+    "ground_plane.json": "c562daeef17dc786416e5d64d7de7bddec32f421de7718ce558c62bc306dd801",
+    "object_pose_xyz_wxyz.npy": "6cc84e9cccc0abcd025898cb124563d133bb738c9899af13dc727ccd8af6612b",
+    "poses.npy": "cc74f14af8bd861d7ea485297db6f64e146b7837a14a2b8bd58db884a793b51a",
+    "soma_params.npz": "7e932465cd8926c883e4aee6751d251122e995e1c93f1eebcc95f46fdf079b11",
+    "reconstructed_mesh/output_aligned.glb": "2acace9fcb3e53afcb6665db7b4717710e5cfc3a17c0ed5196a36df5ec340a16"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     11.53,
+     11.53
+    ],
+    "rot_change_deg_median_max": [
+     170.12,
+     172.49
+    ],
+    "frame0_pos_change_cm": 11.53,
+    "frame0_rot_change_deg": 170.15,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "18": {
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "object": "blue_trash_can",
+   "frames": 858,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "b8995da578e11aa8f8940aaf8b2a339b8ee9b5dd1c9ba185986fc312bec85096",
+    "episode.json": "0e6f5fbd876354de8b966442195f348958bbd565f8d3c1629df7d474b00d03b1",
+    "ground_plane.json": "a082b1d29a00aad577496189d4841eb2e1d45cb085c386bd72420a5e3361466a",
+    "object_pose_xyz_wxyz.npy": "24b2cc73fa7e6316edbad0b624c23a5dc8dde24982d822542aa211717a8f83f9",
+    "poses.npy": "dcde0707b0b26c0150e916fe922dc3e0d9112c08e977195527e5aca264a29480",
+    "soma_params.npz": "5b74d204627480e73dacb1e011c73a53f2ca4cd3f8d0da1653d123035e3f0fc0",
+    "reconstructed_mesh/output_aligned.glb": "14c18e9bd96383ebeb5c3d786f013c7fcb43d55cecef609de0f73a1c8a269f5b"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     10.89,
+     10.89
+    ],
+    "rot_change_deg_median_max": [
+     4.68,
+     4.68
+    ],
+    "frame0_pos_change_cm": 10.89,
+    "frame0_rot_change_deg": 4.68,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "19": {
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "object": "cane",
+   "frames": 886,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "c01e4a67b0f0e3f26da44ebd4803883e34b9382189091c0f29cb606e819904ff",
+    "episode.json": "1a8e743130d943441dbdc98e8383f75c224f31aaedb9e8bb1cb26db7588b8341",
+    "ground_plane.json": "cf0b612cfa15ede4ae33f2ed4d46ab28257d840ee274fa75a69da80bd1e66856",
+    "object_pose_xyz_wxyz.npy": "214f8a2023a309faf6a79fe7621b6848d4adaf3ffd2b77ec0381cda5edd03650",
+    "poses.npy": "3d5f2fb31da21b210b838fd684422daa904ee61af6176f61856ad739a172231e",
+    "soma_params.npz": "d30fcf9af20d48ffde67419b986aea13d9d5fddcfbe274b0f6dd86f705919661",
+    "reconstructed_mesh/output_aligned.glb": "33a74ed590f246417efd58260ec1083966195c669a4ee02a9eb6b8a5b9c3e737"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     12.9,
+     12.9
+    ],
+    "rot_change_deg_median_max": [
+     5.86,
+     5.86
+    ],
+    "frame0_pos_change_cm": 12.9,
+    "frame0_rot_change_deg": 5.86,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "20": {
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "object": "rice_cooker",
+   "frames": 553,
+   "support_dir": "supports/2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "sha256": {
+    "camera.json": "44ee3e2f328d13e7e9bc16d3d5b0bc1b002386d0c2a62318196a28f9f0f81f24",
+    "episode.json": "c62a4ae4fb9734cf2ee18b0da2ea96035636fb098d719dada257a5a30813c328",
+    "ground_plane.json": "bea0e61fffef9b6c6d5284aec9ce1776abd2e82cf78ff69ff7cb111364433f9f",
+    "object_pose_xyz_wxyz.npy": "baf74fc1344d88404980f78954115e149a99e8af5b723cbe642b7cd41896b371",
+    "poses.npy": "b9167fee6b1225601e477962c9ca48ab02971ea708eb7941a921f4aecb60e72a",
+    "soma_params.npz": "8152b1520125ecde1dcbc7b828d8d44b44cf3fe33f958e312d9739d7c0a694d5",
+    "reconstructed_mesh/output_aligned.glb": "969ef0080979446b5713d6f3c5c450658998844d7db699c01366d93ed11b6d21"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     12.47,
+     12.47
+    ],
+    "rot_change_deg_median_max": [
+     4.91,
+     4.91
+    ],
+    "frame0_pos_change_cm": 12.47,
+    "frame0_rot_change_deg": 4.91,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "21": {
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "object": "tall_bar_stool",
+   "frames": 678,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "09319e6e34480742664f97307cc1ce61698c10faf11e7b6d78be86274b82e10c",
+    "episode.json": "a08c1a50510fb659d0aeec008d4ce61fdc2780b5fcefde941a766f8e384c93e7",
+    "ground_plane.json": "a6fadc51b4d4e5bfc59266cc3ea6ac149a06c45debb8e3ece59d9402d54f2dec",
+    "object_pose_xyz_wxyz.npy": "858979020238018625e5526f8818b64b135f72a837d22db6796cea131de9802b",
+    "poses.npy": "20442cbf975661d32dc086454d681f35a91e699a8c46f84a73b44545274e3e84",
+    "soma_params.npz": "cf29859eb835c0a4ed52f698a4ed115cf50435f83934e9992c45cf41ada482bd",
+    "reconstructed_mesh/output_aligned.glb": "cc214961423d674d55239077043e670c0696bf9113e225e11c1c2623c7ed26ad"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     1.39,
+     1.39
+    ],
+    "rot_change_deg_median_max": [
+     3.22,
+     3.22
+    ],
+    "frame0_pos_change_cm": 1.39,
+    "frame0_rot_change_deg": 3.22,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "22": {
+   "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+   "object": "step_ladder",
+   "frames": 719,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "8bf3c5ab6271cb8855f25ae8a604a92fdff1b0048b19a9d76726eaeac9366578",
+    "episode.json": "4e7912c2b0b449c5c987a0b1472c68fcb52db84c330bd85467bfb2a9b4b5bdd5",
+    "ground_plane.json": "d9976877635c28eed040edccb0e1611af7c62ae033375656930235fd4af3b071",
+    "object_pose_xyz_wxyz.npy": "ec9d54f0a18d791bbaef5e07f905ab19816be382a964af04e88c1636b82181a4",
+    "poses.npy": "f748f8ec158329ba3fb955036ce546f111da2b16f2981f0d4226b27f1aec54ef",
+    "soma_params.npz": "9965731b11bb75097427408a110326decede4fdb9e6464df7400c49a0bd014c0",
+    "reconstructed_mesh/output_aligned.glb": "047a78a75436d9ae5e773074a9b4f2508bd35823a7067149f166f04a33341ee1"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     8.33,
+     8.33
+    ],
+    "rot_change_deg_median_max": [
+     1.29,
+     1.29
+    ],
+    "frame0_pos_change_cm": 8.33,
+    "frame0_rot_change_deg": 1.29,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "23": {
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "object": "toy_stroller",
+   "frames": 946,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "038c89c08c978050ab7fb46dae07c2360636e1f8a9e6b04001bd759108bf8b27",
+    "episode.json": "9ec2c1d72852e1b4a82b3a28925650c1899936168dc02daf765a63df8e2d70af",
+    "ground_plane.json": "5c693e01593f88a582037a02da0a237112db8aec24ed1aa76b1cfa3a00ce0156",
+    "object_pose_xyz_wxyz.npy": "72e74ad6009ffcd5d8e48cbaa748356e3b848eb656dc2baf1f03cecb317abed2",
+    "poses.npy": "2372cd9e3c7ebd50a032b9d343d43f62f556f05ed909fd2b41139d0ead99f511",
+    "soma_params.npz": "42f6e00964a1f7d565eeeeec89c6d42e081c5231347a6279c46fcf16dd20ec9a",
+    "reconstructed_mesh/output_aligned.glb": "a9c278ea07d4dac5157210c4e67819fcfaf3254a6afc801c988a3e66b83b9636"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     5.6,
+     5.6
+    ],
+    "rot_change_deg_median_max": [
+     4.33,
+     4.33
+    ],
+    "frame0_pos_change_cm": 5.6,
+    "frame0_rot_change_deg": 4.33,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "24": {
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "object": "watering_can",
+   "frames": 748,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "fe3295578a202fa1fb1b867547b5f4f4316d96f90776fd313087d5478683d96b",
+    "episode.json": "098978afe6d0b9045d9912d6efcba6c840d9555191e138bed0fc3326d2b1ba28",
+    "ground_plane.json": "b4652f8e497c76163ad89c1b620dc2bed757c203e3df58196a96f06c5993b2ad",
+    "object_pose_xyz_wxyz.npy": "4929d5b304fecc31714d5e4a8b5e75248e1f9b16f11b6b6b73d706fbfe80490c",
+    "poses.npy": "b557ac6a5c54d58434b4c4aec92cd490449142788e40d12d706818cc49970992",
+    "soma_params.npz": "30423a086c731b36934a9b17e1658c8b026d5d1f4dab05e90adb3ab6e7d20fa0",
+    "reconstructed_mesh/output_aligned.glb": "6289b834daf9ac457729cccb550b83eb5da1bc165a78bb970a9e651ab9ce94c2"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     1.76,
+     1.76
+    ],
+    "rot_change_deg_median_max": [
+     2.26,
+     2.26
+    ],
+    "frame0_pos_change_cm": 1.76,
+    "frame0_rot_change_deg": 2.26,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "25": {
+   "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "object": "cyan_water_bottle",
+   "frames": 859,
+   "support_dir": "supports/2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "sha256": {
+    "camera.json": "73b4cc3a31d9cbc8822abae0247efd7ad94c9a8220282857e2799d10ae0f9627",
+    "episode.json": "e9d8bc2628414f4bf8a14d3d89106937446e9e487252fc5d49a947969d154d10",
+    "ground_plane.json": "ae70886b882558cba4b9dc2be7884a02e7df41edded8e1dcf67fadd84f21ae94",
+    "object_pose_xyz_wxyz.npy": "9a556190cf8975064ed124cecf2caf5f8c9d0c98222ffd5c8b59e8524927b291",
+    "poses.npy": "1c9ad3090081391c9ec9e90bfd85d139a23f8b1bcef48cdf2d307c6ee3258fb2",
+    "soma_params.npz": "d0d0f631a3912d9ecdad05402a81f46d1a1683a3479c3c27fb75f99819498446",
+    "reconstructed_mesh/output_aligned.glb": "ebc656d5de2c6fb0075acd136503ac936b6c821fbfe05b21286efbc9af7225d6"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     9.89,
+     9.89
+    ],
+    "rot_change_deg_median_max": [
+     10.28,
+     10.28
+    ],
+    "frame0_pos_change_cm": 9.89,
+    "frame0_rot_change_deg": 10.28,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "26": {
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "object": "skateboard",
+   "frames": 669,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "32ec00627ce09cf7452b6bbf50f3fc170f81ffe8f640ad51e6399627a458fd1f",
+    "episode.json": "b1cfea11b5fec09bc66e7eeac8a8f7704d080cb1d6c23c2c908ff1c8416788d4",
+    "ground_plane.json": "d4bcce3a69b84b02c06f144b4f77f88e3f6f656da8bd384268961a961bcce7b5",
+    "object_pose_xyz_wxyz.npy": "750171c3f4a89d71e4f998bca746ca67f9a94f7b3bde0644087335e3f524cba1",
+    "poses.npy": "859eb4339343465eaa078587ee01723652a1dbe8de981d51c8a6e77667648519",
+    "soma_params.npz": "a23c907bce7b787ebc19075646bc6907eb1402e7aef2a34f2cb124e125fe894e",
+    "reconstructed_mesh/output_aligned.glb": "4b011286643070adeac57d1846d89614bbae2636d63ac286e35c48b8478adde6"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     3.31,
+     3.31
+    ],
+    "rot_change_deg_median_max": [
+     175.43,
+     175.54
+    ],
+    "frame0_pos_change_cm": 3.31,
+    "frame0_rot_change_deg": 175.43,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  },
+  "27": {
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "object": "woven_basket",
+   "frames": 565,
+   "support_dir": "supports/2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "sha256": {
+    "camera.json": "aba14c1b3b73e0e5a9fca9119b707ada580e32b63e4e956d78e4eec4c24797ca",
+    "episode.json": "9bb947ef5160093579ad6e68b0dcac045655da0371503f6d06e20a3f4b88a2f9",
+    "ground_plane.json": "14377eadb8889d353c6db760ffbbd843823e37c9d5cebf8fecff3588f4751c28",
+    "object_pose_xyz_wxyz.npy": "41b259e4b4cc9c7c51b4451247978cf99d365865f78afb8590b54eb724c89eff",
+    "poses.npy": "d1c5e25b9e9d3a6d916db4e61fe90b345b101914b0cd24f148cf305cf47d8942",
+    "soma_params.npz": "7ddea70713a62214c880dd8b13951e6c48ec9bc8ad6262ebfb5ea11bedb30537",
+    "reconstructed_mesh/output_aligned.glb": "1725abaac462412da58bc35c772aa0c6ae6449c5471c220811cb895243ce6822"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     5.32,
+     5.32
+    ],
+    "rot_change_deg_median_max": [
+     179.91,
+     179.95
+    ],
+    "frame0_pos_change_cm": 5.32,
+    "frame0_rot_change_deg": 179.91,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "28": {
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "object": "squeegee",
+   "frames": 988,
+   "support_dir": "supports/2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "sha256": {
+    "camera.json": "0812ea0b0514cf3c520042b66c8932c9edc91f152847b142ea4e9a14d5cd7322",
+    "episode.json": "43e14b3848668d73d776f9f1eb341b935da783d6805c4e2ac289fbaf81a8b6fa",
+    "ground_plane.json": "353bc4a5271c942f3d11d174bdadf6625177bf5f7ec385c075f0e33560ec6fe8",
+    "object_pose_xyz_wxyz.npy": "c3ee546e9d387cffd9500233c16acd60f8a136c85c8b34b32b9808811a77bb52",
+    "poses.npy": "257ab20e8f63e080e5fa41b2e215d4eb8ac0c35abcaa0fa735d21843e3aef49f",
+    "soma_params.npz": "2a3e666c89d85096a8574bf88969edd433f80ef9c943ccf4c52988cb3235a7f5",
+    "reconstructed_mesh/output_aligned.glb": "aa3e2fad95d7201aab1e76b0e2321ad34d593e42a6fa8996031e4b4d5f690cc2"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     9.54,
+     9.54
+    ],
+    "rot_change_deg_median_max": [
+     6.44,
+     6.44
+    ],
+    "frame0_pos_change_cm": 9.54,
+    "frame0_rot_change_deg": 6.44,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "support (USDA written by t3f0_supports.py)"
+  },
+  "29": {
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "object": "rolling_luggage",
+   "frames": 467,
+   "support_dir": null,
+   "sha256": {
+    "camera.json": "14824878d180d47aef8a3567fd3e61006810d93ca3428b5161d9a701f5161feb",
+    "episode.json": "640408e5c95b3d547f2c799305ed5a68b58f241c9afdad15d7ef2cbdca3614b5",
+    "ground_plane.json": "2a1e4ae6de1eeadd297c4de854fe018da0b6f2c594a9f1911321903061f4c0b9",
+    "object_pose_xyz_wxyz.npy": "55c726c0441075e39bcf69fbd6dd0a797d4db42e4da9912c0cfbb706760da7f9",
+    "poses.npy": "5cf6eaf406d4f9710f48d87891a39a330601e424c7f15127f005a6b2c9ea9ff2",
+    "soma_params.npz": "cd2c647c9632dc8035d6edbb7c1a2b24eb706ace2dcd77785d518596c34cf272",
+    "reconstructed_mesh/output_aligned.glb": "cd4c9c2b4d80e47bb5228461d39bec195f5ed0395942b2ebd0d4585eac341b67"
+   },
+   "equal_opus": {
+    "camera.json": true,
+    "episode.json": false,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": false,
+    "poses.npy": false,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   },
+   "vs_opus_v2": {
+    "pos_change_cm_median_max": [
+     3.6,
+     3.6
+    ],
+    "rot_change_deg_median_max": [
+     0.52,
+     0.52
+    ],
+    "frame0_pos_change_cm": 3.6,
+    "frame0_rot_change_deg": 0.52,
+    "identical": false
+   },
+   "release_frame_ref_equal_opus_release_file": true,
+   "support": "floor-only (geometry-free file; scene.support=false)",
+   "support_sha256": "4d1d1a74fcede154531e8eda6212c213c4dba83c6e3270deffd2fcf60418768b"
+  }
+ },
+ "bad": []
+}

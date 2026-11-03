@@ -1,0 +1,431 @@
+{
+ "per_episode": {
+  "0": {
+   "run": "CL2_ep000",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "1": {
+   "run": "CL2_ep001",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "2": {
+   "run": "CL2_ep002",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "3": {
+   "run": "CL2_ep003",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "4": {
+   "run": "CL2_ep004",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "5": {
+   "run": "CL2_ep005",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "6": {
+   "run": "CL2_ep006",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "7": {
+   "run": "CL2_ep007",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "8": {
+   "run": "CL2_ep008",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "9": {
+   "run": "CL2_ep009",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "10": {
+   "run": "CL2_ep010",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "11": {
+   "run": "CL2b_ep011",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "12": {
+   "run": "CL2b_ep012",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "13": {
+   "run": "CL2b_ep013",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "14": {
+   "run": "CL2b_ep014",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "15": {
+   "run": "CL2b_ep015",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "16": {
+   "run": "CL2b_ep016",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "17": {
+   "run": "CL2b_ep017",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "18": {
+   "run": "CL2b_ep018",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "19": {
+   "run": "CL2b_ep019",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "20": {
+   "run": "CL2b_ep020",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "21": {
+   "run": "CL2b_ep021",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "22": {
+   "run": "CL2c_ep022",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "23": {
+   "run": "CL2c_ep023",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "24": {
+   "run": "CL2c_ep024",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "25": {
+   "run": "CL2c_ep025",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "26": {
+   "run": "CL2c_ep026",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "27": {
+   "run": "CL2c_ep027",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "28": {
+   "run": "CL2c_ep028",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  },
+  "29": {
+   "run": "CL2c_ep029",
+   "video.mp4": true,
+   "object_mesh.glb": true,
+   "ground_plane.json": true,
+   "task.txt": true,
+   "episode.json": true,
+   "not_rebuildable_here": [
+    "camera.json",
+    "frame0_reference_human.npz",
+    "masks.h5",
+    "reconstruction.npz"
+   ]
+  }
+ },
+ "totals_of_30": {
+  "video.mp4": 30,
+  "object_mesh.glb": 30,
+  "ground_plane.json": 30,
+  "task.txt": 30,
+  "episode.json": 30
+ }
+}

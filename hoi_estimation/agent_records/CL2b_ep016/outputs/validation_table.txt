@@ -1,0 +1,8 @@
+== baseline
+  S1 static (table)  n=123 IoU 0.802 tex 0.503 | rot step mean  1.64 p95   3.3 max   6.0 deg | trans step p95  3.0 cm | dz vs base mean  +0.0 med  +0.0 cm | lowest pt above floor med +90.0 cm
+  carried            n=253 IoU 0.782 tex 0.311 | rot step mean 12.39 p95  57.4 max 175.8 deg | trans step p95  7.0 cm | dz vs base mean  +0.0 med  +0.0 cm | lowest pt above floor med +67.7 cm
+  S2 static (floor)  n=101 IoU 0.724 tex 0.184 | rot step mean  2.30 p95   5.6 max   9.8 deg | trans step p95  2.3 cm | dz vs base mean  +0.0 med  +0.0 cm | lowest pt above floor med  -4.6 cm
+== /work/outputs/object_poses_world.npz
+  S1 static (table)  n=123 IoU 0.826 tex 0.548 | rot step mean  0.00 p95   0.0 max   0.0 deg | trans step p95  0.0 cm | dz vs base mean  -2.2 med  +0.0 cm | lowest pt above floor med +90.0 cm
+  carried            n=253 IoU 0.797 tex 0.390 | rot step mean  2.29 p95   5.3 max   9.2 deg | trans step p95  3.3 cm | dz vs base mean  -1.3 med  -1.1 cm | lowest pt above floor med +67.6 cm
+  S2 static (floor)  n=101 IoU 0.746 tex 0.243 | rot step mean  0.05 p95   0.0 max   4.8 deg | trans step p95  0.0 cm | dz vs base mean -13.2 med -13.0 cm | lowest pt above floor med  +0.7 cm

@@ -1,0 +1,3 @@
+$ nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -B /root/autodl-tmp/haoran.zhang/fc_runs/submissions/t1_best20_20261026/t1best20_score.py --csv /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/all7_trial05_LOCAL_NOT_FOR_UPLOAD.csv --out /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/metric_code.json --episodes all
+{"overall_float32": {"AUC": 0.9309696268444406, "SP-SR": 1.0, "MP-SR": 1.0, "MPPE": 0.930148212623876}, "mean_of_per_episode_float32": {"AUC": 0.9309696268444406, "SP-SR": 1.0, "MP-SR": 1.0, "MPPE": 0.930148212623876}, "overall_float64": {"AUC": 0.9309696268444406, "SP-SR": 1.0, "MP-SR": 1.0, "MPPE": 0.930148212623876}}
+

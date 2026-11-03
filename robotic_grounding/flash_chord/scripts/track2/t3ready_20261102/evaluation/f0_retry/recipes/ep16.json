@@ -1,0 +1,53 @@
+{
+ "episode": 16,
+ "object": "spray_bottle",
+ "computed_at": "2026-10-31 00:18:23",
+ "script_sha256": "cfdd3072779b727e59555a13546ee4f1bb23436bcd9d7d686b2181b36dc7f638",
+ "f0_final": {
+  "iteration": 44922,
+  "reason": "help_zero_tail",
+  "help_zero_since": 39062,
+  "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep16/model_44922.safetensors",
+  "model_sha256": "1898bede4f1492ec8eb0efb4e68b769e265f7193e4a459607ab936b8f4e5151d",
+  "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep16/rsi_44922.safetensors",
+  "rsi_sha256": "9f661f2b9c23a836237762a91f999a3d02e5af69cd0c3cae29f0d2f58aab9f7b",
+  "wall_seconds": 115834.9,
+  "iterations_per_s": 0.3878
+ },
+ "scene_support": true,
+ "mitigated_f0": false,
+ "barrier": {
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+  "parquet_sha256": "5f6644464cba1a9ebb26a58933cd157f7e2b8ed24e08cb67b59f0a880227d335",
+  "mesh": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/object/textured_mesh.obj",
+  "mesh_sha256": "acfb99730052c555cd48e0e46fb620665439d6f223b83eee7d44e88263079ffa",
+  "frames": 477,
+  "floor_depth_max_m": 0.018,
+  "floor_depth_max_frame": 374,
+  "frames_depth_gt_barrier": 0,
+  "jump_max_m": 0.0612,
+  "jump_max_frame": 343,
+  "B_m": 0.0612
+ },
+ "palm": {
+  "last_iteration": 44922,
+  "rows": 501,
+  "palm_share_last5k": 0.2339,
+  "object_share_last5k_report_only": 0.713
+ },
+ "termination_overrides": [
+  "termination.palm_position_threshold=0.25"
+ ],
+ "rule_trace": [
+  "T-obj: B = 6.1 cm <= 8 cm -> object threshold stays 0.1",
+  "T-palm: f0 palm-termination share over the last 5000 iterations 0.2339 > 0.1 -> termination.palm_position_threshold=0.25"
+ ],
+ "base": [
+  "training.resume=true",
+  "training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep16/model_44922.safetensors",
+  "training.max_iterations=90000",
+  "training.early_stop_help_zero_tail=0",
+  "reset.start_update=44922"
+ ],
+ "projected_hours": 32.3
+}

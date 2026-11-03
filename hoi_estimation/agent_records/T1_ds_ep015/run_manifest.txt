@@ -1,0 +1,16 @@
+date_utc: 2026-10-20T17:14:29Z
+codex: codex-cli 0.153.4
+model: deepseek-flash api=api.deepseek.com:443 effort=high net=open
+sif: /mnt/nas/Group/hanzhou/v2d/images/v2d_cari4d.sif 16860184576 bytes
+binds: -B /mnt/nas/Group/hanzhou/v2d/agent_runs/T1_ds_ep015:/work -B /home/hanzhou/.codex/packages/standalone/releases/0.153.4-x86_64-unknown-linux-musl:/opt/codex:ro -B /home/hanzhou/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B /mnt/nas/Group/hanzhou/v2d/weights:/weights:ro -B /mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000015:/pipeline:ro
+task_sha256: ed1b646f904146c1d2901e69c6c66646f6d940bf18f332777f03f95517c92df6
+80ac249397eb7f9df1e7de28143c24e7e3c45e9f22f4e91c8736a1778b450db8  ./camera.json
+e965bf4d22069da5ce214f03bd5802afbb88ed904b8a888c1886163a917553ad  ./episode.json
+72f8a37267766354edb318634c56a5f3306801db099d2962285d6711ea490d9d  ./frame0_reference_human.npz
+2eb28c6af4ea9f597e48e47db8d2f87ddcca9730c7d4825ed43d89d4be93390c  ./ground_plane.json
+846e0e1131e8e5bf7498fc4b57d4af6f9826ecaa234e05fdf0ebde34ea21c652  ./masks.h5
+7a762ca67b09823ce9476441cd3a2396a7fc135d2dcb74533067952360dac1f5  ./object_mesh.glb
+ff91522f432fb2e93ae625fbddd0a665d5757c29458c0af7a4e68a2b20db4da7  ./reconstruction.npz
+56627fb6353c1bf0e2701be644af5bce424dd5f9a198cb5170f5f8b7f02804af  ./task.txt
+734a5392a5d21063e3d1f696451caf09a3ac24c086a0ce302f33de0641cbe341  ./video.mp4
+wall_s: 1545

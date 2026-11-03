@@ -1,0 +1,3637 @@
+{
+ "set": "all7",
+ "trial": 5,
+ "amendment": "amend1/TOPUP_AMEND1.md (sha256 76143fce2e81bbd2699220b8e158c3aee136516dc56baf029ba5fe0c1c09b843)",
+ "placeholders": {
+  "<MOTION>": "derived motion data root (HUMAN_MOTION_DATA_DIR)",
+  "<RUNS>": "run root of the original machine (fc_runs)",
+  "<ME>": "work root of the original machine"
+ },
+ "export_roots": {
+  "T1_EXPORTS": "the t1best payload exports/ (README_NEW_MACHINE.md, group B_exports)",
+  "RUNS": "<RUNS> (T1improve confirmation exports)"
+ },
+ "episodes": [
+  {
+   "episode": 0,
+   "object": "tall_bar_stool",
+   "item": "ep00",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep00)",
+   "replaces": null,
+   "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 28000,
+    "run": "C3r2_runin/ep00",
+    "model": "model_28000.safetensors",
+    "model_sha256": "eaaafdd8a5e19a96b115d4fe25e466d57230e2447f4d3ff1ea567cfd9ddb7f27",
+    "model_size": 24993248,
+    "rsi": "rsi_28000.safetensors",
+    "rsi_sha256": "e3146e013fb70064099592ae85a4f4850e21ffce9d308e38c6d5bb343034b74e",
+    "rsi_size": 3505100,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep00/model_28000.safetensors",
+    "sha256": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+    "size": 46052720,
+    "max_rel_diff": 1.5020370483398438e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9980184233076264,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9976060411,
+     "auc_sd": 0.0007637198169,
+     "auc_min": 0.994938946,
+     "auc_max": 0.9984736504,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.4304797569
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep00",
+     "start": "scratch",
+     "end": "",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep00",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep00/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "run record (hydra overrides.yaml, resume keys removed)"
+    },
+    {
+     "run": "C3r2_runin/ep00",
+     "start": "restart in place from C3r2_runin/ep00/model_4000.safetensors",
+     "end": "",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep00",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep00/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/C3r2_runin/ep00/model_4000.safetensors"
+     ],
+     "source": "run record (hydra overrides.yaml)"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep00",
+    "evaluated_file_sha256": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep00/t05/try1/results/episode_000000.parquet",
+    "results_parquet_sha256": "705a6dcde6db7237091cecea77a63f7018706a6a9d73c55336b166ffa57eaf10",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9976703084832905,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.4283799682636768
+    },
+    "metric_code_float32": {
+     "AUC": 0.9976703084832905,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.42837550559398396
+    }
+   },
+   "n_stages": 2
+  },
+  {
+   "episode": 1,
+   "object": "vacuum",
+   "item": "ep01-Bc_162000",
+   "origin": "T1improve arm ep01-Bc",
+   "replaces": "ep01 (T1fix ep01-B (T1fix/eval_S2B/ep01))",
+   "sequence_id": "2026-05-18_17-06-21_vacuum_left_lean_02",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "run": "T1improve/arms/ep01-Bc/runs/ep01",
+    "iteration": 162000,
+    "model": "model_162000.safetensors",
+    "model_sha256": "48267e890bd90b65047d7475128317592a192f90bebd59c57c59fe0923af948e",
+    "model_size": 24993272,
+    "rsi": "rsi_162000.safetensors",
+    "rsi_sha256": "4143502bb0e0c94647346fe22efff64b323822ec0d4696872ea7bf5b05f30ab6",
+    "rsi_size": 3774356,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "seeded copy T1improve/arms/ep01-Bc/fc_cache (stock (T1fix/stage2/fc_cache))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep01-Bc_162000/try1/model_162000.safetensors",
+    "sha256": "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+    "size": 46052744,
+    "max_rel_diff": 9.72747802734375e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_runin/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep01-Bc_162000/try1 nice -n 10 taskset -c 48-51,152-155 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep01-Bc/runs/ep01/model_162000.safetensors --output <RUNS>/T1improve/confirm/exports/ep01-Bc_162000/try1/model_162000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep01-Bc_162000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.7966951137884872,
+     "auc_sd": 0.003206259917004564,
+     "auc_min": 0.789825970548862,
+     "auc_max": 0.8027945113788487,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.9602512749186023
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.7967 new vs 0.7582 incumbent); MPPE 1.960 vs 3.673"
+    }
+   },
+   "stages": [
+    {
+     "run": "runin/ep01",
+     "start": "scratch",
+     "end": "final.json model_44922 (help_zero_tail)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin/ep01",
+      "hydra.run.dir=<RUNS>/runin/ep01/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep01"
+    },
+    {
+     "run": "runin_cont/ep01",
+     "start": "resume runin/ep01/model_44922.safetensors",
+     "end": "final.json model_90000 (max_iterations)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont/ep01",
+      "hydra.run.dir=<RUNS>/runin_cont/ep01/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin/ep01/model_44922.safetensors",
+      "training.max_iterations=90000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep01"
+    },
+    {
+     "run": "runin_cont2/ep01",
+     "start": "resume runin_cont/ep01/model_90000.safetensors",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont2/ep01",
+      "hydra.run.dir=<RUNS>/runin_cont2/ep01/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin_cont/ep01/model_90000.safetensors",
+      "training.max_iterations=135000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep01"
+    },
+    {
+     "run": "T1fix/B/ep01",
+     "start": "resume model_128000 (fork pair T1fix/stage2/forks/ep01-B)",
+     "end": "final.json model_143000 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "stock:T1fix/stage2/fc_cache",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchS2B/ep01",
+      "hydra.run.dir=<RUNS>/T1fix/watchS2B/ep01/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=143000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/stage2/forks/ep01-B/model_128000.safetensors",
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep01-B",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "fork_iteration": 128000,
+     "max_iterations": 143000,
+     "fork_pair": {
+      "model": {
+       "sha256": "dea9917ea339d9e9237ad5b15ecdf8ecaf080a988f9b7380e2d9556751e36ecf",
+       "size": 24993280,
+       "path": "<RUNS>/T1fix/stage2/forks/ep01-B/model_128000.safetensors"
+      },
+      "rsi": {
+       "sha256": "767a2fb392194298882e687e7eab902ab76962f03c55fb9170bfbc0b59e93120",
+       "size": 3774356,
+       "path": "<RUNS>/T1fix/stage2/forks/ep01-B/rsi_128000.safetensors"
+      }
+     },
+     "lineage_of": "ep01"
+    },
+    {
+     "run": "T1improve/arms/ep01-Bc/runs/ep01",
+     "start": "resume model_142000 (fork pair T1improve/arms/ep01-Bc/fork = copy of T1fix/B/ep01/model_142000)",
+     "end": "final.json model_162000 (max_iterations); selected model_162000",
+     "code": "b39b69be6c2f",
+     "hull_cache": "seeded copy T1improve/arms/ep01-Bc/fc_cache (stock (T1fix/stage2/fc_cache))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-18_17-06-21_vacuum_left_lean_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep01-Bc/runs/ep01",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep01-Bc/runs/ep01/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=162000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep01-Bc/fork/model_142000.safetensors",
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "source": "t1improve/arms/ep01-Bc/launch.json (argv) and overrides.yaml",
+     "arm": "ep01-Bc",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "inherited_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "added_overrides": [],
+     "fork_iteration": 142000,
+     "max_iterations": 162000,
+     "fork_pair": {
+      "model": {
+       "sha256": "774fe75ff731f8ffb59325815ceb377d3f9dbf0ebc5a2f48ef7495e9782f1603",
+       "size": 24993256,
+       "path": "<RUNS>/T1improve/arms/ep01-Bc/fork/model_142000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep01/model_142000.safetensors"
+      },
+      "rsi": {
+       "sha256": "1b666e070d9401ed2dd7e3911d2755c2983999eaf901c14f67f6bb2cfa94b440",
+       "size": 3774356,
+       "path": "<RUNS>/T1improve/arms/ep01-Bc/fork/rsi_142000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep01/rsi_142000.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep01-Bc/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep01-Bc_162000",
+    "evaluated_file_sha256": "01c0a3bd65688b05f1f0fcde4818dac70f9dab3ec49e9d3cc86038d34ee422fd",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep01-Bc_162000/t05/try1/results/episode_000001.parquet",
+    "results_parquet_sha256": "53da41a856d4a1fa96c27fc04bc9f4176f6f0ebb2c471734af55ae370ae35835",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.8022925033467202,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.9385058038752168
+    },
+    "metric_code_float32": {
+     "AUC": 0.8002008032128514,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.938506060058233
+    }
+   },
+   "n_stages": 5
+  },
+  {
+   "episode": 2,
+   "object": "blue_easter_basket",
+   "item": "ep02",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (runin, arm C3r2_runin)",
+   "replaces": null,
+   "sequence_id": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 44000,
+    "run": "C3r2_runin/ep02",
+    "model": "model_44000.safetensors",
+    "model_sha256": "e3d4e701c01619f5538e50baa881f84b4ec9a117b6ef443ace5f141d1212ca48",
+    "model_size": 24993176,
+    "rsi": "rsi_44000.safetensors",
+    "rsi_sha256": "6e3b6bea90acbc3db5cca86c6de7a8fc755a2444b468c67af564b3941593374b",
+    "rsi_size": 4945292,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep02/model_44000.safetensors",
+    "sha256": "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+    "size": 46052648,
+    "max_rel_diff": null,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9781887755,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9775542092,
+     "auc_sd": 0.0009328348125,
+     "auc_min": 0.9755102041,
+     "auc_max": 0.9789540816,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.5309865306
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep02",
+     "start": "scratch",
+     "end": "stopped after model_48500 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-02_10-04-42_blue_easter_basket_place_10/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep02",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep02/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep02",
+    "evaluated_file_sha256": "be9833ef63d33728122cd4e3ae94c977d6d61f6f613ad2a4281a639925c224fa",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep02/t05/try1/results/episode_000002.parquet",
+    "results_parquet_sha256": "9627f3cbe7b4120285804249da36494f70d4b35196276591ea5313fffc2b585e",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.977423469387755,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5271400103985943
+    },
+    "metric_code_float32": {
+     "AUC": 0.977423469387755,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.5271429424281808
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 3,
+   "object": "contigo_coffee_mug",
+   "item": "ep03",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep03)",
+   "replaces": null,
+   "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 36000,
+    "run": "C3r2_runin/ep03",
+    "model": "model_36000.safetensors",
+    "model_sha256": "2d1260efc443bb4c7fe631a520e81b94818f595180166b9929a4043b32dbafe9",
+    "model_size": 24993192,
+    "rsi": "rsi_36000.safetensors",
+    "rsi_sha256": "3d1cca14ed87af9938edab2eafdf2243bb53182ce0f665b1e8fd80006eb78db8",
+    "rsi_size": 4034564,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep03/model_36000.safetensors",
+    "sha256": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+    "size": 46052664,
+    "max_rel_diff": 3.7670135498046875e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9857554417413574,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9618918054,
+     "auc_sd": 0.1024470307,
+     "auc_min": 0.5267285531,
+     "auc_max": 0.9882362356,
+     "sp_pass": 19,
+     "mp_pass": 19,
+     "mppe_mean_cm": 2.497487193
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep03",
+     "start": "scratch",
+     "end": "stopped after model_44000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep03",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep03/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=150000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep03",
+    "evaluated_file_sha256": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep03/t05/try1/results/episode_000003.parquet",
+    "results_parquet_sha256": "07183bd6222afea4c62da19b4589fec1998aa08f93b713d0a4eb958abbca3365",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9805537772087067,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6170048588077565
+    },
+    "metric_code_float32": {
+     "AUC": 0.9803937259923176,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.6170040443455136
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 4,
+   "object": "baseball_bat",
+   "item": "ep04",
+   "origin": "t1best set (2026-10-26): teammate runin_cont4 model_358000 (bank t1_bat_cont4_20261026)",
+   "replaces": null,
+   "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 358000,
+    "run": "runin_cont4/ep04",
+    "model": "model_358000.safetensors",
+    "model_sha256": "72f679890d82e5025744651ae4d3d2bd58d46008b5dac23a6930357b35b90bd1",
+    "model_size": 24993288,
+    "rsi": "rsi_358000.safetensors",
+    "rsi_sha256": "376a7e14e093759745d4efdf8b78e70fc2e75e9e5acd8786bedbbebd735b30ce",
+    "rsi_size": 3622956,
+    "trained_by": "bc3b1bdf34f2",
+    "hull_cache": "tree (teammate worktree)",
+    "rsi_note": "rsi_358000 is only in the teammate's run folder (not in our copy); it is needed only to resume or fork ep04, and copying it needs the teammate's OK. Loading it needs the bc3b1bd RSI loader (merged on this branch)."
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep04/model_358000.safetensors",
+    "sha256": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+    "size": 46052760,
+    "max_rel_diff": null,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.7415421337,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.7507433064,
+     "auc_sd": 0.003024229324,
+     "auc_min": 0.7447073474,
+     "auc_max": 0.7550591532,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.564262384
+    }
+   },
+   "stages": [
+    {
+     "run": "runin/ep04",
+     "start": "scratch",
+     "end": "final.json model_44922 (help_zero_tail)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree (teammate worktree)",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin/ep04",
+      "hydra.run.dir=<RUNS>/runin/ep04/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    },
+    {
+     "run": "runin_cont/ep04",
+     "start": "resume runin/ep04/model_44922.safetensors",
+     "end": "final.json model_90000 (max_iterations)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree (teammate worktree)",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont/ep04",
+      "hydra.run.dir=<RUNS>/runin_cont/ep04/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin/ep04/model_44922.safetensors",
+      "training.max_iterations=90000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    },
+    {
+     "run": "runin_cont2/ep04",
+     "start": "resume runin_cont/ep04/model_90000.safetensors",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree (teammate worktree)",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont2/ep04",
+      "hydra.run.dir=<RUNS>/runin_cont2/ep04/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin_cont/ep04/model_90000.safetensors",
+      "training.max_iterations=180000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    },
+    {
+     "run": "runin_cont3/ep04",
+     "start": "resume runin_cont2/ep04/model_180000.safetensors",
+     "end": "model_270000 (max_iterations)",
+     "code": "bc3b1bdf34f2",
+     "hull_cache": "tree (teammate worktree)",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont3/ep04",
+      "hydra.run.dir=<RUNS>/runin_cont3/ep04/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin_cont2/ep04/model_180000.safetensors",
+      "training.max_iterations=270000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "teammate hydra overrides.yaml (copy in the bat bank records); hydra.run.dir added as in the other stages"
+    },
+    {
+     "run": "runin_cont4/ep04",
+     "start": "resume runin_cont3/ep04/model_270000.safetensors",
+     "end": "model_360000 (max_iterations)",
+     "code": "bc3b1bdf34f2",
+     "hull_cache": "tree (teammate worktree)",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont4/ep04",
+      "hydra.run.dir=<RUNS>/runin_cont4/ep04/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin_cont3/ep04/model_270000.safetensors",
+      "training.max_iterations=360000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "teammate hydra overrides.yaml (copy in the bat bank records); hydra.run.dir added as in the other stages"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep04",
+    "evaluated_file_sha256": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep04/t05/try1/results/episode_000004.parquet",
+    "results_parquet_sha256": "08fa5e65b19479e3f67571b70c6ae539f4ab37e68ab3044e5ab91b4812599de7",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.7377023661270237,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.5630304239056785
+    },
+    "metric_code_float32": {
+     "AUC": 0.7503891656288917,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.5630309901148256
+    }
+   },
+   "n_stages": 5
+  },
+  {
+   "episode": 5,
+   "object": "big_black_box",
+   "item": "ep05-B3_62000",
+   "origin": "T1improve arm ep05-B3",
+   "replaces": "ep05 (rolling start C3r2_runin (C3r2_runin/eval/ep05))",
+   "sequence_id": "2026-03-18_19-36-56_g1_box_rotate_01",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "run": "T1improve/arms/ep05-B3/runs/ep05",
+    "iteration": 62000,
+    "model": "model_62000.safetensors",
+    "model_sha256": "708f0aee247f1785edef9f6487b732c620c6701ef2ac29f30713871b19e1084b",
+    "model_size": 24993264,
+    "rsi": "rsi_62000.safetensors",
+    "rsi_sha256": "e5b1a55c82c62f9da3bcceb45fc412b8b793b71dc0f696e8c20ef54cf7277986",
+    "rsi_size": 4556228,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "seeded copy T1improve/arms/ep05-B3/fc_cache (tree (nv-v2d_runin: 52 hulls vs stock 53))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep05-B3_62000/try1/model_62000.safetensors",
+    "sha256": "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+    "size": 46052736,
+    "max_rel_diff": 2.2649765014648438e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_runin/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep05-B3_62000/try1 nice -n 10 taskset -c 100-103,204-207 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep05-B3/runs/ep05/model_62000.safetensors --output <RUNS>/T1improve/confirm/exports/ep05-B3_62000/try1/model_62000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep05-B3_62000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9630047357926221,
+     "auc_sd": 0.0025210640228654838,
+     "auc_min": 0.9566924227318045,
+     "auc_max": 0.9671610169491526,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.7464857869261499
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.9630 new vs 0.9473 incumbent); MPPE 0.746 vs 0.786"
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep05",
+     "start": "scratch",
+     "end": "",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep05",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep05/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "run record (hydra overrides.yaml, resume keys removed)",
+     "lineage_of": "ep05"
+    },
+    {
+     "run": "T1improve/arms/ep05-B3/runs/ep05",
+     "start": "resume model_42500 (fork pair T1improve/arms/ep05-B3/fork = copy of C3r2_runin/ep05/model_42500)",
+     "end": "final.json model_62500 (max_iterations); selected model_62000",
+     "code": "b39b69be6c2f",
+     "hull_cache": "seeded copy T1improve/arms/ep05-B3/fc_cache (tree (nv-v2d_runin: 52 hulls vs stock 53))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-03-18_19-36-56_g1_box_rotate_01/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep05-B3/runs/ep05",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep05-B3/runs/ep05/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=62500",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep05-B3/fork/model_42500.safetensors",
+      "objective.object_task_rotation_beta=3.1"
+     ],
+     "source": "t1improve/arms/ep05-B3/launch.json (argv) and overrides.yaml",
+     "arm": "ep05-B3",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=3.1"
+     ],
+     "inherited_overrides": [],
+     "added_overrides": [
+      "objective.object_task_rotation_beta=3.1"
+     ],
+     "fork_iteration": 42500,
+     "max_iterations": 62500,
+     "fork_pair": {
+      "model": {
+       "sha256": "37371dfcb760cbb15db5c2cc9ca6a566c05cee6d2f3874c08653a4f852ab6704",
+       "size": 24993160,
+       "path": "<RUNS>/T1improve/arms/ep05-B3/fork/model_42500.safetensors",
+       "source": "<RUNS>/C3r2_runin/ep05/model_42500.safetensors"
+      },
+      "rsi": {
+       "sha256": "a2f6a2bb9f55ba7a3e1c16bfdbc87e2fdb0c9a63d7b7901eae12b0a4cba7a60e",
+       "size": 4556228,
+       "path": "<RUNS>/T1improve/arms/ep05-B3/fork/rsi_42500.safetensors",
+       "source": "<RUNS>/C3r2_runin/ep05/rsi_42500.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep05-B3/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep05-B3_62000",
+    "evaluated_file_sha256": "ed7bca1616872a5867363e665e0da86217018c72c265f819bf434a3d0983d63b",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep05-B3_62000/t05/try1/results/episode_000005.parquet",
+    "results_parquet_sha256": "d13983395fd2ee8973873694f687f53dc188d705b484a42f600ed35efc23a1cb",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.964606181455633,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7371171427099212
+    },
+    "metric_code_float32": {
+     "AUC": 0.9632976071784647,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.7371165755547425
+    }
+   },
+   "n_stages": 2
+  },
+  {
+   "episode": 6,
+   "object": "monitor",
+   "item": "ep06",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep06)",
+   "replaces": null,
+   "sequence_id": "2026-06-01_11-26-44_monitor_rotate_05",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 114000,
+    "run": "C3r2_runin/ep06",
+    "model": "model_114000.safetensors",
+    "model_sha256": "adbca19a6df69eac1100335f951af4d73893013d0c45f0b2a0b2237503c48c00",
+    "model_size": 24993160,
+    "rsi": "rsi_114000.safetensors",
+    "rsi_sha256": "a26b82ced9e3d00a5fc787ddaaa028ab78da72fc66bbf7c7d2237f974dca7e01",
+    "rsi_size": 2733524,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep06/model_114000.safetensors",
+    "sha256": "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+    "size": 46052632,
+    "max_rel_diff": 2.5272369384765625e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9695131257631258,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9678685897,
+     "auc_sd": 0.0006259810538,
+     "auc_min": 0.9660027473,
+     "auc_max": 0.9688644689,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.7978473408
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep06",
+     "start": "scratch",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-01_11-26-44_monitor_rotate_05/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep06",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep06/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep06",
+    "evaluated_file_sha256": "842cb67303c028fa02352ba5ed65bc352105a6e9c64a9110dbf2fdae2ea75bb0",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep06/t05/try1/results/episode_000006.parquet",
+    "results_parquet_sha256": "3ccd46bb62a63edd48da09db142ec1595326b07c3ea278099af4e7b4472103f0",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9701236263736264,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7769441109310824
+    },
+    "metric_code_float32": {
+     "AUC": 0.9680631868131868,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.7769535559626511
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 7,
+   "object": "iron",
+   "item": "ep07",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (c3r2_official, arm C3r2_wide)",
+   "replaces": null,
+   "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "iteration": 17950,
+    "run": "C3r2_wide/ep07",
+    "model": "model_17950.safetensors",
+    "model_sha256": "9aa5964dfc1f23c5d967b74214c9f8fee134d0c3598c496421b93bc3542a1b6b",
+    "model_size": 24993000,
+    "rsi": "rsi_17950.safetensors",
+    "rsi_sha256": "c8589075c62cb081a65d9413d9337b02025c47adebb107424342fd8598724ea7",
+    "rsi_size": 4685084,
+    "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep07/model_17950.safetensors",
+    "sha256": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+    "size": 46052504,
+    "max_rel_diff": null,
+    "exported_by": "61fa5d31ff80",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 1.0,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9999720982,
+     "auc_sd": 9.707761913e-05,
+     "auc_min": 0.9995814732,
+     "auc_max": 1.0,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.3167562651
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep07",
+     "start": "scratch",
+     "end": "final.json model_17950 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep07",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep07_iron",
+      "logging.upload_checkpoints=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep07",
+    "evaluated_file_sha256": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep07/t05/try1/results/episode_000007.parquet",
+    "results_parquet_sha256": "670ffc0097ec252362937bdb38712992e1ed7b595bc90f4e3518eb0c020f91c6",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 1.0,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.3280451356070766
+    },
+    "metric_code_float32": {
+     "AUC": 1.0,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.328045360984596
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 8,
+   "object": "skinny_wood_chair",
+   "item": "ep08",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep08)",
+   "replaces": null,
+   "sequence_id": "2026-06-05_15-08-08_skinny_wood_chair_push_10",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 28000,
+    "run": "C3r2_runin/ep08",
+    "model": "model_28000.safetensors",
+    "model_sha256": "d66f048c3a8d0ab058da24d0f06afab2cb50665c93a8ff83b19fbbb2322b67ef",
+    "model_size": 24993176,
+    "rsi": "rsi_28000.safetensors",
+    "rsi_sha256": "4a37eb04030fd9a37d4af1f0168016db33e4ab28114c2426a75472b58f8424f0",
+    "rsi_size": 3271516,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep08/model_28000.safetensors",
+    "sha256": "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+    "size": 46052648,
+    "max_rel_diff": 1.5497207641601562e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9676024011299434,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9673243291,
+     "auc_sd": 0.0003487537799,
+     "auc_min": 0.9663665254,
+     "auc_max": 0.9677789548,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.9396033151
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep08",
+     "start": "scratch",
+     "end": "",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-05_15-08-08_skinny_wood_chair_push_10/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep08",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep08/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "run record (hydra overrides.yaml, resume keys removed)"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep08",
+    "evaluated_file_sha256": "2f98f4695236ec41a44c1c8a77378591275ea0ad5ee5b6f6f38600d6e2c3d726",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep08/t05/try1/results/episode_000008.parquet",
+    "results_parquet_sha256": "9b18bdb5c7872c93d4935132d01e3365d3952b170d4002a8a317cd6fa3b1afc8",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9676024011299436,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.9494215246387059
+    },
+    "metric_code_float32": {
+     "AUC": 0.9676024011299436,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.949427282136839
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 9,
+   "object": "big_red_bowl",
+   "item": "ep09",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (c3r2_official, arm C3r2_wide)",
+   "replaces": null,
+   "sequence_id": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "iteration": 32185,
+    "run": "C3r2_wide/ep09",
+    "model": "model_32185.safetensors",
+    "model_sha256": "00a4d2ae3e21b1d6eac4498e196541ed0f0b159316fc7aaaa410d3846f13034d",
+    "model_size": 24993056,
+    "rsi": "rsi_32185.safetensors",
+    "rsi_sha256": "08a33e07d38a557373e9717c4ff035b770c910ee9773e2ae41c7ccb1d61b1f09",
+    "rsi_size": 4554980,
+    "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep09/model_32185.safetensors",
+    "sha256": "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+    "size": 46052560,
+    "max_rel_diff": null,
+    "exported_by": "61fa5d31ff80",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9288505747,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9290265805,
+     "auc_sd": 0.002477472694,
+     "auc_min": 0.9247126437,
+     "auc_max": 0.9343390805,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.7429203887
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep09",
+     "start": "scratch",
+     "end": "final.json model_32185 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep09",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep09_big_red_bowl",
+      "logging.upload_checkpoints=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep09",
+    "evaluated_file_sha256": "1a4086d09e6d2a3fe764febdaacd5785d6f54c477a16312b36e04356db2bbe9a",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep09/t05/try1/results/episode_000009.parquet",
+    "results_parquet_sha256": "9a8eadb3aee6c96bf3d3876fde42c538e6a7deb7629e51acd88e9e97d9218bde",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9280172413793104,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7172039718555601
+    },
+    "metric_code_float32": {
+     "AUC": 0.929022988505747,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.7172053633693405
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 10,
+   "object": "white_desk",
+   "item": "ep10-BT_58000",
+   "origin": "T1improve arm ep10-BT",
+   "replaces": "ep10 (T1fix ep10-B (T1fix/eval_A/ep10))",
+   "sequence_id": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "run": "T1improve/arms/ep10-BT/runs/ep10",
+    "iteration": 58000,
+    "model": "model_58000.safetensors",
+    "model_sha256": "c19525e8cf5bf5463a9c09238a2e8bbe55a796c270ec058b9d5bb1f0dcaa3e7e",
+    "model_size": 24993224,
+    "rsi": "rsi_58000.safetensors",
+    "rsi_sha256": "8f915e54f580d9a9e379ca3080a6320b42b3b16f6108c1081376e6342b04992f",
+    "rsi_size": 3738684,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "seeded copy T1improve/arms/ep10-BT/fc_cache (tree (nv-v2d_runin: 18 hulls vs stock 17))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep10-BT_58000/try1/model_58000.safetensors",
+    "sha256": "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+    "size": 46052736,
+    "max_rel_diff": 2.002716064453125e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_runin/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep10-BT_58000/try1 nice -n 10 taskset -c 100-103,204-207 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep10-BT/runs/ep10/model_58000.safetensors --output <RUNS>/T1improve/confirm/exports/ep10-BT_58000/try1/model_58000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep10-BT_58000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.8950920969773299,
+     "auc_sd": 0.0015352682747796194,
+     "auc_min": 0.8916876574307305,
+     "auc_max": 0.8973551637279598,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.1522761682396134
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.8951 new vs 0.8693 incumbent); MPPE 1.152 vs 1.312"
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep10",
+     "start": "scratch",
+     "end": "final.json model_21432 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep10",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep10_white_desk",
+      "logging.upload_checkpoints=false",
+      "scene.support=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep10"
+    },
+    {
+     "run": "T1fix/B/ep10",
+     "start": "resume model_21432 (fork pair T1fix/B/ep10)",
+     "end": "final.json model_36432 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchA/ep10",
+      "hydra.run.dir=<RUNS>/T1fix/watchA/ep10/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=36432",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/B/ep10/model_21432.safetensors",
+      "objective.object_task_rotation_beta=4.5"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep10-B",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=4.5"
+     ],
+     "fork_iteration": 21432,
+     "max_iterations": 36432,
+     "fork_pair": {
+      "model": {
+       "sha256": "1f51ddfb5cba9dbd695859cc61139aaf872e8759597f34cf0d3a870d42cb9706",
+       "size": 24993032,
+       "path": "<RUNS>/T1fix/B/ep10/model_21432.safetensors"
+      },
+      "rsi": {
+       "sha256": "c8f73b78d1d2beb6861b1800a18376fea46600aa7186ee603794e4d10dccaf56",
+       "size": 3738684,
+       "path": "<RUNS>/T1fix/B/ep10/rsi_21432.safetensors"
+      }
+     },
+     "lineage_of": "ep10"
+    },
+    {
+     "run": "T1improve/arms/ep10-BT/runs/ep10",
+     "start": "resume model_36432 (fork pair T1improve/arms/ep10-BT/fork = copy of T1fix/B/ep10/model_36432)",
+     "end": "final.json model_60000 (max_iterations); selected model_58000",
+     "code": "b39b69be6c2f",
+     "hull_cache": "seeded copy T1improve/arms/ep10-BT/fc_cache (tree (nv-v2d_runin: 18 hulls vs stock 17))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-01_11-36-40_white_desk_lower_to_ground_10/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep10-BT/runs/ep10",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep10-BT/runs/ep10/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=60000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep10-BT/fork/model_36432.safetensors",
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=0.6"
+     ],
+     "source": "t1improve/arms/ep10-BT/launch.json (argv) and overrides.yaml",
+     "arm": "ep10-BT",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=0.6"
+     ],
+     "inherited_overrides": [
+      "objective.object_task_rotation_beta=4.5"
+     ],
+     "added_overrides": [
+      "termination.object_orientation_threshold=0.6"
+     ],
+     "fork_iteration": 36432,
+     "max_iterations": 60000,
+     "fork_pair": {
+      "model": {
+       "sha256": "dc34e3009039d22aa4e11d83dd04fb27d8a1227ae1a0b177778b4afd9952e442",
+       "size": 24993192,
+       "path": "<RUNS>/T1improve/arms/ep10-BT/fork/model_36432.safetensors",
+       "source": "<RUNS>/T1fix/B/ep10/model_36432.safetensors"
+      },
+      "rsi": {
+       "sha256": "25da0cfecc246573ac611220eada3f3bdeb1b7bf7557651535846b15c5d64bce",
+       "size": 3738684,
+       "path": "<RUNS>/T1improve/arms/ep10-BT/fork/rsi_36432.safetensors",
+       "source": "<RUNS>/T1fix/B/ep10/rsi_36432.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep10-BT/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep10-BT_58000",
+    "evaluated_file_sha256": "725ee5e8f8dde84f3a954722b4b7aa6e8e32b5ade6b3b65fdb7a5c899bb3b919",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep10-BT_58000/t05/try1/results/episode_000010.parquet",
+    "results_parquet_sha256": "6621aee359edf2e20b32a6aee0a00f6029ea4a4144a0c12c869c1f85a9d96a4a",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.8925535264483627,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.1516255425091872
+    },
+    "metric_code_float32": {
+     "AUC": 0.8946788413098237,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.1516164498811412
+    }
+   },
+   "n_stages": 3
+  },
+  {
+   "episode": 11,
+   "object": "light_blue_book",
+   "item": "ep11",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (runin, arm C3r2_runin)",
+   "replaces": null,
+   "sequence_id": "2026-04-24_13-56-58_light_blue_book_pick_place_09",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 36000,
+    "run": "C3r2_runin/ep11",
+    "model": "model_36000.safetensors",
+    "model_sha256": "aa829293a77e727ea32b87c2efe1c26bcaeb3fbafaa618e73a7ccd10980d35a1",
+    "model_size": 24993184,
+    "rsi": "rsi_36000.safetensors",
+    "rsi_sha256": "c2289a175625373695fbf2dd33be96d9010ffc7d99d6eec8e274ce8ef241f4e6",
+    "rsi_size": 4554980,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep11/model_36000.safetensors",
+    "sha256": "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+    "size": 46052656,
+    "max_rel_diff": null,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9772613762,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9767951389,
+     "auc_sd": 0.001620065326,
+     "auc_min": 0.9726388889,
+     "auc_max": 0.98,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.6380705076
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep11",
+     "start": "scratch",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_13-56-58_light_blue_book_pick_place_09/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep11",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep11/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep11",
+    "evaluated_file_sha256": "9f60a9cb5943e7acb073a4d2fa44b5abde8a749bf781cb5762a58e9598e30a68",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep11/t05/try1/results/episode_000011.parquet",
+    "results_parquet_sha256": "d5b725825a5ac13ab235fa1eed32edb34c929a4de0e5a1eb58bc11926a39e062",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9769700332963374,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6374224679931454
+    },
+    "metric_code_float32": {
+     "AUC": 0.9775694444444445,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.6374944884794629
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 12,
+   "object": "black_platform",
+   "item": "ep12",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep12)",
+   "replaces": null,
+   "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 28000,
+    "run": "C3r2_runin/ep12",
+    "model": "model_28000.safetensors",
+    "model_sha256": "98ee5293c02a642db6fbacbfed4c0f69f7b3b1a3cdeac296f2b3964bddfb99aa",
+    "model_size": 24993168,
+    "rsi": "rsi_28000.safetensors",
+    "rsi_sha256": "a10cf99f1c788ddf88d66aed0b909f42ee79efcaee614865370e0dcba0e3722d",
+    "rsi_size": 3154724,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep12/model_28000.safetensors",
+    "sha256": "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+    "size": 46052640,
+    "max_rel_diff": 1.2874603271484375e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.988125,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9856294643,
+     "auc_sd": 0.0023195255,
+     "auc_min": 0.9784821429,
+     "auc_max": 0.9880357143,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.5786842267
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep12",
+     "start": "scratch",
+     "end": "stopped after model_29500 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep12",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep12/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep12",
+    "evaluated_file_sha256": "3b2c52d7949697ab84e33bf198b32c8048e3b4d832db8b21a0012cb7e0f8949c",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep12/t05/try1/results/episode_000012.parquet",
+    "results_parquet_sha256": "cf4b75a4e958198865f8bb418d1a976213eaf3a1c62e7a4f4636781cc224b8dd",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.98625,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.575321295544545
+    },
+    "metric_code_float32": {
+     "AUC": 0.9863392857142856,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.5753274906974833
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 13,
+   "object": "snack_box",
+   "item": "ep13",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep13)",
+   "replaces": null,
+   "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 48000,
+    "run": "C3r2_runin/ep13",
+    "model": "model_48000.safetensors",
+    "model_sha256": "4c0e0e9146ee8f58941309a2bc8fddcf24de33b64276f22873a188a5a382317c",
+    "model_size": 24993176,
+    "rsi": "rsi_48000.safetensors",
+    "rsi_sha256": "fe364e6a56523a5480ce6bdf5f5f75b8873a8b66e7bee20a4df6af1f4979e14f",
+    "rsi_size": 4685084,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep13/model_48000.safetensors",
+    "sha256": "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+    "size": 46052648,
+    "max_rel_diff": 4.1484832763671875e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.984996384671005,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9785995119,
+     "auc_sd": 0.01733202126,
+     "auc_min": 0.9262472885,
+     "auc_max": 0.9915943601,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.5893926451
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep13",
+     "start": "scratch",
+     "end": "stopped after model_65000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep13",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep13/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep13",
+    "evaluated_file_sha256": "5cec84bb80d64f7d6e32c71da07deaa08005ce1d4a81127083ac86fff5bd4ae3",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep13/t05/try1/results/episode_000013.parquet",
+    "results_parquet_sha256": "37912dc293ae980eeb9bac8d7293391eb94f0dbaab50c7843b8efbfa309111df",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9583785249457701,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7444775509370108
+    },
+    "metric_code_float32": {
+     "AUC": 0.9583107375271149,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.7444719721378489
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 14,
+   "object": "round_table",
+   "item": "ep14-R_92000",
+   "origin": "T1improve arm ep14-R",
+   "replaces": "ep14 (T1fix ep14-B (T1fix/eval_S2B/ep14))",
+   "sequence_id": "2026-05-28_14-44-09_round_table_flip_08",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "run": "T1improve/arms/ep14-R/runs/ep14",
+    "iteration": 92000,
+    "model": "model_92000.safetensors",
+    "model_sha256": "a0e8b1dbb0d1a79a5bfad960c8fa41c3be707a839a94460fd33eca0f1ca2d37e",
+    "model_size": 24993200,
+    "rsi": "rsi_92000.safetensors",
+    "rsi_sha256": "722924493277371a7df214bc3b7f2b50a625fecc0604cbfa267c49c01aa60e40",
+    "rsi_size": 4673020,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "seeded copy T1improve/arms/ep14-R/fc_cache (stock (T1fix/stage2/fc_cache))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep14-R_92000/try1/model_92000.safetensors",
+    "sha256": "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+    "size": 46052712,
+    "max_rel_diff": 3.24249267578125e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_runin/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep14-R_92000/try1 nice -n 10 taskset -c 48-51,152-155 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep14-R/runs/ep14/model_92000.safetensors --output <RUNS>/T1improve/confirm/exports/ep14-R_92000/try1/model_92000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep14-R_92000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.834280589123867,
+     "auc_sd": 0.0023584249235329277,
+     "auc_min": 0.8277316213494461,
+     "auc_max": 0.8369209466263847,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.4552951563837575
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.8343 new vs 0.8270 incumbent); MPPE 1.455 vs 1.503"
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep14",
+     "start": "scratch",
+     "end": "final.json model_44922 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep14",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep14_round_table",
+      "logging.upload_checkpoints=false",
+      "scene.support=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep14"
+    },
+    {
+     "run": "T1fix/C/ep14",
+     "start": "resume model_44922 (fork pair T1fix/C/ep14)",
+     "end": "final.json model_75000 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchA/ep14",
+      "hydra.run.dir=<RUNS>/T1fix/watchA/ep14/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=75000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/C/ep14/model_44922.safetensors"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep14-C",
+     "launch_overrides": [],
+     "fork_iteration": 44922,
+     "max_iterations": 75000,
+     "fork_pair": {
+      "model": {
+       "sha256": "b22ad22d6d4c8c1569799c3f745e1462703dc2608bc83ff120ecb06ac1d73397",
+       "size": 24993016,
+       "path": "<RUNS>/T1fix/C/ep14/model_44922.safetensors"
+      },
+      "rsi": {
+       "sha256": "56e5bf23336acf355b247a3a34d42b0c97a5a5dd07c210dd05efe5075a08b89e",
+       "size": 4673020,
+       "path": "<RUNS>/T1fix/C/ep14/rsi_44922.safetensors"
+      }
+     },
+     "lineage_of": "ep14"
+    },
+    {
+     "run": "T1fix/B/ep14",
+     "start": "resume model_66000 (fork pair T1fix/stage2/forks/ep14-B)",
+     "end": "final.json model_81000 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "stock:T1fix/stage2/fc_cache",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchS2B/ep14",
+      "hydra.run.dir=<RUNS>/T1fix/watchS2B/ep14/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=81000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/stage2/forks/ep14-B/model_66000.safetensors",
+      "objective.object_task_rotation_beta=2.6"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep14-B",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=2.6"
+     ],
+     "fork_iteration": 66000,
+     "max_iterations": 81000,
+     "fork_pair": {
+      "model": {
+       "sha256": "b974578b31c49d76263115802c489adaa71c8b8757666282d5789d23757aa0bb",
+       "size": 24993176,
+       "path": "<RUNS>/T1fix/stage2/forks/ep14-B/model_66000.safetensors"
+      },
+      "rsi": {
+       "sha256": "cce990a3125f273ba6359ff6b406963e5cc5f36d35ce10ba9ab94d984b67c1d5",
+       "size": 4673020,
+       "path": "<RUNS>/T1fix/stage2/forks/ep14-B/rsi_66000.safetensors"
+      }
+     },
+     "lineage_of": "ep14"
+    },
+    {
+     "run": "T1improve/arms/ep14-R/runs/ep14",
+     "start": "resume model_81000 (fork pair T1improve/arms/ep14-R/fork = copy of T1fix/B/ep14/model_81000)",
+     "end": "final.json model_96000 (max_iterations); selected model_92000",
+     "code": "b39b69be6c2f",
+     "hull_cache": "seeded copy T1improve/arms/ep14-R/fc_cache (stock (T1fix/stage2/fc_cache))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-28_14-44-09_round_table_flip_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep14-R/runs/ep14",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep14-R/runs/ep14/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=96000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep14-R/fork/model_81000.safetensors",
+      "objective.object_task_rotation_beta=2.6",
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2",
+      "termination.pelvis_position_threshold=1.2"
+     ],
+     "source": "t1improve/arms/ep14-R/launch.json (argv) and overrides.yaml",
+     "arm": "ep14-R",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=2.6",
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2",
+      "termination.pelvis_position_threshold=1.2"
+     ],
+     "inherited_overrides": [
+      "objective.object_task_rotation_beta=2.6"
+     ],
+     "added_overrides": [
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2",
+      "termination.pelvis_position_threshold=1.2"
+     ],
+     "fork_iteration": 81000,
+     "max_iterations": 96000,
+     "fork_pair": {
+      "model": {
+       "sha256": "6c16cf94e78fffcc45c7c3717da704f0a99b80b1f96d57612db70cba1887a8ae",
+       "size": 24993192,
+       "path": "<RUNS>/T1improve/arms/ep14-R/fork/model_81000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep14/model_81000.safetensors"
+      },
+      "rsi": {
+       "sha256": "83323fa9f4818f6c2dfd44876f1ae2b6d9f3df742c14ae32e9592323df51a4f5",
+       "size": 4673020,
+       "path": "<RUNS>/T1improve/arms/ep14-R/fork/rsi_81000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep14/rsi_81000.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep14-R/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep14-R_92000",
+    "evaluated_file_sha256": "b01866a8f9103af18c00b7c2e99fdac2ecb2f462adc1fa1eaa3d56cfa619a364",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep14-R_92000/t05/try1/results/episode_000014.parquet",
+    "results_parquet_sha256": "fe8f08da82ef5db72cebf334cff01df4f35e21b98ead2ca6da362d2ef4eb1872",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.8298086606243706,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.508842066145572
+    },
+    "metric_code_float32": {
+     "AUC": 0.8294310171198389,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.5088439514433436
+    }
+   },
+   "n_stages": 4
+  },
+  {
+   "episode": 15,
+   "object": "wet_floor_sign",
+   "item": "ep15-B2_40000",
+   "origin": "T1improve arm ep15-B2",
+   "replaces": "ep15 (5x Oct-21 (c3r2_official, arm C3r2_wide))",
+   "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "run": "T1improve/arms/ep15-B2/runs/ep15",
+    "iteration": 40000,
+    "model": "model_40000.safetensors",
+    "model_sha256": "b064c418bf12c1bf875e9d0fc0e4a239fa2b26ef0ba26d8bcd8bedbbe12a5789",
+    "model_size": 24993240,
+    "rsi": "rsi_40000.safetensors",
+    "rsi_sha256": "e035b4faf46a233b86dbe9268b801a176e8c5de4533ae2475d4caa3f8f2d11dd",
+    "rsi_size": 3388308,
+    "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+    "hull_cache": "seeded copy T1improve/arms/ep15-B2/fc_cache (tree (fc_r2: 50 hulls vs stock 49))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep15-B2_40000/try1/model_40000.safetensors",
+    "sha256": "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+    "size": 46052744,
+    "max_rel_diff": 1.5132592246154311e-05,
+    "exported_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/fc_r2 && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/fc_r2/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep15-B2_40000/try1 nice -n 10 taskset -c 100-103,204-207 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep15-B2/runs/ep15/model_40000.safetensors --output <RUNS>/T1improve/confirm/exports/ep15-B2_40000/try1/model_40000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep15-B2_40000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9858522727272728,
+     "auc_sd": 0.0006592036583898748,
+     "auc_min": 0.9847027972027972,
+     "auc_max": 0.9868006993006992,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.6457820335098481
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.9859 new vs 0.9376 incumbent); MPPE 0.646 vs 0.876"
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep15",
+     "start": "scratch",
+     "end": "final.json model_20974 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep15",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep15_wet_floor_sign",
+      "logging.upload_checkpoints=false",
+      "scene.support=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep15"
+    },
+    {
+     "run": "T1improve/arms/ep15-B2/runs/ep15",
+     "start": "resume model_20974 (fork pair T1improve/arms/ep15-B2/fork = copy of C3r2_wide/ep15/model_20974)",
+     "end": "final.json model_46000 (max_iterations); selected model_40000",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "seeded copy T1improve/arms/ep15-B2/fc_cache (tree (fc_r2: 50 hulls vs stock 49))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep15-B2/runs/ep15",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep15-B2/runs/ep15/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=46000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep15-B2/fork/model_20974.safetensors",
+      "objective.object_task_rotation_beta=2.0"
+     ],
+     "source": "t1improve/arms/ep15-B2/launch.json (argv) and overrides.yaml",
+     "arm": "ep15-B2",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=2.0"
+     ],
+     "inherited_overrides": [],
+     "added_overrides": [
+      "objective.object_task_rotation_beta=2.0"
+     ],
+     "fork_iteration": 20974,
+     "max_iterations": 46000,
+     "fork_pair": {
+      "model": {
+       "sha256": "16e14bcd737120d0dccb7acc5f5454daf90fd63024eef91264655d98d59f8af7",
+       "size": 24993048,
+       "path": "<RUNS>/T1improve/arms/ep15-B2/fork/model_20974.safetensors",
+       "source": "<RUNS>/C3r2_wide/ep15/model_20974.safetensors"
+      },
+      "rsi": {
+       "sha256": "8bffcbd190bad0299b787b8b50afe857eb0f6006725f66d67285fb1ace567987",
+       "size": 3388308,
+       "path": "<RUNS>/T1improve/arms/ep15-B2/fork/rsi_20974.safetensors",
+       "source": "<RUNS>/C3r2_wide/ep15/rsi_20974.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/fc_r2/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep15-B2/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep15-B2_40000",
+    "evaluated_file_sha256": "8d0e8023a9a95b934910fda2a3abd30c718f0409951e24a44865c35526a04dd6",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep15-B2_40000/t05/try1/results/episode_000015.parquet",
+    "results_parquet_sha256": "44e4d4fc15e3317d72793d94ff28bad3715b0418c0575f6dae72c8088d3b97af",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9859265734265734,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.6367548655697307
+    },
+    "metric_code_float32": {
+     "AUC": 0.9865384615384616,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.6367499807120409
+    }
+   },
+   "n_stages": 2
+  },
+  {
+   "episode": 16,
+   "object": "spray_bottle",
+   "item": "ep16",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (c3r2_periodic, arm C3r2_wide)",
+   "replaces": null,
+   "sequence_id": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "iteration": 24000,
+    "run": "C3r2_wide/ep16",
+    "model": "model_24000.safetensors",
+    "model_sha256": "9a71b011037add1c8761eb17cb38b459018c7959f3c63c3ce430ebe45aad97a1",
+    "model_size": 24993040,
+    "rsi": "rsi_24000.safetensors",
+    "rsi_sha256": "38f1a3aaca9bb20428a4c62ed931d4f3ec0bb8e058ff10b4346316a34dc06232",
+    "rsi_size": 2473316,
+    "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep16/model_24000.safetensors",
+    "sha256": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+    "size": 46052552,
+    "max_rel_diff": null,
+    "exported_by": "61fa5d31ff80",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9877096436,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9895898847,
+     "auc_sd": 0.002650535591,
+     "auc_min": 0.9837526205,
+     "auc_max": 0.9931865828,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.5087487786
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep16",
+     "start": "scratch",
+     "end": "final.json model_24272 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep16",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep16_spray_bottle",
+      "logging.upload_checkpoints=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep16",
+    "evaluated_file_sha256": "baefdf33e932ace72ea2f0676d3b452a0c9588ee756a1ba056218289c089f152",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep16/t05/try1/results/episode_000016.parquet",
+    "results_parquet_sha256": "8c4e4f6ce6e26b70c466aacffaac56809f913bef92315ec2cb85e26ff04a768f",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9931865828092243,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.45884280617626255
+    },
+    "metric_code_float32": {
+     "AUC": 0.9931865828092243,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.45884548198143593
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 17,
+   "object": "traffic_cone",
+   "item": "ep17",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (runin, arm C3r2_runin)",
+   "replaces": null,
+   "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 44000,
+    "run": "C3r2_runin/ep17",
+    "model": "model_44000.safetensors",
+    "model_sha256": "f41aacc907678450133b02c74fddb219178a5ae9f9101d20536492cbd624d437",
+    "model_size": 24993184,
+    "rsi": "rsi_44000.safetensors",
+    "rsi_sha256": "17b3a142df3442cbd8395b48fdcd13f457abeaf996d5ce1f88607b1ae4021db9",
+    "rsi_size": 2213108,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep17/model_44000.safetensors",
+    "sha256": "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+    "size": 46052656,
+    "max_rel_diff": null,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9492329545,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9423863636,
+     "auc_sd": 0.007442565444,
+     "auc_min": 0.9289772727,
+     "auc_max": 0.9546875,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.055695607
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep17",
+     "start": "scratch",
+     "end": "stopped after model_46000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep17",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep17/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep17",
+    "evaluated_file_sha256": "8cbe742c58cbf521d88a3842dff1b27a29468518d76407b50dada73e09eece55",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep17/t05/try1/results/episode_000017.parquet",
+    "results_parquet_sha256": "a44d72e9bba5b86f4397868ee2f5022c8c44b33ef2226256347eb208febcdbde",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9350852272727274,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.0667025557005618
+    },
+    "metric_code_float32": {
+     "AUC": 0.93125,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.0667062586235996
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 18,
+   "object": "blue_trash_can",
+   "item": "ep18",
+   "origin": "t1best set (2026-10-26): 5x Oct-21 (runin, arm C3r2_runin)",
+   "replaces": null,
+   "sequence_id": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 32000,
+    "run": "C3r2_runin/ep18",
+    "model": "model_32000.safetensors",
+    "model_sha256": "f5c3dd7628d92104724f1d60a331e31cb15eda0e0376c925b1a4fccb9d252da8",
+    "model_size": 24993192,
+    "rsi": "rsi_32000.safetensors",
+    "rsi_sha256": "18126a073df89c25fa50e362bc8faef5fb7e3a8c7caa83a39eaea497039eeed3",
+    "rsi_size": 3972268,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep18/model_32000.safetensors",
+    "sha256": "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+    "size": 46052656,
+    "max_rel_diff": null,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 5,
+    "prior_mean_auc": 0.9930944056,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9933056527,
+     "auc_sd": 0.0005959712908,
+     "auc_min": 0.9921328671,
+     "auc_max": 0.9943181818,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.5230948887
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep18",
+     "start": "scratch",
+     "end": "stopped after model_36000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-06_10-00-19_blue_trash_can_drag_sideways_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep18",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep18/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep18",
+    "evaluated_file_sha256": "ff7e980fc055d46064a75c2f90ef6a3f630782f26cb27a03eae5dbfe6767573a",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep18/t05/try1/results/episode_000018.parquet",
+    "results_parquet_sha256": "75c8f95a422ae641d16579f5f50566a11b16477e9beb16ff782b3931a82bd03e",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9933712121212122,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5244841506805514
+    },
+    "metric_code_float32": {
+     "AUC": 0.9939539627039626,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.5244836763765619
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 19,
+   "object": "cane",
+   "item": "ep19-Bc_135000",
+   "origin": "T1improve arm ep19-Bc",
+   "replaces": "ep19 (T1fix ep19-B (T1fix/eval_A/ep19))",
+   "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "run": "T1improve/arms/ep19-Bc/runs/ep19",
+    "iteration": 135000,
+    "model": "model_135000.safetensors",
+    "model_sha256": "846211699d97878c075fbc063dee15ec64237c44339bb675a2f3efa89464d9c2",
+    "model_size": 24993264,
+    "rsi": "rsi_135000.safetensors",
+    "rsi_sha256": "a470eca767111beed05eaa7999d5652341f9e7a6aa885babd703943470da2fc7",
+    "rsi_size": 4089060,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "seeded copy T1improve/arms/ep19-Bc/fc_cache (tree (nv-v2d_runin: 11 hulls vs stock 10))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep19-Bc_135000/try1/model_135000.safetensors",
+    "sha256": "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+    "size": 46052728,
+    "max_rel_diff": 6.580352783203125e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_runin/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep19-Bc_135000/try1 nice -n 10 taskset -c 48-51,152-155 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep19-Bc/runs/ep19/model_135000.safetensors --output <RUNS>/T1improve/confirm/exports/ep19-Bc_135000/try1/model_135000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep19-Bc_135000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9227532449209932,
+     "auc_sd": 0.0037724641044551673,
+     "auc_min": 0.9139390519187358,
+     "auc_max": 0.927765237020316,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.9923758173892828
+    },
+    "decision": {
+     "keep_new_8_5": true,
+     "why": "new has the higher 20-trial kit AUC (0.9228 new vs 0.8957 incumbent); MPPE 0.992 vs 1.023"
+    }
+   },
+   "stages": [
+    {
+     "run": "runin/ep19",
+     "start": "scratch",
+     "end": "final.json model_44922 (help_zero_tail)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin/ep19",
+      "hydra.run.dir=<RUNS>/runin/ep19/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep19"
+    },
+    {
+     "run": "runin_cont/ep19",
+     "start": "resume runin/ep19/model_44922.safetensors",
+     "end": "final.json model_90000 (max_iterations)",
+     "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/runin_cont/ep19",
+      "hydra.run.dir=<RUNS>/runin_cont/ep19/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/runin/ep19/model_44922.safetensors",
+      "training.max_iterations=90000",
+      "training.early_stop_help_zero_tail=0"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep19"
+    },
+    {
+     "run": "T1fix/B/ep19",
+     "start": "resume model_90000 (fork pair T1fix/B/ep19)",
+     "end": "final.json model_110000 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchA/ep19",
+      "hydra.run.dir=<RUNS>/T1fix/watchA/ep19/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=110000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/B/ep19/model_90000.safetensors",
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep19-B",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "fork_iteration": 90000,
+     "max_iterations": 110000,
+     "fork_pair": {
+      "model": {
+       "sha256": "c845ae6e992939770f9af5a7a7fc7a654fdbb2e1f4f11b3b6f9cdbd11fedb329",
+       "size": 24993264,
+       "path": "<RUNS>/T1fix/B/ep19/model_90000.safetensors"
+      },
+      "rsi": {
+       "sha256": "9f0b645c3adcadc899bfa9ae647bc7e6689fdccfdf4700a693df73774efed690",
+       "size": 4089060,
+       "path": "<RUNS>/T1fix/B/ep19/rsi_90000.safetensors"
+      }
+     },
+     "lineage_of": "ep19"
+    },
+    {
+     "run": "T1improve/arms/ep19-Bc/runs/ep19",
+     "start": "resume model_110000 (fork pair T1improve/arms/ep19-Bc/fork = copy of T1fix/B/ep19/model_110000)",
+     "end": "final.json model_135000 (max_iterations); selected model_135000",
+     "code": "b39b69be6c2f",
+     "hull_cache": "seeded copy T1improve/arms/ep19-Bc/fc_cache (tree (nv-v2d_runin: 11 hulls vs stock 10))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep19-Bc/runs/ep19",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep19-Bc/runs/ep19/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=135000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep19-Bc/fork/model_110000.safetensors",
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "source": "t1improve/arms/ep19-Bc/launch.json (argv) and overrides.yaml",
+     "arm": "ep19-Bc",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "inherited_overrides": [
+      "objective.object_task_rotation_beta=3.0"
+     ],
+     "added_overrides": [],
+     "fork_iteration": 110000,
+     "max_iterations": 135000,
+     "fork_pair": {
+      "model": {
+       "sha256": "a433b497254130be426f5ae16afd31f87d4983e7b02ca86d7f15478312b158fc",
+       "size": 24993232,
+       "path": "<RUNS>/T1improve/arms/ep19-Bc/fork/model_110000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep19/model_110000.safetensors"
+      },
+      "rsi": {
+       "sha256": "37dc23ed02988522c298c04722692e681e03a980e7af4facbb1276ee7b4e218e",
+       "size": 4089060,
+       "path": "<RUNS>/T1improve/arms/ep19-Bc/fork/rsi_110000.safetensors",
+       "source": "<RUNS>/T1fix/B/ep19/rsi_110000.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_runin/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep19-Bc/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep19-Bc_135000",
+    "evaluated_file_sha256": "07863de3bb9b8282d4f8209c1ffe273ef7f596d56f3ddb0afd50b4d0fbbc34c7",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep19-Bc_135000/t05/try1/results/episode_000019.parquet",
+    "results_parquet_sha256": "f778fb8b8c139a93a89d98b4cc8b7fa88ca7ee237f15b8993129c4885830a2df",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9181715575620768,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.0354170425872298
+    },
+    "metric_code_float32": {
+     "AUC": 0.9183126410835214,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.035412303928896
+    }
+   },
+   "n_stages": 4
+  },
+  {
+   "episode": 20,
+   "object": "rice_cooker",
+   "item": "ep20",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep20)",
+   "replaces": null,
+   "sequence_id": "2026-06-08_16-57-34_rice_cooker_clockwise_04",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 70000,
+    "run": "C3r2_runin/ep20",
+    "model": "model_70000.safetensors",
+    "model_sha256": "58c0104d98335f9cb02039eaa11cd7b97e3f4d3fa59cdf4da0739337afff6d36",
+    "model_size": 24993248,
+    "rsi": "rsi_70000.safetensors",
+    "rsi_sha256": "93bf7fcaa8d42b35eb60eaed3856e967ce3736e0e9bb2bc35272f6197818de1c",
+    "rsi_size": 2733524,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep20/model_70000.safetensors",
+    "sha256": "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+    "size": 46052720,
+    "max_rel_diff": 1.8596649169921875e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9861738999397227,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.985459991,
+     "auc_sd": 0.002118625223,
+     "auc_min": 0.9789783002,
+     "auc_max": 0.9881329114,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.4942404065
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep20",
+     "start": "scratch",
+     "end": "stopped after model_24000 (auc_confirmed, AUC threshold 0.98)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep20",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep20/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    },
+    {
+     "run": "C3r2_runin/ep20",
+     "start": "resume C3r2_runin/ep20/model_24000.safetensors",
+     "end": "stopped after model_71000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-08_16-57-34_rice_cooker_clockwise_04/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep20",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep20/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/C3r2_runin/ep20/model_24000.safetensors"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep20",
+    "evaluated_file_sha256": "409796a2703aa2ee3e99cff52b3c0f5dc1597f9b8172b7bc7d007e527e6907de",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep20/t05/try1/results/episode_000020.parquet",
+    "results_parquet_sha256": "a06c6de568ecc4ff66f759f238f6f8c3ab8b2aa6ef3513787724f13312ce9b46",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9849683544303798,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.5146813667578161
+    },
+    "metric_code_float32": {
+     "AUC": 0.9851943942133816,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.5146861443328955
+    }
+   },
+   "n_stages": 2
+  },
+  {
+   "episode": 21,
+   "object": "tall_bar_stool",
+   "item": "ep21",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep21)",
+   "replaces": null,
+   "sequence_id": "2026-04-29_11-53-57_tall_bar_stool_pull_08",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 119500,
+    "run": "C3r2_runin/ep21",
+    "model": "model_119500.safetensors",
+    "model_sha256": "ca4801dcd3c2838e127c66803886647c055fc2427adc2db03a5113650ad8c6cf",
+    "model_size": 24993176,
+    "rsi": "rsi_119500.safetensors",
+    "rsi_sha256": "be1bd5ffbadd25ee9f4be0b03ccd1d43839f3584ffce315d8c549d4590ceab5f",
+    "rsi_size": 3037932,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep21/model_119500.safetensors",
+    "sha256": "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8",
+    "size": 46052640,
+    "max_rel_diff": 4.38690185546875e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.7557153392330384,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.7547658555,
+     "auc_sd": 0.001118698097,
+     "auc_min": 0.7522123894,
+     "auc_max": 0.7566371681,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.497268493
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep21",
+     "start": "scratch",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-29_11-53-57_tall_bar_stool_pull_08/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep21",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep21/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep21",
+    "evaluated_file_sha256": "ffc06d795a21f033ac2e6e7677668835e9793e1df980e67fbc912accce7ed6d8",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep21/t05/try1/results/episode_000021.parquet",
+    "results_parquet_sha256": "1ebc11b08336c5799d4c3b9430d261c14592dbb9c1952fec195990ed87e8fc90",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.7547935103244838,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.4983342237320543
+    },
+    "metric_code_float32": {
+     "AUC": 0.7547935103244838,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.49832976168017
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 22,
+   "object": "step_ladder",
+   "item": "ep22",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep22)",
+   "replaces": null,
+   "sequence_id": "2026-05-22_16-52-36_step_ladder_drag_03",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 36000,
+    "run": "C3r2_runin/ep22",
+    "model": "model_36000.safetensors",
+    "model_sha256": "83ffbd5b1ed843c736c864d7ef485404006df11e33a30421e2cde5ab6c0f8827",
+    "model_size": 24993168,
+    "rsi": "rsi_36000.safetensors",
+    "rsi_sha256": "86fb21a97a816190030ffd3400991aa71f92ef0c5631388f4ad42c2aa5735d5e",
+    "rsi_size": 3271516,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep22/model_36000.safetensors",
+    "sha256": "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+    "size": 46052632,
+    "max_rel_diff": 2.1219253540039062e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9763850254983774,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9760996175,
+     "auc_sd": 0.001410264529,
+     "auc_min": 0.971488178,
+     "auc_max": 0.9778337969,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.7096196046
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep22",
+     "start": "scratch",
+     "end": "stopped after model_41500 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-22_16-52-36_step_ladder_drag_03/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep22",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep22/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep22",
+    "evaluated_file_sha256": "b86140bb17a47070830f2806b14eb3a738290244ae6ad6d8144249df4b1cbb70",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep22/t05/try1/results/episode_000022.parquet",
+    "results_parquet_sha256": "8f1ec33d23fb25412e70f8756e723c14c35fb517a0403e9c4fc40fb62af30c33",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9771383866481225,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.7082462886105095
+    },
+    "metric_code_float32": {
+     "AUC": 0.9767906815020863,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.708247120750488
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 23,
+   "object": "toy_stroller",
+   "item": "ep23",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep23)",
+   "replaces": null,
+   "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 28000,
+    "run": "C3r2_runin/ep23",
+    "model": "model_28000.safetensors",
+    "model_sha256": "6fc2cc1339a447752180ae001ac3173d65bb985663ecea50f90f008b8ebdc5b7",
+    "model_size": 24993192,
+    "rsi": "rsi_28000.safetensors",
+    "rsi_sha256": "f8e24da0ed8f98e7557714b18d40b2c6807641b535d72a8a45feb90463ded191",
+    "rsi_size": 4322644,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep23/model_28000.safetensors",
+    "sha256": "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+    "size": 46052664,
+    "max_rel_diff": 1.7642974853515625e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9910588442565187,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9908165962,
+     "auc_sd": 0.000208924264,
+     "auc_min": 0.9902219873,
+     "auc_max": 0.9911469345,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.4699315839
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep23",
+     "start": "scratch",
+     "end": "stopped after model_40500 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-03_15-08-03_toy_stroller_back_forth_ground_04/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep23",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep23/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep23",
+    "evaluated_file_sha256": "674841934bc542a10a4310f7c413fa11744a573c360027271712018564c524ef",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep23/t05/try1/results/episode_000023.parquet",
+    "results_parquet_sha256": "3460fb1d873505ee4763b0519e694f4237b1e0a589473ea4405d79ef80f9da2e",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9906844608879493,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.4681313950903031
+    },
+    "metric_code_float32": {
+     "AUC": 0.9906844608879493,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.4681300529397348
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 24,
+   "object": "watering_can",
+   "item": "ep24",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep24)",
+   "replaces": null,
+   "sequence_id": "2026-05-29_15-43-20_watering_can_pour_right_02",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 118000,
+    "run": "C3r2_runin/ep24",
+    "model": "model_118000.safetensors",
+    "model_sha256": "603dc9a22a59c58f29093b367f19fe04238b8ac045ae47f234130e3c3b386992",
+    "model_size": 24993184,
+    "rsi": "rsi_118000.safetensors",
+    "rsi_sha256": "551ae9ca03a2e353ba8852a3719e0eb5f28642468a14e6cecad9fd2522907e0b",
+    "rsi_size": 3388308,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep24/model_118000.safetensors",
+    "sha256": "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+    "size": 46052648,
+    "max_rel_diff": 2.3949452286005157e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.9993872549019608,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9993607955,
+     "auc_sd": 8.256073982e-05,
+     "auc_min": 0.9992479947,
+     "auc_max": 0.9995822193,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.2887159031
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep24",
+     "start": "scratch",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-29_15-43-20_watering_can_pour_right_02/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep24",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep24/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep24",
+    "evaluated_file_sha256": "4c99a3de7b9f53d21e68b3eb31c5fa56c8103a8aa3690d0011faf6ab4f112bc7",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep24/t05/try1/results/episode_000024.parquet",
+    "results_parquet_sha256": "c4749b6c7298d40d1e9d278a9adcce4ac5e6e40c278736b304f44053f169f63d",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9995822192513368,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.28821454356960813
+    },
+    "metric_code_float32": {
+     "AUC": 0.9994986631016043,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.2882124610412757
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 25,
+   "object": "cyan_water_bottle",
+   "item": "ep25",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep25)",
+   "replaces": null,
+   "sequence_id": "2026-03-20_11-59-57_cyan_water_bottle_rotate_01",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 102000,
+    "run": "C3r2_runin/ep25",
+    "model": "model_102000.safetensors",
+    "model_sha256": "ffac8b771ef47e5ad1771d076af16ea55934fdf5017196cbbb4d2a7ce129d39b",
+    "model_size": 24993184,
+    "rsi": "rsi_102000.safetensors",
+    "rsi_sha256": "1bc0ecc6c3b9f76406708e28ab04c491738d06781e9c82569e8089815abb47de",
+    "rsi_size": 4424876,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep25/model_102000.safetensors",
+    "sha256": "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+    "size": 46052656,
+    "max_rel_diff": 7.43865966796875e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.7387223515715949,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.748141007,
+     "auc_sd": 0.006826930905,
+     "auc_min": 0.7374854482,
+     "auc_max": 0.7576396973,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 2.012952064
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep25",
+     "start": "scratch",
+     "end": "running at selection (2026-10-21 23:13 UTC+8)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-03-20_11-59-57_cyan_water_bottle_rotate_01/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep25",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep25/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep25",
+    "evaluated_file_sha256": "fa932e0d4e581feb46cf8b470f9102e4fcca8d568c3e91f5f02bf6220db407cd",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep25/t05/try1/results/episode_000025.parquet",
+    "results_parquet_sha256": "fd033b7ab3a9bb58ca69f7a7883a0c088b4ad36e88c422db20eeffa80742f288",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.7424330616996508,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 2.024398948357725
+    },
+    "metric_code_float32": {
+     "AUC": 0.7403230500582072,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 2.024398809126648
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 26,
+   "object": "skateboard",
+   "item": "ep26",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep26)",
+   "replaces": null,
+   "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 28000,
+    "run": "C3r2_runin/ep26",
+    "model": "model_28000.safetensors",
+    "model_sha256": "d19222fab0c88199567a7c883f6954e558ef224e87deeeb822cd9a3b17dbcb2b",
+    "model_size": 24993184,
+    "rsi": "rsi_28000.safetensors",
+    "rsi_sha256": "e5ea032b22b7dc8d114d19cc6d23b416691abd7d75f39b0fe36b05d89f4d4aef",
+    "rsi_size": 3037932,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep26/model_28000.safetensors",
+    "sha256": "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+    "size": 46052648,
+    "max_rel_diff": 2.47955322265625e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.997633283507723,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9974729073,
+     "auc_sd": 0.0005881121719,
+     "auc_min": 0.9964499253,
+     "auc_max": 0.9984118087,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.3768242988
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep26",
+     "start": "scratch",
+     "end": "stopped after model_36000 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-05_16-05-08_skateboard_rotate_ground_10/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep26",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep26/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep26",
+    "evaluated_file_sha256": "af8d40d74abc890c37e946000ee953d0d354791bca2278b0d0c5638e699fab2d",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep26/t05/try1/results/episode_000026.parquet",
+    "results_parquet_sha256": "26036160e21855d117236af0bbfeb64fcff1b2ca65b4d40b41fa9fb102292726",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9969170403587444,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.3745316740183677
+    },
+    "metric_code_float32": {
+     "AUC": 0.9970104633781764,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.3745351939115674
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 27,
+   "object": "woven_basket",
+   "item": "ep27",
+   "origin": "t1best set (2026-10-26): rolling start C3r2_runin (C3r2_runin/eval/ep27)",
+   "replaces": null,
+   "sequence_id": "2026-05-01_11-15-05_woven_basket_ground_desk_10",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2_runin",
+   "checkpoint": {
+    "iteration": 41500,
+    "run": "C3r2_runin/ep27",
+    "model": "model_41500.safetensors",
+    "model_sha256": "d29bb59a1af8d8b74e1b5cdc102c054d7e7271a0461401e42c37acd703d91511",
+    "model_size": 24993176,
+    "rsi": "rsi_41500.safetensors",
+    "rsi_sha256": "7c5ce99a4edbbfca0e8799c259381e37d439447137da53dc53bb4d57e2cab891",
+    "rsi_size": 2863628,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "tree"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep27/model_41500.safetensors",
+    "sha256": "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+    "size": 46052648,
+    "max_rel_diff": 2.193450927734375e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.997197640117994,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.9965044248,
+     "auc_sd": 0.001048446046,
+     "auc_min": 0.9928097345,
+     "auc_max": 0.9975663717,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 0.4233318288
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_runin/ep27",
+     "start": "scratch",
+     "end": "stopped after model_41500 (manual_plateau)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2_runin",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-01_11-15-05_woven_basket_ground_desk_10/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_runin/ep27",
+      "hydra.run.dir=<RUNS>/C3r2_runin/ep27/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=120000"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep27",
+    "evaluated_file_sha256": "656d87669772e6d511d7275c5cbc5ae1c78439e3e49e91c344c1fb1692d34b46",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep27/t05/try1/results/episode_000027.parquet",
+    "results_parquet_sha256": "01d8802d2923b241b581dfafbdc3b7c0c8735e44177c5a562a9556b75c62aac0",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.9973451327433629,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 0.4048750407315062
+    },
+    "metric_code_float32": {
+     "AUC": 0.9972345132743363,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 0.4048768499686055
+    }
+   },
+   "n_stages": 1
+  },
+  {
+   "episode": 28,
+   "object": "squeegee",
+   "item": "ep28-W3H_83000",
+   "origin": "T1improve arm ep28-W3H",
+   "replaces": "ep28alt (T1fix ep28 wave-2 W2PD model_66000 (dev.haoran.ep28w2 7fbc227, local only))",
+   "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+   "scene_support": true,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "run": "T1improve/arms/ep28-W3H/runs/ep28",
+    "iteration": 83000,
+    "model": "model_83000.safetensors",
+    "model_sha256": "26145feffcecb671df624024aec469e419d7db53508554f37322b5a7a1c72451",
+    "model_size": 24993424,
+    "rsi": "rsi_83000.safetensors",
+    "rsi_sha256": "16ce3c37672298ad371d3b6540da25e15c060856fc02bb4c08eb8a0d4e9b20b3",
+    "rsi_size": 5205500,
+    "trained_by": "7fbc2273a92b",
+    "hull_cache": "seeded copy T1improve/arms/ep28-W3H/fc_cache (stock (T1fix/ep28w2/fc_cache))"
+   },
+   "export": {
+    "root": "RUNS",
+    "file": "T1improve/confirm/exports/ep28-W3H_83000/try1/model_83000.safetensors",
+    "sha256": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+    "size": 46052744,
+    "max_rel_diff": 7.915496826171875e-05,
+    "exported_by": "7fbc2273a92b",
+    "tolerance": 0.0001,
+    "command": "cd <ME>/code/nv-v2d_ep28w2/robotic_grounding/flash_chord && env CUDA_VISIBLE_DEVICES='' PYTHONPATH=<ME>/code/nv-v2d_ep28w2/robotic_grounding/flash_chord/src JAX_PLATFORMS=cpu PYTHONDONTWRITEBYTECODE=1 XLA_PYTHON_CLIENT_PREALLOCATE=false OMP_NUM_THREADS=2 HUMAN_MOTION_DATA_DIR=<MOTION> TMPDIR=<RUNS>/T1improve/confirm/tmp T1CONFIRM_JOB=<RUNS>/T1improve/confirm/exports/ep28-W3H_83000/try1 nice -n 10 taskset -c 48-51,152-155 <ME>/conda_envs/flashchord/bin/python -B -m flash_chord.training.ppo.coordinate.export --input <RUNS>/T1improve/arms/ep28-W3H/runs/ep28/model_83000.safetensors --output <RUNS>/T1improve/confirm/exports/ep28-W3H_83000/try1/model_83000.safetensors --stock-runtime <ME>/code/video_to_data_8c778f9/robotic_grounding/flash_chord --report <RUNS>/T1improve/confirm/exports/ep28-W3H_83000/try1/export_report.json --tolerance 0.0001"
+   },
+   "evaluation": {
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.8158242661943319,
+     "auc_sd": 0.005611886955516499,
+     "auc_min": 0.8037069838056681,
+     "auc_max": 0.8229377530364372,
+     "sp_pass": 20,
+     "mp_pass": 15,
+     "mppe_mean_cm": 2.5191231372533087
+    },
+    "decision": {
+     "keep_new_8_5": false,
+     "why": "new has the higher 20-trial kit AUC (0.8158 new vs 0.8074 incumbent); MPPE 2.519 vs 3.466; 8.4(c) exception: MP pass 15/20 < 16/20 (0.8 n)"
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep28",
+     "start": "scratch",
+     "end": "final.json model_44922 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep28",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep28_squeegee",
+      "logging.upload_checkpoints=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv",
+     "lineage_of": "ep28alt"
+    },
+    {
+     "run": "T1fix/B/ep28",
+     "start": "resume model_44922 (fork pair T1fix/stage2/forks/ep28-B)",
+     "end": "final.json model_59922 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "stock:T1fix/stage2/fc_cache",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchS2B/ep28",
+      "hydra.run.dir=<RUNS>/T1fix/watchS2B/ep28/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=59922",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/stage2/forks/ep28-B/model_44922.safetensors",
+      "objective.object_task_rotation_beta=4.5"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep28-B",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=4.5"
+     ],
+     "fork_iteration": 44922,
+     "max_iterations": 59922,
+     "fork_pair": {
+      "model": {
+       "sha256": "a33fd2887288844d74c28c9bf0d1f482a27303c505197bdd8607ce8b01a0119f",
+       "size": 24993032,
+       "path": "<RUNS>/T1fix/stage2/forks/ep28-B/model_44922.safetensors"
+      },
+      "rsi": {
+       "sha256": "93d87dad29aa8e59fc80726a0db5d742647febbf76a042650f00ea415861b300",
+       "size": 5205500,
+       "path": "<RUNS>/T1fix/stage2/forks/ep28-B/rsi_44922.safetensors"
+      }
+     },
+     "lineage_of": "ep28alt"
+    },
+    {
+     "run": "T1fix/W2PD/ep28",
+     "start": "resume model_58000 (fork pair T1fix/ep28w2/forks/ep28-W2PD)",
+     "end": "final.json model_68000 (max_iterations)",
+     "code": "7fbc2273a92b",
+     "hull_cache": "stock:T1fix/ep28w2/fc_cache",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchW2PD/ep28",
+      "hydra.run.dir=<RUNS>/T1fix/watchW2PD/ep28/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=68000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/model_58000.safetensors",
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=3.2",
+      "termination.object_position_threshold=0.20",
+      "+objective.object_task_position_only_after_release=true",
+      "+objective.no_drop_weight=-50.0",
+      "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep28-W2PD",
+     "launch_overrides": [
+      "termination.object_orientation_threshold=3.2",
+      "termination.object_position_threshold=0.20",
+      "+objective.object_task_position_only_after_release=true",
+      "+objective.no_drop_weight=-50.0",
+      "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+     ],
+     "fork_iteration": 58000,
+     "max_iterations": 68000,
+     "fork_pair": {
+      "model": {
+       "sha256": "04f42d00f7af146ce8c98a1250e476b77c5e07244d274a55e62484aa53bf3d6b",
+       "size": 24993216,
+       "path": "<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/model_58000.safetensors"
+      },
+      "rsi": {
+       "sha256": "e4a9a12207630a75a4b0b3508a90b1ab30ce4af6fac7b26de3f96e00ae213c2b",
+       "size": 5205500,
+       "path": "<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/rsi_58000.safetensors"
+      }
+     },
+     "lineage_of": "ep28alt"
+    },
+    {
+     "run": "T1improve/arms/ep28-W3H/runs/ep28",
+     "start": "resume model_68000 (fork pair T1improve/arms/ep28-W3H/fork = copy of T1fix/W2PD/ep28/model_68000)",
+     "end": "final.json model_83000 (max_iterations); selected model_83000",
+     "code": "7fbc2273a92b",
+     "hull_cache": "seeded copy T1improve/arms/ep28-W3H/fc_cache (stock (T1fix/ep28w2/fc_cache))",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+      "scene.support=true",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1improve/arms/ep28-W3H/runs/ep28",
+      "hydra.run.dir=<RUNS>/T1improve/arms/ep28-W3H/runs/ep28/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=83000",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1improve/arms/ep28-W3H/fork/model_68000.safetensors",
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=3.2",
+      "termination.object_position_threshold=0.20",
+      "+objective.object_task_position_only_after_release=true",
+      "+objective.no_drop_weight=-50.0",
+      "+curriculum.stages.0.objective_weights.object_no_drop=-50.0",
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2"
+     ],
+     "source": "t1improve/arms/ep28-W3H/launch.json (argv) and overrides.yaml",
+     "arm": "ep28-W3H",
+     "launch_overrides": [
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=3.2",
+      "termination.object_position_threshold=0.20",
+      "+objective.object_task_position_only_after_release=true",
+      "+objective.no_drop_weight=-50.0",
+      "+curriculum.stages.0.objective_weights.object_no_drop=-50.0",
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2"
+     ],
+     "inherited_overrides": [
+      "objective.object_task_rotation_beta=4.5",
+      "termination.object_orientation_threshold=3.2",
+      "termination.object_position_threshold=0.20",
+      "+objective.object_task_position_only_after_release=true",
+      "+objective.no_drop_weight=-50.0",
+      "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+     ],
+     "added_overrides": [
+      "termination.palm_position_threshold=1.2",
+      "termination.palm_orientation_threshold=3.2"
+     ],
+     "fork_iteration": 68000,
+     "max_iterations": 83000,
+     "fork_pair": {
+      "model": {
+       "sha256": "b674e5e5ff931672435c85f11e3e42f5ee37968fd3a6774a592d51d1748881fc",
+       "size": 24993416,
+       "path": "<RUNS>/T1improve/arms/ep28-W3H/fork/model_68000.safetensors",
+       "source": "<RUNS>/T1fix/W2PD/ep28/model_68000.safetensors"
+      },
+      "rsi": {
+       "sha256": "d74eb9563407eaed31601a79a9d1a2cb696b0a4bc26483e36e19aeb90b5c944b",
+       "size": 5205500,
+       "path": "<RUNS>/T1improve/arms/ep28-W3H/fork/rsi_68000.safetensors",
+       "source": "<RUNS>/T1fix/W2PD/ep28/rsi_68000.safetensors"
+      }
+     },
+     "env": {
+      "PYTHONPATH": "<ME>/code/nv-v2d_ep28w2/robotic_grounding/flash_chord/src",
+      "HUMAN_MOTION_DATA_DIR": "<MOTION>",
+      "OMP_NUM_THREADS": "4",
+      "FLASH_CHORD_CACHE_DIR": "<RUNS>/T1improve/arms/ep28-W3H/fc_cache"
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "C",
+    "name": "ep28-W3H_83000",
+    "evaluated_file_sha256": "497ae3b3a785fc9283fcdda2c019020608ed8c41472f4229ac780f4450081375",
+    "results_parquet": "<RUNS>/T1improve/confirm/runs/ep28-W3H_83000/t05/try1/results/episode_000028.parquet",
+    "results_parquet_sha256": "4f2d6e922f4e44a31156994ad1561a1131a659f1058f0e612747a12000f91f24",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.8205971659919028,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 3.0549448568544006
+    },
+    "metric_code_float32": {
+     "AUC": 0.8211032388663968,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 3.0549453243827256
+    }
+   },
+   "n_stages": 4
+  },
+  {
+   "episode": 29,
+   "object": "rolling_luggage",
+   "item": "ep29",
+   "origin": "t1best set (2026-10-26): T1fix ep29-C (T1fix/eval_S2C/ep29)",
+   "replaces": null,
+   "sequence_id": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06",
+   "scene_support": false,
+   "experiment": "g1_recon_body_coord_rsi_r2",
+   "checkpoint": {
+    "iteration": 30000,
+    "run": "T1fix/C/ep29",
+    "model": "model_30000.safetensors",
+    "model_sha256": "b5d0fbe080bfc61cdcc43ab4ddb78961e83ba29d0a97ff6483c26cbf271852dd",
+    "model_size": 24993216,
+    "rsi": "rsi_30000.safetensors",
+    "rsi_sha256": "f87a17e7e2affe68ecd8a55dbf3de00df33a36cf1df73021026c445661853f72",
+    "rsi_size": 2220388,
+    "trained_by": "b39b69be6c2f",
+    "hull_cache": "stock:T1fix/stage2/fc_cache"
+   },
+   "export": {
+    "root": "T1_EXPORTS",
+    "file": "ep29/model_30000.safetensors",
+    "sha256": "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+    "size": 46052728,
+    "max_rel_diff": 4.00543212890625e-05,
+    "exported_by": "b39b69be6c2f",
+    "tolerance": 0.0001
+   },
+   "evaluation": {
+    "prior_n_evals": 3,
+    "prior_mean_auc": 0.8565310492505352,
+    "trials20": {
+     "n": 20,
+     "auc_mean": 0.8536268737,
+     "auc_sd": 0.00674022994,
+     "auc_min": 0.8357869379,
+     "auc_max": 0.8640256959,
+     "sp_pass": 20,
+     "mp_pass": 20,
+     "mppe_mean_cm": 1.702691339
+    }
+   },
+   "stages": [
+    {
+     "run": "C3r2_wide/ep29",
+     "start": "scratch",
+     "end": "final.json model_24091 (help_zero_tail)",
+     "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+     "hull_cache": "tree",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet'",
+      "reset.seed=42",
+      "output_dir=<RUNS>/C3r2_wide/ep29",
+      "training.max_iterations=45000",
+      "logging.mode=<WANDB_MODE>",
+      "[logging.entity=<WANDB_ENTITY>]",
+      "[logging.project=<WANDB_PROJECT>]",
+      "logging.experiment=C3r2_wide",
+      "logging.run_name=ep29_rolling_luggage",
+      "logging.upload_checkpoints=false",
+      "scene.support=false"
+     ],
+     "source": "repro/lines/mix_tier1_train_stages.tsv"
+    },
+    {
+     "run": "T1fix/C/ep29",
+     "start": "resume model_24091 (fork pair T1fix/stage2/forks/ep29-C)",
+     "end": "final.json model_39091 (max_iterations)",
+     "code": "b39b69be6c2f",
+     "hull_cache": "stock:T1fix/stage2/fc_cache",
+     "overrides": [
+      "experiment=g1_recon_body_coord_rsi_r2",
+      "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-05_18-27-40_rolling_luggage_left_foot_push_06/robot_name=g1/data.parquet'",
+      "scene.support=false",
+      "reset.seed=42",
+      "output_dir=<RUNS>/T1fix/watchS2C/ep29",
+      "hydra.run.dir=<RUNS>/T1fix/watchS2C/ep29/hydra",
+      "logging.mode=disabled",
+      "+logging.local_jsonl=true",
+      "training.early_stop_help_zero_tail=0",
+      "training.max_iterations=39091",
+      "training.resume=true",
+      "training.checkpoint=<RUNS>/T1fix/stage2/forks/ep29-C/model_24091.safetensors"
+     ],
+     "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+     "arm": "ep29-C",
+     "launch_overrides": [],
+     "fork_iteration": 24091,
+     "max_iterations": 39091,
+     "fork_pair": {
+      "model": {
+       "sha256": "ad15d8502e53f631d89e2c64e65ac2bb6d5530047884f235595d9a2de07ac730",
+       "size": 24993048,
+       "path": "<RUNS>/T1fix/stage2/forks/ep29-C/model_24091.safetensors"
+      },
+      "rsi": {
+       "sha256": "47cb5829abfb01a2611d3217e630337d7744fce3a37aba202844273d95d105c6",
+       "size": 2220388,
+       "path": "<RUNS>/T1fix/stage2/forks/ep29-C/rsi_24091.safetensors"
+      }
+     }
+    }
+   ],
+   "trial05": {
+    "kind": "B20",
+    "name": "ep29",
+    "evaluated_file_sha256": "bcb1c5412d2aa93e239f573b1d670de39ee1b3dfeb2db51b85f4aba74a373738",
+    "results_parquet": "<RUNS>/submissions/t1_best20_20261026/runs/ep29/t05/try1/results/episode_000029.parquet",
+    "results_parquet_sha256": "7a98f815bca1ff1a04384755c8fc299bff0fbc6402ba317d279fd7f8166cb829",
+    "seed_signature": "delay=0(+g0..4,0-2) reset=42 scale_seed=0(1.0/1.0) wrench=0 vertex=0/0 ppo=42",
+    "evaluator_json_metrics": {
+     "auc": 0.8617505353319057,
+     "sp_sr": 1.0,
+     "mp_sr": 1.0,
+     "mppe": 1.645326996645111
+    },
+    "metric_code_float32": {
+     "AUC": 0.8628211991434689,
+     "SP-SR": 1.0,
+     "MP-SR": 1.0,
+     "MPPE": 1.6453249257714502
+    }
+   },
+   "n_stages": 2
+  }
+ ]
+}

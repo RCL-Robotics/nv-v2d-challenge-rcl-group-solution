@@ -1,0 +1,14 @@
+{
+ "episode_index": 23,
+ "sequence_id": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04",
+ "object": "toy_stroller",
+ "task": "Walk over to the toy stroller on the ground and use both hands to move the stroller back and forth within the bounding area.",
+ "frames": 946,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.6405808329582214,
+  "median": 0.36859580874443054,
+  "max": 6.92574405670166
+ }
+}

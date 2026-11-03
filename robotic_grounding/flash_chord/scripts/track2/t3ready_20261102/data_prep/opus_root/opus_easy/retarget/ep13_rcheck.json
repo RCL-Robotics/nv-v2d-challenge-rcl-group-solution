@@ -1,0 +1,117 @@
+{
+ "episode": 13,
+ "sequence_id": "2026-06-09_10-19-09_snack_box_desk_through_06",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/robot_name=g1/data.parquet",
+ "written": "2026-10-24 04:02:52",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-06-09_10-19-09_snack_box_desk_through_06_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 922, 'robot_joint_positions': 922, 'object_body_position': 922, 'object_root_position': 922, 'ik_error_per_frame': 922}; episodes.json 922; manifest 922; Tier-1 manifest 922"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-06-09_10-19-09_snack_box_desk_through_06/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 7.86e-08 m / 1.21e-07 rad; root body-relative drift 0.00e+00 m / 1.98e-07 rad; map rotation 151.44 deg, translation [1.3508, 2.2561, 1.3852]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (7.9e-08 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "SUPPORT_MISSING_FLOOR_ONLY: Tier-3 root support files: 2026-06-09_10-19-09_snack_box_desk_through_06_support.usda absent, 2026-06-09_10-19-09_snack_box_desk_through_06_g1_support.usda absent -> scene.support=false (flagged)"
+  }
+ },
+ "parquet_sha256": "2135a6b9ff60134bbbbfce518f591567b333e09b4b172331f2222eebf02946ff",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 7.860735550106317e-08,
+   "resid_rad": 1.2287812309317772e-07
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.2135 m, 3.142 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.271 m, 2.914 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "SUPPORT_MISSING_FLOOR_ONLY",
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.6730782687664032,
+   0.8066722929477691,
+   0.8861575126647949
+  ],
+  "hand_contact_frames_left_right": [
+   147,
+   160
+  ],
+  "robot_root_z_median_min_max": [
+   0.7891435921192169,
+   0.5843406319618225,
+   0.8085787296295166
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.6864863932132721,
+   0.7956335008144378,
+   0.8215115070343018
+  ],
+  "hand_contact_frames_left_right": [
+   294,
+   197
+  ],
+  "robot_root_z_median_min_max": [
+   0.7873692810535431,
+   0.6101905703544617,
+   0.805949866771698
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": 88.43996894868584,
+ "retarget_object_ground_correction": "minimum=+0.8844 m, requested=+0.0000 m, applied=+0.0000 m, cap=0.0100 m",
+ "all_ok": true
+}

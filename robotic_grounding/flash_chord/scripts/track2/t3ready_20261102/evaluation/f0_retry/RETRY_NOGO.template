@@ -1,0 +1,6 @@
+# TEMPLATE ONLY. The main session saves a filled copy as tmp_analysis/tier3/f0_retry/RETRY_NOGO when the user declines
+# the Tier-3 retry queue (record it BEFORE our first Tier-3 Kaggle upload; PREREG_retry v2 section 4a). With RETRY_NOGO
+# present nothing starts, AMENDMENT_1 is void, and t3_f0_final's FINAL (PREREG_f0 items) is the only full file.
+user_decision: "<the user's message, verbatim>", <YYYY-MM-DD HH:MM> CST
+tier3_board_scores_seen: none
+written_by: main session

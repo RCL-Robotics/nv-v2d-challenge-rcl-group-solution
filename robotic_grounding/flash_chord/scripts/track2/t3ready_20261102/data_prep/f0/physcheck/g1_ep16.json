@@ -1,0 +1,91 @@
+{
+ "ep": 16,
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-03-12_15-06-36_spray_bottle_left_desk_ground_02/robot_name=g1/data.parquet",
+ "parquet_sha256": "5f6644464cba1a9ebb26a58933cd157f7e2b8ed24e08cb67b59f0a880227d335",
+ "usda": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/reconstructed_stage/2026-03-12_15-06-36_spray_bottle_left_desk_ground_02_support.usda",
+ "frames": 477,
+ "n_boxes": 29,
+ "robot_shapes": 94,
+ "min_body_clear_cm": -4.99,
+ "min_hand_clear_cm": 4.98,
+ "violating_frames": 29,
+ "violating_runs": [
+  [
+   295,
+   321
+  ],
+  [
+   323,
+   323
+  ],
+  [
+   325,
+   325
+  ]
+ ],
+ "worst": [
+  {
+   "frame": 308,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.99,
+   "hand": false
+  },
+  {
+   "frame": 310,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.88,
+   "hand": false
+  },
+  {
+   "frame": 307,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.83,
+   "hand": false
+  },
+  {
+   "frame": 309,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.75,
+   "hand": false
+  },
+  {
+   "frame": 312,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.63,
+   "hand": false
+  },
+  {
+   "frame": 311,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.46,
+   "hand": false
+  },
+  {
+   "frame": 300,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.44,
+   "hand": false
+  },
+  {
+   "frame": 299,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.3,
+   "hand": false
+  },
+  {
+   "frame": 303,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.28,
+   "hand": false
+  },
+  {
+   "frame": 313,
+   "link": "g1/right_elbow_link",
+   "depth_cm": 4.27,
+   "hand": false
+  }
+ ],
+ "links_involved": [
+  "g1/right_elbow_link"
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "ep": 17,
+ "seq": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+ "frames": 440,
+ "n_mesh_v": 282928,
+ "lift_applied": 0.01,
+ "lift_min_signed": -0.024060154946930895,
+ "verts": true,
+ "plane_normal": [
+  0.005149773086781168,
+  -0.04616603828767489,
+  0.9989205057190366
+ ],
+ "plane_offset": 0.9196438688692128,
+ "M_vs_object_chain_max_err": [
+  8.326672684688674e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "4cdf6c3a8297bd1204b9e56272301877c3edb02b5c71eead4e9c94eedf17082d",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "cc74f14af8bd861d7ea485297db6f64e146b7837a14a2b8bd58db884a793b51a",
+  "soma_params.npz": "7e932465cd8926c883e4aee6751d251122e995e1c93f1eebcc95f46fdf079b11",
+  "ground_plane.json": "c562daeef17dc786416e5d64d7de7bddec32f421de7718ce558c62bc306dd801",
+  "reconstructed_mesh/output_aligned.glb": "2acace9fcb3e53afcb6665db7b4717710e5cfc3a17c0ed5196a36df5ec340a16"
+ },
+ "seconds": 12.1
+}

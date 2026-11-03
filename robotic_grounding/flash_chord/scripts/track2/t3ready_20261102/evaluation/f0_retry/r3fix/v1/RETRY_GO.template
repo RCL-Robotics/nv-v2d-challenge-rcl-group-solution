@@ -1,0 +1,5 @@
+# TEMPLATE ONLY. The driver reads tmp_analysis/tier3/f0_retry/RETRY_GO, never this file.
+# The main session copies this to RETRY_GO only after the user approves launching the Tier-3 retry queue.
+prereg_sha256 <sha256 of PREREG_retry.md, as in PREREG_retry.sha256>
+user_approval: "<the user's approving message, verbatim>", <YYYY-MM-DD HH:MM CST>
+written_by: main session

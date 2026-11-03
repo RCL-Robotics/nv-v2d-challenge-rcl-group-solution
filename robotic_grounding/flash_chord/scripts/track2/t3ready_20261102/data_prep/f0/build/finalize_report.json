@@ -1,0 +1,874 @@
+{
+ "written": "2026-10-24 19:33:57",
+ "checks": {
+  "ep00_parquet_locked": {
+   "ok": true,
+   "detail": "20dbcd89b6fc09dd"
+  },
+  "ep00_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep00_floor_only": {
+   "ok": true,
+   "detail": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04_support.usda"
+  },
+  "ep00_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep01_parquet_locked": {
+   "ok": true,
+   "detail": "94ffb6b7eca5346b"
+  },
+  "ep01_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep01_support_file": {
+   "ok": true,
+   "detail": "03d06c3bd53be483"
+  },
+  "ep01_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep01_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep02_parquet_locked": {
+   "ok": true,
+   "detail": "b21d7562d6b9098b"
+  },
+  "ep02_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep02_support_file": {
+   "ok": true,
+   "detail": "36331e10d6c61512"
+  },
+  "ep02_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep02_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep03_parquet_locked": {
+   "ok": true,
+   "detail": "9b058c279ab740a5"
+  },
+  "ep03_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep03_support_file": {
+   "ok": true,
+   "detail": "648758f5aa0154ce"
+  },
+  "ep03_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep03_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep04_parquet_locked": {
+   "ok": true,
+   "detail": "8601e387bb25f55f"
+  },
+  "ep04_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep04_floor_only": {
+   "ok": true,
+   "detail": "2026-04-24_11-40-52_baseball_bat_rotate_05_support.usda"
+  },
+  "ep04_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep05_parquet_locked": {
+   "ok": true,
+   "detail": "50a54e4af114f629"
+  },
+  "ep05_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep05_floor_only": {
+   "ok": true,
+   "detail": "2026-03-18_19-36-56_g1_box_rotate_01_support.usda"
+  },
+  "ep05_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep06_parquet_locked": {
+   "ok": true,
+   "detail": "233c795334e17be1"
+  },
+  "ep06_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep06_support_file": {
+   "ok": true,
+   "detail": "ae25c24376b5d4f7"
+  },
+  "ep06_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep06_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep07_parquet_locked": {
+   "ok": true,
+   "detail": "68545de91538dd25"
+  },
+  "ep07_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep07_support_file": {
+   "ok": true,
+   "detail": "155d055f7ce11572"
+  },
+  "ep07_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep07_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep08_parquet_locked": {
+   "ok": true,
+   "detail": "4ceac29c6ef84e19"
+  },
+  "ep08_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep08_floor_only": {
+   "ok": true,
+   "detail": "2026-06-05_15-08-08_skinny_wood_chair_push_10_support.usda"
+  },
+  "ep08_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep09_parquet_locked": {
+   "ok": true,
+   "detail": "270d8df52447be22"
+  },
+  "ep09_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep09_support_file": {
+   "ok": true,
+   "detail": "1cc0d7306ef3977a"
+  },
+  "ep09_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep09_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep10_parquet_locked": {
+   "ok": true,
+   "detail": "a64b3a9d1a83a657"
+  },
+  "ep10_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep10_floor_only": {
+   "ok": true,
+   "detail": "2026-05-01_11-36-40_white_desk_lower_to_ground_10_support.usda"
+  },
+  "ep10_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep11_parquet_locked": {
+   "ok": true,
+   "detail": "5765586810904a78"
+  },
+  "ep11_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep11_support_file": {
+   "ok": true,
+   "detail": "831f3b6e013a8bde"
+  },
+  "ep11_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep11_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep12_parquet_locked": {
+   "ok": true,
+   "detail": "0133f928c30faf2e"
+  },
+  "ep12_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep12_floor_only": {
+   "ok": true,
+   "detail": "2026-04-25_17-20-04_black_platform_turn_05_support.usda"
+  },
+  "ep12_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep13_parquet_locked": {
+   "ok": true,
+   "detail": "baf8825a131b0bad"
+  },
+  "ep13_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep13_support_file": {
+   "ok": true,
+   "detail": "310d1d6979b1e980"
+  },
+  "ep13_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep13_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep14_parquet_locked": {
+   "ok": true,
+   "detail": "f0b0fce012687ef4"
+  },
+  "ep14_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep14_floor_only": {
+   "ok": true,
+   "detail": "2026-05-28_14-44-09_round_table_flip_08_support.usda"
+  },
+  "ep14_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep15_parquet_locked": {
+   "ok": true,
+   "detail": "d4f007fa28336e1a"
+  },
+  "ep15_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep15_floor_only": {
+   "ok": true,
+   "detail": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda"
+  },
+  "ep15_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep16_parquet_locked": {
+   "ok": true,
+   "detail": "5f6644464cba1a9e"
+  },
+  "ep16_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep16_support_file": {
+   "ok": true,
+   "detail": "248c8f9ea73dcedc"
+  },
+  "ep16_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep16_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep17_parquet_locked": {
+   "ok": true,
+   "detail": "3591829d8eefee75"
+  },
+  "ep17_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep17_support_file": {
+   "ok": true,
+   "detail": "f3e509e96af4c4b6"
+  },
+  "ep17_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep17_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep18_parquet_locked": {
+   "ok": true,
+   "detail": "86648d4c5efe2cec"
+  },
+  "ep18_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep18_floor_only": {
+   "ok": true,
+   "detail": "2026-05-06_10-00-19_blue_trash_can_drag_sideways_08_support.usda"
+  },
+  "ep18_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep19_parquet_locked": {
+   "ok": true,
+   "detail": "9dc7d6bc5ed5440f"
+  },
+  "ep19_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep19_floor_only": {
+   "ok": true,
+   "detail": "2026-05-19_10-19-48_cane_swing_05_support.usda"
+  },
+  "ep19_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep20_parquet_locked": {
+   "ok": true,
+   "detail": "7728e9ad49700965"
+  },
+  "ep20_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep20_support_file": {
+   "ok": true,
+   "detail": "3f92eecc15a1b087"
+  },
+  "ep20_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep20_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep21_parquet_locked": {
+   "ok": true,
+   "detail": "1414af597cbd04fe"
+  },
+  "ep21_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep21_floor_only": {
+   "ok": true,
+   "detail": "2026-04-29_11-53-57_tall_bar_stool_pull_08_support.usda"
+  },
+  "ep21_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep22_parquet_locked": {
+   "ok": true,
+   "detail": "f750d9933dbb3628"
+  },
+  "ep22_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep22_floor_only": {
+   "ok": true,
+   "detail": "2026-05-22_16-52-36_step_ladder_drag_03_support.usda"
+  },
+  "ep22_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep23_parquet_locked": {
+   "ok": true,
+   "detail": "7782dd48a65a1aac"
+  },
+  "ep23_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep23_floor_only": {
+   "ok": true,
+   "detail": "2026-06-03_15-08-03_toy_stroller_back_forth_ground_04_support.usda"
+  },
+  "ep23_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep24_parquet_locked": {
+   "ok": true,
+   "detail": "c8aee4807b0c0de5"
+  },
+  "ep24_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep24_floor_only": {
+   "ok": true,
+   "detail": "2026-05-29_15-43-20_watering_can_pour_right_02_support.usda"
+  },
+  "ep24_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep25_parquet_locked": {
+   "ok": true,
+   "detail": "530f7fa375fc15af"
+  },
+  "ep25_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep25_support_file": {
+   "ok": true,
+   "detail": "21cfbff53af7d384"
+  },
+  "ep25_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep25_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep26_parquet_locked": {
+   "ok": true,
+   "detail": "33084a187258532b"
+  },
+  "ep26_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep26_floor_only": {
+   "ok": true,
+   "detail": "2026-06-05_16-05-08_skateboard_rotate_ground_10_support.usda"
+  },
+  "ep26_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep27_parquet_locked": {
+   "ok": true,
+   "detail": "dcbc4099633e2dac"
+  },
+  "ep27_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep27_support_file": {
+   "ok": true,
+   "detail": "88183ae5df98ca6e"
+  },
+  "ep27_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep27_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep28_parquet_locked": {
+   "ok": true,
+   "detail": "8153f29408568bfe"
+  },
+  "ep28_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep28_support_file": {
+   "ok": true,
+   "detail": "12dafd1f107d140e"
+  },
+  "ep28_physcheck_present": {
+   "ok": true,
+   "detail": "physical checks reported"
+  },
+  "ep28_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  },
+  "ep29_parquet_locked": {
+   "ok": true,
+   "detail": "5135e5fead8a9ba6"
+  },
+  "ep29_rcheck": {
+   "ok": true,
+   "detail": {
+    "G1_parquet": true,
+    "G2_frames": true,
+    "G3_finite": true,
+    "G4_assets": true,
+    "G5_rigid_map": true,
+    "G6_packer": true,
+    "G7_inputs_unchanged": true,
+    "G8_scene": true,
+    "G9_robot_equal_opus": true,
+    "G10_frame_chain": true
+   }
+  },
+  "ep29_floor_only": {
+   "ok": true,
+   "detail": "2026-06-05_18-27-40_rolling_luggage_left_foot_push_06_support.usda"
+  },
+  "ep29_no_g1_named_support": {
+   "ok": true,
+   "detail": "only <seq>_support.usda"
+  }
+ },
+ "bad": [],
+ "files": 576,
+ "files_sha256_sha256": "f9c94e8550e03223c96e101e155038537efeedda3b5213d96cecc4dcbafaba49"
+}

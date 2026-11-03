@@ -1,0 +1,16 @@
+18:56:53 start 022 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000022
+18:57:13 start 023 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000023
+18:57:33 start 024 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000024
+19:42:36 end 023 wall_s: 2721 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md validate.py 
+19:42:56 start 025 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d_failed/episode_000025_out
+19:49:32 end 024 wall_s: 3117 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+19:49:47 start 026 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000026
+20:04:09 end 022 wall_s: 4033 outputs=edgescore.py object_poses_world.npz render_utils.py REPORT.md silfit.py solve_log.txt solve.py TOOLS.md traj_utils.py validate.py validation_table.md 
+20:04:38 start 027 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000027
+20:33:17 end 025 wall_s: 3018 outputs=hoi_lib.py object_poses_world_diag.json object_poses_world_diag.npz object_poses_world.npz REPORT.md solve.py TOOLS.md validate.py 
+20:33:30 start 028 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000028
+20:49:16 end 026 wall_s: 3567 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md 
+20:49:24 start 029 pipeline=/mnt/nas/Group/hanzhou/v2d/outputs/cari4d/episode_000029
+21:15:22 end 027 wall_s: 4242 outputs=hoilib.py object_poses_world.npz REPORT.md solve.py TOOLS.md validate.py validation_output.txt 
+21:30:17 end 029 wall_s: 2450 outputs=object_poses_world.npz REPORT.md solve.py solve_run.log TOOLS.md 
+21:59:30 end 028 wall_s: 5156 outputs=object_poses_world.npz REPORT.md solve.py TOOLS.md validate.py validation_table.md 

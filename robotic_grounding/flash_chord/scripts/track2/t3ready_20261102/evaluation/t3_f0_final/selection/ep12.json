@@ -1,0 +1,110 @@
+{
+ "episode": 12,
+ "object": "black_platform",
+ "kind": "f0",
+ "eval_sha256": "e27bc9db063f186cdfbbc6a654bfa6a1f0a56311cf7e756c5f61bce1e9af9de5",
+ "runs": [
+  {
+   "k": 1,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.7041964285714286,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.2429588491990247
+   },
+   "gpu": 3,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r1/try1/results/episode_000012.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r1/try1/results/episode_000012.parquet",
+   "json_sha256": "a3d42c65730f99d3c91e4a17978817e1f84d643f0a67bf33ad953e6f1fe249bd",
+   "parquet_sha256": "4fd2e5f2b34dd9637a66cbe33a67b230402bc279ffa8c827466812872ddf0ccc"
+  },
+  {
+   "k": 2,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.7065178571428572,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.3590514107372247
+   },
+   "gpu": 0,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r2/try1/results/episode_000012.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r2/try1/results/episode_000012.parquet",
+   "json_sha256": "6c655ff5c74a6cb9f59bd5c28834318f60aef7b1b62e983be9a3fab07a2ded87",
+   "parquet_sha256": "f3b5de17c9cf9b8c3661539ba6e3b467941c16717bf256d45f862dad864ec840"
+  },
+  {
+   "k": 3,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.706875,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.267433635681165
+   },
+   "gpu": 5,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r3/try1/results/episode_000012.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r3/try1/results/episode_000012.parquet",
+   "json_sha256": "569c1b40185e9fded12c3a223af5c3754ca44d5edee6e6053f6ae6d1abc361fc",
+   "parquet_sha256": "5775d72092302eb3928dfa324f3ec7e32449d4d4b018258f7c9b13bc2f684f0c"
+  },
+  {
+   "k": 4,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.6975,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.2231519983834898
+   },
+   "gpu": 1,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r4/try1/results/episode_000012.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r4/try1/results/episode_000012.parquet",
+   "json_sha256": "3244b225642a2eca6d06349340144db324c66f86b5d85bc5aecb34db2d8611f0",
+   "parquet_sha256": "46e8d157c4da3b0e812ed554eb3f5db3de5ea7aca504b43b431434e25ca7eb22"
+  },
+  {
+   "k": 5,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.7053571428571428,
+    "sp_sr": 1.0,
+    "mp_sr": 1.0,
+    "mppe": 2.227535373019412
+   },
+   "gpu": 7,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r5/try1/results/episode_000012.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep12/r5/try1/results/episode_000012.parquet",
+   "json_sha256": "3fcb0060ed310a0f83b2d88d3a55dcb4ae35dbbb92868ad0cba3f7294cff3061",
+   "parquet_sha256": "a00e4d305eae82898bacbedbcf3cbc9ad2ab620540a6ce0627aaecbc70ecd5de"
+  }
+ ],
+ "chosen_run": 1,
+ "n_ok": 5,
+ "mean_auc": 0.7040892857142858,
+ "auc_by_run": {
+  "1": 0.7041964285714286,
+  "2": 0.7065178571428572,
+  "3": 0.706875,
+  "4": 0.6975,
+  "5": 0.7053571428571428
+ },
+ "distances": {
+  "1": 0.0001071428571428834,
+  "2": 0.0024285714285714687,
+  "3": 0.0027857142857143024,
+  "4": 0.006589285714285719,
+  "5": 0.001267857142857065
+ },
+ "rule": "own-input ADD-AUC closest to the mean over the ok runs (exact rational arithmetic on the float64 values); ties -> lower run index",
+ "frozen_at": "2026-10-26 22:11:59",
+ "prereg_sha256": "e4e3a5daf239f5b5858e32442c43eb708947b38c20eae76e12af757a747bd0eb",
+ "driver_sha256": "22c26adfc44727fa5ab29e1671229ef350c7d1c26a293f97c9f9baeac83b1e08",
+ "post_own_input_report_only": {
+  "auc": 0.6872321428571428,
+  "sp_sr": 1.0,
+  "mp_sr": 1.0,
+  "mppe": 2.335789949060665
+ }
+}

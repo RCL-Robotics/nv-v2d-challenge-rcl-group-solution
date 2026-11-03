@@ -1,0 +1,10 @@
+cat-file: commit
+HEAD: 80f2e6e4af5098cff5dde0377e2f3bdb021cd62e
+branch -r --contains 0c7516e: []
+remote refs:
+refs/remotes/origin/dev.haoran.c3r2 41403d3f94f925f90c405982d87ca3be80cf6de0
+refs/remotes/origin/dev.haoran.mix 10a3af0ed0783f340017767e50bcf379226bd115
+refs/remotes/origin/dev.zuxing 731df7fa16a0f5690a54ca9117eaf0614ed65f29
+refs/remotes/origin/dev.zuxing.speedup bc3b1bdf34f2f80e3f7d56625e3a0e1deca6a53e
+commit_remote_check.json:
+{"checked_at": "2026-10-28 16:07:58", "how": "git ls-remote https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git from the Mac (the server has no GitHub credentials on PATH)", "result": "0c7516eda6f90deacb1536aabbce98beba5194ca refs/heads/dev.haoran.t1best", "on_remote": true}

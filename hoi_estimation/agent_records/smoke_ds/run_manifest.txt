@@ -1,0 +1,7 @@
+date_utc: 2026-10-20T11:53:15Z
+codex: codex-cli 0.153.4
+model: deepseek-flash api=api.deepseek.com:443 effort=low net=api
+sif: /mnt/nas/Group/hanzhou/v2d/images/v2d_cari4d.sif 16860184576 bytes
+binds: -B /mnt/nas/Group/hanzhou/v2d/agent_runs/smoke_ds:/work -B /home/hanzhou/.codex/packages/standalone/releases/0.153.4-x86_64-unknown-linux-musl:/opt/codex:ro -B /home/hanzhou/Projects/v2d/nv-v2d-challenge-codebase:/code:ro -B /mnt/nas/Group/hanzhou/v2d/weights:/weights:ro
+task_sha256: 955db354d1fdffbcd8e88b00c6d2fea2e32f93f9747bc676109f082e0ea2d38e
+wall_s: 8

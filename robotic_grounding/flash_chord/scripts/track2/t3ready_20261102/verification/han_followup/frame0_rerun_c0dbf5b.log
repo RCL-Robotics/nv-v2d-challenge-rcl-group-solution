@@ -1,0 +1,7 @@
+env numpy 1.26.0 scipy 1.15.3 trimesh 4.5.1 | save lines: ['np.save(f"{od}/poses.npy", T)', 'q = Rot.from_matrix(T[:, :3, :3]).as_quat()  # xyzw', 'np.save(f"{od}/object_pose_xyz_wxyz.npy", np.c_[T[:, :3, 3], q[:, 3:], q[:, :3]].astype(np.float32))']
+frame0_rerun_c0dbf5b: byte-identical 30/30, frames 22990, max|dT| 0.0
+non-identical: []
+
+real	0m12.086s
+user	0m19.860s
+sys	0m8.132s

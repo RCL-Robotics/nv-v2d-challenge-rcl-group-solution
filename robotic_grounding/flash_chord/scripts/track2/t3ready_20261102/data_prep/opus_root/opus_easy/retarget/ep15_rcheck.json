@@ -1,0 +1,117 @@
+{
+ "episode": 15,
+ "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet",
+ "written": "2026-10-24 03:34:04",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 715, 'robot_joint_positions': 715, 'object_body_position': 715, 'object_root_position': 715, 'ik_error_per_frame': 715}; episodes.json 715; manifest 715; Tier-1 manifest 715"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 9.63e-08 m / 2.22e-06 rad; root body-relative drift 0.00e+00 m / 1.79e-07 rad; map rotation 132.26 deg, translation [2.3558, 1.0933, 1.384]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (9.6e-08 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "floor-only: 2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08_support.usda: present, geometry False -> scene.support=false"
+  }
+ },
+ "parquet_sha256": "2b92cf37970119b9928250125b0849fc40dd9bbe90b31f19521f0f0548b34c66",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 9.627381039177142e-08,
+   "resid_rad": 7.300048299977715e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.1138 m, 0.3682 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 3.301 m, 1.198 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "floor-only",
+ "t3": {
+  "ik_error_median_p95_max": [
+   1.1054954528808594,
+   1.1738530993461609,
+   1.2474697828292847
+  ],
+  "hand_contact_frames_left_right": [
+   0,
+   206
+  ],
+  "robot_root_z_median_min_max": [
+   0.8026221990585327,
+   0.7724055647850037,
+   0.8211262226104736
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.9487971067428589,
+   1.0601640701293946,
+   1.081547737121582
+  ],
+  "hand_contact_frames_left_right": [
+   0,
+   164
+  ],
+  "robot_root_z_median_min_max": [
+   0.8010280132293701,
+   0.7728312015533447,
+   0.8174862265586853
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": 1.1801960812892032,
+ "retarget_object_ground_correction": "minimum=+0.0118 m, requested=+0.0000 m, applied=+0.0000 m, cap=0.0100 m",
+ "all_ok": true
+}

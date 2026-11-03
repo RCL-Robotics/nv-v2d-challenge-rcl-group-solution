@@ -1,0 +1,29 @@
+$ nice -n 15 /root/autodl-tmp/haoran.zhang/conda_envs/v2dkit/bin/python -B /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/tools/pack_submission.py --track track_2_tier1 --results /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/scores/all7/t05/results --dataset-root /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge --code-commit https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca --eval-script /root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/flash_chord/scripts/evaluate_policy.py -o /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv
+frame conversion reference: /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_1_multiview_caption
+clean scoring reference: /root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_1_multiview_caption
+note: 30 distinct checkpoints across the episodes, which is expected for per-sequence policies
+input reference check: one rigid frame transform per episode; maximum residual 1.68e-07 m, 1.71e-07 rad
+converted 30 Track 2 episode(s) into the released frame
+
+WARNING: the trajectory and the evaluator's metrics JSON disagree.
+This usually means they came from different runs, or that the trajectory was
+written with a different world count than the metrics were computed over.
+  - episode 1 add_auc: evaluator reported 0.802293, recomputing from the trajectory gives 0.800201
+  - episode 3 add_auc: evaluator reported 0.980554, recomputing from the trajectory gives 0.980394
+  - episode 4 add_auc: evaluator reported 0.737702, recomputing from the trajectory gives 0.750389
+  - episode 5 add_auc: evaluator reported 0.964606, recomputing from the trajectory gives 0.963298
+  - episode 6 add_auc: evaluator reported 0.970124, recomputing from the trajectory gives 0.967949
+  - episode 9 add_auc: evaluator reported 0.928017, recomputing from the trajectory gives 0.929023
+  - episode 10 add_auc: evaluator reported 0.892554, recomputing from the trajectory gives 0.894679
+  - episode 11 add_auc: evaluator reported 0.976970, recomputing from the trajectory gives 0.977569
+  - episode 14 add_auc: evaluator reported 0.829809, recomputing from the trajectory gives 0.829431
+  - episode 15 add_auc: evaluator reported 0.985927, recomputing from the trajectory gives 0.986538
+  ... and 9 more
+The leaderboard scores the TRAJECTORY, so the numbers above on the right are what
+you would get. Re-run the evaluator if that is not what you expect.
+
+
+wrote /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv (22,989 rows, 12,277,775 B)
+locally computed: AUC=0.9310  SP-SR=1.0000  MP-SR=1.0000  MPPE=0.9301
+upload with: python submit/v2d_submit.py /root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv --track track_2_tier1 -m '<message>'
+

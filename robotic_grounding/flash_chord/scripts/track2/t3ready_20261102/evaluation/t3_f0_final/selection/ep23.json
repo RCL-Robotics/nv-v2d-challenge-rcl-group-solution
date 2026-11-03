@@ -1,0 +1,110 @@
+{
+ "episode": 23,
+ "object": "toy_stroller",
+ "kind": "f0",
+ "eval_sha256": "9f443b56c51b30efbcc3dc77f1175d5667b096872fcd6c9d78328b48db6e3378",
+ "runs": [
+  {
+   "k": 1,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.4990750528541226,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 20.99634221447811
+   },
+   "gpu": 3,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r1/try1/results/episode_000023.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r1/try1/results/episode_000023.parquet",
+   "json_sha256": "ec922e057d5d868bd8a04d3e766cc68726acc5ff3a5e044bb7d9c8b5b1eefacb",
+   "parquet_sha256": "fe017591be6f27dccd4579f3c15c366b5e8b87fce3ea796ff2bd41eaeb52e3c8"
+  },
+  {
+   "k": 2,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.5042943974630021,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 24.50032339092364
+   },
+   "gpu": 1,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r2/try1/results/episode_000023.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r2/try1/results/episode_000023.parquet",
+   "json_sha256": "c83bf31462c2300e30db4df125381e73dc8e7aa1dfa6d4ec2b4c0ce8a23b1751",
+   "parquet_sha256": "b5144f1229f0ef2e2b9303d4412af555593854aab4312c98924dd071371a6d7c"
+  },
+  {
+   "k": 3,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.49848044397463004,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 28.15060592831901
+   },
+   "gpu": 0,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r3/try1/results/episode_000023.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r3/try1/results/episode_000023.parquet",
+   "json_sha256": "3e9bb1ee0273e3bf4f3a08984438099e552fb55548e21528abe3cf79dd729eb4",
+   "parquet_sha256": "19e43441c8567130fd4480ec5847b7fda9cbcc9adca72cfd95212e3ced855124"
+  },
+  {
+   "k": 4,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.5009249471458774,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 35.250505669392815
+   },
+   "gpu": 6,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r4/try1/results/episode_000023.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r4/try1/results/episode_000023.parquet",
+   "json_sha256": "148c19e6071dc2db525eb65ec62630896087a33a2d3724ddc519c3810ceef7fd",
+   "parquet_sha256": "22fef89fce83a3ebb671367c55b291fb2ad42306931f8048560ee8c7e52b3fb2"
+  },
+  {
+   "k": 5,
+   "status": "ok",
+   "metrics": {
+    "auc": 0.5025105708245243,
+    "sp_sr": 0.0,
+    "mp_sr": 0.0,
+    "mppe": 17.94325281949134
+   },
+   "gpu": 7,
+   "results_json": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r5/try1/results/episode_000023.json",
+   "results_parquet": "/root/autodl-tmp/haoran.zhang/fc_runs/submissions/t3_f0_final/runs/ep23/r5/try1/results/episode_000023.parquet",
+   "json_sha256": "9de09bd7195962dd381d13ffc91932563717ea2cbedb5ddc130ff8f859dd54f9",
+   "parquet_sha256": "fdf0cc08fc558bfd18007efd67ab57e1d7f9ef17c72d50d4f717edc5515f9cd3"
+  }
+ ],
+ "chosen_run": 4,
+ "n_ok": 5,
+ "mean_auc": 0.5010570824524313,
+ "auc_by_run": {
+  "1": 0.4990750528541226,
+  "2": 0.5042943974630021,
+  "3": 0.49848044397463004,
+  "4": 0.5009249471458774,
+  "5": 0.5025105708245243
+ },
+ "distances": {
+  "1": 0.0019820295983086766,
+  "2": 0.003237315010570785,
+  "3": 0.002576638477801263,
+  "4": 0.00013213530655387107,
+  "5": 0.0014534883720930258
+ },
+ "rule": "own-input ADD-AUC closest to the mean over the ok runs (exact rational arithmetic on the float64 values); ties -> lower run index",
+ "frozen_at": "2026-10-28 02:14:42",
+ "prereg_sha256": "e4e3a5daf239f5b5858e32442c43eb708947b38c20eae76e12af757a747bd0eb",
+ "driver_sha256": "22c26adfc44727fa5ab29e1671229ef350c7d1c26a293f97c9f9baeac83b1e08",
+ "post_own_input_report_only": {
+  "auc": 0.5181686046511629,
+  "sp_sr": 1.0,
+  "mp_sr": 0.0,
+  "mppe": 9.442940141673063
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "arm": "ep19-B5",
+ "episode": 19,
+ "item": "ep19",
+ "tree": "b39b69b",
+ "code": "/root/autodl-tmp/haoran.zhang/code/nv-v2d_runin/robotic_grounding/flash_chord",
+ "src": "T1fix/B/ep19",
+ "source_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19",
+ "fork": 110000,
+ "max_iterations": 135000,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "scene_support": false,
+ "reset_seed": 42,
+ "inherited_overrides": [
+  "objective.object_task_rotation_beta=3.0"
+ ],
+ "added_overrides": [
+  "objective.object_task_rotation_beta=5.0"
+ ],
+ "overrides": [
+  "objective.object_task_rotation_beta=5.0"
+ ],
+ "fork_pair": {
+  "model": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19/model_110000.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-B5/fork/model_110000.safetensors",
+   "sha256": "a433b497254130be426f5ae16afd31f87d4983e7b02ca86d7f15478312b158fc",
+   "size": 24993232,
+   "copied_at": "2026-10-28 05:07:19"
+  },
+  "rsi": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19/rsi_110000.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-B5/fork/rsi_110000.safetensors",
+   "sha256": "37dc23ed02988522c298c04722692e681e03a980e7af4facbb1276ee7b4e218e",
+   "size": 4089060,
+   "copied_at": "2026-10-28 05:07:19"
+  }
+ },
+ "source_config": {
+  "hydra/.hydra/config.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19/hydra/.hydra/config.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-B5/source/hydra/.hydra/config.yaml",
+   "sha256": "6883df5ae868d9aa5803e1f24de93e14ebc64196766a37396109d00240c93cff",
+   "size": 8210,
+   "copied_at": "2026-10-28 05:07:19"
+  },
+  "hydra/.hydra/overrides.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep19/hydra/.hydra/overrides.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-B5/source/hydra/.hydra/overrides.yaml",
+   "sha256": "118b645d95695b073f4734095bd2ef0fc037b3debeee07bebc06a894fed1cb01",
+   "size": 598,
+   "copied_at": "2026-10-28 05:07:19"
+  }
+ },
+ "hull_cache": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep19-B5/fc_cache",
+ "hull_object_key": "7d05b4ab00818a6f",
+ "hull_files": 29,
+ "hull_before": "tree (nv-v2d_runin: 11 hulls vs stock 10)",
+ "prepared_at": "2026-10-28 05:07:19",
+ "launched": true
+}

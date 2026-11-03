@@ -1,0 +1,53 @@
+{
+ "episode": 17,
+ "object": "traffic_cone",
+ "computed_at": "2026-10-31 00:18:24",
+ "script_sha256": "cfdd3072779b727e59555a13546ee4f1bb23436bcd9d7d686b2181b36dc7f638",
+ "f0_final": {
+  "iteration": 44922,
+  "reason": "help_zero_tail",
+  "help_zero_since": 39062,
+  "model": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep17/model_44922.safetensors",
+  "model_sha256": "cf380d426d1bd2183ae352455e00cfbd426eb359e8ef1bc11fce318d68750747",
+  "rsi": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep17/rsi_44922.safetensors",
+  "rsi_sha256": "784bfcdad6e8f426037db9a2218c1a1faefaf7c10cbbd6fd8a9a63cfc9caaa68",
+  "wall_seconds": 108358.0,
+  "iterations_per_s": 0.4146
+ },
+ "scene_support": true,
+ "mitigated_f0": true,
+ "barrier": {
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+  "parquet_sha256": "3591829d8eefee75da473f19615aced72c0e8f6823924dadcfb0a7dfd499d4b3",
+  "mesh": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/object/textured_mesh.obj",
+  "mesh_sha256": "4cdf6c3a8297bd1204b9e56272301877c3edb02b5c71eead4e9c94eedf17082d",
+  "frames": 440,
+  "floor_depth_max_m": 0.0141,
+  "floor_depth_max_frame": 0,
+  "frames_depth_gt_barrier": 0,
+  "jump_max_m": 0.034,
+  "jump_max_frame": 135,
+  "B_m": 0.034
+ },
+ "palm": {
+  "last_iteration": 44922,
+  "rows": 501,
+  "palm_share_last5k": 0.049,
+  "object_share_last5k_report_only": 0.6802
+ },
+ "termination_overrides": [
+  "termination.palm_position_threshold=0.25"
+ ],
+ "rule_trace": [
+  "T-obj: B = 3.4 cm <= 8 cm -> object threshold stays 0.1",
+  "T-palm: pre-registered mitigated clip (align/mitigation_f0.json) -> termination.palm_position_threshold=0.25"
+ ],
+ "base": [
+  "training.resume=true",
+  "training.checkpoint=/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep17/model_44922.safetensors",
+  "training.max_iterations=90000",
+  "training.early_stop_help_zero_tail=0",
+  "reset.start_update=44922"
+ ],
+ "projected_hours": 30.2
+}

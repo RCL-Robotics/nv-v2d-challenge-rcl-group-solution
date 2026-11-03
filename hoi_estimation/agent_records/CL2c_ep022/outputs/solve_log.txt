@@ -1,0 +1,17 @@
+[solve    8.6s] loaded 719 frames
+[solve   13.6s] phases: [(0, 201, 'static'), (202, 559, 'moving'), (560, 718, 'static')]
+[solve  109.7s] static 0-201: sil loss mean-pose 0.2464 -> fitted 0.1544
+[solve  191.1s] moving: sil loss smoothed baseline 0.4051, pass1 0.3356, pass2 0.3359, smooth 0.3371, chosen 0.3360; frames from pass1/pass2/smooth: 80/49/229; outliers (>4 deg) pass1 2 -> chosen 1 (smooth chosen at 229 frames)
+[solve  233.3s] static 560-718: sil loss mean-pose 0.2131 -> fitted 0.1725
+[solve  233.3s] phase 0-201 (static): depth re-anchor scale 1.0000
+[solve  233.3s] phase 202-559 (moving): depth re-anchor scale 1.0024
+[solve  233.3s] phase 560-718 (static): depth re-anchor scale 1.0000
+[solve  234.3s] moving 202-559 frames 202-321: depth shift floor cue -2.11 cm, anchor-continuity ramp -2.36 cm
+[solve  234.4s] moving 202-559 frames 322-440: depth shift floor cue -4.73 cm, anchor-continuity ramp -2.75 cm
+[solve  234.4s] moving 202-559 frames 441-559: depth shift floor cue -6.08 cm, anchor-continuity ramp -4.58 cm
+[solve  234.4s] moving 202-559: anchor ramp applied (scale 0.9908 -> 0.9859)
+[solve  234.4s] wrote /work/outputs/object_poses_world.npz (719, 4, 4)
+
+real	3m57.382s
+user	3m50.669s
+sys	1m8.487s

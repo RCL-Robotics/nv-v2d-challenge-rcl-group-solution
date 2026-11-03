@@ -1,0 +1,29 @@
+Warp DeprecationWarning: warp.config.quiet is deprecated; use warp.config.log_level = warp.LOG_WARNING to suppress the init banner.
+Warp CUDA error 100: no CUDA-capable device is detected (in function init_cuda_driver, /builds/omniverse/warp/warp/native/cuda_util.cpp:309)
+{"run": [0, 125], "frame": 62, "anchor": true, "with_support": {"final_dp_cm": 47.627, "max_dp_cm": 48.51, "final_rot_deg": 75.63, "max_rot_deg": 77.545, "final_z_change_cm": -30.742, "ok": false}, "hulls": 11, "no_support_control": {"final_dp_cm": 48.662, "max_dp_cm": 49.751, "final_rot_deg": 77.027, "max_rot_deg": 79.097, "final_z_change_cm": -30.729, "ok": false}}
+settle all_ok False anchor_ok False control moves True
+{"run": [0, 125], "frame": 62, "anchor": true, "with_support": {"final_dp_cm": 0.085, "max_dp_cm": 0.086, "final_rot_deg": 0.731, "max_rot_deg": 0.733, "final_z_change_cm": -0.016, "ok": true}, "hulls": 79, "no_support_control": {"final_dp_cm": 77.989, "max_dp_cm": 80.539, "final_rot_deg": 0.742, "max_rot_deg": 0.761, "final_z_change_cm": -77.989, "ok": false}}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 130], "frame": 65, "anchor": true, "with_support": {"final_dp_cm": 0.392, "max_dp_cm": 0.632, "final_rot_deg": 2.784, "max_rot_deg": 3.186, "final_z_change_cm": -0.064, "ok": true}, "hulls": 33, "no_support_control": {"final_dp_cm": 86.901, "max_dp_cm": 86.927, "final_rot_deg": 92.814, "max_rot_deg": 110.646, "final_z_change_cm": -85.644, "ok": false}}
+{"run": [215, 269], "frame": 242, "anchor": false, "with_support": {"final_dp_cm": 0.741, "max_dp_cm": 0.766, "final_rot_deg": 3.171, "max_rot_deg": 3.327, "final_z_change_cm": 0.467, "ok": true}, "hulls": 33}
+{"run": [350, 399], "frame": 374, "anchor": false, "with_support": {"final_dp_cm": 0.569, "max_dp_cm": 0.575, "final_rot_deg": 1.196, "max_rot_deg": 1.262, "final_z_change_cm": 0.548, "ok": true}, "hulls": 33}
+{"run": [481, 527], "frame": 504, "anchor": false, "with_support": {"final_dp_cm": 1.153, "max_dp_cm": 1.242, "final_rot_deg": 4.186, "max_rot_deg": 5.211, "final_z_change_cm": 0.783, "ok": true}, "hulls": 33}
+{"run": [606, 641], "frame": 623, "anchor": false, "with_support": {"final_dp_cm": 1.111, "max_dp_cm": 1.272, "final_rot_deg": 1.174, "max_rot_deg": 2.058, "final_z_change_cm": 1.047, "ok": true}, "hulls": 33}
+{"run": [690, 781], "frame": 735, "anchor": false, "with_support": {"final_dp_cm": 0.812, "max_dp_cm": 0.814, "final_rot_deg": 3.294, "max_rot_deg": 3.365, "final_z_change_cm": 0.465, "ok": true}, "hulls": 33}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 168], "frame": 84, "anchor": true, "with_support": {"final_dp_cm": 2.055, "max_dp_cm": 2.158, "final_rot_deg": 4.184, "max_rot_deg": 4.389, "final_z_change_cm": -0.69, "ok": false}, "hulls": 76, "no_support_control": {"final_dp_cm": 78.925, "max_dp_cm": 80.75, "final_rot_deg": 4.181, "max_rot_deg": 4.181, "final_z_change_cm": -78.903, "ok": false}}
+{"run": [470, 546], "frame": 508, "anchor": false, "with_support": {"final_dp_cm": 1.948, "max_dp_cm": 1.95, "final_rot_deg": 4.224, "max_rot_deg": 4.229, "final_z_change_cm": 0.133, "ok": true}, "hulls": 76}
+settle all_ok False anchor_ok False control moves True
+{"run": [0, 156], "frame": 78, "anchor": true, "with_support": {"final_dp_cm": 0.091, "max_dp_cm": 0.092, "final_rot_deg": 0.157, "max_rot_deg": 0.162, "final_z_change_cm": 0.09, "ok": true}, "hulls": 9, "no_support_control": {"final_dp_cm": 78.521, "max_dp_cm": 80.666, "final_rot_deg": 0.155, "max_rot_deg": 0.155, "final_z_change_cm": -78.521, "ok": false}}
+{"run": [226, 245], "frame": 235, "anchor": false, "with_support": {"final_dp_cm": 0.794, "max_dp_cm": 1.019, "final_rot_deg": 0.157, "max_rot_deg": 0.868, "final_z_change_cm": -0.794, "ok": true}, "hulls": 9}
+{"run": [387, 397], "frame": 392, "anchor": false, "with_support": {"final_dp_cm": 0.777, "max_dp_cm": 0.778, "final_rot_deg": 0.436, "max_rot_deg": 0.442, "final_z_change_cm": 0.775, "ok": true}, "hulls": 9}
+{"run": [576, 588], "frame": 582, "anchor": false, "with_support": {"final_dp_cm": 0.8, "max_dp_cm": 1.02, "final_rot_deg": 0.151, "max_rot_deg": 1.121, "final_z_change_cm": -0.8, "ok": true}, "hulls": 9}
+{"run": [635, 660], "frame": 647, "anchor": false, "with_support": {"final_dp_cm": 0.47, "max_dp_cm": 0.619, "final_rot_deg": 0.16, "max_rot_deg": 0.935, "final_z_change_cm": -0.469, "ok": true}, "hulls": 9}
+{"run": [781, 794], "frame": 787, "anchor": false, "with_support": {"final_dp_cm": 0.525, "max_dp_cm": 0.632, "final_rot_deg": 0.691, "max_rot_deg": 0.698, "final_z_change_cm": -0.506, "ok": true}, "hulls": 9}
+{"run": [795, 896], "frame": 845, "anchor": false, "with_support": {"final_dp_cm": 0.546, "max_dp_cm": 0.636, "final_rot_deg": 0.679, "max_rot_deg": 1.164, "final_z_change_cm": -0.512, "ok": true}, "hulls": 9}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 193], "frame": 96, "anchor": true, "with_support": {"final_dp_cm": 0.425, "max_dp_cm": 0.458, "final_rot_deg": 3.535, "max_rot_deg": 3.817, "final_z_change_cm": -0.141, "ok": true}, "hulls": 52, "no_support_control": {"final_dp_cm": 47.072, "max_dp_cm": 48.813, "final_rot_deg": 3.484, "max_rot_deg": 3.733, "final_z_change_cm": -47.07, "ok": false}}
+settle all_ok True anchor_ok True control moves True
+{"run": [0, 80], "frame": 40, "anchor": true, "with_support": {"final_dp_cm": 0.108, "max_dp_cm": 0.116, "final_rot_deg": 1.29, "max_rot_deg": 1.43, "final_z_change_cm": -0.032, "ok": true}, "hulls": 4, "no_support_control": {"final_dp_cm": 88.471, "max_dp_cm": 92.132, "final_rot_deg": 0.941, "max_rot_deg": 2.007, "final_z_change_cm": -88.471, "ok": false}}
+{"run": [406, 467], "frame": 436, "anchor": false, "with_support": {"final_dp_cm": 89.016, "max_dp_cm": 89.558, "final_rot_deg": 150.984, "max_rot_deg": 179.894, "final_z_change_cm": -88.019, "ok": false}, "hulls": 4}
+settle all_ok False anchor_ok True control moves True

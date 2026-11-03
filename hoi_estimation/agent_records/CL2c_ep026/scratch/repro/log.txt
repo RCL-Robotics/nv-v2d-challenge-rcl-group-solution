@@ -1,0 +1,15 @@
+[load] F=669
+[phases] [(0, 281, 'static'), (281, 357, 'moving'), (357, 399, 'static'), (399, 510, 'moving'), (510, 669, 'static')]
+[floor] h0=0.0492 m, baseline tilt of mesh y vs floor normal: max 6.07 deg
+[hyp] 0-281 static: id=1.557 flip_y=1.644 flip_x=1.097 flip_z=1.052 -> flip_y
+[hyp] 281-357 moving: id=1.620 flip_y=1.660 flip_x=1.131 flip_z=1.125 -> flip_y
+[hyp] 357-399 static: id=1.492 flip_y=1.557 flip_x=1.081 flip_z=1.111 -> flip_y
+[hyp] 399-510 moving: id=1.568 flip_y=1.605 flip_x=1.040 flip_z=1.053 -> flip_y
+[hyp] 510-669 static: id=1.570 flip_y=1.598 flip_x=1.272 flip_z=1.217 -> flip_y
+[static] 0-281: yaw 0.72 a -0.0017 b 0.0381 score 1.676
+[static] 357-399: yaw -145.82 a 0.1012 b -0.0068 score 1.566
+[static] 510-669: yaw -60.41 a 0.1373 b -0.0293 score 1.644
+[moving] 281-357 done (158s)
+[moving] 399-510 done (288s)
+[anchor] depth scale along rays 1.0013
+[done] /work/scratch/repro/object_poses_world.npz  290s

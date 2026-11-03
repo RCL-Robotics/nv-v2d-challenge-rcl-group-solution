@@ -1,0 +1,73 @@
+frames 29/922; accepted 1; elapsed 7.6s
+frames 116/922; accepted 3; elapsed 25.8s
+frames 203/922; accepted 3; elapsed 45.4s
+frames 290/922; accepted 3; elapsed 64.0s
+frames 377/922; accepted 27; elapsed 81.7s
+frames 464/922; accepted 41; elapsed 100.3s
+frames 551/922; accepted 70; elapsed 115.2s
+frames 638/922; accepted 93; elapsed 130.6s
+frames 725/922; accepted 122; elapsed 145.6s
+frames 812/922; accepted 135; elapsed 168.9s
+frames 899/922; accepted 161; elapsed 194.3s
+{
+  "frames": 922,
+  "elapsed_seconds": 203.73339731502347,
+  "keyframes_tested": 308,
+  "keyframes_accepted": 169,
+  "modified_frames": 709,
+  "unchanged_frames": 213,
+  "source_counts": {
+    "0": 213,
+    "1": 54,
+    "2": 121,
+    "3": 350,
+    "4": 140,
+    "5": 44
+  },
+  "rest_intervals": [
+    {
+      "start": 0,
+      "end": 140,
+      "method": "existing_pose_selection_on_unoccluded_frame0",
+      "candidate_frames": [
+        71,
+        62,
+        69,
+        72,
+        67
+      ],
+      "iou": 0.9419606405492327,
+      "photo": 0.017539290711283684
+    },
+    {
+      "start": 332,
+      "end": 388,
+      "accepted_fits": 19,
+      "retained_fits": 19,
+      "translation_scatter_m": 0.009321968375141489,
+      "angular_scatter_deg": 0.30407330189855686
+    },
+    {
+      "start": 486,
+      "end": 692,
+      "accepted_fits": 63,
+      "retained_fits": 58,
+      "translation_scatter_m": 0.006527928036415787,
+      "angular_scatter_deg": 0.24711007707340996
+    },
+    {
+      "start": 834,
+      "end": 922,
+      "accepted_fits": 30,
+      "retained_fits": 29,
+      "translation_scatter_m": 0.004100614813105477,
+      "angular_scatter_deg": 0.32663377535761506
+    }
+  ],
+  "floor_contact": {
+    "start": 306,
+    "end": 700,
+    "adjusted_frames": 394,
+    "median_adjustment_m": 0.12270373407532978
+  }
+}

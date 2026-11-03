@@ -1,0 +1,136 @@
+{
+ "item": "ep19",
+ "role": "set",
+ "in_set": true,
+ "episode": 19,
+ "object": "cane",
+ "sequence_id": "2026-05-19_10-19-48_cane_swing_05",
+ "scene_support": false,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "source": "T1fix ep19-B (T1fix/eval_A/ep19)",
+ "pinned": {
+  "iteration": 108000,
+  "run": "T1fix/B/ep19",
+  "model": "model_108000.safetensors",
+  "model_sha256": "05321c3b306367ff8f7efb68a1ece326858c723f14af0c97b212bd5ac0ce1098",
+  "model_size": 24993232,
+  "rsi": "rsi_108000.safetensors",
+  "rsi_sha256": "6bcf6027a0f240d60bdde17950d9af99468d7bb2fa8da0ce2e37b5fc52467f12",
+  "rsi_size": 4089060,
+  "trained_by": "b39b69be6c2f",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep19/model_108000.safetensors",
+  "sha256": "5f5b0fc6b80865f45f35f1a8f2e42633747feaf3730dd4d1418a27db1673f7eb",
+  "size": 46052704,
+  "max_rel_diff": 5.626678466796875e-05,
+  "exported_by": "b39b69be6c2f",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2_runin",
+  "scene_support": false,
+  "reset_seed": 42,
+  "inherit": [
+   "objective.object_task_rotation_beta=3.0"
+  ]
+ },
+ "evaluation": {
+  "prior_n_evals": 3,
+  "prior_mean_auc": 0.8951749435665914,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.8956828442,
+   "auc_sd": 0.001955392856,
+   "auc_min": 0.8916478555,
+   "auc_max": 0.9002539503,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 1.023119074
+  }
+ },
+ "stages": [
+  {
+   "run": "runin/ep19",
+   "start": "scratch",
+   "end": "final.json model_44922 (help_zero_tail)",
+   "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin/ep19",
+    "hydra.run.dir=<RUNS>/runin/ep19/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "runin_cont/ep19",
+   "start": "resume runin/ep19/model_44922.safetensors",
+   "end": "final.json model_90000 (max_iterations)",
+   "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin_cont/ep19",
+    "hydra.run.dir=<RUNS>/runin_cont/ep19/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/runin/ep19/model_44922.safetensors",
+    "training.max_iterations=90000",
+    "training.early_stop_help_zero_tail=0"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "T1fix/B/ep19",
+   "start": "resume model_90000 (fork pair T1fix/B/ep19)",
+   "end": "final.json model_110000 (max_iterations)",
+   "code": "b39b69be6c2f",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_10-19-48_cane_swing_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/T1fix/watchA/ep19",
+    "hydra.run.dir=<RUNS>/T1fix/watchA/ep19/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=110000",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/T1fix/B/ep19/model_90000.safetensors",
+    "objective.object_task_rotation_beta=3.0"
+   ],
+   "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+   "arm": "ep19-B",
+   "launch_overrides": [
+    "objective.object_task_rotation_beta=3.0"
+   ],
+   "fork_iteration": 90000,
+   "max_iterations": 110000,
+   "fork_pair": {
+    "model": {
+     "sha256": "c845ae6e992939770f9af5a7a7fc7a654fdbb2e1f4f11b3b6f9cdbd11fedb329",
+     "size": 24993264,
+     "path": "<RUNS>/T1fix/B/ep19/model_90000.safetensors"
+    },
+    "rsi": {
+     "sha256": "9f0b645c3adcadc899bfa9ae647bc7e6689fdccfdf4700a693df73774efed690",
+     "size": 4089060,
+     "path": "<RUNS>/T1fix/B/ep19/rsi_90000.safetensors"
+    }
+   }
+  }
+ ]
+}

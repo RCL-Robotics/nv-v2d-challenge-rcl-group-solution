@@ -1,0 +1,15 @@
+{
+ "episode_index": 7,
+ "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+ "object": "iron",
+ "task": "Walk over to the iron on the round table and using your right hand in the handle slide it back and forth horizontally on the desk. Stand it up vertically when finished.",
+ "frames": 896,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.2767435908317566,
+  "median": 0.16669559478759766,
+  "max": 2.9617326259613037
+ },
+ "support": "../../supports/2026-05-29_15-20-43_iron_round_table_02"
+}

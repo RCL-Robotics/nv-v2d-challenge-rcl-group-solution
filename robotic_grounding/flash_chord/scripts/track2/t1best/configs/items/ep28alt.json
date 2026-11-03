@@ -1,0 +1,173 @@
+{
+ "item": "ep28alt",
+ "role": "alt",
+ "in_set": true,
+ "episode": 28,
+ "object": "squeegee",
+ "sequence_id": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+ "scene_support": true,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "source": "T1fix ep28 wave-2 W2PD model_66000 (dev.haoran.ep28w2 7fbc227, local only)",
+ "pinned": {
+  "iteration": 66000,
+  "run": "T1fix/W2PD/ep28",
+  "model": "model_66000.safetensors",
+  "model_sha256": "f8ea7c496a4b6a300157a01ba034f5001165c09f9600b98abf463511d6ba7507",
+  "model_size": 24993416,
+  "rsi": "rsi_66000.safetensors",
+  "rsi_sha256": "8d8bbbfdf4f5339c3a29dad92340ea07c3737830242a1039a693ea91817ba3df",
+  "rsi_size": 5205500,
+  "trained_by": "7fbc2273a92b",
+  "hull_cache": "stock:T1fix/ep28w2/fc_cache"
+ },
+ "export": {
+  "file": "ep28alt/model_66000.safetensors",
+  "sha256": "2bddd57d8989c0703ef1e6f0833284550ab201255d827b23b40d95da8cf01fd8",
+  "size": 46052728,
+  "max_rel_diff": 5.14984130859375e-05,
+  "exported_by": "7fbc2273a92b",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2",
+  "scene_support": true,
+  "reset_seed": 42,
+  "inherit": [
+   "objective.object_task_rotation_beta=4.5",
+   "termination.object_orientation_threshold=3.2",
+   "termination.object_position_threshold=0.20",
+   "+objective.object_task_position_only_after_release=true",
+   "+objective.no_drop_weight=-50.0",
+   "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+  ]
+ },
+ "evaluation": {
+  "prior_n_evals": 6,
+  "prior_mean_auc": 0.8074181848852902,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.8074076417,
+   "auc_sd": 0.002723469092,
+   "auc_min": 0.8021887652,
+   "auc_max": 0.8129428138,
+   "sp_pass": 20,
+   "mp_pass": 6,
+   "mppe_mean_cm": 3.465527677
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_wide/ep28",
+   "start": "scratch",
+   "end": "final.json model_44922 (help_zero_tail)",
+   "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_wide/ep28",
+    "training.max_iterations=45000",
+    "logging.mode=<WANDB_MODE>",
+    "[logging.entity=<WANDB_ENTITY>]",
+    "[logging.project=<WANDB_PROJECT>]",
+    "logging.experiment=C3r2_wide",
+    "logging.run_name=ep28_squeegee",
+    "logging.upload_checkpoints=false"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "T1fix/B/ep28",
+   "start": "resume model_44922 (fork pair T1fix/stage2/forks/ep28-B)",
+   "end": "final.json model_59922 (max_iterations)",
+   "code": "b39b69be6c2f",
+   "hull_cache": "stock:T1fix/stage2/fc_cache",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+    "scene.support=true",
+    "reset.seed=42",
+    "output_dir=<RUNS>/T1fix/watchS2B/ep28",
+    "hydra.run.dir=<RUNS>/T1fix/watchS2B/ep28/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=59922",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/T1fix/stage2/forks/ep28-B/model_44922.safetensors",
+    "objective.object_task_rotation_beta=4.5"
+   ],
+   "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+   "arm": "ep28-B",
+   "launch_overrides": [
+    "objective.object_task_rotation_beta=4.5"
+   ],
+   "fork_iteration": 44922,
+   "max_iterations": 59922,
+   "fork_pair": {
+    "model": {
+     "sha256": "a33fd2887288844d74c28c9bf0d1f482a27303c505197bdd8607ce8b01a0119f",
+     "size": 24993032,
+     "path": "<RUNS>/T1fix/stage2/forks/ep28-B/model_44922.safetensors"
+    },
+    "rsi": {
+     "sha256": "93d87dad29aa8e59fc80726a0db5d742647febbf76a042650f00ea415861b300",
+     "size": 5205500,
+     "path": "<RUNS>/T1fix/stage2/forks/ep28-B/rsi_44922.safetensors"
+    }
+   }
+  },
+  {
+   "run": "T1fix/W2PD/ep28",
+   "start": "resume model_58000 (fork pair T1fix/ep28w2/forks/ep28-W2PD)",
+   "end": "final.json model_68000 (max_iterations)",
+   "code": "7fbc2273a92b",
+   "hull_cache": "stock:T1fix/ep28w2/fc_cache",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_/robot_name=g1/data.parquet'",
+    "scene.support=true",
+    "reset.seed=42",
+    "output_dir=<RUNS>/T1fix/watchW2PD/ep28",
+    "hydra.run.dir=<RUNS>/T1fix/watchW2PD/ep28/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=68000",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/model_58000.safetensors",
+    "objective.object_task_rotation_beta=4.5",
+    "termination.object_orientation_threshold=3.2",
+    "termination.object_position_threshold=0.20",
+    "+objective.object_task_position_only_after_release=true",
+    "+objective.no_drop_weight=-50.0",
+    "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+   ],
+   "source": "run record (t1fix_launch.json / hydra overrides.yaml)",
+   "arm": "ep28-W2PD",
+   "launch_overrides": [
+    "termination.object_orientation_threshold=3.2",
+    "termination.object_position_threshold=0.20",
+    "+objective.object_task_position_only_after_release=true",
+    "+objective.no_drop_weight=-50.0",
+    "+curriculum.stages.0.objective_weights.object_no_drop=-50.0"
+   ],
+   "fork_iteration": 58000,
+   "max_iterations": 68000,
+   "fork_pair": {
+    "model": {
+     "sha256": "04f42d00f7af146ce8c98a1250e476b77c5e07244d274a55e62484aa53bf3d6b",
+     "size": 24993216,
+     "path": "<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/model_58000.safetensors"
+    },
+    "rsi": {
+     "sha256": "e4a9a12207630a75a4b0b3508a90b1ab30ce4af6fac7b26de3f96e00ae213c2b",
+     "size": 5205500,
+     "path": "<RUNS>/T1fix/ep28w2/forks/ep28-W2PD/rsi_58000.safetensors"
+    }
+   }
+  }
+ ],
+ "note": "Episode 28 of the set (BANK_ep28_RULE.md: W2PD mean AUC 0.8074 >= B 0.7929, MP-SR 6/20 >= 0/20, SP-SR 20/20 >= 20/20). Trained and exported with 7fbc2273a92b (merged on this branch)."
+}

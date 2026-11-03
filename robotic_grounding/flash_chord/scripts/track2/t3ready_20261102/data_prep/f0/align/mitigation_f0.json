@@ -1,0 +1,245 @@
+{
+ "rule": "median palm/fingertip-joint contact gap on f0 > 3.0 cm OR (f0 - opus_v2) > 2.0 cm, over GT-free contact side-frames (t3f0_align.py v3)",
+ "override": "termination.palm_position_threshold=0.25",
+ "episodes": [
+  1,
+  2,
+  3,
+  15,
+  17,
+  19,
+  20,
+  28
+ ],
+ "per_episode": {
+  "0": {
+   "j_f0_med": 0.49,
+   "j_opus_med": 0.36,
+   "delta": 0.13,
+   "n": 196,
+   "qualifies": false
+  },
+  "1": {
+   "j_f0_med": 3.26,
+   "j_opus_med": 2.84,
+   "delta": 0.42,
+   "n": 157,
+   "qualifies": true
+  },
+  "2": {
+   "j_f0_med": 7.71,
+   "j_opus_med": 1.2,
+   "delta": 6.51,
+   "n": 38,
+   "qualifies": true
+  },
+  "3": {
+   "j_f0_med": 5.47,
+   "j_opus_med": 0.28,
+   "delta": 5.19,
+   "n": 227,
+   "qualifies": true
+  },
+  "4": {
+   "j_f0_med": 2.84,
+   "j_opus_med": 0.88,
+   "delta": 1.96,
+   "n": 108,
+   "qualifies": false
+  },
+  "5": {
+   "j_f0_med": 0.85,
+   "j_opus_med": 0.46,
+   "delta": 0.39,
+   "n": 202,
+   "qualifies": false
+  },
+  "6": {
+   "j_f0_med": 0.28,
+   "j_opus_med": 0.8,
+   "delta": -0.52,
+   "n": 71,
+   "qualifies": false
+  },
+  "7": {
+   "j_f0_med": 0.49,
+   "j_opus_med": 0.19,
+   "delta": 0.3,
+   "n": 311,
+   "qualifies": false
+  },
+  "8": {
+   "j_f0_med": 0.95,
+   "j_opus_med": 0.73,
+   "delta": 0.22,
+   "n": 199,
+   "qualifies": false
+  },
+  "9": {
+   "j_f0_med": 1.18,
+   "j_opus_med": 0.57,
+   "delta": 0.61,
+   "n": 470,
+   "qualifies": false
+  },
+  "10": {
+   "j_f0_med": 0.46,
+   "j_opus_med": 0.56,
+   "delta": -0.1,
+   "n": 132,
+   "qualifies": false
+  },
+  "11": {
+   "j_f0_med": 0.68,
+   "j_opus_med": 0.61,
+   "delta": 0.07,
+   "n": 407,
+   "qualifies": false
+  },
+  "12": {
+   "j_f0_med": 0.75,
+   "j_opus_med": 0.68,
+   "delta": 0.07,
+   "n": 107,
+   "qualifies": false
+  },
+  "13": {
+   "j_f0_med": 2.51,
+   "j_opus_med": 1.21,
+   "delta": 1.3,
+   "n": 70,
+   "qualifies": false
+  },
+  "14": {
+   "j_f0_med": 0.84,
+   "j_opus_med": 1.07,
+   "delta": -0.23,
+   "n": 453,
+   "qualifies": false
+  },
+  "15": {
+   "j_f0_med": 3.2,
+   "j_opus_med": 1.48,
+   "delta": 1.72,
+   "n": 304,
+   "qualifies": true
+  },
+  "16": {
+   "j_f0_med": 2.98,
+   "j_opus_med": 1.24,
+   "delta": 1.74,
+   "n": 155,
+   "qualifies": false
+  },
+  "17": {
+   "j_f0_med": 3.5,
+   "j_opus_med": 0.65,
+   "delta": 2.85,
+   "n": 314,
+   "qualifies": true
+  },
+  "18": {
+   "j_f0_med": 0.65,
+   "j_opus_med": 0.38,
+   "delta": 0.27,
+   "n": 211,
+   "qualifies": false
+  },
+  "19": {
+   "j_f0_med": 11.12,
+   "j_opus_med": 0.69,
+   "delta": 10.43,
+   "n": 181,
+   "qualifies": true
+  },
+  "20": {
+   "j_f0_med": 4.23,
+   "j_opus_med": 0.75,
+   "delta": 3.48,
+   "n": 46,
+   "qualifies": true
+  },
+  "21": {
+   "j_f0_med": 0.37,
+   "j_opus_med": 0.38,
+   "delta": -0.01,
+   "n": 390,
+   "qualifies": false
+  },
+  "22": {
+   "j_f0_med": 1.89,
+   "j_opus_med": 0.53,
+   "delta": 1.36,
+   "n": 200,
+   "qualifies": false
+  },
+  "23": {
+   "j_f0_med": 1.87,
+   "j_opus_med": 1.04,
+   "delta": 0.83,
+   "n": 591,
+   "qualifies": false
+  },
+  "24": {
+   "j_f0_med": 0.85,
+   "j_opus_med": 0.77,
+   "delta": 0.08,
+   "n": 124,
+   "qualifies": false
+  },
+  "25": {
+   "j_f0_med": 0.57,
+   "j_opus_med": 0.86,
+   "delta": -0.29,
+   "n": 181,
+   "qualifies": false
+  },
+  "26": {
+   "j_f0_med": 0.45,
+   "j_opus_med": 0.34,
+   "delta": 0.11,
+   "n": 126,
+   "qualifies": false
+  },
+  "27": {
+   "j_f0_med": 0.84,
+   "j_opus_med": 2.32,
+   "delta": -1.48,
+   "n": 214,
+   "qualifies": false
+  },
+  "28": {
+   "j_f0_med": 14.75,
+   "j_opus_med": 1.07,
+   "delta": 13.68,
+   "n": 540,
+   "qualifies": true
+  },
+  "29": {
+   "j_f0_med": null,
+   "j_opus_med": null,
+   "delta": null,
+   "n": 0,
+   "qualifies": null
+  }
+ },
+ "near_threshold_not_qualifying": [
+  {
+   "ep": 4,
+   "j_f0_med": 2.84,
+   "delta": 1.96
+  },
+  {
+   "ep": 13,
+   "j_f0_med": 2.51,
+   "delta": 1.3
+  },
+  {
+   "ep": 16,
+   "j_f0_med": 2.98,
+   "delta": 1.74
+  }
+ ],
+ "script": "scripts/t3f0_align.py",
+ "script_sha256": "03ea75fcffb280d722405052f4a05cd25c07abeafb2e0edecc016d9a56531906"
+}

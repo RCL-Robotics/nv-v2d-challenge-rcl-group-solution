@@ -1,0 +1,95 @@
+{
+ "item": "ep00",
+ "role": "set",
+ "in_set": true,
+ "episode": 0,
+ "object": "tall_bar_stool",
+ "sequence_id": "2026-06-04_14-16-23_tall_bar_stool_tip_up_04",
+ "scene_support": false,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "source": "rolling start C3r2_runin (C3r2_runin/eval/ep00)",
+ "pinned": {
+  "iteration": 28000,
+  "run": "C3r2_runin/ep00",
+  "model": "model_28000.safetensors",
+  "model_sha256": "eaaafdd8a5e19a96b115d4fe25e466d57230e2447f4d3ff1ea567cfd9ddb7f27",
+  "model_size": 24993248,
+  "rsi": "rsi_28000.safetensors",
+  "rsi_sha256": "e3146e013fb70064099592ae85a4f4850e21ffce9d308e38c6d5bb343034b74e",
+  "rsi_size": 3505100,
+  "trained_by": "b39b69be6c2f",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep00/model_28000.safetensors",
+  "sha256": "2e3079703b50f0247102e51e6b39355b03b35fc60319d8fad8e44a58bc7ebdce",
+  "size": 46052720,
+  "max_rel_diff": 1.5020370483398438e-05,
+  "exported_by": "b39b69be6c2f",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2_runin",
+  "scene_support": false,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 3,
+  "prior_mean_auc": 0.9980184233076264,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.9976060411,
+   "auc_sd": 0.0007637198169,
+   "auc_min": 0.994938946,
+   "auc_max": 0.9984736504,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 0.4304797569
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_runin/ep00",
+   "start": "scratch",
+   "end": "",
+   "code": "b39b69be6c2f",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_runin/ep00",
+    "hydra.run.dir=<RUNS>/C3r2_runin/ep00/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=120000"
+   ],
+   "source": "run record (hydra overrides.yaml, resume keys removed)"
+  },
+  {
+   "run": "C3r2_runin/ep00",
+   "start": "restart in place from C3r2_runin/ep00/model_4000.safetensors",
+   "end": "",
+   "code": "b39b69be6c2f",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-06-04_14-16-23_tall_bar_stool_tip_up_04/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_runin/ep00",
+    "hydra.run.dir=<RUNS>/C3r2_runin/ep00/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=120000",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/C3r2_runin/ep00/model_4000.safetensors"
+   ],
+   "source": "run record (hydra overrides.yaml)"
+  }
+ ]
+}

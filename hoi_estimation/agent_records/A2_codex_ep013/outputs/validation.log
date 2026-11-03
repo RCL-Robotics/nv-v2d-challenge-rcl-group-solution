@@ -1,0 +1,120 @@
+{
+  "shape": [
+    922,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "finite": true,
+  "max_rotation_orthogonality_error": 1.091530038177524e-05,
+  "max_rotation_determinant_error": 5.935754645358671e-06,
+  "untouched_frames_exact": true,
+  "examples": [
+    {
+      "frame": 0,
+      "source": 4,
+      "baseline_iou": 0.9207973962571196,
+      "result_iou": 0.9419606405492327,
+      "baseline_photo": 0.015924612060189247,
+      "result_photo": 0.017539290711283684
+    },
+    {
+      "frame": 180,
+      "source": 0,
+      "baseline_iou": 0.7654288105928012,
+      "result_iou": 0.7654288105928012,
+      "baseline_photo": 0.06248645484447479,
+      "result_photo": 0.06248645484447479
+    },
+    {
+      "frame": 300,
+      "source": 0,
+      "baseline_iou": 0.8874372979600936,
+      "result_iou": 0.8874372979600936,
+      "baseline_photo": 0.11644009500741959,
+      "result_photo": 0.11644009500741959
+    },
+    {
+      "frame": 360,
+      "source": 3,
+      "baseline_iou": 0.874686597480085,
+      "result_iou": 0.9016621814152288,
+      "baseline_photo": 0.07942511886358261,
+      "result_photo": 0.05408725142478943
+    },
+    {
+      "frame": 420,
+      "source": 5,
+      "baseline_iou": 0.7348245498119962,
+      "result_iou": 0.7410199821055771,
+      "baseline_photo": 0.07397720962762833,
+      "result_photo": 0.062080658972263336
+    },
+    {
+      "frame": 480,
+      "source": 1,
+      "baseline_iou": 0.9469514908767245,
+      "result_iou": 0.8822028838673494,
+      "baseline_photo": 0.0986061543226242,
+      "result_photo": 0.07065539062023163
+    },
+    {
+      "frame": 660,
+      "source": 3,
+      "baseline_iou": 0.910247973955808,
+      "result_iou": 0.9074853983604568,
+      "baseline_photo": 0.09186825901269913,
+      "result_photo": 0.07645759731531143
+    },
+    {
+      "frame": 720,
+      "source": 1,
+      "baseline_iou": 0.7744984802431611,
+      "result_iou": 0.9039602003162889,
+      "baseline_photo": 0.06456459313631058,
+      "result_photo": 0.015578816644847393
+    },
+    {
+      "frame": 780,
+      "source": 0,
+      "baseline_iou": 0.12796657124388217,
+      "result_iou": 0.12796657124388217,
+      "baseline_photo": 0.0427715927362442,
+      "result_photo": 0.0427715927362442
+    },
+    {
+      "frame": 840,
+      "source": 3,
+      "baseline_iou": 0.5978808433753388,
+      "result_iou": 0.9600872183573876,
+      "baseline_photo": 0.07944723963737488,
+      "result_photo": 0.0291299931704998
+    },
+    {
+      "frame": 921,
+      "source": 3,
+      "baseline_iou": 0.597493549576115,
+      "result_iou": 0.9552588134495225,
+      "baseline_photo": 0.07918690145015717,
+      "result_photo": 0.028818674385547638
+    }
+  ],
+  "stationary_floor": {
+    "baseline": {
+      "median_lowest_point_plane_distance_m": 0.007555928991880956,
+      "translation_axis_std_m": [
+        0.009766282844076105,
+        0.022623130011853163,
+        0.06332219524680628
+      ]
+    },
+    "result": {
+      "median_lowest_point_plane_distance_m": 6.021023032865003e-05,
+      "translation_axis_std_m": [
+        7.216449660063518e-16,
+        3.552713678800501e-15,
+        1.0658141036401503e-14
+      ]
+    }
+  }
+}

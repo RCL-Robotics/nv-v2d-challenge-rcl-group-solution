@@ -1,0 +1,11 @@
+# RETRY_GO (v3), from RETRY_GO.template. Governs t3retry_v3.py under PREREG_v3.md.
+prereg_sha256 e62c39b2e092a0abce903168c74d64fcdfa3ce0c57a22f05153469ff1ea79db7
+user_approval: "also you can queue those tier3 rl-side improvement tier3 is the first priority then ablation", 2026-10-30 23:40 CST
+user_approval_2: "make sure all gpu used properly?", 2026-10-30 23:41 CST
+user_approval_gpu7: "no currently you could also use gpu7 zuxing is no longer use it at this time", 2026-10-31 00:05 CST
+user_approval_launch: "ok lanuch everything and please use gpu wisely", 2026-10-31 00:22 CST
+approval_note: quotes verbatim as relayed by the main session; times approximate (the last one is the relay time, exact time not given)
+supersedes: RETRY_NOGO of 2026-10-27 17:23 CST (kept as RETRY_NOGO.superseded_20261031); its condition "wait first round all tier3 finished" holds (ALL_LAUNCHED 2026-10-27 04:50, f0 VERDICT 2026-10-28 08:38)
+written_at: 2026-10-31 00:26 CST
+tier3_board_scores_seen: none
+written_by: main session (builder subagent, launch owner)

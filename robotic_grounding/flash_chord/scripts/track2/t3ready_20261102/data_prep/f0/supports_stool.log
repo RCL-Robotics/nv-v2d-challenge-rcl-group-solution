@@ -1,0 +1,4 @@
+/root/autodl-tmp/haoran.zhang/scripts/t3f0_supports.py:71: DeprecationWarning: `Scene.dump(concatenate=True)` DEPRECATED FOR REMOVAL APRIL 2025: replace with `Scene.to_geometry()`
+  return m.dump(concatenate=True) if isinstance(m, trimesh.Scene) else m
+{"ep": 1, "support": "tall_bar_stool", "kind": "stool", "n_boxes": 31, "anchor_run": [0, 125], "refit_residual_cm": null, "total_shift_vs_videofit_cm": null, "strip_area_fraction": null, "frame0_min_sdf_before_cm": 1.53, "frame0_min_sdf_after_cm": 1.53, "n_voxels_carved": 1, "path_min_sdf_cm": 1.54, "horizontal_shift_norm_cm": 0.0}
+{"ep": 28, "support": "tall_bar_stool", "kind": "stool", "n_boxes": 178, "anchor_run": [0, 118], "refit_residual_cm": null, "total_shift_vs_videofit_cm": null, "strip_area_fraction": null, "frame0_min_sdf_before_cm": 0.55, "frame0_min_sdf_after_cm": 0.55, "n_voxels_carved": 363, "path_min_sdf_cm": 0.51, "horizontal_shift_norm_cm": 0.0}

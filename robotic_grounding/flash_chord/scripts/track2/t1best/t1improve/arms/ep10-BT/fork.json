@@ -1,0 +1,62 @@
+{
+ "arm": "ep10-BT",
+ "episode": 10,
+ "item": "ep10",
+ "tree": "b39b69b",
+ "code": "/root/autodl-tmp/haoran.zhang/code/nv-v2d_runin/robotic_grounding/flash_chord",
+ "src": "T1fix/B/ep10",
+ "source_dir": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10",
+ "fork": 36432,
+ "max_iterations": 60000,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "scene_support": false,
+ "reset_seed": 42,
+ "inherited_overrides": [
+  "objective.object_task_rotation_beta=4.5"
+ ],
+ "added_overrides": [
+  "termination.object_orientation_threshold=0.6"
+ ],
+ "overrides": [
+  "objective.object_task_rotation_beta=4.5",
+  "termination.object_orientation_threshold=0.6"
+ ],
+ "fork_pair": {
+  "model": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10/model_36432.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/fork/model_36432.safetensors",
+   "sha256": "dc34e3009039d22aa4e11d83dd04fb27d8a1227ae1a0b177778b4afd9952e442",
+   "size": 24993192,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "rsi": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10/rsi_36432.safetensors",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/fork/rsi_36432.safetensors",
+   "sha256": "25da0cfecc246573ac611220eada3f3bdeb1b7bf7557651535846b15c5d64bce",
+   "size": 3738684,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "source_config": {
+  "hydra/.hydra/config.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10/hydra/.hydra/config.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/source/hydra/.hydra/config.yaml",
+   "sha256": "b98ababbac1d17b5dc02a27ff9780fa18a1a1cbc44573cf33b7989ea377b76d8",
+   "size": 8194,
+   "copied_at": "2026-10-27 17:52:55"
+  },
+  "hydra/.hydra/overrides.yaml": {
+   "source": "/root/autodl-tmp/haoran.zhang/fc_runs/T1fix/B/ep10/hydra/.hydra/overrides.yaml",
+   "dest": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/source/hydra/.hydra/overrides.yaml",
+   "sha256": "60627db1ac17e5f284a94c3ad9fdc634897a327af67d022c44e4ed9888a11957",
+   "size": 607,
+   "copied_at": "2026-10-27 17:52:55"
+  }
+ },
+ "hull_cache": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/arms/ep10-BT/fc_cache",
+ "hull_object_key": "b1a56fe315a143bd",
+ "hull_files": 29,
+ "hull_before": "tree (nv-v2d_runin: 18 hulls vs stock 17)",
+ "prepared_at": "2026-10-27 17:52:55",
+ "launched": true
+}

@@ -1,0 +1,30 @@
+Bootstrap: localimage
+From: /l/users/han.zhou/v2d/images/base_pytorch2.5.1-cu124-devel.sif
+
+%files
+    modules/v2d_common /workspace/v2d_common
+    modules/v2d_mv /workspace/v2d_mv
+    modules/v2d_grounding_dino /workspace/v2d_grounding_dino
+
+%post
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update && apt-get install -y libgl1 libglib2.0-0 git wget && rm -rf /var/lib/apt/lists/*
+
+    git clone https://github.com/IDEA-Research/GroundingDINO.git /tmp/GroundingDINO && \
+      cd /tmp/GroundingDINO && \
+      FORCE_CUDA=1 TORCH_CUDA_ARCH_LIST="7.0;7.5;8.0;8.6;8.9;9.0" pip install --no-build-isolation . && \
+      cd / && rm -rf /tmp/GroundingDINO
+
+    pip install "transformers==4.27.4"
+    pip install huggingface-hub requests Pillow opencv-python
+
+    export HF_HOME=/opt/huggingface
+    python -c "from transformers import AutoTokenizer, BertModel; AutoTokenizer.from_pretrained('bert-base-uncased'); BertModel.from_pretrained('bert-base-uncased')"
+
+    pip install -e "/workspace/v2d_common[io]" -e /workspace/v2d_mv -e /workspace/v2d_grounding_dino/lib
+
+%environment
+    export HF_HOME=/opt/huggingface
+    export HF_HUB_OFFLINE=1
+    export TRANSFORMERS_OFFLINE=1
+    export PYTHONUNBUFFERED=1

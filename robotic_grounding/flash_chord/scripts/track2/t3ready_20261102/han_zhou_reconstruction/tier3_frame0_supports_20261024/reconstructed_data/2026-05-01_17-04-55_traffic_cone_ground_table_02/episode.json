@@ -1,0 +1,15 @@
+{
+ "episode_index": 17,
+ "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+ "object": "traffic_cone",
+ "task": "Walk over to the traffic cone on the ground, pick up the cone with both hands and place it on the round table.",
+ "frames": 440,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.34646284580230713,
+  "median": 0.1763138622045517,
+  "max": 6.618932247161865
+ },
+ "support": "../../supports/2026-05-01_17-04-55_traffic_cone_ground_table_02"
+}

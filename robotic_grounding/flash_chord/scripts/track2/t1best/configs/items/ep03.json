@@ -1,0 +1,73 @@
+{
+ "item": "ep03",
+ "role": "set",
+ "in_set": true,
+ "episode": 3,
+ "object": "contigo_coffee_mug",
+ "sequence_id": "2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05",
+ "scene_support": true,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "source": "rolling start C3r2_runin (C3r2_runin/eval/ep03)",
+ "pinned": {
+  "iteration": 36000,
+  "run": "C3r2_runin/ep03",
+  "model": "model_36000.safetensors",
+  "model_sha256": "2d1260efc443bb4c7fe631a520e81b94818f595180166b9929a4043b32dbafe9",
+  "model_size": 24993192,
+  "rsi": "rsi_36000.safetensors",
+  "rsi_sha256": "3d1cca14ed87af9938edab2eafdf2243bb53182ce0f665b1e8fd80006eb78db8",
+  "rsi_size": 4034564,
+  "trained_by": "b39b69be6c2f",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep03/model_36000.safetensors",
+  "sha256": "9224384118fef4d1bec48dfd0501db20d2424785377ee34d0c95a2bb425514e5",
+  "size": 46052664,
+  "max_rel_diff": 3.7670135498046875e-05,
+  "exported_by": "b39b69be6c2f",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2_runin",
+  "scene_support": true,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 3,
+  "prior_mean_auc": 0.9857554417413574,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.9618918054,
+   "auc_sd": 0.1024470307,
+   "auc_min": 0.5267285531,
+   "auc_max": 0.9882362356,
+   "sp_pass": 19,
+   "mp_pass": 19,
+   "mppe_mean_cm": 2.497487193
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_runin/ep03",
+   "start": "scratch",
+   "end": "stopped after model_44000 (manual_plateau)",
+   "code": "b39b69be6c2f",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-27_11-50-10_contigo_coffee_mug_handle_table_05/robot_name=g1/data.parquet'",
+    "scene.support=true",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_runin/ep03",
+    "hydra.run.dir=<RUNS>/C3r2_runin/ep03/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.early_stop_help_zero_tail=0",
+    "training.max_iterations=150000"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  }
+ ]
+}

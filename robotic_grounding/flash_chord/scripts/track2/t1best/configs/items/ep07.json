@@ -1,0 +1,74 @@
+{
+ "item": "ep07",
+ "role": "set",
+ "in_set": true,
+ "episode": 7,
+ "object": "iron",
+ "sequence_id": "2026-05-29_15-20-43_iron_round_table_02",
+ "scene_support": true,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "source": "5x Oct-21 (c3r2_official, arm C3r2_wide)",
+ "pinned": {
+  "iteration": 17950,
+  "run": "C3r2_wide/ep07",
+  "model": "model_17950.safetensors",
+  "model_sha256": "9aa5964dfc1f23c5d967b74214c9f8fee134d0c3598c496421b93bc3542a1b6b",
+  "model_size": 24993000,
+  "rsi": "rsi_17950.safetensors",
+  "rsi_sha256": "c8589075c62cb081a65d9413d9337b02025c47adebb107424342fd8598724ea7",
+  "rsi_size": 4685084,
+  "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep07/model_17950.safetensors",
+  "sha256": "a54f0c6ea1c02b106369facf2898b4a43dc7a2d3f72d33cd9b788c76579476f2",
+  "size": 46052504,
+  "max_rel_diff": null,
+  "exported_by": "61fa5d31ff80",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2",
+  "scene_support": true,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 5,
+  "prior_mean_auc": 1.0,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.9999720982,
+   "auc_sd": 9.707761913e-05,
+   "auc_min": 0.9995814732,
+   "auc_max": 1.0,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 0.3167562651
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_wide/ep07",
+   "start": "scratch",
+   "end": "final.json model_17950 (help_zero_tail)",
+   "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-29_15-20-43_iron_round_table_02/robot_name=g1/data.parquet'",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_wide/ep07",
+    "training.max_iterations=45000",
+    "logging.mode=<WANDB_MODE>",
+    "[logging.entity=<WANDB_ENTITY>]",
+    "[logging.project=<WANDB_PROJECT>]",
+    "logging.experiment=C3r2_wide",
+    "logging.run_name=ep07_iron",
+    "logging.upload_checkpoints=false"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+[1/5] estimating static phase poses
+    desk_initial [0.0251 0.2041 3.3398]
+    floor_initial [-0.2053  1.1079  3.3906]
+    floor_final [0.3635 1.0831 3.1523]
+    desk_final [0.0761 0.1528 3.2978]
+[2/5] fitting and decoding dynamic keyframe hypotheses
+    A [0, 24, 24, 24, 24, 2, 24, 19, 3, 3, 20, 1, 21, 3, 10, 3, 20, 3, 21, 0]
+    B [0, 19, 0, 3, 1, 2, 7, 6, 14, 13, 3, 0]
+    C [0, 23, 0, 2, 24, 24, 24, 24, 5, 5, 24, 24, 24, 24, 24, 0]
+[3/5] interpolating the selected trajectory
+[4/5] per-frame silhouette translation alignment
+[5/5] local rigid-pose refinement from image evidence
+wrote /work/outputs/object_poses_world.npz (922 frames) in 9.11 minutes

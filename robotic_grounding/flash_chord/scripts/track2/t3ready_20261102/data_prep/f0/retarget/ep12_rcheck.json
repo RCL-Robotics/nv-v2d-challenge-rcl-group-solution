@@ -1,0 +1,156 @@
+{
+ "episode": 12,
+ "sequence_id": "2026-04-25_17-20-04_black_platform_turn_05",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+ "written": "2026-10-24 19:21:38",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-04-25_17-20-04_black_platform_turn_05_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 700, 'robot_joint_positions': 700, 'object_body_position': 700, 'object_root_position': 700, 'ik_error_per_frame': 700}; episodes.json 700; manifest 700; Tier-1 manifest 700"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_f0/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 7.09e-08 m / 1.16e-07 rad; root body-relative drift 0.00e+00 m / 1.67e-07 rad; map rotation 112.46 deg, translation [-2.9726, -0.3627, 1.4009]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_f0": "accepted (7.1e-08 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "frame_references_opus_v2": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "floor-only: 2026-04-25_17-20-04_black_platform_turn_05_support.usda: present, geometry False -> scene.support=false"
+  },
+  "G9_robot_equal_opus": {
+   "ok": true,
+   "detail": "max |robot f0 - robot opus| 8.3e-06 (tol 0.001); ik_num_iterations differ on 0 frames by <= 0 (tol 2); hand-contact frames changed 267"
+  },
+  "G10_frame_chain": {
+   "ok": true,
+   "detail": "object track vs t3f0_frames chain: 3.0e-08 m, 5.2e-06 deg"
+  }
+ },
+ "parquet_sha256": "0133f928c30faf2e9aa33175a239cb8264549d4738aa5e81f69fe3058e87187a",
+ "packer_emulation": {
+  "frame_references_f0": {
+   "result": "accepted",
+   "resid_m": 7.090408330638288e-08,
+   "resid_rad": 1.1542389828584842e-07
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.9173 m, 3.14 rad). Check frame indices and reference versions."
+  },
+  "frame_references_opus_v2": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.9067 m, 3.135 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.1536 m, 0.5015 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "floor-only",
+ "vs_opus_parquet": {
+  "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-04-25_17-20-04_black_platform_turn_05/robot_name=g1/data.parquet",
+  "parquet_sha256": "a525be8d17711250cbee2b80a6d8a07ac30d1bcb2466683b7c7d58888c84bd6f",
+  "robot_max_abs_diff": {
+   "robot_root_position": 4.76837158203125e-07,
+   "robot_root_wxyz": 9.033828973770142e-07,
+   "robot_joint_positions": 8.32974910736084e-06,
+   "ee_pose_w": 9.5367431640625e-07,
+   "ik_error_per_frame": 2.6226043701171875e-06,
+   "frame_task_errors": 8.344650268554688e-07
+  },
+  "ik_num_iterations_max_diff_frames": [
+   0.0,
+   0
+  ],
+  "hand_contact_frames_f0_left_right": [
+   309,
+   295
+  ],
+  "hand_contact_frames_opus_left_right": [
+   392,
+   319
+  ],
+  "hand_contact_frames_changed": 267,
+  "object_pos_change_cm_max": 6.79
+ },
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.7957339882850647,
+   0.9303223043680191,
+   0.9943143129348755
+  ],
+  "hand_contact_frames_left_right": [
+   309,
+   295
+  ],
+  "robot_root_z_median_min_max": [
+   0.7528468072414398,
+   0.3731091022491455,
+   0.8156641721725464
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.8183028399944305,
+   1.0950170695781707,
+   1.1786532402038574
+  ],
+  "hand_contact_frames_left_right": [
+   234,
+   24
+  ],
+  "robot_root_z_median_min_max": [
+   0.7464698553085327,
+   0.39019790291786194,
+   0.8116700053215027
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": 0.05000031593761639,
+ "retarget_object_ground_correction": "minimum=-0.0082 m, requested=+0.0087 m, applied=+0.0087 m, cap=0.0100 m",
+ "all_ok": true
+}

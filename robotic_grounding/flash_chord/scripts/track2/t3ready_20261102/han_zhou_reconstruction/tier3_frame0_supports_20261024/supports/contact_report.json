@@ -1,0 +1,164 @@
+{
+ "1": {
+  "object": "vacuum",
+  "support": "tall_bar_stool",
+  "rest_frames": 0,
+  "rest_with_support_below": 0,
+  "gap_median_cm": null,
+  "gap_p10_p90_cm": null,
+  "leaning_min_dist_cm": null
+ },
+ "2": {
+  "object": "blue_easter_basket",
+  "support": "round_table",
+  "rest_frames": 163,
+  "rest_with_support_below": 26,
+  "gap_median_cm": 0.003208780713515047,
+  "gap_p10_p90_cm": [
+   0.003208780713515047,
+   0.003208780713515047
+  ],
+  "leaning_min_dist_cm": 31.722499946146325
+ },
+ "3": {
+  "object": "contigo_coffee_mug",
+  "support": "round_table",
+  "rest_frames": 435,
+  "rest_with_support_below": 87,
+  "gap_median_cm": -0.2813136631180768,
+  "gap_p10_p90_cm": [
+   -0.6104596896366998,
+   0.28036731496874356
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "6": {
+  "object": "monitor",
+  "support": "round_table",
+  "rest_frames": 378,
+  "rest_with_support_below": 76,
+  "gap_median_cm": 0.7519248482176333,
+  "gap_p10_p90_cm": [
+   -0.16140879734805047,
+   0.9163797092712145
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "7": {
+  "object": "iron",
+  "support": "round_table",
+  "rest_frames": 561,
+  "rest_with_support_below": 113,
+  "gap_median_cm": 1.275702103667764,
+  "gap_p10_p90_cm": [
+   0.7048943064959845,
+   2.2061879408614904
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "9": {
+  "object": "big_red_bowl",
+  "support": "skinny_wood_chair",
+  "rest_frames": 256,
+  "rest_with_support_below": 44,
+  "gap_median_cm": -2.0297039126764505,
+  "gap_p10_p90_cm": [
+   -2.0297039126764505,
+   28.370579458200613
+  ],
+  "leaning_min_dist_cm": 50.90763535107512
+ },
+ "11": {
+  "object": "light_blue_book",
+  "support": "white_desk",
+  "rest_frames": 165,
+  "rest_with_support_below": 30,
+  "gap_median_cm": -1.8964686070482295,
+  "gap_p10_p90_cm": [
+   -1.8964686070482295,
+   1.0546340533793996
+  ],
+  "leaning_min_dist_cm": 33.18755914717617
+ },
+ "13": {
+  "object": "snack_box",
+  "support": "white_desk",
+  "rest_frames": 240,
+  "rest_with_support_below": 48,
+  "gap_median_cm": -2.40411086601402,
+  "gap_p10_p90_cm": [
+   -3.5706197624887137,
+   -2.40411086601402
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "16": {
+  "object": "spray_bottle",
+  "support": "white_desk",
+  "rest_frames": 122,
+  "rest_with_support_below": 25,
+  "gap_median_cm": -2.0405032539234758,
+  "gap_p10_p90_cm": [
+   -2.0405032539234758,
+   -2.0405032539234758
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "17": {
+  "object": "traffic_cone",
+  "support": "round_table",
+  "rest_frames": 111,
+  "rest_with_support_below": 23,
+  "gap_median_cm": -4.93647488622877,
+  "gap_p10_p90_cm": [
+   -4.93647488622877,
+   -4.93647488622877
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "20": {
+  "object": "rice_cooker",
+  "support": "round_table",
+  "rest_frames": 553,
+  "rest_with_support_below": 111,
+  "gap_median_cm": 1.880217656438543,
+  "gap_p10_p90_cm": [
+   1.506403090435826,
+   2.0317042651257555
+  ],
+  "leaning_min_dist_cm": null
+ },
+ "25": {
+  "object": "cyan_water_bottle",
+  "support": "round_table",
+  "rest_frames": 210,
+  "rest_with_support_below": 41,
+  "gap_median_cm": 0.4323978335560863,
+  "gap_p10_p90_cm": [
+   -0.3126482574897005,
+   0.4323978335560863
+  ],
+  "leaning_min_dist_cm": 67.3761717876354
+ },
+ "27": {
+  "object": "woven_basket",
+  "support": "white_desk",
+  "rest_frames": 140,
+  "rest_with_support_below": 24,
+  "gap_median_cm": -2.0828978266355325,
+  "gap_p10_p90_cm": [
+   -2.0828978266355325,
+   -2.0828978266355325
+  ],
+  "leaning_min_dist_cm": 6.300648423400918
+ },
+ "28": {
+  "object": "squeegee",
+  "support": "tall_bar_stool",
+  "rest_frames": 0,
+  "rest_with_support_below": 0,
+  "gap_median_cm": null,
+  "gap_p10_p90_cm": null,
+  "leaning_min_dist_cm": null
+ }
+}

@@ -1,0 +1,18 @@
+phases: [(0, 103, 'static'), (103, 135, 'moving'), (135, 220, 'static'), (220, 252, 'moving'), (252, 340, 'static'), (340, 376, 'moving'), (376, 467, 'static')]
+flip test per static phase (seg, IoU/handle-chamfer px kept, IoU/chamfer yaw+180, flipped):
+   seg 0: keep 0.945 / 2.36 px   flip 0.925 / 7.38 px   -> False
+   seg 39: keep 0.941 / 2.65 px   flip 0.947 / 4.78 px   -> False
+   seg 78: keep 0.950 / 1.99 px   flip 0.950 / 3.17 px   -> False
+   seg 121: keep 0.963 / 1.59 px   flip 0.926 / 5.53 px   -> False
+  fit: data 0.0519  image-scale 1.043
+re-anchor factors per frame: min 1.0165 max 1.0254
+| phase | frames | IoU base | IoU ours (+scale nuisance) | IoU ours final | rot diff ours-base mean/max (deg) | rot jitter base / ours (deg/frame) | z diff ours-base mean / median (cm) | wheel height above plane base / ours (cm) |
+| static | 0-102 | 0.859 | 0.945 | 0.867 | 1.7 / 5.7 | 0.95 / 0.01 | -0.2 / -0.1 | -2.8 / -2.8 |
+| moving | 103-134 | 0.853 | 0.926 | 0.848 | 1.8 / 3.1 | 1.22 / 0.94 | 0.9 / 0.4 | -2.2 / -2.7 |
+| static | 135-219 | 0.871 | 0.942 | 0.853 | 2.4 / 4.0 | 0.57 / 0.01 | 1.8 / -0.1 | -2.1 / -2.7 |
+| moving | 220-251 | 0.897 | 0.948 | 0.867 | 2.1 / 2.8 | 0.73 / 0.19 | 5.6 / 6.0 | 0.0 / -2.2 |
+| static | 252-339 | 0.891 | 0.949 | 0.871 | 2.9 / 4.6 | 0.55 / 0.00 | 0.7 / 0.1 | -1.0 / -1.8 |
+| moving | 340-375 | 0.898 | 0.959 | 0.881 | 3.7 / 4.6 | 0.65 / 0.28 | 0.9 / 1.0 | -1.1 / -1.9 |
+| static | 376-466 | 0.883 | 0.962 | 0.875 | 3.3 / 3.8 | 0.54 / 0.02 | 0.2 / -0.0 | -1.1 / -2.1 |
+total |z diff| episode: mean 2.34 cm
+max GPU mem 1.78 GB, run time 63.1 s

@@ -1,0 +1,28 @@
+{
+ "ep": 2,
+ "seq": "2026-06-02_10-04-42_blue_easter_basket_place_10",
+ "frames": 980,
+ "n_mesh_v": 263964,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.7797809466693952,
+ "verts": true,
+ "plane_normal": [
+  0.10116858899052021,
+  -0.0009166797861669152,
+  0.9948688739225069
+ ],
+ "plane_offset": 0.9627911910418804,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "e2d79e4069e321a56b443c54682393e0aefad31fa8e3a43c822edb4e81a52bb3",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "1796c7fda2bb2dbb9a1d2631b4edcca2e62f741355d35c8ee5e577ffda04af19",
+  "soma_params.npz": "3609b06c7a514d4f4fe37e36a2e48dab78e8223c95428d757337a88585547d58",
+  "ground_plane.json": "2b4ea9ce46bb055739f2943a9f8261b3a355b8ca9b07999d569291227e835165",
+  "reconstructed_mesh/output_aligned.glb": "802e074320c9b516bf2b66d26630584a74124e30dc2f479e05de1fb9c16344c4"
+ },
+ "seconds": 22.6
+}

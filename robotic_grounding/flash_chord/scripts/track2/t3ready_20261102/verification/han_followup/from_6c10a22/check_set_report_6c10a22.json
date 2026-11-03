@@ -1,0 +1,1473 @@
+{
+ "items": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/han_6c10a22_check/env-identity-hygiene/a2/tree_rg/robotic_grounding/flash_chord/scripts/track2/t3ready_20261102/set/set_items.json",
+ "items_sha256": "3559803efb63b5f5b305b6404e09285df603225623b6828c96e33ba16747afbf",
+ "config_dir": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/han_6c10a22_check/env-identity-hygiene/a2/tree_rg/robotic_grounding/flash_chord/src/flash_chord/configs",
+ "episodes": [
+  {
+   "episode": 0,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 1,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 2,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.object_position_threshold",
+        "0.21"
+       ],
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 3,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 4,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.object_position_threshold",
+        "0.20"
+       ],
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 5,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 6,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 7,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 8,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 9,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 10,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 11,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 12,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 13,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.object_position_threshold",
+        "0.25"
+       ],
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 14,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 15,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 16,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 17,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 18,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 19,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.object_position_threshold",
+        "0.20"
+       ],
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 20,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 21,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 22,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 23,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 24,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 25,
+   "kind": "retry",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": false,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true
+    },
+    {
+     "stage": "retry_C90",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "R": {
+      "fork_sha256_is_f0_checkpoint": true,
+      "resume_from_fork_copy": true,
+      "resume_true": true,
+      "start_update_is_f0_iteration": true,
+      "final_resumed_from_fork": true,
+      "recipe_termination_overrides_present": true,
+      "recipe_termination_overrides": [
+       [
+        "termination.object_position_threshold",
+        "0.20"
+       ],
+       [
+        "termination.palm_position_threshold",
+        "0.25"
+       ]
+      ]
+     },
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 26,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 27,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 28,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  },
+  {
+   "episode": 29,
+   "kind": "f0",
+   "train_commit": "61fa5d31ff8054bf1e5cf5375ef0957e54d2729b",
+   "stages": [
+    {
+     "stage": "f0",
+     "trained_the_evaluated_policy": true,
+     "A_composes": true,
+     "A_n_keys": 237,
+     "B": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "overrides_equal_saved": true,
+      "ok": true
+     },
+     "stored_config_equals_file": true,
+     "checkpoint_sha256_ok": true,
+     "D": {
+      "changed": [],
+      "missing": [],
+      "new_keys": [],
+      "ok": true
+     },
+     "final_json_names_checkpoint": true,
+     "iteration_stored_vs_name": true,
+     "E_export_source_is_checkpoint": true,
+     "export_sha256_ok": true,
+     "rollout_names_evaluated_file": true,
+     "rollout_reference_is_locked_input": true
+    }
+   ]
+  }
+ ],
+ "failures": [],
+ "notes": [],
+ "summary": {
+  "episodes": 30,
+  "f0_items": 19,
+  "retry_items": 11,
+  "stages": 41,
+  "stages_composing": 41,
+  "B_ok": 41,
+  "D_ok": 41,
+  "R_ok": 11,
+  "evaluated_policies": 30,
+  "E_ok": 30,
+  "rollouts_name_evaluated_file": 30,
+  "new_keys_union": [],
+  "files_read": true,
+  "hash_checked": true
+ },
+ "ok": true
+}

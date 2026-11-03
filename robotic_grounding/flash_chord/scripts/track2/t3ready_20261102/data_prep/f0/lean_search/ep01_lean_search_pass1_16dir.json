@@ -1,0 +1,166 @@
+{
+ "ep": 1,
+ "written": "2026-10-24 19:12:00",
+ "rule": "t3f0_lean_search.py -- Tier-3 f0 prep, leaning episodes only (ep01 vacuum; optional for ep28): GT-free search for the\nSMALLEST horizontal correction of Han's stool pose that makes the frame-0 rest physically stable. NEW FILE (2026-10-24).\nWhy: the task text says the object leans on the stool and the frame-0 object pose is the (allowed) true first-frame pose,\nbut with Han's stool (fit IoU 0.61 for ep01) + the anchor-contact rule the passive settle test of the frame-0 rest fails\n(the object tips over). Candidates: the stool contact boxes at Han's T_world_mesh_contact (t3f0_supports.py record minus its\nanchor-contact shift) translated along 16 horizontal directions until the frame-0 object surface is 0.2 cm from the box\nunion (shift <= 8 cm), kept only if the whole reference object path stays >= -0.5 cm from every box; each candidate gets the\npassive settle test of the anchor run (t3f0_physcheck.settle: MuJoCo-Warp CPU, training sim settings, 10 s). The chosen\ncandidate = the passing one with the smallest shift; written to tmp_analysis/tier3/f0/supports/epNN_lean_search.json,\nwhich t3f0_supports.py then applies (recorded there). No GT, no clean data. CPU only.",
+ "n_directions": 16,
+ "shift_max_m": 0.08,
+ "contact_target_m": 0.002,
+ "candidates": [
+  {
+   "direction_deg": 0.0,
+   "shift_cm": [
+    4.92,
+    0.0,
+    0.0
+   ],
+   "shift_norm_cm": 4.92,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.2,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 47.369,
+    "final_rot_deg": 75.658,
+    "final_disp_cm": [
+     -35.98,
+     2.06,
+     -30.74
+    ]
+   }
+  },
+  {
+   "direction_deg": 22.5,
+   "shift_cm": [
+    1.4,
+    0.58,
+    0.0
+   ],
+   "shift_norm_cm": 1.52,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.32,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 47.57,
+    "final_rot_deg": 76.92,
+    "final_disp_cm": [
+     -36.19,
+     2.98,
+     -30.73
+    ]
+   }
+  },
+  {
+   "direction_deg": 45.0,
+   "shift_cm": [
+    0.97,
+    0.97,
+    0.0
+   ],
+   "shift_norm_cm": 1.38,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.27,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 46.919,
+    "final_rot_deg": 75.653,
+    "final_disp_cm": [
+     -35.37,
+     2.26,
+     -30.74
+    ]
+   }
+  },
+  {
+   "direction_deg": 67.5,
+   "shift_cm": [
+    0.91,
+    2.19,
+    0.0
+   ],
+   "shift_norm_cm": 2.37,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.21,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 2.543,
+    "final_rot_deg": 5.421,
+    "final_disp_cm": [
+     -1.76,
+     1.8,
+     -0.34
+    ]
+   }
+  },
+  {
+   "direction_deg": 90.0,
+   "shift_cm": [
+    0.0,
+    2.22,
+    0.0
+   ],
+   "shift_norm_cm": 2.22,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.34,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 2.996,
+    "final_rot_deg": 6.18,
+    "final_disp_cm": [
+     -2.38,
+     1.77,
+     -0.45
+    ]
+   }
+  },
+  {
+   "direction_deg": 112.5,
+   "shift_cm": [
+    -0.97,
+    2.34,
+    0.0
+   ],
+   "shift_norm_cm": 2.53,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.25,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 45.821,
+    "final_rot_deg": 75.761,
+    "final_disp_cm": [
+     -33.89,
+     2.41,
+     -30.74
+    ]
+   }
+  },
+  {
+   "direction_deg": 135.0,
+   "shift_cm": [
+    -2.35,
+    2.35,
+    0.0
+   ],
+   "shift_norm_cm": 3.32,
+   "frame0_sdf_cm": 0.2,
+   "path_min_sdf_cm": 0.24,
+   "path_ok": true,
+   "settle": {
+    "ok": false,
+    "final_dp_cm": 46.246,
+    "final_rot_deg": 75.713,
+    "final_disp_cm": [
+     -34.49,
+     2.05,
+     -30.74
+    ]
+   }
+  }
+ ],
+ "chosen": null,
+ "chosen_shift_cm": null
+}

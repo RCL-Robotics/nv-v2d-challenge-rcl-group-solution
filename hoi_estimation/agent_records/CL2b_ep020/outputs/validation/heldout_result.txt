@@ -1,0 +1,9 @@
+phase | held-out frames | IoU baseline | IoU ours(held-out fit) | NCC baseline | NCC ours(held-out fit)
+0-211 (static) | 53 | 0.886 | 0.946 | 0.199 | 0.311
+212-281 (moving) | 17 | 0.898 | 0.947 | 0.270 | 0.482
+282-310 (static) | 8 | 0.888 | 0.939 | 0.293 | 0.521
+311-426 (moving) | 29 | 0.902 | 0.931 | 0.416 | 0.584
+427-552 (static) | 31 | 0.882 | 0.926 | 0.265 | 0.418
+all | 138 | 0.890 | 0.938 | 0.274 | 0.426
+fraction of held-out frames where ours(held-out) IoU > baseline IoU: 0.99
+fraction of held-out frames where ours(held-out) NCC > baseline NCC: 0.98

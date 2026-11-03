@@ -1,0 +1,52 @@
+{
+  "repeatability_bitwise_equal": true,
+  "output_array_sha256": "57fed02f853297c9d0a1c5f8947601cd2ed6ab830a6dc7ec5519cda3d0372ed1",
+  "raw_mask_iou_before_mean": 0.7829443829325325,
+  "raw_mask_iou_after_mean": 0.8331682911978635,
+  "raw_mask_iou_improved_frames": 246,
+  "raw_mask_iou_compared_frames": 246,
+  "rotation_corrections_degrees": {
+    "265": 26.15263742645443,
+    "266": 27.294949237812016,
+    "383": 28.63900003982755
+  },
+  "heading_spike_frame_steps": {
+    "265": {
+      "before": [
+        25.079533498135763,
+        1.1677562372138169e-14
+      ],
+      "after": [
+        2.197341584725198,
+        1.1423118113575952
+      ]
+    },
+    "266": {
+      "before": [
+        1.1677562372138169e-14,
+        28.489282974836755
+      ],
+      "after": [
+        1.1423118113575952,
+        2.0806903059246475
+      ]
+    },
+    "383": {
+      "before": [
+        29.419784592520944,
+        27.933537634689436
+      ],
+      "after": [
+        2.091699122446373,
+        1.0670321977431774
+      ]
+    }
+  },
+  "input_sha256": {
+    "camera.json": "5393779b3d36470e3b3d3cf860161ec9ce1ba54bafd34430fb9e2d9449b0a229",
+    "reconstruction.npz": "1951b74ff6a8a3d32c8ca442d36306db4cba9ec00a02d19698bd1111215a4433",
+    "object_mesh.glb": "473b0466c0a05c3f2e586e793c4dc81f4c1281534d1402809f32e94e7e6e915d",
+    "video.mp4": "2d35a36d5680ebcffeb88dcf0994febdf577c5f7a65ae805ca0272aa867fd35d",
+    "masks.h5": "8c135d14f19efeff18afad0d2cda8bbb83cdec58650953bcf86485de2bd3218b"
+  }
+}

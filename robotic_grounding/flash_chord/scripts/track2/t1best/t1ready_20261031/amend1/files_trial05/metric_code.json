@@ -1,0 +1,210 @@
+{
+ "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv",
+ "metric_files": {
+  "AUC": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/metric_code/track_2/AUC.py",
+  "SP-SR": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/metric_code/track_2/SP-SR.py",
+  "MP-SR": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/metric_code/track_2/MP-SR.py",
+  "MPPE": "/root/autodl-tmp/haoran.zhang/v2d_submission_kit_src/v2d_submission_kit/metric_code/track_2/MPPE.py"
+ },
+ "reference_root": "/root/autodl-tmp/haoran.zhang/data/video_to_data_challenge/track_2/tier_1_multiview_caption",
+ "overall_float32": {
+  "AUC": 0.9309696268444406,
+  "SP-SR": 1.0,
+  "MP-SR": 1.0,
+  "MPPE": 0.930148212623876
+ },
+ "per_episode_float32": {
+  "0": {
+   "AUC": 0.9976703084832905,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.42837550559398396
+  },
+  "1": {
+   "AUC": 0.8002008032128514,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.938506060058233
+  },
+  "2": {
+   "AUC": 0.977423469387755,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.5271429424281808
+  },
+  "3": {
+   "AUC": 0.9803937259923176,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.6170040443455136
+  },
+  "4": {
+   "AUC": 0.7503891656288917,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.5630309901148256
+  },
+  "5": {
+   "AUC": 0.9632976071784647,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.7371165755547425
+  },
+  "6": {
+   "AUC": 0.9680631868131868,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.7769535559626511
+  },
+  "7": {
+   "AUC": 1.0,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.328045360984596
+  },
+  "8": {
+   "AUC": 0.9676024011299436,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.949427282136839
+  },
+  "9": {
+   "AUC": 0.929022988505747,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.7172053633693405
+  },
+  "10": {
+   "AUC": 0.8946788413098237,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.1516164498811412
+  },
+  "11": {
+   "AUC": 0.9775694444444445,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.6374944884794629
+  },
+  "12": {
+   "AUC": 0.9863392857142856,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.5753274906974833
+  },
+  "13": {
+   "AUC": 0.9583107375271149,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.7444719721378489
+  },
+  "14": {
+   "AUC": 0.8294310171198389,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.5088439514433436
+  },
+  "15": {
+   "AUC": 0.9865384615384616,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.6367499807120409
+  },
+  "16": {
+   "AUC": 0.9931865828092243,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.45884548198143593
+  },
+  "17": {
+   "AUC": 0.93125,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.0667062586235996
+  },
+  "18": {
+   "AUC": 0.9939539627039626,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.5244836763765619
+  },
+  "19": {
+   "AUC": 0.9183126410835214,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.035412303928896
+  },
+  "20": {
+   "AUC": 0.9851943942133816,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.5146861443328955
+  },
+  "21": {
+   "AUC": 0.7547935103244838,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.49832976168017
+  },
+  "22": {
+   "AUC": 0.9767906815020863,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.708247120750488
+  },
+  "23": {
+   "AUC": 0.9906844608879493,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.4681300529397348
+  },
+  "24": {
+   "AUC": 0.9994986631016043,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.2882124610412757
+  },
+  "25": {
+   "AUC": 0.7403230500582072,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 2.024398809126648
+  },
+  "26": {
+   "AUC": 0.9970104633781764,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.3745351939115674
+  },
+  "27": {
+   "AUC": 0.9972345132743363,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 0.4048768499686055
+  },
+  "28": {
+   "AUC": 0.8211032388663968,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 3.0549453243827256
+  },
+  "29": {
+   "AUC": 0.8628211991434689,
+   "SP-SR": 1.0,
+   "MP-SR": 1.0,
+   "MPPE": 1.6453249257714502
+  }
+ },
+ "mean_of_per_episode_float32": {
+  "AUC": 0.9309696268444406,
+  "SP-SR": 1.0,
+  "MP-SR": 1.0,
+  "MPPE": 0.930148212623876
+ },
+ "overall_float64": {
+  "AUC": 0.9309696268444406,
+  "SP-SR": 1.0,
+  "MP-SR": 1.0,
+  "MPPE": 0.930148212623876
+ }
+}

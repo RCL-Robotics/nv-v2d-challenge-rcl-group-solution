@@ -1,0 +1,91 @@
+{
+  "budget": {
+    "available": [
+      1024,
+      1024,
+      768,
+      384
+    ],
+    "used": [
+      640,
+      576,
+      768,
+      384
+    ]
+  },
+  "config_rewrite": {
+    "actor_hidden_dims": [
+      1024,
+      1024,
+      768,
+      384
+    ],
+    "critic_hidden_dims": [
+      1024,
+      512,
+      256,
+      128
+    ],
+    "removed_keys": [
+      "training.coordinate",
+      "training.early_stop_help_zero_tail",
+      "objective.object_task_weight",
+      "objective.object_task_position_beta",
+      "objective.object_task_rotation_beta",
+      "env.objective.object_task_weight",
+      "env.objective.object_task_position_beta",
+      "env.objective.object_task_rotation_beta",
+      "curriculum.stages.0.objective_weights.object_task",
+      "training.curriculum.stages.0.objective_weights.object_task"
+    ],
+    "replaced_subtrees": [
+      "env.reset",
+      "reset"
+    ],
+    "source_reset_target": "flash_chord.lifecycle.rsi_reset.RSIReconBodyResetConfig"
+  },
+  "coordinate_layout_sha256": "ec8ba6a699f491d10dd2f186f79aaae0afaee1f9d67250f028d8e112344b065d",
+  "destination": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1/export/ep13/model_90000.safetensors",
+  "destination_sha256": "f09bd6a74a235be0f5a7b36023edab491d289b79311861394eb48053bb116534",
+  "dev_restore": {
+    "finite": true,
+    "max_abs_action": 524.7114868164062,
+    "max_abs_diff": 9.1552734375e-05,
+    "max_rel_diff": 5.054473876953125e-05
+  },
+  "device": "cpu",
+  "export_format": "coordinate_e2_v1",
+  "iteration": "90000",
+  "leaf_count": 72,
+  "log_std_equal": true,
+  "max_abs_diff": 9.1552734375e-05,
+  "max_rel_diff": 5.054473876953125e-05,
+  "probe_count": 8192,
+  "probe_seed": 0,
+  "report_path": "/root/autodl-tmp/haoran.zhang/tmp_analysis/tier3/f0_retry/eval/ep13/retry/r2_tol0.0001_try1/export/ep13/export_report.json",
+  "source": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep13/model_90000.safetensors",
+  "source_kind": "coordinated",
+  "source_sha256": "0bf83bedc12347fb9209f99b5d712b862dc1c60ca9898621cbd97c49e6f3252e",
+  "status": "ok",
+  "stock_runtime": {
+    "algorithm": "ppo",
+    "collision_type": "CollisionPolicy",
+    "comparison": {
+      "finite": true,
+      "max_abs_action": 524.7114868164062,
+      "max_abs_diff": 9.1552734375e-05,
+      "max_rel_diff": 5.054473876953125e-05
+    },
+    "curriculum_stage_voc_scale": 0.0,
+    "embodiment_type": "G1Dex3",
+    "env_reset_type": "ReconBodyResetConfig",
+    "eval_code_sha256": "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1",
+    "flash_chord_module": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord/src/flash_chord/__init__.py",
+    "jax_backend": "cpu",
+    "leaf_count": 72,
+    "log_std_equal": true,
+    "path": "/root/autodl-tmp/haoran.zhang/code/video_to_data_8c778f9/robotic_grounding/flash_chord",
+    "verified": true
+  },
+  "tolerance": 0.0001
+}

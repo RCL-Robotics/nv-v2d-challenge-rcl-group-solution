@@ -1,0 +1,46 @@
+{
+  "frames": 781,
+  "dtype": "float64",
+  "all_finite": true,
+  "camera_distance_max_change_m": 1.3322676295501878e-15,
+  "rotation_determinant_range": [
+    0.9999999999999992,
+    1.0000000000000013
+  ],
+  "rotation_orthogonality_max": 1.3322676295501878e-15,
+  "rotation_change_deg_percentiles": [
+    9.250480784598187,
+    153.87614290102783,
+    162.81918674526912,
+    170.04556709347668,
+    178.14743291725674,
+    179.90133960144442
+  ],
+  "pixel_centre_change_percentiles": [
+    0.12236740530110428,
+    4.233179943562977,
+    5.200761410499246,
+    9.309863765839149,
+    12.652872290353232,
+    22.940413953206626
+  ],
+  "baseline_rotation_step_deg_percentiles": [
+    5.837479275867664,
+    19.354828452737266,
+    31.8883370761986,
+    122.98222353703332,
+    158.85209087108484
+  ],
+  "final_rotation_step_deg_percentiles": [
+    1.5102221340833752,
+    5.364673536610945,
+    7.0869279000164935,
+    11.947550126192557,
+    19.6378023224432
+  ],
+  "baseline_steps_over_45": 30,
+  "final_steps_over_45": 0,
+  "baseline_visible_mask_IoU_mean": 0.657038152217865,
+  "final_visible_mask_IoU_mean": 0.8327282667160034,
+  "mask_iou_improved_frames": 753
+}

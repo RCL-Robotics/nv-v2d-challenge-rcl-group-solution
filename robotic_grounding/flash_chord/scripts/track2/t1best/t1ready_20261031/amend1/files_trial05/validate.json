@@ -1,0 +1,30 @@
+{
+ "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/amend1/files/trial05_SUBMITTABLE_W3H_closest_to_mean/T1improve_W3H_tier1_trial05_SUBMITTABLE_closest_to_mean.csv",
+ "track": "track_2_tier1",
+ "problems": [],
+ "uploader_validate_submission": {
+  "ok": true,
+  "rows": 22989,
+  "episodes": 30
+ },
+ "provenance": {
+  "eval_script_sha256": [
+   "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+  ],
+  "eval_code_sha256": [
+   "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+  ],
+  "packer_script_sha256": [
+   "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+  ],
+  "uploader_script_sha256": [
+   "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+  ],
+  "code_commit_url": [
+   "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+  ]
+ },
+ "checkpoints_match_set": true,
+ "distinct_checkpoints": 30,
+ "ok": true
+}

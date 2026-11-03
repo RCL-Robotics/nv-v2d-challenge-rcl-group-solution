@@ -1,0 +1,26 @@
+{
+  "shape": [
+    700,
+    4,
+    4
+  ],
+  "dtype": "float64",
+  "finite": true,
+  "max_rotation_orthogonality_error": 2.030054222301736e-05,
+  "mean_mesh_displacement_from_baseline_m": 0.010585615941679038,
+  "max_frame_mean_mesh_displacement_from_baseline_m": 0.03283888223583017,
+  "edge_sensitivity": {
+    "(15, 40)": {
+      "baseline_pixels": 1.2347572237253188,
+      "result_pixels": 1.030717591047287
+    },
+    "(25, 65)": {
+      "baseline_pixels": 1.4158411719117845,
+      "result_pixels": 1.129698422210557
+    },
+    "(40, 100)": {
+      "baseline_pixels": 1.6030474602324623,
+      "result_pixels": 1.2419774159363337
+    }
+  }
+}

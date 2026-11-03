@@ -1,0 +1,11 @@
+[   81.5s] data loaded 859 frames
+[   81.9s] phases [('static_start', 0, 115), ('carried', 115, 777), ('static_end', 777, 859)]
+[  213.4s] stage 1 (refined hypotheses) done 3436
+[  246.8s] stage 2 (spin sweep) done 87312 states
+[  247.3s] viterbi done
+[  284.8s] joint refinement done
+[  285.2s] saved /work/outputs/object_poses_world.npz | peak GPU memory 5.41 GB
+
+real	4m48.151s
+user	4m47.018s
+sys	0m14.379s

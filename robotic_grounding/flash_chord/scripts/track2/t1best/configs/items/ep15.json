@@ -1,0 +1,75 @@
+{
+ "item": "ep15",
+ "role": "set",
+ "in_set": true,
+ "episode": 15,
+ "object": "wet_floor_sign",
+ "sequence_id": "2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08",
+ "scene_support": false,
+ "experiment": "g1_recon_body_coord_rsi_r2",
+ "source": "5x Oct-21 (c3r2_official, arm C3r2_wide)",
+ "pinned": {
+  "iteration": 20974,
+  "run": "C3r2_wide/ep15",
+  "model": "model_20974.safetensors",
+  "model_sha256": "16e14bcd737120d0dccb7acc5f5454daf90fd63024eef91264655d98d59f8af7",
+  "model_size": 24993048,
+  "rsi": "rsi_20974.safetensors",
+  "rsi_sha256": "8bffcbd190bad0299b787b8b50afe857eb0f6006725f66d67285fb1ace567987",
+  "rsi_size": 3388308,
+  "trained_by": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+  "hull_cache": "tree"
+ },
+ "export": {
+  "file": "ep15/model_20974.safetensors",
+  "sha256": "c571cb9ced6cc3c42106892f21f8688d001fad39027e6a412a57e257d355c126",
+  "size": 46052560,
+  "max_rel_diff": null,
+  "exported_by": "61fa5d31ff80",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2",
+  "scene_support": false,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 5,
+  "prior_mean_auc": 0.9367132867,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.9375786713,
+   "auc_sd": 0.001509481501,
+   "auc_min": 0.9343531469,
+   "auc_max": 0.9406468531,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 0.8762721832
+  }
+ },
+ "stages": [
+  {
+   "run": "C3r2_wide/ep15",
+   "start": "scratch",
+   "end": "final.json model_20974 (help_zero_tail)",
+   "code": "61fa5d31ff80 (flash_chord = f2923d61817e)",
+   "hull_cache": "tree",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-05-06_11-06-15_wet_floor_sign_pick_place_ground_08/robot_name=g1/data.parquet'",
+    "reset.seed=42",
+    "output_dir=<RUNS>/C3r2_wide/ep15",
+    "training.max_iterations=45000",
+    "logging.mode=<WANDB_MODE>",
+    "[logging.entity=<WANDB_ENTITY>]",
+    "[logging.project=<WANDB_PROJECT>]",
+    "logging.experiment=C3r2_wide",
+    "logging.run_name=ep15_wet_floor_sign",
+    "logging.upload_checkpoints=false",
+    "scene.support=false"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  }
+ ]
+}

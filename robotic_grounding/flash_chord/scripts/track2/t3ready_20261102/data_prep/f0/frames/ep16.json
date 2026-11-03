@@ -1,0 +1,28 @@
+{
+ "ep": 16,
+ "seq": "2026-03-12_15-06-36_spray_bottle_left_desk_ground_02",
+ "frames": 477,
+ "n_mesh_v": 297065,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.877924948608589,
+ "verts": true,
+ "plane_normal": [
+  0.012585116273901742,
+  0.02257675553252273,
+  0.9996658966664799
+ ],
+ "plane_offset": 0.9164519857026348,
+ "M_vs_object_chain_max_err": [
+  1.1102230246251565e-15,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "acfb99730052c555cd48e0e46fb620665439d6f223b83eee7d44e88263079ffa",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "f8933898c4e26609a929722ca0b7c080d4baab48dec8f2c888432702855db5e4",
+  "soma_params.npz": "ff7277e804a4cbb2550762c58800698b04e90cc350e37d64b382e980c8466cfb",
+  "ground_plane.json": "c2aa033a12ed0081c8b8d06bcb83be766ca0bfd650db4bc713aa9d71055eba5f",
+  "reconstructed_mesh/output_aligned.glb": "e5063cd7014d97475b1fed361e6c2383579ab7d3e48e589f1c43d0040f61f372"
+ },
+ "seconds": 12.1
+}

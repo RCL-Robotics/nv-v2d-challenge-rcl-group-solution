@@ -1,0 +1,117 @@
+{
+ "episode": 17,
+ "sequence_id": "2026-05-01_17-04-55_traffic_cone_ground_table_02",
+ "parquet": "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/robot_name=g1/data.parquet",
+ "written": "2026-10-24 03:43:53",
+ "selftest": false,
+ "gates": {
+  "G1_parquet": {
+   "ok": true,
+   "detail": "PAR1 True, rows 1, schema = agent_T1 example True, = Tier-2 ep True; metadata {'object_name': '2026-05-01_17-04-55_traffic_cone_ground_table_02_object', 'fps': '30.0', 'coord_frame': 'robot_base_z_up', 'source_dataset': 'soma', 'schema_version': 'motion_v1', 'motion_kind': 'single_robot'} (Tier-2 equal: True)"
+  },
+  "G2_frames": {
+   "ok": true,
+   "detail": "columns {'robot_root_position': 440, 'robot_joint_positions': 440, 'object_body_position': 440, 'object_root_position': 440, 'ik_error_per_frame': 440}; episodes.json 440; manifest 440; Tier-1 manifest 440"
+  },
+  "G3_finite": {
+   "ok": true,
+   "detail": {
+    "robot_root_position": true,
+    "robot_root_wxyz": true,
+    "robot_joint_positions": true,
+    "object_body_position": true,
+    "object_body_wxyz": true,
+    "object_root_position": true,
+    "object_root_axis_angle": true,
+    "ee_pose_w": true
+   }
+  },
+  "G4_assets": {
+   "ok": true,
+   "detail": [
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/object/textured_mesh.obj",
+    "/root/autodl-tmp/haoran.zhang/data/human_motion_data_tier3_opus/whole_body/soma/sequence_id=2026-05-01_17-04-55_traffic_cone_ground_table_02/object/textured_mesh.urdf"
+   ]
+  },
+  "G5_rigid_map": {
+   "ok": true,
+   "detail": "residual 7.49e-07 m / 1.00e-06 rad; root body-relative drift 0.00e+00 m / 1.69e-07 rad; map rotation 140.68 deg, translation [-2.7924, 1.8372, 1.3995]"
+  },
+  "G6_packer": {
+   "ok": true,
+   "detail": {
+    "frame_references_opus": "accepted (1.1e-07 m)",
+    "han_release_frame_references_s1": "REJECTED",
+    "released_tier2_input": "REJECTED"
+   }
+  },
+  "G7_inputs_unchanged": {
+   "ok": true,
+   "detail": {
+    "camera.json": true,
+    "episode.json": true,
+    "ground_plane.json": true,
+    "object_pose_xyz_wxyz.npy": true,
+    "poses.npy": true,
+    "soma_params.npz": true,
+    "reconstructed_mesh/output_aligned.glb": true
+   }
+  },
+  "G8_scene": {
+   "ok": true,
+   "detail": "SUPPORT_MISSING_FLOOR_ONLY: Tier-3 root support files: 2026-05-01_17-04-55_traffic_cone_ground_table_02_support.usda absent, 2026-05-01_17-04-55_traffic_cone_ground_table_02_g1_support.usda absent -> scene.support=false (flagged)"
+  }
+ },
+ "parquet_sha256": "237008c31cae8b86126d8b47e09831d4bfba785ec1985323ff7435c0995f9af9",
+ "packer_emulation": {
+  "frame_references_opus": {
+   "result": "accepted",
+   "resid_m": 1.0514541811777928e-07,
+   "resid_rad": 7.884953353001448e-08
+  },
+  "han_release_frame_references_s1": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 0.2491 m, 3.132 rad). Check frame indices and reference versions."
+  },
+  "released_tier2_input": {
+   "result": "REJECTED",
+   "msg": "the evaluator and released references do not differ by one rigid transform (maximum residual 3.323 m, 2.511 rad). Check frame indices and reference versions."
+  }
+ },
+ "scene_class": "SUPPORT_MISSING_FLOOR_ONLY",
+ "t3": {
+  "ik_error_median_p95_max": [
+   0.851094514131546,
+   1.100877684354782,
+   1.151694416999817
+  ],
+  "hand_contact_frames_left_right": [
+   172,
+   189
+  ],
+  "robot_root_z_median_min_max": [
+   0.7957338392734528,
+   0.6937147378921509,
+   0.8063659071922302
+  ]
+ },
+ "t2_same_episode": {
+  "ik_error_median_p95_max": [
+   0.9590503573417664,
+   1.178820013999939,
+   1.2295974493026733
+  ],
+  "hand_contact_frames_left_right": [
+   108,
+   176
+  ],
+  "robot_root_z_median_min_max": [
+   0.7898249626159668,
+   0.6942570209503174,
+   0.8115300536155701
+  ]
+ },
+ "object_lowest_vertex_z_frame0_cm": -0.35344768132699045,
+ "retarget_object_ground_correction": "minimum=-0.0135 m, requested=+0.0140 m, applied=+0.0100 m, cap=0.0100 m (capped)",
+ "all_ok": true
+}

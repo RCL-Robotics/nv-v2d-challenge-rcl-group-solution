@@ -1,0 +1,18 @@
+['T_world_mesh'] (886, 4, 4) float64 0 2.415155808566105e-06
+| phase | frames | traj | sil | iou | photo | rot_step_med | rot_jumps15 | acc_cm | dz_mean_cm | dz_med_cm | rot_vs_base_med |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| static A | 0-112 | baseline | 5.941 | 0.252 | 0.397 | 0.087 | 7 | 0.455 | 0.000 | 0.000 | 0.087 |
+| static A | 0-112 | ours | 0.747 | 0.645 | 0.253 | 0.086 | 0 | 0.000 | -5.031 | -5.240 | 36.152 |
+| right-hand carry | 113-399 | baseline | 10.831 | 0.228 | 0.401 | 4.484 | 32 | 2.725 | 0.000 | 0.000 | 0.031 |
+| right-hand carry | 113-399 | ours | 0.599 | 0.626 | 0.282 | 2.408 | 0 | 0.246 | -4.114 | -3.800 | 30.623 |
+| handover | 400-430 | baseline | 2.693 | 0.366 | 0.393 | 3.251 | 2 | 2.702 | 0.000 | 0.000 | 0.031 |
+| handover | 400-430 | ours | 0.483 | 0.684 | 0.260 | 1.840 | 0 | 0.218 | -2.800 | -1.519 | 171.555 |
+| left-hand carry | 431-767 | baseline | 8.608 | 0.201 | 0.391 | 5.267 | 68 | 3.553 | 0.000 | 0.000 | 0.017 |
+| left-hand carry | 431-767 | ours | 0.660 | 0.591 | 0.319 | 2.212 | 13 | 0.307 | -0.853 | -2.114 | 138.634 |
+| static C | 768-885 | baseline | 8.826 | 0.212 | 0.373 | 0.115 | 17 | 1.732 | 0.000 | 0.000 | 0.019 |
+| static C | 768-885 | ours | 0.841 | 0.566 | 0.274 | 0.022 | 0 | 0.000 | 1.008 | 1.475 | 75.892 |
+| all | 0-885 | baseline | 8.816 | 0.223 | 0.392 | 3.782 | 127 | 2.691 | 0.000 | 0.000 | 0.029 |
+| all | 0-885 | ours | 0.670 | 0.609 | 0.291 | 1.649 | 13 | 0.221 | -2.263 | -3.271 | 64.443 |
+
+baseline min height above floor (cm): p5 0.6 median 13.9; frames below -3cm: 28; static tilt from floor normal A 34.0 C 9.7
+ours min height above floor (cm): p5 -0.7 median 13.2; frames below -3cm: 0; static tilt from floor normal A 5.3 C 5.8

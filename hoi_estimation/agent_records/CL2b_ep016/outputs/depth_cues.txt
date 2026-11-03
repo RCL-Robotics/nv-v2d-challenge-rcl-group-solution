@@ -1,0 +1,9 @@
+phase S1 (table):
+  metric size vs image (median-image IoU over depth shifts): shift -9 cm (IoU 0.859 vs 0.825 at 0)
+  hand contact at lift-off (frames 123-136): shift +7.2 cm (spread 2.4)
+phase carried:
+  hand contact (222 frames with contact>0.5 and visible object): shift -1.0 cm (spread 5.4)
+phase S2 (floor):
+  floor contact (lowest mesh point on the released plane): shift +1.8 cm
+  metric size vs image: shift -5 cm (IoU 0.755 vs 0.747 at 0)
+  hand contact at release (frames 352-366): shift -6.8 cm (spread 7.1)

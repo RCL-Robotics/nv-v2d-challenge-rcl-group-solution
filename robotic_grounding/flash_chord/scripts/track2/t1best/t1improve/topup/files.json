@@ -1,0 +1,123 @@
+{
+ "generated_at": "2026-10-28 16:11:02",
+ "commit_url": "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca",
+ "commit_check": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/commit_check.json",
+ "files": [
+  {
+   "label": "SUBMITTABLE_closest_to_mean",
+   "trial": 3,
+   "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/files/trial03_SUBMITTABLE_closest_to_mean/T1improve_tier1_trial03_SUBMITTABLE_closest_to_mean.csv",
+   "csv_sha256": "93f1d61592da3788f76c133acefb477ca46e8141705b57ec7e2c14a7a5d69a85",
+   "size": 12277674,
+   "rescore_overall_float32": {
+    "AUC": 0.9309539486560893,
+    "SP-SR": 1.0,
+    "MP-SR": 0.9666666666666667,
+    "MPPE": 0.9731617164111177
+   },
+   "trial_overall_float32": {
+    "AUC": 0.9309539486560893,
+    "SP-SR": 1.0,
+    "MP-SR": 0.9666666666666667,
+    "MPPE": 0.9731617164111177
+   },
+   "rescore_equal": true,
+   "rescore_abs_diffs": {
+    "AUC": 0.0,
+    "SP-SR": 0.0,
+    "MP-SR": 0.0,
+    "MPPE": 0.0
+   },
+   "validate_ok": true,
+   "validate": {
+    "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/files/trial03_SUBMITTABLE_closest_to_mean/T1improve_tier1_trial03_SUBMITTABLE_closest_to_mean.csv",
+    "track": "track_2_tier1",
+    "problems": [],
+    "uploader_validate_submission": {
+     "ok": true,
+     "rows": 22989,
+     "episodes": 30
+    },
+    "provenance": {
+     "eval_script_sha256": [
+      "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+     ],
+     "eval_code_sha256": [
+      "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+     ],
+     "packer_script_sha256": [
+      "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+     ],
+     "uploader_script_sha256": [
+      "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+     ],
+     "code_commit_url": [
+      "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+     ]
+    },
+    "checkpoints_match_set": true,
+    "distinct_checkpoints": 30,
+    "ok": true
+   },
+   "placeholder_csv_sha256": "b625b93a3af81a404f61076143874647ffe8ed4e58cc3ce56137e1e53111b123"
+  },
+  {
+   "label": "REPORT_ONLY_best_trial",
+   "trial": 8,
+   "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/files/trial08_REPORT_ONLY_best_trial/T1improve_tier1_trial08_REPORT_ONLY_best_trial.csv",
+   "csv_sha256": "d97ffbabbb51ff31f73f717fb73f4ed01afdba2ebae3e161182880e8437e8770",
+   "size": 12277696,
+   "rescore_overall_float32": {
+    "AUC": 0.9326567693788663,
+    "SP-SR": 1.0,
+    "MP-SR": 0.9666666666666667,
+    "MPPE": 0.9204965842260152
+   },
+   "trial_overall_float32": {
+    "AUC": 0.9326567693788663,
+    "SP-SR": 1.0,
+    "MP-SR": 0.9666666666666667,
+    "MPPE": 0.9204965842260152
+   },
+   "rescore_equal": true,
+   "rescore_abs_diffs": {
+    "AUC": 0.0,
+    "SP-SR": 0.0,
+    "MP-SR": 0.0,
+    "MPPE": 0.0
+   },
+   "validate_ok": true,
+   "validate": {
+    "csv": "/root/autodl-tmp/haoran.zhang/fc_runs/T1improve/topup/files/trial08_REPORT_ONLY_best_trial/T1improve_tier1_trial08_REPORT_ONLY_best_trial.csv",
+    "track": "track_2_tier1",
+    "problems": [],
+    "uploader_validate_submission": {
+     "ok": true,
+     "rows": 22989,
+     "episodes": 30
+    },
+    "provenance": {
+     "eval_script_sha256": [
+      "160d24f5fbeb70ccd569ca4192056f1892b2a9f2999066db9d8279461648fdf1"
+     ],
+     "eval_code_sha256": [
+      "b1b3ebe3ae4629d1687a83f420149e3f6fdfc154d70acad55c12fc8fa69811a1"
+     ],
+     "packer_script_sha256": [
+      "47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be"
+     ],
+     "uploader_script_sha256": [
+      "fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718"
+     ],
+     "code_commit_url": [
+      "https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/0c7516eda6f90deacb1536aabbce98beba5194ca"
+     ]
+    },
+    "checkpoints_match_set": true,
+    "distinct_checkpoints": 30,
+    "ok": true
+   },
+   "placeholder_csv_sha256": "7f2363e0f752c87942fa170cf12806e3ffb040534f99617d50b97d139743044f"
+  }
+ ]
+}

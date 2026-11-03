@@ -1,0 +1,14 @@
+{
+ "episode_index": 26,
+ "sequence_id": "2026-06-05_16-05-08_skateboard_rotate_ground_10",
+ "object": "skateboard",
+ "task": "Walk to the skateboard on the ground. Use your hands to rotate the skateboard on the ground within the bounding area.",
+ "frames": 669,
+ "object_variant": "opus_v2_frame0_f3_c2_shift",
+ "camera_variant": "JC2s1_shared_f820_pp",
+ "soma_inversion_vertex_error_cm": {
+  "mean": 0.6321309804916382,
+  "median": 0.2467673122882843,
+  "max": 11.339372634887695
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "written": "2026-10-31 00:38:21",
+ "recipe_sha256": "78638d5cd639c227a04cb35ccb210498710c9a107e7165da0560c1fffb6a2ed2",
+ "ok": true,
+ "checks": {
+  "diff_keys_allowed": true,
+  "parquet_same": true,
+  "scene_support_same": true,
+  "seed_same": true,
+  "experiment_same": true,
+  "object_threshold": true,
+  "palm_threshold": true,
+  "start_update": true,
+  "deadline_unchanged": true,
+  "resume": true,
+  "max_iterations": true,
+  "early_stop_off": true,
+  "help_zero_before_cap": true
+ },
+ "f0_hydra_config": "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05/hydra/.hydra/config.yaml",
+ "diff": {
+  "logging.experiment": [
+   "C3r2_tier3_f0",
+   "C3r2_tier3_f0_retry"
+  ],
+  "logging.run_name": [
+   "ep05_big_black_box",
+   "ep05_big_black_box_retry"
+  ],
+  "output_dir": [
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0/ep05",
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05"
+  ],
+  "reset.start_update": [
+   0,
+   44922
+  ],
+  "termination.palm_position_threshold": [
+   0.15,
+   0.25
+  ],
+  "training.checkpoint": [
+   null,
+   "/root/autodl-tmp/haoran.zhang/fc_runs/C3r2_tier3_f0_retry/ep05/model_44922.safetensors"
+  ],
+  "training.early_stop_help_zero_tail": [
+   5860,
+   0
+  ],
+  "training.max_iterations": [
+   45000,
+   90000
+  ],
+  "training.resume": [
+   false,
+   true
+  ]
+ }
+}

@@ -1,0 +1,28 @@
+{
+ "ep": 28,
+ "seq": "2026-05-19_11-27-07_squeegee_sweep_away_from_you_03_",
+ "frames": 988,
+ "n_mesh_v": 286679,
+ "lift_applied": 0.0,
+ "lift_min_signed": 0.023908300710842045,
+ "verts": true,
+ "plane_normal": [
+  -0.03960071779157593,
+  0.05154870366964574,
+  0.9978850205812146
+ ],
+ "plane_offset": 0.9890932482019794,
+ "M_vs_object_chain_max_err": [
+  8.881784197001252e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "67ca417f1a615d12e3d8912c64783c9d116e9ebc02a5cc3b4d23b37cc7ac9de1",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "257ab20e8f63e080e5fa41b2e215d4eb8ac0c35abcaa0fa735d21843e3aef49f",
+  "soma_params.npz": "2a3e666c89d85096a8574bf88969edd433f80ef9c943ccf4c52988cb3235a7f5",
+  "ground_plane.json": "353bc4a5271c942f3d11d174bdadf6625177bf5f7ec385c075f0e33560ec6fe8",
+  "reconstructed_mesh/output_aligned.glb": "aa3e2fad95d7201aab1e76b0e2321ad34d593e42a6fa8996031e4b4d5f690cc2"
+ },
+ "seconds": 23.8
+}

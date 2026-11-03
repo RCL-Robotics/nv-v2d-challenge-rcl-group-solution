@@ -1,0 +1,160 @@
+{
+ "item": "ep04",
+ "role": "set",
+ "in_set": true,
+ "episode": 4,
+ "object": "baseball_bat",
+ "sequence_id": "2026-04-24_11-40-52_baseball_bat_rotate_05",
+ "scene_support": false,
+ "experiment": "g1_recon_body_coord_rsi_r2_runin",
+ "source": "teammate runin_cont4 model_358000 (bank t1_bat_cont4_20261026)",
+ "pinned": {
+  "iteration": 358000,
+  "run": "runin_cont4/ep04",
+  "model": "model_358000.safetensors",
+  "model_sha256": "72f679890d82e5025744651ae4d3d2bd58d46008b5dac23a6930357b35b90bd1",
+  "model_size": 24993288,
+  "rsi": "rsi_358000.safetensors",
+  "rsi_sha256": "376a7e14e093759745d4efdf8b78e70fc2e75e9e5acd8786bedbbebd735b30ce",
+  "rsi_size": 3622956,
+  "trained_by": "bc3b1bdf34f2",
+  "hull_cache": "tree (teammate worktree)",
+  "rsi_note": "rsi_358000 is only in the teammate's run folder (not in our copy); it is needed only to resume or fork ep04, and copying it needs the teammate's OK. Loading it needs the bc3b1bd RSI loader (merged on this branch)."
+ },
+ "export": {
+  "file": "ep04/model_358000.safetensors",
+  "sha256": "52042a12944c0b34956409b94fc01b82660afc8039c95976f922d3b6d3e954d2",
+  "size": 46052760,
+  "max_rel_diff": null,
+  "exported_by": "b39b69be6c2f",
+  "tolerance": 0.0001
+ },
+ "fork": {
+  "experiment": "g1_recon_body_coord_rsi_r2_runin",
+  "scene_support": false,
+  "reset_seed": 42,
+  "inherit": []
+ },
+ "evaluation": {
+  "prior_n_evals": 3,
+  "prior_mean_auc": 0.7415421337,
+  "trials20": {
+   "n": 20,
+   "auc_mean": 0.7507433064,
+   "auc_sd": 0.003024229324,
+   "auc_min": 0.7447073474,
+   "auc_max": 0.7550591532,
+   "sp_pass": 20,
+   "mp_pass": 20,
+   "mppe_mean_cm": 1.564262384
+  }
+ },
+ "stages": [
+  {
+   "run": "runin/ep04",
+   "start": "scratch",
+   "end": "final.json model_44922 (help_zero_tail)",
+   "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+   "hull_cache": "tree (teammate worktree)",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin/ep04",
+    "hydra.run.dir=<RUNS>/runin/ep04/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "runin_cont/ep04",
+   "start": "resume runin/ep04/model_44922.safetensors",
+   "end": "final.json model_90000 (max_iterations)",
+   "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+   "hull_cache": "tree (teammate worktree)",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin_cont/ep04",
+    "hydra.run.dir=<RUNS>/runin_cont/ep04/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/runin/ep04/model_44922.safetensors",
+    "training.max_iterations=90000",
+    "training.early_stop_help_zero_tail=0"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "runin_cont2/ep04",
+   "start": "resume runin_cont/ep04/model_90000.safetensors",
+   "end": "running at selection (2026-10-21 23:13 UTC+8)",
+   "code": "0868a3f4a29a (tree = b39b69be6c2f)",
+   "hull_cache": "tree (teammate worktree)",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin_cont2/ep04",
+    "hydra.run.dir=<RUNS>/runin_cont2/ep04/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/runin_cont/ep04/model_90000.safetensors",
+    "training.max_iterations=180000",
+    "training.early_stop_help_zero_tail=0"
+   ],
+   "source": "repro/lines/mix_tier1_train_stages.tsv"
+  },
+  {
+   "run": "runin_cont3/ep04",
+   "start": "resume runin_cont2/ep04/model_180000.safetensors",
+   "end": "model_270000 (max_iterations)",
+   "code": "bc3b1bdf34f2",
+   "hull_cache": "tree (teammate worktree)",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin_cont3/ep04",
+    "hydra.run.dir=<RUNS>/runin_cont3/ep04/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/runin_cont2/ep04/model_180000.safetensors",
+    "training.max_iterations=270000",
+    "training.early_stop_help_zero_tail=0"
+   ],
+   "source": "teammate hydra overrides.yaml (copy in the bat bank records); hydra.run.dir added as in the other stages"
+  },
+  {
+   "run": "runin_cont4/ep04",
+   "start": "resume runin_cont3/ep04/model_270000.safetensors",
+   "end": "model_360000 (max_iterations)",
+   "code": "bc3b1bdf34f2",
+   "hull_cache": "tree (teammate worktree)",
+   "overrides": [
+    "experiment=g1_recon_body_coord_rsi_r2_runin",
+    "task.parquet='<MOTION>/whole_body/soma/sequence_id=2026-04-24_11-40-52_baseball_bat_rotate_05/robot_name=g1/data.parquet'",
+    "scene.support=false",
+    "reset.seed=42",
+    "output_dir=<RUNS>/runin_cont4/ep04",
+    "hydra.run.dir=<RUNS>/runin_cont4/ep04/hydra",
+    "logging.mode=disabled",
+    "+logging.local_jsonl=true",
+    "training.resume=true",
+    "training.checkpoint=<RUNS>/runin_cont3/ep04/model_270000.safetensors",
+    "training.max_iterations=360000",
+    "training.early_stop_help_zero_tail=0"
+   ],
+   "source": "teammate hydra overrides.yaml (copy in the bat bank records); hydra.run.dir added as in the other stages"
+  }
+ ]
+}

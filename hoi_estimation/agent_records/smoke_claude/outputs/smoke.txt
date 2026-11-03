@@ -1,0 +1,4 @@
+GPU 0: NVIDIA RTX 6000 Ada Generation (UUID: GPU-47268e36-5a84-dce1-3f54-5d102205b5ed)
+GPU 1: NVIDIA RTX 6000 Ada Generation (UUID: GPU-82e5e1ce-5fa6-3506-0cf8-2bbc4aab1018)
+True
+HTTP/1.1 200 Connection established

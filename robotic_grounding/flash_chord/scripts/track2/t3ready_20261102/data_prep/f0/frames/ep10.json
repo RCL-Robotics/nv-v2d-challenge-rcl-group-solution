@@ -1,0 +1,28 @@
+{
+ "ep": 10,
+ "seq": "2026-05-01_11-36-40_white_desk_lower_to_ground_10",
+ "frames": 794,
+ "n_mesh_v": 296588,
+ "lift_applied": 0.01,
+ "lift_min_signed": -0.02330497302096146,
+ "verts": false,
+ "plane_normal": [
+  0.029867904167347692,
+  0.004540656324853322,
+  0.9995435411930736
+ ],
+ "plane_offset": 0.9867227617387666,
+ "M_vs_object_chain_max_err": [
+  9.43689570931383e-16,
+  3.3306690738754696e-16
+ ],
+ "obj_sha256": "87d84bd730a7ac33ba96fafe4f20733e194f51349eaf7d61a8a403f2985ad6bf",
+ "soma_to_g1_sha256": "7ff851a6f7f54f583cd65e8a3d0684ba360ee9481af6e13382f241f930620e8d",
+ "inputs": {
+  "poses.npy": "b3e40c78a84ea8f971d498006bb2cb61c565987480e50e5a9fbe079f300f8e10",
+  "soma_params.npz": "d2b93102ed70716c6175b93257eb1d1cac409799b3399b99967aed716831d1a8",
+  "ground_plane.json": "dabe43e74a47b01d94c7b34096d402a7fb4e03a6d0da417231d6d45c9a069926",
+  "reconstructed_mesh/output_aligned.glb": "20bc239794adf00df9089347eef7bb72c9540ab03379d1fb3762c9d156a4fefd"
+ },
+ "seconds": 12.4
+}

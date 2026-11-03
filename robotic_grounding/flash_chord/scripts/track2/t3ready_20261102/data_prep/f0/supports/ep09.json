@@ -1,0 +1,247 @@
+{
+ "ep": 9,
+ "seq": "2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03",
+ "object": "big_red_bowl",
+ "task": "Walk over to the big red bowl on the skinny wood chair and pick up the big red bowl using both hands and proceed to place the big red bowl on the ground in front of the skinny wood chair and then slide the big red bowl underneath the skinny wood chair.",
+ "frames": 870,
+ "support": "skinny_wood_chair",
+ "han_iou": 0.8182047605514526,
+ "han_contact_shift_cm": -2.03,
+ "up_tilt_deg": 8.537736462515939e-07,
+ "han_support_json_sha256": "d5e75f50242e6c2300430052042f622b26de82cbcd7a7eac76ffe3e72a8c0c95",
+ "han_mesh_sha256": "7982ef074fe2e8b2bbab813ccb4cc848c05571e7c3adef42458b73449481d35a",
+ "frames_inputs": {
+  "poses.npy": "9552e877e3bf69de5e6192619201ec05b8f0ec1900230e385c9752e833a71d19",
+  "soma_params.npz": "a7877fbf16a971b63a93c70cac9a181305536d5b496d6137277aaf9e77a2caf8",
+  "ground_plane.json": "47bf9516d299dc2a6b7190f74bfd46058d11d611587e2995abc6d05c11f84282",
+  "reconstructed_mesh/output_aligned.glb": "473b0466c0a05c3f2e586e793c4dc81f4c1281534d1402809f32e94e7e6e915d"
+ },
+ "object_lift_cm": 0.0,
+ "still_runs": [
+  [
+   0,
+   193
+  ],
+  [
+   672,
+   712
+  ],
+  [
+   761,
+   870
+  ]
+ ],
+ "kind": "top",
+ "shape": {
+  "kind": "rect",
+  "centre_xy": [
+   -1.0291538164585234,
+   -0.12189868794437198
+  ],
+  "half_extents_m": [
+   0.2384136022060604,
+   0.1737175215835543
+  ],
+  "yaw_deg": 5.489569603967403
+ },
+ "top_runs": [
+  [
+   0,
+   193
+  ]
+ ],
+ "anchor_run": [
+  0,
+  193
+ ],
+ "anchor_rule": "still run from frame 0 on the top (frame 0 = true first-frame pose)",
+ "z_top_videofit_m": 0.5149953261049205,
+ "z_top_han_contact_m": 0.494698286978156,
+ "z_top_m": 0.4693796074261874,
+ "refit_residual_cm": -2.532,
+ "total_shift_vs_videofit_cm": -4.562,
+ "strip_area_fraction": 0.8957,
+ "anchor_footprint": {
+  "applied": false,
+  "shift_xy_cm": [
+   0.0,
+   0.0
+  ],
+  "anchor_cover_before": 1.0
+ },
+ "run_gap_cm": [
+  {
+   "run": [
+    0,
+    193
+   ],
+   "on_top": true,
+   "bottom_gap_cm": 0.0
+  },
+  {
+   "run": [
+    672,
+    712
+   ],
+   "on_top": false,
+   "bottom_gap_cm": -48.24
+  },
+  {
+   "run": [
+    761,
+    870
+   ],
+   "on_top": false,
+   "bottom_gap_cm": -48.24
+  }
+ ],
+ "boxes": [
+  {
+   "name": "seat_s01",
+   "center": [
+    -1.2244913216662514,
+    -0.14067166115994073,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s02",
+   "center": [
+    -1.1854238206247056,
+    -0.13691706651682697,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.34528125623947276,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s03",
+   "center": [
+    -1.1463563195831603,
+    -0.13316247187371327,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s04",
+   "center": [
+    -1.1072888185416145,
+    -0.1294078772305995,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s05",
+   "center": [
+    -1.068221317500069,
+    -0.1256532825874857,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s06",
+   "center": [
+    -1.0291538164585234,
+    -0.12189868794437195,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.34528125623947276,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s07",
+   "center": [
+    -0.9900863154169778,
+    -0.1181440933012582,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s08",
+   "center": [
+    -0.9510188143754321,
+    -0.11438949865814448,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s09",
+   "center": [
+    -0.9119513133338866,
+    -0.11063490401503069,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s10",
+   "center": [
+    -0.8728838122923409,
+    -0.10688030937191692,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.34528125623947276,
+    0.03
+   ]
+  },
+  {
+   "name": "seat_s11",
+   "center": [
+    -0.8338163112507953,
+    -0.10312571472880318,
+    0.4543796074261874
+   ],
+   "dims": [
+    0.03906750104154561,
+    0.3452812562394728,
+    0.03
+   ]
+  }
+ ],
+ "n_boxes": 11,
+ "support_file": "whole_body/reconstructed_stage/2026-06-04_16-45-04_big_red_bowl_under_skinny_wood_chair_03_support.usda",
+ "support_sha256": "1cc0d7306ef3977a77febd5e397d4a6f042e76b07bcc3fc416417e44b30d58c1",
+ "written": "2026-10-24 18:46:55"
+}

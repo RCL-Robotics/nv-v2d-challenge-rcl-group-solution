@@ -1,0 +1,20 @@
+[solve    0.2s] loading masks
+[solve    5.6s] decoding video
+[solve    8.0s] phase 0-122: mask IoU to frame 30: min 0.955 median 0.994; frame before/after: 1.000 0.948
+[solve    8.5s] phase 223-435: mask IoU to frame 330: min 0.919 median 0.963; frame before/after: 0.917 0.950
+[solve   15.9s] carry1: 99 visible frames, 4 rotation spikes replaced, silhouette IoU 0.762 -> 0.856
+[solve   38.9s] carry2: 313 visible frames, 2 rotation spikes replaced, silhouette IoU 0.640 -> 0.885
+[solve   38.9s] texture yaw curves for 473 frames
+[solve  105.4s] texture curves done
+[solve  105.4s] P1 yaw: coarse 122.9 (baseline P1 -115.1) stripe phase 4.6 (amp 0.0082) -> 139.6
+[solve  105.4s] P3 yaw: coarse 47.6 stripe phase 17.2 (amp 0.0080) -> 62.2
+[solve  105.6s] carry-2 yaw track: anchor(P3 pick-up) -137.8, anchor(CoCoNet 695-740, IQR 9.3) -137.5 -> offset -137.6, snapped -135.0
+[solve  117.2s] static (0, 122): yaw 139.6, bottom height above floor plane 0.816 m
+[solve  134.8s] static (223, 435): yaw 62.2, bottom height above floor plane 0.010 m
+[solve  134.9s] P5 yaw: hand-propagated -160.6, CoCoNet (sliver frames) -170.8 -> -165.7
+[solve  142.6s] static P5: sliver IoU 0.799, bottom height 0.010
+[solve  150.0s] wrote /work/outputs/object_poses_world.npz (980, 4, 4)
+
+real	2m33.497s
+user	2m52.840s
+sys	0m8.898s
