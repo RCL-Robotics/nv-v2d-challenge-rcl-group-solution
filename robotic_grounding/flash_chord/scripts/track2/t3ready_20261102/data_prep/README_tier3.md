@@ -15,8 +15,19 @@ the submission record (`../README.md`).
 The scripts embed the training server's paths: `ME=/root/autodl-tmp/haoran.zhang` and Han's release under
 `/root/autodl-tmp/han.zhou/tier3/release/`.
 - `SOURCES.tsv` (one level up) gives each file's original path.
-- `python3 ../tools/restore_layout_t3.py --me <root> [--rewrite]` puts the files back at those paths. With `--rewrite`,
-  it also changes the root inside the text files.
+- `python3 ../tools/restore_layout_t3.py --me <root> [--han <root>] [--rewrite]` puts the files back at those paths.
+  - The committed data-root records (`data_root/*`, `opus_root/data_root/*`: READY, FILES / SOURCE_FILES /
+    SUPPORT_FILES.sha256, the manifests, SCENE_SUPPORT.json) go to `<root>/t3ready_expected/`. They are the expected
+    outputs of steps 0 and A-F. Placed inside `data/`, a READY would make `t3opus_build_data.py` and
+    `t3f0_build_root.py` exit without building, and `t3f0_retarget.sh` refuse.
+  - With `--rewrite`, the training-server roots inside text files are replaced: `<ME>` and, with `--han`, Han's
+    `/root/autodl-tmp/han.zhou`.
+  - Han's release arrays are not in git. Steps 0 and A need `tier3_opus_20261021` and
+    `tier3_frame0_supports_20261024` under `--han`. They are on the training server, or available from Han.
+  - The retarget runs `soma_to_g1.py` from `<root>/code/nv-v2d-challenge-codebase` at `f2923d61`, with a clean tree.
+    That commit is an ancestor of this record: `git worktree add <root>/code/nv-v2d-challenge-codebase f2923d61…`.
+- Order: step 0 (opus_v2 root, its retarget and rcheck) -> A -> B ... -> F. Then compare the rebuilt roots with
+  `t3ready_expected/`.
 - Environments:
   - `conda_envs/v2d`: Isaac Sim 5.1.0, Isaac Lab 2.3.2, robotic_grounding and py-soma-x. Used for the retarget,
     `t3f0_frames.py` and `t3f0_align.py`.

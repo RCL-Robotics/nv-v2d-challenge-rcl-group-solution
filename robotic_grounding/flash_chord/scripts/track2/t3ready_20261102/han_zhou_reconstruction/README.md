@@ -2,14 +2,20 @@
 
 The Tier-3 policies were trained on Han Zhou's video reconstruction. Han is on our team.
 
-**Where his code is.** Since 2026-11-02, Han's own branch `dev.hanzhou.hoi_estimation` (head `48c217a`) is merged into
-this record, unchanged, at the repo root under
-[`hoi_estimation/`](../../../../../../hoi_estimation/README.md) (merge `ab0d24c`). It holds his full workflow:
+**Where his code is.** Since 2026-11-02, Han's own branch `dev.hanzhou.hoi_estimation` is part of this record, at the
+repo root under [`hoi_estimation/`](../../../../../../hoi_estimation/README.md).
+- The code as it ran is `48c217a`, merged unchanged in `ab0d24c`.
+- His later commits `6c10a22` … `c0dbf5b` follow it. `c0dbf5b` is the parent of the record update that follows it.
+  They add the reproducibility material and make the script paths portable (`../README.md`, history item 4).
+
+It holds his full workflow:
 - `hoi_extraction/`: the base pipeline (s1);
 - `agent/`: the agent harness, with the records of all 112 agent runs in `agent_records/`;
 - `tier2_refine/`: the frame-0 refinement (Tier 3) and the Tier-2 fusion (not used by us);
 - `support/`: the support reconstruction;
-- `diagnostics/`: GT-only diagnostics.
+- `diagnostics/`: GT-only diagnostics;
+- `reproducibility/`: the exact commands (`s1_runbook.md`, `tier3_runbook.md`), the end-to-end driver
+  `run_all_tier3.sh`, the environment pins and the weight hashes.
 
 **This folder** holds the release documents and the part of his code that he shipped with s1. They were copied from the
 training server before the merge, for `232e6b2`. The section **Formerly MISSING** below maps each piece that
@@ -85,7 +91,7 @@ All of these were already in `tier3_s1_20261020/code/` in `232e6b2`. What item 1
 | M1 step (`M1_prompt_v2`) | `cluster/gen_prompt_v2.py` | size-consistent GroundingDINO prompt boxes for a CARI4D re-run; `export_inputs.py`, `run_batch_*.sh` and the post-processing use that run where the episode's alignment names `M1` |
 | P1 step (`P1_temporal`) | `scripts/postproc_temporal.py` | temporal stabilisation of the CARI4D object poses (rotation and translation outlier rejection, smoothing; no reference data) |
 | other post-processing | `scripts/postproc_flip_select.py`, `postproc_yaw_flip.py`, `postproc_floor_depth.py`, `postproc_feet_floor.py`, `postproc_size_depth.py`, `postproc_const_scale.py`, `postproc_contact_row.py`, `postproc_hand.py`, `camera_floor.py`, `estimate_focal.py`, `ground_scale.py`, `vda_depth.py` | symmetry flips, floor and depth constraints, focal and floor estimates |
-| first-frame alignment → `logs/pnp_forE1.json` | `scripts/firstframe_align.py` (trimmed ICP of our frame-0 human to the frame-0 reference human), `scripts/firstframe_pnp.py` (PnP + depth scale from the ICP correspondences; writes the `--out` JSON with `sim` / `rigid`) | the initial world alignment. `postproc_joint_camera*.py` read it (`--align`, default `logs/pnp_forE1.json`); `E1` names the `E1_every_frame` FoundationPose variant |
+| first-frame alignment → `logs/pnp_forE1.json` | `scripts/firstframe_align.py` (trimmed ICP of our frame-0 human to the frame-0 reference human), `scripts/firstframe_pnp.py` (PnP + depth scale from the ICP correspondences; writes the `--out` JSON with `sim` / `rigid`) | the initial world alignment. `postproc_joint_camera*.py` read it (`--align`, default `logs/pnp_forE1.json`). `logs/pnp_forE1.json` is a copy of `pnp_merged.json` (= `pnp_baseline.json` updated by `pnp_M1.json`), saved under the name the joint-camera scripts use by default. The name refers to the E1 experiment, which is the source of no released episode (FF2 sources: M1 6, P1_temporal 15, baseline 9) |
 | release | `scripts/build_release.py` (already in `232e6b2`) | writes the s1 release; its usage line names the variant `DB_JC2s1_shared_f820_pp` / camera `JC2s1_shared_f820_pp` |
 
 ### 2. opus_v2: the agent harness (`agent/`) and the run records (`agent_records/`)
@@ -104,8 +110,12 @@ All of these were already in `tier3_s1_20261020/code/` in `232e6b2`. What item 1
     `run_batch_T1.sh` were used for the earlier Codex runs.
 - **Input packing:** `agent/export_inputs.py`. It writes `video.mp4`, `object_mesh.glb`, `ground_plane.json`,
   `task.txt`, `episode.json`, `camera.json`, `reconstruction.npz`, `frame0_reference_human.npz` and `masks.h5`.
-  - `reconstruction.npz` holds the DB1 / JC1 object poses, the FoundationPose and CoCoNet poses, the human vertices and
-    keypoints, and the contact probabilities.
+  - It ran with `--variant DB_JC2s1_shared_f820_pp --align logs/JC2s1_shared_f820_pp_align.json --camera
+    JC2s1_shared_f820_pp` (`reproducibility/tier3_runbook.md`); the code defaults DB1 / JC1 were not used.
+  - `reconstruction.npz` holds that variant's object poses, the FoundationPose and CoCoNet poses, the human vertices
+    and keypoints, and the contact probabilities.
+  - `camera.json`, recovered from each release run's event stream, matches the run manifest's sha256 (30/30). Its
+    `T_world_cam` equals the s1 (JC2s1) camera exactly (`../verification/han_followup/from_6c10a22/`).
   - `frame0_reference_human.npz` holds frame-0 vertices only. All 30 release manifests list it (grey area 2 in the
     top-level README).
   - The CL2* runs reused the `T1_ds_ep*` inputs.
@@ -151,7 +161,8 @@ All of these were already in `tier3_s1_20261020/code/` in `232e6b2`. What item 1
 
 - **Arguments:** `t3_frame0.py opus <out> 3 2 shift`, i.e. `opus_f3_c2_shift`. The steps are:
   - flip = 3: track the symmetric flip, then add the object-frame anchor only above 15°;
-  - camrot = 2: camera rotation fix, rotations only;
+  - camrot = 2: camera rotation fix, rotations only. Over the static start, the chordal mean D of R0 R(t)^T is taken as
+    the camera rotation error and applied to the whole track about the camera centre; skipped if D exceeds 15°;
   - trans = shift: add the constant translation p0 − static-start mean.
 - **Inputs:** each episode's opus_v2 track and the frame-0 object pose, taken from `ref_poses/<ep>.npz`, frame 0 (grey
   area 1).
@@ -159,6 +170,9 @@ All of these were already in `tier3_s1_20261020/code/` in `232e6b2`. What item 1
   (`diag_scores.json`).
 - **Publishing:** `support/build_release_combined.py` writes the frame-0 release. It replaces `poses.npy` /
   `object_pose_xyz_wxyz.npy` by this output and labels it `opus_v2_frame0_f3_c2_shift`.
+- **GT-blind re-run.** Cut the diagnostic tail of `t3_frame0.py` (from `res = {}` on) and give it a `ref_poses` that
+  holds frame 0 only. Our re-run from `c0dbf5b` reproduced the release byte for byte, 30/30
+  (`../verification/han_followup/`). Since `c0dbf5b`, `build_release_combined.py` runs without `diag_scores.json`.
 
 ### 4. The support fit and the contact shift (`support/`)
 
@@ -177,34 +191,27 @@ Run in this order:
 
 Also there: `lean_check.py`, `overlay.py`, `sheet.py`, and `score_snap.py` (a GT diagnostic).
 
-### Still missing
+- **Which `fit.py`.** The released supports of eps 2 3 6 7 9 11 13 16 17 20 25 27 28 were fitted with the `fit.py` of
+  20:28Z. Han reconstructed it as `support/fit_20261023T2028Z.py`. ep1 was fitted with the current `fit.py`. The
+  commands are in `reproducibility/tier3_runbook.md` section C.
+- `contact.py` ran with `--snap`; the snapped track is not used.
+- `fit_overview.jpg` and the release's `contact_report.json` are copies of `sheet.py`'s and `contact.py --snap`'s
+  outputs. The release READMEs are hand-written (`reproducibility/release_files/`).
 
-1. **The script that extracted `ref_human_f0/<ep>.npz` and `ref_poses/<ep>.npz`.**
-   - These are the frame-0 reference human (pose, identity, scale, transl) and the reference object poses, from which
-     `t3_frame0.py` takes frame 0.
-   - Present are only the readers: `firstframe_align.py`, `firstframe_pnp.py`, `postproc_feet_floor.py`,
-     `postproc_joint_camera*.py`, `export_inputs.py` and `t3_frame0.py`.
-2. **The exact command lines.**
-   - No driver or log records the invocations and flags of:
-     - the s1 chain: `pnp_forE1`, `M1_prompt_v2`, `JC2s1_shared_f820_pp`, `DB_JC2s1_shared_f820_pp`, and the s1
-       release;
-     - the frame-0 run;
-     - each episode's support fit (the `fit.py` environment switches `FREE_H`, `FREE_S`, `GRID_M`).
-   - The scripts are present, and their usage lines and variant names give most of the arguments.
-3. **The revision of `reconstruction/modules` that the CARI4D image was built from** (Han's checkout). It is not
-   recorded; we assume it is this repo's.
-4. **Non-code material, on Han's storage and not suitable for Git:**
-   - the weights (SAM2, GroundingDINO, CARI4D, SAM-3D-Body);
-   - the built images;
-   - the CARI4D and experiment outputs;
-   - each agent's input arrays and delivered `object_poses_world.npz`. The run manifests hold the inputs' sha256.
+### Formerly still missing
+
+The four items that were still missing after the merge are resolved by Han's later commits. What remains open is listed
+in `../README.md` section 6.
 
 **GT material in Han's branch.** It includes GT-based evaluation and diagnostics:
 - `diagnostics/`;
 - `hoi_extraction/scripts/eval_official.py`, `eval_object_pose.py`, `eval_tier2.py`;
 - `agent/score_runs.py`, `eval_agent.py`, `gt_camera_fit.py`;
 - the diagnostic halves of `t3_frame0.py` and `support/contact.py --gt`;
-- tables in his READMEs.
+- tables in his READMEs;
+- GT diagnostic numbers in `reproducibility/` and in his reproduction report;
+- `hoi_extraction/scripts/export_reference.py`, which exports all frames of `ref_poses` for the diagnostics. Only frame 0
+  enters the frame-0 step.
 
 They are merged as they are. Our pipeline reads none of them, and our documents quote none of their numbers.
 

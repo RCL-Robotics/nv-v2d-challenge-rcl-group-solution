@@ -1,0 +1,5 @@
+files 60 zip date_times {(1980, 1, 1, 0, 0, 0)} compress types {0}
+same keys 60 array-equal (V1 vs checker exportA) 60
+shapes [('ref_human_f0', (('pose', (231,), 'float32'), ('transl', (3,), 'float32'), ('identity', (45,), 'float32'), ('scale', (68,), 'float32'), ('bone', (6,), 'float32'))), ('ref_poses', (('frame_index', (), 'int64'), ('pose_xyz_wxyz', (7,), 'float32'), ('visible', (), 'bool')))]
+ref_human_f0 == pyarrow row(frame_index==0), k==0: 30 /30; ref_poses == pyarrow all rows & frame_index arange: 30 /30
+numpy 1.26.0

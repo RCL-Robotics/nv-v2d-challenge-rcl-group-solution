@@ -1,0 +1,10 @@
+# python -I -B tools/restore_layout_t3.py --me <W>/build/restore_test/t_me --han <W>/build/restore_test/t_han --rewrite
+# run 2026-11-04 from this commit's tree (written out from git objects), W = <ME>/tmp_analysis/final_merge_test_20261104;
+# both roots were empty before the run.
+wrote 727 files; 0 existed (kept); 0 problems
+9 write-once data-root records placed under /root/autodl-tmp/haoran.zhang/tmp_analysis/final_merge_test_20261104/build/restore_test/t_me/t3ready_expected (expected outputs; compare after the rebuild). Use --with-data-records only for audits on the training server.
+retarget code: /root/autodl-tmp/haoran.zhang/tmp_analysis/final_merge_test_20261104/build/restore_test/t_me/code/nv-v2d-challenge-codebase must be a clean checkout at f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf (git worktree add /root/autodl-tmp/haoran.zhang/tmp_analysis/final_merge_test_20261104/build/restore_test/t_me/code/nv-v2d-challenge-codebase f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf); present: False
+rc 0
+# afterwards: files under t_me/data/: 0 (t_me/data does not exist); files under t_me/t3ready_expected/: 9;
+# files under t_han: 148; occurrences of /root/autodl-tmp/han.zhou in written files: 0; occurrences of the server root
+# /root/autodl-tmp/haoran.zhang that do not point into the test root: 0
