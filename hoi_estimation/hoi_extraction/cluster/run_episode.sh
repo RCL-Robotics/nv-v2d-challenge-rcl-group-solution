@@ -6,7 +6,7 @@ set -euo pipefail
 IDX=$1
 EP=$(printf "%06d" "$IDX")
 
-V2D=${V2D_ROOT:-/l/users/han.zhou/v2d}
+V2D=${V2D_ROOT:?set V2D_ROOT to the data root}
 DS=$V2D/dataset/track_2/tier_1_multiview_caption
 # WORK_ROOT/OUT_ROOT let a local run keep heavy per-episode I/O off the shared store
 WORK=${WORK_ROOT:-$V2D/work}/episode_$EP

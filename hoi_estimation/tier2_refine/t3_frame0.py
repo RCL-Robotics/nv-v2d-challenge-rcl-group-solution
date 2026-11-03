@@ -58,7 +58,8 @@ def refine(i):
     return T, info
 
 res = {}
-for i in range(30):
+EPS = [int(x) for x in os.environ["V2D_EPISODES"].split(",")] if os.environ.get("V2D_EPISODES") else range(30)  # subset run
+for i in EPS:
     T, info = refine(i); np.savez(f"{OUT}/episode_{i:06d}.npz", T_world_mesh=T)
     # diagnostic (GT)
     ref = np.load(f"{V}/ref_poses/episode_{i:06d}.npz")["pose_xyz_wxyz"].astype(float); ok = np.linalg.norm(ref[:, 3:], axis=1) > .5
