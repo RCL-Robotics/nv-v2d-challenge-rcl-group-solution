@@ -28,6 +28,8 @@ for f in "$FINAL_DIR"/*.sh "$FINAL_LIB"/*.sh; do bash -n "$f" || { echo "SYNTAX 
 "$PLAN_PY" -I -B -c 'import ast, sys; [ast.parse(open(f).read(), f) for f in sys.argv[1:]]' "$FINAL_LIB"/*.py \
   && echo "PASS  python syntax (lib/*.py)" || fail=$((fail + 1))
 check setup_env
+check setup_env --strict-install
+check setup_env --steps check
 check setup_env --steps check --report-only
 check get_data
 check build_inputs_tier2
@@ -46,6 +48,17 @@ check train_tier3 --episode 0-29
 check select_tier2
 check select_tier3
 for t in 1 2 3; do check pack_tier$t --commit-url "$GITHUB_REPO/commit/0000000000000000000000000000000000000000"; done
+# the retarget step's recorded pins (lib/freeze_constraints.py, as the setup_env plan runs it; writes only into $OUT):
+# environment/v2d.pip-freeze.txt agrees with isaac-constraints.txt, and the plan's RETARGET_UNVERSIONED list equals the
+# packages that install_retarget.sh asks for without a version, each with a recorded version
+n=$((n + 1)); log="$OUT/$(printf '%02d' "$n")_freeze_constraints_v2d.txt"
+unv=$(bash "$FINAL_DIR/setup_env.sh" --dry-run ${site[@]+"${site[@]}"} --steps retarget | sed -n 's/^RETARGET_UNVERSIONED=(\(.*\))$/\1/p')
+read -r -a unv_list <<< "$unv"
+if [ "${#unv_list[@]}" -gt 0 ] && "$PLAN_PY" -I -B "$FINAL_LIB/freeze_constraints.py" "$REPO/environment/v2d.pip-freeze.txt" \
+     "$OUT/v2d.recorded-pins.txt" --pinned-by "$TR/repro/env/isaac-constraints.txt" \
+     --unversioned-in "$TR/repro/env/install_retarget.sh" --expect "${unv_list[@]}" > "$log" 2>&1; then
+  echo "PASS  freeze_constraints.py (v2d recorded pins, ${#unv_list[@]} unversioned requests)  ($(wc -l < "$log") lines)"
+else echo "FAIL  freeze_constraints.py  (see $log)"; tail -n 5 "$log"; fail=$((fail + 1)); fi
 # the Tier-2 command printer (reads only set_items_r9.json)
 n=$((n + 1)); log="$OUT/$(printf '%02d' "$n")_print_commands_r9.txt"
 if "$PLAN_PY" -I -B "$FINAL_LIB/print_commands_r9.py" > "$log" 2>&1; then echo "PASS  print_commands_r9.py  ($(wc -l < "$log") lines)"

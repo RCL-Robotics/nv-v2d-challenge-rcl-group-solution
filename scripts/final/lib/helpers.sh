@@ -164,3 +164,87 @@ check_sums() {
     note "$f: $((n_list - n_miss)) of $n_list listed files present here, all match ($n_miss not in this checkout)"
   done
 }
+
+# ---- env checks of setup_env.sh: lib/env_check.py against environment/<env>.pip-freeze.txt, one row per check in a
+# table, and a summary when the plan ends
+# env_check_init TABLE: start the table; the EXIT trap prints the summary also when a step stops the plan
+env_check_init() {
+  ENV_CHECK_TABLE=$1; ENV_CHECK_SHOWN=0
+  mkdir -p "$(dirname "$1")"
+  : > "$1"
+  trap env_check_summary EXIT
+}
+
+# env_check_step MODE PYTHON FREEZE
+#   MODE install: right after an install step. A difference is reported and the install goes on (the default), or,
+#                 with STRICT_INSTALL=1 (setup_env.sh --strict-install), stops the plan here. An env_check.py that
+#                 cannot run (no python) always stops it: the install step did not leave a working env.
+#   MODE check:   setup_env.sh --steps check. Every env is checked; env_check_finish then fails if any differs or could
+#                 not be checked (CHECK_REPORT_ONLY=1, i.e. --report-only: differences are listed only).
+env_check_step() {
+  local mode=$1 py=$2 freeze=$3 env log rc=0 counts status
+  env=$(basename "$freeze" .pip-freeze.txt)
+  log="${ENV_CHECK_TABLE%.tsv}_${mode}_${env}.txt"
+  if [ -x "$py" ]; then
+    "$py" -I -B "$FINAL_LIB/env_check.py" "$freeze" > "$log" 2>&1 || rc=$?
+  else
+    echo "[env_check] no executable python at $py" > "$log"; rc=127
+  fi
+  cat "$log"
+  counts=$(sed -n 's/^\[env_check\] .* recorded packages; \(.*\): [A-Z].*$/\1/p' "$log" | tail -n 1)
+  if [ "$rc" = 0 ]; then status=OK
+  elif [ "$rc" = 1 ] && [ -n "$counts" ]; then status=DIFFERS
+  else status=NOT_CHECKED; counts="env_check.py exit status $rc"; fi
+  printf '%s\t%s\t%s\t%s\t%s\n' "$mode" "$env" "$status" "$counts" "$log" >> "$ENV_CHECK_TABLE"
+  case "$mode:$status" in
+    *:OK) note "env $env equals environment/$env.pip-freeze.txt ($counts)" ;;
+    install:DIFFERS)
+      if [ "${STRICT_INSTALL:-0}" = 1 ]; then
+        die "env $env differs from environment/$env.pip-freeze.txt (listed above): --strict-install stops here"
+      fi
+      note "env $env differs from environment/$env.pip-freeze.txt (listed above; $counts): reported, the install goes on" ;;
+    install:*) die "env_check.py could not check env $env with $py (exit status $rc; $log)" ;;
+    check:*) note "env $env: $status ($counts)" ;;
+  esac
+}
+
+# env_check_summary: the table, once (env_check_finish, or the EXIT trap when the plan stops early)
+env_check_summary() {
+  [ "${ENV_CHECK_SHOWN:-1}" = 0 ] || return 0
+  ENV_CHECK_SHOWN=1
+  local mode env status counts log ni nc nn
+  echo "[final] ===== env check summary: the envs vs environment/*.pip-freeze.txt ====="
+  if [ ! -s "$ENV_CHECK_TABLE" ]; then echo "[final]   no env was checked"; return 0; fi
+  while IFS=$'\t' read -r mode env status counts log; do
+    printf '[final]   %-8s %-14s %-12s %s\n' "$mode" "$env" "$status" "$counts"
+  done < "$ENV_CHECK_TABLE"
+  ni=$(awk -F'\t' '$1 == "install" && $3 != "OK" {n++} END {print n + 0}' "$ENV_CHECK_TABLE")
+  nc=$(awk -F'\t' '$1 == "check" && $3 == "DIFFERS" {n++} END {print n + 0}' "$ENV_CHECK_TABLE")
+  nn=$(awk -F'\t' '$1 == "check" && $3 == "NOT_CHECKED" {n++} END {print n + 0}' "$ENV_CHECK_TABLE")
+  if [ "$ni" != 0 ] && [ "${STRICT_INSTALL:-0}" != 1 ]; then
+    echo "[final]   $ni env(s) differ from the record after their install step: reported only (the default install goes on);"
+    echo "[final]   setup_env.sh --steps check lists them again and exits non-zero; --strict-install stops at the first one"
+  fi
+  if [ "$nc" != 0 ]; then
+    if [ "${CHECK_REPORT_ONLY:-0}" = 1 ]; then echo "[final]   --steps check: $nc env(s) differ: listed only (--report-only)"
+    else echo "[final]   --steps check: $nc env(s) differ: exit status 1"; fi
+  fi
+  [ "$nn" = 0 ] || echo "[final]   --steps check: $nn env(s) could not be checked: exit status 1"
+  [ "$ni" != 0 ] || [ "$nc" != 0 ] || [ "$nn" != 0 ] || echo "[final]   every checked env equals its record"
+  echo "[final]   env_check.py output: ${ENV_CHECK_TABLE%.tsv}_<mode>_<env>.txt"
+  return 0
+}
+
+# env_check_finish: the last line of a setup_env.sh plan: the summary; non-zero only when `--steps check` found an
+# env that differs (without --report-only) or could not be checked (no python)
+env_check_finish() {
+  env_check_summary
+  local nc nn
+  nc=$(awk -F'\t' '$1 == "check" && $3 == "DIFFERS" {n++} END {print n + 0}' "$ENV_CHECK_TABLE")
+  nn=$(awk -F'\t' '$1 == "check" && $3 == "NOT_CHECKED" {n++} END {print n + 0}' "$ENV_CHECK_TABLE")
+  [ "$nn" = 0 ] || die "--steps check: $nn env(s) could not be checked (summary above; set the env pythons in the site file)"
+  if [ "$nc" != 0 ] && [ "${CHECK_REPORT_ONLY:-0}" != 1 ]; then
+    die "--steps check: $nc env(s) differ from environment/ (summary above); --report-only lists them without failing"
+  fi
+  return 0
+}

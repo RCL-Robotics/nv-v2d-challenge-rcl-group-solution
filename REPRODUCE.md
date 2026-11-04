@@ -27,7 +27,7 @@ of them (one log per call).
 
 | step | Tier 1 | Tier 2 | Tier 3 |
 |---|---|---|---|
-| environments (section 1) | `setup_env.sh` | same | same |
+| environments (section 1) | `setup_env.sh` (lists env differences and goes on, then a summary; `--strict-install` stops on one; `--steps check` fails on any) | same | same |
 | data (section 3) | `get_data.sh`, then `TR/repro` (retarget) | `get_data.sh`, `build_inputs_tier2.sh` | `build_inputs_tier3.sh` (Han Zhou's runbooks + our f0 prep) |
 | train (sections 4-6) | `train_tier1.sh --episode N` (stops each stage at the iteration that is used; `--full-length`; `--check-sources`) | `train_tier2.sh --episode N`; commands printed by `scripts/final/lib/print_commands_r9.py` | `train_tier3.sh --episode N` |
 | evaluate | `eval_tier1.sh [--trials K]` | `eval_tier2.sh` (own input) | `eval_tier3.sh` (own input) |
@@ -45,7 +45,9 @@ counted rollout's sha256.
 
 This commit adds `REPRODUCE.md`, `scripts/final/`, `environment/` and a short pointer section at the top of the
 root `README.md` on top of the merge `ceb0186`, an octopus merge of the three tier lines (first parent Tier 2), in
-two commits: `51d5232` (the runbook) and this one (the fixes of its merge test, section 10). No other file changes.
+three commits: `51d5232` (the runbook), `e7a9217` (the fixes of its merge test) and this one (the fix of the one
+blocking finding of `e7a9217`'s correctness check: the default install stopped at an env check; section 10). No other
+file changes.
 The merge had no conflicts and edited no file: every one of its 10,238 entries equals the blob of one parent.
 
 | tier | line (branch) | head merged | contents |
@@ -69,7 +71,7 @@ and this commit carries the Tier-2 line's version (section 2). Commits `a94614a`
 | Other training hosts (Tier 2, Zuxing Lu) | an RTX 5090 workstation and the robolab workstation ws031, with the same code commits (section 7) and the same `uv.lock` |
 | `flashchord` env (training, export, evaluation) | conda Python 3.11.17, uv 0.13.0, then the stock runtime's `uv.lock` hash-locked (`TR/repro/env/install_flashchord.sh`): jax 0.10.2 (CUDA 13 wheels), warp-lang 1.14.0, newton 1.2.0, mujoco-warp 3.8.1. Freeze: `environment/flashchord.*` |
 | `v2dkit` env (packer, validation) | a uv venv on the flashchord Python with `environment/v2dkit.pip-freeze.txt` (the kit's `requirements.txt` resolved) |
-| `v2d` env (retargeting, input builders) | conda Python 3.11.17, torch 2.7.0+cu128 and torchvision 0.22.0+cu128 (from `https://download.pytorch.org/whl/cu128`, the only index with these builds), torchaudio 2.7.0 (PyPI), Isaac Sim 5.1.0 (pypi.nvidia.com), Isaac Lab v2.3.2 (installed with `CONDA_PREFIX` set to this env), numpy 1.26.0 (`TR/repro/env/install_retarget.sh`, pins `isaac-constraints.txt`). Freeze: `environment/v2d.*` |
+| `v2d` env (retargeting, input builders) | conda Python 3.11.17, torch 2.7.0+cu128 and torchvision 0.22.0+cu128 (from `https://download.pytorch.org/whl/cu128`, the only index with these builds), torchaudio 2.7.0 (PyPI), Isaac Sim 5.1.0 (pypi.nvidia.com), Isaac Lab v2.3.2 (`isaaclab.sh --install`, all frameworks, then the recorded fallback `--install rsl_rl`, with `CONDA_PREFIX` set to this env; flatdict 4.0.1 built first with setuptools 80.9.0), numpy 1.26.0 (`TR/repro/env/install_retarget.sh`, pins `isaac-constraints.txt`; the packages it asks for without a version are installed just before it at the versions of `environment/v2d.pip-freeze.txt`). Freeze: `environment/v2d.*` |
 | `zx_g2_builder` env (Tier-2 G2 inputs, Zuxing Lu) | a uv venv on CPython 3.12.3, 28 packages (`ZX_KIT_PYTHON`; `<ZX>/envs/kit` on the training server). Freeze: `environment/zx_g2_builder.pip-freeze.txt` (recorded read-only on 2026-11-04) |
 | Stock runtime (the evaluator runs on it, never on this repository's `FC`) | `nvidia-isaac/video_to_data` @ `8c778f905cb35f76f8e6cd6e2ea486da4fb9e0ef` with LFS assets (`TR/repro/env/get_stock_runtime.sh`) |
 | Submission kit that packed every counted file | the Oct-11 kit: `KIT_MANIFEST.json` `398947a7…`, `flash_chord/scripts/evaluate_policy.py` `160d24f5…`, `tools/pack_submission.py` `47a45895…`, `submit/v2d_submit.py` `fe5cb1dc…`, `config/tracks.json` `5799f424…`; always run with `-I -B` or `-B` |
@@ -77,13 +79,25 @@ and this commit carries the Tier-2 line's version (section 2). Commits `a94614a`
 
 ```bash
 bash scripts/final/setup_env.sh --site site.env                 # conda, stock, flashchord, kit, retarget, zxg2, lfs
-bash scripts/final/setup_env.sh --site site.env --steps check   # read-only: envs vs environment/*.pip-freeze.txt, kit hashes
+bash scripts/final/setup_env.sh --site site.env --steps check   # read-only, strict: envs vs environment/*.pip-freeze.txt, kit hashes
 ```
 
-`env_check.py` (run after each install step and by `--steps check`) fails on any package that differs from the freeze,
-is missing or is extra; `--report-only` lists the differences without failing. On the training server the `v2d` env
-also holds one unrelated local editable package of another project; the freeze leaves it out and a comment line there
-lets `env_check.py` accept it as an extra.
+`env_check.py` compares an env with its freeze file after each install step and in `--steps check`. After an install
+step a differing, missing or extra package is listed and the install goes on (another machine can resolve a few
+dependencies differently); the run ends with a summary of every env check and exit status 0. `--strict-install` makes
+an install stop at the first env that differs instead. `--steps check` is the strict test: exit status 1 if an env
+differs from its record or cannot be checked (`--report-only` lists the differences and exits 0). On the training
+server the `v2d` env also holds one unrelated local editable package of another project; the freeze leaves it out and
+a comment line there lets `env_check.py` accept it as an extra.
+
+In the retarget step, the packages that `TR/repro/env/install_retarget.sh` asks for without a version (boto3, plotly,
+pytest, pyzmq, tzdata, imageio, scikit-learn and 7 more) are installed just before it at their recorded versions:
+`scripts/final/lib/freeze_constraints.py` turns `environment/v2d.pip-freeze.txt` into `name==version` pins (the
+packages that `isaac-constraints.txt` pins are left out once their versions are checked to agree), used together with
+`isaac-constraints.txt`. These pins are not applied to the Isaac Sim and Isaac Lab installs: there the record itself
+does not satisfy them (isaacsim-kernel 5.1.0 requires psutil 5.9.8 and click 8.1.7; the env has 7.2.2 and 8.5.0 from
+later steps), so dependencies of those installs, and of the versioned requests of `install_retarget.sh`, can still
+resolve differently on another machine; the summary and `--steps check` list them.
 
 **Git LFS: two sources.** The fork hosts no LFS objects for the upstream files. Clone without smudging, take the
 FlashCHORD assets from upstream, and Han Zhou's 41 `hoi_estimation/agent_records/*/outputs/*.{npz,npy}` from the fork:
@@ -322,7 +336,50 @@ A rollout of a re-export therefore carries the re-export's `checkpoint_sha256`. 
 
 ## 10. Tests of this runbook (2026-11-04, training server, GPUs 5-7, one job per GPU)
 
-### 10.1 This commit: the fixes of the merge test of `51d5232`
+### 10.1 This commit: the default install reports env differences instead of stopping
+
+The correctness check of `e7a9217` found one blocking problem: the documented default install
+(`setup_env.sh --site site.env`) stopped on any fresh machine at the `v2d` env check right after `install_retarget.sh`
+(strict since E5), so the `zxg2` and `lfs` steps never ran. Causes: Isaac Lab was installed with
+`isaaclab.sh --install rsl_rl`, while the record has the extras of the full `--install` (skrl 2.1.0,
+stable-baselines3 2.8.0, rl-games, ray 2.52.1, gym 0.23.1), and `install_retarget.sh` asks for 14 packages without a
+version that no constraint pinned (the record has boto3 1.39.11; PyPI now serves 1.43). This commit (section 1):
+
+- F1: after each install step the env check reports and the install goes on; a summary of every check ends the run
+  (exit status 0). `--strict-install` stops at the first env that differs. `--steps check` stays strict: exit status 1
+  on any difference (`--report-only`: list only). Code: `env_check_*` in `scripts/final/lib/helpers.sh`.
+- F2: Isaac Lab with `./isaaclab.sh --install` (all frameworks), `CONDA_PREFIX` = the env, then the fallback
+  `./isaaclab.sh --install rsl_rl`, as in the record: the training server's install log of 2026-10-11 shows the full
+  install installing `isaaclab_rl[all]` and stopping at `isaaclab_mimic[all]` (robomimic v0.4.0 needs egl_probe, whose
+  build fails with the env's conda CMake 4.4.4), then the fallback. robomimic is not in the record.
+- F3: the 14 packages that `install_retarget.sh` (a record file, unchanged) asks for without a version are installed
+  just before it at their recorded versions, under `isaac-constraints.txt` plus 295 `name==version` pins from
+  `environment/v2d.pip-freeze.txt` (`scripts/final/lib/freeze_constraints.py`; the 28 packages that
+  `isaac-constraints.txt` pins, torch, torchvision, torchaudio, numpy, pyarrow and isaacsim-*, are left out after their
+  versions are checked to agree). `install_retarget.sh` sets `PIP_CONSTRAINT` itself, so pins exported around it would
+  not reach its pip calls; its unversioned requests now find these packages installed.
+- F4: flatdict 4.0.1, which Isaac Lab requires exactly, is an sdist whose `setup.py` imports `pkg_resources` (removed
+  in setuptools 81), so on a fresh machine pip cannot even resolve it (the record has it from a wheel built
+  beforehand). It is now installed first, built with setuptools 80.9.0 (`pip --build-constraint`). Found in the
+  install logs while checking F2.
+
+Run on the training server from a fresh clean worktree of this commit (docs/ excluded), every output under a scratch
+`V2D_WORK`. No GPU was used; nothing was installed into any env, except pip 26.2.1 (the `v2d` env's version) into the
+throwaway venv of the resolver dry runs.
+
+| test | result |
+|---|---|
+| `selftest.sh` | 27/27 PASS plus the syntax of every script: 25 `--dry-run` plans (now also `setup_env.sh --strict-install` and `--steps check`), `freeze_constraints.py` on the `v2d` freeze, `print_commands_r9.py`; one log per call |
+| `setup_env.sh --steps check` (strict) | rc 0: flashchord 108, v2dkit 38, v2d 332 (plus the one allowed local editable extra), zx_g2_builder 28 packages, 0 differ / missing / extra, in the summary; driver 580.82.09; kit and stock evaluator `160d24f5…`, packer, uploader; stock runtime at `8c778f9` |
+| F1: the env checks against a temporary copy of `environment/` in which `v2dkit.pip-freeze.txt` records pandas 3.0.5 (the env has 3.0.6 and was not touched). Install path: the `--dry-run` plan of `setup_env.sh --steps flashchord,kit,retarget`, cut to its env-check lines (every install command dropped), run with `bash -euo pipefail` | default: v2dkit DIFFERS is reported and the `v2d` check still runs, summary printed, rc 0. `--strict-install`: the plan stops at v2dkit, summary printed, rc 1. `--steps check` (a real run of the copy): rc 1; with `--report-only`: rc 0 |
+| F2: dry-run plan | `./isaaclab.sh --install`, then `./isaaclab.sh --install rsl_rl` only if it stops, both under `env -u VIRTUAL_ENV CONDA_PREFIX=<envs>/v2d PATH=<envs>/v2d/bin:$PATH` |
+| F3: the pins (`freeze_constraints.py`, then `packaging.requirements`) | 295 lines, all `name==version`, all equal to the freeze; no name in both files; the 28 pins of `isaac-constraints.txt` equal the freeze's versions (0 conflicts); the 14 unversioned requests of `install_retarget.sh` equal the plan's list |
+| F3: pip 26.2.1 resolver dry runs in a throwaway venv (Tsinghua PyPI mirror; nothing installed) | the 14 packages with `--no-deps`: 14/14 at the recorded versions (without the pins 7 would differ: boto3 1.43.123, imageio 2.38.1, imageio-ffmpeg 0.8.1, importlib-metadata 10.1.0, pytest 9.2.0, pyzmq 27.3.0, tzdata 2026.6); with dependencies (all but pytorch-ignite, whose dependency is torch): 37/37 at the recorded versions |
+| F4: the same venv | `pip install --dry-run flatdict==4.0.1`: fails (`No module named 'pkg_resources'`); with the setuptools 80.9.0 build constraint: resolves |
+
+Not run: a real install on a fresh machine.
+
+### 10.2 `e7a9217`: the fixes of the merge test of `51d5232`
 
 The adversarial merge test of `51d5232` (PASS_WITH_NOTES) found: the retarget step could not resolve torch
 2.7.0+cu128 (E1); `isaaclab.sh` could install into an active conda env (E2); the 3 runtime LFS files of
@@ -330,13 +387,13 @@ The adversarial merge test of `51d5232` (PASS_WITH_NOTES) found: the retarget st
 fail (E5); the `v2d` freeze named a private repository and a local wheel path, and the server's host name appeared
 (E6); the Tier-1 teammate chains were looked up in `<ME>/fc_runs` (R1); stages trained far past the counted or next
 checkpoint, and in-place restarts resumed from an unchecked file (R2); selftest logs overwrote each other (R3); and
-`print_commands_t2.py` stops on the round-8/9 items. This commit fixes all of them (sections 1, 4, 5).
+`print_commands_t2.py` stops on the round-8/9 items. `e7a9217` fixes all of them (sections 1, 4, 5).
 
 Run on the training server from a fresh clean worktree (docs/ excluded) of the test build `c21b0d4`, which differs
-from this commit only in this subsection, a comment in `setup_env.sh` and the name of the per-stage `stop_check`
+from `e7a9217` only in this subsection, a comment in `setup_env.sh` and the name of the per-stage `stop_check`
 folder; `REQUIRE_IDLE_GPU=1`, GPUs 5 and 6 (idle), one job per GPU, every output under a scratch `V2D_WORK`. Nothing
-was installed; no clean reference was read or scored. The same tests were repeated from a fresh worktree of this
-commit.
+was installed; no clean reference was read or scored. The same tests were repeated from a fresh worktree of
+`e7a9217`.
 
 | test | result |
 |---|---|
@@ -351,7 +408,7 @@ commit.
 | E3: `git lfs ls-files -I <the lfs step's include>` | lists the 3 runtime files (`mhr_collision_proxy_4000v.npz`, `mhr_hand_surface_spec.npz`, `bbox_track.pt`) among 1,041 |
 | E6: `git grep` of the new and changed files | no host name, no private repository URL, no local wheel path |
 
-### 10.2 Tests of `51d5232` (before the fixes)
+### 10.3 Tests of `51d5232` (before the fixes)
 
 Run on the training server from a clean detached checkout of the test build of `51d5232` (`13eef86`: the same
 `scripts/final` code; `REPRODUCE.md`, `scripts/final/README.md`, the `check_sums` helper, the select scripts' lock
@@ -376,4 +433,4 @@ checks and the raw-input frame-reference check of `verify_inputs.py` were added 
 | `pack_tier1.sh` with a placeholder URL | kit packer, uploader validation ok, 22,989 rows, metric_code scores equal, only `code_commit_url` differs from `aee58640…` |
 | `pack_tier2.sh`, `pack_tier3.sh` | dry run only: the kit packer always computes a clean-reference score, which the team's Tier-2/3 rule keeps out of these tests. The same tools re-packed both files from the merge `ceb0186` earlier on 2026-11-04 (Tier 2 byte-identical to round 9's own placeholder pack; Tier 3 byte-identical to FINAL_r's locked CSV, and only `code_commit_url` differing from the `a7e7d3a` file) |
 | `51d5232`, from a fresh clean checkout | all PASS (`6717e04`, which differs from `51d5232` only in this table row): `selftest.sh` 18/18; the read-only real runs exit 0, with every present file listed by the record hash files matching (t2r9 `SHA256SUMS` 511/511, t3ready `SHA256SUMS` 980/980, PREREG / LOCK / SELECTION / AMENDMENT / retry locks; `POOL_R9` 186 of 250 and `RELOCATION_R9` 2 of 16 present, the rest are checkpoint copies kept out of git) and 30/30 Tier-2 frame references; one evaluation per tier: Tier 1 ep28 AUC 0.8154 (SP, MP pass, MPPE 2.56 cm), Tier 2 ep17 0.7902 (SP = MP = 1, 1.81 cm), Tier 3 ep07 0.9884 (SP = MP = 1, 0.69 cm); `train_tier3.sh --episode 7 --stage f0 --iterations 30` stopped by `max_iterations` at 30 with `config.yaml` equal to the recorded run's except `output_dir`, `training.max_iterations`; `pack_tier1.sh` (placeholder URL): validation ok, only `code_commit_url` differs |
-| `51d5232`, adversarial merge test (fresh sparse worktree, GPU 6) | `selftest.sh` 18/18; `setup_env.sh --steps check` rc 0 (108 / 38 / 333 packages equal); `eval_tier2.sh --episode 9 --trials 2` on the pinned file `c73692c5…`: AUC 0.78226 / 0.78132, SP = MP = 1, MPPE 1.673 / 1.700 cm; `--reexport` (worktree `f2923d6`, CPU): same policy (72/72 tensors, 11/11 metadata keys), AUC 0.79181 (the 25 recorded own-input runs: mean 0.7757, range 0.6604-0.7917); plans equal the hydra / W&B / embedded records for 17 spot-checked episodes; verdict PASS_WITH_NOTES (findings fixed in 10.1) |
+| `51d5232`, adversarial merge test (fresh sparse worktree, GPU 6) | `selftest.sh` 18/18; `setup_env.sh --steps check` rc 0 (108 / 38 / 333 packages equal); `eval_tier2.sh --episode 9 --trials 2` on the pinned file `c73692c5…`: AUC 0.78226 / 0.78132, SP = MP = 1, MPPE 1.673 / 1.700 cm; `--reexport` (worktree `f2923d6`, CPU): same policy (72/72 tensors, 11/11 metadata keys), AUC 0.79181 (the 25 recorded own-input runs: mean 0.7757, range 0.6604-0.7917); plans equal the hydra / W&B / embedded records for 17 spot-checked episodes; verdict PASS_WITH_NOTES (findings fixed in 10.2) |
