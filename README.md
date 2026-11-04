@@ -10,11 +10,8 @@
 
 ## V2D challenge Track 2 submissions (team MBZUAI-RCL Group)
 
-The code and records of our three counted Track-2 files are in this repository. Start with [`REPRODUCE.md`](REPRODUCE.md):
-environments, data, training, evaluation, selection and packing per tier, run through `scripts/final/` (`--dry-run`).
-Records: [Tier 1](robotic_grounding/flash_chord/scripts/track2/t1best/t1ready_20261031/README.md),
-[Tier 2](robotic_grounding/flash_chord/scripts/track2/t2r9_20261104/README.md),
-[Tier 3](robotic_grounding/flash_chord/scripts/track2/t3ready_20261102/README.md) (reconstruction: [`hoi_estimation/`](hoi_estimation/README.md)).
+The code behind our three submitted Track-2 files is in this repository. [`REPRODUCE.md`](REPRODUCE.md) shows how to
+reproduce them with `scripts/final/` and our verification package.
 
 ---
 

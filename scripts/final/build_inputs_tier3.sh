@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# build_inputs_tier3.sh: the Tier-3 inputs of the counted Tier-3 file (FINAL_r): Han Zhou's reconstruction from the
+# build_inputs_tier3.sh: the Tier-3 inputs of the counted Tier-3 file: the Tier-3 reconstruction (hoi_estimation/) from the
 # monocular exo video, mesh, ground plane, frame-0 human and frame-0 object pose, then our f0 data root
 # <ME>/data/human_motion_data_tier3_f0 with its frame references, retargets, support scenes and palm-mitigation list.
-#   han      Han Zhou's pipeline (hoi_estimation/): reproducibility/README.md, s1_runbook.md, tier3_runbook.md, end to end
+#   han      the reconstruction pipeline (hoi_estimation/): reproducibility/README.md, s1_runbook.md, tier3_runbook.md, end to end
 #            reproducibility/run_all_tier3.sh (apptainer images, weights with sha256 in environment/weights.sha256).
 #            The agent runs are not deterministic (hoi_estimation/REPRODUCTION_REPORT.md); the frame-0 step is
 #            (re-run byte-identical in 30/30 episodes from c0dbf5b, TR/t3ready_20261102/verification/han_followup/).
@@ -13,14 +13,15 @@
 #            parquet lock), D (support scenes for 01 02 03 06 07 09 11 13 16 17 20 25 27 28), E (finalize, FILES.sha256,
 #            READY), F (hand-object gap -> termination.palm_position_threshold=0.25 for 01 02 03 15 17 19 20 28)
 #   verify   read-only: the 30 locked f0 parquets, frame references and manifest against set_items.json
-# No clean or ground-truth trajectory is read anywhere (the one exception, the true frame-0 object pose inside Han's
-# track, is grey area 1 of TR/t3ready_20261102/README.md). The scripts embed <ME>=/root/autodl-tmp/haoran.zhang and
-# Han's release root; restore_layout_t3.py --rewrite replaces them.
+# No clean or ground-truth trajectory is read anywhere (the one exception, the true frame-0 object pose inside the
+# reconstruction's track, is grey area 1 of TR/t3ready_20261102/README.md). The scripts embed the training server's <ME>
+# and the reconstruction release root <HAN> (the ROOT_ME / ROOT_HAN defaults); restore_layout_t3.py --rewrite replaces them.
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'
 usage: build_inputs_tier3.sh --steps han,restore,opus,A,B,C,D,E,F,verify [--rewrite] [--dry-run] [--site FILE]
   --steps LIST   which steps; a real run needs --steps (the dry run shows all of them)
-  --rewrite      with restore: rewrite <ME> and Han's root inside the restored text files to ROOT_ME / ROOT_HAN
+  --rewrite      with restore: rewrite <ME> and <HAN> (the reconstruction release root) inside the restored text files
+                 to ROOT_ME / ROOT_HAN
   `--steps verify` is read-only.
 envs: RETARGET_PYTHON (env v2d), FC_PYTHON (flashchord), KIT_PYTHON (v2dkit)
 EOF
@@ -44,7 +45,7 @@ H=$REPO/hoi_estimation
 plan_header "Tier-3 inputs: steps $STEPS"
 addq B="$B"; addq H="$H"; addq ROOT_HAN="$ROOT_HAN"
 if has han; then
-  add ''; add '# ---- han: Han Zhou'"'"'s reconstruction (read first: $H/reproducibility/README.md; s1_runbook.md; tier3_runbook.md)'
+  add ''; add '# ---- han: the Tier-3 reconstruction (read first: $H/reproducibility/README.md; s1_runbook.md; tier3_runbook.md)'
   add '#   s1: CARI4D -> E2 -> P1 -> M1 -> first-frame ICP/PnP -> FF2 -> JC2s1 -> DB -> s1 release'
   add '#   tier3: agent inputs -> opus_v2 agent batches -> frame-0 correction (tier2_refine/t3_frame0.py opus <out> 3 2 shift)'
   add '#          -> supports -> combined release tier3_frame0_supports_20261024'
@@ -60,7 +61,7 @@ if has restore; then
   add '[ -e "$ROOT_ME/code/nv-v2d-challenge-codebase/.git" ] || GIT_LFS_SKIP_SMUDGE=1 git -C "$REPO" worktree add --detach "$ROOT_ME/code/nv-v2d-challenge-codebase" f2923d61817e61eb37d939e0f75e5b4a7aaa5cbf'
 fi
 if has opus; then
-  add ''; add '# ---- step 0: the opus_v2 root (byte copy of Han'"'"'s tier3_opus_20261021), its retarget and rcheck'
+  add ''; add '# ---- step 0: the opus_v2 root (byte copy of the reconstruction release tier3_opus_20261021), its retarget and rcheck'
   add '#      (data_prep/README_tier3.md section 0; records in $B/data_prep/opus_root; the f0 build reads this root in step A'
   add '#      and in the GT-free comparisons G9 and t3f0_align.py)'
   add 'note "step 0: follow $B/data_prep/README_tier3.md section 0 (t3opus_build_data.py, t3opus_driver_v2.sh retarget, t3opus_rcheck_v2.py)"'

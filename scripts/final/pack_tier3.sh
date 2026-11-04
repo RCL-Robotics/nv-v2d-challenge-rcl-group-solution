@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# pack_tier3.sh: pack the counted Tier-3 file FINAL_r for a commit URL with the Oct-11 kit packer tools/pack_submission.py
+# pack_tier3.sh: pack the counted Tier-3 file (FINAL_r in its records) for a commit URL with the Oct-11 kit packer tools/pack_submission.py
 # (47a45895, unchanged; --track track_2_tier3 --code-commit; each episode with its own frame_references_f0 npz), through
 # the pinned builder TR/t3ready_20261102/evaluation/f0_retry/t3final_r_build.py repack (AMENDMENT_2 pin 29dc1933...):
 # it re-checks the FINAL_r lock and FILES.sha256, copies the 30 stored results / frame references (sha256-checked), runs
@@ -27,7 +27,7 @@ while [ $# -gt 0 ]; do
 done
 B=$TR/t3ready_20261102
 F=$ROOT_ME/fc_runs/submissions/t3_f0_final
-plan_header "Tier-3 pack (FINAL_r) for $COMMIT_URL"
+plan_header "Tier-3 pack for $COMMIT_URL"
 add 'check_sha256 "$V2D_KIT/tools/pack_submission.py" 47a4589574ff8284ba4376ef31ac5548c8fe87ead753be2d3b43d6c87041e5be'
 add 'check_sha256 "$V2D_KIT/submit/v2d_submit.py" fe5cb1dc86d12abd01eab9dd5dd98b51569b5d8513a2d00d4e79da42a5f11718'
 addq check_sha256 "$B/evaluation/f0_retry/t3final_r_build.py" 29dc19339d2e38c96352438a971752332c226ff1a153fc78bdd4e0e413d61057

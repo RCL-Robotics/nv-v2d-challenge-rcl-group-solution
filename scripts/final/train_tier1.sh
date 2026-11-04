@@ -9,7 +9,7 @@
 # restarts (ep00, ep20) and teammate chains resume from this replay's own previous stage when it ran (handoff_N.sha256).
 # Each stage runs in a git worktree of its recorded training commit ($V2D_WORK/worktrees/<sha7>; all are ancestors
 # of this commit), or in this checkout with --code this. Training is GPU non-deterministic: a rerun reproduces the
-# recipe and the policy class, not the bytes (REPRODUCE.md section 9).
+# recipe and the policy class, not the bytes (REPRODUCE.md section 5).
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'
 usage: train_tier1.sh --episode N[,N...] [options] [--dry-run] [--site FILE]

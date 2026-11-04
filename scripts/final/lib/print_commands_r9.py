@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: Apache-2.0
-"""print_commands_r9.py: print the command lines that rebuild each checkpoint of the counted Tier-2 file R9-CLOSEST
-(train every stage, export, evaluate with the official kit evaluator), from the round-9 set record
+"""print_commands_r9.py: print the command lines that rebuild each checkpoint of the counted Tier-2 file
+(train every stage, export, evaluate with the official kit evaluator), from the set record of the final Tier-2 selection
 robotic_grounding/flash_chord/scripts/track2/t2r9_20261104/set/set_items_r9.json. Prints only; standard library only.
 
   python3 -I -B scripts/final/lib/print_commands_r9.py [--me PATH] [--zx PATH] [--zx5090 PATH] [--zxws PATH]
                                                         [--kit KIT] [--stock STOCK] [--episodes 4,11]
 
-It replaces TR/t2ready_20261031/tools/print_commands_t2.py (round 6) for rounds 8 and 9, whose items name the evaluated
+It replaces TR/t2ready_20261031/tools/print_commands_t2.py (an earlier selection) for the later set records, whose items name the evaluated
 checkpoint `evaluated_file` (a relocated copy) instead of `file`, and whose ep10 stage has no Hydra record (its
 overrides are rebuilt from the checkpoint's embedded configuration and the first train_t2 line, as
 scripts/final/lib/plan.py does). Paths keep the placeholders <ME>, <ZX>, <ZX5090>, <ZXWS> unless replaced.

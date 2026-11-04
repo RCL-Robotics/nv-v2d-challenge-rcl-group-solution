@@ -65,7 +65,7 @@ ensure_worktree() {
 
 # fill_lfs WORKTREE [SOURCE]: the FlashCHORD assets (meshes, SONIC ONNX prior; training needs them) as real files.
 # SOURCE given: copy each file from SOURCE (a checkout that has them) only if its size and sha256 equal the pointer's.
-# Otherwise: git lfs pull from the repository's lfs.url (upstream nvidia-isaac/video_to_data; see REPRODUCE.md).
+# Otherwise: git lfs pull from the repository's lfs.url (upstream nvidia-isaac/video_to_data, set by setup_env.sh --steps lfs).
 fill_lfs() {
   local wt=$1 src=${2:-}
   if [ -n "$src" ]; then

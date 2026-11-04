@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# eval_tier3.sh: N official evaluations ("trials") of the 30 pinned evaluated (exported) checkpoints of the counted Tier-3 file (FINAL_r), with the kit evaluator
+# eval_tier3.sh: N official evaluations ("trials") of the 30 pinned evaluated (exported) checkpoints of the counted Tier-3 file, with the kit evaluator
 # (examples/run_policy_evaluation.py + flash_chord/scripts/evaluate_policy.py 160d24f5 of the Oct-11 kit) on the stock
 # runtime video_to_data@8c778f9, through this checkout's scripts/track2/eval_all.py: world count 1, frame 0, explicit
 # reset, --export no, one episode per call. Reference = each policy's OWN frame-0 input (data/human_motion_data_tier3_f0). These own-input numbers are not the

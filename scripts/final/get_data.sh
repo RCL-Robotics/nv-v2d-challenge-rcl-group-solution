@@ -5,7 +5,7 @@
 # packer's --dataset-root). It wraps robotic_grounding/scripts/track2/get_data.sh (unchanged). The dataset is gated:
 # log in first (`hf auth login`) or export HF_TOKEN; nothing here reads or stores a token.
 #   Tier 1 reads track_2/tier_1_multiview_caption and Tier 2 only track_2/tier_2_synthetic_noise. Tier 3's sources
-#   (video, mesh, ground plane, frame-0 human and object pose) come with Han Zhou's pipeline (build_inputs_tier3.sh).
+#   (video, mesh, ground plane, frame-0 human and object pose) come with the Tier-3 reconstruction pipeline (build_inputs_tier3.sh).
 # The derived inputs (G1 retargets) are built by TR/repro (Tier 1), build_inputs_tier2.sh and build_inputs_tier3.sh.
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'

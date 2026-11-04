@@ -4,8 +4,8 @@
 
   show_selection.py --tier 2|3
 
-Tier 2: round 9's SELECTION_R9.json (top-level decision fields), the 10 complete trials (summary_r9_trials.csv:
-own-input and consensus-B means only) and the 30 items of set_items_r9.json. Tier 3: the 30 FINAL_r items of
+Tier 2: the final selection's SELECTION_R9.json (top-level decision fields), the 10 complete trials (summary_r9_trials.csv:
+own-input and consensus-B means only) and the 30 items of set_items_r9.json. Tier 3: the 30 items of
 set_items.json (kind, iteration, packed run, evaluated file). Read-only, standard library.
 """
 from __future__ import annotations
@@ -35,7 +35,7 @@ def main() -> int:
             print("   ", ", ".join(f"{k}={v}" for k, v in list(r.items())[:8]))
         s = json.loads((TR / "t2r9_20261104/set/set_items_r9.json").read_text())
         print(f"[set_items_r9.json] {s['what']}")
-        print(f"  replaced in round 9: {s['replaced_episodes']}; inputs: "
+        print(f"  replaced in the final selection: {s['replaced_episodes']}; inputs: "
               f"{dict(collections.Counter(e['input'] for e in s['episodes']))}")
         for e in s["episodes"]:
             ev = e["evaluated"]

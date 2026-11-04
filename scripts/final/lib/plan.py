@@ -12,8 +12,8 @@ stdout; it writes nothing and needs only the Python standard library.
 
 Set records (the only inputs that decide anything):
   Tier 1  robotic_grounding/flash_chord/scripts/track2/t1best/t1ready_20261031/set_items.json  (set all7, trial 05)
-  Tier 2  robotic_grounding/flash_chord/scripts/track2/t2r9_20261104/set/set_items_r9.json     (R9-CLOSEST, trial 3)
-  Tier 3  robotic_grounding/flash_chord/scripts/track2/t3ready_20261102/set/set_items.json     (FINAL_r)
+  Tier 2  robotic_grounding/flash_chord/scripts/track2/t2r9_20261104/set/set_items_r9.json     (trial 3 of the final Tier-2 selection)
+  Tier 3  robotic_grounding/flash_chord/scripts/track2/t3ready_20261102/set/set_items.json     (the final Tier-3 set)
   plus lib/resume_sha256.tsv: sha256 of the Tier-1 resume files that the set record gives no digest for (taken
   read-only on 2026-11-04; not part of the record)
 
@@ -21,7 +21,7 @@ Machine paths come from the environment (scripts/final/site.env.example; lib/com
   V2D_WORK, FC_PYTHON, KIT_PYTHON, V2D_RUNTIME, V2D_KIT, V2D_DATA, PLAN_PY
   ROOT_ME, ROOT_ZX, ROOT_ZX5090, ROOT_ZXWS, ROOT_HAN   where the records' <ME>, <ZX>, <ZX5090>, <ZXWS>, <HAN> live here
   T1_MOTION, T1_RUNS, T1_EXPORTS                      Tier 1's <MOTION>, recorded <RUNS> and payload exports/
-  T1_ZX_RUNS                                          where the record's <RUNS>/runin*/epNN (Zuxing Lu's runin chains
+  T1_ZX_RUNS                                          where the record's <RUNS>/runin*/epNN (a teammate's runin chains
                                                       of ep01, ep04, ep19) live: <ZX>/runs/2026-10-14-patience-runin
 
 train: one block per training stage of the episode's lineage, in order. Code = a git worktree of the stage's
@@ -100,7 +100,7 @@ TREE_CACHE = {
     "82837c8": None,
 }
 CKPT_RE = re.compile(r"^(?P<dir>.+)/model_(?P<it>\d+)\.safetensors$")
-# Tier-1 run folders of the record's <RUNS> that are Zuxing Lu's runin chains (ep01, ep04, ep19), not ours
+# Tier-1 run folders of the record's <RUNS> that are a teammate's runin chains (ep01, ep04, ep19), not ours
 ZX_RUNIN_RE = re.compile(r"^runin(_cont\d*)?/ep\d\d$")
 RESUME_SHA = LIB / "resume_sha256.tsv"
 # recorded ends that the trainer did not choose: the stage was stopped from outside (or was still running)
@@ -120,8 +120,8 @@ def roots() -> dict[str, str]:
     return {
         "<ME>": me,
         "<ZX>": env("ROOT_ZX", "/root/autodl-tmp/zuxing.lu"),
-        "<ZX5090>": env("ROOT_ZX5090", "<ZX5090>"),  # Zuxing's RTX 5090 host; unset = not on this machine
-        "<ZXWS>": env("ROOT_ZXWS", "<ZXWS>"),  # Zuxing's robolab workstation ws031; unset = not on this machine
+        "<ZX5090>": env("ROOT_ZX5090", "<ZX5090>"),  # a teammate's RTX 5090 machine; unset = not on this machine
+        "<ZXWS>": env("ROOT_ZXWS", "<ZXWS>"),  # a teammate's workstation; unset = not on this machine
         "<HAN>": env("ROOT_HAN", "/root/autodl-tmp/han.zhou"),
         "<MOTION>": env("T1_MOTION", f"{me}/data/human_motion_data"),
     }
@@ -387,7 +387,7 @@ def header(title: str) -> list[str]:
     ]
     if SETS_NAME == str(SETS[1].relative_to(REPO)):
         lines.append(f"# Tier-1 <RUNS> on this machine: {env('T1_RUNS', R['<ME>'] + '/fc_runs')} (ours), "
-                     f"{t1_runs_of('runin/ep01')} (<RUNS>/runin*/epNN: Zuxing Lu's runin chains)")
+                     f"{t1_runs_of('runin/ep01')} (<RUNS>/runin*/epNN: a teammate's runin chains)")
     return lines
 
 

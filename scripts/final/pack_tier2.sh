@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# pack_tier2.sh: pack the counted Tier-2 file (R9-CLOSEST, trial 3) for a commit URL with the Oct-11 kit packer
+# pack_tier2.sh: pack the counted Tier-2 file (trial 3 of the final Tier-2 selection) for a commit URL with the Oct-11 kit packer
 # tools/pack_submission.py (47a45895, unchanged; --code-commit; each episode with the frame reference of its own input),
 # through TR/t2ready_20261031/tools/repack_t2.py: results and frame references unchanged by packing, the kit uploader's
 # offline validate_submission() with provenance (one checkpoint digest per episode = set_items_r9.json), and every row
@@ -9,7 +9,7 @@
 # lib/kitpy_withhold.sh, which replaces it before anything shows or stores it (Tier-2 no-clean rule).
 #   recorded inputs (training server): fc_runs/submissions/t2r9_pack_20261104/pack_r9_placeholder/r9_closest/{results,
 #   frame_refs} and the source file submission_r9/T2_R9_closest_trial03_1dcee7e.csv (3129b378...).
-# The round's own pack script (t2r9_20261104/pack/t2cons_r9_pack.py pack-commit) additionally gates on the clean-history
+# The selection's own pack script (t2r9_20261104/pack/t2cons_r9_pack.py pack-commit) additionally gates on the clean-history
 # build clone and a branch-head listing of that clone; use it only there.
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF2'

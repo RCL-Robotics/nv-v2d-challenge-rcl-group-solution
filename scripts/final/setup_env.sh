@@ -17,11 +17,12 @@
 #               (TR/repro/env/install_retarget.sh; the packages it asks for without a version are installed first at
 #               the recorded versions; full freeze environment/v2d.pip-freeze.txt), used for the G1 retargeting and
 #               for Tier-2 / Tier-3 input building
-#   zxg2        Zuxing Lu's Tier-2 G2 input-builder env (ZX_KIT_PYTHON): a uv venv on CPython 3.12.3 with
+#   zxg2        a teammate's Tier-2 G2 input-builder env (ZX_KIT_PYTHON): a uv venv on CPython 3.12.3 with
 #               environment/zx_g2_builder.pip-freeze.txt
-#   lfs         Git LFS of this checkout: FlashCHORD assets and the 3 runtime files of reconstruction/modules that Han
-#               Zhou's run_all_tier3.sh needs, from upstream nvidia-isaac/video_to_data (the fork hosts no LFS objects
-#               for upstream files); Han Zhou's 41 hoi_estimation records from the fork's own LFS store
+#   lfs         Git LFS of this checkout: FlashCHORD assets and the 3 runtime files of reconstruction/modules that the
+#               Tier-3 reconstruction pipeline's run_all_tier3.sh needs, from upstream nvidia-isaac/video_to_data (the
+#               fork hosts no LFS objects for upstream files); the pipeline's 41 hoi_estimation records from the fork's
+#               own LFS store
 #   check       read-only: the four envs against environment/*.pip-freeze.txt (exit status 1 on any difference
 #               unless --report-only), GPU/driver, kit hashes, stock runtime commit
 # After each install step env_check.py compares the new env with its record. A difference is reported and the install
@@ -46,10 +47,9 @@ usage: setup_env.sh [--steps conda,stock,flashchord,kit,retarget,zxg2,lfs,check]
   --strict-install  an install step whose env differs from its record stops the install (exit status 1)
   --report-only  `--steps check` lists the differences and exits 0
   --mirror cn    optional, for hosts in mainland China: Tsinghua conda/PyPI mirrors, and HF_ENDPOINT=https://hf-mirror.com
-                 HF_HUB_DISABLE_XET=1 for get_data.sh. GitHub and pypi.nvidia.com may need an HTTP(S) proxy there
-                 (export https_proxy yourself; the AutoDL training server provides one through its network_turbo
-                 script). Large GitHub LFS transfers through such a proxy can break; retry or copy the files. The
-                 PyTorch index download.pytorch.org/whl/cu128 answered directly (no proxy) from the training server.
+                 HF_HUB_DISABLE_XET=1 for get_data.sh. GitHub and pypi.nvidia.com may need an HTTP(S) proxy there:
+                 if your network needs a proxy, set it up first (export https_proxy). Large GitHub LFS transfers
+                 through a proxy can break; retry or copy the files.
 needs: conda (miniconda 24.x was used), git, git-lfs (3.8.0 was used)
 EOF
 }
@@ -159,7 +159,7 @@ if has retarget; then
   add '# environment/v2d.pip-freeze.txt also lists packages that no Track-2 step imports (Isaac Lab extras, rl_games).'
 fi
 if has zxg2; then
-  add ''; add '# ---- zxg2: Zuxing Lu'"'"'s Tier-2 G2 input-builder env (ZX_KIT_PYTHON): a uv venv on CPython 3.12.3'
+  add ''; add '# ---- zxg2: a teammate'"'"'s Tier-2 G2 input-builder env (ZX_KIT_PYTHON): a uv venv on CPython 3.12.3'
   add '[ -x "$ENVS/zx_g2_builder/bin/python" ] || "$ENVS/flashchord/bin/uv" venv --python 3.12.3 "$ENVS/zx_g2_builder"'
   add "\"\$ENVS/flashchord/bin/uv\" pip install --python \"\$ENVS/zx_g2_builder/bin/python\" --index-url $(printf %q "$PIP_INDEX") -r \"\$ENVDIR/zx_g2_builder.pip-freeze.txt\""
   envcheck install '$ENVS/zx_g2_builder/bin/python' zx_g2_builder.pip-freeze.txt
@@ -169,10 +169,10 @@ if has lfs; then
   add ''; add '# ---- Git LFS of this checkout (clone with GIT_LFS_SKIP_SMUDGE=1 first; REPRODUCE.md section 1)'
   add 'git -C "$REPO" lfs install --local'
   add 'git -C "$REPO" config lfs.url https://github.com/nvidia-isaac/video_to_data.git/info/lfs'
-  add '# FlashCHORD and robotic_grounding assets, and the 3 runtime LFS files in reconstruction/modules that Han Zhou'"'"'s'
-  add '# run_all_tier3.sh needs (lib_mhr/assets/mhr_collision_proxy_4000v.npz, mhr_hand_surface_spec.npz, v2d_sam3d_body/assets/bbox_track.pt)'
+  add '# FlashCHORD and robotic_grounding assets, and the 3 runtime LFS files in reconstruction/modules that the Tier-3'
+  add '# reconstruction pipeline'"'"'s run_all_tier3.sh needs (lib_mhr/assets/mhr_collision_proxy_4000v.npz, mhr_hand_surface_spec.npz, v2d_sam3d_body/assets/bbox_track.pt)'
   add 'git -C "$REPO" lfs pull --include "robotic_grounding/flash_chord/**,robotic_grounding/source/robotic_grounding/robotic_grounding/assets/**,reconstruction/modules/v2d_cari4d/lib/cari4d/lib_mhr/assets/**,reconstruction/modules/v2d_sam3d_body/assets/**"'
-  add '# Han Zhou'"'"'s hoi_estimation/agent_records/*/outputs/*.{npz,npy} (41 files) are in the fork'"'"'s own LFS store:'
+  add '# the pipeline'"'"'s hoi_estimation/agent_records/*/outputs/*.{npz,npy} (41 files) are in the fork'"'"'s own LFS store:'
   add 'git -C "$REPO" -c lfs.url=https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git/info/lfs lfs pull --include "hoi_estimation/**"'
   add '"$PLAN_PY" -I -B "$FINAL_LIB/lfs_fill.py" --worktree "$REPO" --check-only --report "$V2D_WORK/logs/lfs_check_repo.tsv"'
   add 'for d in reconstruction/modules/v2d_cari4d/lib/cari4d/lib_mhr/assets reconstruction/modules/v2d_sam3d_body/assets; do'

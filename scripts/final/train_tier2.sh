@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# train_tier2.sh: retrain the 30 checkpoints of the counted Tier-2 file (R9-CLOSEST, trial 3; record TR/t2r9_20261104/),
+# train_tier2.sh: retrain the 30 checkpoints of the counted Tier-2 file (trial 3 of the final Tier-2 selection; record TR/t2r9_20261104/),
 # one episode at a time, with the recorded code, overrides, seeds and iterations.
 #   one stage per item, on the item's own input root (raw / K3 / K3fix / G2). 15 items are ours (61fa5d3 = f2923d6),
-#   15 are Zuxing Lu's (82837c8, bc3b1bd; RTX 5090, ws031 or this server). ep19 and ep25 resume from checkpoints that
-#   exist only on Zuxing's RTX 5090 host (set ROOT_ZX5090 to a copy). ep10 has no run record on the team server: its
-#   overrides are rebuilt from the checkpoint's embedded configuration.
+#   15 are a teammate's (82837c8, bc3b1bd; trained on the teammate's own machines or on the training server). ep19
+#   and ep25 resume from checkpoints that exist only on the teammate's RTX 5090 machine (set ROOT_ZX5090 to a copy).
+#   ep10 has no run record on the training server: its overrides are rebuilt from the checkpoint's embedded configuration.
 # Each stage runs in a git worktree of its recorded training commit ($V2D_WORK/worktrees/<sha7>; all are ancestors
 # of this commit), or in this checkout with --code this. Training is GPU non-deterministic: a rerun reproduces the
-# recipe and the policy class, not the bytes (REPRODUCE.md section 9).
+# recipe and the policy class, not the bytes (REPRODUCE.md section 5).
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'
 usage: train_tier2.sh --episode N[,N...] [options] [--dry-run] [--site FILE]

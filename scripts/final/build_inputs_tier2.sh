@@ -6,12 +6,12 @@
 #   k3     <ME>/data/human_motion_data_tier2_k3        our K3 Kalman smoother of the object track (+ frame_refs_k3)
 #   k3fix  <ME>/data/human_motion_data_tier2_k3fix     K3 with the ep04 root-cause fixes (+ frame_refs_k3fix) and the
 #                                                      per-episode gate rule G1-G4 (k3full_gates.py)
-#   g2     <ZX>/data/human_motion_data_tier2_g2-2026-10-24   Zuxing Lu's G2 contact-model smoother (+ frame_refs_g2)
+#   g2     <ZX>/data/human_motion_data_tier2_g2-2026-10-24   a teammate's G2 contact-model smoother (+ frame_refs_g2)
 #   verify the 30 task.parquet files and frame references the counted file used, against set_items_r9.json (read-only)
-# The R9 file uses K3fix for 18 episodes, G2 for 7, raw for 4 and K3 for 1 (set_items_r9.json `input`).
+# The counted file uses K3fix for 18 episodes, G2 for 7, raw for 4 and K3 for 1 (set_items_r9.json `input`).
 # The builders are the committed copies, byte-identical to the files that ran; they embed the training server's
-# absolute paths (<ME>=/root/autodl-tmp/haoran.zhang, <ZX>=/root/autodl-tmp/zuxing.lu, kalman work dir
-# <ME>/tmp_analysis/tier2/kalman, Zuxing's kit copy and env), so run them in that layout (a symlink or a container bind
+# absolute paths (<ME> and <ZX> at the ROOT_ME / ROOT_ZX defaults of lib/common.sh, kalman work dir
+# <ME>/tmp_analysis/tier2/kalman, the teammate's kit copy and env), so run them in that layout (a symlink or a container bind
 # mount of those roots) or edit the path constants. The write-once roots refuse to rebuild over an existing READY.
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'
@@ -19,7 +19,7 @@ usage: build_inputs_tier2.sh --steps raw,k3,k3fix,g2,verify [--gpus 0] [--jobs 6
   --steps LIST   which steps; a real run needs --steps (the dry run shows all of them)
   --gpus LIST    GPUs for the retarget (raw step), --jobs parallel retargets
   `--steps verify` is read-only: it checks the 30 inputs and frame references of the counted file.
-envs: RETARGET_PYTHON (Isaac Sim / Isaac Lab env v2d), KIT_PYTHON (kit venv), ZX_KIT_PYTHON (Zuxing's G2 builder env,
+envs: RETARGET_PYTHON (Isaac Sim / Isaac Lab env v2d), KIT_PYTHON (kit venv), ZX_KIT_PYTHON (a teammate's G2 builder env,
 recorded in environment/zx_g2_builder.pip-freeze.txt; default <ZX>/envs/kit/bin/python; setup_env.sh --steps zxg2)
 EOF
 }
@@ -72,15 +72,15 @@ if has k3fix; then
   add '( cd "$ROOT_ME" && CUDA_VISIBLE_DEVICES= nice -n 19 "$RETARGET_PYTHON" -I -B scripts/k3full_gates.py gates )   # K3fix where G1-G4 pass, raw otherwise'
 fi
 if has g2; then
-  add ''; add '# ---- G2 (Zuxing Lu; NOISY-ONLY): K3 variant agile+hgate, G2_surface_only smoother, data root + frame_refs_g2'
-  add '# copies of his files; their paths point into <ZX> (t2ready_20261031/data/zuxing_g2/README.md); all three steps run'
-  add '# in his builder env (G2_surface_only/run_all.sh names <ZX>/envs/kit/bin/python itself), recorded in'
+  add ''; add '# ---- G2 (by a teammate; NOISY-ONLY): K3 variant agile+hgate, G2_surface_only smoother, data root + frame_refs_g2'
+  add '# copies of the teammate'"'"'s files; their paths point into <ZX> (t2ready_20261031/data/zuxing_g2/README.md); all three steps run'
+  add '# in that builder env (G2_surface_only/run_all.sh names <ZX>/envs/kit/bin/python itself), recorded in'
   add '# environment/zx_g2_builder.pip-freeze.txt; env_check.py stops here if ZX_KIT_PYTHON differs from that record'
   add '"$ZX_KIT_PYTHON" -I -B "$FINAL_LIB/env_check.py" "$REPO/environment/zx_g2_builder.pip-freeze.txt"'
   add '( cd "$D/zuxing_g2/kfix" && "$ZX_KIT_PYTHON" -I -B run_fix.py agile+hgate )'
   add 'bash "$D/zuxing_g2/G2_surface_only/run_all.sh" "$ROOT_ZX/tmp/tier2_noise/kfix/gen/G2_surface_only/out"'
   add '"$ZX_KIT_PYTHON" -I -B "$D/zuxing_g2/g2data/build_g2_data.py" "$ROOT_ZX/data/human_motion_data_tier2_g2-2026-10-24" $(seq 0 29)'
-  add '# (round 7 used the same builder for its added G2 episodes: t2r7_20261102/data/zuxing_g2_r7/g2data/build_g2_data.py)'
+  add '# (an earlier Tier-2 selection round used the same builder for its added G2 episodes: t2r7_20261102/data/zuxing_g2_r7/g2data/build_g2_data.py)'
 fi
 if has verify; then
   add ''; add '# ---- verify (read-only): the 30 own inputs and frame references of the counted Tier-2 file'

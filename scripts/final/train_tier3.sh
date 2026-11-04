@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # SPDX-License-Identifier: Apache-2.0
-# train_tier3.sh: retrain the 30 checkpoints of the counted Tier-3 file (FINAL_r; record TR/t3ready_20261102/),
+# train_tier3.sh: retrain the 30 checkpoints of the counted Tier-3 file (record TR/t3ready_20261102/),
 # one episode at a time, with the recorded code, overrides, seeds and iterations.
-#   stage f0 (45000 iterations from scratch, every episode) and, for the 11 retry items of FINAL_r, stage retry_C90 (resume from
+#   stage f0 (45000 iterations from scratch, every episode) and, for the 11 retry items of that file, stage retry_C90 (resume from
 #   the recorded f0 model_44922 + rsi_44922 to 90000). Code 61fa5d3 = f2923d6. Inputs: the frame-0 root
 #   data/human_motion_data_tier3_f0 (build_inputs_tier3.sh).
 # Each stage runs in a git worktree of its recorded training commit ($V2D_WORK/worktrees/<sha7>; all are ancestors
 # of this commit), or in this checkout with --code this. Training is GPU non-deterministic: a rerun reproduces the
-# recipe and the policy class, not the bytes (REPRODUCE.md section 9).
+# recipe and the policy class, not the bytes (REPRODUCE.md section 5).
 source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 usage() { cat <<'EOF'
 usage: train_tier3.sh --episode N[,N...] [options] [--dry-run] [--site FILE]

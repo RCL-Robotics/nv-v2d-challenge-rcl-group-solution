@@ -4,7 +4,7 @@
 #   --site FILE    a site file (copy of scripts/final/site.env.example) with this machine's paths
 #   -h, --help     the script's usage
 # Without --site, the variables come from the environment, and unset ones default to the training server's layout
-# (ROOT_ME=/root/autodl-tmp/haoran.zhang), where every record path is real.
+# (the defaults in final_init below), where every record path is real.
 # A real run writes its plan to $V2D_WORK/logs/<script>_<time>.sh and runs it with bash -euo pipefail.
 set -u -o pipefail
 
@@ -49,7 +49,7 @@ final_init() {
   : "${T1_RUNS:=$ROOT_ME/fc_runs}"
   : "${T1_EXPORTS:=$ROOT_ME/transfer/t1best_20261026/payload/exports}"
   : "${T1_ZX_RUNS:=$ROOT_ZX/runs/2026-10-14-patience-runin}"   # the record's <RUNS>/runin*/epNN (teammate chains)
-  : "${ZX_KIT_PYTHON:=$ROOT_ZX/envs/kit/bin/python}"            # Zuxing Lu's G2 input-builder env
+  : "${ZX_KIT_PYTHON:=$ROOT_ZX/envs/kit/bin/python}"            # a teammate's G2 input-builder env
   : "${GPUS:=0}"
   : "${REQUIRE_IDLE_GPU:=0}"
   : "${LFS_FROM:=}"
