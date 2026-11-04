@@ -17,6 +17,8 @@ usage: train_tier2.sh --episode N[,N...] [options] [--dry-run] [--site FILE]
   --code training|this training: a worktree of the stage's recorded training commit (default); this: this checkout
   --runs-root DIR      where the runs go (default $V2D_WORK/runs/tier2)
   --iterations K       smoke test: scratch stages stop at K iterations, resumed stages at <resume iteration> + K
+  --full-length        accepted for symmetry with train_tier1.sh: Tier-2 stages always train as recorded
+  --check-sources      read-only: sha256 of every resume source in place and of the counted training checkpoint
   --gpu G              GPU index (default: first of $GPUS); REQUIRE_IDLE_GPU=1 refuses a GPU with any compute process
   --cpus LIST          taskset CPU list (optional)
   --hull-cache recorded|stock|none|DIR

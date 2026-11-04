@@ -48,6 +48,8 @@ final_init() {
   : "${T1_MOTION:=$ROOT_ME/data/human_motion_data}"
   : "${T1_RUNS:=$ROOT_ME/fc_runs}"
   : "${T1_EXPORTS:=$ROOT_ME/transfer/t1best_20261026/payload/exports}"
+  : "${T1_ZX_RUNS:=$ROOT_ZX/runs/2026-10-14-patience-runin}"   # the record's <RUNS>/runin*/epNN (teammate chains)
+  : "${ZX_KIT_PYTHON:=$ROOT_ZX/envs/kit/bin/python}"            # Zuxing Lu's G2 input-builder env
   : "${GPUS:=0}"
   : "${REQUIRE_IDLE_GPU:=0}"
   : "${LFS_FROM:=}"
@@ -59,7 +61,7 @@ final_init() {
   REPO_HEAD=$(git -C "$REPO" rev-parse --verify -q HEAD || echo unknown)
   : "${COMMIT_URL:=$GITHUB_REPO/commit/$REPO_HEAD}"
   export ROOT_ME ROOT_ZX ROOT_HAN V2D_WORK FC_PYTHON KIT_PYTHON RETARGET_PYTHON V2D_RUNTIME V2D_KIT V2D_DATA \
-    T1_MOTION T1_RUNS T1_EXPORTS GPUS REQUIRE_IDLE_GPU LFS_FROM PLAN_PY REPO_HEAD COMMIT_URL
+    T1_MOTION T1_RUNS T1_EXPORTS T1_ZX_RUNS ZX_KIT_PYTHON GPUS REQUIRE_IDLE_GPU LFS_FROM PLAN_PY REPO_HEAD COMMIT_URL
   [ -n "${ROOT_ZX5090:-}" ] && export ROOT_ZX5090
   [ -n "${ROOT_ZXWS:-}" ] && export ROOT_ZXWS
   return 0

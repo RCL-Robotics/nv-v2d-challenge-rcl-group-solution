@@ -1,0 +1,37 @@
+# Zuxing Lu's Tier-2 G2 input-builder env (ZX_KIT_PYTHON; on the training server <ZX>/envs/kit/bin/python): a uv 0.13.0
+# venv on CPython 3.12.3 (the server's base conda Python; include-system-site-packages = false). It runs every G2 step of
+# scripts/final/build_inputs_tier2.sh: kfix/run_fix.py agile+hgate, G2_surface_only/run_all.sh (its PY= line names this
+# env) and g2data/build_g2_data.py.
+# Recorded read-only on 2026-11-04 07:57 CST. The venv has no pip (`<python> -m pip freeze`: "No module named pip"), so
+# this list is `pip freeze --all --path <venv>/lib/python3.12/site-packages` run with the flashchord env's pip;
+# importlib.metadata in the venv's own Python lists the same 28 distributions. No package is a URL or local install.
+# Rebuild: uv venv --python 3.12.3 <dir>; uv pip install --python <dir>/bin/python -r zx_g2_builder.pip-freeze.txt
+# (scripts/final/setup_env.sh --steps zxg2). Check: <python> -I -B scripts/final/lib/env_check.py <this file>.
+apsw==3.54.1.0
+argcomplete==3.7.2
+backports.zstd==1.8.0
+colorama==0.4.6
+contourpy==1.4.0
+cycler==0.12.1
+evo==1.38.0
+fonttools==4.67.0
+kiwisolver==1.5.1
+lz4==4.4.5
+matplotlib==3.11.2
+natsort==8.4.0
+numexpr==2.14.2
+numpy==2.5.4
+packaging==26.3
+pandas==3.0.6
+pillow==13.0.0
+pyarrow==26.0.0
+Pygments==2.21.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+PyYAML==6.0.3
+rosbags==0.11.9
+ruamel.yaml==0.19.1
+scipy==1.18.1
+seaborn==0.13.2
+six==1.17.0
+trimesh==5.1.1

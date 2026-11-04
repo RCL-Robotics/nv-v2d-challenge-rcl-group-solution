@@ -1,4 +1,4 @@
-# Machine of the training, export and evaluation runs (corl2026_pro6000), captured 2026-11-04 05:45 CST
+# Machine of the training, export and evaluation runs (the training server), captured 2026-11-04 05:45 CST
 ## GPU
 index, name, memory.total [MiB], driver_version, compute_cap
 0, NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 580.82.09, 12.0

@@ -1,0 +1,27 @@
+# resume_sha256.tsv: sha256 of the Tier-1 resume files for which the set record (t1ready_20261031/set_items.json) has
+# no digest. NOT part of the set record: taken read-only on 2026-11-04 from the files on the training server.
+#   T1_ZX_RUNS = <ZX>/runs/2026-10-14-patience-runin (Zuxing Lu's runin chains, the record's <RUNS>/runin*/epNN)
+#   T1_RUNS    = <ME>/fc_runs (the in-place restarts of C3r2_runin ep00 and ep20)
+# The same folders also hold three files that the record does give a digest for, and they match it:
+#   runin_cont2/ep01/model_128000 + rsi = the ep01 stage-4 fork pair (T1fix/stage2/forks/ep01-B), dea9917e / 767a2fb3
+#   runin_cont/ep19/model_90000 + rsi   = the ep19 stage-3 fork pair (T1fix/B/ep19), c845ae6e / 9f0b645c
+#   runin_cont4/ep04/model_358000 + rsi = ep04's counted training checkpoint, 72f67989 / 376a7e14
+# path (relative to the record's <RUNS>)	sha256	size	root	used by
+runin/ep01/model_44922.safetensors	a7ccfc17f337ca3e8eb76b93a9a36753ca4f99ebe4fb2d30aea3a024ea3fce75	24993184	T1_ZX_RUNS	ep01 stage 2
+runin/ep01/rsi_44922.safetensors	3484f709cf820d6e7d36c9ff5dbcf2f710103ac670b435c27760512f5e0a3161	3774356	T1_ZX_RUNS	ep01 stage 2
+runin_cont/ep01/model_90000.safetensors	807b6fff75adbb2c98662df5947efdf7cfffa73c44c4aad757b97df3d192ae43	24993272	T1_ZX_RUNS	ep01 stage 3
+runin_cont/ep01/rsi_90000.safetensors	d5fd7f1d1dca31dde33a30356d60b4945213ff9b6fb9e21b2b8da1e372f7e387	3774356	T1_ZX_RUNS	ep01 stage 3
+runin/ep04/model_44922.safetensors	e3a34ca3ccba884767dc2a3d5657d244b95deaf0345974bdca40ff492ba6dd09	24993184	T1_ZX_RUNS	ep04 stage 2
+runin/ep04/rsi_44922.safetensors	c1c2c5bb2a9ef551a15122270df338add8f78b5187ef8a57c34233c7843c258e	3621892	T1_ZX_RUNS	ep04 stage 2
+runin_cont/ep04/model_90000.safetensors	6e7cd1ea2f5582ef168df7704463652982a8ed9b8c28ecb7f05e76d0c7a05fdd	24993280	T1_ZX_RUNS	ep04 stage 3
+runin_cont/ep04/rsi_90000.safetensors	b483f1d38f8f529bbfea61b7a744b184403bce32831f62346ab576e706fef798	3621892	T1_ZX_RUNS	ep04 stage 3
+runin_cont2/ep04/model_180000.safetensors	49e67bd3cf2b8612b113801ae6f0f9ce6edb295dc1704d1a9c77c15e6ce829ea	24993288	T1_ZX_RUNS	ep04 stage 4
+runin_cont2/ep04/rsi_180000.safetensors	d2a0a12664ef3ec23bdb9bdd251e698143ea6e74771873980033e89c49977d88	3621892	T1_ZX_RUNS	ep04 stage 4
+runin_cont3/ep04/model_270000.safetensors	bf9c8b958866e51899db2ecfb748ca35e818d06374514fe16cddae87966b91aa	24993288	T1_ZX_RUNS	ep04 stage 5
+runin_cont3/ep04/rsi_270000.safetensors	15fe2bd33863b42c130924fd228361638fab01eb798449a915bcd0fd14caee45	3622956	T1_ZX_RUNS	ep04 stage 5
+runin/ep19/model_44922.safetensors	5977d92744d83e4dea32479f4a66dfab053a6224c631f93703aec7c6ee772e29	24993168	T1_ZX_RUNS	ep19 stage 2
+runin/ep19/rsi_44922.safetensors	ccb0cf1357c7295c9f780122b74c2f2c26b35d5d4e3b21d801a70fb82f669451	4089060	T1_ZX_RUNS	ep19 stage 2
+C3r2_runin/ep00/model_4000.safetensors	0dd35f1be0e9b9d9f571ef3bc86eba5769a6e6a213099d3c43aa8c858f99afe8	24993176	T1_RUNS	ep00 stage 2 (in-place restart)
+C3r2_runin/ep00/rsi_4000.safetensors	450f2360949f807ccec1b5b664ec5f200070807a3a0bba52b52c50cb69e9f649	3505100	T1_RUNS	ep00 stage 2 (in-place restart)
+C3r2_runin/ep20/model_24000.safetensors	e615c6235ee2d3720a13d2e5351f32391a95dd28a102a289959d1352f7516cf5	24993176	T1_RUNS	ep20 stage 2 (in-place restart)
+C3r2_runin/ep20/rsi_24000.safetensors	e73a972d8e787e8445dc96c73672282ded93b1dad9756f24721cd2f23f76909a	2733524	T1_RUNS	ep20 stage 2 (in-place restart)

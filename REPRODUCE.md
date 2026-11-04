@@ -23,13 +23,13 @@ All scripts are in `scripts/final/`. Each one takes `--dry-run` (print the exact
 `--site FILE` (this machine's paths; copy `scripts/final/site.env.example`) and `--help`. A real run writes its command
 list to `$V2D_WORK/logs/<script>_<time>.sh` and runs it with `bash -euo pipefail`. Without `--site`, every path
 defaults to the training server's layout, where all record paths are real. `scripts/final/selftest.sh` dry-runs all
-of them.
+of them (one log per call).
 
 | step | Tier 1 | Tier 2 | Tier 3 |
 |---|---|---|---|
 | environments (section 1) | `setup_env.sh` | same | same |
 | data (section 3) | `get_data.sh`, then `TR/repro` (retarget) | `get_data.sh`, `build_inputs_tier2.sh` | `build_inputs_tier3.sh` (Han Zhou's runbooks + our f0 prep) |
-| train (sections 4-6) | `train_tier1.sh --episode N` | `train_tier2.sh --episode N` | `train_tier3.sh --episode N` |
+| train (sections 4-6) | `train_tier1.sh --episode N` (stops each stage at the iteration that is used; `--full-length`; `--check-sources`) | `train_tier2.sh --episode N`; commands printed by `scripts/final/lib/print_commands_r9.py` | `train_tier3.sh --episode N` |
 | evaluate | `eval_tier1.sh [--trials K]` | `eval_tier2.sh` (own input) | `eval_tier3.sh` (own input) |
 | select | `TR/t1best/t1ready_20261031/amend1/` (20 trials, closest to mean) | `select_tier2.sh` | `select_tier3.sh` |
 | pack | `pack_tier1.sh --commit-url URL` | `pack_tier2.sh --commit-url URL` | `pack_tier3.sh --commit-url URL` |
@@ -43,9 +43,10 @@ counted rollout's sha256.
 
 ## 0. What this commit is
 
-This commit adds `REPRODUCE.md`, `scripts/final/` and `environment/` (new files only) on top of the merge
-`ceb0186`, an octopus merge of the three tier lines (first parent Tier 2). The merge had no conflicts and edited no
-file: every one of its 10,238 entries equals the blob of one parent.
+This commit adds `REPRODUCE.md`, `scripts/final/`, `environment/` and a short pointer section at the top of the
+root `README.md` on top of the merge `ceb0186`, an octopus merge of the three tier lines (first parent Tier 2), in
+two commits: `51d5232` (the runbook) and this one (the fixes of its merge test, section 10). No other file changes.
+The merge had no conflicts and edited no file: every one of its 10,238 entries equals the blob of one parent.
 
 | tier | line (branch) | head merged | contents |
 |---|---|---|---|
@@ -68,15 +69,21 @@ and this commit carries the Tier-2 line's version (section 2). Commits `a94614a`
 | Other training hosts (Tier 2, Zuxing Lu) | an RTX 5090 workstation and the robolab workstation ws031, with the same code commits (section 7) and the same `uv.lock` |
 | `flashchord` env (training, export, evaluation) | conda Python 3.11.17, uv 0.13.0, then the stock runtime's `uv.lock` hash-locked (`TR/repro/env/install_flashchord.sh`): jax 0.10.2 (CUDA 13 wheels), warp-lang 1.14.0, newton 1.2.0, mujoco-warp 3.8.1. Freeze: `environment/flashchord.*` |
 | `v2dkit` env (packer, validation) | a uv venv on the flashchord Python with `environment/v2dkit.pip-freeze.txt` (the kit's `requirements.txt` resolved) |
-| `v2d` env (retargeting, input builders) | conda Python 3.11.17, Isaac Sim 5.1.0, Isaac Lab v2.3.2, torch 2.7.0+cu128, numpy 1.26.0 (`TR/repro/env/install_retarget.sh`, pins `isaac-constraints.txt`). Freeze: `environment/v2d.*` |
+| `v2d` env (retargeting, input builders) | conda Python 3.11.17, torch 2.7.0+cu128 and torchvision 0.22.0+cu128 (from `https://download.pytorch.org/whl/cu128`, the only index with these builds), torchaudio 2.7.0 (PyPI), Isaac Sim 5.1.0 (pypi.nvidia.com), Isaac Lab v2.3.2 (installed with `CONDA_PREFIX` set to this env), numpy 1.26.0 (`TR/repro/env/install_retarget.sh`, pins `isaac-constraints.txt`). Freeze: `environment/v2d.*` |
+| `zx_g2_builder` env (Tier-2 G2 inputs, Zuxing Lu) | a uv venv on CPython 3.12.3, 28 packages (`ZX_KIT_PYTHON`; `<ZX>/envs/kit` on the training server). Freeze: `environment/zx_g2_builder.pip-freeze.txt` (recorded read-only on 2026-11-04) |
 | Stock runtime (the evaluator runs on it, never on this repository's `FC`) | `nvidia-isaac/video_to_data` @ `8c778f905cb35f76f8e6cd6e2ea486da4fb9e0ef` with LFS assets (`TR/repro/env/get_stock_runtime.sh`) |
 | Submission kit that packed every counted file | the Oct-11 kit: `KIT_MANIFEST.json` `398947a7…`, `flash_chord/scripts/evaluate_policy.py` `160d24f5…`, `tools/pack_submission.py` `47a45895…`, `submit/v2d_submit.py` `fe5cb1dc…`, `config/tracks.json` `5799f424…`; always run with `-I -B` or `-B` |
 | Tier-3 reconstruction (Han Zhou) | apptainer images and weights: `hoi_estimation/reproducibility/README.md` (`environment/weights.sha256` there) |
 
 ```bash
-bash scripts/final/setup_env.sh --site site.env                 # conda, stock, flashchord, kit, retarget, lfs
+bash scripts/final/setup_env.sh --site site.env                 # conda, stock, flashchord, kit, retarget, zxg2, lfs
 bash scripts/final/setup_env.sh --site site.env --steps check   # read-only: envs vs environment/*.pip-freeze.txt, kit hashes
 ```
+
+`env_check.py` (run after each install step and by `--steps check`) fails on any package that differs from the freeze,
+is missing or is extra; `--report-only` lists the differences without failing. On the training server the `v2d` env
+also holds one unrelated local editable package of another project; the freeze leaves it out and a comment line there
+lets `env_check.py` accept it as an extra.
 
 **Git LFS: two sources.** The fork hosts no LFS objects for the upstream files. Clone without smudging, take the
 FlashCHORD assets from upstream, and Han Zhou's 41 `hoi_estimation/agent_records/*/outputs/*.{npz,npy}` from the fork:
@@ -85,9 +92,13 @@ FlashCHORD assets from upstream, and Han Zhou's 41 `hoi_estimation/agent_records
 GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git v2d
 cd v2d && GIT_LFS_SKIP_SMUDGE=1 git checkout <this commit>
 git lfs install --local && git config lfs.url https://github.com/nvidia-isaac/video_to_data.git/info/lfs
-git lfs pull --include "robotic_grounding/flash_chord/**,robotic_grounding/source/robotic_grounding/robotic_grounding/assets/**"
+git lfs pull --include "robotic_grounding/flash_chord/**,robotic_grounding/source/robotic_grounding/robotic_grounding/assets/**,reconstruction/modules/v2d_cari4d/lib/cari4d/lib_mhr/assets/**,reconstruction/modules/v2d_sam3d_body/assets/**"
 git -c lfs.url=https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git/info/lfs lfs pull --include "hoi_estimation/**"
 ```
+
+The two `reconstruction/modules` patterns cover the 3 runtime LFS files that Han Zhou's `run_all_tier3.sh` checks
+before it starts (`lib_mhr/assets/mhr_collision_proxy_4000v.npz`, `lib_mhr/assets/mhr_hand_surface_spec.npz`,
+`v2d_sam3d_body/assets/bbox_track.pt`; upstream files, so their objects are in the upstream store).
 
 Training needs the 559 FlashCHORD asset files (`FC/src/flash_chord/assets`, meshes and the SONIC ONNX prior, 415 MB);
 export and evaluation do not (the exporter's check and the evaluator use the stock runtime's assets). The assets tree
@@ -127,8 +138,9 @@ tier with this commit's exporter (identical tensors and metadata) and trained on
    bit-deterministic; reuse the derived data where available (`FINAL_EPISODES.tsv` has each parquet's sha256).
 3. **Tier 2** (only `track_2/tier_2_synthetic_noise` is read): `scripts/final/build_inputs_tier2.sh` -> raw
    `human_motion_data_tier2`, K3 `human_motion_data_tier2_k3`, K3fix `human_motion_data_tier2_k3fix`, G2 (Zuxing Lu)
-   `<ZX>/data/human_motion_data_tier2_g2-2026-10-24`, each with its frame references. `--steps verify` checks the 30
-   inputs and frame references of the counted file (read-only).
+   `<ZX>/data/human_motion_data_tier2_g2-2026-10-24`, each with its frame references. The G2 steps run in Zuxing's
+   builder env (`ZX_KIT_PYTHON`, checked against `environment/zx_g2_builder.pip-freeze.txt` first). `--steps verify`
+   checks the 30 inputs and frame references of the counted file (read-only).
 4. **Tier 3** (video, mesh, ground plane, frame-0 human and frame-0 object pose only): `scripts/final/build_inputs_tier3.sh`
    = Han Zhou's reconstruction (`hoi_estimation/reproducibility/README.md`, `s1_runbook.md`, `tier3_runbook.md`,
    `run_all_tier3.sh`), then `TR/t3ready_20261102/data_prep/README_tier3.md` steps 0 and A-F ->
@@ -143,9 +155,38 @@ files elsewhere, make `<ME>` (and `<ZX>`) resolve to the copied data, with a sym
 
 1. **Train:** `scripts/final/train_tier1.sh --episode N` runs every stage of the episode's lineage in order (54 stages,
    30 lineages; `set_items.json` `stages`, `set_stages.tsv`) in the worktree of the stage's `code`, with the recorded
-   overrides and seed 42. Resumed stages (T1fix forks, T1improve arms, teammate chains) first copy the recorded resume
-   pair (`model_N` + `rsi_N`, sha256-checked where recorded) into the new run root. Hull caches: the stage's recorded
-   cache (payload group `F_hull_caches`; `--hull-cache`), else the stock runtime's.
+   overrides and seed 42. Hull caches: the stage's recorded cache (payload group `F_hull_caches`; `--hull-cache`), else
+   the stock runtime's.
+   - **Resume sources.** The record's `<RUNS>` is our `fc_runs` (`T1_RUNS`) except `<RUNS>/runin*/epNN`: Zuxing Lu's
+     runin chains (ep01 stages 1-3, ep04 stages 1-5, ep19 stages 1-2), which live in
+     `<ZX>/runs/2026-10-14-patience-runin` (`T1_ZX_RUNS`; it also holds ep04's counted checkpoint
+     `runin_cont4/ep04/model_358000`). Fork stages (T1fix, T1improve) copy the recorded fork pair, sha256-checked
+     against the record. The teammate-chain and in-place-restart pairs have no digest in the record; they are checked
+     against `scripts/final/lib/resume_sha256.tsv` (taken read-only on 2026-11-04 and labelled as such in the plan).
+     Three files in those folders do have a record digest, and match it: `runin_cont2/ep01/model_128000` (ep01's
+     stage-4 fork pair), `runin_cont/ep19/model_90000` (ep19's stage-3 fork pair) and ep04's counted
+     `model_358000` + `rsi_358000`. `train_tier1.sh --episode N [--stage S] --check-sources` checks all of these in
+     place (read-only).
+   - **Chains.** In-place restarts (ep00 at 4000, ep20 at 24000) and teammate chains resume in the previous stage's run
+     folder. When the previous stage ran in the same replay, it leaves `handoff_N.sha256` for `model_N` + `rsi_N`, and
+     the next stage resumes from exactly those files. When it did not (`--stage S` alone, or the replay's previous
+     stage ended before N), the stage copies the recorded pair instead (the plan says which).
+   - **Stop (default).** A stage whose recorded run was stopped from outside (end empty, `manual_plateau`,
+     `auc_confirmed`, "running at selection", in-place restart) or went on past what is used later stops at the
+     iteration that is used: the next stage's resume iteration, or the counted checkpoint (31 of the 54 stages; for
+     example ep00 stage 1 at 4000 and stage 2 at 28000, ep02 at 44000 instead of the recorded 120,000). Stages that the
+     trainer ended itself (`help_zero_tail`) are not cut. The stop is the trainer's own end, `training.max_iterations`,
+     and only after `scripts/final/lib/stop_check.py` has shown that it changes nothing else: it composes the stage's
+     Hydra configuration with the recorded and with the lowered value (`train_rl.py --cfg job --resolve`, no
+     training) and requires every other key to be equal. In the code of all five training trees,
+     `training.max_iterations` is only the loop end, the last log/save, `final.json` and the progress bar; no learning
+     rate, entropy, curriculum, RSI or help schedule reads it. One config family does: the `*_helpfix` experiments of
+     `bc3b1bd`/`82837c8` set `reset.help_final_iteration: ${training.max_iterations}`; no counted Tier-1 stage uses
+     them, and if a stage did, the check would fall back to the recorded value. The stopped run's checkpoints record
+     `training.max_iterations` = the stop iteration in their embedded configuration. `--full-length` trains every stage
+     to its recorded `max_iterations` (the counted checkpoint is saved on the way, every 500 iterations).
+   - `--iterations K` (smoke test): scratch stages stop at K, resumed stages at N + K; a chained stage whose previous
+     stage is in the same plan resumes from that stage's smoke end.
 2. **Export** (CPU, in the worktree of `set_manifest.tsv` `exported_by`, tolerance 1e-4): `eval_tier1.sh --reexport`
    runs it and `TR/t1best/compare_exports.py` (tensors and metadata must equal the evaluated file's).
 3. **Evaluate:** `scripts/final/eval_tier1.sh [--trials K]`: the kit evaluator on the stock runtime, world count 1,
@@ -165,10 +206,12 @@ consensus reference built from Tier-2 tracks (`refs/B`). Nothing in `scripts/fin
 1. **Inputs:** section 3 (raw, K3, K3fix, G2).
 2. **Train:** `scripts/final/train_tier2.sh --episode N`: the item's recorded stage (`set_items_r9.json`
    `train.stages[].overrides`) in the worktree of its training commit, on this machine's copy of its input parquet.
-   This replaces `TR/t2ready_20261031/tools/print_commands_t2.py`, which stops on the round-8/9 item format
-   (`KeyError: 'file'`). ep10 has no run record on the team server: its overrides are rebuilt from the checkpoint's
-   embedded configuration. ep19 and ep25 resume from checkpoints that exist only on Zuxing's RTX 5090 host
-   (`ROOT_ZX5090`).
+   Stages train as recorded (to their recorded `max_iterations`; the counted checkpoint is saved on the way).
+   `python3 -I -B scripts/final/lib/print_commands_r9.py [--me ... --zx ...]` prints every item's training, export and
+   evaluation commands from `set_items_r9.json`; it replaces `TR/t2ready_20261031/tools/print_commands_t2.py` (round
+   6), which stops on the round-8/9 item format (`KeyError: 'file'`). ep10 has no run record on the team server: its
+   overrides are rebuilt from the checkpoint's embedded configuration. ep19 and ep25 resume from checkpoints that exist
+   only on Zuxing's RTX 5090 host (`ROOT_ZX5090`).
 3. **Export:** exporter `b39b69b` for Zuxing's checkpoints, `61fa5d3` (= `f2923d6`) for ours (`eval_tier2.sh --reexport`).
 4. **Evaluate:** `scripts/final/eval_tier2.sh`: frame 0, world count 1, explicit reset, no help, on the stock runtime,
    each policy against its own input.
@@ -273,13 +316,47 @@ A rollout of a re-export therefore carries the re-export's `checkpoint_sha256`. 
   server at the paths in each set file (and go into the container: `weights/<tier>/`, `outputs/<tier>/`).
 - The builders and drivers embed the training server's absolute paths (`<ME>`, `<ZX>`); run them in that layout
   (bind mount or symlink) or with `restore_layout_t3.py --rewrite` (Tier 3).
+- Tier 1: the digests of the teammate-chain and in-place-restart resume pairs (`scripts/final/lib/resume_sha256.tsv`)
+  were taken on 2026-11-04 from the files on the training server, not at training time; the set record has none.
+- Tier 2: Zuxing's G2 builder env was recorded on 2026-11-04 (after the G2 build), from its live folder.
 
 ## 10. Tests of this runbook (2026-11-04, training server, GPUs 5-7, one job per GPU)
 
-Run on the training server from a clean detached checkout of the test build of this commit (`13eef86`: the same
+### 10.1 This commit: the fixes of the merge test of `51d5232`
+
+The adversarial merge test of `51d5232` (PASS_WITH_NOTES) found: the retarget step could not resolve torch
+2.7.0+cu128 (E1); `isaaclab.sh` could install into an active conda env (E2); the 3 runtime LFS files of
+`reconstruction/modules` were not pulled (E3); Zuxing's G2 builder env had no freeze (E4); `env_check.py` could not
+fail (E5); the `v2d` freeze named a private repository and a local wheel path, and the server's host name appeared
+(E6); the Tier-1 teammate chains were looked up in `<ME>/fc_runs` (R1); stages trained far past the counted or next
+checkpoint, and in-place restarts resumed from an unchecked file (R2); selftest logs overwrote each other (R3); and
+`print_commands_t2.py` stops on the round-8/9 items. This commit fixes all of them (sections 1, 4, 5).
+
+Run on the training server from a fresh clean worktree (docs/ excluded) of the test build `c21b0d4`, which differs
+from this commit only in this subsection, a comment in `setup_env.sh` and the name of the per-stage `stop_check`
+folder; `REQUIRE_IDLE_GPU=1`, GPUs 5 and 6 (idle), one job per GPU, every output under a scratch `V2D_WORK`. Nothing
+was installed; no clean reference was read or scored. The same tests were repeated from a fresh worktree of this
+commit.
+
+| test | result |
+|---|---|
+| `selftest.sh` (syntax of every script, 23 `--dry-run` plans, `print_commands_r9.py`) | 24/24 PASS; one log per call (`NN_<script>_<args>.txt`), so the `eval_tier*` `--trials 2` and `--reexport` logs are both kept (R3) |
+| R1: `train_tier1.sh --episode 1/4/19 --stage 2` and `--episode 4 --stage 5`, `--dry-run` then `--check-sources` | resume sources resolve to `T1_ZX_RUNS` (`<ZX>/runs/2026-10-14-patience-runin/runin*/epNN`); all sha256 ok against `resume_sha256.tsv`; ep04 stage 5 also checks the counted `model_358000` + `rsi_358000` against the set record (ok). `--episode 0-29 --check-sources`: 108/108 files ok (24 resume pairs, 30 counted checkpoints with their RSI states). `eval_tier1.sh --episode 4 --reexport` now checks the training checkpoint at `T1_ZX_RUNS` |
+| R1: `train_tier1.sh --episode 4 --stage 2 --iterations 30` (worktree `b39b69b`, GPU 5) | no handoff (stage 1 not in the plan), so the recorded pair was copied from `T1_ZX_RUNS` (sha256 ok, digest from `resume_sha256.tsv`); resumed at 44922, stopped at 44952 (`final.json` reason `max_iterations`, 67 s); Hydra `config.yaml` equal to Zuxing's recorded `runin_cont/ep04` in 278 of 281 keys (only `output_dir`, `training.checkpoint` path, `training.max_iterations`); `overrides.yaml` same 11 keys in the same order; metrics finite |
+| R2: `stop_check.py` on real stages (CPU, configuration only) | stop allowed, configuration otherwise identical (422-424 keys): ep00 stage 1 -> 4000 and stage 2 -> 28000, ep20 stage 1 -> 24000, ep02 -> 44000, ep01 stage 3 -> 128000, ep29 stage 2 -> 30000 (`b39b69b`), ep04 stage 5 -> 358000 (`bc3b1bd`). Negative control, a `*_helpfix` experiment (`82837c8`, `bc3b1bd`): `reset.help_final_iteration` follows `training.max_iterations`, so the check keeps the recorded 120000 |
+| R2: `train_tier1.sh --episode 0 --iterations 30` (in-place restart chain, GPU 6) | stage 1 stopped at 30 through `training.max_iterations` (stop check: nothing else changes) and wrote `handoff_30.sha256`; stage 2 resumed from exactly that `model_30` + `rsi_30` (sha256 checked; `final.json` `start_iteration` 30, `resumed_from` `.../model_30`; the trainer moved stage 1's `final.json` aside) and stopped at 60; `config.yaml` equal to the recorded `C3r2_runin/ep00` run in 278 of 281 keys (the same three); metrics finite |
+| `setup_env.sh --steps check` (read-only) | rc 0: flashchord 108, v2dkit 38, v2d 332 (plus the one allowed local editable extra), zx_g2_builder 28 packages, 0 differ / missing / extra; driver 580.82.09; kit and stock evaluator `160d24f5…`, packer, uploader; stock runtime at `8c778f9` |
+| E5: `env_check.py` on temporary copies of `flashchord.pip-freeze.txt` (the env itself untouched) | unchanged: rc 0; jax 0.10.2 -> 0.10.1: rc 1 (`--report-only`: rc 0); an added fake package: rc 1 (missing); numpy removed: rc 1 (extra) |
+| E1: index pages, nothing installed | `download.pytorch.org/whl/cu128` (reached directly from the training server) lists `torch-2.7.0+cu128`, `torchvision-0.22.0+cu128` and `torchaudio-2.7.0+cu128` for cp311 manylinux_2_28_x86_64; PyPI lists `torchaudio-2.7.0` cp311 x86_64, the build the env has |
+| E3: `git lfs ls-files -I <the lfs step's include>` | lists the 3 runtime files (`mhr_collision_proxy_4000v.npz`, `mhr_hand_surface_spec.npz`, `bbox_track.pt`) among 1,041 |
+| E6: `git grep` of the new and changed files | no host name, no private repository URL, no local wheel path |
+
+### 10.2 Tests of `51d5232` (before the fixes)
+
+Run on the training server from a clean detached checkout of the test build of `51d5232` (`13eef86`: the same
 `scripts/final` code; `REPRODUCE.md`, `scripts/final/README.md`, the `check_sums` helper, the select scripts' lock
 checks and the raw-input frame-reference check of `verify_inputs.py` were added or fixed after it and re-tested from
-this commit, see the last row). `REQUIRE_IDLE_GPU=1`; GPUs 5-7 only, one job per GPU; every output under a scratch
+`51d5232`, see the last two rows). `REQUIRE_IDLE_GPU=1`; GPUs 5-7 only, one job per GPU; every output under a scratch
 `V2D_WORK`. No clean reference was read or scored in any Tier-2 or Tier-3 test.
 
 | test | result |
@@ -298,4 +375,5 @@ this commit, see the last row). `REQUIRE_IDLE_GPU=1`; GPUs 5-7 only, one job per
 | resumed stages: `train_tier1.sh --episode 28 --stage 4 --iterations 30` (T1improve arm W3H at `7fbc227`), `train_tier3.sh --episode 2 --stage retry_C90 --iterations 30` | the recorded resume pairs copied with sha256 equal to the record (`b674e5e5…`/`d74eb956…`, `ba0973a6…`/`2121f804…`); runs resumed at 68000 and 44922 and stopped at 68030 and 44952; `config.yaml` equal except `output_dir`, `training.checkpoint` (path), `training.max_iterations` |
 | `pack_tier1.sh` with a placeholder URL | kit packer, uploader validation ok, 22,989 rows, metric_code scores equal, only `code_commit_url` differs from `aee58640…` |
 | `pack_tier2.sh`, `pack_tier3.sh` | dry run only: the kit packer always computes a clean-reference score, which the team's Tier-2/3 rule keeps out of these tests. The same tools re-packed both files from the merge `ceb0186` earlier on 2026-11-04 (Tier 2 byte-identical to round 9's own placeholder pack; Tier 3 byte-identical to FINAL_r's locked CSV, and only `code_commit_url` differing from the `a7e7d3a` file) |
-| this commit, from a fresh clean checkout | all PASS (`6717e04`, which differs from this commit only in this table row): `selftest.sh` 18/18; the read-only real runs exit 0, with every present file listed by the record hash files matching (t2r9 `SHA256SUMS` 511/511, t3ready `SHA256SUMS` 980/980, PREREG / LOCK / SELECTION / AMENDMENT / retry locks; `POOL_R9` 186 of 250 and `RELOCATION_R9` 2 of 16 present, the rest are checkpoint copies kept out of git) and 30/30 Tier-2 frame references; one evaluation per tier: Tier 1 ep28 AUC 0.8154 (SP, MP pass, MPPE 2.56 cm), Tier 2 ep17 0.7902 (SP = MP = 1, 1.81 cm), Tier 3 ep07 0.9884 (SP = MP = 1, 0.69 cm); `train_tier3.sh --episode 7 --stage f0 --iterations 30` stopped by `max_iterations` at 30 with `config.yaml` equal to the recorded run's except `output_dir`, `training.max_iterations`; `pack_tier1.sh` (placeholder URL): validation ok, only `code_commit_url` differs |
+| `51d5232`, from a fresh clean checkout | all PASS (`6717e04`, which differs from `51d5232` only in this table row): `selftest.sh` 18/18; the read-only real runs exit 0, with every present file listed by the record hash files matching (t2r9 `SHA256SUMS` 511/511, t3ready `SHA256SUMS` 980/980, PREREG / LOCK / SELECTION / AMENDMENT / retry locks; `POOL_R9` 186 of 250 and `RELOCATION_R9` 2 of 16 present, the rest are checkpoint copies kept out of git) and 30/30 Tier-2 frame references; one evaluation per tier: Tier 1 ep28 AUC 0.8154 (SP, MP pass, MPPE 2.56 cm), Tier 2 ep17 0.7902 (SP = MP = 1, 1.81 cm), Tier 3 ep07 0.9884 (SP = MP = 1, 0.69 cm); `train_tier3.sh --episode 7 --stage f0 --iterations 30` stopped by `max_iterations` at 30 with `config.yaml` equal to the recorded run's except `output_dir`, `training.max_iterations`; `pack_tier1.sh` (placeholder URL): validation ok, only `code_commit_url` differs |
+| `51d5232`, adversarial merge test (fresh sparse worktree, GPU 6) | `selftest.sh` 18/18; `setup_env.sh --steps check` rc 0 (108 / 38 / 333 packages equal); `eval_tier2.sh --episode 9 --trials 2` on the pinned file `c73692c5…`: AUC 0.78226 / 0.78132, SP = MP = 1, MPPE 1.673 / 1.700 cm; `--reexport` (worktree `f2923d6`, CPU): same policy (72/72 tensors, 11/11 metadata keys), AUC 0.79181 (the 25 recorded own-input runs: mean 0.7757, range 0.6604-0.7917); plans equal the hydra / W&B / embedded records for 17 spot-checked episodes; verdict PASS_WITH_NOTES (findings fixed in 10.1) |

@@ -89,20 +89,48 @@ seed_hulls() {
   note "hull cache $dst/convex: $(find "$dst/convex" -maxdepth 1 -name '*.npz' | wc -l) files (from $src)"
 }
 
-# copy_resume_pair SRC_DIR DST_DIR N [MODEL_SHA] [RSI_SHA]: model_N + rsi_N for a resumed stage, sha256-checked
-# when the record has the digest. An existing destination is kept (and checked).
-copy_resume_pair() {
-  local src=$1 dst=$2 n=$3 ms=${4:-} rs=${5:-} f sha
+# resume_pair SRC_DIR DST_DIR N MODEL_SHA RSI_SHA DIGEST_FROM CHAIN: model_N + rsi_N in DST_DIR for a resumed stage.
+#   CHAIN=1 (in-place restart or teammate chain: DST_DIR is the previous stage's run folder): when this replay's previous
+#   stage left DST_DIR/handoff_N.sha256 (record_handoff), the stage resumes from exactly those files (checked against
+#   it); the recorded files are not used. Otherwise model_N + rsi_N are copied from SRC_DIR (the recorded run folder)
+#   and checked against MODEL_SHA / RSI_SHA; DIGEST_FROM names where the digests come from. An existing destination
+#   file without a handoff is kept and checked the same way.
+resume_pair() {
+  local src=$1 dst=$2 n=$3 ms=${4:-} rs=${5:-} from=${6:-the set record} chain=${7:-0} f sha
   mkdir -p "$dst"
+  if [ "$chain" = 1 ] && [ -f "$dst/handoff_$n.sha256" ]; then
+    ( cd "$dst" && sha256sum -c --quiet "handoff_$n.sha256" ) \
+      || die "$dst: model_$n / rsi_$n are not the files the previous stage handed over (handoff_$n.sha256)"
+    note "resume from this replay's own model_$n + rsi_$n in $dst, as the previous stage wrote them (sha256 $(cut -c1-16 "$dst/handoff_$n.sha256" | tr '\n' ' '))"
+    return 0
+  fi
+  [ "$chain" = 1 ] && note "no handoff_$n.sha256 in $dst (the previous stage did not run in this replay, or ended before $n): resume from the recorded pair in $src"
   for f in model rsi; do
     sha=$ms; [ $f = rsi ] && sha=$rs
     if [ ! -f "$dst/${f}_$n.safetensors" ]; then
-      [ -f "$src/${f}_$n.safetensors" ] || die "resume file $src/${f}_$n.safetensors not found (payload / ROOT_* paths)"
+      [ -f "$src/${f}_$n.safetensors" ] || die "resume file $src/${f}_$n.safetensors not found (payload / ROOT_* / T1_RUNS / T1_ZX_RUNS paths)"
       cp -p "$src/${f}_$n.safetensors" "$dst/${f}_$n.safetensors.tmp" && mv "$dst/${f}_$n.safetensors.tmp" "$dst/${f}_$n.safetensors"
     fi
-    if [ -n "$sha" ]; then check_sha256 "$dst/${f}_$n.safetensors" "$sha"
-    else note "resume ${f}_$n sha256 $(sha256sum "$dst/${f}_$n.safetensors" | cut -c1-16)... (no digest in the record)"; fi
+    if [ -n "$sha" ]; then check_sha256 "$dst/${f}_$n.safetensors" "$sha"; note "  digest from $from"
+    else note "resume ${f}_$n sha256 $(sha256sum "$dst/${f}_$n.safetensors" | cut -c1-16)... (no digest in the record or in resume_sha256.tsv)"; fi
   done
+}
+
+# copy_resume_pair SRC_DIR DST_DIR N [MODEL_SHA] [RSI_SHA]: resume_pair without a chain (Tier 2, Tier 3)
+copy_resume_pair() { resume_pair "$1" "$2" "$3" "${4:-}" "${5:-}" "the set record" 0; }
+
+# record_handoff RUN_DIR N: after a stage whose run folder the next stage resumes from (in-place restart, teammate
+# chain), write RUN_DIR/handoff_N.sha256 (model_N + rsi_N), so the next stage resumes from exactly these files. A run
+# that has no model_N (the trainer's early stop came first) gets no handoff; the next stage then copies the recorded pair.
+record_handoff() {
+  local d=$1 n=$2
+  if [ -f "$d/model_$n.safetensors" ] && [ -f "$d/rsi_$n.safetensors" ]; then
+    ( cd "$d" && sha256sum "model_$n.safetensors" "rsi_$n.safetensors" > "handoff_$n.sha256.tmp" && mv "handoff_$n.sha256.tmp" "handoff_$n.sha256" )
+    note "handoff: the next stage resumes from $d/model_$n + rsi_$n (sha256 $(cut -c1-16 "$d/handoff_$n.sha256" | tr '\n' ' '))"
+  else
+    rm -f "$d/handoff_$n.sha256"
+    note "this run has no model_$n + rsi_$n (final.json: $(tr -d '\n ' < "$d/final.json" 2>&1 | cut -c1-80)); the next stage will copy the recorded pair"
+  fi
 }
 
 # fc_libs: the flashchord env's pip CUDA 13 / cuDNN / NCCL / NVSHMEM library dirs (onnxruntime-gpu needs them)

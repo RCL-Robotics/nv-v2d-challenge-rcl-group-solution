@@ -19,8 +19,8 @@ usage: build_inputs_tier2.sh --steps raw,k3,k3fix,g2,verify [--gpus 0] [--jobs 6
   --steps LIST   which steps; a real run needs --steps (the dry run shows all of them)
   --gpus LIST    GPUs for the retarget (raw step), --jobs parallel retargets
   `--steps verify` is read-only: it checks the 30 inputs and frame references of the counted file.
-envs: RETARGET_PYTHON (Isaac Sim / Isaac Lab env v2d), KIT_PYTHON (kit venv), ZX_KIT_PYTHON (Zuxing's kit env for G2;
-default <ZX>/envs/kit/bin/python)
+envs: RETARGET_PYTHON (Isaac Sim / Isaac Lab env v2d), KIT_PYTHON (kit venv), ZX_KIT_PYTHON (Zuxing's G2 builder env,
+recorded in environment/zx_g2_builder.pip-freeze.txt; default <ZX>/envs/kit/bin/python; setup_env.sh --steps zxg2)
 EOF
 }
 final_init "$@"
@@ -38,7 +38,6 @@ if [ -z "$STEPS" ]; then
 fi
 has() { case ",$STEPS," in *",$1,"*) return 0;; *) return 1;; esac; }
 D=$TR/t2ready_20261031/data
-: "${ZX_KIT_PYTHON:=$ROOT_ZX/envs/kit/bin/python}"
 plan_header "Tier-2 inputs: steps $STEPS"
 addq D="$D"; addq ZX_KIT_PYTHON="$ZX_KIT_PYTHON"
 if has raw; then
@@ -74,7 +73,10 @@ if has k3fix; then
 fi
 if has g2; then
   add ''; add '# ---- G2 (Zuxing Lu; NOISY-ONLY): K3 variant agile+hgate, G2_surface_only smoother, data root + frame_refs_g2'
-  add '# copies of his files; their paths point into <ZX> (t2ready_20261031/data/zuxing_g2/README.md)'
+  add '# copies of his files; their paths point into <ZX> (t2ready_20261031/data/zuxing_g2/README.md); all three steps run'
+  add '# in his builder env (G2_surface_only/run_all.sh names <ZX>/envs/kit/bin/python itself), recorded in'
+  add '# environment/zx_g2_builder.pip-freeze.txt; env_check.py stops here if ZX_KIT_PYTHON differs from that record'
+  add '"$ZX_KIT_PYTHON" -I -B "$FINAL_LIB/env_check.py" "$REPO/environment/zx_g2_builder.pip-freeze.txt"'
   add '( cd "$D/zuxing_g2/kfix" && "$ZX_KIT_PYTHON" -I -B run_fix.py agile+hgate )'
   add 'bash "$D/zuxing_g2/G2_surface_only/run_all.sh" "$ROOT_ZX/tmp/tier2_noise/kfix/gen/G2_surface_only/out"'
   add '"$ZX_KIT_PYTHON" -I -B "$D/zuxing_g2/g2data/build_g2_data.py" "$ROOT_ZX/data/human_motion_data_tier2_g2-2026-10-24" $(seq 0 29)'
