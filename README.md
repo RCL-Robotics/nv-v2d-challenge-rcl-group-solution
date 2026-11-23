@@ -74,7 +74,7 @@ wheels, so no CUDA toolkit is needed. Details: [`environment/README.md`](environ
 | `zx_g2_builder` | the G2 step of the Tier-2 input builder | `setup_env.sh --steps zxg2` |
 
 ```bash
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Beat-in-our-hearts/nv-v2d-challenge-rcl-group-solution.git v2d
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/RCL-Robotics/nv-v2d-challenge-rcl-group-solution.git v2d
 cd v2d
 export V2D_WORK=/data/v2d/work                      # everything the scripts write (no spaces)
 export V2D_KIT=/data/v2d/v2d_submission_kit         # the official submission kit
