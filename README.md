@@ -1,204 +1,237 @@
-# Video to Data (V2D)
+# NV V2D Challenge — Track 2 solution of team MBZUAI-RCL Group
 
-> An end-to-end pipeline that converts human demonstration videos into simulation-ready assets and physics-grounded robot training data.
+This repository holds the code, configurations and training records behind our three **Track 2** submission files of
+the NVIDIA Video-to-Data (V2D) Challenge: Unitree **G1 + Dex3** whole-body policies that track human–object
+interaction (HOI) references, one policy per episode, 30 episodes per tier. All policies are trained with
+**FlashCHORD** (PPO, Newton / Warp / JAX) and scored with the official submission kit.
 
-**[Documentation](https://nvidia-isaac.github.io/video_to_data/)** · **[Robotic Grounding Project Page](https://nvidia-isaac.github.io/video_to_data/chord/)** · **[Robotic Grounding Tech Report](https://nvidia-isaac.github.io/video_to_data/chord/chord.pdf)**
+It is built on NVIDIA's open-source [Video to Data](https://github.com/nvidia-isaac/video_to_data) pipeline
+([documentation](https://nvidia-isaac.github.io/video_to_data/)); the original packages (`video_ingestion_agent/`,
+`reconstruction/`, `robotic_grounding/`) are kept unchanged except where our records say otherwise.
 
-![Video to Data pipeline — from human demonstration video through ingestion, reconstruction, and robotic grounding in Isaac Lab to a physics-grounded policy, dataset, and real-robot deployment](docs/figures/v2d_overview.png)
-
----
-
-## V2D challenge Track 2 submissions (team MBZUAI-RCL Group)
-
-The code behind our three submitted Track-2 files is in this repository. [`REPRODUCE.md`](REPRODUCE.md) shows how to
-reproduce them with `scripts/final/` and our verification package.
+![Video to Data pipeline](docs/figures/v2d_overview.png)
 
 ---
 
 ## Contents
 
-- [Overview](#overview)
-- [E2E workflow](#e2e-workflow)
-- [Packages](#packages)
-- [Prerequisites](#prerequisites)
-- [Quickstart](#quickstart)
-  - [Video Ingestion Agent](#video-ingestion-agent-video--queryable-action-database)
-  - [Reconstruction](#reconstruction-video--3d-data)
-  - [Robotic Grounding](#robotic-grounding-data--rl-policy)
-  - [FlashCHORD accelerated training](robotic_grounding/flash_chord/README.md)
-- [Design philosophy](#design-philosophy)
-- [Contributing](#contributing)
+- [Results at a glance](#results-at-a-glance)
+- [Repository map](#repository-map)
+- [Environment](#environment)
+- [Data and kit](#data-and-kit)
+- [Training configuration](#training-configuration)
+  - [Common recipe](#common-recipe)
+  - [Tier 1 — clean reference](#tier-1--clean-reference)
+  - [Tier 2 — synthetic-noise reference](#tier-2--synthetic-noise-reference)
+  - [Tier 3 — our own video reconstruction](#tier-3--our-own-video-reconstruction)
+- [Quick start: train, evaluate, pack](#quick-start-train-evaluate-pack)
+- [Reproducing the submitted files](#reproducing-the-submitted-files)
+- [Selection protocol](#selection-protocol)
+- [Credits and license](#credits-and-license)
 
 ---
 
-## Overview
+## Results at a glance
 
-Video to Data (V2D) turns raw human demonstrations into robot-ready training data through three composable stages and a repository-root E2E workflow. Each stage runs independently and writes its artifacts to disk, so you can stop, inspect, cache, and recompose the pipeline at any boundary.
+Numbers are from the official kit evaluator (`evaluate_policy.py`) on the stock runtime. Tier 1 is scored against the
+clean Tier-1 reference; Tiers 2 and 3 are scored against each policy's own input (the leaderboard reference is hidden),
+so they are **not** leaderboard numbers.
 
-1. **Video Ingestion Agent** — a LangGraph-driven agentic workflow that segments demonstration videos into temporally-bounded action clips, extracts an entity-relation scene graph, and stores per-frame SigLIP-2 embeddings. The result is a queryable action database (`graph.db` + `vector.db`) that lets downstream stages select which clips to process via natural-language retrieval, instead of brute-forcing the full video.
-2. **Reconstruction** — containerized vision modules turn the selected RGB (or stereo) clips into per-frame depth, object masks, textured meshes, 6-DoF object poses, and SMPL human body parameters. Multi-view pipelines (`run_mv_hoi_reconstruction`, `run_mv_calibration`) orchestrate the full reconstruction from a rosbag.
-3. **Robotic Grounding** — human motion (e.g. Arctic) is retargeted onto the target robot embodiment (Sharpa), then the reconstructed scene and retargeted motion drive Isaac Lab environments trained with RSL-RL PPO to produce deployable policies.
+| Tier | Input | Submitted file | ADD-AUC | SP-SR | MP-SR | MPPE |
+|---|---|---|---:|---:|---:|---:|
+| 1 | clean Tier-1 motion | set `all7`, trial 05 | 0.9310 | 1.000 | 1.000 | 0.93 cm |
+| 2 | released noisy motion, filtered (K3fix / G2 / raw / K3) | `R9-CLOSEST`, trial 3 | 0.8123 (own input) | 0.933 | 0.933 | 3.38 cm |
+| 3 | our monocular-video reconstruction | `FINAL_r` | 0.6760 (own input) | 22 / 30 | 21 / 30 | 16.39 cm |
 
-## E2E workflow
+The submitted trial of every tier is the complete 30-episode trial closest to the mean of repeated official
+evaluations — never a best-of choice (see [Selection protocol](#selection-protocol)).
 
-An end-to-end workflow serves as a reference for connecting the repository's components into a
-complete reconstruction-to-policy pipeline. The included example starts with a raw egocentric
-human demonstration captured on an iPhone and continues through reconstruction, retargeting,
-source-expert training, demonstration collection, GR00T N1.7 fine-tuning, and closed-loop
-evaluation. It has been verified with both floating Sharpa and Vega Sharpa embodiments.
+## Repository map
 
-`run_e2e.sh` provides a reproducible launcher that orchestrates the stages and records their state
-for inspection and resumption. A companion agentic skill uses the launcher under the hood to
-guide setup and execution. The main path trains its own source expert; the bundled tissue-box ONNX
-policy is an optional shortcut for users who want to start directly with GR00T fine-tuning.
+| Path | What it is |
+|---|---|
+| [`REPRODUCE.md`](REPRODUCE.md) | Step-by-step reproduction of the three submitted files (install → verify package → repack → re-evaluate → retrain) |
+| [`scripts/final/`](scripts/final/README.md) | Entry-point scripts: `setup_env.sh`, `get_data.sh`, `train_tier{1,2,3}.sh`, `eval_tier{1,2,3}.sh`, `pack_tier{1,2,3}.sh`, `build_inputs_tier{2,3}.sh`, `select_tier{2,3}.sh`, `selftest.sh` |
+| [`scripts/final/FINAL_EPISODES.tsv`](scripts/final/FINAL_EPISODES.tsv) | The 90 evaluated policy files: input, training commits, stages and sha256 of every artifact |
+| [`scripts/final/site.env.example`](scripts/final/site.env.example) | Template of the machine-specific paths every script reads (`--site FILE`) |
+| [`environment/`](environment/README.md) | Recorded conda / pip environments (`flashchord`, `v2dkit`, `v2d`, `zx_g2_builder`) and system info |
+| [`robotic_grounding/flash_chord/`](robotic_grounding/flash_chord/README.md) | FlashCHORD trainer; our G1 experiment configs are in `src/flash_chord/configs/experiment/g1_recon_body_coord_rsi_r2*.yaml` |
+| [`robotic_grounding/flash_chord/scripts/track2/`](robotic_grounding/flash_chord/scripts/track2/) | Track-2 tooling (`launch.py`, `eval_all.py`) and the full per-tier records: `t1best/` (Tier 1), `t2ready_20261031/` … `t2r9_20261104/` (Tier 2), `t3ready_20261102/` (Tier 3), `rolling_start.md` |
+| [`robotic_grounding/scripts/retarget/soma_to_g1.py`](robotic_grounding/scripts/retarget/soma_to_g1.py) | SOMA → G1 retargeting that made every training input |
+| [`hoi_estimation/`](hoi_estimation/README.md) | Tier-3 video reconstruction pipeline (human, camera, object, supports) with its reproducibility runbooks |
+| [`TIER3_SUBMISSION.md`](TIER3_SUBMISSION.md) | Pointer to the Tier-3 record and the reconstruction code |
 
-The complete workflow can run on a single NVIDIA RTX A6000 GPU with 48 GB of VRAM and has also
-been verified on NVIDIA L40 and L40S GPUs. Follow the [E2E workflow guide](docs/e2e_workflow.md)
-for the runnable tissue-box demo, setup requirements, acceptance gates, and resume behavior.
+## Environment
 
-## Packages
+Training machine: NVIDIA RTX PRO 6000 Blackwell, driver 580.82.09 (CUDA 13.0), Ubuntu 22.04. CUDA comes from pip
+wheels, so no CUDA toolkit is needed. Details: [`environment/README.md`](environment/README.md).
 
-| Package | Role | Runtime |
+| env | used for | install |
 |---|---|---|
-| [`video_ingestion_agent/`](video_ingestion_agent/) | Video → action segments + entity scene graph + frame embeddings. LangGraph pipeline (segment → verify/refine → entity graph → embeddings) plus an EGAgent-style natural-language retrieval agent and an optional Gradio UI. | Python venv + vLLM server |
-| [`reconstruction/`](reconstruction/) | Video → depth, masks, meshes, 6D poses, human body. 18 containerized modules + multi-view pipelines. | Docker (per-module images) |
-| [`robotic_grounding/`](robotic_grounding/) | RL training on NVIDIA Isaac Lab 2.3.1 with RSL-RL (PPO); motion retargeting utilities. | Docker (`nvcr.io/your-org/your-team`) |
-| [`robotic_grounding/flash_chord/`](robotic_grounding/flash_chord/) | Accelerated reference-tracking training with PPO and FlashSAC; [setup and complete example workflow](robotic_grounding/flash_chord/README.md#setup). | Separate Newton / Warp / JAX container |
-| [`groot_finetune/`](robotic_grounding/groot_finetune/) | Expert demonstration collection, LeRobot dataset conversion, GR00T N1.7 fine-tuning, and closed-loop evaluation. | Python 3.10 + external Isaac-GR00T checkout |
-
-## Prerequisites
-
-- Docker with GPU support ([install](https://docs.docker.com/engine/install/ubuntu/))
-- [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
-- Python 3.10+
-- NVIDIA driver 580.126.09 / CUDA 13.0 recommended (for `robotic_grounding`)
-
-The separate v0.2 multi-view HOI object-reconstruction pipeline is validated on RTX A6000 (SM 86)
-and L40S (SM 89). Blackwell GPUs with compute capability 12.0 (`sm_120`),
-including RTX PRO 6000 Blackwell, are not supported by the TensorRT and cuVSLAM
-versions in `v2d_cusfm`. The reconstruction container build and pipeline
-launcher check this before starting; see the
-[HOI GPU compatibility notes](reconstruction/modules/v2d_hoi_object_reconstruction/README.md#gpu-compatibility).
-
-## Quickstart
-
-### Video Ingestion Agent (video → queryable action database)
+| `flashchord` | training, policy export, official evaluation (Python 3.11) | `setup_env.sh --steps conda,stock,flashchord` |
+| `v2dkit` | official submission kit: packer and checks | `setup_env.sh --steps kit` |
+| `v2d` | G1 retargeting and input builders (Isaac Sim 5.1.0, Isaac Lab 2.3.2) | `setup_env.sh --steps conda,retarget` |
+| `zx_g2_builder` | the G2 step of the Tier-2 input builder | `setup_env.sh --steps zxg2` |
 
 ```bash
-cd video_ingestion_agent
-
-uv venv .venv && source .venv/bin/activate
-uv pip install -e ".[all]"     # vLLM, webapp, benchmark, dev tools
-
-# 1. Start the vLLM server (loads the VLM, ~1 minute)
-python scripts/serve.py -c configs/ingestion.yaml
-
-# 2. Ingest a video — segmentation → entity graph → report
-python scripts/run_ingestion.py path/to/video.mp4 \
-  -c configs/ingestion.yaml --no-verify -o runs/my_run
-
-# 3. Retrieve clips with natural language
-python scripts/run_retrieval.py "Find clips where someone picks up a mug" \
-  -d outputs/ -c configs/retrieval.yaml
-
-# 4. Or browse interactively in the web UI
-python scripts/run_webapp.py
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Beat-in-our-hearts/nv-v2d-challenge-rcl-group-solution.git v2d
+cd v2d
+export V2D_WORK=/data/v2d/work                      # everything the scripts write (no spaces)
+export V2D_KIT=/data/v2d/v2d_submission_kit         # the official submission kit
+export V2D_DATA=/data/v2d/video_to_data_challenge   # challenge data root (contains track_2/)
+export V2D_RUNTIME=$V2D_WORK/video_to_data_8c778f9/robotic_grounding/flash_chord   # official runtime
+bash scripts/final/setup_env.sh --steps conda,stock,flashchord,kit
+bash scripts/final/setup_env.sh --steps check       # compare installed envs with environment/*.pip-freeze.txt
 ```
 
-See [video_ingestion_agent/README.md](video_ingestion_agent/README.md) for hardware requirements, the full extras list, the verify/refine loop, and batch-ingestion across multiple GPUs. Pre-publication TODOs are tracked in [video_ingestion_agent/docs/release_readiness.md](video_ingestion_agent/docs/release_readiness.md).
+## Data and kit
 
-### Reconstruction (video → 3D data)
+- **Challenge data:** Hugging Face dataset `nvidia/video_to_data_challenge`, revision `5f68335f`, folder `track_2/`
+  (`bash scripts/final/get_data.sh`, needs the `hf` CLI).
+- **Official runtime:** `nvidia-isaac/video_to_data` @ `8c778f9`, `robotic_grounding/flash_chord` (installed by
+  `setup_env.sh --steps stock`). All evaluations use this stock runtime, world count 1, export tolerance 1e-4.
+- **Submission kit:** the Oct-11 kit, `KIT_MANIFEST.json` sha256 `398947a7…` (packer `tools/pack_submission.py`,
+  evaluator `flash_chord/scripts/evaluate_policy.py`).
+
+Copy `scripts/final/site.env.example` outside the repository, set its paths, and pass it with `--site FILE` to every
+script. Never put tokens or keys in it.
+
+## Training configuration
+
+### Common recipe
+
+- **Trainer:** FlashCHORD PPO on G1 + Dex3 (`embodiment: g1_dex3`, `action: sonic_joint_residual`, ReconBody
+  observation / objective / termination), Hydra experiment `g1_recon_body_coord_rsi_r2` (**C3r2**): the W0-P
+  coordinated actor (shared hand network + body network, ~228k parameters, exported as a plain
+  `[1024, 1024, 768, 384]` MLP), RSI v3 reference-state-initialisation resets and curriculum with a help schedule,
+  a 45k-iteration cap with help-zero early stop, and an extra object task reward
+  `exp(-10·|p - p_ref|) · exp(-1·angle(q, q_ref))` with weight 5.0 (stripped at export).
+- **Seed:** `reset.seed=42` unless a record says otherwise; every stage's seed, overrides and iteration count are
+  recorded and replayed by `train_tierN.sh`.
+- **Export / evaluation:** policies exported to `.safetensors` at tolerance 1e-4, evaluated with the kit evaluator on
+  the stock runtime, packed with the kit packer and each episode's frame reference.
+- **Exact code per stage:** every stage runs in a git worktree of its recorded training commit (all of them are
+  ancestors of `main`), e.g. `b39b69b` (rolling start), `61fa5d3` (fc_r2), `41403d3` (Tier-3 trainer). Training is
+  GPU non-deterministic: a rerun reproduces the recipe and policy class, not the bytes.
+
+| Variant | Experiment config | Change from C3r2 | Used in |
+|---|---|---|---|
+| C3r2 | `g1_recon_body_coord_rsi_r2` | — | Tiers 1, 2, 3 |
+| C3r2-runin (rolling start) | `g1_recon_body_coord_rsi_r2_runin` | `reset.run_in_steps: 0 → 20`, `reset.min_horizon: 10 → 30`: the reference clock runs during the last 20 of the 50 hold steps, so robot and object already move with the reference when released ([details](robotic_grounding/flash_chord/scripts/track2/rolling_start.md)) | Tiers 1, 2 |
+| C3r2-runin-hard | `g1_recon_body_coord_rsi_r2_runin_hard` | rolling start + hard-start sampling (10 % frame 0, 80 % by the failure hazard of the start bin), `start_frame_shift 20`, 90k iterations, no help-zero early stop | Tier 2 |
+| C3r2-helpfix-hard | `g1_recon_body_coord_rsi_r2_helpfix_hard` | success-driven help + hard-start sampling, no rolling start | Tier 2 |
+
+Per-episode fixes are Hydra overrides on top of these experiments, e.g. the Tier-1 T1fix / T1improve arms
+(`t1best/configs/arms.json`): rotation-weighted object reward `objective.object_task_rotation_beta`, tighter or
+relaxed `termination.object_*_threshold`, position-only object reward after release; and Tier-3 per-episode
+termination overrides (`termination.palm_position_threshold`, object thresholds).
+
+A single training run (inside the `flashchord` env, from `robotic_grounding/flash_chord`):
 
 ```bash
-cd reconstruction
-
-# Install host-side orchestration wrappers (lightweight, no model dependencies)
-./scripts/install_pacakages.sh
-
-# Build per-module Docker images
-./scripts/build_containers.sh
-
-# Run a minimal video→depth example (MoGe)
-python -m v2d.moge.docker.run_download_weights --output_dir data/weights/moge
-python -m v2d.moge.docker.run_video_to_depth \
-  --video_path modules/v2d_moge/assets/test_video.mp4 \
-  --depth_folder data/outputs/moge/depth \
-  --intrinsics_folder data/outputs/moge/intrinsics \
-  --weights_path data/weights/moge
+python scripts/train_rl.py experiment=g1_recon_body_coord_rsi_r2_runin reset.seed=42 \
+  training.max_iterations=45000 <task / scene overrides of the episode>
 ```
 
-Full multi-view HOI pipeline (rosbag → textured object mesh + SMPL body):
+The task, scene and termination overrides of each episode are generated by
+`robotic_grounding/flash_chord/scripts/track2/launch.py` and stored in the tier records; use `train_tierN.sh` rather
+than writing them by hand.
+
+### Tier 1 — clean reference
+
+Record: [`t1best/t1ready_20261031/`](robotic_grounding/flash_chord/scripts/track2/t1best/t1ready_20261031/README.md).
+
+- **Input:** the released clean Tier-1 HOI motion, converted and retargeted to G1.
+- **Set `all7`:** 30 checkpoints from 54 training stages in 30 lineages: C3r2_runin and C3r2_wide runs from scratch,
+  teammate run-in chains, T1fix forks and 7 episodes replaced by the T1improve wave (ep01, 05, 10, 14, 15, 19, 28; arm
+  overrides in `t1best/t1improve/arms/<arm>/overrides.yaml`).
+- **Score:** 20 complete official trials; mean AUC 0.93113 (sd 0.0033); submitted trial 05 (closest to the mean).
 
 ```bash
-python -m v2d.pipelines.run_mv_hoi_reconstruction \
-  --rosbag_path /data/rosbags/session1 \
-  --output_dir  /data/datasets/session1 \
-  --calibration_camera_params_path /data/datasets/calibration/extrinsics/edex \
-  --obj_mesh_path /data/meshes/object.glb
+bash scripts/final/train_tier1.sh --site site.env --episode 8 --dry-run   # print the stages of episode 8
+bash scripts/final/train_tier1.sh --site site.env --episode 8             # retrain all its stages
 ```
 
-See [reconstruction/README.md](reconstruction/README.md) for the complete module reference, including [Grounding DINO](reconstruction/README.md#v2d_grounding_dino), [SAM2](reconstruction/README.md#v2d_sam2), [FoundationPose](reconstruction/README.md#v2d_foundation_pose), [SAM3D-Body](reconstruction/README.md#v2d_sam3d_body), and others.
+### Tier 2 — synthetic-noise reference
 
-### Robotic Grounding (data → RL policy)
+Records: [`t2ready_20261031/`](robotic_grounding/flash_chord/scripts/track2/t2ready_20261031/README.md) →
+[`t2r7`](robotic_grounding/flash_chord/scripts/track2/t2r7_20261102/README.md) →
+[`t2r8`](robotic_grounding/flash_chord/scripts/track2/t2r8_20261103/README.md) →
+[`t2r9_20261104/`](robotic_grounding/flash_chord/scripts/track2/t2r9_20261104/README.md) (submitted).
 
-**Accelerated training:** use [FlashCHORD's setup and workflow](robotic_grounding/flash_chord/README.md#setup)
-for Newton/Warp/JAX training on the included Sharpa and G1 examples. FlashCHORD has its own container and dependencies.
+- **Inputs**, built only from `track_2/tier_2_synthetic_noise` (no Tier-1 or clean data) by
+  `build_inputs_tier2.sh`:
 
-**Quick start:** the from-scratch setup & run guide is
-[robotic_grounding/docs/SETUP.md](robotic_grounding/docs/SETUP.md) — it covers the two
-Docker images, downloading each dataset from its original public source, the directory
-layout, and how to run the full hand→robot retargeting pipeline.
+  | input | what it is | episodes in the submitted file |
+  |---|---|---:|
+  | `raw` | SOMA conversion + G1 retarget of the released noisy episodes | 4 |
+  | `k3` | our K3 Kalman smoother of the object track | 1 |
+  | `k3fix` | K3 with root-cause fixes and per-episode gates G1–G4 | 18 |
+  | `g2` | contact-model smoother of the object track | 7 |
 
-Throughout, `<HMD>` (human-motion-data root) is a directory you choose — e.g.
-`~/datasets/human_motion_data` — that holds `mano/` and one subdirectory per dataset
-(`taco/`, `hot3d/`, …); see [docs/SETUP.md §4](robotic_grounding/docs/SETUP.md).
+- **Training:** C3r2, C3r2-runin, C3r2-runin-hard and C3r2-helpfix-hard runs on each input, some continued for long
+  run-in chains (up to ~420k iterations); trained on our RTX PRO 6000 server and an RTX 5090 workstation.
+- **Selection:** 9 pre-registered rounds scored only with own-input AUC and a frozen consensus reference built from
+  Tier-2 tracks (`refs/B`). Round 9 kept 27 of round 8's picks and replaced episodes 10, 17 and 21.
 
 ```bash
-cd robotic_grounding
-
-# One-time host setup (git-lfs, pre-commit) + robot assets (LFS)
-bash workflow/setup_deps.sh
-git lfs pull
-
-# Build both pipeline images (loader + robotic-grounding) in one shot
-python scripts/run_pipeline_docker.py --build-only
-
-# Run the full pipeline on a dataset (download it first per docs/SETUP.md §6).
-# <HMD> is the data root holding mano/ and each <dataset>/.
-python scripts/run_pipeline_docker.py taco \
-    --hmd <HMD> --mano-dir <HMD>/mano --max-sequences 2     # small smoke test
+bash scripts/final/build_inputs_tier2.sh --site site.env --steps verify   # check the 30 inputs used
+bash scripts/final/train_tier2.sh --site site.env --episode 17
+bash scripts/final/select_tier2.sh --site site.env                       # print the policy chosen per episode
 ```
 
-Reproduce the sequences end-to-end (arctic / hot3d / taco) in a self-contained
-workspace — see [robotic_grounding/docs/EXAMPLE_SEQUENCES.md](robotic_grounding/docs/EXAMPLE_SEQUENCES.md)
-for the sequence list and prerequisites:
+### Tier 3 — our own video reconstruction
+
+Record: [`t3ready_20261102/`](robotic_grounding/flash_chord/scripts/track2/t3ready_20261102/README.md); pipeline:
+[`hoi_estimation/`](hoi_estimation/README.md) (runbooks and `run_all_tier3.sh` in `hoi_estimation/reproducibility/`).
+
+- **Reconstruction:** human, camera and object from the monocular exo video (s1), object track re-estimated by an
+  agent (opus_v2), frame-0 correction, and video-fitted supports (table / desk / chair / stool) for 14 episodes.
+- **Data prep:** G1 retarget with `soma_to_g1.py` gated by checks G1–G10; GT-free support placement and hand–object
+  gap check (sets `termination.palm_position_threshold=0.25` for 8 episodes, training only).
+- **f0 training (all 30):** `experiment=g1_recon_body_coord_rsi_r2 reset.seed=42 training.max_iterations=45000`, help-zero
+  early stop (deadline 35156, ramp 3906, tail 5860), final checkpoint, no checkpoint selection.
+- **C90 retry (14 failing episodes):** resume from `model_44922` to 90000 iterations with a second RSI help cycle
+  (`reset.start_update=44922`) and rule-computed termination overrides; replaced f0 for 11 episodes by a
+  pre-registered acceptance rule.
 
 ```bash
-HMD=<HMD> ./run_example_sequences.sh        # → RL-ready parquets under <HMD>/example_sequences/<ds>/<ds>_processed/
+bash scripts/final/build_inputs_tier3.sh --site site.env --dry-run
+bash scripts/final/train_tier3.sh --site site.env --episode 7
 ```
 
-Then enter the Isaac Lab container and train a policy on the retargeted motion:
+## Quick start: train, evaluate, pack
+
+Every script takes `--site FILE`, `--dry-run` and `--help`; real runs log their commands to `$V2D_WORK/logs/`.
 
 ```bash
-./workflow/run.sh build
-./workflow/run.sh start [version] [gpu_id]              # build + enter the container
-python scripts/rsl_rl/train.py --task Sharpa-V2D-v0    # inside the container
+bash scripts/final/selftest.sh                                        # syntax check + dry run of every script
+bash scripts/final/train_tier1.sh --site site.env --episode 8 --iterations 50 --gpu 0   # smoke test
+bash scripts/final/eval_tier1.sh  --site site.env --episode 28        # official evaluator; --episode all = 30 episodes
+bash scripts/final/pack_tier1.sh  --site site.env --commit-url <URL>  # kit packer + offline upload check
 ```
 
-See [robotic_grounding/README.md](robotic_grounding/README.md) for retargeting, debug environments, and task definitions.
+Evaluation writes rollouts to `$V2D_WORK/eval/tierN/t01/results/` and per-episode AUC, SP-SR, MP-SR and MPPE to
+`$V2D_WORK/eval/tierN/summary.tsv`. With `REQUIRE_IDLE_GPU=1`, every launch refuses a GPU that already runs a process.
 
-### Visualizer (retargeting gallery)
+## Reproducing the submitted files
 
-Browse retargeted sequences as interactive 3D animations in your browser.
+See [`REPRODUCE.md`](REPRODUCE.md). Byte-identical re-packing and re-evaluation of the submitted policies need our
+verification package (four zips, ~5.4 GB, provided with the submission; their sha256 values are in `REPRODUCE.md`).
+The submitted files cite commits of our original development repository; those commits are in this repository's
+history with the same hashes.
 
-See [robotic_grounding/README.md#visualizer](robotic_grounding/README.md#visualizer) for setup instructions.
+## Selection protocol
 
-## Design philosophy
+- Every selection rule was written and hash-locked (sha256) before the exports, evaluations or scores it governs; the
+  pre-registrations, amendments and lock files are in the tier records.
+- Candidate checkpoints get repeated fresh official evaluations; the packed trial is the one closest to the mean of the
+  complete trials, never the best one.
+- Disclosed deviations (e.g. Tier 1 `TOPUP_AMEND1`, Tier 3 open items) and grey areas are listed in each record.
 
-- **Host orchestration, containerized inference.** The host runs thin Python wrappers that `docker run` each module; all model dependencies live inside their respective images. No CUDA or PyTorch is ever installed on the host.
-- **Typed contracts between packages.** Modules communicate through strongly-typed dataclasses in [`v2d_common`](reconstruction/modules/v2d_common/) (`DepthImage`, `CameraIntrinsics`, `Transform3d`, `BoundingBox`, `Mask`) — never raw arrays across package boundaries.
-- **File-based dataflow.** Modules write intermediate artifacts to disk (depth PNGs, pose JSONs, mask PNGs, etc.), enabling independent execution, caching, and pipeline composition via [`v2d_pipelines`](reconstruction/modules/v2d_pipelines/).
+## Credits and license
 
-## Contributing
+Team **MBZUAI-RCL Group**: Zuxing Lu, Haoran Zhang, Han Zhou (Tier-3 video reconstruction, `hoi_estimation/`).
 
-See the contributing guide in [reconstruction/README.md](reconstruction/README.md#contributing) for adding new reconstruction modules. Each new module must expose a Docker image, a `run_download_weights` entry point (if weights are required), a `run_shell` entry point, and a typed API surface consistent with `v2d_common`.
+Built on NVIDIA [Video to Data](https://github.com/nvidia-isaac/video_to_data). Copyright (c) 2026 NVIDIA CORPORATION &
+AFFILIATES; source code under Apache-2.0 and documentation under CC-BY-4.0 — see [`LICENSE`](LICENSE).

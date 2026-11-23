@@ -22,7 +22,7 @@ official evaluation of the submitted policies and, optionally, retrain them.
 ## 1. Install
 
 ```bash
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase.git v2d && cd v2d
+GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/Beat-in-our-hearts/nv-v2d-challenge-rcl-group-solution.git v2d && cd v2d
 GIT_LFS_SKIP_SMUDGE=1 git checkout <commit>        # the commit in the code_commit_url column of the submitted files
 export V2D_WORK=/data/v2d/work                      # everything the scripts write (no spaces in the path)
 export V2D_KIT=/data/v2d/v2d_submission_kit         # the official submission kit
@@ -69,6 +69,8 @@ bash "$PKG/repack.sh" 3 /path/to/<submitted Tier-3 CSV>
 (this commit: `https://github.com/Beat-in-our-hearts/nv-v2d-challenge-codebase/commit/<commit>`), writes
 `repack_out/tierN_repacked.csv` in the current folder and prints `tier N: IDENTICAL to <file>` when the two files are
 byte-identical (as `cmp` or `sha256sum` show). Another commit URL would change only the `code_commit_url` column.
+The submitted files cite our original development repository (`nv-v2d-challenge-codebase`); the same commits, with
+the same hashes, are in this repository's history, so pass the URL exactly as it appears in the submitted file.
 
 ## 4. Re-run the evaluation
 
