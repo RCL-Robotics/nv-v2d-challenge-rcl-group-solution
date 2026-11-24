@@ -30,7 +30,7 @@ It is built on NVIDIA's open-source [Video to Data](https://github.com/nvidia-is
 - [Reproducing the submitted files](#reproducing-the-submitted-files)
 - [Selection protocol](#selection-protocol)
 - [Citation](#citation)
-- [Credits and license](#credits-and-license)
+- [License](#license)
 
 ---
 
@@ -243,9 +243,7 @@ history with the same hashes.
 }
 ```
 
-## Credits and license
-
-Team **MBZUAI-RCL Group**: Zuxing Lu, Haoran Zhang, Han Zhou (Tier-3 video reconstruction, `hoi_estimation/`).
+## License
 
 Built on NVIDIA [Video to Data](https://github.com/nvidia-isaac/video_to_data). Copyright (c) 2026 NVIDIA CORPORATION &
 AFFILIATES; source code under Apache-2.0 and documentation under CC-BY-4.0 — see [`LICENSE`](LICENSE).
