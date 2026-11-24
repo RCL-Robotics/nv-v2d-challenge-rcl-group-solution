@@ -9,6 +9,11 @@ It is built on NVIDIA's open-source [Video to Data](https://github.com/nvidia-is
 ([documentation](https://nvidia-isaac.github.io/video_to_data/)); the original packages (`video_ingestion_agent/`,
 `reconstruction/`, `robotic_grounding/`) are kept unchanged except where our records say otherwise.
 
+**Paper:** [DexDuet: Learning Contact-Preserving Bimanual Dexterity from Human Demonstrations](https://arxiv.org/abs/2611.30495)
+(arXiv:2611.30495) · **[Project page](https://rcl-robotics.github.io/Dexduet.io/)**. The coordinated per-hand actor and
+the assisted reference-state-initialisation (A-RSI) curriculum used by our policies are described there. If you use
+this code, please [cite the paper](#citation).
+
 ![Video to Data pipeline](docs/figures/v2d_overview.png)
 
 ---
@@ -27,6 +32,7 @@ It is built on NVIDIA's open-source [Video to Data](https://github.com/nvidia-is
 - [Quick start: train, evaluate, pack](#quick-start-train-evaluate-pack)
 - [Reproducing the submitted files](#reproducing-the-submitted-files)
 - [Selection protocol](#selection-protocol)
+- [Citation](#citation)
 - [Credits and license](#credits-and-license)
 
 ---
@@ -228,6 +234,20 @@ history with the same hashes.
 - Candidate checkpoints get repeated fresh official evaluations; the packed trial is the one closest to the mean of the
   complete trials, never the best one.
 - Disclosed deviations (e.g. Tier 1 `TOPUP_AMEND1`, Tier 3 open items) and grey areas are listed in each record.
+
+## Citation
+
+```bibtex
+@misc{zhang2026dexduetlearningcontactpreservingbimanual,
+      title={DexDuet: Learning Contact-Preserving Bimanual Dexterity from Human Demonstrations},
+      author={Haoran Zhang and Haokai Ding and Han Zhou and Zuxing Lu and Heng Zhang and Xingxing Zuo},
+      year={2026},
+      eprint={2611.30495},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2611.30495},
+}
+```
 
 ## Credits and license
 
